@@ -7,7 +7,7 @@ import { RECOMMENDATION_DEFAULTS, RECOMMENDATION_BOUNDS, normalizeRecommendation
 import {discoveryControls, graphDetails, savedFeedbackView} from './discovery.js';
 import {gettingStartedGuide} from './getting-started.js';
 const VIEWS = ['interests', 'discover', 'map', 'settings'];
-const GUIDE_VIEWS = ['interests', 'settings', 'discover', 'map'];
+const GUIDE_VIEWS = ['interests', 'discover', 'map'];
 
 const app = document.querySelector('#app');
 const params = new URLSearchParams(location.search);
@@ -100,6 +100,7 @@ function languageSelect(id) {
 }
 
 function render() {
+  const guideVisible = ui.loaded && ui.guideOpen && GUIDE_VIEWS.includes(ui.view);
   const focused = document.activeElement;
   const focusKey = focused?.dataset?.focus;
   const selection = focused && 'selectionStart' in focused ? [focused.selectionStart, focused.selectionEnd] : null;
@@ -125,8 +126,8 @@ function render() {
     ${preview ? `<div class="demo-notice"><strong>${text('demo')}</strong> · ${text('demoNotice')}</div>` : ''}
     <div class="workspace"><nav class="main-nav" aria-label="${text('mainNavigation')}">${VIEWS.map(view => `<button type="button" data-action="view" data-view="${view}" data-focus="nav-${view}"${ui.view === view ? ' aria-current="page"' : ''}>${text(view)}</button>`).join('')}${!dashboard ? `<button type="button" class="dashboard-link" data-action="open-dashboard">${text('openDashboard')} ↗</button>` : ''}</nav><div class="workspace-content">
     ${error ? `<div class="error-banner" role="alert"><p><strong>${text('errorHeading')}</strong><br>${escape(translateError(language(), error))}${ui.view !== 'settings' ? `<br>${text('errorHint')}` : ''}</p><button type="button" class="quiet" data-action="clear-error" aria-label="${text('dismissError')}">×</button></div>` : ''}
-    <div class="page-layout${ui.loaded && ui.guideOpen ? ' has-guide' : ''}"><main id="main-view">${!ui.loaded ? loadingView() : ui.view === 'settings' ? settingsView() : ui.view === 'map' ? mapView() : ui.view === 'interests' ? interestsView() : discoverView()}</main>
-    ${ui.loaded && ui.guideOpen ? gettingStartedGuide({text,view:ui.view,step:GUIDE_VIEWS.indexOf(ui.view),total:GUIDE_VIEWS.length,busy:busy('guide'),seen:state.settings.tutorialSeen,error:ui.guideError}) : ''}</div>
+    <div class="page-layout${guideVisible ? ' has-guide' : ''}"><main id="main-view">${!ui.loaded ? loadingView() : ui.view === 'settings' ? settingsView() : ui.view === 'map' ? mapView() : ui.view === 'interests' ? interestsView() : discoverView()}</main>
+    ${guideVisible ? gettingStartedGuide({text,view:ui.view,step:GUIDE_VIEWS.indexOf(ui.view),total:GUIDE_VIEWS.length,busy:busy('guide'),seen:state.settings.tutorialSeen,error:ui.guideError}) : ''}</div>
     <footer class="app-footer">${text('footer')}</footer></div></div>
     <div class="sr-only" role="status" aria-live="polite">${ui.announcement ? text(ui.announcement) : ''}</div>
   </div>`;

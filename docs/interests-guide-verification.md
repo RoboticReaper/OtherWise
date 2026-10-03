@@ -60,3 +60,10 @@ node scripts/test_map_workspace_browser.mjs
 
 Set `OTHERWISE_CHROMIUM` and `OTHERWISE_PLAYWRIGHT_MODULE` for a separate browser
 runtime. Reload the unpacked extension and refresh existing tabs to use this build.
+
+## 0.1.9 follow-up
+
+Removed the service-connection tutorial step at the user's request. The guide now
+visits Interests, Discover and Map. Settings remains available normally, with the
+guide hidden there. This small follow-up updates the package and regression script;
+the full review/browser suites above were not rerun.

@@ -56,7 +56,8 @@ not change profile generation, cancel a request, grant permissions or enter a
 recommendation payload. Migration skips the automatic guide for existing saved
 profiles. Fresh profiles can use Next/Back/Skip; Settings reopens the bilingual
 inline guide on Interests. The guide derives its content from the current view;
-Next/Back navigate Interests, Settings, Discover and Map without changing drafts.
+Next/Back navigate Interests, Discover and Map without changing drafts. The guide
+is hidden on Settings and resumes when returning to a tutorial page.
 It sits beside the page (above it on narrow screens), with no backdrop, modal or
 focus trap. Closing keeps the current page. Reset clears tutorial state.
 

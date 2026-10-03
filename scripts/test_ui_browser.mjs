@@ -219,14 +219,15 @@ try{
   assert.equal(await actual.locator('#welcome-guide [role="alert"]').count(),0,'Page validation errors are not guide-save failures');
   await actual.locator('[data-action="clear-error"]').click();
   await actual.locator('#manual-interest').fill('Photography draft');
-  await actual.locator('[data-guide-action="next"]').click();
-  await actual.locator('#settings-form').waitFor();assert.match(await actual.locator('#guide-heading').innerText(),/Connect your recommendations/);
+  await actual.locator('[data-view="settings"]').click();await actual.locator('#settings-form').waitFor();
+  assert.equal(await actual.locator('#welcome-guide').count(),0,'Settings is not a tutorial step');
   assert.equal(await actual.locator('.language-note').count(),0);
   await actual.locator('#endpoint').fill('http://127.0.0.1:8765');
-  await actual.locator('[data-guide-action="back"]').click();
+  await actual.locator('[data-view="interests"]').click();
   assert.equal(await actual.locator('#manual-interest').inputValue(),'Photography draft');
-  await actual.locator('[data-guide-action="next"]').click();
-  assert.equal(await actual.locator('#endpoint').inputValue(),'http://127.0.0.1:8765','Settings draft survives guide navigation');
+  await actual.locator('[data-view="settings"]').click();
+  assert.equal(await actual.locator('#endpoint').inputValue(),'http://127.0.0.1:8765','Settings draft survives page navigation');
+  await actual.locator('[data-view="interests"]').click();
   await actual.locator('[data-guide-action="next"]').click();await actual.locator('#recommendation-kind').waitFor();
   assert.match(await actual.locator('#guide-heading').innerText(),/Find your next subject/);
   await actual.locator('#recommendation-kind').selectOption('broad');
@@ -240,7 +241,7 @@ try{
   await wide.goto(base.replace('sidepanel.html','dashboard.html')+'?view=settings');
   await wide.locator('[data-action="open-guide"]').focus();await wide.keyboard.press('Enter');await wide.locator('#welcome-guide').waitFor();
   assert.equal(await wide.locator('#guide-heading').evaluate(node=>document.activeElement===node),true,'Reopening guide moves keyboard focus to its heading without trapping it');
-  for(const view of ['interests','settings','discover','map']){
+  for(const view of ['interests','discover','map']){
     await wide.locator(`[data-view="${view}"]`).click();
     const bounds=await wide.evaluate(()=>{const main=document.querySelector('#main-view').getBoundingClientRect(),guide=document.querySelector('#welcome-guide').getBoundingClientRect();return {mainRight:main.right,guideLeft:guide.left,width:document.documentElement.scrollWidth};});
     assert.ok(bounds.guideLeft>=bounds.mainRight,'Guide sits beside the corresponding page');assert.equal(bounds.width,1440);
@@ -256,7 +257,7 @@ try{
   }
   await wide.locator('#ui-language').selectOption('zh-CN');
   await wide.setViewportSize({width:320,height:1000});
-  for(const view of ['interests','settings','discover','map']){
+  for(const view of ['interests','discover','map']){
     await wide.locator(`[data-view="${view}"]`).click();
     assert.equal(await wide.evaluate(()=>document.documentElement.scrollWidth),320);
     const bounds=await wide.evaluate(()=>{const main=document.querySelector('#main-view').getBoundingClientRect(),guide=document.querySelector('#welcome-guide').getBoundingClientRect();return {mainTop:main.top,guideBottom:guide.bottom};});
@@ -269,7 +270,7 @@ try{
   await actual.locator('[data-guide-action="finish"]').click();await actual.locator('#welcome-guide').waitFor({state:'detached'});
   await actual.reload();await actual.locator('#main-view').waitFor();assert.equal(await actual.locator('#welcome-guide').count(),0);
   await actual.locator('[data-view="interests"]').click();
-  checks.push('inline guide follows all four pages, leaves controls usable, preserves drafts, sits beside desktop pages and stays dismissed after reload');
+  checks.push('inline guide follows all three tutorial pages, leaves controls usable, preserves drafts, sits beside desktop pages and stays dismissed after reload');
   await actual.locator('#manual-interest').fill('Gardening');await actual.locator('#manual-form button').click();
   await actual.locator('#ui-language').selectOption('zh-CN');
   await actual.locator('[data-view="discover"]').click();
