@@ -1,0 +1,45 @@
+export const galaxyDictionaries = {
+  en: {
+    search: 'Find a topic', searchPlaceholder: 'Search topics or keywords', domain: 'Subject area', allDomains: 'All subject areas',
+    results: 'Search results', resultCount: '{count} matches shown', noResults: 'No matching topics in this subject area.',
+    clearSearch: 'Clear search', reset: 'Reset view', zoomIn: 'Zoom in', zoomOut: 'Zoom out',
+    canvas: 'Interactive topic galaxy. Use arrow keys to pan, plus or minus to zoom, and Home to reset. Search results provide keyboard-accessible topic selection.',
+    gestures: 'Drag to explore · Scroll or pinch to zoom', keyboard: 'Arrow keys move · + / − zoom · Home resets',
+    count: '{count} topics', selectedAnnouncement: 'Selected {topic}. Topic details are below the map.',
+    selectTitle: 'Where will curiosity take you?', selectHelp: 'Choose a star or search for a topic to see its description and closest connections.',
+    selectNote: 'Selecting a topic only opens its details. Save it when you want it to become an interest.',
+    save: 'Save interest', saved: 'Saved interest', saving: 'Saving…', focus: 'Explore from here', currentFocus: 'Current focus',
+    starting: 'Starting interest', recommended: 'Recommendation', explored: 'Explored',
+    neighbors: 'Closest connections', neighborHelp: 'Measured in the original 768-dimensional topic vectors. Smaller angular distance means a closer connection.',
+    distance: 'Distance', nearbyLinks: 'Closest connections', explorationLinks: 'Your exploration trail',
+    legend: 'Map key', subjectColors: 'Subject colors', geometryNote: 'Positions show a broad view of the catalog. Use the measured connections for precise similarity.',
+    customTitle: 'Other saved interests', customHelp: 'These interests are outside the catalog, so they have no position on the map.',
+    customDetail: 'This saved interest is outside the catalog. It has no map position or measured catalog neighbors.',
+    noDescription: 'No description is available for this saved interest.', closeDetails: 'Close topic details',
+    google: 'Search Google', youtube: 'Search YouTube', actionError: 'This action could not be completed. Please try again.',
+  },
+  'zh-CN': {
+    search: '查找主题', searchPlaceholder: '搜索主题或关键词', domain: '学科领域', allDomains: '全部领域',
+    results: '搜索结果', resultCount: '显示 {count} 个匹配结果', noResults: '该领域中没有匹配的主题。',
+    clearSearch: '清空搜索', reset: '重置视图', zoomIn: '放大', zoomOut: '缩小',
+    canvas: '可交互的主题星图。方向键平移，加减键缩放，Home 键重置。搜索结果支持键盘选择主题。',
+    gestures: '拖动探索 · 滚动或双指缩放', keyboard: '方向键平移 · + / − 缩放 · Home 重置',
+    count: '{count} 个主题', selectedAnnouncement: '已选择 {topic}。主题详情位于星图下方。',
+    selectTitle: '好奇心会带你去哪里？', selectHelp: '选择一颗星或搜索主题，查看它的描述和最相近的主题。',
+    selectNote: '选择主题只会打开详情。想把它加入兴趣时，请点击保存。',
+    save: '保存兴趣', saved: '已保存的兴趣', saving: '保存中…', focus: '从这里探索', currentFocus: '当前焦点',
+    starting: '初始兴趣', recommended: '推荐主题', explored: '已探索',
+    neighbors: '最相近的主题', neighborHelp: '距离来自原始 768 维主题向量。角距离越小，关联越紧密。',
+    distance: '距离', nearbyLinks: '最近邻连线', explorationLinks: '你的探索轨迹',
+    legend: '星图图例', subjectColors: '领域颜色', geometryNote: '位置用于展示主题的整体关系。精确相似度请参考测量得到的距离。',
+    customTitle: '其他已保存的兴趣', customHelp: '这些兴趣不在主题目录中，因此没有星图坐标。',
+    customDetail: '这项兴趣不在主题目录中，没有星图位置或已测量的目录近邻。',
+    noDescription: '这项已保存的兴趣还没有描述。', closeDetails: '关闭主题详情',
+    google: '在 Google 搜索', youtube: '在 YouTube 搜索', actionError: '未能完成此操作，请重试。',
+  },
+};
+
+export function galaxyText(language, key, values = {}) {
+  const text = (galaxyDictionaries[language] || galaxyDictionaries.en)[key] || key;
+  return text.replace(/\{(\w+)\}/g, (_, name) => String(values[name] ?? ''));
+}

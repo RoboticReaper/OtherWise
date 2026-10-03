@@ -36,7 +36,7 @@ downloaded batch and do not contact the server.
    count includes every selected page, so you can confirm the total before saving.
 2. Click **Find ideas**. Up to ten nearby topics appear by default, with the connection to a
    saved interest and Google/YouTube search buttons.
-3. Search one topic. Open **Map** to see an exploration path. Searching does not
+3. Search one topic. Open **Map** to see the full interest galaxy and your exploration path. Searching does not
    change saved interests or indicate expertise.
 4. Click **Save interest** when a topic interests you. The next path starts nearby.
    On the map, choose an earlier saved interest and **Explore from here** to return.
@@ -117,10 +117,32 @@ phrases, missing titles and non-English content. YouTube visits are recognized
 from Chrome history; video tags and the account's complete watch history are not
 imported. Add an interest manually when needed.
 
-The Galaxy map groups domains and records paths. Distances in its visual layout
-are illustrative, not measured embedding distances or knowledge mastery. The
+The Galaxy map projects all public catalog topics into two dimensions, using
+UMAP plus 15% domain anchors. This projection is approximate: its screen distances
+are not the distances used to rank recommendations or neighbors, or evidence of knowledge mastery. The
 recommendation engine explores semantic topics; it does not assess political
 stances or prove an effect on polarization.
+
+## Full dashboard and Galaxy
+
+Click **Dashboard ↗** beside the side panel's navigation to open a full browser tab.
+It shares saved interests, recommendations, language and settings with the panel
+through this extension's local storage. No login, extra permission or data upload
+is needed to open the dashboard or browse the public map.
+
+The Galaxy displays all 3,452 catalog topics, even before you save an interest.
+Search an English keyword or filter by domain, then select a search result or star.
+The details show the original catalog description and ten nearest topics computed
+in the original 768-dimensional space. Neighbor links and your recorded exploration
+paths have different styles. Saved interests, recommendations and the current focus
+are highlighted. Topic selection alone does not change your interests. Use **Save
+interest** explicitly, then **Explore from here** to change the recommendation focus.
+
+Drag to pan, use the +/− buttons or mouse wheel to zoom, and **Reset view** to return
+to the full map. Touch pinch and keyboard controls are supported. Filtering,
+selection and refreshing never recalculate star positions. Chinese changes interface
+labels only; topic names and descriptions retain their original language.
+Manually saved topics outside the catalog appear separately without invented positions.
 
 ## Troubleshooting and development
 
@@ -134,10 +156,12 @@ stances or prove an effect on polarization.
 - After rebuilding, click **Reload** on Chrome's OtherWise extension card and
   reopen the side panel. Do not delete the unpacked folder while using it.
 
-For an offline design preview, serve `extension/` locally and open
-`sidepanel.html?preview=1`. This mode has a prominent sample-data banner and never
+For an offline design preview, first build and serve `dist/otherwise-extension/`
+locally, then open `dashboard.html?preview=1` or `sidepanel.html?preview=1`.
+The public catalog map is real; the personal profile is a sample. This mode has a prominent sample-data banner and never
 reads Chrome history or calls the recommendation server. Production never falls
-back to samples.
+back to samples. Preview tabs do not share a persistent profile; install the extension
+to use the shared dashboard and side panel.
 
 Automated browser checks use a separate temporary Chromium profile and synthetic
 page titles. The integration fixture pregrants history/service permissions in a
@@ -148,6 +172,8 @@ and first use.
 `npm run test:ui` checks pagination with 103 synthetic candidates, cross-page
 selection, language persistence and preservation of drafts in an isolated browser.
 It uses the same optional Playwright setup described below and makes no API calls.
+`npm run test:galaxy` checks the real packaged catalog map and the shared dashboard
+in an isolated extension profile at desktop, side-panel, 390px and 320px widths.
 
 To rerun the integration check with Node 22+, install Playwright as an optional
 development tool (`npm install --no-save playwright`, then `npx playwright install chromium`),

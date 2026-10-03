@@ -72,7 +72,8 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  await until(async()=> (await get()).approved.length===2);
  assert.equal((await get()).focus,first.id);
  await page.getByRole('button',{name:'Map',exact:true}).click();
- await page.locator('[data-map-id="Gardening"]').click();
+ await page.locator('.galaxy-search').fill('Gardening');
+ await page.locator('.galaxy-result[data-galaxy-topic="Gardening"]').click();
  await page.getByRole('button',{name:'Explore from here',exact:true}).click();
  await until(async()=> (await get()).focus==='Gardening');
  await page.getByRole('button',{name:'Settings',exact:true}).click();

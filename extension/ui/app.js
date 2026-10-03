@@ -1,18 +1,26 @@
-import { getState, dispatch, importHistory, recommend, search, subscribe } from '../bridge.js';
+import { getState, dispatch, importHistory, recommend, search, subscribe, openDashboard } from '../bridge.js';
 import { normalizeLanguage, translate, translateError } from './i18n.js';
 import { paginate } from './pagination.js';
+import { createGalaxyMap } from './galaxy.js';
+import { galaxyLoader } from './galaxy-data.js';
 import { RECOMMENDATION_DEFAULTS, RECOMMENDATION_BOUNDS, normalizeRecommendationOptions } from '../core/recommendation-options.js';
 
 const app = document.querySelector('#app');
-const preview = new URLSearchParams(location.search).get('preview') === '1';
+const params = new URLSearchParams(location.search);
+const preview = params.get('preview') === '1';
+const dashboard = document.body.classList.contains('dashboard');
+const initialView = ['discover', 'map', 'settings'].includes(params.get('view')) ? params.get('view') : dashboard ? 'map' : 'discover';
 const ui = {
-  view: 'discover', manual: '', days: '30', selected: new Set(), inboxOpen: true, candidatePage: 1, recommendationPage: 1,
-  mapSelection: null, settingsDraft: null, settingsDirty: false, settingsSaved: false,
+  view: initialView, manual: '', days: '30', selected: new Set(), inboxOpen: true, candidatePage: 1, recommendationPage: 1,
+  galaxyView: null, settingsDraft: null, settingsDirty: false, settingsSaved: false,
   advancedOptionsOpen: false,
   pending: new Set(), expandedDescriptions: new Set(), error: null, announcement: '', loaded: false,
 };
 let state = null;
-let mapObserver;
+let galaxyMap;
+let galaxyAssets;
+let galaxyLoading = false;
+let galaxyError = false;
 let unsubscribe;
 let preferenceSequence = 0;
 
@@ -88,7 +96,7 @@ function render() {
   });
   const advancedOptions = app.querySelector('#recommendation-advanced');
   if (advancedOptions?.isConnected) ui.advancedOptionsOpen = advancedOptions.open;
-  mapObserver?.disconnect();
+  if (galaxyMap) { ui.galaxyView = galaxyMap.getViewState(); galaxyMap.destroy(); galaxyMap = null; }
   const error = ui.error || state?.lastError;
   document.documentElement.lang = language();
   document.title = t('title');
@@ -98,10 +106,10 @@ function render() {
       <div class="header-tools">${languageSelect('ui-language')}<span class="connection-label${error ? ' has-error' : ''}">${text(!ui.loaded ? 'opening' : error ? 'attention' : preview ? 'demo' : 'local')}</span></div>
     </header>
     ${preview ? `<div class="demo-notice"><strong>${text('demo')}</strong> · ${text('demoNotice')}</div>` : ''}
-    <nav class="main-nav" aria-label="${text('mainNavigation')}">${['discover', 'map', 'settings'].map(view => `<button type="button" data-action="view" data-view="${view}" data-focus="nav-${view}"${ui.view === view ? ' aria-current="page"' : ''}>${text(view)}</button>`).join('')}</nav>
+    <div class="workspace"><nav class="main-nav" aria-label="${text('mainNavigation')}">${['discover', 'map', 'settings'].map(view => `<button type="button" data-action="view" data-view="${view}" data-focus="nav-${view}"${ui.view === view ? ' aria-current="page"' : ''}>${text(view)}</button>`).join('')}${!dashboard ? `<button type="button" class="dashboard-link" data-action="open-dashboard">${text('openDashboard')} ↗</button>` : ''}</nav><div class="workspace-content">
     ${error ? `<div class="error-banner" role="alert"><p><strong>${text('errorHeading')}</strong><br>${escape(translateError(language(), error))}${ui.view !== 'settings' ? `<br>${text('errorHint')}` : ''}</p><button type="button" class="quiet" data-action="clear-error" aria-label="${text('dismissError')}">×</button></div>` : ''}
     <main id="main-view">${!ui.loaded ? loadingView() : ui.view === 'settings' ? settingsView() : ui.view === 'map' ? mapView() : discoverView()}</main>
-    <footer class="app-footer">${text('footer')}</footer>
+    <footer class="app-footer">${text('footer')}</footer></div></div>
     <div class="sr-only" role="status" aria-live="polite">${ui.announcement ? text(ui.announcement) : ''}</div>
   </div>`;
   bindEvents();
@@ -205,83 +213,42 @@ function settingsView() {
 }
 
 function mapView() {
-  const topics = mapTopics();
-  const selected = topics.find(topic => topicId(topic) === ui.mapSelection);
-  return `<section><div class="view-heading"><p class="eyebrow">${text('mapEyebrow')}</p><h1>${text('mapHeading')}</h1><p>${text('mapIntro')}</p></div>
-    <div class="map-legend" aria-label="${text('mapLegend')}"><span><i class="legend-dot baseline" aria-hidden="true"></i>${text('startingInterest')}</span><span><i class="legend-dot" aria-hidden="true"></i>${text('savedInterest')}</span><span><i class="legend-dot explored" aria-hidden="true"></i>${text('explored')}</span></div>
-    ${topics.length ? `<div class="map-surface" id="map-surface"></div><p class="muted small map-helper">${text('mapHelper')}</p>` : `<div class="empty-state"><div class="empty-symbol" aria-hidden="true">✧</div><h3>${text('mapEmpty')}</h3><p>${text('mapEmptyHelp')}</p><button type="button" data-action="view" data-view="discover">${text('startDiscover')}</button></div>`}
-    <div class="map-detail" aria-live="polite">${selected ? `<p class="eyebrow">${escape(selected.domain || t('otherSubjects'))} · ${text(isApproved(topicId(selected)) ? 'savedInterest' : 'exploredSubject')}</p><h3>${escape(topicTitle(selected))}</h3><p>${escape(selected.description || t('followFurther'))}</p><div class="card-search">${searchButtons(selected)}${isApproved(topicId(selected)) ? `<button type="button" data-action="set-focus" data-id="${escape(topicId(selected))}"${disabled(busy('focus'))}>${text('exploreFrom')}</button>` : `<button type="button" data-action="save-topic" data-id="${escape(topicId(selected))}">${text('saveInterest')}</button>`}</div>` : topics.length ? `<p>${text('mapMeaning')}</p>` : ''}</div></section>`;
-}
-
-function mapTopics() {
-  const topics = new Map();
-  arr(state?.explored).forEach(topic => topics.set(topicId(topic), topic));
-  arr(state?.approved).forEach(topic => topics.set(topicId(topic), topic));
-  return [...topics.values()];
+  return `<section class="galaxy-page"><div class="view-heading"><p class="eyebrow">${text('mapEyebrow')}</p><h1>${text('galaxyHeading')}</h1><p>${text('galaxyIntro')}</p></div>
+    <div id="galaxy-container">${galaxyError ? `<div class="empty-state" role="alert"><p>${text('galaxyUnavailable')}</p><button type="button" data-action="retry-galaxy">${text('retry')}</button></div>` : !galaxyAssets ? `<p class="muted" role="status">${text('galaxyLoading')}</p>` : ''}</div></section>`;
 }
 
 function drawMap() {
-  const surface = document.querySelector('#map-surface');
-  if (!surface) return;
-  let lastWidth = 0;
-  const draw = () => {
-    const width = Math.max(260, surface.clientWidth);
-    if (width === lastWidth) return;
-    lastWidth = width;
-    const columns = width > 760 ? 3 : width > 500 ? 2 : 1;
-    const columnWidth = width / columns;
-    const groups = new Map();
-    mapTopics().forEach(topic => { const domain = topic.domain || t('otherSubjects'); if (!groups.has(domain)) groups.set(domain, []); groups.get(domain).push(topic); });
-    const domains = [...groups];
-    const positions = new Map();
-    const blocks = [];
-    let top = 24;
-    for (let row = 0; row < domains.length; row += columns) {
-      const rowGroups = domains.slice(row, row + columns);
-      const rowHeight = Math.max(...rowGroups.map(([, topics]) => 58 + topics.length * 59));
-      rowGroups.forEach(([domain, topics], column) => {
-        const left = column * columnWidth + 23;
-        const maxDomainChars = Math.max(18, Math.floor((columnWidth - 46) / 6.5));
-        const domainLabel = domain.length > maxDomainChars ? `${domain.slice(0, maxDomainChars - 1)}…` : domain;
-        blocks.push(`<text class="domain-label" x="${left}" y="${top + 9}" aria-label="${escape(domain)}"><title>${escape(domain)}</title>${escape(domainLabel.toUpperCase())}</text><path class="domain-line" d="M ${left} ${top + 22} H ${left + columnWidth - 46}"/>`);
-        topics.forEach((topic, index) => positions.set(topicId(topic), { x: left + 13, y: top + 57 + index * 59, topic }));
+  const container = document.querySelector('#galaxy-container');
+  if (!container || galaxyError) return;
+  if (!galaxyAssets) {
+    if (!galaxyLoading) {
+      galaxyLoading = true;
+      galaxyLoader.load().then(assets => { galaxyAssets = assets; }).catch(() => { galaxyError = true; }).finally(() => {
+        galaxyLoading = false;
+        if (ui.view === 'map') render();
       });
-      top += rowHeight;
     }
-    const edges = arr(state.edges).filter(edge => positions.has(edge.from) && positions.has(edge.to)).map(edge => {
-      const from = positions.get(edge.from), to = positions.get(edge.to);
-      const curve = Math.min(from.x, to.x) - 18;
-      if (Math.abs(from.y - to.y) < 1) return `<path class="map-edge" d="M ${from.x} ${from.y} C ${from.x} ${from.y + 32}, ${to.x} ${to.y + 32}, ${to.x} ${to.y}"/>`;
-      return `<path class="map-edge" d="M ${from.x} ${from.y} C ${curve} ${from.y}, ${curve} ${to.y}, ${to.x} ${to.y}"/>`;
-    }).join('');
-    const baseline = new Set(arr(state.baseline));
-    const nodes = [...positions].map(([id, { x, y, topic }]) => {
-      const approved = isApproved(id);
-      const lines = wrapLabel(topicTitle(topic), Math.max(18, Math.floor((columnWidth - 92) / 6.2)));
-      return `<g class="map-node${approved ? '' : ' is-explored'}${ui.mapSelection === id ? ' selected' : ''}" data-map-id="${escape(id)}" data-focus="map-${escape(id)}" tabindex="0" role="button" aria-label="${text('mapNode', { topic: topicTitle(topic), status: t(approved ? 'savedInterest' : 'exploredSubject') })}" aria-pressed="${ui.mapSelection === id}"><title>${escape(topicTitle(topic))}</title>${baseline.has(id) && approved ? `<circle class="baseline-ring" cx="${x}" cy="${y}" r="11"/>` : ''}<circle cx="${x}" cy="${y}" r="6"/><circle class="focus-ring" cx="${x}" cy="${y}" r="15"/><text x="${x + 24}" y="${y + (lines.length > 1 ? -2 : 4)}">${lines.map((line, index) => `<tspan x="${x + 24}" dy="${index ? 16 : 0}">${escape(line)}</tspan>`).join('')}</text></g>`;
-    }).join('');
-    surface.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${top + 4}" role="group" aria-label="${text('mapLabel')}">${blocks.join('')}${edges}${nodes}</svg>`;
-    surface.querySelectorAll('[data-map-id]').forEach(node => {
-      const choose = () => { ui.mapSelection = node.dataset.mapId; const key = ui.mapSelection; render(); const target = [...document.querySelectorAll('[data-map-id]')].find(element => element.dataset.mapId === key); target?.focus({ preventScroll: true }); };
-      node.addEventListener('click', choose);
-      node.addEventListener('keydown', event => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); choose(); } });
+    return;
+  }
+  try {
+    galaxyMap = createGalaxyMap({ container, ...galaxyAssets, state, language: language(), viewState: ui.galaxyView,
+      onSave: topic => run(`save:${topicId(topic)}`, () => dispatch({type:'ADD_INTEREST', topic}), 'interestSaved'),
+      onFocus: focusMapTopic,
+      onSearch: (topic, provider) => run(`search:${topicId(topic)}`, () => search(topic, provider), 'explorationRecorded'),
     });
-  };
-  draw();
-  mapObserver = new ResizeObserver(draw);
-  mapObserver.observe(surface);
+  } catch {
+    galaxyError = true;
+    render();
+  }
 }
 
-function wrapLabel(title, maxChars) {
-  const words = title.split(/\s+/);
-  const lines = [''];
-  for (const word of words) {
-    const current = lines.at(-1);
-    if (current && `${current} ${word}`.length > maxChars) lines.push(word);
-    else lines[lines.length - 1] = current ? `${current} ${word}` : word;
-  }
-  if (lines.length > 2) return [lines[0], `${lines.slice(1).join(' ').slice(0, Math.max(8, maxChars - 1))}…`];
-  return lines.map(line => line.length > maxChars ? `${line.slice(0, maxChars - 1)}…` : line);
+async function focusMapTopic(id) {
+  const next = await run('focus', async () => {
+    const focused = await dispatch({type:'SET_FOCUS', id});
+    if (focused?.lastError || focused?.settings?.mode === 'path') return focused;
+    return dispatch({type:'SET_SETTINGS', patch:{mode:'path'}});
+  }, 'focusChanged');
+  if (next && !next.lastError) { ui.view = 'discover'; render(); document.querySelector('#discovery-mode')?.focus(); }
 }
 
 function bindEvents() {
@@ -359,6 +326,8 @@ async function saveSettings(event) {
 async function onAction(event) {
   const button = event.currentTarget;
   const { action, id, provider } = button.dataset;
+  if (action === 'open-dashboard') { await run('dashboard', () => openDashboard('map')); return; }
+  if (action === 'retry-galaxy') { galaxyError = false; galaxyAssets = null; galaxyLoader.invalidate(); render(); return; }
   if (action === 'recommendation-view') {
     const recommendationView = button.dataset.value;
     await run(`recommendation-view:${++preferenceSequence}`, () => dispatch({ type: 'SET_SETTINGS', patch: { recommendationView } }), 'layoutSaved');
@@ -392,15 +361,7 @@ async function onAction(event) {
   if (action === 'remove') { await run(`remove:${id}`, () => dispatch({ type: 'REMOVE_INTEREST', id }), 'interestRemoved'); return; }
   if (action === 'dismiss') { await run(`dismiss:${id}`, () => dispatch({ type: 'DISMISS', id }), 'topicDismissed'); return; }
   if (action === 'save-topic') { const topic = getTopic(id); if (topic) await run(`save:${id}`, () => dispatch({ type: 'ADD_INTEREST', topic }), 'interestSaved'); return; }
-  if (action === 'set-focus') {
-    const next = await run('focus', async () => {
-      const focused = await dispatch({ type: 'SET_FOCUS', id });
-      if (focused?.lastError || focused?.settings?.mode === 'path') return focused;
-      return dispatch({ type: 'SET_SETTINGS', patch: { mode: 'path' } });
-    }, 'focusChanged');
-    if (next && !next.lastError) { ui.view = 'discover'; render(); document.querySelector('#discovery-mode')?.focus(); }
-    return;
-  }
+  if (action === 'set-focus') { await focusMapTopic(id); return; }
   if (action === 'search') { const topic = getTopic(id); if (topic) await run(`search:${id}:${provider}`, () => search(topic, provider), 'explorationRecorded'); return; }
   if (action === 'recommend') { await run('recommend', recommend, 'ideasReady'); return; }
   if (action === 'clear-derived' || action === 'reset') {
@@ -408,7 +369,7 @@ async function onAction(event) {
     const confirmed = await confirmDialog(t(reset ? 'startOver' : 'confirmClear'), t(reset ? 'resetDescription' : 'clearDescription'), t(reset ? 'reset' : 'clearBrowsing'));
     if (!confirmed) return;
     const next = await run(action, () => dispatch({ type: reset ? 'RESET' : 'CLEAR_DERIVED' }), reset ? 'resetDone' : 'clearDone');
-    if (reset && next && !next.lastError) { ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.mapSelection = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.candidatePage = 1; ui.recommendationPage = 1; ui.view = 'discover'; render(); }
+    if (reset && next && !next.lastError) { galaxyMap?.destroy(); galaxyMap = null; ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.galaxyView = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.candidatePage = 1; ui.recommendationPage = 1; ui.view = 'discover'; render(); }
   }
 }
 
@@ -438,4 +399,4 @@ try {
   ui.error = error?.message || 'Could not open your saved interests. Please try again.';
   render();
 }
-window.addEventListener('pagehide', () => { if (typeof unsubscribe === 'function') unsubscribe(); mapObserver?.disconnect(); });
+window.addEventListener('pagehide', () => { if (typeof unsubscribe === 'function') unsubscribe(); galaxyMap?.destroy(); });

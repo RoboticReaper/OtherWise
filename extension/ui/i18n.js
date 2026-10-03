@@ -1,5 +1,10 @@
 // UI copy only. Topic names, knowledge domains, descriptions and user drafts stay literal.
 const copy = {
+  openDashboard: ['Dashboard', '工作台'],
+  galaxyHeading: ['Your interest galaxy.', '你的兴趣星系。'],
+  galaxyIntro: ['Explore the full topic universe. Your saved interests and recommendations light the way.', '探索完整的主题星图，让已保存的兴趣和推荐主题照亮下一步。'],
+  galaxyLoading: ['Opening the topic galaxy…', '正在打开主题星图…'],
+  galaxyUnavailable: ['The Galaxy data could not be opened. Reload the extension with the latest package, then try again.', '无法打开星图数据。请使用最新安装包重新加载插件，然后重试。'],
   recommendationLayout: ['Recommendation layout', '推荐显示方式'], cards: ['Cards', '卡片'], list: ['List', '列表'],
   readMore: ['Read more', '展开说明'], readLess: ['Show less', '收起说明'], layoutSaved: ['Recommendation layout saved.', '推荐显示方式已保存。'],
   title: ['OtherWise — A little wider', 'OtherWise — 发现更广的世界'],
@@ -73,6 +78,7 @@ export function translate(language, key, values = {}) {
 
 // Exact known application messages only; unknown text remains literal.
 export const errorTranslations = Object.freeze({
+  'Could not open the dashboard. Try again.': '无法打开工作台，请重试。',
   'This request is not permitted.': '此请求未获允许。',
   'Unsupported request.': '不支持此请求。',
   'OtherWise could not complete that action.': 'OtherWise 无法完成此操作。',

@@ -17,6 +17,9 @@ no user profile. The only persisted embeddings are for the public topic catalog.
 | `extension/core/index.js` | Pure state transitions, topic extraction, hashing, approved-only payload |
 | `extension/bridge.js` | UI/runtime messages and user-triggered permission requests |
 | `extension/ui/` | Discover, candidate inbox, map and Settings |
+| `extension/dashboard.html` | Full extension tab sharing the same bridge, reducer and local storage as the side panel |
+| `extension/ui/galaxy*.js` | Validated ID join, local public assets, stable camera and canvas renderer |
+| `galaxy/`, `scripts/build_galaxy.py` | Independent public-catalog preprocessing and content-addressed layout cache |
 | `extension/dev-preview.js` | Explicit sample-only design preview |
 | `service/api.py` | Strict authenticated request schema, size/rate/compute bounds, safe errors |
 | `service/engine.py` | Real MPNet initialization, public catalog cache, path/global recommendations |
@@ -46,6 +49,16 @@ repopulating local state. Reset also rotates the local hashing salt.
 Storage is `chrome.storage.local`, restricted to trusted extension contexts.
 Messages accept only this extension's own pages. There are no content scripts.
 Production requests omit credentials and reject redirects.
+
+Dashboard and side panel subscribe to the same local state changes. The packaged
+Galaxy asset is public and contains coordinates and high-dimensional neighbor IDs;
+it contains no browsing evidence or personal profile. Map selection, search,
+filtering and camera motion are local view state and do not submit API requests.
+The renderer joins by canonical topic title IDs used by the existing service and
+reducer, never by layout row offsets. Reordering arrays is safe; renaming a canonical
+topic requires an explicit identity migration for existing saved profiles.
+Custom interests outside the catalog remain available without fabricated coordinates.
+Recommendations still use the original embedding space, independently of the map.
 
 `settings.language` is a local UI preference (`en` or `zh-CN`). Existing installs
 default to English. Changing it does not invalidate recommendations, cancel an

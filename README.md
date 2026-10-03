@@ -6,6 +6,9 @@ on the device; only interests explicitly saved by the user reach the service.
 The interface supports English and Simplified Chinese. Interest input and
 recommendation content remain English. Candidate topics are paginated; discoveries
 can be shown as cards or compact list rows.
+The **Dashboard ↗** button opens a full extension tab sharing the side panel's
+local profile. Its Galaxy map includes the complete public catalog, stable semantic
+coordinates, domain filters, keyword search and true high-dimensional neighbors.
 
 ## Run the extension demo
 
@@ -27,6 +30,12 @@ Python 3.11+ and Chrome 116+ are required; development tests use Node 22+.
 
 Checks: `python -m pytest -q` and `npm test`. Browser regression checks are documented
 in the extension guide. The original notebook and its catalog remain available below.
+
+The checked-in `data/galaxy-layout.json` makes normal extension builds independent
+of layout libraries. Regenerate it only when the catalog, embedding model or layout
+algorithm changes; see [Galaxy preprocessing](docs/galaxy-preprocessing.md).
+For a sample profile with the real whole-catalog map, build first, then serve
+`dist/otherwise-extension` locally and open `dashboard.html?preview=1`.
 
 ## Notebook exploration
 

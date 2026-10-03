@@ -182,7 +182,10 @@ export function createController({catalog,readState,writeState,historySearch,has
     if(!['google','youtube'].includes(provider)) throw new Error('Choose Google or YouTube.');
     const current=await getState();
     const id=typeof topic==='string'?topic:topic?.id || topic?.topic;
-    const found=[...current.recommendations,...current.approved,...current.explored].find(t=>t.id===id || t.topic===id);
+    // The whole Galaxy exposes public catalog topics before they are recommended.
+    // Trust the packaged record, not the caller's supplied title or description.
+    const found=[...current.recommendations,...current.approved,...current.explored].find(t=>t.id===id || t.topic===id)
+      || catalog.find(t=>t.id===id || t.topic===id);
     if(!found) throw new Error('Choose a topic from your recommendations or map.');
     const query=encodeURIComponent(found.topic);
     const url=provider==='youtube'?`https://www.youtube.com/results?search_query=${query}`:`https://www.google.com/search?q=${query}`;

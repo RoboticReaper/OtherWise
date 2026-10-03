@@ -1,3 +1,4 @@
+@import url('./galaxy.css');
 @import url('./tokens.css');
 
 * { box-sizing: border-box; }
@@ -233,3 +234,7 @@ dialog .dialog-actions { display: flex; gap: 8px; justify-content: flex-end; fle
   .page-status { font-size: 11px; }
   .section-heading { gap: 8px; flex-wrap: wrap; }
 }
+
+.workspace-content { min-width: 0; }
+.main-nav .dashboard-link { margin-left: auto; font-size: 11px; white-space: nowrap; }
+@media(max-width:380px) { .main-nav { gap: 9px; } .main-nav button { font-size:12px; } .main-nav .dashboard-link { font-size:10px; } }

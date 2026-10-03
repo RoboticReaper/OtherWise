@@ -59,6 +59,16 @@ test('search creates an exploration record without approving the recommended top
   assert.ok(state.explored.some(x=>x.topic==='Botany'));
   assert.equal(r.opened[0],'https://www.youtube.com/results?search_query=Botany');
 });
+test('a catalog-only Galaxy topic can be searched with canonical text without becoming an interest',async()=>{
+  const r=rig();
+  const state=await r.controller.search({id:'Botany',topic:'untrusted replacement',description:'modified'},'google');
+  assert.equal(r.opened[0],'https://www.google.com/search?q=Botany');
+  assert.equal(state.approved.length,0);assert.equal(state.focus,null);
+  assert.equal(state.explored[0].id,'Botany');assert.equal(state.explored[0].description,'Studying plants');
+  assert.equal(state.explored[0].parentId,null);assert.equal(r.requests.length,0);
+  await assert.rejects(()=>r.controller.search({id:'Unknown injected topic'},'google'),/Choose a topic/);
+  assert.equal(r.opened.length,1);
+});
 test('background analysis defaults off and cannot backfill before opt-in',async()=>{
   const r=rig();
   await r.controller.observe([{url:'https://example.org/a',title:'Gardening',lastVisitTime:now}]);

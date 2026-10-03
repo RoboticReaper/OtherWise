@@ -16,6 +16,17 @@ async function requestHistory(){
   if(!granted)throw new Error('History access was not enabled. You can still add interests manually.');
 }
 export async function getState(){return preview?api.getState():send({type:'GET_STATE'});}
+export async function openDashboard(view='map'){
+  const selected=['discover','map','settings'].includes(view)?view:'map';
+  if(preview){
+    const url=new URL(`dashboard.html?preview=1&view=${selected}`,location.href);
+    globalThis.open(url.href,'_blank','noopener,noreferrer');
+    return;
+  }
+  if(!globalThis.chrome?.runtime?.id)throw new Error('Open OtherWise from your Chrome extensions.');
+  try{await chrome.tabs.create({url:chrome.runtime.getURL(`dashboard.html?view=${selected}`)});}
+  catch{throw new Error('Could not open the dashboard. Try again.');}
+}
 export async function dispatch(action){
   if(preview)return api.dispatch(action);
   if(action.type==='SET_SETTINGS'){
