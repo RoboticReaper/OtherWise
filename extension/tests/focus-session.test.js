@@ -36,3 +36,11 @@ test('recreated sessions cannot reuse an old bridge request ID after reset',asyn
  const first=createFocusSession({request});first.select('A','A');await first.load();first.destroy();
  const next=createFocusSession({request});next.select('B','B');await next.load();assert.ok(Number(ids[1])>Number(ids[0]));
 });
+test('Get ideas retries failed refresh while preserving the previous valid batch and successful cache reuse',async()=>{
+ let calls=0;
+ const session=createFocusSession({request:async id=>{calls++;if(calls===2)throw new Error('The service is busy. Try again shortly.');return {...envelope(id),batch:calls};}});
+ session.select('A','A');await session.load();assert.equal(session.getSnapshot().envelope.batch,1);
+ await session.load({refresh:true});assert.equal(session.getSnapshot().status,'error');assert.equal(session.getSnapshot().envelope.batch,1);
+ await session.load();assert.equal(calls,3);assert.equal(session.getSnapshot().status,'ready');assert.equal(session.getSnapshot().envelope.batch,3);
+ await session.load();assert.equal(calls,3,'A successful cached batch still avoids an extra upload');
+});

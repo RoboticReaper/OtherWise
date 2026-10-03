@@ -16,7 +16,7 @@ export function createFocusSession({request,cancel=()=>{},onChange=()=>{},maxEnt
   function load({refresh=false}={}){
     if(destroyed||!snapshot.seedId||!snapshot.requestKey)return Promise.resolve(getSnapshot());
     if(active)return active.promise;
-    if(!refresh&&snapshot.envelope)return Promise.resolve(getSnapshot());
+    if(!refresh&&snapshot.envelope&&snapshot.status!=='error')return Promise.resolve(getSnapshot());
     const slot={id:String(++windowSequence),seedId:snapshot.seedId,key:snapshot.requestKey};active=slot;
     snapshot={...snapshot,status:'loading',error:null};emit();
     // Invoke synchronously so cancellation can always target the registered request ID.
