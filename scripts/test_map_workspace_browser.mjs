@@ -45,6 +45,25 @@ try{
  await page.locator('.focus-search').fill('');
  for(const width of [1440,390,320]){await page.setViewportSize({width,height:1000});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);await page.screenshot({path:resolve(output,`focus-${width}.png`),fullPage:true});}
  checks.push('exploration setting persists and Focus fits desktop and narrow views');
+ const keyboardPage=await context.newPage();await keyboardPage.goto(base+'dashboard.html');await keyboardPage.locator('.galaxy-canvas').waitFor();
+ // A rejected, unmatched double-click must not leave a stale transition origin.
+ await keyboardPage.locator('.galaxy-canvas').focus();await keyboardPage.locator('.galaxy-canvas').dispatchEvent('dblclick');
+ assert.equal(await keyboardPage.locator('.map-workspace').getAttribute('data-view'),'galaxy');
+ await keyboardPage.locator('[data-map-view="focus"]').focus();await keyboardPage.keyboard.press('Enter');
+ assert.equal(await keyboardPage.locator('[data-map-view="focus"]').evaluate(node=>document.activeElement===node),true,'A visible view-switch control keeps focus on entry');
+ await keyboardPage.locator('[data-focus-action="back"]').focus();await keyboardPage.keyboard.press('Enter');
+ assert.equal(await keyboardPage.locator('.galaxy-canvas').evaluate(node=>document.activeElement===node),true,'Back falls back to Galaxy canvas when no detail control initiated entry');
+ await keyboardPage.locator('.galaxy-search').fill('Computer science');await keyboardPage.locator('.galaxy-result[data-galaxy-topic="Computer science"]').click();
+ const explore=keyboardPage.locator('[data-galaxy-action="enter-focus"]');await explore.focus();await keyboardPage.keyboard.press('Enter');
+ assert.equal(await keyboardPage.locator('.focus-root').evaluate(node=>node.contains(document.activeElement)&&document.activeElement.getClientRects().length>0),true,'Keyboard Explore must transfer focus out of the hidden Galaxy');
+ await keyboardPage.locator('.focus-search').focus();await keyboardPage.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_SETTINGS',patch:{language:'en'}}}));
+ await keyboardPage.waitForFunction(()=>document.documentElement.lang==='en');
+ assert.equal(await keyboardPage.locator('.focus-search').evaluate(node=>document.activeElement===node),true,'Routine state updates must not steal focus');
+ await keyboardPage.locator('[data-focus-action="back"]').focus();await keyboardPage.keyboard.press('Enter');
+ assert.equal(await explore.evaluate(node=>document.activeElement===node),true,'Keyboard Back restores the initiating Explore control after its DOM was refreshed');
+ await keyboardPage.keyboard.press('Enter');await keyboardPage.locator('.focus-map').focus();await keyboardPage.keyboard.press('Escape');
+ assert.equal(await explore.evaluate(node=>document.activeElement===node),true,'Escape restores the initiating Galaxy control');
+ await keyboardPage.close();checks.push('keyboard Explore enters visible Focus controls; Back/Escape restore initiator or canvas, and routine updates preserve focus');
  const preview=await context.newPage();await preview.goto(base+'dashboard.html?preview=1');await preview.locator('.galaxy-canvas').waitFor();
  await preview.locator('[data-map-view="focus"]').click();await preview.locator('[data-focus-action="get-ideas"]').click();await preview.locator('.focus-candidate-list [data-focus-select]').first().waitFor();
  const records=await preview.evaluate(async()=> (await (await fetch('./focus-preview.v1.json')).json()).batches.find(b=>b.request.topic_id==='Gardening').envelope.recommendations);
