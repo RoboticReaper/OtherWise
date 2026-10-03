@@ -74,6 +74,13 @@ try{
   await check('actual browser doubleclick enters once without delayed selection',async()=>{
     await page.locator('[data-galaxy-action="close-details"]').click();await page.evaluate(()=>entered=[]);await clickStar(page,'B',{double:true});assert.deepEqual(await page.evaluate(()=>entered),['B']);assert.equal(await selected(page),null);
   });
+  await check('native same-star doubleclick after the 250ms detail timer still enters once',async()=>{
+    await page.evaluate(()=>{entered=[];window.slowReleases=[];window.slowPresses=[];window.slowDoubleClicks=0;const canvas=document.querySelector('.galaxy-canvas');canvas.addEventListener('pointerup',event=>slowReleases.push(event.timeStamp));canvas.addEventListener('pointerdown',event=>slowPresses.push(event.timeStamp));canvas.addEventListener('dblclick',()=>slowDoubleClicks++);});
+    const p=await position(page,'B');await page.mouse.click(p.box.x+p.x,p.box.y+p.y);await page.waitForTimeout(320);assert.equal(await selected(page),'B','The automatic single-click timer must already have opened details');
+    await page.mouse.down({clickCount:2});await page.mouse.up({clickCount:2});await settle(page);
+    const observed=await page.evaluate(()=>({releases:slowReleases.length,native:slowDoubleClicks,gap:slowPresses[1]-slowReleases[0],entered}));
+    assert.equal(observed.releases,2);assert.equal(observed.native,1,'Chromium must emit one native doubleclick');assert.ok(observed.gap>250,'The second press must arrive after the detail timer');assert.deepEqual(observed.entered,['B']);
+  });
   await check('native doubleclick across adjacent unique stars opens details without entering Focus',async()=>{
     // Exact 25px separation, with two unique hits only 3px apart (inside Chromium's doubleclick tolerance).
     const box=await page.locator('.galaxy-canvas').boundingBox(),separation=25/(Math.min(box.width/8,box.height/6)*.82);

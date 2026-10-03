@@ -186,9 +186,9 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
     neighbors.append(list); panel.append(neighbors);
   }
 
-  function select(id, moveCamera = true) {
+  function select(id, moveCamera = true, {preserveReleaseIdentity = false} = {}) {
     const topic = topicFor(id); if (!topic) return;
-    activation.cancel(); releaseIds = []; closeCandidates(); view.selected = id; actionError = false;
+    activation.cancel(); if (!preserveReleaseIdentity) releaseIds = []; closeCandidates(); view.selected = id; actionError = false;
     if (data.byId.has(id)) {
       if (view.domain && topic.domain !== view.domain) { view.domain = null; domainSelect.value = ''; }
       if (moveCamera) view.camera = clampCamera({x: topic.x, y: topic.y, zoom: Math.max(2.4, view.camera.zoom)}, data.bounds);
@@ -358,7 +358,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
     candidateIds = ids; renderCandidates(); $('.galaxy-candidate-list button')?.focus({preventScroll: true});
   }
   const activation = createStarActivation({
-    onSelect: id => { if (candidateIds.length > 1) showCandidates(candidateIds); else select(id, false); },
+    onSelect: id => { if (candidateIds.length > 1) showCandidates(candidateIds); else select(id, false, {preserveReleaseIdentity: true}); },
     onEnterFocus: id => invoke('enter-focus', id),
   });
   function cancelInteraction() {
