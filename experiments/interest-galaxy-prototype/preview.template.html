@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OtherWise · Interest Galaxy 验证</title>
+<style>
+:root{color-scheme:dark;--bg:#0c1019;--panel:#131b28;--line:#2a3649;--text:#edf0f6;--muted:#aab6c9;--accent:#aacbff;--warm:#ffd79a}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 system-ui,-apple-system,sans-serif}main{max-width:1400px;margin:auto;padding:28px}h1{font-size:28px;line-height:1.3;margin:7px 0 10px}h2{font-size:18px;margin:0 0 12px}p{margin:8px 0}.eyebrow{font-size:12px;letter-spacing:.12em;color:var(--accent)}.muted{color:var(--muted)}.intro{max-width:950px}.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;margin:22px 0 15px}label{display:flex;flex-direction:column;gap:5px;color:var(--muted);font-size:13px}select,input,button{font:inherit;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 12px;min-height:42px}select{max-width:100%}input{min-width:0;width:250px}button{cursor:pointer}button:hover,button[aria-pressed=true]{border-color:var(--accent);background:#1c2c43}button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:3px}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:24px 0 12px}.metrics{display:flex;gap:24px;flex-wrap:wrap;margin:16px 0}.metric strong{display:block;font-size:24px}.metric span{font-size:12px;color:var(--muted)}.content{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:24px}.plot-wrap{min-width:0;position:relative}.plot{display:block;width:100%;height:580px;touch-action:none;border-bottom:1px solid var(--line)}.plot.local{height:420px}.aside{min-width:0;border-left:1px solid var(--line);padding-left:22px}.key{font-size:12px;color:var(--muted);margin:12px 0}.key span{display:inline-flex;align-items:center;gap:5px;margin:0 14px 6px 0}.key i{display:inline-block;width:8px;height:8px;border-radius:50%}.selected-title{font-size:20px;line-height:1.35;margin-bottom:8px;overflow-wrap:anywhere}.topic-description{color:var(--muted);font-size:14px}.scores{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.scores strong{display:block;font-size:22px}.scores span{font-size:12px;color:var(--muted)}.note{border-left:3px solid var(--warm);padding-left:12px;font-size:13px;color:var(--muted);margin:18px 0}.route{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:16px 0 20px}.route button{font-size:13px;max-width:220px;text-align:left;overflow-wrap:anywhere}.route .arrow{color:var(--muted)}a{color:var(--accent);overflow-wrap:anywhere}.search-results{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}.search-results button{font-size:12px}.legend{display:flex;flex-wrap:wrap;gap:5px 14px;margin:14px 0;font-size:12px;color:var(--muted)}.legend button{border:0;background:transparent;font-size:12px;padding:2px 4px;min-height:30px;text-align:left}.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}.legend button[aria-pressed=true]{outline:1px solid var(--accent)}.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;margin-top:12px;font-size:13px}th,td{border-bottom:1px solid var(--line);padding:10px 8px;text-align:left}th{font-weight:500;color:var(--muted)}td button{border:0;padding:0;min-height:32px;background:transparent;text-align:left}.rank{font-variant-numeric:tabular-nums}details{margin-top:20px;color:var(--muted);font-size:13px}summary{cursor:pointer;color:var(--accent)}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:12px/1.65 system-ui}.axis-caption{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:15px}.diagnostic{font-size:14px;margin:16px 0;color:var(--accent)}[hidden]{display:none!important}.footer{border-top:1px solid var(--line);margin-top:28px;padding-top:16px;font-size:13px;color:var(--muted)}
+@media(max-width:900px){main{padding:20px}.content{grid-template-columns:1fr}.aside{border-left:0;border-top:1px solid var(--line);padding:18px 0}.plot{height:480px}.plot.local{height:400px}}@media(max-width:480px){main{padding:16px}h1{font-size:24px}.toolbar>label{width:100%}input{width:100%}.plot{height:420px}.plot.local{height:360px}.metrics{gap:18px}.metric strong{font-size:20px}.route button{max-width:190px}.tabs button{flex:1;font-size:13px}.axis-caption{font-size:11px}}
+</style>
+<main>
+<div class="eyebrow">OTHERWISE / EXPERIMENT · 真实向量 · 独立原型</div>
+<h1>Interest Galaxy</h1>
+<p class="intro muted">验证两个问题：兴趣星体能否形成有依据的大方向；从 CS 往心理学探索时，能否遇到 HCI。所有点都来自现有 topic catalog。切换三种方法，查看原始结果与补充描述后的差别。</p>
+<div class="tabs" aria-label="查看范围">
+<button id="tab-local" aria-pressed="true">定向探索</button><button id="tab-global" aria-pressed="false">全局 Galaxy</button>
+</div>
+<section id="local-panel">
+<div class="toolbar">
+<label>出发点 → 目标<select id="pair"></select></label>
+<label>语义方法<select id="variant"><option value="raw">1 · 原始向量中点</option><option value="context">2 · 补充学科上下文</option><option value="enriched" selected>3 · 上下文 + HCI 描述补充</option></select></label>
+<button id="compare-hci">选中 HCI，查看依据</button>
+</div>
+<div id="diagnostic" class="diagnostic" aria-live="polite"></div>
+<div class="content">
+<div class="plot-wrap">
+<canvas id="local-map" class="plot local" role="img" aria-label="从出发学科往目标学科的高维方向投影，点击星体查看主题和相似度"></canvas>
+<div class="axis-caption"><span id="axis-start"></span><span>横向：沿选定语义方向的位置</span><span id="axis-end"></span></div>
+<div class="key"><span><i style="background:#aacbff"></i>检索候选</span><span><i style="background:#ffd79a"></i>建议停靠点</span><span>竖向用于分开候选，没有独立学科含义</span></div>
+<div id="local-route" class="route"></div>
+<div class="note">这是候选路线，不是已验证的学科关系或学习顺序。HCI 描述补充是一个人工核对的已知案例；全局地图始终使用原始向量。</div>
+<details><summary>查看本次筛选依据</summary><pre id="provenance"></pre></details>
+<details><summary>对照：只沿近邻图走最短路径</summary><p id="naive-path"></p><p id="naive-edges" class="muted"></p></details>
+</div>
+<aside class="aside" id="local-detail" aria-live="polite"></aside>
+</div>
+<h2 style="margin-top:24px">排名靠前的候选</h2>
+<p class="muted" style="font-size:13px">排名保留全部 3,452 个 topic 的原始位置；列表省略出发点、目标点和方向区间以外的候选。相似度不是概率或学科占比。</p>
+<div class="tablewrap"><table><thead><tr><th>原始排名</th><th>Topic</th><th>与出发点相似度</th><th>与目标点相似度</th><th>方向位置</th></tr></thead><tbody id="candidate-table"></tbody></table></div>
+</section>
+<section id="global-panel" hidden>
+<div class="toolbar">
+<label>全局排布<select id="layout"><option value="pca">PCA · 原始基线</option><option value="spectral">近邻图 · 谱布局基线</option><option value="graph">UMAP · 保留局部关系</option><option value="anchor-0.15" selected>UMAP + 15% 领域锚点</option><option value="anchor-0.35">UMAP + 35% 领域锚点</option><option value="anchor-0.65">UMAP + 65% 领域锚点</option><option value="anchor-1">只按领域锚点</option></select></label>
+<label>找到一个星体<input id="search" type="search" placeholder="例如 human-computer"></label><button id="reset-view">重置视角与筛选</button>
+</div>
+<div id="search-results" class="search-results"></div>
+<div id="metrics" class="metrics" aria-live="polite"></div>
+<div class="content"><div class="plot-wrap"><canvas id="global-map" class="plot" role="img" aria-label="3,452 个真实兴趣主题的二维排布；滚轮缩放，拖动平移，点击星体查看详情"></canvas><p class="muted" style="font-size:12px">滚轮缩放 · 拖动平移 · 点击星体查看原始高维邻居 · 点击领域筛选</p><div id="legend" class="legend"></div></div><aside id="global-detail" class="aside" aria-live="polite"></aside></div>
+<div class="note">锚点之间的位置由 23 个领域中心的高维距离拟合。topic 向最相关的三个领域加权靠近；领域方向不是随机摆放，但会牺牲部分邻居关系。二维上的直线距离不能替代原始 768 维距离。</div>
+</section>
+<div class="footer">原型验证 · 3,452 topics / 768 dimensions / all-mpnet-base-v2 / seed 42。只读取公共 topic catalog 和本地模型缓存；不使用浏览记录或个人兴趣。HCI 描述补充依据：<a href="https://csed.acm.org/knowledge-areas-human-computer-interaction-hci-cs2013-version/" target="_blank" rel="noreferrer">ACM 学科说明</a>。音乐→数学、生物→工程、CS→音乐用于额外检查，未人工添加对应桥接节点。</div>
+</main>
+<script id="galaxy-data" type="application/json">__GALAXY_DATA__</script>
+<script>
+const DATA=JSON.parse(document.getElementById('galaxy-data').textContent);
+const $=id=>document.getElementById(id), T=DATA.topics, S=DATA.summary;
+const colors=['#8cafec','#89ccb0','#efae98','#c7a4ee','#d6cd8d','#a2c7d9','#da9fbb','#93b9a0','#ddbc91','#a5a5d9','#72c7c7','#d1a587','#c4beae','#9daed0','#c8abc8','#7fc39c','#a1c0f0','#d5b073','#a9ba85','#d1a2a2','#85bed5','#bfa9df','#bdbd93'];
+// The view state is separate from the precomputed experiment evidence.
+const GalaxyLogic={
+ layout:(topic,name)=>{if(['pca','graph','spectral'].includes(name))return topic[name];const s=Number(name.split('-')[1]);return topic.graph.map((v,j)=>(1-s)*v+s*topic.anchor[j]);},
+ transition:(state,patch)=>({...state,...patch}),
+};
+let state={view:'local',pair:0,variant:'enriched',layout:'anchor-0.15',selected:T.find(t=>t.topic==='Human-computer interaction').id,domain:null,zoom:1,pan:[0,0]};
+let globalHits=[],localHits=[],drag=null;
+const fmt=n=>Number(n).toFixed(3), pct=n=>(100*n).toFixed(1)+'%';
+const element=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};
+function set(patch){state=GalaxyLogic.transition(state,patch);render();}
+function canvasSetup(canvas){const rect=canvas.getBoundingClientRect(),ratio=devicePixelRatio||1;canvas.width=Math.round(rect.width*ratio);canvas.height=Math.round(rect.height*ratio);const c=canvas.getContext('2d');c.scale(ratio,ratio);return {c,w:rect.width,h:rect.height};}
+function label(c,text,x,y,w,accent=false){c.font='12px system-ui';const max=w-16;let out=text;while(c.measureText(out).width>max&&out.length>4)out=out.slice(0,-2);if(out!==text)out+='…';const tw=c.measureText(out).width;x=Math.max(8,Math.min(w-tw-8,x));c.fillStyle=accent?'#ffd79a':'#d8e2f2';c.fillText(out,x,y);}
+function showTopic(container,id,point=null){container.replaceChildren();const topic=T[id];container.append(element('div',topic.topic,'selected-title'),element('div',DATA.domains[topic.domain],'eyebrow'),element('p',topic.description,'topic-description'));
+ if(point){const scores=element('div',undefined,'scores');[['与出发点',point.a],['与目标点',point.b],['方向位置',point.t],['全部 topic 中排名',point.rank]].forEach(([name,value])=>{const box=element('div');box.append(element('strong',name.includes('排名')?String(value):fmt(value)),element('span',name));scores.append(box)});container.append(scores,element('p','离高维方向轴的距离：'+fmt(point.axis_distance),'muted'));
+ if(point.enriched){container.append(element('p','本次实验补充的 HCI 描述：','note'),element('p',S.hci_description_overlay,'topic-description'));const a=element('a','ACM 关系依据');a.href=S.hci_source;a.target='_blank';a.rel='noreferrer';container.append(a);}else container.append(element('p','使用 catalog 原始描述。','muted'));
+ }else{container.append(element('p','原始 768 维里最接近的 topic：','muted'));const list=element('div',undefined,'search-results');(topic.neighbors||[]).slice(0,6).forEach(n=>{const b=element('button',T[n].topic);b.onclick=()=>set({selected:n});list.append(b)});container.append(list);}
+ if(topic.source){const a=element('a','查看 catalog 来源');a.href=topic.source;a.target='_blank';a.rel='noreferrer';container.append(element('p'),a);}
+}
+function renderLocal(){const pair=S.pairs[state.pair],v=pair.variants[state.variant];$('axis-start').textContent=pair.start;$('axis-end').textContent=pair.end;$('compare-hci').hidden=pair.id!=='cs-psych';
+ $('diagnostic').textContent=pair.id==='cs-psych'?`HCI 的全部 topic 排名：${v.hci_rank_all_topics} / 3,452 · 方向位置 ${fmt(v.hci_t)} · ${state.variant==='enriched'?'补充了 HCI 的跨学科描述':'HCI 使用原始描述'}`:'这个例子没有人工补充桥接 topic；请检查候选是否符合常识。';
+ $('provenance').textContent=`出发点描述：\n${v.anchor_profiles[0]}\n\n目标点描述：\n${v.anchor_profiles[1]}\n\n桥接检索文本：\n${v.query}\n\n${state.variant==='raw'?'按归一化向量中点相似度排序。':'排序：45% 桥接文本相似度 + 35% 两侧较低相似度 + 20% 两侧平均相似度。这是实验启发式，不是经过标定的置信度。'}\n\n停靠点：分别在方向位置 0.3 / 0.7 附近寻找候选，偏离不超过 0.22；两侧相似度至少 0.28。阈值用于演示，尚未标定。\n\n只有 HCI 一条描述在方法 3 中被替换；这是已知案例，不能证明泛化。`;
+ $('naive-path').textContent=pair.naive_graph_path.map(i=>T[i].topic).join(' → ');$('naive-edges').textContent='相邻节点的高维余弦相似度：'+pair.naive_graph_edge_cosines.map(fmt).join(' / ');
+ const route=$('local-route');route.replaceChildren();[pair.start_id,...v.waypoints,pair.end_id].forEach((id,index)=>{if(index)route.append(element('span','→','arrow'));if(id===null){route.append(element('span','缺少合适候选','muted'));return;}const b=element('button',T[id].topic);b.onclick=()=>set({selected:id});route.append(b);});
+ const tbody=$('candidate-table');tbody.replaceChildren();v.top.forEach(id=>{const p=v.points.find(p=>p.id===id),tr=element('tr');tr.append(element('td',String(p.rank),'rank'));const name=element('td'),b=element('button',T[id].topic);b.onclick=()=>set({selected:id});name.append(b);tr.append(name,...[p.a,p.b,p.t].map(n=>element('td',fmt(n),'rank')));tbody.append(tr)});
+ const selected=v.points.find(p=>p.id===state.selected)||v.points.find(p=>p.id===v.path[1]);showTopic($('local-detail'),selected.id,selected);
+ const {c,w,h}=canvasSetup($('local-map'));c.clearRect(0,0,w,h);const margin=28,base=h*.55;const xs=t=>margin+t*(w-2*margin);const ymax=Math.max(...v.points.map(p=>Math.abs(p.y)),.01);const ys=y=>base-y/ymax*(h*.32);
+ c.strokeStyle='#334862';c.lineWidth=1;c.beginPath();c.moveTo(xs(0),base);c.lineTo(xs(1),base);c.stroke();c.setLineDash([3,6]);[0,.5,1].forEach(t=>{c.beginPath();c.moveTo(xs(t),26);c.lineTo(xs(t),h-25);c.stroke()});c.setLineDash([]);
+ localHits=[];v.points.forEach(p=>{if(p.t<-.05||p.t>1.05)return;const x=xs(p.t),y=ys(p.y),special=v.path.includes(p.id),sel=p.id===selected.id;c.globalAlpha=special||sel?1:.55;c.fillStyle=special?'#ffd79a':colors[T[p.id].domain];c.beginPath();c.arc(x,y,sel?8:special?6:3.5,0,2*Math.PI);c.fill();if(sel){c.strokeStyle='#edf0f6';c.lineWidth=2;c.stroke();}localHits.push({id:p.id,x,y});});c.globalAlpha=1;
+ // Proposed path follows the measured positions; no HCI position is hand-forced.
+ c.strokeStyle='#ffd79a';c.lineWidth=1.5;c.setLineDash([5,5]);c.beginPath();v.path.forEach((id,i)=>{const p=v.points.find(p=>p.id===id);if(!p)return;const x=xs(p.t),y=ys(p.y);if(i===0)c.moveTo(x,y);else c.lineTo(x,y)});c.stroke();c.setLineDash([]);
+ const labeled=new Set([...v.path,selected.id]);let used=[];for(const id of labeled){const p=v.points.find(p=>p.id===id);if(!p)continue;let x=xs(p.t)+8,y=ys(p.y)-14;while(used.some(q=>Math.abs(q.y-y)<20&&Math.abs(q.x-x)<180))y-=22;y=Math.max(22,Math.min(h-14,y));used.push({x,y});label(c,T[id].topic,x,y,w,true);}
+}
+function renderGlobal(){const metrics=S.metrics[state.layout];$('metrics').replaceChildren();[['原始近邻保留率',pct(metrics.neighbor_recall_10)],['局部可信度 · 800 点',fmt(metrics.trustworthiness_800_k10)],['整体距离相关性',fmt(metrics.distance_spearman_50000)]].forEach(([name,value])=>{const b=element('div',undefined,'metric');b.append(element('strong',value),element('span',name));$('metrics').append(b)});
+ showTopic($('global-detail'),state.selected);const {c,w,h}=canvasSetup($('global-map'));const xy=T.map(t=>GalaxyLogic.layout(t,state.layout)),max=Math.max(...xy.flat().map(Math.abs))*1.06,scale=Math.min(w,h)/(2*max)*state.zoom;
+ const point=id=>({x:w/2+xy[id][0]*scale+state.pan[0],y:h/2-xy[id][1]*scale+state.pan[1]});c.clearRect(0,0,w,h);const related=new Set([state.selected,...(T[state.selected].neighbors||[])]);
+ for(const id of T[state.selected].neighbors||[]){const a=point(state.selected),b=point(id);c.strokeStyle='#aacbff66';c.lineWidth=1;c.beginPath();c.moveTo(a.x,a.y);c.lineTo(b.x,b.y);c.stroke();}
+ globalHits=[];T.forEach(t=>{const p=point(t.id),match=state.domain===null||t.domain===state.domain;c.globalAlpha=match?(related.has(t.id)?1:.65):.08;c.fillStyle=colors[t.domain];c.beginPath();c.arc(p.x,p.y,t.id===state.selected?7:related.has(t.id)?4:2.1,0,2*Math.PI);c.fill();if(match)globalHits.push({id:t.id,...p});});c.globalAlpha=1;const sel=point(state.selected);c.strokeStyle='#edf0f6';c.lineWidth=2;c.beginPath();c.arc(sel.x,sel.y,9,0,2*Math.PI);c.stroke();label(c,T[state.selected].topic,sel.x+14,sel.y-10,w,true);
+ const labelDomains=state.domain!==null?[state.domain]:(w<450?['Computing & information','Mind & behavior','Music & performance']:['Computing & information','Mind & behavior','Music & performance','Biology & nature','Mathematics','Visual arts & design']).map(d=>DATA.domains.indexOf(d));
+ let labelBoxes=[];for(const d of labelDomains){const ids=T.filter(t=>t.domain===d).map(t=>t.id),center=ids.reduce((r,id)=>{const p=point(id);return{x:r.x+p.x/ids.length,y:r.y+p.y/ids.length}},{x:0,y:0});c.font='12px system-ui';const width=Math.min(c.measureText(DATA.domains[d]).width,w-16);let x=Math.max(8,Math.min(w-width-8,center.x+8)),y=center.y-20;if(y<20||y>h-15)continue;while(labelBoxes.some(b=>Math.abs(b.y-y)<20&&x<b.x+b.width+8&&x+width+8>b.x))y-=23;if(y<20)continue;labelBoxes.push({x,y,width});c.fillStyle='#0c1019df';c.fillRect(x-4,y-14,width+8,20);label(c,DATA.domains[d],x,y,w);}
+ [...$('legend').children].forEach((button,i)=>button.setAttribute('aria-pressed',String(state.domain===i)));
+}
+function render(){const local=state.view==='local';$('local-panel').hidden=!local;$('global-panel').hidden=local;$('tab-local').setAttribute('aria-pressed',String(local));$('tab-global').setAttribute('aria-pressed',String(!local));if(local)renderLocal();else renderGlobal();}
+S.pairs.forEach((p,i)=>{const option=element('option',p.label);option.value=i;$('pair').append(option)});
+DATA.domains.forEach((d,i)=>{const b=element('button'),dot=element('i');dot.style.background=colors[i];b.append(dot,document.createTextNode(d));b.setAttribute('aria-pressed','false');b.onclick=()=>set({domain:state.domain===i?null:i});$('legend').append(b)});
+$('tab-local').onclick=()=>set({view:'local'});$('tab-global').onclick=()=>set({view:'global'});$('pair').onchange=e=>set({pair:Number(e.target.value),selected:S.pairs[Number(e.target.value)].start_id});$('variant').onchange=e=>set({variant:e.target.value});$('compare-hci').onclick=()=>set({selected:T.find(t=>t.topic==='Human-computer interaction').id});$('layout').onchange=e=>set({layout:e.target.value,zoom:1,pan:[0,0]});$('reset-view').onclick=()=>{ $('search').value='';$('search-results').replaceChildren();set({domain:null,zoom:1,pan:[0,0]});};
+$('search').oninput=e=>{const term=e.target.value.trim().toLowerCase(),out=$('search-results');out.replaceChildren();if(!term)return;T.filter(t=>t.topic.toLowerCase().includes(term)).slice(0,6).forEach(t=>{const b=element('button',t.topic);b.onclick=()=>set({selected:t.id,domain:null});out.append(b)});if(!out.childElementCount)out.append(element('span','没有匹配的 catalog topic。','muted'));};
+function pick(event,hits,canvas){const box=canvas.getBoundingClientRect(),x=event.clientX-box.left,y=event.clientY-box.top;let best=null,dist=18;hits.forEach(p=>{const d=Math.hypot(x-p.x,y-p.y);if(d<dist){best=p;dist=d}});if(best)set({selected:best.id});}
+$('local-map').onclick=e=>pick(e,localHits,$('local-map'));
+const globe=$('global-map');globe.onwheel=e=>{e.preventDefault();state=GalaxyLogic.transition(state,{zoom:Math.max(.6,Math.min(10,state.zoom*Math.exp(-e.deltaY*.0015)))});renderGlobal();};globe.onpointerdown=e=>{drag={x:e.clientX,y:e.clientY,pan:[...state.pan],moved:false};globe.setPointerCapture(e.pointerId);};globe.onpointermove=e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;if(Math.hypot(dx,dy)>5)drag.moved=true;if(drag.moved){state=GalaxyLogic.transition(state,{pan:[drag.pan[0]+dx,drag.pan[1]+dy]});renderGlobal();}};globe.onpointerup=e=>{if(drag&&!drag.moved)pick(e,globalHits,globe);drag=null;};globe.onpointercancel=()=>drag=null;
+window.addEventListener('resize',render);render();
+</script>
+</html>
