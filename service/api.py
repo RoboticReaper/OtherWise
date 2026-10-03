@@ -21,12 +21,14 @@ from pydantic import BaseModel, ConfigDict, Field, StringConstraints, field_vali
 from starlette.concurrency import run_in_threadpool
 
 from .engine import FocusIdentityConflict, RecommendationEngine, UnknownFocusTopic
+from .discovery import DiscoveryEngine
 
 MAX_BODY_BYTES = 16_384
 REQUESTS_PER_MINUTE = 30
 LOGGER = logging.getLogger("otherwise.service")
 Phrase = Annotated[str, StringConstraints(strict=True, min_length=1, max_length=120)]
 UnitControl = Annotated[float, Field(ge=0, le=1, allow_inf_nan=False)]
+GraphId = Annotated[str, StringConstraints(strict=True, min_length=1, max_length=120)]
 
 
 class RecommendationRequest(BaseModel):
@@ -68,6 +70,22 @@ class RecommendationRequest(BaseModel):
         if self.focus is not None and self.focus not in self.keywords:
             raise ValueError("Focus must be an approved keyword.")
         return self
+
+
+class ConceptFeedback(BaseModel):
+    model_config = ConfigDict(extra='forbid', strict=True)
+    concept_id: GraphId
+    area_id: GraphId
+    curious: bool
+    known: bool
+    difficulty: Literal['none', 'too_basic', 'too_hard']
+
+
+class DiscoveryRequest(RecommendationRequest):
+    feedback: Annotated[list[ConceptFeedback], Field(max_length=4000)] = Field(default_factory=list)
+    exposures: Annotated[dict[GraphId, Annotated[int, Field(ge=0, le=1_000_000_000)]], Field(max_length=100)] = Field(default_factory=dict)
+    seed: Annotated[int, Field(ge=0, le=2**31-1)] = 42
+    exploration_fraction: UnitControl = .3
 
 
 Digest = Annotated[str, StringConstraints(strict=True, pattern=r"^[0-9a-f]{64}$")]
@@ -123,7 +141,7 @@ class RequestBoundary:
         self.requests = deque()
 
     async def __call__(self, scope, receive, send):
-        if scope["type"] != "http" or scope["path"] not in {"/api/recommend", "/api/focus"} or scope["method"] != "POST":
+        if scope["type"] != "http" or scope["path"] not in {"/api/recommend", "/api/focus", "/api/discover"} or scope["method"] != "POST":
             return await self.app(scope, receive, send)
         headers = dict(scope["headers"])
         authorization = headers.get(b"authorization", b"")
@@ -142,7 +160,8 @@ class RequestBoundary:
             declared = int(headers.get(b"content-length", b"0"))
         except ValueError:
             return await error("Invalid request.", 400)(scope, receive, send)
-        if declared > MAX_BODY_BYTES:
+        max_bytes = 1_048_576 if scope['path'] == '/api/discover' else MAX_BODY_BYTES
+        if declared > max_bytes:
             return await error("Request is too large.", 413)(scope, receive, send)
         body = bytearray()
         try:
@@ -152,7 +171,7 @@ class RequestBoundary:
                     if message["type"] == "http.disconnect":
                         return
                     chunk = message.get("body", b"")
-                    if len(body) + len(chunk) > MAX_BODY_BYTES:
+                    if len(body) + len(chunk) > max_bytes:
                         return await error("Request is too large.", 413)(scope, receive, send)
                     body.extend(chunk)
                     if not message.get("more_body", False):
@@ -171,17 +190,27 @@ class RequestBoundary:
         await self.app(scope, bounded_receive, send)
 
 
-def create_app(engine=None, token=None):
+def create_app(engine=None, token=None, discovery_engine=None):
+    default_engine = engine is None
     engine = engine if engine is not None else RecommendationEngine(device=os.getenv("OTHERWISE_MODEL_DEVICE") or None)
+    if discovery_engine is None and default_engine:
+        discovery_engine = DiscoveryEngine(engine)
     access_token = token if token is not None else os.getenv("OTHERWISE_API_TOKEN", "")
     compute = threading.BoundedSemaphore(1)
 
     @asynccontextmanager
     async def lifespan(app):
         app.state.ready = False
+        app.state.discovery_ready = False
         try:
             await run_in_threadpool(engine.initialize)
             app.state.ready = bool(engine.ready)
+            if discovery_engine is not None:
+                try:
+                    await run_in_threadpool(discovery_engine.initialize)
+                    app.state.discovery_ready = bool(discovery_engine.ready)
+                except Exception:
+                    LOGGER.warning('Graph recommendation initialization failed.')
         except Exception:
             # Exception details can include input/model credentials; never log them.
             LOGGER.warning("Recommendation engine initialization failed.")
@@ -243,6 +272,22 @@ def create_app(engine=None, token=None):
         except Exception:
             LOGGER.warning("Recommendation computation failed.")
             return error("Recommendation service is unavailable. Try again shortly.", 503)
+        finally:
+            compute.release()
+
+    @app.post('/api/discover')
+    def specific_recommendations(payload: DiscoveryRequest):
+        if not app.state.ready or not app.state.discovery_ready:
+            return error('Recommendation service is unavailable.', 503)
+        if not compute.acquire(blocking=False):
+            return error('Recommendation service is busy. Try again shortly.', 429, **{'Retry-After': '2'})
+        try:
+            return discovery_engine.recommend(**payload.model_dump())
+        except ValueError:
+            return error('Invalid recommendation request.', 422)
+        except Exception:
+            LOGGER.warning('Graph recommendation computation failed.')
+            return error('Recommendation service is unavailable. Try again shortly.', 503)
         finally:
             compute.release()
 

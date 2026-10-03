@@ -4,6 +4,7 @@ import { paginate } from './pagination.js';
 import { createMapWorkspace } from './map-workspace.js';
 import { galaxyLoader } from './galaxy-data.js';
 import { RECOMMENDATION_DEFAULTS, RECOMMENDATION_BOUNDS, normalizeRecommendationOptions } from '../core/recommendation-options.js';
+import {discoveryControls, graphDetails, feedbackForm, savedFeedbackView} from './discovery.js';
 
 const app = document.querySelector('#app');
 const params = new URLSearchParams(location.search);
@@ -14,6 +15,7 @@ const ui = {
   view: initialView, manual: '', days: '30', selected: new Set(), inboxOpen: true, candidatePage: 1, recommendationPage: 1,
   galaxyView: null, settingsDraft: null, settingsDirty: false, settingsSaved: false,
   advancedOptionsOpen: false,
+  feedbackDrafts: new Map(), feedbackOpen: false, feedbackPage: 1,
   pending: new Set(), expandedDescriptions: new Set(), error: null, announcement: '', loaded: false,
 };
 let state = null;
@@ -51,7 +53,10 @@ function snapshotSettings() {
 function applyState(next) {
   if (!next || typeof next !== 'object') return;
   if (next.lastUpdated !== state?.lastUpdated) ui.recommendationPage = 1;
-  if (state?.salt && state.salt !== next.salt) { mapWorkspace?.destroy(); mapWorkspace = null; ui.galaxyView = null; }
+  if (state?.salt && state.salt !== next.salt) {
+    mapWorkspace?.destroy(); mapWorkspace = null; ui.galaxyView = null;
+    ui.feedbackDrafts.clear(); ui.feedbackPage = 1; ui.feedbackOpen = false;
+  }
   state = next;
   ui.loaded = true;
   const candidates = new Set(arr(state.candidates).map(topicId));
@@ -123,6 +128,7 @@ function render() {
     if (target?.disabled && focusKey.startsWith('candidate-')) target = app.querySelector('.inbox-pagination button:not(:disabled)') || app.querySelector('.candidate-inbox summary');
     if (target?.disabled && focusKey.startsWith('recommendation-page-')) target = app.querySelector('.recommendation-pagination button:not(:disabled)') || app.querySelector('#recommendations-title');
     if (!target && focusKey.startsWith('recommendation-dismiss:')) target = app.querySelector('.recommendation-card [data-action="dismiss"]') || app.querySelector('#recommendations-title');
+    if (!target && (focusKey.startsWith('graph-') || focusKey.startsWith('undo-feedback:') || focusKey.startsWith('clear-concept-feedback:'))) target = app.querySelector('#recommendations-title');
     if (!target && (focusKey.startsWith('candidate-') || focusKey.startsWith('dismiss:'))) target = app.querySelector('.candidate-inbox summary');
     if (target) {
       target.focus({ preventScroll: true });
@@ -145,6 +151,7 @@ function discoverView() {
   ui.recommendationPage = page.page;
   const mode = state.settings?.mode || 'path';
   const listView = state.settings?.recommendationView === 'list';
+  const specific = state.settings?.recommendationKind === 'specific';
   return `<section class="hero"><span class="little-star" aria-hidden="true">✧</span><p class="eyebrow">${text('curiosity')}</p><h1>${text('headlineFirst')}<br>${text('headlineSecond')}</h1><p>${text('heroDescription')}</p></section>
     ${!approved.length && !arr(state.baseline).length ? `<div class="intro"><p><strong>${text('smallBeginning')}</strong> ${text('intro')}</p><p class="small">${text('introPrivacy')}</p></div>` : ''}
     <form class="manual-form" id="manual-form"><label class="sr-only" for="manual-interest">${text('addInterest')}</label><input id="manual-interest" data-focus="manual-interest" name="interest" placeholder="${text('interestPlaceholder')}" aria-describedby="interest-language-help" maxlength="120" value="${escape(ui.manual)}" autocomplete="off"><button class="primary" data-focus="add-interest" type="submit"${disabled(busy('add'))}>${text(busy('add') ? 'saving' : 'add')}</button></form>
@@ -153,10 +160,13 @@ function discoverView() {
     ${candidates.length ? inboxView(candidates) : ''}
     <section class="section" aria-labelledby="interests-title"><div class="section-heading"><h2 id="interests-title">${text('yourInterests')}</h2>${approved.length ? `<span class="muted small">${text('savedByYou')}</span>` : ''}</div>${approved.length ? `<div class="interests">${approved.map(topic => `<span class="interest-chip"><span>${escape(topicTitle(topic))}</span><button type="button" data-action="remove" data-id="${escape(topicId(topic))}" aria-label="${text('removeInterest', { topic: topicTitle(topic) })}">×</button></span>`).join('')}</div>` : `<p class="muted small">${text('firstInterest')}</p>`}</section>
     <section class="section" aria-labelledby="recommendations-title"><div class="section-heading"><h2 id="recommendations-title" tabindex="-1">${text('beyond')}</h2><div class="view-switch" role="group" aria-label="${text('recommendationLayout')}">${['cards', 'list'].map(value => `<button type="button" data-action="recommendation-view" data-value="${value}" data-focus="recommendation-view-${value}" aria-pressed="${(value === 'list') === listView}">${text(value)}</button>`).join('')}</div></div>
-    <div class="discovery-toolbar"><label class="sr-only" for="discovery-mode">${text('discoveryMode')}</label><select id="discovery-mode" data-focus="discovery-mode"><option value="path"${mode === 'path' ? ' selected' : ''}>${text('followPath')}</option><option value="global"${mode === 'global' ? ' selected' : ''}>${text('acrossInterests')}</option></select><button type="button" data-action="recommend"${disabled(!approved.length || busy('recommend'))}>${text(busy('recommend') ? 'finding' : items.length ? 'refreshIdeas' : 'findIdeas')} <span aria-hidden="true">↗</span></button></div>
+    ${discoveryControls(state,{text})}<div class="discovery-toolbar"><label class="sr-only" for="discovery-mode">${text('discoveryMode')}</label><select id="discovery-mode" data-focus="discovery-mode"><option value="path"${mode === 'path' ? ' selected' : ''}>${text('followPath')}</option><option value="global"${mode === 'global' ? ' selected' : ''}>${text('acrossInterests')}</option></select><button type="button" data-action="recommend"${disabled(!approved.length || busy('recommend') || busy('feedback'))}>${text(busy('recommend') || busy('feedback') ? 'finding' : items.length ? 'refreshIdeas' : 'findIdeas')} <span aria-hidden="true">↗</span></button></div>
     ${approved.length ? `<p class="focus-note">${mode === 'path' ? text('pathNote', { topic: state.focus || topicTitle(approved.at(-1)) }) : text('globalNote')}</p>` : ''}
     ${state.lastUpdated ? `<div class="recommendation-batch"><p class="recommendation-range">${text('recommendationRange', page)}</p><p>${text('recommendationBatchHelp')}</p><button type="button" class="quiet" data-action="view" data-view="settings">${text('adjustRecommendations')}</button></div>` : ''}
     ${items.length ? `<div class="recommendations${listView ? ' is-list' : ''}">${page.items.map(topic => cardView(topic, listView)).join('')}</div>${page.pageCount > 1 ? `<nav class="recommendation-pagination" aria-label="${text('recommendationPagination')}"><button type="button" data-action="recommendation-prev" data-focus="recommendation-page-prev"${disabled(page.page === 1)}>${text('previous')}</button><span class="page-status" role="status">${text('page', { page: page.page, pages: page.pageCount })}</span><button type="button" data-action="recommendation-next" data-focus="recommendation-page-next"${disabled(page.page === page.pageCount)}>${text('next')}</button></nav>` : ''}` : `<div class="empty-state"><div class="empty-symbol" aria-hidden="true">✧</div><h3>${text(approved.length ? 'newRoom' : 'firstPage')}</h3><p>${text(approved.length ? 'findHelp' : 'firstHelp')}</p></div>`}
+    ${specific && items.length ? `<p class="concept-reserve">${text('reservationCount',{achieved:items[0].discovery?.exploration_achieved||0,target:items[0].discovery?.exploration_target||0})}</p>` : ''}
+    ${specific && state.lastUpdated && !items.length ? `<p class="muted small">${text('specificEmpty')}</p>` : ''}
+    ${specific ? savedFeedbackView(state,ui.feedbackPage,ui.feedbackOpen,{text,escape,busy:busy('feedback')}) : ''}
     ${state.lastUpdated ? `<p class="last-updated">${text('updated', { time: formatTime(state.lastUpdated) })}</p>` : ''}</section>`;
 }
 
@@ -182,7 +192,7 @@ function descriptionView(topic, listView) {
 function cardView(topic, listView = false) {
   const id = topicId(topic);
   const saved = isApproved(id);
-  return `<article class="recommendation-card"><div class="recommendation-content"><div class="recommendation-heading"><p class="eyebrow">${escape(topic.domain || t('newDirection'))}</p><h3>${escape(topicTitle(topic))}</h3></div>${descriptionView(topic, listView)}${topic.nearest_interest ? `<div class="related">${text('connectionFrom', { topic: topic.nearest_interest })}</div>` : ''}</div><div class="recommendation-actions"><div class="card-search">${searchButtons(topic)}</div><div class="card-feedback">${saved ? `<span class="saved-label">${text('savedLabel')}</span>` : `<button type="button" class="save" data-action="save-topic" data-id="${escape(id)}"${disabled(busy(`save:${id}`))}>${text('saveInterest')}</button>`}<button type="button" class="quiet" data-action="dismiss" data-id="${escape(id)}" data-focus="recommendation-dismiss:${escape(id)}">${text('notForMe')}</button></div></div></article>`;
+  return `<article class="recommendation-card"><div class="recommendation-content"><div class="recommendation-heading"><p class="eyebrow">${escape(topic.domain || t('newDirection'))}</p><h3>${escape(topicTitle(topic))}</h3></div>${descriptionView(topic, listView)}${topic.nearest_interest ? `<div class="related">${text('connectionFrom', { topic: topic.nearest_interest })}</div>` : ''}${graphDetails(topic,{text,escape})}</div><div class="recommendation-actions"><div class="card-search">${searchButtons(topic)}</div><div class="card-feedback">${saved ? `<span class="saved-label">${text('savedLabel')}</span>` : `<button type="button" class="save" data-action="save-topic" data-id="${escape(id)}"${disabled(busy(`save:${id}`))}>${text('saveInterest')}</button>`}<button type="button" class="quiet" data-action="dismiss" data-id="${escape(id)}" data-focus="recommendation-dismiss:${escape(id)}">${text('notForMe')}</button></div>${feedbackForm(topic,state,ui.feedbackDrafts.get(topic.discovery?.concept_id),{text,escape,busy:busy('feedback')})}</div></article>`;
 }
 
 function recommendationOptionField(key, draft) {
@@ -262,6 +272,18 @@ async function focusMapTopic(id) {
 }
 
 function bindEvents() {
+  document.getElementById('recommendation-kind')?.addEventListener('change', event => run('kind', () => dispatch({type:'SET_SETTINGS',patch:{recommendationKind:event.target.value}}), 'kindSaved'));
+  document.getElementById('discovery-exploration')?.addEventListener('change', event => run('exploration-share', () => dispatch({type:'SET_SETTINGS',patch:{discoveryExploration:Number(event.target.value)}}), 'shareSaved'));
+  document.getElementById('discovery-feedback-panel')?.addEventListener('toggle', event => {if(event.target.isConnected)ui.feedbackOpen=event.target.open;});
+  app.querySelectorAll('[data-graph-feedback]').forEach(form => {
+    const read = () => ({curious:form.elements.curious.checked,known:form.elements.known.checked,difficulty:form.elements.difficulty.value});
+    form.addEventListener('change', () => ui.feedbackDrafts.set(form.dataset.graphFeedback,read()));
+    form.addEventListener('submit', async event => {
+      event.preventDefault();const conceptId=form.dataset.graphFeedback;
+      const next = await run('feedback', () => dispatch({type:'SET_DISCOVERY_FEEDBACK',conceptId,...read()}), 'feedbackSaved');
+      if(next && !next.lastError){ui.feedbackDrafts.delete(conceptId);render();}
+    });
+  });
   app.querySelectorAll('[data-language]').forEach(select => select.addEventListener('change', event => {
     const nextLanguage = normalizeLanguage(event.target.value);
     void run(`language:${++preferenceSequence}`, () => dispatch({ type: 'SET_SETTINGS', patch: { language: nextLanguage } }), 'languageSaved');
@@ -375,12 +397,22 @@ async function onAction(event) {
   if (action === 'set-focus') { await focusMapTopic(id); return; }
   if (action === 'search') { const topic = getTopic(id); if (topic) await run(`search:${id}:${provider}`, () => search(topic, provider), 'explorationRecorded'); return; }
   if (action === 'recommend') { await run('recommend', recommend, 'ideasReady'); return; }
+  if (action === 'feedback-prev' || action === 'feedback-next') { ui.feedbackPage=paginate(Object.entries(state.discovery.feedback),ui.feedbackPage+(action==='feedback-next'?1:-1)).page;render();return; }
+  if (action === 'undo-feedback' || action === 'clear-concept-feedback') {
+    const next=await run('feedback',()=>dispatch(action==='undo-feedback'?{type:'UNDO_DISCOVERY_FEEDBACK'}:{type:'CLEAR_CONCEPT_FEEDBACK',conceptId:button.dataset.conceptId}),'feedbackChanged');
+    if(next){ui.feedbackDrafts.clear();render();}return;
+  }
+  if(action==='clear-feedback'){
+    if(!await confirmDialog(t('clearAllFeedback'),t('clearFeedbackDescription'),t('clearAllFeedback')))return;
+    const next=await run('feedback',()=>dispatch({type:'CLEAR_DISCOVERY_FEEDBACK'}),'feedbackCleared');
+    if(next && !next.lastError){ui.feedbackDrafts.clear();ui.feedbackPage=1;render();}return;
+  }
   if (action === 'clear-derived' || action === 'reset') {
     const reset = action === 'reset';
     const confirmed = await confirmDialog(t(reset ? 'startOver' : 'confirmClear'), t(reset ? 'resetDescription' : 'clearDescription'), t(reset ? 'reset' : 'clearBrowsing'));
     if (!confirmed) return;
     const next = await run(action, () => dispatch({ type: reset ? 'RESET' : 'CLEAR_DERIVED' }), reset ? 'resetDone' : 'clearDone');
-    if (reset && next && !next.lastError) { mapWorkspace?.destroy(); mapWorkspace = null; ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.galaxyView = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.candidatePage = 1; ui.recommendationPage = 1; ui.view = 'discover'; render(); }
+    if (reset && next && !next.lastError) { mapWorkspace?.destroy(); mapWorkspace = null; ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.galaxyView = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.feedbackDrafts.clear(); ui.feedbackPage = 1; ui.candidatePage = 1; ui.recommendationPage = 1; ui.view = 'discover'; render(); }
   }
 }
 

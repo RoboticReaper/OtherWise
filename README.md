@@ -2,13 +2,17 @@
 
 Your world, a little wider. OtherWise connects a Chrome side panel to a
 local Python recommendation service. Browsing titles become candidate interests
-on the device. Discover sends interests explicitly saved by the user. In Map,
+on the device. Discover sends interests explicitly saved by the user; specific discovery also sends
+explicitly saved concept feedback and local area exposure counts. In Map,
 Focus sends an unsaved catalog topic only when the user clicks **Get ideas**;
 that request includes its catalog ID, data-version identity and recommendation
 parameters, without browsing history or the saved-interest profile.
 The interface supports English and Simplified Chinese. Interest input and
 recommendation content remain English. Candidate topics are paginated; discoveries
-can be shown as cards or compact list rows.
+can be shown as cards or compact list rows. **What to discover → Specific concepts**
+connects the sourced graph to the extension, with source paths, reading levels,
+Curious/Known/difficulty feedback, undo and clear controls. Ratings remain local;
+the backend reconstructs a temporary profile per request.
 The **Dashboard ↗** button opens a full extension tab sharing the side panel's
 local profile. Its Galaxy map includes the complete public catalog, stable semantic
 coordinates, domain filters, keyword search and true high-dimensional neighbors.
@@ -30,7 +34,7 @@ their ten direct nearest topics, and individually searched topics.
    from `.cache/demo/connection.json`. Add an interest, or review browsing topics,
    then choose **Find ideas**.
 
-[Extension guide](docs/extension-guide.md) · [Architecture and privacy](docs/extension-architecture.md) · [Focus verification status](docs/focus-exploration-verification.md)
+[Extension guide](docs/extension-guide.md) · [Architecture and privacy](docs/extension-architecture.md) · [Focus verification status](docs/focus-exploration-verification.md) · [Specific discovery verification](docs/discovery-extension-verification.md)
 
 The installable ZIP is `dist/OtherWise-extension.zip`. Unzip it before loading it
 in Chrome. No browser model or frontend dependency installation is required.
@@ -83,7 +87,9 @@ The specific-concept catalog covers the same 23 domains as the broad catalog,
 with 160 concepts and three navigation areas per domain. Section 10 displays
 the measured coverage. All domains use the same traversal and sampling rules.
 
-Your profile is saved locally in `.local/feedback.json` (ignored by Git). The graph
+The notebook profile is saved locally in `.local/feedback.json` (ignored by Git).
+The extension uses its separate `chrome.storage.local` profile; it does not read
+or migrate the notebook profile. The graph
 snapshot runs offline; its provenance and refresh instructions are in
 [data/discovery_graph_README.md](data/discovery_graph_README.md). See the
 [feedback and ranking guide](docs/graph-feedback.md) for the exact rules and limits.

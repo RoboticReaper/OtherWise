@@ -44,6 +44,45 @@ downloaded batch and do not contact the server.
    confirmed interest after the first onboarding selection increases the range
    once, capped at eight increases. Searches and refreshes do not widen it.
 
+## Specific concepts and feedback
+
+In Discover, select **What to discover → Specific concepts**, then **Find ideas**.
+The same interests, path/global mode, quantity and distance controls now search
+3,642 sourced concepts across 69 areas. Every concept shows its observed graph
+path, reading level when reviewed, and a link to its public source. A graph path
+explains where it was found; it is not a prerequisite sequence or course outline.
+
+Use **Curious**, **Already know**, and **Too basic / Too hard** independently,
+then click **Save feedback**. Checkbox/select changes are drafts until saved.
+Saved feedback stays in this browser. Saving, clearing one rating, or undoing
+reranks the last valid search with the same random seed and exposure snapshot.
+Known concepts disappear; saving feedback does not approve an interest or claim
+mastery. **Save interest** remains a separate action. **Saved feedback** lists all
+ratings, ten per page, including concepts absent from the current batch.
+
+**Reserve for less-seen areas** defaults to 30% and reserves positions for eligible
+areas with fewer previously returned concepts. The requested share may not be fully achievable;
+the interface shows the achieved count. It never expands the distance band.
+Refresh starts a new seeded batch; each accepted concept increments its source area’s count once, and reranking does
+not add exposures.
+Undo works after reopening a window. **Clear all feedback** deletes ratings,
+area recommendation counters and undo state while keeping saved interests. Reset removes them
+along with the rest of the profile. Switching back to broad topics retains ratings
+and returns to the original request format, without sending graph feedback.
+
+Specific discovery sends only saved interest names, discovery parameters, saved
+concept/area IDs and ratings, and area exposure counts. It sends no browsing URLs,
+page titles, source links or unsaved drafts. The service builds the feedback profile
+in memory and persists only public embeddings. A service failure retains saved
+ratings; retry with **Find ideas**. The host must restart the updated backend for
+`/api/discover`; the first startup may take longer while public graph vectors are
+cached. An older backend shows an upgrade message rather than a replacement batch.
+
+Galaxy/Focus continue to use the original broad catalog and fixed layout. Saved
+graph concepts outside that catalog appear as custom interests without invented
+coordinates. Reading levels are reviewed hints; unreviewed concepts show **Not
+reviewed**, and the model does not measure a user's knowledge.
+
 ## Optional ongoing updates
 
 ### Recommendation settings
@@ -99,7 +138,8 @@ review the candidate inbox before saving interests you want to share.
 - Raw URLs and page titles are used transiently on the device. Stored browsing
   evidence contains a salted URL hash, hostname, recognized topic IDs and visit time.
   Browsing-derived evidence/candidates expire after 30 days.
-- Discover sends only saved interest names and discovery preferences. Focus sends
+- Discover sends saved interest names and discovery preferences. Specific discovery
+  additionally sends explicitly saved concept feedback and area exposure counts. Focus sends
   the current catalog topic ID, catalog/model/embedding identity and recommendation
   parameters only after an explicit **Get ideas** request. That topic can be unsaved;
   the Focus request contains no personal interests, browsing history, URLs or titles.
@@ -108,7 +148,7 @@ review the candidate inbox before saving interests you want to share.
 - Chrome history deletion removes matching derived evidence and candidates.
   Explicit interests and OtherWise exploration paths remain until removed/reset.
 - **Clear browsing data** removes derived evidence and candidates. **Reset OtherWise**
-  additionally removes interests, map, settings and access code from the extension.
+  additionally removes interests, feedback, exposure counts, map, settings and access code from the extension.
 - No Chrome sync storage, incognito collection, account-wide YouTube history,
   remote metadata fetching, or private-browser-profile access is used.
 

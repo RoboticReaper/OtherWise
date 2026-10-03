@@ -236,5 +236,29 @@ dialog .dialog-actions { display: flex; gap: 8px; justify-content: flex-end; fle
 }
 
 .workspace-content { min-width: 0; }
+.concept-controls, .concept-exploration { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:12px 0; }
+.concept-controls label, .concept-exploration span { font-size:12px; font-weight:600; }
+.concept-controls select, .concept-exploration select { min-width:0; max-width:100%; }
+.concept-privacy { font-size:12px; color:var(--muted); line-height:1.6; }
+.graph-details { margin-top:12px; padding-top:10px; border-top:1px solid var(--line); font-size:12px; overflow-wrap:anywhere; }
+.graph-path { line-height:1.5; color:var(--sage); }
+.graph-level { margin:6px 0; color:var(--muted); }
+.graph-feedback { margin-top:12px; min-width:0; width:100%; }
+.graph-feedback fieldset { border:1px solid var(--line); border-radius:8px; padding:10px; margin:0; min-width:0; }
+.graph-feedback legend { font-size:12px; padding:0 4px; }
+.graph-checks { display:flex; flex-wrap:wrap; gap:8px 14px; font-size:12px; }
+.graph-checks label { display:flex; align-items:center; gap:5px; }
+.graph-checks input { margin:0; }
+.graph-difficulty { display:flex; align-items:center; flex-wrap:wrap; gap:8px; font-size:12px; margin:10px 0; }
+.graph-difficulty select { min-width:0; max-width:100%; flex:1; }
+.graph-feedback button { font-size:12px; }
+.feedback-tools { margin-top:22px; border-top:1px solid var(--line); padding-top:14px; }
+.feedback-undo { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
+.feedback-tools summary { cursor:pointer; padding:12px 0; }
+.saved-feedback-list { list-style:none; padding:0; }
+.saved-feedback-list li { display:flex; align-items:center; gap:12px; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+.saved-feedback-list li > div { min-width:0; }
+.saved-feedback-list button { flex-shrink:0; }
+.concept-reserve { font-size:12px; color:var(--muted); }
 .main-nav .dashboard-link { margin-left: auto; font-size: 11px; white-space: nowrap; }
 @media(max-width:380px) { .main-nav { gap: 9px; } .main-nav button { font-size:12px; } .main-nav .dashboard-link { font-size:10px; } }

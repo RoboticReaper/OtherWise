@@ -1,5 +1,19 @@
 // UI copy only. Topic names, knowledge domains, descriptions and user drafts stay literal.
 const copy = {
+  recommendationKind: ['What to discover', '推荐内容'], broadTopics: ['Broad topics', '广泛主题'], specificConcepts: ['Specific concepts', '具体概念'],
+  specificPrivacy: ['Specific discovery sends your saved interests, explicitly saved concept feedback and area recommendation counts to the connected service. Your profile stays in this browser; the service does not save it.', '具体概念推荐会向已连接的服务发送已保存的兴趣、明确提交的概念反馈和领域推荐次数。个人档案保存在此浏览器，服务端不保存。'],
+  lessSeenShare: ['Reserve for less-seen areas', '为较少推荐的领域预留'], lessSeenHelp: ['Keeps some places for eligible areas with fewer returned concepts. It never widens your distance range.', '为累计推荐概念较少的合适领域保留部分名额，不会扩大距离范围。'],
+  reservationCount: ['{achieved} of {target} reserved exploration places filled.', '已填充 {achieved} / {target} 个预留探索名额。'],
+  specificEmpty: ['No specific concepts fit this range and your feedback in the selected areas. Adjust the range, interests or saved ratings.', '所选领域中没有同时符合距离范围和反馈要求的概念。可以调整范围、兴趣或已保存的反馈。'],
+  conceptSource: ['View source', '查看来源'], reservedIdea: ['Reserved exploration idea', '预留探索概念'],
+  readingLevel_unknown: ['Reading level not reviewed', '阅读难度尚未评定'], readingLevel_1: ['Accessible introduction', '入门介绍'], readingLevel_2: ['Some background helpful', '有基础更易理解'], readingLevel_3: ['Technical treatment', '技术性内容'], levelNote: ['Reading labels describe the source, not your ability.', '阅读标签描述内容，不代表你的能力。'],
+  conceptFeedback: ['Your feedback', '你的反馈'], curiousFeedback: ['Curious', '感兴趣'], knownFeedback: ['Already know', '已了解'], difficultyFeedback: ['Difficulty', '难度'],
+  difficulty_none: ['No difficulty feedback', '未反馈难度'], difficulty_too_basic: ['Too basic', '太简单'], difficulty_too_hard: ['Too hard', '太难'], saveConceptFeedback: ['Save feedback', '保存反馈'],
+  undoFeedback: ['Undo last feedback', '撤销上次反馈'], feedbackLocal: ['Feedback is saved locally. Saving or undoing a rating reranks the last valid search.', '反馈保存在本地。保存或撤销评分会重新排序上次有效的推荐。'],
+  savedConceptFeedback: ['Saved feedback ({count})', '已保存的反馈（{count}）'], feedbackEditHelp: ['Clear an individual rating to bring back a known concept or remove its ranking influence. Undo restores the last edit.', '清除单条反馈可以重新推荐已了解的概念，或移除它对排序的影响。撤销可恢复上次修改。'],
+  noConceptFeedback: ['No saved concept feedback yet.', '尚未保存概念反馈。'], feedbackPagination: ['Saved feedback pages', '已保存反馈分页'], clearRating: ['Clear rating', '清除反馈'], clearAllFeedback: ['Clear all concept feedback', '清除所有概念反馈'],
+  clearFeedbackDescription: ['Remove saved concept ratings and area recommendation counts from this browser. Your interests and Galaxy remain. Refresh to get another batch.', '从此浏览器删除概念反馈和领域推荐次数。已保存的兴趣和星图会保留。刷新可获取新一批推荐。'],
+  kindSaved: ['Discovery content saved. Find ideas to load a new batch.', '推荐内容已保存，请获取新一批推荐。'], shareSaved: ['Exploration share saved.', '探索比例已保存。'], feedbackSaved: ['Feedback saved locally.', '反馈已保存到本地。'], feedbackChanged: ['Feedback updated.', '反馈已更新。'], feedbackCleared: ['Concept feedback cleared.', '概念反馈已清除。'],
   openDashboard: ['Dashboard', '工作台'],
   galaxyHeading: ['Your interest galaxy.', '你的兴趣星系。'],
   galaxyIntro: ['Explore the full topic universe. Your saved interests and recommendations light the way.', '探索完整的主题星图，让已保存的兴趣和推荐主题照亮下一步。'],
@@ -18,7 +32,7 @@ const copy = {
   loadingInterests: ['Opening your saved interests…', '正在打开已保存的兴趣…'], retry: ['Try again', '重试'],
   curiosity: ['Follow your curiosity', '跟随好奇心'], heroDescription: ['Start with what you love. Find a nearby subject you might never have thought to explore.', '从你喜欢的事物出发，发现相关却未曾想到的探索方向。'],
   smallBeginning: ['A small beginning is enough.', '从一个小兴趣开始就好。'], intro: ['Add an interest, or review topics found in your recent Chrome visits.', '添加兴趣，或查看从近期 Chrome 浏览记录中找到的主题。'],
-  introPrivacy: ['Browsing topics stay on this device until you confirm them. Only your saved interest names are shared with the recommendation service.', '浏览记录中的主题会留在此设备，直到你确认保存。只有已保存的兴趣名称会发送给推荐服务。'],
+  introPrivacy: ['Browsing topics stay on this device until you confirm them. The service receives saved interest names; specific discovery also uses feedback you explicitly save.', '浏览记录中的主题会留在此设备，直到你确认保存。服务会收到已保存的兴趣名称；具体概念推荐还会使用你明确提交的反馈。'],
   addInterest: ['Add an interest', '添加兴趣'], interestPlaceholder: ['An interest in English, e.g. Photography', '请输入英文兴趣，例如 Photography'], add: ['Add', '添加'], saving: ['Saving…', '正在保存…'],
   languageScope: ['Chinese is for the interface only. The recommendation system does not support Chinese: enter interests in English. Recommended topics, domains, and descriptions remain in English.', '中文仅用于界面。推荐系统不支持中文，请用英文输入兴趣。推荐主题、领域和说明仍为英文。'],
   reviewing: ['Reviewing visits…', '正在查看浏览记录…'], reviewBrowsing: ['Review recent browsing', '查看近期浏览记录'], historyPeriod: ['History review period', '浏览记录时间范围'], historyDays: ['Past {days} days', '过去 {days} 天'],
@@ -56,14 +70,14 @@ const copy = {
   excludedWebsites: ['Excluded websites', '排除的网站'], excludedHelp: ['Visits to these domains are skipped. Include a domain such as mail.example.com, one per line. Subdomains are included.', '跳过这些域名的浏览记录。每行填写一个域名，例如 mail.example.com。其子域名也会一并排除。'], domainsToSkip: ['Domains to skip', '要排除的域名'], domainsHelp: ['Exclusions help reduce sensitive data collection, but cannot identify every sensitive topic.', '排除网站有助于减少敏感数据收集，但无法识别所有敏感主题。'],
   saveSettings: ['Save settings', '保存设置'], unsaved: ['You have unsaved changes.', '有尚未保存的修改。'], settingsSaved: ['Settings saved.', '设置已保存。'],
   localData: ['Your local data', '你的本地数据'], localDataHelp: ['Clear browsing-derived topics while keeping the interests you saved and the paths you explored, or start over completely.', '清除从浏览记录中发现的主题，保留已保存的兴趣和探索路径；也可以完全重新开始。'], clearBrowsing: ['Clear browsing data', '清除浏览数据'], reset: ['Reset OtherWise', '重置 OtherWise'],
-  privacy: ['Raw visit titles and addresses stay local. Discover sends saved interest names and discovery preferences. Focus sends only the chosen catalog ID, public data version and recommendation settings after you press Get ideas; the service and tunnel also receive network information. No account-wide YouTube history is imported.', '原始浏览标题和地址保留在本地。「发现」会发送已保存的兴趣名称和探索偏好。「聚焦探索」仅在点击获取推荐后发送所选目录 ID、公开数据版本及推荐参数；服务和网络隧道也会接收网络信息。不会导入整个 YouTube 账号的观看记录。'],
+  privacy: ['Raw visit titles and addresses stay local. Discover sends saved interest names and discovery preferences; specific discovery also sends explicitly saved concept feedback and area recommendation counts. Focus sends only the chosen catalog ID, public data version and recommendation settings after you press Get ideas; the service and tunnel also receive network information. No account-wide YouTube history is imported.', '原始浏览标题和地址保留在本地。「发现」会发送已保存的兴趣名称和探索偏好；具体概念推荐还会发送明确保存的反馈和领域推荐次数。「聚焦探索」仅在点击获取推荐后发送所选目录 ID、公开数据版本及推荐参数；服务和网络隧道也会接收网络信息。不会导入整个 YouTube 账号的观看记录。'],
   mapEyebrow: ['Your curiosity, connected', '让好奇心相连'], mapHeading: ['A world taking shape.', '你的世界逐渐成形。'], mapIntro: ['Saved interests give you a starting point. Subjects you search through OtherWise show where you’ve ventured.', '已保存的兴趣是你的起点。通过 OtherWise 搜索的主题会留下探索足迹。'],
   mapLegend: ['Map legend', '地图图例'], startingInterest: ['Starting interest', '起始兴趣'], savedInterest: ['Saved interest', '已保存的兴趣'], explored: ['Explored', '已探索'], exploredSubject: ['Explored subject', '已探索的主题'],
   mapHelper: ['Choose a subject to explore it. Lines follow searches you made through OtherWise.', '选择一个主题继续探索。连线记录了你通过 OtherWise 进行的搜索。'], mapEmpty: ['Your first point is waiting.', '等待你的第一个起点。'], mapEmptyHelp: ['Save an interest in Discover. Search a suggested subject to begin a path on your map.', '在「发现」中保存一个兴趣，再搜索推荐主题，就能在地图上开启一条路径。'], startDiscover: ['Start in Discover', '前往发现'], followFurther: ['Follow this subject a little further.', '沿着这个主题继续探索。'], exploreFrom: ['Explore from here', '从这里开始探索'],
   mapMeaning: ['Every point is an interest you saved or a subject you chose to search. Exploration does not imply expertise.', '每个点代表已保存的兴趣或你主动搜索过的主题。探索经历不代表专业水平。'], mapNode: ['{topic}, {status}', '{topic}，{status}'], mapLabel: ['Your interests and exploration paths, grouped by knowledge domain', '按知识领域分组的兴趣和探索路径'],
   interestSaved: ['Interest saved.', '兴趣已保存。'], modeSaved: ['Discovery mode saved.', '探索模式已保存。'], browsingSaved: ['Browsing review preference saved.', '浏览记录分析偏好已保存。'], refreshSaved: ['Refresh preference saved.', '刷新偏好已保存。'], languageSaved: ['Interface language saved.', '界面语言已保存。'],
   importReady: ['Recent browsing is ready to review.', '近期浏览记录已准备好，请确认主题。'], selectedSaved: ['Selected interests saved.', '所选兴趣已保存。'], interestRemoved: ['Interest removed.', '兴趣已移除。'], topicDismissed: ['Topic dismissed.', '主题已忽略。'], focusChanged: ['Your starting interest has changed.', '探索起始兴趣已更改。'], explorationRecorded: ['Exploration recorded.', '探索已记录。'], ideasReady: ['New ideas are ready.', '新推荐已准备好。'],
-  startOver: ['Start over?', '重新开始？'], confirmClear: ['Clear browsing data?', '清除浏览数据？'], resetDescription: ['This removes your saved interests, browsing topics, exploration paths, and connection settings from this device. This cannot be undone.', '这会从此设备移除已保存的兴趣、浏览主题、探索路径和连接设置。此操作无法撤销。'], clearDescription: ['This removes topics and evidence found in browsing review. Your saved interests and OtherWise exploration paths stay here.', '这会移除浏览记录分析中发现的主题和依据。已保存的兴趣和 OtherWise 探索路径会保留。'],
+  startOver: ['Start over?', '重新开始？'], confirmClear: ['Clear browsing data?', '清除浏览数据？'], resetDescription: ['This removes your saved interests, concept feedback, browsing topics, exploration paths, and connection settings from this device. This cannot be undone.', '这会从此设备移除已保存的兴趣、概念反馈、浏览主题、探索路径和连接设置。此操作无法撤销。'], clearDescription: ['This removes topics and evidence found in browsing review. Your saved interests and OtherWise exploration paths stay here.', '这会移除浏览记录分析中发现的主题和依据。已保存的兴趣和 OtherWise 探索路径会保留。'],
   resetDone: ['OtherWise has been reset.', 'OtherWise 已重置。'], clearDone: ['Browsing data cleared.', '浏览数据已清除。'], keepData: ['Keep my data', '保留我的数据'],
 };
 
@@ -79,6 +93,11 @@ export function translate(language, key, values = {}) {
 
 // Exact known application messages only; unknown text remains literal.
 export const errorTranslations = Object.freeze({
+  'The service returned an invalid graph concept.': '服务返回的概念数据无效。',
+  'Update the recommendation service to use specific concepts.': '请更新推荐服务以使用具体概念推荐。',
+  'Review your interests or clear outdated concept feedback and try again.': '请检查兴趣，或清除已过期的概念反馈后重试。',
+  'Choose a shown concept and valid feedback.': '请选择已展示的概念并填写有效反馈。',
+  'Clear a saved rating before adding another.': '请先清除一条已保存的反馈，再添加新反馈。',
   'Could not open the dashboard. Try again.': '无法打开工作台，请重试。',
   'This request is not permitted.': '此请求未获允许。',
   'Unsupported request.': '不支持此请求。',

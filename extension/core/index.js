@@ -1,4 +1,5 @@
 import {normalizeRecommendationOptions, validRecommendationOptions} from './recommendation-options.js';
+import {createDiscoveryState, normalizeDiscovery, cleanDiscoveryMetadata, discoveryPayload, isConceptId, validRating} from './discovery.js';
 
 const RETENTION_MS = 30 * 86_400_000;
 const MAX_INTERESTS = 40;
@@ -29,11 +30,13 @@ export function createState(now = Date.now()) {
       browsingEnabled: false, autoRefresh: false, mode: 'path', globalLevel: 0, language: 'en', recommendationView: 'cards', galaxyExplorationMode: false,
       endpoint: 'http://127.0.0.1:8000', accessToken: '',
       recommendationOptions: normalizeRecommendationOptions(),
+      recommendationKind: 'broad', discoveryExploration: .3,
       blockedDomains: [...DEFAULT_BLOCKED_DOMAINS], analysisSince: 0,
     },
     approved: [], baseline: [], candidates: [], evidence: [], suppressed: [],
     explored: [], edges: [], recommendations: [], focus: null,
     lastError: null, lastUpdated: null,
+    discovery: createDiscoveryState(),
   };
 }
 
@@ -89,8 +92,8 @@ function phrase(value) {
   return value.toLowerCase().normalize('NFKC').replace(/[^\p{L}\p{N}+#]+/gu, ' ').trim().replace(/\s+/g, ' ');
 }
 
-function validTopicText(value) {
-  return typeof value === 'string' && value.trim().length > 0 && value.trim().length <= MAX_TOPIC_LENGTH &&
+function validTopicText(value, maxLength = MAX_TOPIC_LENGTH) {
+  return typeof value === 'string' && value.trim().length > 0 && value.trim().length <= maxLength &&
     /[\p{L}\p{N}]/u.test(value) && !/^(?:javascript|data|about|chrome|file|ftp|mailto|tel):/i.test(value.trim()) &&
     !/[\r\n\t\x00-\x1f\x7f]/.test(value) &&
     !/(?:https?:|www\.|[a-z\d._%+-]+@[a-z\d.-]+\.[a-z]{2,}|(?:\b[a-z\d-]+\.)+[a-z]{2,}(?:\b|\/))/i.test(value) &&
@@ -99,13 +102,18 @@ function validTopicText(value) {
 
 function sanitizeTopic(value) {
   const record = typeof value === 'string' ? {topic: value} : value;
-  if (!record || !validTopicText(record.topic)) return null;
+  let discovery;
+  if (record?.discovery) {
+    try { discovery = cleanDiscoveryMetadata(record.discovery); } catch { return null; }
+  }
+  if (!record || !validTopicText(record.topic, discovery ? 120 : MAX_TOPIC_LENGTH)) return null;
   const title = record.topic.trim().replace(/ +/g, ' ');
   // Catalog IDs are their exact topic title, as are explicit custom phrases.
   return {
     id: title, topic: title,
     domain: typeof record.domain === 'string' ? record.domain.trim().slice(0, 80) : 'Custom',
     description: typeof record.description === 'string' ? record.description.trim().slice(0, 500) : '',
+    ...(discovery ? {discovery} : {}),
   };
 }
 
@@ -170,11 +178,12 @@ function recomputeCandidates(state, metadata) {
   return [...grouped.values()].sort((a, b) => b.lastSeen - a.lastSeen || b.count - a.count || a.topic.localeCompare(b.topic));
 }
 
-function invalidate(state) {
+function invalidate(state, keepDiscoveryContext = false) {
   state.generation++;
   state.recommendations = [];
   state.lastUpdated = null;
   state.lastError = null;
+  if (state.discovery && !keepDiscoveryContext) state.discovery.context = null;
 }
 
 function addTopics(state, values, now) {
@@ -204,7 +213,7 @@ function cleanEvidence(item, now) {
       !['Chrome', 'YouTube'].includes(item.source) || !Array.isArray(item.topicIds)) return null;
   try { if (new URL('https://' + item.host).hostname !== item.host.toLowerCase()) return null; }
   catch { return null; }
-  const topicIds = [...new Set(item.topicIds.filter(validTopicText))];
+  const topicIds = [...new Set(item.topicIds.filter(value => validTopicText(value)))];
   return topicIds.length ? {sourceHash: item.sourceHash, host: item.host, seenAt: item.seenAt, topicIds, source: item.source} : null;
 }
 
@@ -212,7 +221,7 @@ function updateSettings(state, patch, now) {
   if (!patch || typeof patch !== 'object') return;
   let changed = false;
   let error = null;
-  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'galaxyExplorationMode', 'recommendationOptions']) {
+  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'galaxyExplorationMode', 'recommendationOptions', 'recommendationKind', 'discoveryExploration']) {
     if (!(name in patch)) continue;
     let value = patch[name];
     if (name === 'recommendationOptions') {
@@ -223,6 +232,8 @@ function updateSettings(state, patch, now) {
     if (name === 'mode' && !['path', 'global'].includes(value)) continue;
     if (name === 'language' && !['en', 'zh-CN'].includes(value)) continue;
     if (name === 'recommendationView' && !['cards', 'list'].includes(value)) continue;
+    if (name === 'recommendationKind' && !['broad', 'specific'].includes(value)) continue;
+    if (name === 'discoveryExploration' && (typeof value !== 'number' || !Number.isFinite(value) || value < 0 || value > 1)) continue;
     if (name === 'endpoint') {
       try {
         const parsed = new URL(value);
@@ -254,6 +265,9 @@ export function reduceState(state, action, now = Date.now()) {
   if (['INGEST', 'RECOMMENDATIONS', 'ERROR'].includes(action.type) && action.generation !== undefined && action.generation !== state.generation) return state;
   if (action.type === 'RESET') { const reset = createState(now); reset.generation = state.generation + 1; return reset; }
   const next = structuredClone(state);
+  next.discovery = normalizeDiscovery(next.discovery);
+  if (!['broad', 'specific'].includes(next.settings.recommendationKind)) next.settings.recommendationKind = 'broad';
+  if (!Number.isFinite(next.settings.discoveryExploration) || next.settings.discoveryExploration < 0 || next.settings.discoveryExploration > 1) next.settings.discoveryExploration = .3;
   next.settings.recommendationOptions = normalizeRecommendationOptions(next.settings.recommendationOptions);
   if (!['en', 'zh-CN'].includes(next.settings.language)) next.settings.language = 'en';
   if (!['cards', 'list'].includes(next.settings.recommendationView)) next.settings.recommendationView = 'cards';
@@ -290,7 +304,7 @@ export function reduceState(state, action, now = Date.now()) {
       break;
     }
     case 'DISMISS': {
-      if (typeof action.id === 'string' && validTopicText(action.id) && !next.suppressed.includes(action.id)) next.suppressed.push(action.id);
+      if (typeof action.id === 'string' && validTopicText(action.id, 120) && !next.suppressed.includes(action.id)) next.suppressed.push(action.id);
       next.recommendations = next.recommendations.filter(topic => topic.id !== action.id);
       break;
     }
@@ -312,6 +326,35 @@ export function reduceState(state, action, now = Date.now()) {
       break;
     }
     case 'SET_SETTINGS': updateSettings(next, action.patch, now); break;
+    case 'SET_DISCOVERY_FEEDBACK': {
+      const conceptId = action.conceptId;
+      const previous = next.discovery.feedback[conceptId];
+      const shown = next.recommendations.find(r => r.discovery?.concept_id === conceptId);
+      if (!isConceptId(conceptId) || !validRating(action) || (!shown && !previous)) {
+        next.lastError = 'Choose a shown concept and valid feedback.'; break;
+      }
+      if (!previous && Object.keys(next.discovery.feedback).length >= 4000) {
+        next.lastError = 'Clear a saved rating before adding another.'; break;
+      }
+      next.discovery.undo = {conceptId, previous:previous ? structuredClone(previous) : null};
+      next.discovery.feedback[conceptId] = {area_id:shown?.discovery.area_id || previous.area_id,
+        topic:shown?.topic || previous.topic, curious:action.curious, known:action.known, difficulty:action.difficulty};
+      invalidate(next, true); break;
+    }
+    case 'CLEAR_CONCEPT_FEEDBACK': {
+      const previous = next.discovery.feedback[action.conceptId];
+      if (!isConceptId(action.conceptId) || !previous) break;
+      next.discovery.undo = {conceptId:action.conceptId, previous:structuredClone(previous)};
+      delete next.discovery.feedback[action.conceptId]; invalidate(next, true); break;
+    }
+    case 'UNDO_DISCOVERY_FEEDBACK': {
+      const undo = next.discovery.undo;
+      if (!undo) break;
+      if (undo.previous === null) delete next.discovery.feedback[undo.conceptId];
+      else next.discovery.feedback[undo.conceptId] = structuredClone(undo.previous);
+      next.discovery.undo = null; invalidate(next, true); break;
+    }
+    case 'CLEAR_DISCOVERY_FEEDBACK': next.discovery = createDiscoveryState(); invalidate(next); break;
     case 'INVALIDATE': invalidate(next); break;
     case 'SET_FOCUS': {
       if (next.focus !== action.id && next.approved.some(topic => topic.id === action.id)) {
@@ -336,7 +379,14 @@ export function reduceState(state, action, now = Date.now()) {
           if (typeof item[key] === 'string' || typeof item[key] === 'number' && Number.isFinite(item[key])) recommendation[key] = item[key];
         }
         return recommendation;
-      }).filter(topic => topic && !next.suppressed.includes(topic.id)) : [];
+      }).filter(topic => topic && !next.suppressed.includes(topic.id) && !next.discovery.feedback[topic.discovery?.concept_id]?.known) : [];
+      if (next.settings.recommendationKind === 'specific' && action.discovery) {
+        next.discovery.context = {seed:action.discovery.seed, exposures:structuredClone(action.discovery.exposures), graph_sha256:action.discovery.graph_sha256};
+        if (!action.discovery.rerank) for (const row of next.recommendations) {
+          const area = row.discovery?.area_id;
+          if (area) next.discovery.exposures[area] = Math.min(1e9, (next.discovery.exposures[area] || 0) + 1);
+        }
+      }
       next.lastUpdated = now; next.lastError = null; break;
     }
     case 'ERROR': next.lastError = typeof action.message === 'string' ? action.message.slice(0, 300) : 'Something went wrong. Please try again.'; break;
@@ -357,5 +407,6 @@ export function buildRequest(state) {
     keywords, mode: state.settings?.mode === 'global' ? 'global' : 'path',
     focus: keywords.includes(state.focus) ? state.focus : null,
     expansion_level: Math.max(0, Math.min(8, level)), ...normalizeRecommendationOptions(state.settings?.recommendationOptions),
+    ...(state.settings?.recommendationKind === 'specific' ? discoveryPayload(state) : {}),
   };
 }

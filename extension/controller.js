@@ -1,8 +1,10 @@
 import {createState,reduceState,prepareObservation,hashUrl,buildRequest,isAllowedUrl} from './core/index.js';
 import {createFocusTransport} from './focus-transport.js';
+import {cleanDiscoveryMetadata} from './core/discovery.js';
 
-const PUBLIC_ACTIONS=new Set(['APPROVE','ADD_INTEREST','REMOVE_INTEREST','DISMISS','SET_SETTINGS','SET_FOCUS','CLEAR_DERIVED','RESET','CLEAR_ERROR']);
-const SETTING_KEYS=new Set(['browsingEnabled','autoRefresh','mode','endpoint','accessToken','blockedDomains','language','recommendationView','galaxyExplorationMode','recommendationOptions']);
+const FEEDBACK_ACTIONS=new Set(['SET_DISCOVERY_FEEDBACK','CLEAR_CONCEPT_FEEDBACK','UNDO_DISCOVERY_FEEDBACK']);
+const PUBLIC_ACTIONS=new Set(['APPROVE','ADD_INTEREST','REMOVE_INTEREST','DISMISS','SET_SETTINGS','SET_FOCUS','CLEAR_DERIVED','RESET','CLEAR_ERROR',...FEEDBACK_ACTIONS,'CLEAR_DISCOVERY_FEEDBACK']);
+const SETTING_KEYS=new Set(['browsingEnabled','autoRefresh','mode','endpoint','accessToken','blockedDomains','language','recommendationView','galaxyExplorationMode','recommendationOptions','recommendationKind','discoveryExploration']);
 const MAX_HISTORY=5000;
 class SafeError extends Error {}
 
@@ -14,11 +16,13 @@ export function normalizeEndpoint(value) {
   return u.origin;
 }
 
-function cleanRecommendations(value) {
+function cleanRecommendations(value, specific = false) {
   if(!Array.isArray(value) || value.length>100) throw new SafeError('The service returned an invalid recommendation list.');
   return value.map(row=>{
     if(!row || typeof row.topic!=='string' || !row.topic.trim() || row.topic.length>120 || typeof row.domain!=='string' || row.domain.length>120 || typeof row.description!=='string' || row.description.length>3000) throw new SafeError('The service returned an invalid topic.');
-    return {id:row.topic,topic:row.topic,domain:row.domain,description:row.description,
+    let discovery;
+    if(specific){try{discovery=cleanDiscoveryMetadata(row.discovery);}catch{throw new SafeError('The service returned an invalid graph concept.');}}
+    return {id:row.topic,topic:row.topic,domain:row.domain,description:row.description,...(discovery?{discovery}:{}),
       nearest_interest:typeof row.nearest_interest==='string'?row.nearest_interest:'',
       distance:Number.isFinite(row.distance)?row.distance:null,
       boundary_offset:Number.isFinite(row.boundary_offset)?row.boundary_offset:null,
@@ -49,9 +53,10 @@ export function createController({catalog,readState,writeState,historySearch,has
   async function commit(action){
     const before=state;
     const next=reduceState(state,action,clock());
+    await writeState(next);
     if(next.generation!==before.generation) cancelRequest();
     if(['RESET','CLEAR_DERIVED','DELETE_SOURCES','INVALIDATE'].includes(action.type) || focusConnectionKey(next)!==focusConnectionKey(before)) invalidateFocus();
-    state=next;await writeState(state);return snapshot();
+    state=next;return snapshot();
   }
   const getState=()=>serial(async()=>{
     const next=reduceState(state,{type:'PRUNE'},clock());
@@ -85,7 +90,10 @@ export function createController({catalog,readState,writeState,historySearch,has
       }
       return {before,after:snapshot()};
     });
-    if(result.after.settings.autoRefresh && result.after.approved.length && result.after.settings.accessToken && (requestKey(result.before)!==requestKey(result.after) || !result.before.settings.autoRefresh)) {
+    if(FEEDBACK_ACTIONS.has(action.type) && result.after.generation !== result.before.generation && result.after.settings.recommendationKind === 'specific' && result.after.discovery.context && result.after.approved.length && result.after.settings.accessToken){
+      return recommend({rerank:true});
+    }
+    if(!FEEDBACK_ACTIONS.has(action.type) && action.type !== 'CLEAR_DISCOVERY_FEEDBACK' && result.after.settings.autoRefresh && result.after.approved.length && result.after.settings.accessToken && (requestKey(result.before)!==requestKey(result.after) || !result.before.settings.autoRefresh)) {
       void recommend().catch(()=>{});
     }
     return result.after;
@@ -150,9 +158,15 @@ export function createController({catalog,readState,writeState,historySearch,has
       return commit({type:'INVALIDATE'});
     });
   }
-  async function recommend(){
+  async function recommend({rerank=false}={}){
     const current=await getState();
     const payload=buildRequest(current);
+    const specific=current.settings.recommendationKind==='specific';
+    if(specific){
+      const context=rerank?current.discovery.context:null;
+      payload.seed=context?.seed ?? (globalThis.crypto.getRandomValues(new Uint32Array(1))[0] % 2**31);
+      if(context)payload.exposures=structuredClone(context.exposures);
+    }
     const endpoint=normalizeEndpoint(current.settings.endpoint);
     if(!current.settings.accessToken) throw new Error('Add your team access code in Settings to connect.');
     let controller=null, timer=null;
@@ -164,7 +178,7 @@ export function createController({catalog,readState,writeState,historySearch,has
         if(state.generation!==current.generation)return null;
         cancelRequest();controller=new AbortController();activeRequest=controller;
         timer=setTimeout(()=>controller.abort(),30000);
-        return {response:fetchImpl(`${endpoint}/api/recommend`,{
+        return {response:fetchImpl(`${endpoint}${specific?'/api/discover':'/api/recommend'}`,{
           method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${current.settings.accessToken}`},
           body:JSON.stringify(payload),credentials:'omit',redirect:'error',signal:controller.signal,
         })};
@@ -172,15 +186,16 @@ export function createController({catalog,readState,writeState,historySearch,has
       if(!started)return getState();
       const response=await started.response;
       if(!response.ok){
-        const messages={401:'The team access code was not accepted. Check Settings.',403:'This connection is not permitted.',422:'Review your approved interests and try again.',429:'The service is busy. Try again shortly.',503:'The recommendation model is warming up. Try again shortly.'};
+        const messages={401:'The team access code was not accepted. Check Settings.',403:'This connection is not permitted.',404:'Update the recommendation service to use specific concepts.',422:specific?'Review your interests or clear outdated concept feedback and try again.':'Review your approved interests and try again.',429:'The service is busy. Try again shortly.',503:'The recommendation model is warming up. Try again shortly.'};
         throw new SafeError(messages[response.status] || 'The service could not complete this request. Try again.');
       }
       const raw=await response.text(); if(raw.length>150000) throw new SafeError('The service response was too large.');
-      const result=JSON.parse(raw);const items=cleanRecommendations(result.recommendations);
+      const result=JSON.parse(raw);const items=cleanRecommendations(result.recommendations,specific);
+      if(specific && (result.seed!==payload.seed || !/^[a-f0-9]{64}$/.test(result.graph_sha256 || '') || new Set(items.map(r=>r.discovery.concept_id)).size!==items.length)) throw new SafeError('The service returned an invalid graph concept.');
       if(!await hasEndpointPermission(endpoint)) return getState();
       return await serial(async()=>{
         if(state.generation!==current.generation || controller.signal.aborted) return snapshot();
-        return commit({type:'RECOMMENDATIONS',items,generation:current.generation});
+        return commit({type:'RECOMMENDATIONS',items,generation:current.generation,...(specific?{discovery:{seed:payload.seed,exposures:payload.exposures,graph_sha256:result.graph_sha256,rerank}}:{})});
       });
     }catch(error){
       return await serial(async()=>{

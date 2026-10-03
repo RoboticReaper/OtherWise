@@ -10,7 +10,8 @@ Map adds a separate explicit path: catalog selection â†’ temporary local Focus â
 opening Focus does not request recommendations or change the approved-interest flow.
 
 The browser is the profile owner. The backend computes recommendations but stores
-no user profile. The only persisted embeddings are for the public topic catalog.
+no user profile. The only persisted embeddings are for the public topic catalog and public discovery
+graph. Specific requests rebuild an ephemeral profile from explicit client ratings.
 
 ## Code boundaries
 
@@ -28,6 +29,8 @@ no user profile. The only persisted embeddings are for the public topic catalog.
 | `galaxy/`, `scripts/build_galaxy.py` | Independent public-catalog preprocessing and content-addressed layout cache |
 | `extension/dev-preview.js` | Explicit sample-only design preview |
 | `service/api.py` | Strict authenticated request schema, size/rate/compute bounds, safe errors |
+| `service/discovery.py` | Public graph embedding cache, broad-to-area routing, temporary feedback profile and graph recommendations |
+| `extension/core/discovery.js` | Validated graph metadata, browser-owned ratings/counters and compact feedback payload |
 | `service/engine.py` | Real MPNet initialization, public catalog cache, path/global recommendations |
 | `explorer.py` | Shared notebook/engine numerical recommendation methods |
 
@@ -79,7 +82,7 @@ batch; it does not send another request or send suppressed topics to the server.
 Changing numeric `settings.recommendationOptions` invalidates any pending response.
 Old installs receive the existing algorithm defaults when these settings are absent.
 
-`settings.galaxyExplorationMode` is the only new persistent presentation value and
+`settings.galaxyExplorationMode` is a persistent presentation value and
 defaults to false, including migration of missing/invalid values. It neither changes
 recommendation parameters nor causes a request. The lit set is the union of saved
 catalog interests, each interest's ten cached direct nearest topics, and actual
@@ -142,6 +145,42 @@ distance and zone. The client suppresses topics the user has dismissed locally.
 The quantity is a maximum: band eligibility, the familiar-content quota, and local
 suppression can yield fewer visible topics. No sparse-result fallback widens the band.
 Public catalog vectors are cached; history and submitted interest vectors are not.
+
+`POST /api/discover` uses the same recommendation fields plus:
+
+```json
+{
+  "feedback": [{"concept_id":"Q758780", "area_id":"gardening", "curious":true, "known":false, "difficulty":"none"}],
+  "exposures": {"gardening":2},
+  "seed": 42,
+  "exploration_fraction": 0.3
+}
+```
+
+This is an addition to the full recommendation request, not a standalone body.
+Discovery alone accepts up to 1 MiB, 4,000 ratings and 100 area counters. Booleans,
+difficulty (`none`, `too_basic`, `too_hard`), canonical concept/area membership,
+unique IDs and integer counter/seed bounds are validated. Authentication precedes
+parsing; the route shares the rate limiter and single compute semaphore with broad
+and Focus requests. Errors do not echo submitted data. A graph initialization
+failure leaves broad/Focus available while discovery returns 503.
+
+The server encodes approved interests against broad and graph context, excludes
+concepts matching the title of, or within distance 0.035 of, any approved interest
+(including in path mode), routes to
+eight areas, and applies the upstream graph ranking/feedback rules. Public graph
+vectors are cached by model and content identity; submitted interests, ratings and
+profiles are never written to that cache. The response adds `seed`, `graph_sha256`
+and nested `discovery` metadata: canonical concept and area IDs, source path/URL,
+optional level, reserve membership and achieved/requested reserve counts.
+
+The reducer keeps existing title-based topic IDs and nests canonical graph IDs in
+metadata, so saved interests, paths and Galaxy joins preserve their identities.
+Ratings and exposure counts are browser-local. A successful fresh batch increments
+counts once per accepted returned concept, including cached pagination pages; feedback reranks use the previous seed
+and pre-batch counters. Storage must succeed before committing a rating or sending
+its rerank. Generations and permission checks prevent stale replies from replacing
+current state. Reset rotates the salt and clears feedback drafts in every window.
 
 `POST /api/focus`, using the same bearer code and service permission:
 

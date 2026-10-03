@@ -28,9 +28,9 @@ manifest.host_permissions=['http://127.0.0.1/*'];
 await writeFile(`${testExt}/manifest.json`,JSON.stringify(manifest));
 const profile=await mkdtemp('/tmp/otherwise-runtime-profile-');
 context=await chromium.launchPersistentContext(profile,{executablePath:process.env.OTHERWISE_CHROMIUM || chromium.executablePath(),headless:true,ignoreDefaultArgs:['--disable-extensions'],viewport:{width:390,height:850},args:[`--disable-extensions-except=${testExt}`,`--load-extension=${testExt}`]});
-const errors=[],requests=[],focusRequests=[],focusStatuses=[];
+const errors=[],requests=[],focusRequests=[],focusStatuses=[],discoveryRequests=[];
 context.on('response',r=>{if(r.url().endsWith('/api/focus'))focusStatuses.push(r.status());});
-context.on('request',r=>{if(r.url().endsWith('/api/recommend'))requests.push(JSON.parse(r.postData()));if(r.url().endsWith('/api/focus'))focusRequests.push({body:JSON.parse(r.postData()),headers:r.headers()});});
+context.on('request',r=>{if(r.url().endsWith('/api/discover'))discoveryRequests.push(JSON.parse(r.postData()));if(r.url().endsWith('/api/recommend'))requests.push(JSON.parse(r.postData()));if(r.url().endsWith('/api/focus'))focusRequests.push({body:JSON.parse(r.postData()),headers:r.headers()});});
 await context.route('https://**/*',r=>r.fulfill({contentType:'text/html',body:`<!doctype html><title>${new URL(r.request().url()).searchParams.get('title')||'Synthetic search fixture'}</title><p>Isolated browser test fixture.</p>`}));
 let page;
 const get=()=>page.evaluate(async()=> (await chrome.storage.local.get('state')).state);
@@ -112,6 +112,24 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  await page.screenshot({path:`${root}/.cache/qa/runtime-focus.png`,fullPage:true});
  // Existing Discover focus action still changes its saved-interest focus explicitly.
  await page.locator('[data-view="discover"]').click();await page.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_FOCUS',id:'Gardening'}}));await until(async()=> (await get()).focus==='Gardening');
+ // The specific interface calls the real cached MPNet graph service.
+ await page.locator('#recommendation-kind').selectOption('specific');
+ await until(async()=> (await get()).settings.recommendationKind==='specific');
+ await page.locator('[data-action="recommend"]').click();
+ await until(async()=> (await get()).recommendations.some(r=>r.discovery),45000);
+ const graphBefore=await get(),concept=graphBefore.recommendations[0].discovery;
+ assert.equal(discoveryRequests.length,1);assert.deepEqual(discoveryRequests[0].feedback,[]);
+ const graphForm=page.locator(`[data-graph-feedback="${concept.concept_id}"]`);
+ assert.match(await page.locator('.graph-details a').first().getAttribute('href'),/^https:\/\/(www.wikidata.org|en.wikipedia.org)\/wiki\//);
+ await graphForm.locator('[name="known"]').check();await graphForm.locator('[type="submit"]').click();
+ await until(async()=> (await get()).discovery.feedback[concept.concept_id]?.known && discoveryRequests.length===2 && (await get()).recommendations.length>0,45000);
+ const graphAfter=await get();assert.deepEqual(graphAfter.approved,graphBefore.approved);
+ assert.ok(!graphAfter.recommendations.some(r=>r.discovery.concept_id===concept.concept_id));
+ assert.equal(discoveryRequests[1].seed,discoveryRequests[0].seed);assert.deepEqual(discoveryRequests[1].exposures,discoveryRequests[0].exposures);
+ await page.screenshot({path:`${root}/.cache/qa/runtime-specific.png`,fullPage:true});
+ await page.locator('[data-action="undo-feedback"]').click();
+ await until(async()=> !(await get()).discovery.feedback[concept.concept_id] && (await get()).recommendations.some(r=>r.discovery.concept_id===concept.concept_id),45000);
+ await page.locator('#recommendation-kind').selectOption('broad');await until(async()=> (await get()).settings.recommendationKind==='broad');
  await page.getByRole('button',{name:'Settings',exact:true}).click();
  await page.locator('#browsing-enabled').check();
  await until(async()=> (await get()).settings.browsingEnabled);
@@ -133,7 +151,7 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  state=await get();assert.equal(state.explored.length,0);assert.equal(state.evidence.length,0);assert.equal(state.settings.browsingEnabled,false);assert.equal(state.settings.accessToken,'');
  assert.equal(errors.length,0,errors.join('\n'));
  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
- console.log(JSON.stringify({passed:true,checks:['optional-defaults','local-history-import','approval-only-payload','real-model-10-topics','search-not-interest','explicit-save','temporary-map-focus','real-focus-authenticated-api','focus-cache-refresh','parallel-independent-focus-discover','focus-token-options-invalidation','focus-api-auth-version-conflict','formal-discover-focus','live-local-analysis','pause-no-backfill','history-delete-preserves-explicit','reset','no-console-errors','no-horizontal-overflow'],requests:requests.length,focusRequests:focusRequests.length,syntheticOnly:true,permissionPrompt:'test-only manifest pregrants; native prompt not automated'},null,2));
+ console.log(JSON.stringify({passed:true,checks:['optional-defaults','local-history-import','approval-only-payload','real-model-10-topics','search-not-interest','explicit-save','temporary-map-focus','real-focus-authenticated-api','focus-cache-refresh','parallel-independent-focus-discover','focus-token-options-invalidation','focus-api-auth-version-conflict','formal-discover-focus','real-graph-api-source-feedback-rerank-undo','live-local-analysis','pause-no-backfill','history-delete-preserves-explicit','reset','no-console-errors','no-horizontal-overflow'],requests:requests.length,focusRequests:focusRequests.length,discoveryRequests:discoveryRequests.length,syntheticOnly:true,permissionPrompt:'test-only manifest pregrants; native prompt not automated'},null,2));
 }finally{
  if(context)await context.close();
  if(api.exitCode===null){api.kill('SIGTERM');await Promise.race([new Promise(resolve=>api.once('exit',resolve)),new Promise(resolve=>setTimeout(resolve,5000))]);if(api.exitCode===null)api.kill('SIGKILL');}
