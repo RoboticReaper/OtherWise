@@ -44,33 +44,41 @@ try{
  await page.locator('[data-view="discover"]').click();await page.locator('#recommendation-kind').selectOption('specific');
  await until(async()=>await page.evaluate(async()=> (await chrome.storage.local.get('state')).state.settings.recommendationKind==='specific'));
  await page.locator('[data-action="recommend"]').click();
- try{await page.locator('[data-graph-feedback="Q100"]').waitFor({timeout:5000});}
+ try{await page.locator('.recommendation-card').filter({hasText:'Pollinator garden'}).waitFor({timeout:5000});}
  catch(error){console.log(JSON.stringify({body:await page.locator('body').innerText(),records,errors},null,2));throw error;}
  assert.equal(records.length,1);assert.deepEqual(records[0].keywords,['Gardening']);assert.deepEqual(records[0].feedback,[]);
  const state=()=>page.evaluate(async()=> (await chrome.storage.local.get('state')).state);
  const before=await state();
- const form=page.locator('[data-graph-feedback="Q100"]');await form.locator('[name="curious"]').check();await form.locator('[name="known"]').check();await form.locator('[name="difficulty"]').selectOption('too_hard');await form.locator('[type="submit"]').click();
+ assert.equal(await page.locator('.recommendation-card .graph-feedback').count(),0);
+ assert.equal(await page.locator('.recommendation-card [name="curious"], .recommendation-card [name="known"], .recommendation-card [name="difficulty"], .recommendation-card [type="submit"]').count(),0);
+ checks.push('recommendation cards omit the entire feedback form and its controls');
+ const rating=action=>page.evaluate(async action=>chrome.runtime.sendMessage({type:'ACTION',action}),action);
+ // Exercise compatibility with existing explicit ratings via the controller,
+ // without introducing replacement feedback-entry controls.
+ await rating({type:'SET_DISCOVERY_FEEDBACK',conceptId:'Q100',curious:true,known:true,difficulty:'too_hard'});
  await until(async()=>await page.evaluate(async()=> (await chrome.storage.local.get('state')).state.discovery.feedback.Q100?.known===true));
- await page.waitForFunction(()=>!document.querySelector('.recommendation-card [data-graph-feedback="Q100"]'));
+ await until(async()=>!await page.locator('.recommendation-card').filter({hasText:'Pollinator garden'}).count());
  assert.deepEqual((await state()).approved,before.approved);assert.equal(records[1].seed,records[0].seed);assert.deepEqual(records[1].exposures,records[0].exposures);
  checks.push('explicit curiosity/known/difficulty feedback persists, hides known concepts and reranks the same seed without approving interests');
  const dashboard=await context.newPage();dashboard.on('pageerror',e=>errors.push(e.message));await dashboard.goto(base+'dashboard.html?view=discover');
  assert.equal(await dashboard.locator('#recommendation-kind').inputValue(),'specific');
- await dashboard.locator('[data-action="undo-feedback"]').click();await page.locator('.recommendation-card [data-graph-feedback="Q100"]').waitFor();
+ await dashboard.locator('[data-action="undo-feedback"]').click();await page.locator('.recommendation-card').filter({hasText:'Pollinator garden'}).waitFor();
  await until(async()=>Object.keys((await state()).discovery.feedback).length===0);assert.deepEqual((await state()).discovery.feedback,{});
  checks.push('sidebar and dashboard synchronize feedback; undo survives a new window');
- const second=page.locator('[data-graph-feedback="Q101"]');await second.locator('[name="curious"]').check();
- await page.locator('#ui-language').selectOption('zh-CN');assert.equal(await page.locator('[data-graph-feedback="Q101"] [name="curious"]').isChecked(),true);
- assert.match(await page.locator('.graph-feedback').first().innerText(),/已了解/);assert.match(await page.locator('.graph-path').first().innerText(),/Ecology/);
- fail=true;await page.locator('[data-graph-feedback="Q101"] [type="submit"]').click();await page.locator('.error-banner').waitFor();
+ await page.locator('#ui-language').selectOption('zh-CN');
+ await page.waitForFunction(()=>document.documentElement.lang==='zh-CN');
+ assert.equal(await page.locator('.recommendation-card .graph-feedback').count(),0);assert.match(await page.locator('.graph-path').first().innerText(),/Ecology/);
+ fail=true;await rating({type:'SET_DISCOVERY_FEEDBACK',conceptId:'Q101',curious:true,known:false,difficulty:'none'});await page.locator('.error-banner').waitFor();
  assert.equal((await state()).discovery.feedback.Q101.curious,true);assert.equal((await state()).recommendations.length,0);
  fail=false;await page.locator('[data-action="recommend"]').click();await page.locator('.recommendation-card').first().waitFor();
- checks.push('language changes preserve feedback drafts and source text; service failures keep saved ratings and recover on refresh');
+ checks.push('language changes preserve source text and keep card feedback absent; service failures keep saved ratings and recover on refresh');
  for(const width of [1440,390,320]){
   await page.setViewportSize({width,height:1000});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
   await page.screenshot({path:resolve(output,`specific-${width}.png`),fullPage:true});
  }
- checks.push('specific controls, source paths and feedback forms fit desktop, 390px and 320px');
+ checks.push('specific controls, source paths and simplified cards fit desktop, 390px and 320px');
+ await page.locator('[data-action="recommendation-view"][data-value="list"]').click();await page.locator('.recommendations.is-list').waitFor();assert.equal(await page.locator('.recommendation-card .graph-feedback').count(),0);await page.screenshot({path:resolve(output,'specific-list-320.png'),fullPage:true});
+ checks.push('compact list also omits all card feedback content');
  await page.reload();await page.locator('[data-action="undo-feedback"]').waitFor();assert.equal((await state()).discovery.feedback.Q101.curious,true);
  await page.locator('#recommendation-kind').selectOption('broad');await until(async()=>(await state()).settings.recommendationKind==='broad');assert.ok((await state()).discovery.feedback.Q101);
  await page.locator('[data-view="map"]').click();await page.locator('.galaxy-canvas').waitFor();await page.locator('[data-map-view="focus"]').click();await page.locator('.focus-root').waitFor();
@@ -78,13 +86,13 @@ try{
  await page.locator('[data-view="discover"]').click();await page.locator('#recommendation-kind').selectOption('specific');await until(async()=>(await state()).settings.recommendationKind==='specific');await page.locator('#discovery-feedback-panel').evaluate(n=>n.open=true);
  await page.locator('[data-action="clear-feedback"]').click();await page.locator('dialog [data-choice="confirm"]').click();
  await until(async()=>!Object.keys((await state()).discovery.feedback).length && !Object.keys((await state()).discovery.exposures).length);assert.deepEqual((await state()).discovery.feedback,{});assert.deepEqual((await state()).discovery.exposures,{});assert.deepEqual((await state()).approved,before.approved);
- await page.locator('[data-action="recommend"]').click();await page.locator('[data-graph-feedback="Q102"]').waitFor();await page.locator('[data-graph-feedback="Q102"] [name="curious"]').check();
+ await page.locator('[data-action="recommend"]').click();await page.locator('.recommendation-card').filter({hasText:'Companion planting'}).waitFor();
  await dashboard.evaluate(async()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'RESET'}}));
  await until(async()=>!(await state()).approved.length);
  await dashboard.evaluate(async()=>{await chrome.runtime.sendMessage({type:'ACTION',action:{type:'ADD_INTEREST',topic:'Gardening'}});});
  await dashboard.evaluate(async endpoint=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_SETTINGS',patch:{endpoint,accessToken:'fictional-test-token',recommendationKind:'specific'}}}),endpoint);
- await page.locator('[data-action="recommend"]').click();await page.locator('[data-graph-feedback="Q102"]').waitFor();assert.equal(await page.locator('[data-graph-feedback="Q102"] [name="curious"]').isChecked(),false,'A reset in another window clears unsaved feedback drafts');
- checks.push('reset in another window clears unsaved feedback drafts');
+ await page.locator('[data-action="recommend"]').click();await page.locator('.recommendation-card').filter({hasText:'Companion planting'}).waitFor();assert.equal(await page.locator('.recommendation-card .graph-feedback').count(),0);assert.deepEqual((await state()).discovery.feedback,{});
+ checks.push('reset in another window keeps the simplified cards and clears existing ratings');
  assert.ok(records.every(r=>!JSON.stringify(r).includes('wikidata')&&!Object.hasOwn(r,'history')));
  assert.deepEqual(errors,[]);checks.push('clear removes feedback and exposure counts while retaining interests; requests contain no source URLs/history');
  await writeFile(resolve(output,'results.json'),JSON.stringify({checks,errors,requests:records.length},null,2));

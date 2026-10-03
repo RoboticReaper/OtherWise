@@ -4,7 +4,7 @@ import { paginate } from './pagination.js';
 import { createMapWorkspace } from './map-workspace.js';
 import { galaxyLoader } from './galaxy-data.js';
 import { RECOMMENDATION_DEFAULTS, RECOMMENDATION_BOUNDS, normalizeRecommendationOptions } from '../core/recommendation-options.js';
-import {discoveryControls, graphDetails, feedbackForm, savedFeedbackView} from './discovery.js';
+import {discoveryControls, graphDetails, savedFeedbackView} from './discovery.js';
 
 const app = document.querySelector('#app');
 const params = new URLSearchParams(location.search);
@@ -15,7 +15,7 @@ const ui = {
   view: initialView, manual: '', days: '30', selected: new Set(), inboxOpen: true, candidatePage: 1, recommendationPage: 1,
   galaxyView: null, settingsDraft: null, settingsDirty: false, settingsSaved: false,
   advancedOptionsOpen: false,
-  feedbackDrafts: new Map(), feedbackOpen: false, feedbackPage: 1,
+  feedbackOpen: false, feedbackPage: 1,
   pending: new Set(), expandedDescriptions: new Set(), error: null, announcement: '', loaded: false,
 };
 let state = null;
@@ -55,7 +55,7 @@ function applyState(next) {
   if (next.lastUpdated !== state?.lastUpdated) ui.recommendationPage = 1;
   if (state?.salt && state.salt !== next.salt) {
     mapWorkspace?.destroy(); mapWorkspace = null; ui.galaxyView = null;
-    ui.feedbackDrafts.clear(); ui.feedbackPage = 1; ui.feedbackOpen = false;
+    ui.feedbackPage = 1; ui.feedbackOpen = false;
   }
   state = next;
   ui.loaded = true;
@@ -192,7 +192,7 @@ function descriptionView(topic, listView) {
 function cardView(topic, listView = false) {
   const id = topicId(topic);
   const saved = isApproved(id);
-  return `<article class="recommendation-card"><div class="recommendation-content"><div class="recommendation-heading"><p class="eyebrow">${escape(topic.domain || t('newDirection'))}</p><h3>${escape(topicTitle(topic))}</h3></div>${descriptionView(topic, listView)}${topic.nearest_interest ? `<div class="related">${text('connectionFrom', { topic: topic.nearest_interest })}</div>` : ''}${graphDetails(topic,{text,escape})}</div><div class="recommendation-actions"><div class="card-search">${searchButtons(topic)}</div><div class="card-feedback">${saved ? `<span class="saved-label">${text('savedLabel')}</span>` : `<button type="button" class="save" data-action="save-topic" data-id="${escape(id)}"${disabled(busy(`save:${id}`))}>${text('saveInterest')}</button>`}<button type="button" class="quiet" data-action="dismiss" data-id="${escape(id)}" data-focus="recommendation-dismiss:${escape(id)}">${text('notForMe')}</button></div>${feedbackForm(topic,state,ui.feedbackDrafts.get(topic.discovery?.concept_id),{text,escape,busy:busy('feedback')})}</div></article>`;
+  return `<article class="recommendation-card"><div class="recommendation-content"><div class="recommendation-heading"><p class="eyebrow">${escape(topic.domain || t('newDirection'))}</p><h3>${escape(topicTitle(topic))}</h3></div>${descriptionView(topic, listView)}${topic.nearest_interest ? `<div class="related">${text('connectionFrom', { topic: topic.nearest_interest })}</div>` : ''}${graphDetails(topic,{text,escape})}</div><div class="recommendation-actions"><div class="card-search">${searchButtons(topic)}</div><div class="card-feedback">${saved ? `<span class="saved-label">${text('savedLabel')}</span>` : `<button type="button" class="save" data-action="save-topic" data-id="${escape(id)}"${disabled(busy(`save:${id}`))}>${text('saveInterest')}</button>`}<button type="button" class="quiet" data-action="dismiss" data-id="${escape(id)}" data-focus="recommendation-dismiss:${escape(id)}">${text('notForMe')}</button></div></div></article>`;
 }
 
 function recommendationOptionField(key, draft) {
@@ -275,15 +275,6 @@ function bindEvents() {
   document.getElementById('recommendation-kind')?.addEventListener('change', event => run('kind', () => dispatch({type:'SET_SETTINGS',patch:{recommendationKind:event.target.value}}), 'kindSaved'));
   document.getElementById('discovery-exploration')?.addEventListener('change', event => run('exploration-share', () => dispatch({type:'SET_SETTINGS',patch:{discoveryExploration:Number(event.target.value)}}), 'shareSaved'));
   document.getElementById('discovery-feedback-panel')?.addEventListener('toggle', event => {if(event.target.isConnected)ui.feedbackOpen=event.target.open;});
-  app.querySelectorAll('[data-graph-feedback]').forEach(form => {
-    const read = () => ({curious:form.elements.curious.checked,known:form.elements.known.checked,difficulty:form.elements.difficulty.value});
-    form.addEventListener('change', () => ui.feedbackDrafts.set(form.dataset.graphFeedback,read()));
-    form.addEventListener('submit', async event => {
-      event.preventDefault();const conceptId=form.dataset.graphFeedback;
-      const next = await run('feedback', () => dispatch({type:'SET_DISCOVERY_FEEDBACK',conceptId,...read()}), 'feedbackSaved');
-      if(next && !next.lastError){ui.feedbackDrafts.delete(conceptId);render();}
-    });
-  });
   app.querySelectorAll('[data-language]').forEach(select => select.addEventListener('change', event => {
     const nextLanguage = normalizeLanguage(event.target.value);
     void run(`language:${++preferenceSequence}`, () => dispatch({ type: 'SET_SETTINGS', patch: { language: nextLanguage } }), 'languageSaved');
@@ -400,19 +391,19 @@ async function onAction(event) {
   if (action === 'feedback-prev' || action === 'feedback-next') { ui.feedbackPage=paginate(Object.entries(state.discovery.feedback),ui.feedbackPage+(action==='feedback-next'?1:-1)).page;render();return; }
   if (action === 'undo-feedback' || action === 'clear-concept-feedback') {
     const next=await run('feedback',()=>dispatch(action==='undo-feedback'?{type:'UNDO_DISCOVERY_FEEDBACK'}:{type:'CLEAR_CONCEPT_FEEDBACK',conceptId:button.dataset.conceptId}),'feedbackChanged');
-    if(next){ui.feedbackDrafts.clear();render();}return;
+    if(next){render();}return;
   }
   if(action==='clear-feedback'){
     if(!await confirmDialog(t('clearAllFeedback'),t('clearFeedbackDescription'),t('clearAllFeedback')))return;
     const next=await run('feedback',()=>dispatch({type:'CLEAR_DISCOVERY_FEEDBACK'}),'feedbackCleared');
-    if(next && !next.lastError){ui.feedbackDrafts.clear();ui.feedbackPage=1;render();}return;
+    if(next && !next.lastError){ui.feedbackPage=1;render();}return;
   }
   if (action === 'clear-derived' || action === 'reset') {
     const reset = action === 'reset';
     const confirmed = await confirmDialog(t(reset ? 'startOver' : 'confirmClear'), t(reset ? 'resetDescription' : 'clearDescription'), t(reset ? 'reset' : 'clearBrowsing'));
     if (!confirmed) return;
     const next = await run(action, () => dispatch({ type: reset ? 'RESET' : 'CLEAR_DERIVED' }), reset ? 'resetDone' : 'clearDone');
-    if (reset && next && !next.lastError) { mapWorkspace?.destroy(); mapWorkspace = null; ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.galaxyView = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.feedbackDrafts.clear(); ui.feedbackPage = 1; ui.candidatePage = 1; ui.recommendationPage = 1; ui.view = 'discover'; render(); }
+    if (reset && next && !next.lastError) { mapWorkspace?.destroy(); mapWorkspace = null; ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.galaxyView = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.feedbackPage = 1; ui.candidatePage = 1; ui.recommendationPage = 1; ui.view = 'discover'; render(); }
   }
 }
 

@@ -52,13 +52,13 @@ The same interests, path/global mode, quantity and distance controls now search
 path, reading level when reviewed, and a link to its public source. A graph path
 explains where it was found; it is not a prerequisite sequence or course outline.
 
-Use **Curious**, **Already know**, and **Too basic / Too hard** independently,
-then click **Save feedback**. Checkbox/select changes are drafts until saved.
-Saved feedback stays in this browser. Saving, clearing one rating, or undoing
-reranks the last valid search with the same random seed and exposure snapshot.
-Known concepts disappear; saving feedback does not approve an interest or claim
-mastery. **Save interest** remains a separate action. **Saved feedback** lists all
-ratings, ten per page, including concepts absent from the current batch.
+Recommendation cards show source details and search/save/dismiss actions, without
+Curious/Known/difficulty feedback forms. Previously saved feedback stays in this
+browser and continues to affect specific ranking. **Saved feedback** lists these
+ratings, ten per page, including concepts absent from the current batch. You can
+clear an existing rating or undo the previous change; these actions rerank the last
+valid request with the same seed and exposure snapshot. **Save interest** remains
+separate from feedback.
 
 **Reserve for less-seen areas** defaults to 30% and reserves positions for eligible
 areas with fewer previously returned concepts. The requested share may not be fully achievable;

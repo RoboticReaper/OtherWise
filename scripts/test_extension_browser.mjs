@@ -119,9 +119,11 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  await until(async()=> (await get()).recommendations.some(r=>r.discovery),45000);
  const graphBefore=await get(),concept=graphBefore.recommendations[0].discovery;
  assert.equal(discoveryRequests.length,1);assert.deepEqual(discoveryRequests[0].feedback,[]);
- const graphForm=page.locator(`[data-graph-feedback="${concept.concept_id}"]`);
+ assert.equal(await page.locator('.recommendation-card .graph-feedback').count(),0);
  assert.match(await page.locator('.graph-details a').first().getAttribute('href'),/^https:\/\/(www.wikidata.org|en.wikipedia.org)\/wiki\//);
- await graphForm.locator('[name="known"]').check();await graphForm.locator('[type="submit"]').click();
+ // Seed a pre-existing explicit rating through the trusted controller to verify
+ // compatibility; cards no longer provide a feedback-entry form.
+ await page.evaluate(async conceptId=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_DISCOVERY_FEEDBACK',conceptId,curious:false,known:true,difficulty:'none'}}),concept.concept_id);
  await until(async()=> (await get()).discovery.feedback[concept.concept_id]?.known && discoveryRequests.length===2 && (await get()).recommendations.length>0,45000);
  const graphAfter=await get();assert.deepEqual(graphAfter.approved,graphBefore.approved);
  assert.ok(!graphAfter.recommendations.some(r=>r.discovery.concept_id===concept.concept_id));

@@ -12,14 +12,6 @@ export function graphDetails(topic, {text,escape}) {
   return `<div class="graph-details"><p class="graph-path">${escape(data.graph_path.join(' → '))}</p><p class="graph-level">${text(`readingLevel_${data.level??'unknown'}`)}${data.exploration_pick ? ` · ${text('reservedIdea')}`:''}</p><p class="muted small">${text('levelNote')}</p>${data.source_url?`<a href="${escape(data.source_url)}" target="_blank" rel="noopener noreferrer">${text('conceptSource')} ↗</a>`:''}</div>`;
 }
 
-export function feedbackForm(topic, state, draft, {text,escape,busy}) {
-  if (!topic.discovery) return '';
-  const id = topic.discovery.concept_id;
-  const rating = draft || state.discovery.feedback[id] || {curious:false,known:false,difficulty:'none'};
-  const disabled = busy ? ' disabled' : '';
-  return `<form class="graph-feedback" data-graph-feedback="${escape(id)}"><fieldset${disabled}><legend>${text('conceptFeedback')}</legend><div class="graph-checks"><label><input type="checkbox" name="curious" data-focus="graph-curious:${escape(id)}"${rating.curious?' checked':''}>${text('curiousFeedback')}</label><label><input type="checkbox" name="known" data-focus="graph-known:${escape(id)}"${rating.known?' checked':''}>${text('knownFeedback')}</label></div><label class="graph-difficulty"><span>${text('difficultyFeedback')}</span><select name="difficulty" data-focus="graph-difficulty:${escape(id)}">${['none','too_basic','too_hard'].map(value=>`<option value="${value}"${rating.difficulty===value?' selected':''}>${text(`difficulty_${value}`)}</option>`).join('')}</select></label><button type="submit" data-focus="graph-save:${escape(id)}">${text(busy?'saving':'saveConceptFeedback')}</button></fieldset></form>`;
-}
-
 export function savedFeedbackView(state, pageNumber, open, {text,escape,busy}) {
   const entries = Object.entries(state.discovery.feedback);
   const page = paginate(entries, pageNumber);

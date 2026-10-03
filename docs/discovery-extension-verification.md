@@ -4,6 +4,14 @@ Verified locally on 2026-10-03, extension version 0.1.5, on
 `codex/otherwise-development`. Upstream `master` recommendation changes were
 merged in `36f0eb8`, preserving local Galaxy/Focus development.
 
+## Card simplification in 0.1.6
+
+The full per-card feedback fieldset and all its controls have been removed from
+both Cards and List views. Source details, Google/YouTube, Save interest and Not
+for me remain. Previously saved feedback remains local and retains management
+controls. The original verification below records the 0.1.5 integration; its
+feedback-entry UI descriptions are historical.
+
 ## Implemented behavior
 
 - Discover switches between the existing broad catalog and sourced graph concepts.
