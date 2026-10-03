@@ -25,6 +25,7 @@ window.paint=[];let arc=null;
 const proto=CanvasRenderingContext2D.prototype;
 for(const name of ['clearRect','arc','fill','stroke']){const original=proto[name];proto[name]=function(...args){if(this.canvas.classList.contains('galaxy-canvas')){if(name==='clearRect')window.paint=[];if(name==='arc')arc=args;if((name==='fill'||name==='stroke')&&arc)window.paint.push({kind:name,x:arc[0],y:arc[1],r:arc[2],color:this[name==='fill'?'fillStyle':'strokeStyle'],alpha:this.globalAlpha});}return original.apply(this,args)}}
 window.map=createGalaxyMap({container:document.querySelector('#map'),catalog,layout,state,onEnterFocus:id=>entered.push(id),onSave:topic=>saved.push(topic.id)});
+window.createAdjacentMap=separation=>{const adjacent=structuredClone(layout);if(separation){adjacent.topics.find(t=>t.id==='A').x=-separation/2;adjacent.topics.find(t=>t.id==='C').x=separation/2;adjacent.topics.find(t=>t.id==='D').x=-4;}return createGalaxyMap({container:document.querySelector('#map'),catalog,layout:separation?adjacent:layout,state,onEnterFocus:id=>entered.push(id),onSave:topic=>saved.push(topic.id),viewState:{camera:{x:0,y:1,zoom:1}}});};
 window.change=patch=>{state={...state,...patch};map.update({state})};
 </script>`;
 const server = createServer(async (request,response)=>{
@@ -33,7 +34,7 @@ const server = createServer(async (request,response)=>{
     if(path==='/'){response.setHeader('content-type','text/html');response.end(html);return;}
     const file=resolve(packaged, `.${path}`);
     if(!file.startsWith(packaged+'/')){response.writeHead(403).end();return;}
-    response.setHeader('content-type',extname(file)==='.js'?'text/javascript':'text/css');response.end(await readFile(file));
+    response.setHeader('content-type',extname(file)==='.js'?'text/javascript':'text/css');response.end(await readFile(path==='/ui/galaxy.js' && process.env.OTHERWISE_GALAXY_MODULE || file));
   } catch {response.writeHead(404).end();}
 });
 await mkdir(output,{recursive:true});
@@ -72,6 +73,18 @@ try{
   });
   await check('actual browser doubleclick enters once without delayed selection',async()=>{
     await page.locator('[data-galaxy-action="close-details"]').click();await page.evaluate(()=>entered=[]);await clickStar(page,'B',{double:true});assert.deepEqual(await page.evaluate(()=>entered),['B']);assert.equal(await selected(page),null);
+  });
+  await check('native doubleclick across adjacent unique stars opens details without entering Focus',async()=>{
+    // Exact 25px separation, with two unique hits only 3px apart (inside Chromium's doubleclick tolerance).
+    const box=await page.locator('.galaxy-canvas').boundingBox(),separation=25/(Math.min(box.width/8,box.height/6)*.82);
+    await page.evaluate(separation=>{map.destroy();entered=[];window.nativeDoubleClicks=0;window.releaseEvents=0;map=createAdjacentMap(separation);const canvas=document.querySelector('.galaxy-canvas');canvas.addEventListener('pointerup',()=>releaseEvents++);canvas.addEventListener('dblclick',()=>nativeDoubleClicks++);},separation);await ready(page);
+    const adjacentBox=await page.locator('.galaxy-canvas').boundingBox(),x=adjacentBox.x+adjacentBox.width/2,y=adjacentBox.y+adjacentBox.height/2;
+    const painted=await page.evaluate(()=>paint.filter(p=>p.kind==='fill'&&Math.abs(p.y-document.querySelector('.galaxy-canvas').getBoundingClientRect().height/2)<.001).map(p=>p.x).sort((a,b)=>a-b));
+    assert.ok(painted.some((value,i)=>i>0&&Math.abs(value-painted[i-1]-25)<.001),'The two painted centers must be exactly 25px apart');
+    await page.mouse.click(x-1.5,y);await page.mouse.move(x+1.5,y);await page.mouse.down({clickCount:2});await page.mouse.up({clickCount:2});await settle(page);
+    const observed={releases:await page.evaluate(()=>releaseEvents),native:await page.evaluate(()=>nativeDoubleClicks),entered:await page.evaluate(()=>entered),selected:await selected(page)};
+    await page.evaluate(()=>{map.destroy();map=createAdjacentMap();});await ready(page);
+    assert.equal(observed.releases,2,'There must be exactly two actual valid release cycles');assert.equal(observed.native,1,'Chromium must produce the real native doubleclick');assert.deepEqual(observed.entered,[]);assert.equal(observed.selected,'C');
   });
   await check('24px mouse and 44px touch hit targets',async()=>{await clickStar(page,'B',{offset:11});assert.equal(await selected(page),'B');
     if(await page.locator('[data-galaxy-action="close-details"]').count())await page.locator('[data-galaxy-action="close-details"]').click();const p=await position(page,'A');const cdp=await context.newCDPSession(page);await cdp.send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:2});

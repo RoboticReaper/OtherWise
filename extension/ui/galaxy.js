@@ -26,7 +26,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
   let view = restoreViewState(viewState, data, customTopics().map(topic => topic.id));
   let destroyed = false, frame = 0, viewport = {width: 0, height: 0}, hits = [], hovered = null;
   let saved = new Set(), baseline = new Set(), recommended = new Set(), explored = new Set();
-  let actionError = false, active = true, lit = new Set(), waves = [], candidateIds = [], lastReleasedId = null;
+  let actionError = false, active = true, lit = new Set(), waves = [], candidateIds = [], releaseIds = [];
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const explorationMode = () => state.settings?.galaxyExplorationMode === true;
   const pending = new Set(), pointers = new Map(), cleanups = [];
@@ -188,7 +188,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
 
   function select(id, moveCamera = true) {
     const topic = topicFor(id); if (!topic) return;
-    activation.cancel(); lastReleasedId = null; closeCandidates(); view.selected = id; actionError = false;
+    activation.cancel(); releaseIds = []; closeCandidates(); view.selected = id; actionError = false;
     if (data.byId.has(id)) {
       if (view.domain && topic.domain !== view.domain) { view.domain = null; domainSelect.value = ''; }
       if (moveCamera) view.camera = clampCamera({x: topic.x, y: topic.y, zoom: Math.max(2.4, view.camera.zoom)}, data.bounds);
@@ -362,7 +362,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
     onEnterFocus: id => invoke('enter-focus', id),
   });
   function cancelInteraction() {
-    activation.cancel(); lastReleasedId = null; closeCandidates();
+    activation.cancel(); releaseIds = []; closeCandidates();
     for (const id of pointers.keys()) if (canvas.hasPointerCapture(id)) canvas.releasePointerCapture(id);
     pointers.clear(); hovered = null; $('.galaxy-tooltip').hidden = true;
   }
@@ -371,7 +371,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
     if (!active) return;
     const target = event.target.closest('button[data-galaxy-action]'); if (!target || !root.contains(target)) return;
     const action = target.dataset.galaxyAction, id = target.dataset.galaxyTopic;
-    activation.cancel(); lastReleasedId = null;
+    activation.cancel(); releaseIds = [];
     if (action === 'select') { select(id); $('.galaxy-detail h2')?.focus({preventScroll: true}); }
     else if (action === 'close-candidates') { closeCandidates(); canvas.focus(); }
     else if (action === 'reset') reset();
@@ -383,7 +383,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
   });
   on(root, 'keydown', event => {
     if (event.key === 'Escape' && event.target.closest('.galaxy-candidates')) {
-      event.preventDefault(); closeCandidates(); canvas.focus();
+      event.preventDefault(); activation.cancel(); releaseIds = []; closeCandidates(); canvas.focus();
     }
   });
   on(search, 'input', () => { view.query = search.value; renderResults(); });
@@ -420,9 +420,9 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
   });
   on(canvas, 'pointerdown', event => {
     if (!active || event.button !== 0) return;
-    activation.cancel(); lastReleasedId = null; closeCandidates();
+    activation.cancel(); closeCandidates();
     const position = localPointer(event); pointers.set(event.pointerId, {...position, start: position, moved: false});
-    if (pointers.size > 1) { activation.cancel(); pointers.forEach(pointer => { pointer.moved = true; }); }
+    if (pointers.size > 1) { activation.cancel(); releaseIds = []; pointers.forEach(pointer => { pointer.moved = true; }); }
     canvas.setPointerCapture(event.pointerId); canvas.style.cursor = 'grabbing'; $('.galaxy-tooltip').hidden = true;
   });
   on(canvas, 'pointermove', event => {
@@ -431,7 +431,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
     if (!current) { if (event.pointerType !== 'touch') showHover(next); return; }
     const before = [...pointers.values()].map(pointer => ({...pointer}));
     const moved = current.moved || Math.hypot(next.x - current.start.x, next.y - current.start.y) > 5;
-    if (moved) { activation.cancel(); lastReleasedId = null; }
+    if (moved) { activation.cancel(); releaseIds = []; }
     pointers.set(event.pointerId, {...current, ...next, moved});
     if (pointers.size === 1 && moved) view.camera = panCamera(view.camera, next.x - current.x, next.y - current.y, viewport, data.bounds);
     else if (pointers.size === 2) {
@@ -448,23 +448,22 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
     const pointer = pointers.get(event.pointerId); if (!pointer) return;
     pointers.delete(event.pointerId);
     if (canvas.hasPointerCapture(event.pointerId)) canvas.releasePointerCapture(event.pointerId);
-    if (cancel || pointer.moved) { activation.cancel(); lastReleasedId = null; }
+    if (cancel || pointer.moved) { activation.cancel(); releaseIds = []; }
     else if (active && !pointers.size) {
       const candidates = hitCandidates(localPointer(event), event.pointerType === 'touch' ? 22 : 12);
-      candidateIds = candidates.map(hit => hit.id); lastReleasedId = candidates.length === 1 ? candidates[0].id : null;
+      candidateIds = candidates.map(hit => hit.id);
+      releaseIds = candidates.length === 1 ? [...releaseIds, candidates[0].id].slice(-2) : [];
       if (candidates.length) activation.click(candidates[0].id);
     }
     canvas.style.cursor = pointers.size ? 'grabbing' : 'grab';
   };
   on(canvas, 'pointerup', event => release(event));
   on(canvas, 'pointercancel', event => release(event, true));
-  on(canvas, 'lostpointercapture', event => { if (pointers.delete(event.pointerId)) { activation.cancel(); lastReleasedId = null; } });
+  on(canvas, 'lostpointercapture', event => { if (pointers.delete(event.pointerId)) { activation.cancel(); releaseIds = []; } });
   on(canvas, 'dblclick', event => {
     event.preventDefault();
-    if (!active || !lastReleasedId) return;
-    const candidate = hitCandidates(localPointer(event), 12)[0];
-    if (candidate?.id === lastReleasedId) activation.doubleClick(lastReleasedId);
-    lastReleasedId = null;
+    const [first, second] = releaseIds; releaseIds = [];
+    if (active && first && first === second) activation.doubleClick(second);
   });
   on(canvas, 'pointerleave', () => { hovered = null; $('.galaxy-tooltip').hidden = true; scheduleDraw(); });
   const observer = new ResizeObserver(resize); observer.observe(canvas);
