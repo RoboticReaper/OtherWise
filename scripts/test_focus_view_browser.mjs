@@ -45,6 +45,51 @@ try{
     window.cancelAnimationFrame=id=>{pendingFrames.delete(id);cancel(id);};
   });
   await page.goto(base);await page.waitForFunction(()=>window.scene,null,{timeout:5000});
+  async function starDragOutsideRelease(){
+    await page.locator('.focus-map').scrollIntoViewIfNeeded();
+    const star=await page.locator('[data-focus-star="Topic 10"]').boundingBox();
+    const map=await page.locator('.focus-map').boundingBox();
+    const selected=await page.locator('.focus-detail').getAttribute('data-selected-id');
+    const actions=await page.evaluate(()=>events.length);
+    await page.mouse.move(star.x+star.width/2,star.y+star.height/2);
+    await page.mouse.down();
+    await page.mouse.move(star.x+star.width/2+30,star.y+star.height/2,{steps:4});
+    await page.mouse.move(Math.min(map.x+map.width+35,page.viewportSize().width-2),map.y+map.height/2,{steps:5});
+    await page.mouse.up();
+    const released=await page.evaluate(()=>scene.getViewState().camera);
+    await page.mouse.move(map.x+map.width*.25,map.y+map.height*.35,{steps:5});
+    const hovered=await page.evaluate(()=>scene.getViewState().camera);
+    assert.deepEqual(hovered,released,'Unheld hover after a star-started outside release must not pan the camera');
+    await page.waitForTimeout(300);
+    assert.equal(await page.locator('.focus-detail').getAttribute('data-selected-id'),selected);
+    assert.equal(await page.evaluate(()=>events.length),actions,'Drag must not select or enter a star');
+  }
+  async function touchStarCaptureTransfer(touch,cdp){
+    await touch.locator('[data-focus-action="reset"]').click();
+    const target=await touch.locator('[data-focus-star="Topic 10"]').boundingBox();
+    const x=target.x+target.width/2,y=target.y+target.height/2;
+    await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y,id:1}]});
+    await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x+20,y,id:1}]});
+    const first=await touch.evaluate(()=>scene.getViewState().camera.x);
+    await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x+40,y,id:1}]});
+    const second=await touch.evaluate(()=>scene.getViewState().camera.x);
+    assert.notEqual(second,first,'Transferring touch capture from a star to the map must not stop a held drag');
+    await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+  }
+  if(process.env.OTHERWISE_FOCUS_CHECK==='touch-transfer'){
+    const touch=await browser.newPage({viewport:{width:390,height:850},hasTouch:true,isMobile:true});
+    await touch.goto(base);await touch.waitForFunction(()=>window.scene,null,{timeout:5000});
+    const cdp=await touch.context().newCDPSession(touch);await touchStarCaptureTransfer(touch,cdp);
+    await touch.evaluate(()=>scene.destroy());await touch.close();await page.evaluate(()=>scene.destroy());
+    console.log(JSON.stringify({passed:true,checks:['Touch capture transfers from a star to the map without dropping the held gesture']},null,2));
+    await browser.close();browser=null;await new Promise(r=>server.close(r));process.exit(0);
+  }
+  if(process.env.OTHERWISE_FOCUS_CHECK==='outside-drag'){
+    await starDragOutsideRelease();
+    await page.evaluate(()=>scene.destroy());assert.equal(await page.evaluate(()=>pendingFrames.size),0);assert.deepEqual(errors,[]);assert.deepEqual(outbound,[]);
+    console.log(JSON.stringify({passed:true,checks:['Star-started drag outside release cleans pointer tracking before unheld hover']},null,2));
+    await browser.close();browser=null;await new Promise(r=>server.close(r));process.exit(0);
+  }
   if(process.env.OTHERWISE_FOCUS_CHECK==='delayed-doubleclick'){
     const star=page.locator('.focus-node[data-focus-id="Topic 10"] [data-focus-star]');
     await star.click();await page.waitForTimeout(330);
@@ -157,6 +202,8 @@ try{
   await page.waitForTimeout(300);
   assert.equal(await page.evaluate(()=>events.filter(e=>e[0]==='focus').length),focusBefore,'Different stable IDs must not enter Focus');
   checks.push('Native-style double-click after different stable IDs does not change center');
+  await starDragOutsideRelease();
+  checks.push('Star-started outside drag release leaves camera stable on unheld hover');
   // Hidden documents cancel the loop; restoration does not replay entry.
   await page.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'));});
   assert.equal(await page.evaluate(()=>pendingFrames.size),0);
@@ -192,6 +239,8 @@ try{
   await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
   assert.ok(await touch.evaluate(()=>scene.getViewState().camera.zoom)>1);
   assert.equal(await touch.locator('.focus-detail').getAttribute('data-selected-id'),'');
+  await touchStarCaptureTransfer(touch,cdp);
+  checks.push('Star-to-map touch capture transfer retains held dragging');
   await touch.evaluate(()=>{
     const map=document.querySelector('[data-focus-star="Topic 10"]');
     map.dispatchEvent(new PointerEvent('pointerdown',{pointerId:99,button:0,clientX:20,clientY:200,bubbles:true}));

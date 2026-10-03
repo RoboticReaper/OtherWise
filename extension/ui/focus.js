@@ -263,10 +263,13 @@ export function createFocusView({container,data,snapshot={seedId:null,nodes:[],s
     const before=pointers.get(event.pointerId),other=[...pointers].find(([id])=>id!==event.pointerId)?.[1];
     if(other){const a=Math.hypot(before.x-other.x,before.y-other.y),b=Math.hypot(p.x-other.x,p.y-other.y);if(a>1)zoom(b/a,{x:(p.x+other.x)/2,y:(p.y+other.y)/2});gestureMoved=true;}
     else if(gestureMoved||Math.hypot(p.x-pointerStart.x,p.y-pointerStart.y)>5){camera.x-=(p.x-before.x)/scale();camera.y+=(p.y-before.y)/scale();gestureMoved=true;lastClick=null;doubleId=null;activation.cancel();}
+    // Defer capture for star presses until they become gestures, preserving native clicks.
+    if(gestureMoved&&!map.hasPointerCapture(event.pointerId))map.setPointerCapture(event.pointerId);
     pointers.set(event.pointerId,p);paint();
   });
   const endPointer=event=>{pointers.delete(event.pointerId);if(map.hasPointerCapture(event.pointerId))map.releasePointerCapture(event.pointerId);if(event.type==='pointercancel'){gestureMoved=true;lastClick=null;doubleId=null;activation.cancel();}};
   on(map,'pointerup',endPointer);on(map,'pointercancel',endPointer);
+  on(map,'lostpointercapture',event=>{if(event.target===map&&pointers.delete(event.pointerId)){gestureMoved=true;clearClickSequence();}});
   on(map,'wheel',event=>{event.preventDefault();clearClickSequence();zoom(Math.exp(-event.deltaY*.0015),localPoint(event));},{passive:false});
   on(root,'keydown',event=>{
     if(event.key==='Escape'){event.preventDefault();clearClickSequence();if(selected){selected=null;root.dataset.selectedId='';renderDetails();paint();focusMap();}else runAction('back');return;}
