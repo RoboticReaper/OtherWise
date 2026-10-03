@@ -99,7 +99,10 @@ review the candidate inbox before saving interests you want to share.
 - Raw URLs and page titles are used transiently on the device. Stored browsing
   evidence contains a salted URL hash, hostname, recognized topic IDs and visit time.
   Browsing-derived evidence/candidates expire after 30 days.
-- Only saved interest names and discovery preferences are sent to the service.
+- Discover sends only saved interest names and discovery preferences. Focus sends
+  the current catalog topic ID, catalog/model/embedding identity and recommendation
+  parameters only after an explicit **Get ideas** request. That topic can be unsaved;
+  the Focus request contains no personal interests, browsing history, URLs or titles.
   The server has no profile database or request-body logging. The service and
   HTTPS tunnel also receive network information. This is not anonymous browsing.
 - Chrome history deletion removes matching derived evidence and candidates.
@@ -136,13 +139,67 @@ The details show the original catalog description and ten nearest topics compute
 in the original 768-dimensional space. Neighbor links and your recorded exploration
 paths have different styles. Saved interests, recommendations and the current focus
 are highlighted. Topic selection alone does not change your interests. Use **Save
-interest** explicitly, then **Explore from here** to change the recommendation focus.
+interest** explicitly to add one; **Explore from here** opens its temporary Focus
+neighborhood, including for an unsaved or gray catalog topic.
 
 Drag to pan, use the +/− buttons or mouse wheel to zoom, and **Reset view** to return
 to the full map. Touch pinch and keyboard controls are supported. Filtering,
 selection and refreshing never recalculate star positions. Chinese changes interface
 labels only; topic names and descriptions retain their original language.
 Manually saved topics outside the catalog appear separately without invented positions.
+
+## Semantic Focus and exploration mode
+
+Inside **Map**, switch between **Galaxy / Focus**. A single star click opens details;
+a double-click or the details' **Explore from here** button enters Focus. The button
+also works with a keyboard or touch. Focus initially shows the center and its ten
+nearest catalog topics from the local cache, without contacting the service. Use
+the center search to choose any catalog topic, including one you have not saved.
+The side panel uses a compact scene with scrolling details below the map; Dashboard
+provides more room. **Back to Galaxy** restores the view, selection, search and domain
+filter from before entering Focus. Escape closes details first, then returns.
+
+**Get ideas** explicitly requests recommendations for the displayed center using
+the quantity and numeric controls in Settings. The disclosure beside it explains
+what is sent. Focus uses the base expansion setting; Discover's saved-interest
+expansion level is not added. Viewing or changing the temporary center neither saves
+it nor changes Discover's focus, recommendation mode or batch. Save, dismiss and
+Google/YouTube actions remain explicit. A search records the searched topic as
+explored; it does not save the topic or light its nearest topics. The temporary
+center is the origin of a Focus search path, rather than an old Discover focus.
+
+Nearest topics and recommendations have separate markers and text lists. Candidate
+lists show ten rows per page, using the loaded batch. Paging and new batches do not
+move existing stars or automatically zoom the camera. The radius is measured angular
+distance in the original 768-dimensional vectors; direction comes from the global
+map. Distances between surrounding stars on screen are not their semantic distances.
+Details show the original catalog description and distance from the center. Overlapping
+stars remain independently selectable in the lists. Pan, zoom buttons, wheel and
+pinch adjust the view; **Reset view** fits the current scene. Reduced motion disables
+waves, breathing and other movement while keeping state visible.
+
+The optional **Galaxy exploration mode** setting starts off and synchronizes between
+the panel and Dashboard. When enabled, saved catalog interests and each one's ten
+direct nearest topics remain colored; individually searched topics also light up.
+This is one layer, not recursive expansion. Other stars stay gray and selectable,
+even under a domain filter. Selecting a star or receiving a recommendation does not
+light its neighborhood. Removing an interest removes its contribution while retaining
+points covered by another interest or a real search. Turning the setting off restores
+the full colored map without deleting saved data.
+
+Focus responses and temporary cameras are window-local memory, not lasting personal
+records. The separate result cache holds at most 20 request keys. Changing service
+configuration, recommendation parameters or relevant permissions invalidates stale
+requests/results. Local Galaxy and nearest topics remain usable when recommendations
+fail. Configure the service in Settings, retry a temporary failure, or update packaged
+data when its version differs from the service. A late result for an old center must
+not replace the current scene. Chinese remains interface-only; Focus does not offer
+a route to a specified destination, Chinese recommendations or evidence of mastery.
+
+The rendering primitives are selectively adapted from the teammate reference; see
+[animation provenance](focus-animation-provenance.md). Current verification and
+remaining integration/interaction checks are recorded in
+[Focus verification](focus-exploration-verification.md).
 
 ## Troubleshooting and development
 

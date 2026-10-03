@@ -205,7 +205,7 @@ def test_real_catalog_focus_matches_packaged_identity():
         assert result['seed_id'] == topic_id
         for row in result['recommendations']:
             source = topics[by_id[row['id']]]
-            assert row['distance'] == pytest.approx(float(distances[by_id[row['id']]]), abs=1e-12)
+            assert row['distance'] == pytest.approx(float(distances[by_id[row['id']]]), rel=0, abs=1e-12)
             assert .265 - 1e-9 <= row['distance'] <= .35 + 1e-9
             assert row['description'] == source['description']
             assert row['domain'] == source['domain']

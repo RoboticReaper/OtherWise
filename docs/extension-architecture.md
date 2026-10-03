@@ -5,6 +5,10 @@
 Chrome history → local adapter/title matching → local candidate inbox → user approval
 → approved-only API request → MPNet catalog recommendations → search/feedback → local map.
 
+Map adds a separate explicit path: catalog selection → temporary local Focus →
+**Get ideas** → catalog-ID/version-only Focus request → local candidate scene. Merely
+opening Focus does not request recommendations or change the approved-interest flow.
+
 The browser is the profile owner. The backend computes recommendations but stores
 no user profile. The only persisted embeddings are for the public topic catalog.
 
@@ -19,6 +23,8 @@ no user profile. The only persisted embeddings are for the public topic catalog.
 | `extension/ui/` | Discover, candidate inbox, map and Settings |
 | `extension/dashboard.html` | Full extension tab sharing the same bridge, reducer and local storage as the side panel |
 | `extension/ui/galaxy*.js` | Validated ID join, local public assets, stable camera and canvas renderer |
+| `extension/ui/focus*.js` | Fixed local projection, scene primitives, controlled labels and per-window session |
+| `extension/focus-transport.js` | Independent authenticated Focus request owner, strict identity/response validation and cancellation |
 | `galaxy/`, `scripts/build_galaxy.py` | Independent public-catalog preprocessing and content-addressed layout cache |
 | `extension/dev-preview.js` | Explicit sample-only design preview |
 | `service/api.py` | Strict authenticated request schema, size/rate/compute bounds, safe errors |
@@ -73,6 +79,36 @@ batch; it does not send another request or send suppressed topics to the server.
 Changing numeric `settings.recommendationOptions` invalidates any pending response.
 Old installs receive the existing algorithm defaults when these settings are absent.
 
+`settings.galaxyExplorationMode` is the only new persistent presentation value and
+defaults to false, including migration of missing/invalid values. It neither changes
+recommendation parameters nor causes a request. The lit set is the union of saved
+catalog interests, each interest's ten cached direct nearest topics, and actual
+searched catalog topics. Selection, recommendation arrival and temporary centers do
+not enter that set; searches light only their target. Removing an interest recomputes
+the union without erasing coverage supplied by another interest or a search.
+
+Galaxy/Focus subview, temporary center, selection, camera snapshots, animation phase
+and request state belong to each window. Focus does not overwrite Discover focus,
+mode or recommendations. A separate per-window result cache holds at most 20 keys,
+including endpoint/authorization generation, schema/algorithm version, catalog/model/
+embedding identity, center ID and all seven parameters. Cancellation and version
+validation keep old-center results out of the current scene. Connection, relevant
+permission, reset/clear and parameter changes invalidate the affected Focus channel
+and cache; Dashboard, panel and Discover request owners remain independent.
+
+Map searches pass an explicit trusted context: Galaxy uses `{source:'galaxy'}`, while
+Focus uses `{source:'focus',centerId}`. The controller validates canonical catalog
+IDs and records a real search edge without adding the temporary center to approved
+or explored state. Search paths indicate actions, not mastery.
+
+Focus nodes use fixed radii `1000 * acos(clamp(cosine, -1, 1)) / pi`; directions come
+from cached Galaxy coordinates. Coincident global coordinates use a deterministic
+ID-derived angle. Rendering changes opacity, labels and camera, never semantic
+coordinates. Scene-owned Orb and background primitives receive explicit time and
+view inputs, share one scene animation loop, pause when hidden/inactive, and stop
+motion immediately for a live reduced-motion preference. See
+[animation provenance](focus-animation-provenance.md).
+
 ## API
 
 `GET /health`: `{ "ready": true }` when the real engine is available; otherwise 503.
@@ -106,6 +142,46 @@ distance and zone. The client suppresses topics the user has dismissed locally.
 The quantity is a maximum: band eligibility, the familiar-content quota, and local
 suppression can yield fewer visible topics. No sparse-result fallback widens the band.
 Public catalog vectors are cached; history and submitted interest vectors are not.
+
+`POST /api/focus`, using the same bearer code and service permission:
+
+```json
+{
+  "topic_id": "Gardening",
+  "catalog_sha256": "<original catalog digest>",
+  "model": "all-mpnet-base-v2",
+  "embedding": {"sha256": "<original cache-byte digest>", "dtype": "float64", "shape": [3452, 768]},
+  "limit": 10,
+  "radius": 0.28,
+  "expansion": 0.07,
+  "overlap": 0.015,
+  "diversity": 0.20,
+  "max_overlap_fraction": 0.20,
+  "randomness": 0.03
+}
+```
+
+The digests/dtype/shape come from validated packaged layout metadata; the example
+placeholders are not usable identities. The request contains no keywords, personal
+profile, history, URLs, titles or topic descriptions. The caller explicitly requests
+it through **Get ideas**, even for an unsaved center. It uses the existing normalized
+catalog seed vector without new text encoding and does not add Discover's expansion
+level. Original catalog/vector identity is preserved before additional normalization;
+layout algorithm version and Focus algorithm version are distinct.
+
+The response has `schema_version:1`, `algorithm_version:'catalog-focus-band-v1'`,
+`seed_id`, matching catalog/model/embedding identity and `recommendations`. Every
+record has a canonical `id`, true angular center distance and the existing result
+fields. The client rejects wrong identity/center, unknown or duplicate IDs, excess
+quantity, invalid/band-violating distances and incorrect nearest-interest IDs before
+rendering or caching. Display text comes from the local canonical catalog.
+
+The route shares authentication, origin, request-size, rate, readiness and compute
+bounds with Discover. Failures use controlled errors: 422 invalid ID/parameters,
+409 incompatible data, 401 authentication, 429 rate limit and 503 unready/compute
+failure. Arbitrary backend errors are not echoed into the interface. Local nearest
+topics remain available; the application owner provides localized service/settings
+and retry guidance. The renderer neither fetches nor persists personal state.
 
 The shared-token, one-worker server is suitable for a small hackathon demo.
 Deploying a persistent multi-user service would require a different operational

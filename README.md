@@ -2,13 +2,21 @@
 
 Your world, a little wider. OtherWise connects a Chrome side panel to a
 local Python recommendation service. Browsing titles become candidate interests
-on the device; only interests explicitly saved by the user reach the service.
+on the device. Discover sends interests explicitly saved by the user. In Map,
+Focus sends an unsaved catalog topic only when the user clicks **Get ideas**;
+that request includes its catalog ID, data-version identity and recommendation
+parameters, without browsing history or the saved-interest profile.
 The interface supports English and Simplified Chinese. Interest input and
 recommendation content remain English. Candidate topics are paginated; discoveries
 can be shown as cards or compact list rows.
 The **Dashboard ↗** button opens a full extension tab sharing the side panel's
 local profile. Its Galaxy map includes the complete public catalog, stable semantic
 coordinates, domain filters, keyword search and true high-dimensional neighbors.
+Within Map, **Galaxy / Focus** switches between the whole catalog and a temporary
+semantic neighborhood. Opening Focus uses local nearest topics and makes no request.
+Its temporary center does not change Discover or save an interest. The optional
+Galaxy exploration mode starts off; when enabled, it highlights saved topics,
+their ten direct nearest topics, and individually searched topics.
 
 ## Run the extension demo
 
@@ -22,7 +30,7 @@ coordinates, domain filters, keyword search and true high-dimensional neighbors.
    from `.cache/demo/connection.json`. Add an interest, or review browsing topics,
    then choose **Find ideas**.
 
-[Extension guide](docs/extension-guide.md) · [Architecture and privacy](docs/extension-architecture.md)
+[Extension guide](docs/extension-guide.md) · [Architecture and privacy](docs/extension-architecture.md) · [Focus verification status](docs/focus-exploration-verification.md)
 
 The installable ZIP is `dist/OtherWise-extension.zip`. Unzip it before loading it
 in Chrome. No browser model or frontend dependency installation is required.

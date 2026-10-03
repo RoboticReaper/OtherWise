@@ -1,6 +1,6 @@
 # OtherWise：语义 Focus 与 Galaxy 探索模式
 
-日期：2026-10-03。状态：用户已确认本书面设计；实现计划待审阅。
+日期：2026-10-03。状态：用户已确认设计和实现计划，并选择分工实施；组件已实现，最终集成、独立审查、实际交互验证与本地交付仍待完成。
 
 目标开发分支：`codex/otherwise-development`，基线 `324e313`。
 工作目录：`/Users/arthurfu/.codex/worktrees/otherwise-galaxy-product/OtherWise`。
