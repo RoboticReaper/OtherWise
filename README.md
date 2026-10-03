@@ -147,3 +147,16 @@ unmatched input phrases are embedded as written.
 Model: [all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2)
 (768 dimensions, Apache 2.0). Method background:
 [Sentence Transformers semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html).
+
+## License
+
+Except where otherwise noted, original material in this repository is licensed
+under [Creative Commons Attribution-NonCommercial 4.0 International
+(CC BY-NC 4.0)](LICENSE). See the [official license](https://creativecommons.org/licenses/by-nc/4.0/)
+for its attribution and noncommercial-use terms.
+
+Imported data, third-party materials, models, and dependencies retain their own
+licenses; this license does not impose additional restrictions on them. In
+particular, Wikidata material remains CC0, and Wikipedia-derived material retains
+the CC BY-SA 4.0 terms described in the [catalog notes](data/README.md) and
+[graph notes](data/discovery_graph_README.md).
