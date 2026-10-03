@@ -21,9 +21,11 @@ const html = `<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="
 import {createGalaxyMap} from '/ui/galaxy.js';
 window.catalog=${JSON.stringify(catalog)};window.layout=${JSON.stringify(layout)};window.state=${JSON.stringify(initial)};window.entered=[];window.saved=[];
 // Observe real canvas painting, not a production-only testing API.
-window.paint=[];let arc=null;
+window.paint=[];window.paintFrame=0;window.paintState=null;let arc=null;
+const nativeFrame=window.requestAnimationFrame.bind(window);window.holdPaint=false;window.heldFrames=[];
+window.requestAnimationFrame=callback=>nativeFrame(time=>{if(holdPaint)heldFrames.push(()=>callback(time));else callback(time);});
 const proto=CanvasRenderingContext2D.prototype;
-for(const name of ['clearRect','arc','fill','stroke']){const original=proto[name];proto[name]=function(...args){if(this.canvas.classList.contains('galaxy-canvas')){if(name==='clearRect')window.paint=[];if(name==='arc')arc=args;if((name==='fill'||name==='stroke')&&arc)window.paint.push({kind:name,x:arc[0],y:arc[1],r:arc[2],color:this[name==='fill'?'fillStyle':'strokeStyle'],alpha:this.globalAlpha});}return original.apply(this,args)}}
+for(const name of ['clearRect','arc','fill','stroke']){const original=proto[name];proto[name]=function(...args){if(this.canvas.classList.contains('galaxy-canvas')){if(name==='clearRect'){window.paint=[];window.paintFrame++;window.paintState={approved:state.approved.map(t=>t.id),explored:state.explored.map(t=>t.id),mode:state.settings.galaxyExplorationMode};}if(name==='arc')arc=args;if((name==='fill'||name==='stroke')&&arc)window.paint.push({kind:name,x:arc[0],y:arc[1],r:arc[2],color:this[name==='fill'?'fillStyle':'strokeStyle'],alpha:this.globalAlpha});}return original.apply(this,args)}}
 window.map=createGalaxyMap({container:document.querySelector('#map'),catalog,layout,state,onEnterFocus:id=>entered.push(id),onSave:topic=>saved.push(topic.id)});
 window.createAdjacentMap=separation=>{const adjacent=structuredClone(layout);if(separation){adjacent.topics.find(t=>t.id==='A').x=-separation/2;adjacent.topics.find(t=>t.id==='C').x=separation/2;adjacent.topics.find(t=>t.id==='D').x=-4;}return createGalaxyMap({container:document.querySelector('#map'),catalog,layout:separation?adjacent:layout,state,onEnterFocus:id=>entered.push(id),onSave:topic=>saved.push(topic.id),viewState:{camera:{x:0,y:1,zoom:1}}});};
 window.change=patch=>{state={...state,...patch};map.update({state})};
@@ -48,7 +50,9 @@ const camera=page=>page.evaluate(()=>map.getViewState().camera);
 async function position(page,id){const box=await page.locator('.galaxy-canvas').boundingBox();return {...worldToScreen(data.byId.get(id),await camera(page),box,data.bounds),box};}
 async function clickStar(page,id,{double=false,offset=0}={}){const p=await position(page,id);await page.mouse[double?'dblclick':'click'](p.box.x+p.x+offset,p.box.y+p.y);await settle(page);}
 async function fill(page,id){const p=await position(page,id);return page.evaluate(({x,y})=>paint.find(p=>p.kind==='fill'&&Math.abs(p.x-x)<.01&&Math.abs(p.y-y)<.01),p);}
-async function change(page,patch){await page.evaluate(patch=>change(patch),patch);await page.waitForTimeout(40);}
+const waitForPaint=(page,frame)=>page.waitForFunction(previous=>paintFrame>previous,frame,{timeout:5000});
+async function change(page,patch){const frame=await page.evaluate(patch=>{const previous=paintFrame;change(patch);return previous;},patch);await waitForPaint(page,frame);}
+async function updateMap(page,patch){const frame=await page.evaluate(patch=>{const previous=paintFrame;map.update(patch);return previous;},patch);await waitForPaint(page,frame);}
 async function check(name,fn){try{await fn();checks.push(name);}catch(error){failures.push({name,message:error.message});}}
 try{
   context=await chromium.launchPersistentContext(profile,{executablePath:process.env.OTHERWISE_CHROMIUM||chromium.executablePath(),headless:true,viewport:{width:1440,height:1050},args:['--proxy-server=http://127.0.0.1:9']});
@@ -56,6 +60,15 @@ try{
   const page=await context.newPage();page.setDefaultTimeout(1500);page.on('pageerror',error=>errors.push(error.message));
   await page.goto(`http://127.0.0.1:${server.address().port}/`);await ready(page);
   await check('initial exploration mode paints unsaved/recommended stars gray',async()=>{assert.equal((await fill(page,'F')).color,'#79838e');assert.equal((await fill(page,'A')).color,'#79838e');});
+  await check('state updates await a completed paint even when the next animation frame is held',async()=>{
+    await page.evaluate(()=>holdPaint=true);
+    const updated=change(page,{settings:{galaxyExplorationMode:false}});
+    const resolvedBeforePaint=await Promise.race([updated.then(()=>true),page.waitForTimeout(120).then(()=>false)]);
+    const stale=await page.evaluate(()=>({mode:state.settings.galaxyExplorationMode,paintMode:paintState.mode,held:heldFrames.length})),staleColor=(await fill(page,'F')).color;
+    await page.evaluate(()=>{holdPaint=false;for(const callback of heldFrames.splice(0))callback();});await updated;
+    await change(page,{settings:{galaxyExplorationMode:true}});
+    assert.equal(stale.mode,false);assert.equal(staleColor,'#79838e','The held frame must reproduce the stale gray toggle sample');assert.equal(stale.paintMode,true,'The experiment must actually hold the previous painted state');assert.ok(stale.held>0,'A real scheduled canvas paint must be held');assert.equal(resolvedBeforePaint,false,'The update waiter must not return before new paint exists');
+  });
   await check('single gray click only opens details after 250ms, keeps neighbors gray',async()=>{
     const p=await position(page,'A');await page.mouse.click(p.box.x+p.x,p.box.y+p.y);assert.equal(await selected(page),null);await settle(page);assert.equal(await selected(page),'A');assert.equal((await fill(page,'C')).color,'#79838e');assert.deepEqual(await page.evaluate(()=>entered),[]);
   });
@@ -68,7 +81,7 @@ try{
   });
   await check('toggle/language/save/remove preserve world coordinates and view camera',async()=>{
     const before=await camera(page);await change(page,{settings:{galaxyExplorationMode:false}});assert.notEqual((await fill(page,'F')).color,'#79838e');
-    await change(page,{settings:{galaxyExplorationMode:true}});await page.evaluate(()=>map.update({language:'zh-CN'}));await page.waitForTimeout(40);
+    await change(page,{settings:{galaxyExplorationMode:true}});await updateMap(page,{language:'zh-CN'});
     assert.deepEqual(await camera(page),before);assert.equal(await page.evaluate(()=>JSON.stringify(layout)),original);
   });
   await check('actual browser doubleclick enters once without delayed selection',async()=>{
@@ -114,7 +127,7 @@ try{
     const expectedA=await Promise.all(['A','C','D'].map(async id=>{const p=await position(page,id);return {x:p.x,y:p.y}}));assert.deepEqual(await rings(),expectedA);
     await page.waitForTimeout(700);await change(page,{approved:[catalog[0],catalog[1]]});await page.waitForTimeout(150);
     const expectedB=await Promise.all(['B','E'].map(async id=>{const p=await position(page,id);return {x:p.x,y:p.y}}));assert.deepEqual(await rings(),expectedB);
-    await page.waitForTimeout(700);await page.evaluate(()=>map.update({language:'en'}));await change(page,{explored:[catalog[5]]});assert.deepEqual(await rings(),[]);
+    await page.waitForTimeout(700);await updateMap(page,{language:'en'});await change(page,{explored:[catalog[5]]});assert.deepEqual(await rings(),[]);
     await change(page,{settings:{galaxyExplorationMode:false}});await change(page,{settings:{galaxyExplorationMode:true}});assert.deepEqual(await rings(),[]);
     const pointsBefore=await Promise.all(catalog.map(async ({id})=>{const p=await fill(page,id);return {id,x:p.x,y:p.y}}));
     await change(page,{approved:[]});const pointsAfter=await Promise.all(catalog.map(async ({id})=>{const p=await fill(page,id);return {id,x:p.x,y:p.y}}));assert.deepEqual(pointsAfter,pointsBefore);
