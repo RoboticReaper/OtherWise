@@ -106,10 +106,15 @@ try {
   checks.push('Real original descriptions/ten high-dimensional neighbors; selection is not saving; explicit save and language propagate across tabs');
 
   await select(dash,'Computer science');
-  await dash.locator('[data-galaxy-action="focus"]').click();
-  await dash.locator('#discovery-mode').waitFor();
+  await dash.locator('[data-galaxy-action="enter-focus"]').click();
+  await dash.locator('.focus-root[data-seed-id="Computer science"]').waitFor();
+  assert.equal((await get(side)).focus,'psychology');
+  await dash.locator('[data-focus-action="back"]').click();await mapReady(dash);
+  // Formal Discover focus remains an explicit saved-interest action.
+  await dash.locator('[data-view="discover"]').click();
+  await action(dash,{type:'SET_FOCUS',id:'Computer science'});
+  await dash.waitForFunction(()=>document.querySelector('.focus-note')?.textContent.includes('Computer science'));
   assert.equal((await get(side)).focus,'Computer science');
-  assert.equal(await dash.locator('#discovery-mode').inputValue(),'path');
   await dash.locator('[data-view="map"]').click();await mapReady(dash);
   for(const width of [1440,390,320]) {
     await gestures(dash,width);
@@ -134,7 +139,10 @@ try {
   const canvas=dash.locator('.galaxy-canvas');await canvas.scrollIntoViewIfNeeded();
   const box=await canvas.boundingBox(),cam=await camera(dash);
   const candidate=data.topics.map(t=>({...worldToScreen(t,cam,box,data.bounds),id:t.id})).find(t=>t.x>40&&t.x<box.width-40&&t.y>70&&t.y<box.height-100);
-  await dash.mouse.click(box.x+candidate.x,box.y+candidate.y);await pause();
+  await dash.mouse.click(box.x+candidate.x,box.y+candidate.y);
+  await until(async()=>await dash.locator('.galaxy-root').getAttribute('data-selected-id')===candidate.id || await dash.locator('.galaxy-candidate-list button').count()>0);
+  if(await dash.locator('.galaxy-root').getAttribute('data-selected-id')!==candidate.id)await dash.locator(`.galaxy-candidate-list [data-galaxy-topic="${candidate.id}"]`).click();
+  await until(async()=>await dash.locator('.galaxy-root').getAttribute('data-selected-id')===candidate.id);
   assert.equal(await dash.locator('.galaxy-root').getAttribute('data-selected-id'),candidate.id);
   assert.equal((await get(dash)).approved.length,3);
   const stable=await dash.evaluate(async()=>JSON.stringify(await (await fetch('./galaxy-layout.json')).json()));
@@ -147,6 +155,13 @@ try {
   await dash.locator('.galaxy-custom [data-galaxy-topic="My custom hobby"]').click();
   assert.equal(await dash.locator('.galaxy-neighbors').count(),0);
   assert.match(await dash.locator('.galaxy-custom-note').innerText(),/目录/);
+  await dash.locator('[data-galaxy-action="focus"]').click();await dash.locator('#discovery-mode').waitFor();
+  assert.equal((await get(dash)).focus,'My custom hobby');
+  await dash.locator('[data-view="map"]').click();await mapReady(dash);
+  const customSearch=context.waitForEvent('page',{timeout:5000});await dash.locator('[data-galaxy-action="google"]').click();
+  const customTab=await customSearch;await until(()=>customTab.url().startsWith('https://www.google.com/search'));
+  assert.equal(new URL(customTab.url()).searchParams.get('q'),'My custom hobby');await customTab.close();
+  await until(async()=>(await get(side)).explored.some(t=>t.id==='My custom hobby'));
   checks.push('Custom interest remains usable without fabricated catalog coordinates/neighbors');
   await side.setViewportSize({width:390,height:850});await mapReady(side);
   await gestures(side,390);await select(side,'psychology');
@@ -175,7 +190,7 @@ try {
   assert.match(await preview.locator('.galaxy-statuses').innerText(),/Recommendation/);
   assert.equal((await get(dash)).approved.length,4,'Explicit preview cannot alter the real extension profile');
   checks.push('Recommendation overlay verified with an explicitly isolated preview fixture');
-  assert.deepEqual(errors,[]);assert.ok(outbound.every(url=>url==='https://www.google.com/search?q=psychology'));
+  assert.deepEqual(errors,[]);assert.ok(outbound.every(url=>{const parsed=new URL(url);return parsed.origin==='https://www.google.com'&&parsed.pathname==='/search'&&['psychology','My custom hobby'].includes(parsed.searchParams.get('q'))&&[...parsed.searchParams.keys()].length===1;}));
   checks.push('No page errors or API requests; external access blocked by the isolated browser proxy');
   const result={passed:true,catalogTopics:catalog.length,cacheKey:layout.cache_key,checks};
   await writeFile(resolve(output,'results.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

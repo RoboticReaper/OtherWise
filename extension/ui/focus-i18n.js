@@ -2,7 +2,7 @@ export const focusDictionaries = {
   en: {
     back:'Back to Galaxy',center:'Focus center',chooseCenter:'Choose a center',searchPlaceholder:'Find any catalog topic',
     reset:'Reset view',zoomIn:'Zoom in',zoomOut:'Zoom out',getIdeas:'Get ideas',
-    disclosure:'Only the current topic and recommendation parameters are sent when you click Get ideas.',
+    disclosure:'Get ideas sends only the selected catalog topic ID, public data version and seven numeric recommendation parameters. Entering Focus sends nothing.',
     local:'Your nearest topics are ready. Get ideas to discover more.',loading:'Looking for ideas…',
     ready:'Recommendations are ready.',error:'Recommendations are unavailable. Your nearest topics still work. Try Get ideas again.',
     empty:'No candidates in this distance band. Your nearest topics are still here.',
@@ -17,7 +17,7 @@ export const focusDictionaries = {
   'zh-CN': {
     back:'返回星图',center:'探索中心',chooseCenter:'选择中心',searchPlaceholder:'查找任意目录主题',
     reset:'重置视图',zoomIn:'放大',zoomOut:'缩小',getIdeas:'获取推荐',
-    disclosure:'点击获取推荐时，只发送当前主题和推荐参数。',local:'最近主题已就绪。点击获取推荐，探索更多主题。',loading:'正在查找推荐…',
+    disclosure:'点击获取推荐时，仅发送所选目录主题 ID、公开数据版本和七项数值推荐参数。进入聚焦探索不会发送数据。',local:'最近主题已就绪。点击获取推荐，探索更多主题。',loading:'正在查找推荐…',
     ready:'推荐已就绪。',error:'暂时无法获取推荐，最近主题仍然可用。可再次点击获取推荐重试。',
     empty:'该距离范围内没有候选主题，最近主题仍然可用。',
     neighbors:'最近主题',candidates:'推荐主题',distance:'与中心的角距离',

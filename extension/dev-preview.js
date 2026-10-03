@@ -1,5 +1,7 @@
 // Explicit, offline design preview. Production never falls back to these samples.
 import {createState,reduceState,prepareObservation} from './core/index.js';
+import {createFocusPreview} from './ui/focus-preview.js';
+import {galaxyLoader} from './ui/galaxy-data.js';
 
 const samples=[
   {id:'Gardening',topic:'Gardening',domain:'Nature',description:'Growing plants and understanding the living world around you.'},
@@ -18,7 +20,9 @@ function notify(){for(const listener of listeners)listener(snapshot());return sn
 export async function getState(){return snapshot();}
 export async function dispatch(action){
   if(action.type==='ADD_INTEREST' && typeof action.topic==='string')action={...action,topic:samples.find(t=>t.topic.toLowerCase()===action.topic.toLowerCase()) || action.topic};
-  state=reduceState(state,action);return notify();
+  const previous=state;state=reduceState(state,action);
+  if (['RESET','CLEAR_DERIVED','DELETE_SOURCES','INVALIDATE'].includes(action.type)||['endpoint','accessToken','recommendationOptions'].some(key=>JSON.stringify(previous.settings[key])!==JSON.stringify(state.settings[key]))) invalidateFocus();
+  return notify();
 }
 export async function importHistory(){
   const observation=await prepareObservation({url:'https://example.org/sample-ecology',title:'Ecology — sample article',lastVisitTime:Date.now()},samples,{salt:state.salt,blockedDomains:[]});
@@ -29,9 +33,25 @@ export async function recommend(){
   state=reduceState(state,{type:'RECOMMENDATIONS',generation:state.generation,items:samples.slice(1).filter(t=>!state.approved.some(a=>a.id===t.id)).map(t=>({...t,nearest_interest:state.focus,zone:'New territory',distance:0.3,boundary_offset:0.04}))});
   return notify();
 }
-export async function search(topic,provider){
+export async function search(topic,provider,context){
   // The design preview records a fictional step without opening external sites.
-  state=reduceState(state,{type:'EXPLORE',topic,parentId:state.focus});return notify();
+  if(context){const {catalog}=await galaxyLoader.load();const canonical=catalog.find(row=>row.id===topic.id);if(!canonical)throw new Error('Choose a catalog topic.');state=reduceState(state,{type:'EXPLORE_FROM_CATALOG',topic:canonical,parentId:context.source==='focus'?context.centerId:null});}
+  else state=reduceState(state,{type:'EXPLORE',topic,parentId:state.focus});return notify();
 }
 export function subscribe(listener){listeners.add(listener);return ()=>listeners.delete(listener);}
+const focusListeners=new Set(),focusPending=new Map();
+const focusPreview=createFocusPreview({load:async()=>{
+ const [assets,response]=await Promise.all([galaxyLoader.load(),fetch(new URL('./focus-preview.v1.json',import.meta.url),{credentials:'omit',redirect:'error'})]);
+ if(!response.ok)throw new Error('Focus recommendations are unavailable in this offline preview.');
+ return {...assets,fixture:await response.json()};
+}});
+function invalidateFocus(){cancelFocus();for(const listener of focusListeners)listener();}
+export function subscribeFocusInvalidation(listener){focusListeners.add(listener);return ()=>focusListeners.delete(listener);}
+export function cancelFocus(requestId){if(requestId===undefined){for(const pending of focusPending.values())pending.cancel();focusPending.clear();}else{focusPending.get(requestId)?.cancel();focusPending.delete(requestId);}}
+export async function requestFocus(topicId,{requestId}={}){
+ let cancel;const cancelled=new Promise((_,reject)=>{cancel=()=>reject(new Error('Focus request cancelled.'));});
+ const slot={cancel};focusPending.set(requestId,slot);
+ try{return await Promise.race([focusPreview.request(topicId,state.settings.recommendationOptions),cancelled]);}
+ finally{if(focusPending.get(requestId)===slot)focusPending.delete(requestId);}
+}
 await recommend();

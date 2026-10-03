@@ -1,7 +1,7 @@
-import { getState, dispatch, importHistory, recommend, search, subscribe, openDashboard } from '../bridge.js';
+import { getState, dispatch, importHistory, recommend, search, subscribe, openDashboard, requestFocus, cancelFocus, subscribeFocusInvalidation } from '../bridge.js';
 import { normalizeLanguage, translate, translateError } from './i18n.js';
 import { paginate } from './pagination.js';
-import { createGalaxyMap } from './galaxy.js';
+import { createMapWorkspace } from './map-workspace.js';
 import { galaxyLoader } from './galaxy-data.js';
 import { RECOMMENDATION_DEFAULTS, RECOMMENDATION_BOUNDS, normalizeRecommendationOptions } from '../core/recommendation-options.js';
 
@@ -17,7 +17,8 @@ const ui = {
   pending: new Set(), expandedDescriptions: new Set(), error: null, announcement: '', loaded: false,
 };
 let state = null;
-let galaxyMap;
+let mapWorkspace;
+let unsubscribeFocus;
 let galaxyAssets;
 let galaxyLoading = false;
 let galaxyError = false;
@@ -50,6 +51,7 @@ function snapshotSettings() {
 function applyState(next) {
   if (!next || typeof next !== 'object') return;
   if (next.lastUpdated !== state?.lastUpdated) ui.recommendationPage = 1;
+  if (state?.salt && state.salt !== next.salt) { mapWorkspace?.destroy(); mapWorkspace = null; ui.galaxyView = null; }
   state = next;
   ui.loaded = true;
   const candidates = new Set(arr(state.candidates).map(topicId));
@@ -96,7 +98,7 @@ function render() {
   });
   const advancedOptions = app.querySelector('#recommendation-advanced');
   if (advancedOptions?.isConnected) ui.advancedOptionsOpen = advancedOptions.open;
-  if (galaxyMap) { ui.galaxyView = galaxyMap.getViewState(); galaxyMap.destroy(); galaxyMap = null; }
+  if (mapWorkspace) { mapWorkspace.setActive(ui.view === 'map'); mapWorkspace.element.remove(); }
   const error = ui.error || state?.lastError;
   document.documentElement.lang = language();
   document.title = t('title');
@@ -114,6 +116,7 @@ function render() {
   </div>`;
   bindEvents();
   if (ui.view === 'map' && ui.loaded) drawMap();
+  if (focused?.isConnected && mapWorkspace?.element.contains(focused)) focused.focus({preventScroll:true});
   if (focusKey) {
     let target = [...app.querySelectorAll('[data-focus]')].find(element => element.dataset.focus === focusKey);
     // A boundary button becomes disabled after paging. Keep keyboard focus nearby.
@@ -204,7 +207,8 @@ function settingsView() {
     <section class="settings-group"><h2>${text('interfaceLanguage')}</h2>${languageSelect('settings-language')}<p class="language-note">${text('languageScope')}</p></section>
     <section class="settings-group"><h2>${text('discovery')}</h2><label class="field"><span>${text('connections')}</span><select id="settings-mode" data-focus="settings-mode" aria-label="${text('connections')}"><option value="path"${settings.mode !== 'global' ? ' selected' : ''}>${text('followLatest')}</option><option value="global"${settings.mode === 'global' ? ' selected' : ''}>${text('exploreAll')}</option></select><small>${text('modeHelp')}</small></label>
     <label class="toggle-row"><input id="browsing-enabled" type="checkbox" aria-label="${text('browsingEnabled')}" aria-describedby="browsing-help" data-focus="browsing-enabled"${checked(settings.browsingEnabled)}${disabled(busy('browsing'))}><span><strong>${text('browsingEnabled')}</strong><small id="browsing-help">${text('browsingHelp')}</small></span></label>
-    <label class="toggle-row"><input id="auto-refresh" type="checkbox" aria-label="${text('autoRefresh')}" aria-describedby="refresh-help" data-focus="auto-refresh"${checked(settings.autoRefresh)}${disabled(busy('auto-refresh'))}><span><strong>${text('autoRefresh')}</strong><small id="refresh-help">${text('refreshHelp')}</small></span></label></section>
+    <label class="toggle-row"><input id="auto-refresh" type="checkbox" aria-label="${text('autoRefresh')}" aria-describedby="refresh-help" data-focus="auto-refresh"${checked(settings.autoRefresh)}${disabled(busy('auto-refresh'))}><span><strong>${text('autoRefresh')}</strong><small id="refresh-help">${text('refreshHelp')}</small></span></label>
+    <label class="toggle-row"><input id="galaxy-exploration-mode" type="checkbox" aria-describedby="exploration-mode-help" data-focus="galaxy-exploration-mode"${checked(settings.galaxyExplorationMode)}${disabled(busy('galaxy-exploration'))}><span><strong>${text('galaxyExplorationMode')}</strong><small id="exploration-mode-help">${text('galaxyExplorationHelp')}</small></span></label></section>
     <form class="settings-form" id="settings-form" novalidate>${recommendationSettingsView(draft.recommendationOptions)}<section class="settings-group"><h2>${text('serviceConnection')}</h2><p class="muted small">${text('serviceHelp')}</p><label class="field"><span>${text('serviceAddress')}</span><input id="endpoint" name="endpoint" type="url" aria-label="${text('serviceAddress')}" aria-describedby="endpoint-help" data-focus="endpoint" value="${escape(draft.endpoint)}" placeholder="https://your-demo-address" spellcheck="false" autocomplete="off" required><small id="endpoint-help">${text('endpointHelp')}</small></label><label class="field"><span>${text('teamCode')}</span><input id="access-token" name="accessToken" type="password" aria-label="${text('teamCode')}" aria-describedby="token-help" data-focus="access-token" value="${escape(draft.accessToken)}" placeholder="${text('codePlaceholder')}" autocomplete="off" spellcheck="false"><small id="token-help">${text('codeHelp')}</small></label></section>
     <section class="settings-group"><h2>${text('excludedWebsites')}</h2><p class="muted small">${text('excludedHelp')}</p><label class="field"><span>${text('domainsToSkip')}</span><textarea id="blocked-domains" name="blockedDomains" aria-label="${text('domainsToSkip')}" aria-describedby="domains-help" data-focus="blocked-domains" spellcheck="false">${escape(draft.blockedDomains)}</textarea><small id="domains-help">${text('domainsHelp')}</small></label></section>
     <div class="actions"><button class="primary" data-focus="save-settings" type="submit"${disabled(busy('settings'))}>${text(busy('settings') ? 'saving' : 'saveSettings')}</button><span class="muted" role="status">${ui.settingsDirty ? text('unsaved') : ui.settingsSaved ? text('settingsSaved') : ''}</span></div></form>
@@ -231,11 +235,17 @@ function drawMap() {
     return;
   }
   try {
-    galaxyMap = createGalaxyMap({ container, ...galaxyAssets, state, language: language(), viewState: ui.galaxyView,
+    if (!mapWorkspace) mapWorkspace = createMapWorkspace({ ...galaxyAssets, state, language: language(), viewState: ui.galaxyView,
+      presentation: dashboard ? 'dashboard' : 'sidebar', preview, requestFocus, cancelFocus,
       onSave: topic => run(`save:${topicId(topic)}`, () => dispatch({type:'ADD_INTEREST', topic}), 'interestSaved'),
-      onFocus: focusMapTopic,
-      onSearch: (topic, provider) => run(`search:${topicId(topic)}`, () => search(topic, provider), 'explorationRecorded'),
+      onDismiss: id => run(`dismiss:${id}`, () => dispatch({type:'DISMISS', id}), 'topicDismissed'),
+      onCustomFocus: focusMapTopic,
+      onSearch: (topic, provider, context) => run(`search:${topicId(topic)}`, () => search(topic, provider, context), 'explorationRecorded'),
+      onSettings: () => { ui.view = 'settings'; render(); document.querySelector('#endpoint')?.focus(); },
     });
+    container.append(mapWorkspace.element);
+    mapWorkspace.update({state, language: language()});
+    mapWorkspace.setActive(true);
   } catch {
     galaxyError = true;
     render();
@@ -281,6 +291,7 @@ function bindEvents() {
   app.querySelectorAll('[data-candidate]').forEach(input => input.addEventListener('change', event => { const id = event.target.dataset.candidate; event.target.checked ? ui.selected.add(id) : ui.selected.delete(id); render(); }));
   for (const id of ['discovery-mode', 'settings-mode']) document.getElementById(id)?.addEventListener('change', event => run('mode', () => dispatch({ type: 'SET_SETTINGS', patch: { mode: event.target.value } }), 'modeSaved'));
   document.getElementById('browsing-enabled')?.addEventListener('change', event => run('browsing', () => dispatch({ type: 'SET_SETTINGS', patch: { browsingEnabled: event.target.checked } }), 'browsingSaved'));
+  document.getElementById('galaxy-exploration-mode')?.addEventListener('change', event => run('galaxy-exploration', () => dispatch({ type: 'SET_SETTINGS', patch: { galaxyExplorationMode: event.target.checked } }), 'explorationModeSaved'));
   document.getElementById('auto-refresh')?.addEventListener('change', event => run('auto-refresh', () => dispatch({ type: 'SET_SETTINGS', patch: { autoRefresh: event.target.checked } }), 'refreshSaved'));
   app.querySelectorAll('#settings-form input, #settings-form textarea').forEach(input => input.addEventListener('input', event => {
     const option = event.target.dataset.recommendationOption;
@@ -369,7 +380,7 @@ async function onAction(event) {
     const confirmed = await confirmDialog(t(reset ? 'startOver' : 'confirmClear'), t(reset ? 'resetDescription' : 'clearDescription'), t(reset ? 'reset' : 'clearBrowsing'));
     if (!confirmed) return;
     const next = await run(action, () => dispatch({ type: reset ? 'RESET' : 'CLEAR_DERIVED' }), reset ? 'resetDone' : 'clearDone');
-    if (reset && next && !next.lastError) { galaxyMap?.destroy(); galaxyMap = null; ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.galaxyView = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.candidatePage = 1; ui.recommendationPage = 1; ui.view = 'discover'; render(); }
+    if (reset && next && !next.lastError) { mapWorkspace?.destroy(); mapWorkspace = null; ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.galaxyView = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.candidatePage = 1; ui.recommendationPage = 1; ui.view = 'discover'; render(); }
   }
 }
 
@@ -395,8 +406,9 @@ function formatTime(timestamp) {
 try {
   applyState(await getState());
   unsubscribe = subscribe(applyState);
+  unsubscribeFocus = subscribeFocusInvalidation(() => mapWorkspace?.invalidateFocus());
 } catch (error) {
   ui.error = error?.message || 'Could not open your saved interests. Please try again.';
   render();
 }
-window.addEventListener('pagehide', () => { if (typeof unsubscribe === 'function') unsubscribe(); galaxyMap?.destroy(); });
+window.addEventListener('pagehide', () => { unsubscribe?.(); unsubscribeFocus?.(); mapWorkspace?.destroy(); });
