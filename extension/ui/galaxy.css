@@ -89,3 +89,10 @@
   .galaxy-map-caption { inset: 13px 12px auto; font-size: 10px; }
   .galaxy-domain-colors { grid-template-columns: minmax(0, 1fr); }
 }
+
+.galaxy-exploration-status { color: #b9c7cb; font-size: 11px; line-height: 1.65; margin: 10px 0 0; }
+.galaxy-candidates { position: absolute; z-index: 3; inset: 52px 12px auto; max-height: calc(100% - 120px); overflow-y: auto; overscroll-behavior: contain; background: #122132f5; border: 1px solid #526777; border-radius: 10px; padding: 12px; box-shadow: 0 6px 24px #0006; }
+.galaxy-candidates h3 { font-size: 14px; margin: 0 0 8px; }
+.galaxy-candidate-list { display: grid; gap: 6px; }
+.galaxy-candidates button { min-height: 44px; text-align: left; padding: 8px 10px; overflow-wrap: anywhere; }
+.galaxy-candidates > button { margin-top: 8px; width: 100%; }
