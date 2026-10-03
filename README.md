@@ -1,4 +1,31 @@
-# Interest explorer
+# OtherWise
+
+Your world, a little wider. OtherWise connects an English Chrome side panel to a
+local Python recommendation service. Browsing titles become candidate interests
+on the device; only interests explicitly saved by the user reach the service.
+
+## Run the extension demo
+
+1. Install Python dependencies in `.venv`: `python -m pip install -r requirements.txt`.
+2. Build the extension: `python scripts/build_extension.py`.
+3. Start the backend and optional shared HTTPS demo using
+   [the backend guide](docs/demo-backend.md).
+4. In Chrome's Extensions page, enable Developer mode and **Load unpacked** →
+   `dist/otherwise-extension`.
+5. Open OtherWise. In Settings, save the service address and team access code
+   from `.cache/demo/connection.json`. Add an interest, or review browsing topics,
+   then choose **Find ideas**.
+
+[Extension guide](docs/extension-guide.md) · [Architecture and privacy](docs/extension-architecture.md)
+
+The installable ZIP is `dist/OtherWise-extension.zip`. Unzip it before loading it
+in Chrome. No browser model or frontend dependency installation is required.
+Python 3.11+ and Chrome 116+ are required; development tests use Node 22+.
+
+Checks: `python -m pytest -q` and `npm test`. Browser regression checks are documented
+in the extension guide. The original notebook and its catalog remain available below.
+
+## Notebook exploration
 
 A minimal notebook for discovering meaningful topics beyond your current interests.
 It searches an editable catalog of **3,452 topics across 23 domains**, using a local
