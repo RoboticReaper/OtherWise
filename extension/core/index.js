@@ -26,7 +26,7 @@ export function createState(now = Date.now()) {
   return {
     schemaVersion: 1, generation: 0, salt: randomSalt(), onboardingComplete: false,
     settings: {
-      browsingEnabled: false, autoRefresh: false, mode: 'path', globalLevel: 0, language: 'en', recommendationView: 'cards',
+      browsingEnabled: false, autoRefresh: false, mode: 'path', globalLevel: 0, language: 'en', recommendationView: 'cards', galaxyExplorationMode: false,
       endpoint: 'http://127.0.0.1:8000', accessToken: '',
       recommendationOptions: normalizeRecommendationOptions(),
       blockedDomains: [...DEFAULT_BLOCKED_DOMAINS], analysisSince: 0,
@@ -212,14 +212,14 @@ function updateSettings(state, patch, now) {
   if (!patch || typeof patch !== 'object') return;
   let changed = false;
   let error = null;
-  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'recommendationOptions']) {
+  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'galaxyExplorationMode', 'recommendationOptions']) {
     if (!(name in patch)) continue;
     let value = patch[name];
     if (name === 'recommendationOptions') {
       if (!validRecommendationOptions(value)) { error = 'Enter valid recommendation settings.'; continue; }
       value = normalizeRecommendationOptions({...state.settings.recommendationOptions, ...value});
     }
-    if (['browsingEnabled', 'autoRefresh'].includes(name) && typeof value !== 'boolean') continue;
+    if (['browsingEnabled', 'autoRefresh', 'galaxyExplorationMode'].includes(name) && typeof value !== 'boolean') continue;
     if (name === 'mode' && !['path', 'global'].includes(value)) continue;
     if (name === 'language' && !['en', 'zh-CN'].includes(value)) continue;
     if (name === 'recommendationView' && !['cards', 'list'].includes(value)) continue;
@@ -239,7 +239,7 @@ function updateSettings(state, patch, now) {
       if (name === 'browsingEnabled' && value) state.settings.analysisSince = now;
       state.settings[name] = value;
       // Presentation preferences never change the profile or cancel work.
-      if (!['language', 'recommendationView'].includes(name)) changed = true;
+      if (!['language', 'recommendationView', 'galaxyExplorationMode'].includes(name)) changed = true;
     }
   }
   if (changed) {
@@ -257,6 +257,7 @@ export function reduceState(state, action, now = Date.now()) {
   next.settings.recommendationOptions = normalizeRecommendationOptions(next.settings.recommendationOptions);
   if (!['en', 'zh-CN'].includes(next.settings.language)) next.settings.language = 'en';
   if (!['cards', 'list'].includes(next.settings.recommendationView)) next.settings.recommendationView = 'cards';
+  if (typeof next.settings.galaxyExplorationMode !== 'boolean') next.settings.galaxyExplorationMode = false;
   // Existing installs can infer onboarding once, without retaining deleted baseline IDs.
   if (next.onboardingComplete === undefined) next.onboardingComplete = next.approved.length > 0 || next.baseline.length > 0;
   const observations = action.type === 'INGEST' && Array.isArray(action.observations) ? action.observations : [];
@@ -297,6 +298,15 @@ export function reduceState(state, action, now = Date.now()) {
       const topic = sanitizeTopic(action.topic);
       if (!topic) { next.lastError = 'Choose a valid topic to explore.'; break; }
       const parentId = typeof action.parentId === 'string' && [...next.approved, ...next.explored].some(item => item.id === action.parentId) ? action.parentId : null;
+      next.explored.push({...topic, parentId, at: now});
+      if (parentId && parentId !== topic.id) next.edges.push({from: parentId, to: topic.id, at: now});
+      break;
+    }
+    case 'EXPLORE_FROM_CATALOG': {
+      // Only the controller emits this after validating both IDs against its catalog.
+      const topic = sanitizeTopic(action.topic);
+      if (!topic) break;
+      const parentId = typeof action.parentId === 'string' ? action.parentId : null;
       next.explored.push({...topic, parentId, at: now});
       if (parentId && parentId !== topic.id) next.edges.push({from: parentId, to: topic.id, at: now});
       break;

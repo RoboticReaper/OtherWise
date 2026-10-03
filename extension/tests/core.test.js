@@ -289,3 +289,23 @@ test('repeated extraction from an immutable catalog keeps alias matching and ind
   const second=await prepareObservation({url:'https://example.org/b',title:'Python and NBA',lastVisitTime:NOW},immutableCatalog,options,NOW);
   assert.deepEqual(second.topicIds,['Basketball','Python programming']); assert.equal(second.topics[0].topic,'Basketball'); assert.equal(second.topics[0].domain,'Sports');
 });
+
+test('exploration mode defaults and legacy migration are presentation-only',()=>{
+  let state=approved('Basketball');state=apply(state,'RECOMMENDATIONS',{generation:state.generation,items:[catalog[1]]});
+  assert.equal(state.settings.galaxyExplorationMode,false);
+  const before=structuredClone(state);state=apply(state,'SET_SETTINGS',{patch:{galaxyExplorationMode:true}});
+  assert.equal(state.settings.galaxyExplorationMode,true);assert.equal(state.generation,before.generation);
+  assert.deepEqual(state.recommendations,before.recommendations);assert.equal(state.focus,before.focus);
+  state=apply(state,'SET_SETTINGS',{patch:{galaxyExplorationMode:'true'}});assert.equal(state.settings.galaxyExplorationMode,true);
+  const legacy=structuredClone(before);delete legacy.settings.galaxyExplorationMode;
+  assert.equal(apply(legacy,'PRUNE').settings.galaxyExplorationMode,false);
+});
+
+test('internal catalog exploration records a path from an unsaved center without saving or exploring that center',()=>{
+  const state=createState(NOW);
+  const next=apply(state,'EXPLORE_FROM_CATALOG',{topic:catalog[1],parentId:'Basketball'});
+  assert.equal(next.explored.length,1);assert.equal(next.explored[0].id,'Python programming');
+  assert.equal(next.explored[0].parentId,'Basketball');assert.deepEqual(next.edges,[{from:'Basketball',to:'Python programming',at:NOW}]);
+  assert.deepEqual(next.approved,[]);assert.equal(next.explored.some(item=>item.id==='Basketball'),false);
+  assert.equal(next.focus,null);assert.equal(next.generation,state.generation);
+});

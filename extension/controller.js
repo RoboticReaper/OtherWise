@@ -1,7 +1,8 @@
 import {createState,reduceState,prepareObservation,hashUrl,buildRequest,isAllowedUrl} from './core/index.js';
+import {createFocusTransport} from './focus-transport.js';
 
 const PUBLIC_ACTIONS=new Set(['APPROVE','ADD_INTEREST','REMOVE_INTEREST','DISMISS','SET_SETTINGS','SET_FOCUS','CLEAR_DERIVED','RESET','CLEAR_ERROR']);
-const SETTING_KEYS=new Set(['browsingEnabled','autoRefresh','mode','endpoint','accessToken','blockedDomains','language','recommendationView','recommendationOptions']);
+const SETTING_KEYS=new Set(['browsingEnabled','autoRefresh','mode','endpoint','accessToken','blockedDomains','language','recommendationView','galaxyExplorationMode','recommendationOptions']);
 const MAX_HISTORY=5000;
 class SafeError extends Error {}
 
@@ -25,8 +26,18 @@ function cleanRecommendations(value) {
   });
 }
 
-export function createController({catalog,readState,writeState,historySearch,hasHistoryPermission,hasEndpointPermission,fetchImpl=fetch,openTab,clock=Date.now}) {
-  let state; let queue=Promise.resolve(); let activeRequest=null;
+export function createController({catalog,readState,writeState,historySearch,hasHistoryPermission,hasEndpointPermission,fetchImpl=fetch,openTab,loadIdentity,clock=Date.now}) {
+  let state; let queue=Promise.resolve(); let activeRequest=null; let focusEpoch=0; const pendingFocus=new Map();
+  const focusTransport=createFocusTransport({catalog,fetchImpl,hasEndpointPermission,
+    loadIdentity:loadIdentity || (async()=>{
+      const response=await fetchImpl(new URL('./galaxy-layout.json',import.meta.url),{credentials:'omit',redirect:'error'});
+      if(!response.ok)throw new Error('Galaxy assets are unavailable.');
+      return (await response.json()).metadata;
+    }),
+    getConnection:()=>({endpoint:normalizeEndpoint(state.settings.endpoint),accessToken:state.settings.accessToken,epoch:focusEpoch}),
+  });
+  function invalidateFocus(){focusEpoch++;for(const pending of pendingFocus.values())pending.cancelled=true;pendingFocus.clear();focusTransport.invalidate();}
+  const focusConnectionKey=s=>JSON.stringify([s.settings.endpoint,s.settings.accessToken,s.settings.recommendationOptions]);
   const initialized=(async()=>{
     const stored=await readState();
     state=stored?.schemaVersion===1?reduceState(stored,{type:'PRUNE'},clock()):createState(clock());
@@ -39,6 +50,7 @@ export function createController({catalog,readState,writeState,historySearch,has
     const before=state;
     const next=reduceState(state,action,clock());
     if(next.generation!==before.generation) cancelRequest();
+    if(['RESET','CLEAR_DERIVED','DELETE_SOURCES','INVALIDATE'].includes(action.type) || focusConnectionKey(next)!==focusConnectionKey(before)) invalidateFocus();
     state=next;await writeState(state);return snapshot();
   }
   const getState=()=>serial(async()=>{
@@ -178,13 +190,27 @@ export function createController({catalog,readState,writeState,historySearch,has
       });
     }finally{clearTimeout(timer);if(activeRequest===controller) activeRequest=null;}
   }
-  async function search(topic,provider='google'){
+  async function search(topic,provider='google',context){
     if(!['google','youtube'].includes(provider)) throw new Error('Choose Google or YouTube.');
     const current=await getState();
     const id=typeof topic==='string'?topic:topic?.id || topic?.topic;
+    let catalogParent=null;
+    if(context!==undefined){
+      if(!context || typeof context!=='object' || Array.isArray(context) ||
+          (context.source==='galaxy' ? Object.keys(context).length!==1 :
+           context.source==='focus' ? Object.keys(context).length!==2 || !Object.hasOwn(context,'centerId') : true)) {
+        throw new SafeError('Choose a valid map search context.');
+      }
+      if(context.source==='focus'){
+        const center=catalog.find(row=>row.topic===context.centerId);
+        if(!center)throw new SafeError('Choose a catalog topic as the Focus center.');
+        catalogParent=center.topic;
+      }
+    }
     // The whole Galaxy exposes public catalog topics before they are recommended.
     // Trust the packaged record, not the caller's supplied title or description.
-    const found=[...current.recommendations,...current.approved,...current.explored].find(t=>t.id===id || t.topic===id)
+    const found=context!==undefined?catalog.find(t=>t.topic===id):
+      [...current.recommendations,...current.approved,...current.explored].find(t=>t.id===id || t.topic===id)
       || catalog.find(t=>t.id===id || t.topic===id);
     if(!found) throw new Error('Choose a topic from your recommendations or map.');
     const query=encodeURIComponent(found.topic);
@@ -193,7 +219,25 @@ export function createController({catalog,readState,writeState,historySearch,has
     const nearestApproved=current.approved.some(item=>item.id===found.nearest_interest);
     const parentId=current.settings.mode==='global' && recommended && nearestApproved?found.nearest_interest:current.focus;
     try {await openTab(url);} catch {throw new SafeError('Could not open the search. Please try again.');}
-    return serial(()=>state.generation===current.generation?commit({type:'EXPLORE',topic:found,parentId}):snapshot());
+    return serial(()=>state.generation===current.generation?commit({type:context===undefined?'EXPLORE':'EXPLORE_FROM_CATALOG',topic:found,parentId:context===undefined?parentId:catalogParent}):snapshot());
   }
-  return {getState,dispatch,importHistory,observe,reconcile,removeHistory,revokeHistory,revokeEndpoint,recommend,search};
+  async function focusRecommendations(owner,{requestId,topicId}){
+    cancelFocus(owner);
+    const pending={requestId,cancelled:false};pendingFocus.set(owner,pending);
+    try {
+      const started=await serial(()=>{
+        if(pending.cancelled || pendingFocus.get(owner)!==pending)throw new SafeError('Focus request cancelled.');
+        return {promise:focusTransport.request(owner,{requestId,topicId,options:state.settings.recommendationOptions})};
+      });
+      return await started.promise;
+    } finally {if(pendingFocus.get(owner)===pending)pendingFocus.delete(owner);}
+  }
+  function cancelFocus(owner,requestId){
+    const pending=pendingFocus.get(owner);
+    if(pending && (requestId===undefined || pending.requestId===requestId)){pending.cancelled=true;pendingFocus.delete(owner);}
+    focusTransport.cancel(owner,requestId);
+  }
+  const subscribeFocusInvalidation=listener=>focusTransport.subscribeInvalidation(listener);
+  return {getState,dispatch,importHistory,observe,reconcile,removeHistory,revokeHistory,revokeEndpoint,recommend,search,
+    focusRecommendations,cancelFocus,subscribeFocusInvalidation};
 }
