@@ -20,7 +20,7 @@ from fastapi.responses import JSONResponse
 from pydantic import BaseModel, ConfigDict, Field, StringConstraints, field_validator, model_validator
 from starlette.concurrency import run_in_threadpool
 
-from .engine import RecommendationEngine
+from .engine import FocusIdentityConflict, RecommendationEngine, UnknownFocusTopic
 
 MAX_BODY_BYTES = 16_384
 REQUESTS_PER_MINUTE = 30
@@ -70,6 +70,42 @@ class RecommendationRequest(BaseModel):
         return self
 
 
+Digest = Annotated[str, StringConstraints(strict=True, pattern=r"^[0-9a-f]{64}$")]
+IdentityText = Annotated[str, StringConstraints(strict=True, min_length=1, max_length=200)]
+
+
+class FocusEmbedding(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+
+    sha256: Digest
+    dtype: IdentityText
+    shape: Annotated[list[Annotated[int, Field(ge=1)]], Field(min_length=2, max_length=2)]
+
+    @field_validator("shape")
+    @classmethod
+    def mpnet_dimensions(cls, values):
+        if values[1] != 768:
+            raise ValueError("Invalid embedding dimensions.")
+        return values
+
+
+class FocusRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+
+    # Canonical IDs are preserved exactly, without phrase trimming or folding.
+    topic_id: IdentityText
+    catalog_sha256: Digest
+    model: IdentityText
+    embedding: FocusEmbedding
+    limit: Annotated[int, Field(ge=1, le=100)] = 10
+    radius: UnitControl = .28
+    expansion: UnitControl = .07
+    overlap: UnitControl = .015
+    diversity: UnitControl = .20
+    max_overlap_fraction: Annotated[float, Field(ge=0, le=.95, allow_inf_nan=False)] = .20
+    randomness: UnitControl = .03
+
+
 def error(detail, status, **headers):
     return JSONResponse({"detail": detail}, status_code=status, headers=headers)
 
@@ -87,7 +123,7 @@ class RequestBoundary:
         self.requests = deque()
 
     async def __call__(self, scope, receive, send):
-        if scope["type"] != "http" or scope["path"] != "/api/recommend" or scope["method"] != "POST":
+        if scope["type"] != "http" or scope["path"] not in {"/api/recommend", "/api/focus"} or scope["method"] != "POST":
             return await self.app(scope, receive, send)
         headers = dict(scope["headers"])
         authorization = headers.get(b"authorization", b"")
@@ -179,6 +215,31 @@ def create_app(engine=None, token=None):
                                       max_overlap_fraction=payload.max_overlap_fraction,
                                       randomness=payload.randomness)
             return {"recommendations": result, "mode": payload.mode, "expansion_level": payload.expansion_level}
+        except Exception:
+            LOGGER.warning("Recommendation computation failed.")
+            return error("Recommendation service is unavailable. Try again shortly.", 503)
+        finally:
+            compute.release()
+
+    @app.post("/api/focus")
+    def focus_recommendations(payload: FocusRequest):
+        if not app.state.ready:
+            return error("Recommendation service is unavailable.", 503)
+        if not compute.acquire(blocking=False):
+            return error("Recommendation service is busy. Try again shortly.", 429, **{"Retry-After": "2"})
+        try:
+            return engine.recommend_focus(
+                payload.topic_id,
+                expected_identity=dict(catalog_sha256=payload.catalog_sha256, model=payload.model,
+                                       embedding=payload.embedding.model_dump()),
+                limit=payload.limit, radius=payload.radius, expansion=payload.expansion,
+                overlap=payload.overlap, diversity=payload.diversity,
+                max_overlap_fraction=payload.max_overlap_fraction, randomness=payload.randomness,
+            )
+        except FocusIdentityConflict:
+            return error("Catalog source version conflict.", 409)
+        except UnknownFocusTopic:
+            return error("Invalid recommendation request.", 422)
         except Exception:
             LOGGER.warning("Recommendation computation failed.")
             return error("Recommendation service is unavailable. Try again shortly.", 503)
