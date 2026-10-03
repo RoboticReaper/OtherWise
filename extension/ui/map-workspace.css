@@ -1,0 +1,3 @@
+.map-workspace{min-width:0}.map-switch{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}.map-switch button[aria-pressed=true]{background:var(--accent,#d8ccaa);color:#111923}.map-switch [data-map-action=refresh]{margin-left:auto}.map-focus-guidance{border:1px solid #8e7755;background:#28241e;border-radius:10px;padding:12px;margin-bottom:12px}.map-focus-guidance p{margin:0 0 10px}.map-preview-note{color:var(--muted,#b5bac5);font-size:12px}.map-galaxy-host[hidden],.map-focus-host[hidden],.map-focus-guidance[hidden],.map-switch button[hidden]{display:none}.map-focus-host{min-width:0}
+/* Focus supplies its own center heading; leave more room for its scene. */
+.galaxy-page:has(.map-workspace[data-view="focus"]) > .view-heading{display:none}

@@ -64,11 +64,14 @@ def interest_texts(interests: list[str], topics: list[dict]) -> list[str]:
     return [lookup.get(_key(phrase), phrase) for phrase in interests]
 
 
-def load_model():
+def load_model(device: str | None = None):
     """Download once into the project cache, then reuse weights locally."""
     from sentence_transformers import SentenceTransformer
+    import torch
 
-    return SentenceTransformer(MODEL_NAME, cache_folder=str(ROOT / ".cache/models"), device="mps")
+    if device is None:
+        device = "mps" if torch.backends.mps.is_available() else "cpu"
+    return SentenceTransformer(MODEL_NAME, cache_folder=str(ROOT / ".cache/models"), device=device)
 
 
 def _unit_vectors(values, name: str) -> np.ndarray:

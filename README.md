@@ -1,4 +1,57 @@
-# Interest explorer
+# OtherWise
+
+Your world, a little wider. OtherWise connects a Chrome side panel to a
+local Python recommendation service. Browsing titles become candidate interests
+on the device. Discover sends interests explicitly saved by the user; specific discovery also sends
+explicitly saved concept feedback and local area exposure counts. In Map,
+Focus sends an unsaved catalog topic only when the user clicks **Get ideas**;
+that request includes its catalog ID, data-version identity and recommendation
+parameters, without browsing history or the saved-interest profile.
+**Interests** manages keywords and browser candidates; **Discover** holds the
+recommendation controls and results. A first-run guide sits beside the current page and can be skipped
+and reopened from Settings. The interface supports English and Simplified Chinese. Interest input and
+recommendation content remain English. Candidate topics are paginated; discoveries
+can be shown as cards or compact list rows. **What to discover → Specific concepts**
+connects the sourced graph to the extension, with source paths and reading levels. Recommendation cards omit the feedback form.
+Previously saved ratings retain undo and clear controls and remain local;
+the backend reconstructs a temporary profile per request.
+The **Dashboard ↗** button opens a full extension tab sharing the side panel's
+local profile. Its Galaxy map includes the complete public catalog, stable semantic
+coordinates, domain filters, keyword search and true high-dimensional neighbors.
+Within Map, **Galaxy / Focus** switches between the whole catalog and a temporary
+semantic neighborhood. Opening Focus uses local nearest topics and makes no request.
+Its temporary center does not change Discover or save an interest. The optional
+Galaxy exploration mode starts off; when enabled, it highlights saved topics,
+their ten direct nearest topics, and individually searched topics.
+
+## Run the extension demo
+
+1. Install Python dependencies in `.venv`: `python -m pip install -r requirements.txt`.
+2. Build the extension: `python scripts/build_extension.py`.
+3. Start the backend and optional shared HTTPS demo using
+   [the backend guide](docs/demo-backend.md).
+4. In Chrome's Extensions page, enable Developer mode and **Load unpacked** →
+   `dist/otherwise-extension`.
+5. Open OtherWise. In Settings, save the service address and team access code
+   from `.cache/demo/connection.json`. Add an interest, or review browsing topics,
+   then choose **Find ideas**.
+
+[Extension guide](docs/extension-guide.md) · [Architecture and privacy](docs/extension-architecture.md) · [Focus verification status](docs/focus-exploration-verification.md) · [Specific discovery verification](docs/discovery-extension-verification.md)
+
+The installable ZIP is `dist/OtherWise-extension.zip`. Unzip it before loading it
+in Chrome. No browser model or frontend dependency installation is required.
+Python 3.11+ and Chrome 116+ are required; development tests use Node 22+.
+
+Checks: `python -m pytest -q` and `npm test`. Browser regression checks are documented
+in the extension guide. The original notebook and its catalog remain available below.
+
+The checked-in `data/galaxy-layout.json` makes normal extension builds independent
+of layout libraries. Regenerate it only when the catalog, embedding model or layout
+algorithm changes; see [Galaxy preprocessing](docs/galaxy-preprocessing.md).
+For a sample profile with the real whole-catalog map, build first, then serve
+`dist/otherwise-extension` locally and open `dashboard.html?preview=1`.
+
+## Notebook exploration
 
 **[Visit the OtherWise website →](https://RoboticReaper.github.io/OtherWise/)**
 
@@ -38,7 +91,9 @@ The specific-concept catalog covers the same 23 domains as the broad catalog,
 with 160 concepts and three navigation areas per domain. Section 10 displays
 the measured coverage. All domains use the same traversal and sampling rules.
 
-Your profile is saved locally in `.local/feedback.json` (ignored by Git). The graph
+The notebook profile is saved locally in `.local/feedback.json` (ignored by Git).
+The extension uses its separate `chrome.storage.local` profile; it does not read
+or migrate the notebook profile. The graph
 snapshot runs offline; its provenance and refresh instructions are in
 [data/discovery_graph_README.md](data/discovery_graph_README.md). See the
 [feedback and ranking guide](docs/graph-feedback.md) for the exact rules and limits.

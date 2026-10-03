@@ -1,0 +1,31 @@
+body.dashboard { background: radial-gradient(ellipse at 78% 8%, #192838 0, #0d1724 48%, #0a1320 100%); }
+.dashboard .app-shell { max-width: 1800px; padding: 26px 38px 18px; }
+.dashboard .app-header { margin-bottom: 27px; }
+.dashboard .workspace { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 28px; }
+.dashboard .workspace-content { min-width: 0; }
+.dashboard .main-nav { flex-direction: column; align-items: stretch; gap: 7px; margin: 0; border-bottom: 0; position: sticky; top: 24px; align-self: start; }
+.dashboard .main-nav button { text-align: left; padding: 11px 14px; border: 0; border-radius: 8px; font-size: 13px; }
+.dashboard .main-nav button[aria-current="page"] { background: #1e303b; color: var(--ivory); box-shadow: inset 2px 0 var(--sage); }
+.dashboard .main-nav button[aria-current="page"]::after { display: none; }
+.dashboard .view-heading { margin-bottom: 20px; }
+.dashboard .view-heading h1 { font-size: 40px; }
+.dashboard .view-heading p { max-width: 820px; }
+.dashboard .hero { padding-top: 18px; }
+.dashboard .settings-view { max-width: 820px; }
+.dashboard .app-footer { padding-bottom: 0; }
+@media(min-width:1400px) {
+  .dashboard .recommendations:not(.is-list) { grid-template-columns: repeat(3,minmax(0,1fr)); }
+}
+@media(max-width:900px) {
+  .dashboard .app-shell { padding: 20px; }
+  .dashboard .workspace { display:block; }
+  .dashboard .main-nav { flex-direction: row; position:static; margin:0 0 28px; border-bottom:1px solid var(--line); }
+  .dashboard .main-nav button { text-align:center; }
+}
+@media(max-width:480px) {
+  .dashboard .app-shell { padding:16px; }
+  .dashboard .app-header { margin-bottom:20px; }
+  .dashboard .view-heading h1 { font-size:31px; }
+  .dashboard .main-nav { gap:6px; }
+  .dashboard .main-nav button { padding:9px 12px; }
+}

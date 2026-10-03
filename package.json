@@ -1,0 +1,17 @@
+{
+  "name": "otherwise-extension",
+  "version": "0.1.9",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test extension/tests/*.test.js",
+    "build": "python3 scripts/build_extension.py",
+    "test:browser": "node scripts/test_extension_browser.mjs",
+    "test:ui": "node scripts/test_ui_browser.mjs",
+    "test:galaxy": "node scripts/test_galaxy_browser.mjs",
+    "test:discovery": "node scripts/test_discovery_browser.mjs"
+  }
+}

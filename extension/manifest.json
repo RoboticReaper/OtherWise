@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "OtherWise — A little wider",
+  "description": "Discover adjacent interests with local browsing analysis and an exploration map you control.",
+  "version": "0.1.9",
+  "minimum_chrome_version": "116",
+  "permissions": ["storage", "sidePanel", "alarms"],
+  "optional_permissions": ["history"],
+  "optional_host_permissions": ["https://*/*", "http://127.0.0.1/*", "http://localhost/*"],
+  "background": {"service_worker": "background.js", "type": "module"},
+  "side_panel": {"default_path": "sidepanel.html"},
+  "action": {"default_title": "Open OtherWise"},
+  "incognito": "not_allowed",
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'"}
+}
