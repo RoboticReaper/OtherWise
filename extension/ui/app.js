@@ -7,6 +7,7 @@ import { RECOMMENDATION_DEFAULTS, RECOMMENDATION_BOUNDS, normalizeRecommendation
 import {discoveryControls, graphDetails, savedFeedbackView} from './discovery.js';
 import {gettingStartedGuide} from './getting-started.js';
 const VIEWS = ['interests', 'discover', 'map', 'settings'];
+const GUIDE_VIEWS = ['interests', 'settings', 'discover', 'map'];
 
 const app = document.querySelector('#app');
 const params = new URLSearchParams(location.search);
@@ -17,7 +18,7 @@ const ui = {
   view: initialView, manual: '', days: '30', selected: new Set(), inboxOpen: true, candidatePage: 1, recommendationPage: 1,
   galaxyView: null, settingsDraft: null, settingsDirty: false, settingsSaved: false,
   advancedOptionsOpen: false,
-  feedbackOpen: false, feedbackPage: 1, guideOpen: false, guideStep: 0, guideChecked: false, guideAutomatic: false,
+  feedbackOpen: false, feedbackPage: 1, guideOpen: false, guideError: false, guideChecked: false, guideAutomatic: false,
   pending: new Set(), expandedDescriptions: new Set(), error: null, announcement: '', loaded: false,
 };
 let state = null;
@@ -64,7 +65,7 @@ function applyState(next) {
   if (!ui.guideChecked) {
     ui.guideChecked = true;
     ui.guideOpen = !preview && !state.settings.tutorialSeen && !state.onboardingComplete && !state.approved.length;
-    ui.guideAutomatic = ui.guideOpen; ui.guideStep = 0;
+    ui.guideAutomatic = ui.guideOpen; ui.guideError = false;
   } else if (ui.guideAutomatic && state.settings.tutorialSeen) {
     ui.guideOpen = false; ui.guideAutomatic = false;
   }
@@ -124,14 +125,12 @@ function render() {
     ${preview ? `<div class="demo-notice"><strong>${text('demo')}</strong> · ${text('demoNotice')}</div>` : ''}
     <div class="workspace"><nav class="main-nav" aria-label="${text('mainNavigation')}">${VIEWS.map(view => `<button type="button" data-action="view" data-view="${view}" data-focus="nav-${view}"${ui.view === view ? ' aria-current="page"' : ''}>${text(view)}</button>`).join('')}${!dashboard ? `<button type="button" class="dashboard-link" data-action="open-dashboard">${text('openDashboard')} ↗</button>` : ''}</nav><div class="workspace-content">
     ${error ? `<div class="error-banner" role="alert"><p><strong>${text('errorHeading')}</strong><br>${escape(translateError(language(), error))}${ui.view !== 'settings' ? `<br>${text('errorHint')}` : ''}</p><button type="button" class="quiet" data-action="clear-error" aria-label="${text('dismissError')}">×</button></div>` : ''}
-    <main id="main-view">${!ui.loaded ? loadingView() : ui.view === 'settings' ? settingsView() : ui.view === 'map' ? mapView() : ui.view === 'interests' ? interestsView() : discoverView()}</main>
+    <div class="page-layout${ui.loaded && ui.guideOpen ? ' has-guide' : ''}"><main id="main-view">${!ui.loaded ? loadingView() : ui.view === 'settings' ? settingsView() : ui.view === 'map' ? mapView() : ui.view === 'interests' ? interestsView() : discoverView()}</main>
+    ${ui.loaded && ui.guideOpen ? gettingStartedGuide({text,view:ui.view,step:GUIDE_VIEWS.indexOf(ui.view),total:GUIDE_VIEWS.length,busy:busy('guide'),seen:state.settings.tutorialSeen,error:ui.guideError}) : ''}</div>
     <footer class="app-footer">${text('footer')}</footer></div></div>
     <div class="sr-only" role="status" aria-live="polite">${ui.announcement ? text(ui.announcement) : ''}</div>
-    ${ui.loaded && ui.guideOpen ? gettingStartedGuide({text,step:ui.guideStep,busy:busy('guide'),seen:state.settings.tutorialSeen,error:!!ui.error}) : ''}
   </div>`;
   bindEvents();
-  const guide = document.getElementById('welcome-guide');
-  if (guide && !guide.open) guide.showModal();
   if (ui.view === 'map' && ui.loaded) drawMap();
   if (focused?.isConnected && mapWorkspace?.element.contains(focused)) focused.focus({preventScroll:true});
   if (focusKey) {
@@ -162,8 +161,7 @@ function interestsView() {
   const candidates = arr(state.candidates);
   return `<section class="hero"><span class="little-star" aria-hidden="true">✧</span><p class="eyebrow">${text('curiosity')}</p><h1>${text('headlineFirst')}<br>${text('headlineSecond')}</h1><p>${text('heroDescription')}</p></section>
     ${!approved.length && !arr(state.baseline).length ? `<div class="intro"><p><strong>${text('smallBeginning')}</strong> ${text('intro')}</p><p class="small">${text('introPrivacy')}</p></div>` : ''}
-    <form class="manual-form" id="manual-form"><label class="sr-only" for="manual-interest">${text('addInterest')}</label><input id="manual-interest" data-focus="manual-interest" name="interest" placeholder="${text('interestPlaceholder')}" aria-describedby="interest-language-help" maxlength="120" value="${escape(ui.manual)}" autocomplete="off"><button class="primary" data-focus="add-interest" type="submit"${disabled(busy('add'))}>${text(busy('add') ? 'saving' : 'add')}</button></form>
-    <p class="language-note" id="interest-language-help">${text('languageScope')}</p>
+    <form class="manual-form" id="manual-form"><label class="sr-only" for="manual-interest">${text('addInterest')}</label><input id="manual-interest" data-focus="manual-interest" name="interest" placeholder="${text('interestPlaceholder')}" maxlength="120" value="${escape(ui.manual)}" autocomplete="off"><button class="primary" data-focus="add-interest" type="submit"${disabled(busy('add'))}>${text(busy('add') ? 'saving' : 'add')}</button></form>
     <div class="import-row"><button type="button" data-action="import"${disabled(busy('import'))}>${text(busy('import') ? 'reviewing' : 'reviewBrowsing')}</button><label class="sr-only" for="history-days">${text('historyPeriod')}</label><select id="history-days" data-focus="history-days"${disabled(busy('import'))}><option value="7"${ui.days === '7' ? ' selected' : ''}>${text('historyDays', { days: 7 })}</option><option value="30"${ui.days === '30' ? ' selected' : ''}>${text('historyDays', { days: 30 })}</option></select></div>
     ${candidates.length ? inboxView(candidates) : ''}
     <section class="section" aria-labelledby="interests-title"><div class="section-heading"><h2 id="interests-title">${text('yourInterests')}</h2>${approved.length ? `<span class="muted small">${text('savedByYou')}</span>` : ''}</div>${approved.length ? `<div class="interests">${approved.map(topic => `<span class="interest-chip"><span>${escape(topicTitle(topic))}</span><button type="button" data-action="remove" data-id="${escape(topicId(topic))}" aria-label="${text('removeInterest', { topic: topicTitle(topic) })}">×</button></span>`).join('')}</div>` : `<p class="muted small">${text('firstInterest')}</p>`}</section>
@@ -236,7 +234,7 @@ function settingsView() {
   const draft = ui.settingsDraft || snapshotSettings();
   return `<section class="settings"><div class="view-heading"><p class="eyebrow">${text('makeYours')}</p><h1>${text('intention')}</h1><p>${text('settingsIntro')}</p></div>
     <section class="settings-group"><h2>${text('guideTitle')}</h2><p class="muted small">${text('guideReplayHelp')}</p><button type="button" data-action="open-guide" data-focus="open-guide">${text('showGuide')}</button></section>
-    <section class="settings-group"><h2>${text('interfaceLanguage')}</h2>${languageSelect('settings-language')}<p class="language-note">${text('languageScope')}</p></section>
+    <section class="settings-group"><h2>${text('interfaceLanguage')}</h2>${languageSelect('settings-language')}</section>
     <section class="settings-group"><h2>${text('discovery')}</h2><label class="field"><span>${text('connections')}</span><select id="settings-mode" data-focus="settings-mode" aria-label="${text('connections')}"><option value="path"${settings.mode !== 'global' ? ' selected' : ''}>${text('followLatest')}</option><option value="global"${settings.mode === 'global' ? ' selected' : ''}>${text('exploreAll')}</option></select><small>${text('modeHelp')}</small></label>
     <label class="toggle-row"><input id="browsing-enabled" type="checkbox" aria-label="${text('browsingEnabled')}" aria-describedby="browsing-help" data-focus="browsing-enabled"${checked(settings.browsingEnabled)}${disabled(busy('browsing'))}><span><strong>${text('browsingEnabled')}</strong><small id="browsing-help">${text('browsingHelp')}</small></span></label>
     <label class="toggle-row"><input id="auto-refresh" type="checkbox" aria-label="${text('autoRefresh')}" aria-describedby="refresh-help" data-focus="auto-refresh"${checked(settings.autoRefresh)}${disabled(busy('auto-refresh'))}><span><strong>${text('autoRefresh')}</strong><small id="refresh-help">${text('refreshHelp')}</small></span></label>
@@ -294,12 +292,14 @@ async function focusMapTopic(id) {
 }
 
 function bindEvents() {
-  document.getElementById('welcome-guide')?.addEventListener('cancel', event => {event.preventDefault();void finishGuide(false);});
   app.querySelectorAll('[data-guide-action]').forEach(button=>button.addEventListener('click',()=>{
     if (busy('guide')) return;
     const action=button.dataset.guideAction;
-    if (action==='next' || action==='back') {ui.guideStep=Math.max(0,Math.min(2,ui.guideStep+(action==='next'?1:-1)));render();}
-    else void finishGuide(action==='start');
+    if (action==='next' || action==='back') {
+      const step=GUIDE_VIEWS.indexOf(ui.view);
+      navigate(GUIDE_VIEWS[Math.max(0,Math.min(GUIDE_VIEWS.length-1,step+(action==='next'?1:-1)))]);
+      document.getElementById('guide-heading')?.focus({preventScroll:true});
+    } else void finishGuide();
   }));
   document.getElementById('recommendation-kind')?.addEventListener('change', event => run('kind', () => dispatch({type:'SET_SETTINGS',patch:{recommendationKind:event.target.value}}), 'kindSaved'));
   document.getElementById('discovery-exploration')?.addEventListener('change', event => run('exploration-share', () => dispatch({type:'SET_SETTINGS',patch:{discoveryExploration:Number(event.target.value)}}), 'shareSaved'));
@@ -387,7 +387,7 @@ async function onAction(event) {
     return;
   }
   if (action === 'view') { navigate(button.dataset.view || button.dataset.targetView); return; }
-  if (action === 'open-guide') {ui.guideOpen=true;ui.guideAutomatic=false;ui.guideStep=0;ui.error=null;render();return;}
+  if (action === 'open-guide') {ui.guideOpen=true;ui.guideAutomatic=false;ui.guideError=false;ui.error=null;navigate('interests');document.getElementById('guide-heading')?.focus({preventScroll:true});return;}
   if (action === 'clear-error') { ui.error = null; if (state?.lastError) await run('clear-error', () => dispatch({ type: 'CLEAR_ERROR' })); else render(); return; }
   if (action === 'reload') { const next = await run('reload', getState); if (next && !unsubscribe) unsubscribe = subscribe(applyState); return; }
   if (action === 'import') { ui.inboxOpen = true; await run('import', () => importHistory(Number(ui.days)), 'importReady'); return; }
@@ -445,12 +445,13 @@ function navigate(view) {
   render();window.scrollTo(0,0);
 }
 
-async function finishGuide(start) {
+async function finishGuide() {
+  ui.guideError=false;
   const next=await run('guide',()=>dispatch({type:'SET_SETTINGS',patch:{tutorialSeen:true}}));
-  if (!next?.settings?.tutorialSeen) return;
+  if (!next?.settings?.tutorialSeen) {ui.guideError=true;render();return;}
   ui.guideOpen=false;ui.guideAutomatic=false;
-  if (start) navigate('interests');else render();
-  document.querySelector(start?'#manual-interest':'[data-action="open-guide"]')?.focus({preventScroll:true});
+  render();
+  document.querySelector(`[data-focus="nav-${ui.view}"]`)?.focus({preventScroll:true});
 }
 
 function confirmDialog(title, description, label) {

@@ -8,7 +8,7 @@ Focus sends an unsaved catalog topic only when the user clicks **Get ideas**;
 that request includes its catalog ID, data-version identity and recommendation
 parameters, without browsing history or the saved-interest profile.
 **Interests** manages keywords and browser candidates; **Discover** holds the
-recommendation controls and results. A first-run three-step guide can be skipped
+recommendation controls and results. A first-run guide sits beside the current page and can be skipped
 and reopened from Settings. The interface supports English and Simplified Chinese. Interest input and
 recommendation content remain English. Candidate topics are paginated; discoveries
 can be shown as cards or compact list rows. **What to discover → Specific concepts**

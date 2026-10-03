@@ -55,7 +55,10 @@ window-only drafts. Dashboard opening accepts the same trusted views.
 not change profile generation, cancel a request, grant permissions or enter a
 recommendation payload. Migration skips the automatic guide for existing saved
 profiles. Fresh profiles can use Next/Back/Skip; Settings reopens the bilingual
-native modal, with Escape treated as dismissal. Reset clears tutorial state.
+inline guide on Interests. The guide derives its content from the current view;
+Next/Back navigate Interests, Settings, Discover and Map without changing drafts.
+It sits beside the page (above it on narrow screens), with no backdrop, modal or
+focus trap. Closing keeps the current page. Reset clears tutorial state.
 
 ## State rules
 

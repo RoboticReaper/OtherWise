@@ -16,9 +16,10 @@ instead. A teammate must use the shared HTTPS address, not their own localhost.
 
 ## First opening and page navigation
 
-The side panel starts on **Interests / 兴趣**. New profiles show a short three-step
-guide covering Interests, Discover and Map. Use Next/Back, finish with **Add my
-first interest**, or skip. Completion and skipping are remembered on this device.
+The side panel starts on **Interests / 兴趣**. New profiles show a short guide beside the current page. It follows Interests,
+Settings, Discover and Map, and leaves the page controls usable. Use Next/Back to
+visit those pages, finish with **Finish guide**, or skip. On narrow screens, the
+guide sits above the page in normal flow. Completion and skipping are remembered on this device.
 **Settings → Getting started → Show guide** reopens it in either UI language.
 The guide does not request history access, read visits or request recommendations.
 Existing profiles with saved interests skip the automatic guide.

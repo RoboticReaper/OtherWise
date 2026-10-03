@@ -63,7 +63,8 @@ try{
   assert.equal(await page.locator('html').getAttribute('lang'),'zh-CN');
   assert.equal(await page.locator('#manual-interest').inputValue(),'Gardening in Design');
   assert.deepEqual(await page.locator('#manual-interest').evaluate(input=>[document.activeElement===input,input.selectionStart,input.selectionEnd]),[true,4,9]);
-  assert.match(await page.locator('#interest-language-help').innerText(),/推荐系统不支持中文/);
+  assert.equal(await page.locator('#interest-language-help').count(),0);
+  assert.equal(await page.locator('#manual-interest').getAttribute('aria-describedby'),null);
   assert.match(await rows.first().innerText(),/Topic 001/);
   assert.match(await rows.first().innerText(),/Fixture field/);
   assert.match(await page.locator('.selection-count').innerText(),/11/);
@@ -208,15 +209,67 @@ try{
   await actual.locator('#welcome-guide').waitFor();
   assert.match(await actual.locator('#guide-heading').innerText(),/Start with what you like/);
   assert.equal(outbound.length,0);
-  await actual.locator('[data-guide-action="next"]').click();assert.match(await actual.locator('#guide-heading').innerText(),/Find your next subject/);
-  await actual.locator('[data-guide-action="back"]').click();assert.match(await actual.locator('#guide-heading').innerText(),/Start with what you like/);
-  await actual.locator('[data-guide-action="next"]').click();await actual.locator('[data-guide-action="next"]').click();
+  assert.equal(await actual.locator('#welcome-guide').evaluate(panel=>panel.tagName),'ASIDE');
+  assert.equal(await actual.locator(':modal').count(),0);
+  await actual.locator('#manual-interest').fill('Gardening');await actual.locator('#manual-form button').click();
+  await actual.locator('.interest-chip').first().waitFor();
+  assert.equal(await actual.locator('#welcome-guide').isVisible(),true,'Saving an interest remains possible during the guide');
+  await actual.locator('#manual-interest').fill('https://example.org');await actual.locator('#manual-form button').click();
+  await actual.locator('.error-banner').waitFor();
+  assert.equal(await actual.locator('#welcome-guide [role="alert"]').count(),0,'Page validation errors are not guide-save failures');
+  await actual.locator('[data-action="clear-error"]').click();
+  await actual.locator('#manual-interest').fill('Photography draft');
+  await actual.locator('[data-guide-action="next"]').click();
+  await actual.locator('#settings-form').waitFor();assert.match(await actual.locator('#guide-heading').innerText(),/Connect your recommendations/);
+  assert.equal(await actual.locator('.language-note').count(),0);
+  await actual.locator('#endpoint').fill('http://127.0.0.1:8765');
+  await actual.locator('[data-guide-action="back"]').click();
+  assert.equal(await actual.locator('#manual-interest').inputValue(),'Photography draft');
+  await actual.locator('[data-guide-action="next"]').click();
+  assert.equal(await actual.locator('#endpoint').inputValue(),'http://127.0.0.1:8765','Settings draft survives guide navigation');
+  await actual.locator('[data-guide-action="next"]').click();await actual.locator('#recommendation-kind').waitFor();
+  assert.match(await actual.locator('#guide-heading').innerText(),/Find your next subject/);
+  await actual.locator('#recommendation-kind').selectOption('broad');
+  await actual.locator('[data-guide-action="next"]').click();
   assert.match(await actual.locator('#guide-heading').innerText(),/See how interests connect/);
-  await actual.screenshot({path:resolve(output,'390-first-run-guide.png')});
-  await actual.locator('[data-guide-action="start"]').click();await actual.locator('#welcome-guide').waitFor({state:'detached'});
-  assert.equal(await actual.locator('#manual-interest').evaluate(input=>document.activeElement===input),true);
-  await actual.reload();await actual.locator('#manual-interest').waitFor();assert.equal(await actual.locator('#welcome-guide').count(),0);
-  checks.push('first-run guide supports Next/Back, sends no requests, opens Interests and stays dismissed after reload');
+  await actual.locator('[data-view="interests"]').click();assert.match(await actual.locator('#guide-heading').innerText(),/Start with what you like/);
+  assert.equal(await actual.evaluate(()=>document.documentElement.scrollWidth),390);
+  await actual.screenshot({path:resolve(output,'390-inline-guide.png')});
+  const wide=await context.newPage();wide.on('pageerror',e=>errors.push(e.message));
+  await wide.setViewportSize({width:1440,height:1000});
+  await wide.goto(base.replace('sidepanel.html','dashboard.html')+'?view=settings');
+  await wide.locator('[data-action="open-guide"]').focus();await wide.keyboard.press('Enter');await wide.locator('#welcome-guide').waitFor();
+  assert.equal(await wide.locator('#guide-heading').evaluate(node=>document.activeElement===node),true,'Reopening guide moves keyboard focus to its heading without trapping it');
+  for(const view of ['interests','settings','discover','map']){
+    await wide.locator(`[data-view="${view}"]`).click();
+    const bounds=await wide.evaluate(()=>{const main=document.querySelector('#main-view').getBoundingClientRect(),guide=document.querySelector('#welcome-guide').getBoundingClientRect();return {mainRight:main.right,guideLeft:guide.left,width:document.documentElement.scrollWidth};});
+    assert.ok(bounds.guideLeft>=bounds.mainRight,'Guide sits beside the corresponding page');assert.equal(bounds.width,1440);
+    assert.equal(await wide.locator(':modal').count(),0);
+    if(view==='map'){
+      await wide.locator('.galaxy-canvas').waitFor();
+      const zoom=await wide.locator('.galaxy-canvas').getAttribute('data-zoom');
+      await wide.locator('[data-galaxy-action="zoom-in"]').click();
+      await wide.waitForFunction(previous=>document.querySelector('.galaxy-canvas')?.dataset.zoom!==previous,zoom);
+      assert.notEqual(await wide.locator('.galaxy-canvas').getAttribute('data-zoom'),zoom,'Map controls work while guide is open');
+    }
+    await wide.screenshot({path:resolve(output,`1440-inline-guide-${view}.png`)});
+  }
+  await wide.locator('#ui-language').selectOption('zh-CN');
+  await wide.setViewportSize({width:320,height:1000});
+  for(const view of ['interests','settings','discover','map']){
+    await wide.locator(`[data-view="${view}"]`).click();
+    assert.equal(await wide.evaluate(()=>document.documentElement.scrollWidth),320);
+    const bounds=await wide.evaluate(()=>{const main=document.querySelector('#main-view').getBoundingClientRect(),guide=document.querySelector('#welcome-guide').getBoundingClientRect();return {mainTop:main.top,guideBottom:guide.bottom};});
+    assert.ok(bounds.mainTop>=bounds.guideBottom,'Narrow guide flows above the page without overlap');
+    await wide.screenshot({path:resolve(output,`320-inline-guide-${view}-zh.png`)});
+  }
+  await wide.locator('#ui-language').selectOption('en');
+  await wide.close();
+  await actual.locator('[data-view="map"]').click();
+  await actual.locator('[data-guide-action="finish"]').click();await actual.locator('#welcome-guide').waitFor({state:'detached'});
+  await actual.reload();await actual.locator('#main-view').waitFor();assert.equal(await actual.locator('#welcome-guide').count(),0);
+  await actual.locator('[data-view="interests"]').click();
+  checks.push('inline guide follows all four pages, leaves controls usable, preserves drafts, sits beside desktop pages and stays dismissed after reload');
   await actual.locator('#manual-interest').fill('Gardening');await actual.locator('#manual-form button').click();
   await actual.locator('#ui-language').selectOption('zh-CN');
   await actual.locator('[data-view="discover"]').click();
@@ -232,9 +285,9 @@ try{
   assert.equal((await actual.evaluate(()=>chrome.permissions.contains({permissions:['history']}))),false);
   await actual.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'ADD_INTEREST',topic:'https://example.org'}}));
   await actual.locator('[data-view="settings"]').click();await actual.locator('[data-action="open-guide"]').click();await actual.locator('#welcome-guide').waitFor();
-  assert.match(await actual.locator('#guide-heading').innerText(),/从你喜欢/);await actual.keyboard.press('Escape');await actual.locator('#welcome-guide').waitFor({state:'detached',timeout:5000});
+  assert.match(await actual.locator('#guide-heading').innerText(),/从你喜欢/);await actual.locator('[data-guide-action="skip"]').click();await actual.locator('#welcome-guide').waitFor({state:'detached',timeout:5000});
   assert.deepEqual((await actual.evaluate(async()=> (await chrome.storage.local.get('state')).state)).approved,state.approved);
-  checks.push('the bilingual guide can be reopened in Settings and dismissed with Escape despite a prior profile error, without changing interests');
+  checks.push('the bilingual guide can be reopened in Settings and closed despite a prior profile error, without changing interests');
   checks.push('production Chrome storage keeps language/list preferences after reload without history permission');
   assert.deepEqual(errors,[]);assert.deepEqual(outbound,[]);
   checks.push('no browser errors or external network requests');
