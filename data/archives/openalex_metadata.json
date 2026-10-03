@@ -1,0 +1,132 @@
+{
+  "snapshot_date": "2026-10-02",
+  "topic_count": 5228,
+  "domain_count": 64,
+  "source_counts": {
+    "ProductSpace": 718,
+    "OpenAlex": 4510
+  },
+  "domains": {
+    "Agricultural and Biological Sciences": 235,
+    "Arts & design": 12,
+    "Arts and Humanities": 266,
+    "Biochemistry, Genetics and Molecular Biology": 247,
+    "Business, Management and Accounting": 146,
+    "Business, organizations & careers": 20,
+    "Chemical Engineering": 13,
+    "Chemistry": 101,
+    "Cities & communities": 12,
+    "Coffee, tea & beverages": 15,
+    "Computer Science": 302,
+    "Computing & software practice": 25,
+    "Cooking & cuisines": 30,
+    "Crafts & making": 30,
+    "Decision Sciences": 60,
+    "Dentistry": 13,
+    "Earth and Planetary Sciences": 57,
+    "Economics & financial literacy": 20,
+    "Economics, Econometrics and Finance": 107,
+    "Economy & work": 12,
+    "Education, communication & learning practice": 20,
+    "Electronics, engineering & tinkering": 20,
+    "Energy": 27,
+    "Engineering": 559,
+    "Environment & energy": 12,
+    "Environmental Science": 201,
+    "Film, television & performance": 20,
+    "Foundations of natural science": 25,
+    "Games & interactive worlds": 25,
+    "Geography & place": 15,
+    "Health & movement": 12,
+    "Health Professions": 107,
+    "History & culture": 12,
+    "Home, personal style & everyday life": 20,
+    "Immunology and Microbiology": 44,
+    "Language & learning": 12,
+    "Law, civic life & social questions": 20,
+    "Literature & writing": 25,
+    "Materials Science": 123,
+    "Mathematics": 81,
+    "Mathematics & reasoning": 22,
+    "Medicine": 691,
+    "Mind & behavior": 12,
+    "Music genres & traditions": 25,
+    "Music making & listening": 20,
+    "Nature & food": 12,
+    "Neuroscience": 61,
+    "Nursing": 21,
+    "Outdoor recreation & travel": 25,
+    "Pets & animal interests": 15,
+    "Pharmacology, Toxicology and Pharmaceutics": 25,
+    "Philosophy & ethical traditions": 25,
+    "Physics and Astronomy": 104,
+    "Psychology": 144,
+    "Relationships, family & community life": 20,
+    "Religion, spirituality & ritual": 20,
+    "Science & space": 12,
+    "Social Sciences": 764,
+    "Society & governance": 12,
+    "Sports & physical skills": 30,
+    "Technology": 12,
+    "Veterinary": 11,
+    "Visual arts & design practice": 20,
+    "World history & heritage": 22
+  },
+  "sources": [
+    {
+      "name": "ProductSpace",
+      "description": "Original 144 topics plus 574 newly authored general-interest entries; normalized duplicate titles removed."
+    },
+    {
+      "name": "OpenAlex",
+      "url": "https://api.openalex.org/topics",
+      "documentation": "https://help.openalex.org/data/topics/",
+      "license": "CC0 1.0",
+      "license_reference": "https://help.openalex.org/data/how-its-built/",
+      "retrieved_topic_count": 4516,
+      "research_field_count": 26,
+      "research_subfield_count": 245,
+      "description": "Fixed snapshot of research topic labels and descriptions. OpenAlex generates these labels and descriptions from clusters of scholarly publications; they have not each been manually reviewed. Domain uses the OpenAlex field, not its four-domain top level."
+    }
+  ],
+  "deduplication": "Case-insensitive normalized titles; spaces, underscores and hyphens treated equivalently, meaningful punctuation preserved. Existing authored entries take precedence. Distinct related topics and possible semantic duplicates remain.",
+  "skipped_duplicate_titles": [
+    {
+      "topic": "Advanced battery technologies research",
+      "source": "OpenAlex",
+      "source_url": "https://openalex.org/T11690",
+      "retained": "Advanced Battery Technologies Research"
+    },
+    {
+      "topic": "Marine and Coastal Ecosystems",
+      "source": "OpenAlex",
+      "source_url": "https://openalex.org/T13485",
+      "retained": "Marine and coastal ecosystems"
+    },
+    {
+      "topic": "Neurological Disorders and Treatments",
+      "source": "OpenAlex",
+      "source_url": "https://openalex.org/T13796",
+      "retained": "Neurological disorders and treatments"
+    },
+    {
+      "topic": "Synthesis and Biological Activity",
+      "source": "OpenAlex",
+      "source_url": "https://openalex.org/T13971",
+      "retained": "Synthesis and biological activity"
+    },
+    {
+      "topic": "Medical research and treatments",
+      "source": "OpenAlex",
+      "source_url": "https://openalex.org/T14020",
+      "retained": "Medical Research and Treatments"
+    },
+    {
+      "topic": "Advanced Mathematical Theories",
+      "source": "OpenAlex",
+      "source_url": "https://openalex.org/T14500",
+      "retained": "advanced mathematical theories"
+    }
+  ],
+  "coverage_note": "Broad research and general-interest coverage, not an exhaustive or evenly balanced representation of every interest. Research topics outnumber general-interest entries."
+}

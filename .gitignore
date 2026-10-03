@@ -1,0 +1,43 @@
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Python bytecode, tests, and build artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Downloaded models, embeddings, API caches, and notebook runtime files
+.cache/
+.ipynb_checkpoints/
+.jupyter/
+/kernel-ipc-*
+/kernel-*.json
+
+# Local credentials (keep a shareable example if one is added)
+.env
+.env.*
+!.env.example
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+._*
+Thumbs.db
+*.swp
+*.swo
+
+# Temporary outputs
+*.log
+*.tmp
+*.bak
