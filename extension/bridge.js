@@ -17,7 +17,7 @@ async function requestHistory(){
 }
 export async function getState(){return preview?api.getState():send({type:'GET_STATE'});}
 export async function openDashboard(view='map'){
-  const selected=['discover','map','settings'].includes(view)?view:'map';
+  const selected=['interests','discover','map','settings'].includes(view)?view:'map';
   if(preview){
     const url=new URL(`dashboard.html?preview=1&view=${selected}`,location.href);
     globalThis.open(url.href,'_blank','noopener,noreferrer');

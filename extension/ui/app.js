@@ -5,17 +5,19 @@ import { createMapWorkspace } from './map-workspace.js';
 import { galaxyLoader } from './galaxy-data.js';
 import { RECOMMENDATION_DEFAULTS, RECOMMENDATION_BOUNDS, normalizeRecommendationOptions } from '../core/recommendation-options.js';
 import {discoveryControls, graphDetails, savedFeedbackView} from './discovery.js';
+import {gettingStartedGuide} from './getting-started.js';
+const VIEWS = ['interests', 'discover', 'map', 'settings'];
 
 const app = document.querySelector('#app');
 const params = new URLSearchParams(location.search);
 const preview = params.get('preview') === '1';
 const dashboard = document.body.classList.contains('dashboard');
-const initialView = ['discover', 'map', 'settings'].includes(params.get('view')) ? params.get('view') : dashboard ? 'map' : 'discover';
+const initialView = VIEWS.includes(params.get('view')) ? params.get('view') : dashboard ? 'map' : 'interests';
 const ui = {
   view: initialView, manual: '', days: '30', selected: new Set(), inboxOpen: true, candidatePage: 1, recommendationPage: 1,
   galaxyView: null, settingsDraft: null, settingsDirty: false, settingsSaved: false,
   advancedOptionsOpen: false,
-  feedbackOpen: false, feedbackPage: 1,
+  feedbackOpen: false, feedbackPage: 1, guideOpen: false, guideStep: 0, guideChecked: false, guideAutomatic: false,
   pending: new Set(), expandedDescriptions: new Set(), error: null, announcement: '', loaded: false,
 };
 let state = null;
@@ -55,10 +57,17 @@ function applyState(next) {
   if (next.lastUpdated !== state?.lastUpdated) ui.recommendationPage = 1;
   if (state?.salt && state.salt !== next.salt) {
     mapWorkspace?.destroy(); mapWorkspace = null; ui.galaxyView = null;
-    ui.feedbackPage = 1; ui.feedbackOpen = false;
+    ui.feedbackPage = 1; ui.feedbackOpen = false; ui.guideChecked = false;
   }
   state = next;
   ui.loaded = true;
+  if (!ui.guideChecked) {
+    ui.guideChecked = true;
+    ui.guideOpen = !preview && !state.settings.tutorialSeen && !state.onboardingComplete && !state.approved.length;
+    ui.guideAutomatic = ui.guideOpen; ui.guideStep = 0;
+  } else if (ui.guideAutomatic && state.settings.tutorialSeen) {
+    ui.guideOpen = false; ui.guideAutomatic = false;
+  }
   const candidates = new Set(arr(state.candidates).map(topicId));
   ui.selected = new Set([...ui.selected].filter(id => candidates.has(id)));
   ui.candidatePage = candidatePage().page;
@@ -113,13 +122,16 @@ function render() {
       <div class="header-tools">${languageSelect('ui-language')}<span class="connection-label${error ? ' has-error' : ''}">${text(!ui.loaded ? 'opening' : error ? 'attention' : preview ? 'demo' : 'local')}</span></div>
     </header>
     ${preview ? `<div class="demo-notice"><strong>${text('demo')}</strong> · ${text('demoNotice')}</div>` : ''}
-    <div class="workspace"><nav class="main-nav" aria-label="${text('mainNavigation')}">${['discover', 'map', 'settings'].map(view => `<button type="button" data-action="view" data-view="${view}" data-focus="nav-${view}"${ui.view === view ? ' aria-current="page"' : ''}>${text(view)}</button>`).join('')}${!dashboard ? `<button type="button" class="dashboard-link" data-action="open-dashboard">${text('openDashboard')} ↗</button>` : ''}</nav><div class="workspace-content">
+    <div class="workspace"><nav class="main-nav" aria-label="${text('mainNavigation')}">${VIEWS.map(view => `<button type="button" data-action="view" data-view="${view}" data-focus="nav-${view}"${ui.view === view ? ' aria-current="page"' : ''}>${text(view)}</button>`).join('')}${!dashboard ? `<button type="button" class="dashboard-link" data-action="open-dashboard">${text('openDashboard')} ↗</button>` : ''}</nav><div class="workspace-content">
     ${error ? `<div class="error-banner" role="alert"><p><strong>${text('errorHeading')}</strong><br>${escape(translateError(language(), error))}${ui.view !== 'settings' ? `<br>${text('errorHint')}` : ''}</p><button type="button" class="quiet" data-action="clear-error" aria-label="${text('dismissError')}">×</button></div>` : ''}
-    <main id="main-view">${!ui.loaded ? loadingView() : ui.view === 'settings' ? settingsView() : ui.view === 'map' ? mapView() : discoverView()}</main>
+    <main id="main-view">${!ui.loaded ? loadingView() : ui.view === 'settings' ? settingsView() : ui.view === 'map' ? mapView() : ui.view === 'interests' ? interestsView() : discoverView()}</main>
     <footer class="app-footer">${text('footer')}</footer></div></div>
     <div class="sr-only" role="status" aria-live="polite">${ui.announcement ? text(ui.announcement) : ''}</div>
+    ${ui.loaded && ui.guideOpen ? gettingStartedGuide({text,step:ui.guideStep,busy:busy('guide'),seen:state.settings.tutorialSeen,error:!!ui.error}) : ''}
   </div>`;
   bindEvents();
+  const guide = document.getElementById('welcome-guide');
+  if (guide && !guide.open) guide.showModal();
   if (ui.view === 'map' && ui.loaded) drawMap();
   if (focused?.isConnected && mapWorkspace?.element.contains(focused)) focused.focus({preventScroll:true});
   if (focusKey) {
@@ -127,6 +139,8 @@ function render() {
     // A boundary button becomes disabled after paging. Keep keyboard focus nearby.
     if (target?.disabled && focusKey.startsWith('candidate-')) target = app.querySelector('.inbox-pagination button:not(:disabled)') || app.querySelector('.candidate-inbox summary');
     if (target?.disabled && focusKey.startsWith('recommendation-page-')) target = app.querySelector('.recommendation-pagination button:not(:disabled)') || app.querySelector('#recommendations-title');
+    if (!target && focusKey === 'open-discover') target = app.querySelector('#recommendations-title');
+    if (!target && focusKey === 'open-interests') target = app.querySelector('#manual-interest');
     if (!target && focusKey.startsWith('recommendation-dismiss:')) target = app.querySelector('.recommendation-card [data-action="dismiss"]') || app.querySelector('#recommendations-title');
     if (!target && (focusKey.startsWith('graph-') || focusKey.startsWith('undo-feedback:') || focusKey.startsWith('clear-concept-feedback:'))) target = app.querySelector('#recommendations-title');
     if (!target && (focusKey.startsWith('candidate-') || focusKey.startsWith('dismiss:'))) target = app.querySelector('.candidate-inbox summary');
@@ -143,15 +157,9 @@ function loadingView() {
   return `<section class="empty-state"><h1>${text('headline')}</h1><p>${text('loadingInterests')}</p>${ui.error ? `<button type="button" data-action="reload">${text('retry')}</button>` : ''}</section>`;
 }
 
-function discoverView() {
+function interestsView() {
   const approved = arr(state.approved);
   const candidates = arr(state.candidates);
-  const items = arr(state.recommendations);
-  const page = paginate(items, ui.recommendationPage);
-  ui.recommendationPage = page.page;
-  const mode = state.settings?.mode || 'path';
-  const listView = state.settings?.recommendationView === 'list';
-  const specific = state.settings?.recommendationKind === 'specific';
   return `<section class="hero"><span class="little-star" aria-hidden="true">✧</span><p class="eyebrow">${text('curiosity')}</p><h1>${text('headlineFirst')}<br>${text('headlineSecond')}</h1><p>${text('heroDescription')}</p></section>
     ${!approved.length && !arr(state.baseline).length ? `<div class="intro"><p><strong>${text('smallBeginning')}</strong> ${text('intro')}</p><p class="small">${text('introPrivacy')}</p></div>` : ''}
     <form class="manual-form" id="manual-form"><label class="sr-only" for="manual-interest">${text('addInterest')}</label><input id="manual-interest" data-focus="manual-interest" name="interest" placeholder="${text('interestPlaceholder')}" aria-describedby="interest-language-help" maxlength="120" value="${escape(ui.manual)}" autocomplete="off"><button class="primary" data-focus="add-interest" type="submit"${disabled(busy('add'))}>${text(busy('add') ? 'saving' : 'add')}</button></form>
@@ -159,11 +167,24 @@ function discoverView() {
     <div class="import-row"><button type="button" data-action="import"${disabled(busy('import'))}>${text(busy('import') ? 'reviewing' : 'reviewBrowsing')}</button><label class="sr-only" for="history-days">${text('historyPeriod')}</label><select id="history-days" data-focus="history-days"${disabled(busy('import'))}><option value="7"${ui.days === '7' ? ' selected' : ''}>${text('historyDays', { days: 7 })}</option><option value="30"${ui.days === '30' ? ' selected' : ''}>${text('historyDays', { days: 30 })}</option></select></div>
     ${candidates.length ? inboxView(candidates) : ''}
     <section class="section" aria-labelledby="interests-title"><div class="section-heading"><h2 id="interests-title">${text('yourInterests')}</h2>${approved.length ? `<span class="muted small">${text('savedByYou')}</span>` : ''}</div>${approved.length ? `<div class="interests">${approved.map(topic => `<span class="interest-chip"><span>${escape(topicTitle(topic))}</span><button type="button" data-action="remove" data-id="${escape(topicId(topic))}" aria-label="${text('removeInterest', { topic: topicTitle(topic) })}">×</button></span>`).join('')}</div>` : `<p class="muted small">${text('firstInterest')}</p>`}</section>
+    <div class="page-actions"><button type="button" class="primary" data-action="view" data-target-view="discover" data-focus="open-discover">${text('openDiscover')} ↗</button></div>`;
+}
+
+function discoverView() {
+  const approved = arr(state.approved);
+  const items = arr(state.recommendations);
+  const page = paginate(items, ui.recommendationPage);
+  ui.recommendationPage = page.page;
+  const mode = state.settings?.mode || 'path';
+  const listView = state.settings?.recommendationView === 'list';
+  const specific = state.settings?.recommendationKind === 'specific';
+  return `<div class="view-heading"><p class="eyebrow">${text('curiosity')}</p><h1>${text('discoverHeading')}</h1><p>${text('discoverIntro')}</p></div>
+    <section class="discovery-seeds" aria-label="${text('yourInterests')}"><div class="section-heading"><p class="muted small">${text('discoverySeeds',{count:approved.length})}</p><button type="button" class="quiet" data-action="view" data-target-view="interests" data-focus="open-interests">${text('manageInterests')}</button></div>${approved.length ? `<div class="interests">${approved.map(topic=>`<span class="interest-chip"><span>${escape(topicTitle(topic))}</span></span>`).join('')}</div>` : `<p class="muted small">${text('firstHelp')}</p>`}</section>
     <section class="section" aria-labelledby="recommendations-title"><div class="section-heading"><h2 id="recommendations-title" tabindex="-1">${text('beyond')}</h2><div class="view-switch" role="group" aria-label="${text('recommendationLayout')}">${['cards', 'list'].map(value => `<button type="button" data-action="recommendation-view" data-value="${value}" data-focus="recommendation-view-${value}" aria-pressed="${(value === 'list') === listView}">${text(value)}</button>`).join('')}</div></div>
     ${discoveryControls(state,{text})}<div class="discovery-toolbar"><label class="sr-only" for="discovery-mode">${text('discoveryMode')}</label><select id="discovery-mode" data-focus="discovery-mode"><option value="path"${mode === 'path' ? ' selected' : ''}>${text('followPath')}</option><option value="global"${mode === 'global' ? ' selected' : ''}>${text('acrossInterests')}</option></select><button type="button" data-action="recommend"${disabled(!approved.length || busy('recommend') || busy('feedback'))}>${text(busy('recommend') || busy('feedback') ? 'finding' : items.length ? 'refreshIdeas' : 'findIdeas')} <span aria-hidden="true">↗</span></button></div>
     ${approved.length ? `<p class="focus-note">${mode === 'path' ? text('pathNote', { topic: state.focus || topicTitle(approved.at(-1)) }) : text('globalNote')}</p>` : ''}
     ${state.lastUpdated ? `<div class="recommendation-batch"><p class="recommendation-range">${text('recommendationRange', page)}</p><p>${text('recommendationBatchHelp')}</p><button type="button" class="quiet" data-action="view" data-view="settings">${text('adjustRecommendations')}</button></div>` : ''}
-    ${items.length ? `<div class="recommendations${listView ? ' is-list' : ''}">${page.items.map(topic => cardView(topic, listView)).join('')}</div>${page.pageCount > 1 ? `<nav class="recommendation-pagination" aria-label="${text('recommendationPagination')}"><button type="button" data-action="recommendation-prev" data-focus="recommendation-page-prev"${disabled(page.page === 1)}>${text('previous')}</button><span class="page-status" role="status">${text('page', { page: page.page, pages: page.pageCount })}</span><button type="button" data-action="recommendation-next" data-focus="recommendation-page-next"${disabled(page.page === page.pageCount)}>${text('next')}</button></nav>` : ''}` : `<div class="empty-state"><div class="empty-symbol" aria-hidden="true">✧</div><h3>${text(approved.length ? 'newRoom' : 'firstPage')}</h3><p>${text(approved.length ? 'findHelp' : 'firstHelp')}</p></div>`}
+    ${items.length ? `<div class="recommendations${listView ? ' is-list' : ''}">${page.items.map(topic => cardView(topic, listView)).join('')}</div>${page.pageCount > 1 ? `<nav class="recommendation-pagination" aria-label="${text('recommendationPagination')}"><button type="button" data-action="recommendation-prev" data-focus="recommendation-page-prev"${disabled(page.page === 1)}>${text('previous')}</button><span class="page-status" role="status">${text('page', { page: page.page, pages: page.pageCount })}</span><button type="button" data-action="recommendation-next" data-focus="recommendation-page-next"${disabled(page.page === page.pageCount)}>${text('next')}</button></nav>` : ''}` : `<div class="empty-state"><div class="empty-symbol" aria-hidden="true">✧</div><h3>${text(approved.length ? 'newRoom' : 'firstPage')}</h3><p>${text(approved.length ? 'findHelp' : 'firstHelp')}</p>${!approved.length ? `<button type="button" class="primary" data-action="view" data-target-view="interests" data-focus="open-interests">${text('addInterest')}</button>` : ''}</div>`}
     ${specific && items.length ? `<p class="concept-reserve">${text('reservationCount',{achieved:items[0].discovery?.exploration_achieved||0,target:items[0].discovery?.exploration_target||0})}</p>` : ''}
     ${specific && state.lastUpdated && !items.length ? `<p class="muted small">${text('specificEmpty')}</p>` : ''}
     ${specific ? savedFeedbackView(state,ui.feedbackPage,ui.feedbackOpen,{text,escape,busy:busy('feedback')}) : ''}
@@ -214,6 +235,7 @@ function settingsView() {
   const settings = state.settings || {};
   const draft = ui.settingsDraft || snapshotSettings();
   return `<section class="settings"><div class="view-heading"><p class="eyebrow">${text('makeYours')}</p><h1>${text('intention')}</h1><p>${text('settingsIntro')}</p></div>
+    <section class="settings-group"><h2>${text('guideTitle')}</h2><p class="muted small">${text('guideReplayHelp')}</p><button type="button" data-action="open-guide" data-focus="open-guide">${text('showGuide')}</button></section>
     <section class="settings-group"><h2>${text('interfaceLanguage')}</h2>${languageSelect('settings-language')}<p class="language-note">${text('languageScope')}</p></section>
     <section class="settings-group"><h2>${text('discovery')}</h2><label class="field"><span>${text('connections')}</span><select id="settings-mode" data-focus="settings-mode" aria-label="${text('connections')}"><option value="path"${settings.mode !== 'global' ? ' selected' : ''}>${text('followLatest')}</option><option value="global"${settings.mode === 'global' ? ' selected' : ''}>${text('exploreAll')}</option></select><small>${text('modeHelp')}</small></label>
     <label class="toggle-row"><input id="browsing-enabled" type="checkbox" aria-label="${text('browsingEnabled')}" aria-describedby="browsing-help" data-focus="browsing-enabled"${checked(settings.browsingEnabled)}${disabled(busy('browsing'))}><span><strong>${text('browsingEnabled')}</strong><small id="browsing-help">${text('browsingHelp')}</small></span></label>
@@ -251,7 +273,7 @@ function drawMap() {
       onDismiss: id => run(`dismiss:${id}`, () => dispatch({type:'DISMISS', id}), 'topicDismissed'),
       onCustomFocus: focusMapTopic,
       onSearch: (topic, provider, context) => run(`search:${topicId(topic)}`, () => search(topic, provider, context), 'explorationRecorded'),
-      onSettings: () => { ui.view = 'settings'; render(); document.querySelector('#endpoint')?.focus(); },
+      onSettings: () => { navigate('settings'); document.querySelector('#endpoint')?.focus(); },
     });
     container.append(mapWorkspace.element);
     mapWorkspace.update({state, language: language()});
@@ -268,10 +290,17 @@ async function focusMapTopic(id) {
     if (focused?.lastError || focused?.settings?.mode === 'path') return focused;
     return dispatch({type:'SET_SETTINGS', patch:{mode:'path'}});
   }, 'focusChanged');
-  if (next && !next.lastError) { ui.view = 'discover'; render(); document.querySelector('#discovery-mode')?.focus(); }
+  if (next && !next.lastError) { navigate('discover'); document.querySelector('#discovery-mode')?.focus(); }
 }
 
 function bindEvents() {
+  document.getElementById('welcome-guide')?.addEventListener('cancel', event => {event.preventDefault();void finishGuide(false);});
+  app.querySelectorAll('[data-guide-action]').forEach(button=>button.addEventListener('click',()=>{
+    if (busy('guide')) return;
+    const action=button.dataset.guideAction;
+    if (action==='next' || action==='back') {ui.guideStep=Math.max(0,Math.min(2,ui.guideStep+(action==='next'?1:-1)));render();}
+    else void finishGuide(action==='start');
+  }));
   document.getElementById('recommendation-kind')?.addEventListener('change', event => run('kind', () => dispatch({type:'SET_SETTINGS',patch:{recommendationKind:event.target.value}}), 'kindSaved'));
   document.getElementById('discovery-exploration')?.addEventListener('change', event => run('exploration-share', () => dispatch({type:'SET_SETTINGS',patch:{discoveryExploration:Number(event.target.value)}}), 'shareSaved'));
   document.getElementById('discovery-feedback-panel')?.addEventListener('toggle', event => {if(event.target.isConnected)ui.feedbackOpen=event.target.open;});
@@ -357,7 +386,8 @@ async function onAction(event) {
     await run(`recommendation-view:${++preferenceSequence}`, () => dispatch({ type: 'SET_SETTINGS', patch: { recommendationView } }), 'layoutSaved');
     return;
   }
-  if (action === 'view') { ui.view = button.dataset.view; if (ui.view === 'settings' && !ui.settingsDirty) ui.settingsDraft = snapshotSettings(); render(); return; }
+  if (action === 'view') { navigate(button.dataset.view || button.dataset.targetView); return; }
+  if (action === 'open-guide') {ui.guideOpen=true;ui.guideAutomatic=false;ui.guideStep=0;ui.error=null;render();return;}
   if (action === 'clear-error') { ui.error = null; if (state?.lastError) await run('clear-error', () => dispatch({ type: 'CLEAR_ERROR' })); else render(); return; }
   if (action === 'reload') { const next = await run('reload', getState); if (next && !unsubscribe) unsubscribe = subscribe(applyState); return; }
   if (action === 'import') { ui.inboxOpen = true; await run('import', () => importHistory(Number(ui.days)), 'importReady'); return; }
@@ -403,8 +433,24 @@ async function onAction(event) {
     const confirmed = await confirmDialog(t(reset ? 'startOver' : 'confirmClear'), t(reset ? 'resetDescription' : 'clearDescription'), t(reset ? 'reset' : 'clearBrowsing'));
     if (!confirmed) return;
     const next = await run(action, () => dispatch({ type: reset ? 'RESET' : 'CLEAR_DERIVED' }), reset ? 'resetDone' : 'clearDone');
-    if (reset && next && !next.lastError) { mapWorkspace?.destroy(); mapWorkspace = null; ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.galaxyView = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.feedbackPage = 1; ui.candidatePage = 1; ui.recommendationPage = 1; ui.view = 'discover'; render(); }
+    if (reset && next && !next.lastError) { mapWorkspace?.destroy(); mapWorkspace = null; ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.galaxyView = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.feedbackPage = 1; ui.candidatePage = 1; ui.recommendationPage = 1; navigate('interests'); }
   }
+}
+
+function navigate(view) {
+  if (!VIEWS.includes(view)) return;
+  ui.view=view;
+  if (view==='settings' && !ui.settingsDirty) ui.settingsDraft=snapshotSettings();
+  const url=new URL(location.href);url.searchParams.set('view',view);history.replaceState(null,'',url);
+  render();window.scrollTo(0,0);
+}
+
+async function finishGuide(start) {
+  const next=await run('guide',()=>dispatch({type:'SET_SETTINGS',patch:{tutorialSeen:true}}));
+  if (!next?.settings?.tutorialSeen) return;
+  ui.guideOpen=false;ui.guideAutomatic=false;
+  if (start) navigate('interests');else render();
+  document.querySelector(start?'#manual-interest':'[data-action="open-guide"]')?.focus({preventScroll:true});
 }
 
 function confirmDialog(title, description, label) {

@@ -35,7 +35,9 @@ try{
  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'sidepanel.html');
 
- await page.locator('#recommendation-kind').waitFor({timeout:5000});
+ await page.locator('#welcome-guide').waitFor();await page.locator('[data-guide-action="skip"]').click();await page.locator('#welcome-guide').waitFor({state:'detached'});
+ assert.equal(records.length,0);checks.push('first-run guide can be skipped without requests');
+ await page.locator('#manual-interest').waitFor({timeout:5000});
  await page.locator('#manual-interest').fill('Gardening');await page.locator('#manual-form button').click();
  await until(async()=>await page.evaluate(async()=> (await chrome.storage.local.get('state')).state.approved.length===1));
  await page.locator('[data-view="settings"]').click();await page.locator('#endpoint').fill(endpoint);await page.locator('#access-token').fill('fictional-test-token');await page.locator('#settings-form [type="submit"]').click();
@@ -89,6 +91,7 @@ try{
  await page.locator('[data-action="recommend"]').click();await page.locator('.recommendation-card').filter({hasText:'Companion planting'}).waitFor();
  await dashboard.evaluate(async()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'RESET'}}));
  await until(async()=>!(await state()).approved.length);
+ await page.locator('#welcome-guide').waitFor();await page.locator('[data-guide-action="skip"]').click();await page.locator('#welcome-guide').waitFor({state:'detached'});
  await dashboard.evaluate(async()=>{await chrome.runtime.sendMessage({type:'ACTION',action:{type:'ADD_INTEREST',topic:'Gardening'}});});
  await dashboard.evaluate(async endpoint=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_SETTINGS',patch:{endpoint,accessToken:'fictional-test-token',recommendationKind:'specific'}}}),endpoint);
  await page.locator('[data-action="recommend"]').click();await page.locator('.recommendation-card').filter({hasText:'Companion planting'}).waitFor();assert.equal(await page.locator('.recommendation-card .graph-feedback').count(),0);assert.deepEqual((await state()).discovery.feedback,{});

@@ -40,6 +40,7 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
  await page.goto(worker.url().replace('background.js','sidepanel.html'));
  await page.locator('#manual-interest').waitFor();
+ await page.locator('#welcome-guide').waitFor();await page.locator('[data-guide-action="skip"]').click();await page.locator('#welcome-guide').waitFor({state:'detached'});
  await until(async()=>!!(await get()));
  assert.equal((await get()).settings.browsingEnabled,false);
  assert.equal((await get()).settings.autoRefresh,false);

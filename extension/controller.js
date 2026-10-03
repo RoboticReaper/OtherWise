@@ -4,7 +4,7 @@ import {cleanDiscoveryMetadata} from './core/discovery.js';
 
 const FEEDBACK_ACTIONS=new Set(['SET_DISCOVERY_FEEDBACK','CLEAR_CONCEPT_FEEDBACK','UNDO_DISCOVERY_FEEDBACK']);
 const PUBLIC_ACTIONS=new Set(['APPROVE','ADD_INTEREST','REMOVE_INTEREST','DISMISS','SET_SETTINGS','SET_FOCUS','CLEAR_DERIVED','RESET','CLEAR_ERROR',...FEEDBACK_ACTIONS,'CLEAR_DISCOVERY_FEEDBACK']);
-const SETTING_KEYS=new Set(['browsingEnabled','autoRefresh','mode','endpoint','accessToken','blockedDomains','language','recommendationView','galaxyExplorationMode','recommendationOptions','recommendationKind','discoveryExploration']);
+const SETTING_KEYS=new Set(['browsingEnabled','autoRefresh','mode','endpoint','accessToken','blockedDomains','language','recommendationView','galaxyExplorationMode','recommendationOptions','recommendationKind','discoveryExploration','tutorialSeen']);
 const MAX_HISTORY=5000;
 class SafeError extends Error {}
 

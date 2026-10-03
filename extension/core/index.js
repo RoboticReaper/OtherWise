@@ -27,7 +27,7 @@ export function createState(now = Date.now()) {
   return {
     schemaVersion: 1, generation: 0, salt: randomSalt(), onboardingComplete: false,
     settings: {
-      browsingEnabled: false, autoRefresh: false, mode: 'path', globalLevel: 0, language: 'en', recommendationView: 'cards', galaxyExplorationMode: false,
+      browsingEnabled: false, autoRefresh: false, mode: 'path', globalLevel: 0, language: 'en', recommendationView: 'cards', galaxyExplorationMode: false, tutorialSeen: false,
       endpoint: 'http://127.0.0.1:8000', accessToken: '',
       recommendationOptions: normalizeRecommendationOptions(),
       recommendationKind: 'broad', discoveryExploration: .3,
@@ -221,14 +221,14 @@ function updateSettings(state, patch, now) {
   if (!patch || typeof patch !== 'object') return;
   let changed = false;
   let error = null;
-  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'galaxyExplorationMode', 'recommendationOptions', 'recommendationKind', 'discoveryExploration']) {
+  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'galaxyExplorationMode', 'recommendationOptions', 'recommendationKind', 'discoveryExploration', 'tutorialSeen']) {
     if (!(name in patch)) continue;
     let value = patch[name];
     if (name === 'recommendationOptions') {
       if (!validRecommendationOptions(value)) { error = 'Enter valid recommendation settings.'; continue; }
       value = normalizeRecommendationOptions({...state.settings.recommendationOptions, ...value});
     }
-    if (['browsingEnabled', 'autoRefresh', 'galaxyExplorationMode'].includes(name) && typeof value !== 'boolean') continue;
+    if (['browsingEnabled', 'autoRefresh', 'galaxyExplorationMode', 'tutorialSeen'].includes(name) && typeof value !== 'boolean') continue;
     if (name === 'mode' && !['path', 'global'].includes(value)) continue;
     if (name === 'language' && !['en', 'zh-CN'].includes(value)) continue;
     if (name === 'recommendationView' && !['cards', 'list'].includes(value)) continue;
@@ -250,7 +250,7 @@ function updateSettings(state, patch, now) {
       if (name === 'browsingEnabled' && value) state.settings.analysisSince = now;
       state.settings[name] = value;
       // Presentation preferences never change the profile or cancel work.
-      if (!['language', 'recommendationView', 'galaxyExplorationMode'].includes(name)) changed = true;
+      if (!['language', 'recommendationView', 'galaxyExplorationMode', 'tutorialSeen'].includes(name)) changed = true;
     }
   }
   if (changed) {
@@ -274,6 +274,7 @@ export function reduceState(state, action, now = Date.now()) {
   if (typeof next.settings.galaxyExplorationMode !== 'boolean') next.settings.galaxyExplorationMode = false;
   // Existing installs can infer onboarding once, without retaining deleted baseline IDs.
   if (next.onboardingComplete === undefined) next.onboardingComplete = next.approved.length > 0 || next.baseline.length > 0;
+  if (typeof next.settings.tutorialSeen !== 'boolean') next.settings.tutorialSeen = Boolean(next.onboardingComplete || next.approved.length);
   const observations = action.type === 'INGEST' && Array.isArray(action.observations) ? action.observations : [];
   const metadata = candidateMetadata(next, observations);
   next.evidence = next.evidence.map(item => cleanEvidence(item, now)).filter(Boolean);

@@ -67,7 +67,7 @@ try {
   await context.route('https://www.google.com/**',route=>route.fulfill({contentType:'text/html',body:'<!doctype html><title>Synthetic search result</title><p>Isolated search fixture.</p>'}));
   const worker=context.serviceWorkers()[0] || await context.waitForEvent('serviceworker');
   const base=worker.url().replace('background.js','');
-  const side=await context.newPage();await side.goto(base+'sidepanel.html');
+  const side=await context.newPage();await side.goto(base+'sidepanel.html');await side.locator('#welcome-guide').waitFor();await side.locator('[data-guide-action="skip"]').click();await side.locator('#welcome-guide').waitFor({state:'detached'});
   await side.locator('[data-view="map"]').click();await mapReady(side);
   assert.equal(await side.locator('.galaxy-root').getAttribute('data-topic-count'),String(catalog.length));
   assert.equal((await get(side)).approved.length,0);

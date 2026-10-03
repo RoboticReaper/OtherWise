@@ -7,7 +7,9 @@ explicitly saved concept feedback and local area exposure counts. In Map,
 Focus sends an unsaved catalog topic only when the user clicks **Get ideas**;
 that request includes its catalog ID, data-version identity and recommendation
 parameters, without browsing history or the saved-interest profile.
-The interface supports English and Simplified Chinese. Interest input and
+**Interests** manages keywords and browser candidates; **Discover** holds the
+recommendation controls and results. A first-run three-step guide can be skipped
+and reopened from Settings. The interface supports English and Simplified Chinese. Interest input and
 recommendation content remain English. Candidate topics are paginated; discoveries
 can be shown as cards or compact list rows. **What to discover → Specific concepts**
 connects the sourced graph to the extension, with source paths and reading levels. Recommendation cards omit the feedback form.

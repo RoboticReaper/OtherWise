@@ -12,7 +12,7 @@ try{
  context.on('request',r=>{if(/^https?:/.test(r.url()))outbound.push(r.url());});
  context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));
  const worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker'),base=worker.url().replace('background.js','');
- const page=await context.newPage();await page.goto(base+'dashboard.html');await page.locator('.galaxy-canvas').waitFor();
+ const page=await context.newPage();await page.goto(base+'dashboard.html');await page.locator('#welcome-guide').waitFor();await page.locator('[data-guide-action="skip"]').click();await page.locator('#welcome-guide').waitFor({state:'detached'});await page.locator('.galaxy-canvas').waitFor();
  await page.locator('[data-map-view="focus"]').click({timeout:3000});await page.locator('.focus-search').waitFor();
  assert.equal(await page.locator('.galaxy-page > .view-heading').isVisible(),false,'Focus should reclaim the redundant Galaxy hero space');
  assert.equal(await page.locator('.focus-root').getAttribute('data-seed-id'),'');
@@ -21,7 +21,7 @@ try{
  const state=()=>page.evaluate(async()=>(await chrome.storage.local.get('state')).state);
  assert.equal((await state()).approved.length,0);assert.equal((await state()).focus,null);
  await page.locator('[data-focus-action="get-ideas"]').click();await page.locator('.map-focus-guidance:not([hidden])').waitFor();assert.match(await page.locator('.map-focus-guidance').innerText(),/Settings/);assert.deepEqual(outbound,[]);
- await page.locator('[data-map-action="settings"]').click();await page.locator('#endpoint').waitFor();
+ await page.locator('[data-map-action="settings"]').click();await page.locator('#endpoint').waitFor();assert.equal(new URL(page.url()).searchParams.get('view'),'settings','Map settings entry must preserve its page on reload');
  await page.locator('[data-view="map"]').click();assert.equal(await page.locator('.focus-root').getAttribute('data-seed-id'),'Gardening');
  await page.locator('[data-focus-action="back"]').click();await page.locator('.galaxy-search').fill('Computer science');await page.locator('[data-galaxy-topic="Computer science"].galaxy-result').click();
  await page.locator('[data-galaxy-action="zoom-in"]').click();

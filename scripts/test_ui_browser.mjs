@@ -33,6 +33,18 @@ try{
   const next=page.locator('[data-action="candidate-next"]');
   const previous=page.locator('[data-action="candidate-prev"]');
   await seed(103);
+  assert.equal(await page.locator('#manual-interest').count(),1);
+  assert.equal(await page.locator('#recommendation-kind').count(),0,'Interest management must not contain recommendation controls');
+  await page.locator('#manual-interest').fill('Gardening draft');
+  await page.locator('[data-candidate="Topic 001"]').check();
+  await page.locator('[data-view="discover"]').click();
+  assert.equal(await page.locator('#manual-interest, .candidate-inbox').count(),0,'Discover must not contain keyword input or browsing candidates');
+  assert.equal(await page.locator('#recommendation-kind').count(),1);
+  await page.locator('[data-view="interests"]').click();
+  assert.equal(await page.locator('#manual-interest').inputValue(),'Gardening draft');
+  assert.equal(await page.locator('[data-candidate="Topic 001"]').isChecked(),true);
+  await page.locator('[data-candidate="Topic 001"]').uncheck();
+  checks.push('Interests and Discover are separate pages; switching preserves manual drafts and selected candidates without requests');
   assert.equal(await rows.count(),10);assert.equal(await previous.isDisabled(),true);
   assert.match(await page.locator('.page-status').innerText(),/1.*11/);
   await page.locator('[data-candidate="Topic 001"]').check();
@@ -66,7 +78,7 @@ try{
   assert.match(await page.locator('#settings-form').innerText(),/unsaved/);
   checks.push('language switching preserves selection, literal topics, input focus/caret and dirty settings');
 
-  await page.locator('[data-view="discover"]').click();
+  await page.locator('[data-view="interests"]').click();
   await page.locator('[data-action="approve"]').click();
   assert.equal((await getPreview()).approved.length,12);
   assert.equal((await getPreview()).candidates.length,92);
@@ -79,6 +91,7 @@ try{
   checks.push('cross-page save confirms the selected total; removing final page clamps safely');
 
   await previewAction({type:'ADD_INTEREST',topic:{id:'Gardening',topic:'Gardening',domain:'Nature',description:'Growing plants.'}});
+  await page.locator('[data-view="discover"]').click();
   await page.locator('[data-action="recommend"]').click();
   const recommended=await getPreview();
   await previewAction({type:'RECOMMENDATIONS',generation:recommended.generation,items:recommended.recommendations.map((topic,index)=>index===0?{...topic,description:'How plants grow, adapt and connect with their environment. A longer English description explains plant structure, life cycles, ecosystems, and how people study the natural world.'}:topic)});
@@ -108,8 +121,10 @@ try{
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
     await page.locator('#recommendations-title').scrollIntoViewIfNeeded();
     await page.screenshot({path:resolve(output,`${width}-list-zh.png`)});
+    await page.locator('[data-view="interests"]').click();
     await page.locator('.candidate-inbox').scrollIntoViewIfNeeded();
     await page.screenshot({path:resolve(output,`${width}-pagination-zh.png`)});
+    await page.locator('[data-view="discover"]').click();
     checks.push(`${width}px list saves space and retains details/actions; Chinese layout fits`);
   }
 
@@ -190,8 +205,21 @@ try{
 
   const actual=await context.newPage();actual.on('pageerror',e=>errors.push(e.message));
   await actual.goto(base);await actual.locator('#ui-language').waitFor();
+  await actual.locator('#welcome-guide').waitFor();
+  assert.match(await actual.locator('#guide-heading').innerText(),/Start with what you like/);
+  assert.equal(outbound.length,0);
+  await actual.locator('[data-guide-action="next"]').click();assert.match(await actual.locator('#guide-heading').innerText(),/Find your next subject/);
+  await actual.locator('[data-guide-action="back"]').click();assert.match(await actual.locator('#guide-heading').innerText(),/Start with what you like/);
+  await actual.locator('[data-guide-action="next"]').click();await actual.locator('[data-guide-action="next"]').click();
+  assert.match(await actual.locator('#guide-heading').innerText(),/See how interests connect/);
+  await actual.screenshot({path:resolve(output,'390-first-run-guide.png')});
+  await actual.locator('[data-guide-action="start"]').click();await actual.locator('#welcome-guide').waitFor({state:'detached'});
+  assert.equal(await actual.locator('#manual-interest').evaluate(input=>document.activeElement===input),true);
+  await actual.reload();await actual.locator('#manual-interest').waitFor();assert.equal(await actual.locator('#welcome-guide').count(),0);
+  checks.push('first-run guide supports Next/Back, sends no requests, opens Interests and stays dismissed after reload');
   await actual.locator('#manual-interest').fill('Gardening');await actual.locator('#manual-form button').click();
   await actual.locator('#ui-language').selectOption('zh-CN');
+  await actual.locator('[data-view="discover"]').click();
   await actual.locator('[data-action="recommendation-view"][data-value="list"]').click();
   await actual.waitForFunction(async()=>{const state=(await chrome.storage.local.get('state')).state;return state.settings.language==='zh-CN' && state.settings.recommendationView==='list';});
   await actual.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_SETTINGS',patch:{recommendationOptions:{limit:75,overlap:.02}}}}));
@@ -202,6 +230,11 @@ try{
   assert.equal(state.settings.recommendationOptions.limit,75);assert.equal(state.settings.recommendationOptions.overlap,.02);
   assert.deepEqual(state.approved.map(topic=>topic.topic),['Gardening']);
   assert.equal((await actual.evaluate(()=>chrome.permissions.contains({permissions:['history']}))),false);
+  await actual.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'ADD_INTEREST',topic:'https://example.org'}}));
+  await actual.locator('[data-view="settings"]').click();await actual.locator('[data-action="open-guide"]').click();await actual.locator('#welcome-guide').waitFor();
+  assert.match(await actual.locator('#guide-heading').innerText(),/从你喜欢/);await actual.keyboard.press('Escape');await actual.locator('#welcome-guide').waitFor({state:'detached',timeout:5000});
+  assert.deepEqual((await actual.evaluate(async()=> (await chrome.storage.local.get('state')).state)).approved,state.approved);
+  checks.push('the bilingual guide can be reopened in Settings and dismissed with Escape despite a prior profile error, without changing interests');
   checks.push('production Chrome storage keeps language/list preferences after reload without history permission');
   assert.deepEqual(errors,[]);assert.deepEqual(outbound,[]);
   checks.push('no browser errors or external network requests');

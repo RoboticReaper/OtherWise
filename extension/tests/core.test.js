@@ -309,3 +309,19 @@ test('internal catalog exploration records a path from an unsaved center without
   assert.deepEqual(next.approved,[]);assert.equal(next.explored.some(item=>item.id==='Basketball'),false);
   assert.equal(next.focus,null);assert.equal(next.generation,state.generation);
 });
+
+
+test('tutorial dismissal is local presentation state and migrates existing profiles without erasing interests',()=>{
+  const fresh=createState();
+  assert.equal(fresh.settings.tutorialSeen,false);
+  const saved=reduceState(fresh,{type:'SET_SETTINGS',patch:{tutorialSeen:true}});
+  assert.equal(saved.settings.tutorialSeen,true);
+  assert.equal(saved.generation,fresh.generation);
+  const existing=reduceState(fresh,{type:'ADD_INTEREST',topic:'Gardening'});
+  delete existing.settings.tutorialSeen;
+  const migrated=reduceState(existing,{type:'PRUNE'});
+  assert.equal(migrated.settings.tutorialSeen,true);
+  assert.deepEqual(migrated.approved,existing.approved);
+  assert.equal(Object.hasOwn(buildRequest(migrated),'tutorialSeen'),false);
+  assert.equal(reduceState(saved,{type:'RESET'}).settings.tutorialSeen,false);
+});

@@ -1,5 +1,14 @@
 // UI copy only. Topic names, knowledge domains, descriptions and user drafts stay literal.
 const copy = {
+  discoverHeading: ['Find something a little beyond.', '发现兴趣之外的新主题。'], discoverIntro: ['Explore nearby subjects using the interests you saved.', '根据你保存的兴趣，探索附近的新主题。'],
+  discoverySeeds: ['Based on {count} saved interests', '根据 {count} 个已保存的兴趣'], manageInterests: ['Manage interests', '管理兴趣'], openDiscover: ['Explore recommendations', '探索推荐'],
+  guideTitle: ['Getting started', '开始探索'], showGuide: ['Show guide', '查看使用指引'], guideReplayHelp: ['A short guide to Interests, Discover and Map. You can replay it anytime.', '了解「兴趣」「发现」和「地图」的简短指引，可随时重新查看。'],
+  guideStep: ['Step {step} of {total}', '第 {step} / {total} 步'], guideSkip: ['Skip for now', '暂时跳过'], guideClose: ['Close guide', '关闭指引'], guideBack: ['Back', '上一步'], guideNext: ['Next', '下一步'], guideStart: ['Add my first interest', '添加第一个兴趣'], guideStartExisting: ['Go to Interests', '前往兴趣页'],
+  guideHeading_0: ['Start with what you like.', '从你喜欢的事物开始。'], guideBody_0: ['On Interests, add an English keyword such as Photography or Gardening. You can also review browsing locally and choose which candidates to save. History access is optional.', '在「兴趣」页添加英文关键词，例如 Photography 或 Gardening。也可以在本地分析浏览记录，并自行选择要保存的候选兴趣。浏览记录权限是可选的。'],
+  guideHeading_1: ['Find your next subject.', '发现下一个想探索的主题。'], guideBody_1: ['On Discover, choose broad topics or specific concepts and press Find ideas. First connect your service address and team access code in Settings. Only saved interests and the disclosed recommendation data are sent.', '在「发现」页选择广泛主题或具体概念，点击获取推荐。请先在「设置」连接服务地址和访问码。只有已保存的兴趣和界面说明的推荐数据会发送到服务。'],
+  guideHeading_2: ['See how interests connect.', '看看兴趣如何相连。'], guideBody_2: ['Map opens the public Galaxy and local nearby topics. Explore a temporary Focus without changing your saved interests. Search a subject when you are curious, and save it only when you choose.', '「地图」会展示公开星图和本地邻近主题。可以临时进入聚焦探索，而不改变已保存的兴趣。感兴趣时搜索主题，是否保存仍由你决定。'],
+  guidePrivacy: ['This guide does not read browsing history or request recommendations.', '此指引不会读取浏览记录或请求推荐。'], guideSaveError: ['Could not save this choice. Please try again.', '无法保存此选择，请重试。'],
+
   recommendationKind: ['What to discover', '推荐内容'], broadTopics: ['Broad topics', '广泛主题'], specificConcepts: ['Specific concepts', '具体概念'],
   specificPrivacy: ['Specific discovery sends your saved interests, explicitly saved concept feedback and area recommendation counts to the connected service. Your profile stays in this browser; the service does not save it.', '具体概念推荐会向已连接的服务发送已保存的兴趣、明确提交的概念反馈和领域推荐次数。个人档案保存在此浏览器，服务端不保存。'],
   lessSeenShare: ['Reserve for less-seen areas', '为较少推荐的领域预留'], lessSeenHelp: ['Keeps some places for eligible areas with fewer returned concepts. It never widens your distance range.', '为累计推荐概念较少的合适领域保留部分名额，不会扩大距离范围。'],
@@ -25,7 +34,7 @@ const copy = {
   opening: ['Opening…', '正在打开…'], attention: ['Needs attention', '需要处理'],
   demo: ['Demo preview', '演示预览'], local: ['Saved on this device', '保存在此设备'],
   demoNotice: ['These are sample interests and exploration paths. This preview does not read your browser history.', '这里展示的是示例兴趣和探索路径。此预览不会读取你的浏览记录。'],
-  mainNavigation: ['Main navigation', '主导航'], discover: ['Discover', '发现'], map: ['Map', '地图'], settings: ['Settings', '设置'],
+  mainNavigation: ['Main navigation', '主导航'], interests: ['Interests', '兴趣'], discover: ['Discover', '发现'], map: ['Map', '地图'], settings: ['Settings', '设置'],
   errorHeading: ['Couldn’t finish that.', '操作未完成。'], errorHint: ['Check the service connection in Settings, then try again.', '请在设置中检查服务连接，然后重试。'], dismissError: ['Dismiss error', '关闭错误提示'],
   footer: ['A search is a step into a subject. Save an interest when it feels like yours.', '每次搜索都是一次探索。遇到喜欢的主题，就把它保存为兴趣。'],
   headline: ['Your world, a little wider.', '让你的世界，再宽一点。'], headlineFirst: ['Your world,', '让你的世界，'], headlineSecond: ['a little wider.', '再宽一点。'],
@@ -41,7 +50,7 @@ const copy = {
   finding: ['Finding subjects…', '正在寻找主题…'], refreshIdeas: ['Refresh ideas', '刷新推荐'], findIdeas: ['Find ideas', '获取推荐'],
   pathNote: ['Starting near {topic}. Your most recently saved interest guides this path.', '从 {topic} 附近开始。最近保存的兴趣会引导这条探索路径。'], globalNote: ['Drawing from all your saved interests. The range widens automatically when you confirm a new interest, up to eight steps.', '根据所有已保存的兴趣推荐。确认保存新兴趣时会自动扩大探索范围，最多扩大 8 级。'],
   newRoom: ['There’s room for something new.', '为新发现留一点空间。'], firstPage: ['A beginning, not a blank page.', '这是探索的起点。'],
-  findHelp: ['Find ideas around your interests. If the service is unavailable, your saved interests and map are still here.', '寻找与你兴趣相关的新主题。即使服务暂时不可用，已保存的兴趣和地图仍会保留。'], firstHelp: ['Save an interest above. Your first discoveries will appear here.', '先在上方保存一个兴趣，你的第一批推荐就会出现在这里。'], updated: ['Ideas updated {time}', '推荐更新于 {time}'], recently: ['recently', '最近'],
+  findHelp: ['Find ideas around your interests. If the service is unavailable, your saved interests and map are still here.', '寻找与你兴趣相关的新主题。即使服务暂时不可用，已保存的兴趣和地图仍会保留。'], firstHelp: ['Add an interest on the Interests page, then return here to find ideas.', '先到「兴趣」页面添加兴趣，再回来获取推荐。'], updated: ['Ideas updated {time}', '推荐更新于 {time}'], recently: ['recently', '最近'],
   inbox: ['Waiting for your say', '等待你来确认'], topicCount: ['{count} topics', '{count} 个主题'], oneTopic: ['1 topic', '1 个主题'], inboxHelp: ['A visit can mean many things. Choose only the subjects you want to save as interests.', '浏览过不一定代表感兴趣。只选择你想保存为兴趣的主题。'],
   otherSubjects: ['Other subjects', '其他主题'], localBrowsing: ['Found in local browsing', '来自本地浏览记录'], dismissTopic: ['Dismiss {topic}', '忽略 {topic}'], dismiss: ['Dismiss', '忽略'],
   saveSelected: ['Save selected ({count})', '保存已选（{count}）'], selectPage: ['Select this page', '全选本页'], clearPage: ['Clear this page', '取消本页选择'],

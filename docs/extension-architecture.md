@@ -21,7 +21,7 @@ graph. Specific requests rebuild an ephemeral profile from explicit client ratin
 | `extension/controller.js` | Serialized state changes, async cancellation, import/analysis, API/search |
 | `extension/core/index.js` | Pure state transitions, topic extraction, hashing, approved-only payload |
 | `extension/bridge.js` | UI/runtime messages and user-triggered permission requests |
-| `extension/ui/` | Discover, candidate inbox, map and Settings |
+| `extension/ui/` | Separate Interests and Discover pages, map, Settings and first-run guide |
 | `extension/dashboard.html` | Full extension tab sharing the same bridge, reducer and local storage as the side panel |
 | `extension/ui/galaxy*.js` | Validated ID join, local public assets, stable camera and canvas renderer |
 | `extension/ui/focus*.js` | Fixed local projection, scene primitives, controlled labels and per-window session |
@@ -40,6 +40,22 @@ source hash, hostname, timestamp and source type. Raw inputs do not enter state.
 Future site adapters can prepare richer local text or aliases here, while leaving
 the consent inbox and backend contract unchanged. Any new site's permissions and
 metadata retrieval need their own user-facing consent design.
+
+## Page and guide state
+
+Interests owns manual keyword input, history import, candidates and saved-interest
+management; Discover owns recommendation controls and results. Both read the same
+profile and preserve existing title identities. Navigation updates the validated
+`view` URL parameter (`interests`, `discover`, `map`, `settings`), without requesting
+recommendations. Per-window drafts/selections/pages and retained map cameras stay
+in memory across page switches; reload preserves the selected page but not unsaved
+window-only drafts. Dashboard opening accepts the same trusted views.
+
+`tutorialSeen` is a local presentation setting. Completing/skipping the guide does
+not change profile generation, cancel a request, grant permissions or enter a
+recommendation payload. Migration skips the automatic guide for existing saved
+profiles. Fresh profiles can use Next/Back/Skip; Settings reopens the bilingual
+native modal, with Escape treated as dismissal. Reset clears tutorial state.
 
 ## State rules
 

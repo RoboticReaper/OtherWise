@@ -14,6 +14,25 @@ started temporary tunnel can have a different address. The host shares both the
 address and code; the ZIP contains neither. The host can use `http://127.0.0.1:8000`
 instead. A teammate must use the shared HTTPS address, not their own localhost.
 
+## First opening and page navigation
+
+The side panel starts on **Interests / 兴趣**. New profiles show a short three-step
+guide covering Interests, Discover and Map. Use Next/Back, finish with **Add my
+first interest**, or skip. Completion and skipping are remembered on this device.
+**Settings → Getting started → Show guide** reopens it in either UI language.
+The guide does not request history access, read visits or request recommendations.
+Existing profiles with saved interests skip the automatic guide.
+
+**Interests** contains the English keyword input, optional history review,
+candidate inbox and saved-interest management. **Discover** contains recommendation
+controls and results, plus a read-only summary of the interests used. Use
+**Explore recommendations** or **Manage interests** to move between the pages.
+Draft keyword input, candidate selections and loaded result pagination stay in the
+current window when switching pages. The selected page is reflected in its URL,
+so reload returns to the selected page. The Dashboard button and Dashboard's
+initial no-parameter view open Map. Reset starts a fresh profile and shows the guide
+again; it is not a way to refresh recommendations.
+
 ## A two-minute demonstration
 
 The header's **Language / 语言** selector switches between English and Simplified
@@ -27,14 +46,14 @@ long descriptions can be expanded. The layout preference is also saved locally.
 Both layouts show ten recommendations per page. Page changes use the already
 downloaded batch and do not contact the server.
 
-1. Add **Gardening** manually. This saves an interest without accessing history.
+1. Open **Interests / 兴趣** and add **Gardening** manually. This saves an interest without accessing history.
    Alternatively, **Review recent browsing** asks Chrome for permission, processes
    up to 5,000 recent visits locally, then shows a candidate inbox. Choose topics and
    **Save selected**. Nothing in this inbox is uploaded before confirmation.
    The candidate inbox shows ten topics per page. Selections remain checked across
    pages; **Select this page** applies only to the visible page. The save button's
    count includes every selected page, so you can confirm the total before saving.
-2. Click **Find ideas**. Up to ten nearby topics appear by default, with the connection to a
+2. Open **Discover / 发现**, then click **Find ideas**. Up to ten nearby topics appear by default, with the connection to a
    saved interest and Google/YouTube search buttons.
 3. Search one topic. Open **Map** to see the full interest galaxy and your exploration path. Searching does not
    change saved interests or indicate expertise.

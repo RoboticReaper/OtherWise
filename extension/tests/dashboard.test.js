@@ -38,7 +38,7 @@ test('dashboard opens a trusted extension page without requesting history or upl
   globalThis.chrome={runtime:{id:'fixture',getURL:path=>'chrome-extension://fixture/'+path},tabs:{create:async opts=>opened.push(opts)}};
   try{
     const {openDashboard}=await import('../bridge.js?dashboard-test');
-    await openDashboard('map');await openDashboard('https://external.example');
-    assert.deepEqual(opened,[{url:'chrome-extension://fixture/dashboard.html?view=map'},{url:'chrome-extension://fixture/dashboard.html?view=map'}]);
+    await openDashboard('map');await openDashboard('https://external.example');await openDashboard('interests');
+    assert.deepEqual(opened,[{url:'chrome-extension://fixture/dashboard.html?view=map'},{url:'chrome-extension://fixture/dashboard.html?view=map'},{url:'chrome-extension://fixture/dashboard.html?view=interests'}]);
   }finally{globalThis.chrome=oldChrome;globalThis.location=oldLocation;}
 });

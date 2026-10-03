@@ -35,7 +35,7 @@ small, .small { font-size: 12px; }
 .connection-label { color: var(--muted); font-size: 11px; text-align: right; }
 .connection-label::before { content: ''; display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--sage); margin: 0 7px 2px 0; }
 .connection-label.has-error::before { background: var(--rose); }
-.main-nav { display: flex; border-bottom: 1px solid var(--line); gap: 24px; margin-bottom: 33px; }
+.main-nav { display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--line); gap: 24px; margin-bottom: 33px; }
 .main-nav button { border: 0; border-radius: 0; color: var(--muted); padding: 0 0 13px; font-size: 13px; position: relative; }
 .main-nav button[aria-current='page'] { color: var(--ivory); }
 .main-nav button[aria-current='page']::after { content: ''; position: absolute; height: 2px; background: var(--sage); bottom: -1px; left: 0; right: 0; }
@@ -253,3 +253,22 @@ dialog .dialog-actions { display: flex; gap: 8px; justify-content: flex-end; fle
 .concept-reserve { font-size:12px; color:var(--muted); }
 .main-nav .dashboard-link { margin-left: auto; font-size: 11px; white-space: nowrap; }
 @media(max-width:380px) { .main-nav { gap: 9px; } .main-nav button { font-size:12px; } .main-nav .dashboard-link { font-size:10px; } }
+
+.page-actions { margin:24px 0 0; }
+.discovery-seeds { border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+.discovery-seeds .section-heading { margin-bottom:8px; flex-wrap:wrap; }
+.discovery-seeds .quiet { font-size:12px; }
+.discovery-seeds > p { margin:0; }
+.welcome-guide { width:min(480px,calc(100vw - 32px)); max-height:calc(100dvh - 32px); overflow:auto; border:1px solid var(--control); border-radius:14px; background:var(--night); color:var(--ink); padding:24px; }
+.welcome-guide::backdrop { background:rgba(3,9,17,.78); }
+.welcome-guide h2 { font-size:28px; margin:12px 0 18px; }
+.welcome-guide p { overflow-wrap:anywhere; }
+.guide-progress { display:flex; align-items:center; justify-content:space-between; gap:12px; }
+.guide-progress p { margin:0; }
+.guide-dots { display:flex; gap:8px; }
+.guide-dots span { width:8px; height:8px; border-radius:50%; background:var(--control); }
+.guide-dots .is-current { background:var(--sage); }
+.guide-actions { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:20px; }
+.guide-actions .primary { margin-left:auto; }
+@media(max-width:600px) { .main-nav { gap:12px; } }
+@media(max-width:380px) { .main-nav { gap:9px; } }
