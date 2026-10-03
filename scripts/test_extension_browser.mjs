@@ -61,7 +61,7 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  await page.getByRole('button',{name:'Discover',exact:true}).click();
  await page.getByRole('button',{name:/Find ideas/}).click();
  await until(async()=> (await get()).recommendations.length>0,45000);
- assert.equal(requests.length,1);assert.deepEqual(requests[0],{keywords:['Gardening'],mode:'path',focus:'Gardening',expansion_level:0,limit:10});
+ assert.equal(requests.length,1);assert.deepEqual(requests[0],{keywords:['Gardening'],mode:'path',focus:'Gardening',expansion_level:0,limit:10,radius:.28,expansion:.07,overlap:.015,diversity:.2,max_overlap_fraction:.2,randomness:.03});
  assert.equal((await get()).recommendations.length,10);
  await page.screenshot({path:`${root}/.cache/qa/runtime-discover.png`,fullPage:true});
  const first=(await get()).recommendations[0];

@@ -174,12 +174,24 @@ dialog .dialog-actions { display: flex; gap: 8px; justify-content: flex-end; fle
 .settings-group .language-control { justify-content: flex-start; margin: 15px 0; }
 .settings-group .language-note { margin-top: 15px; }
 .candidate-range { margin: 0; font-size: 11px; }
-.inbox-pagination { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 12px; }
-.inbox-pagination button { padding: 7px 11px; font-size: 12px; }
-.inbox-pagination button:disabled { cursor: default; }
+.inbox-pagination, .recommendation-pagination { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 12px; }
+.inbox-pagination button, .recommendation-pagination button { padding: 7px 11px; font-size: 12px; }
+.inbox-pagination button:disabled, .recommendation-pagination button:disabled { cursor: default; }
 .page-status { color: var(--silver); font-size: 12px; text-align: center; }
 .selection-count { margin: 10px 0 0; }
 .inbox-actions { margin-top: 9px; }
+.recommendation-batch { color: var(--muted); font-size: 11px; margin: 0 0 15px; max-width: 740px; }
+.recommendation-batch p { margin: 0 0 5px; }
+.recommendation-batch .recommendation-range { color: var(--silver); font-size: 12px; }
+.recommendation-batch button { font-size: 11px; padding: 3px 0; color: var(--sage); text-align: left; }
+.recommendation-settings > h2 { margin-bottom: 10px; }
+.recommendation-settings details { margin: 17px 0 9px; }
+.recommendation-settings details > summary { cursor: pointer; color: var(--silver); padding: 3px 0; }
+.recommendation-settings details > p { margin: 13px 0 0; }
+.recommendation-option-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 22px; }
+.recommendation-option code { color: var(--muted); font-size: 10px; font-weight: 400; display: block; overflow-wrap: anywhere; }
+.recommendation-option input { max-width: 160px; }
+.recommendation-settings > .quiet { font-size: 12px; padding-left: 0; }
 
 .view-switch { display: flex; flex: 0 0 auto; border: 1px solid var(--control); border-radius: 8px; padding: 2px; gap: 2px; }
 .view-switch button { border: 0; border-radius: 5px; color: var(--muted); font-size: 11px; padding: 5px 9px; }
@@ -205,6 +217,7 @@ dialog .dialog-actions { display: flex; gap: 8px; justify-content: flex-end; fle
 .description-details[open] .description-less { display: inline; }
 .description-details[open] .topic-description { margin-top: 5px; }
 @media (max-width: 600px) {
+  .recommendation-option-grid { grid-template-columns: minmax(0, 1fr); }
   .app-header { align-items: flex-start; gap: 10px; }
   .header-tools { flex-direction: column; align-items: flex-end; gap: 6px; }
   .header-tools .language-control { align-items: flex-end; flex-direction: column; gap: 3px; }
@@ -215,8 +228,8 @@ dialog .dialog-actions { display: flex; gap: 8px; justify-content: flex-end; fle
   .is-list .recommendation-heading { gap: 2px 9px; }
 }
 @media (max-width: 340px) {
-  .inbox-pagination { gap: 5px; }
-  .inbox-pagination button { padding: 6px 8px; }
+  .inbox-pagination, .recommendation-pagination { gap: 5px; }
+  .inbox-pagination button, .recommendation-pagination button { padding: 6px 8px; }
   .page-status { font-size: 11px; }
   .section-heading { gap: 8px; flex-wrap: wrap; }
 }

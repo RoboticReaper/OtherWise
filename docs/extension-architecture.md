@@ -54,6 +54,11 @@ Topic titles, domains and descriptions are data and stay in their original langu
 Candidate pagination is view state; selections keep topic IDs across pages.
 `settings.recommendationView` similarly stores `cards` (the existing default) or
 `list`, without changing profile generation, requests or recommendation contents.
+Both recommendation layouts paginate the cached batch at ten topics per page.
+Dismissing a topic filters locally and fills the current page from the remaining
+batch; it does not send another request or send suppressed topics to the server.
+Changing numeric `settings.recommendationOptions` invalidates any pending response.
+Old installs receive the existing algorithm defaults when these settings are absent.
 
 ## API
 
@@ -67,13 +72,26 @@ Candidate pagination is view state; selections keep topic IDs across pages.
   "mode": "path",
   "focus": "Gardening",
   "expansion_level": 0,
-  "limit": 10
+  "limit": 10,
+  "radius": 0.28,
+  "expansion": 0.07,
+  "overlap": 0.015,
+  "diversity": 0.20,
+  "max_overlap_fraction": 0.20,
+  "randomness": 0.03
 }
 ```
 
 Extra fields are rejected. Requests are bounded to 16 KiB, 40 keywords, level 0–8
-and limit 1–20. The response supplies topic/domain/description, nearest interest,
+and integer limit 1–100. The six floating-point controls are optional, defaulting
+to the values shown above, so older five-field clients remain supported. All must
+be finite numbers from 0 to 1, except `max_overlap_fraction`, capped at 0.95.
+The effective expansion is `min(expansion + 0.01 * expansion_level, 1)`; the
+persisted expansion level still applies if the user switches back to path mode.
+The response supplies topic/domain/description, nearest interest,
 distance and zone. The client suppresses topics the user has dismissed locally.
+The quantity is a maximum: band eligibility, the familiar-content quota, and local
+suppression can yield fewer visible topics. No sparse-result fallback widens the band.
 Public catalog vectors are cached; history and submitted interest vectors are not.
 
 The shared-token, one-worker server is suitable for a small hackathon demo.

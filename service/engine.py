@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import os
 import tempfile
 from pathlib import Path
@@ -75,7 +76,9 @@ class RecommendationEngine:
             temporary.unlink(missing_ok=True)
         return vectors
 
-    def recommend(self, keywords, *, mode, focus, expansion_level, limit):
+    def recommend(self, keywords, *, mode, focus, expansion_level, limit,
+                  radius=.28, expansion=.07, overlap=.015, diversity=.20,
+                  max_overlap_fraction=.20, randomness=.03):
         if not self.ready:
             raise RuntimeError("Recommendation engine is unavailable.")
         interests = parse_interests(keywords)
@@ -85,8 +88,14 @@ class RecommendationEngine:
             raise ValueError("Focus must be an approved keyword.")
         if type(expansion_level) is not int or not 0 <= expansion_level <= 8:
             raise ValueError("Invalid expansion level.")
-        if type(limit) is not int or not 1 <= limit <= 20:
+        if type(limit) is not int or not 1 <= limit <= 100:
             raise ValueError("Invalid recommendation limit.")
+        for name, value in dict(radius=radius, expansion=expansion, overlap=overlap,
+                                diversity=diversity, max_overlap_fraction=max_overlap_fraction,
+                                randomness=randomness).items():
+            upper = .95 if name == "max_overlap_fraction" else 1
+            if type(value) not in {int, float} or not math.isfinite(value) or not 0 <= value <= upper:
+                raise ValueError(f"Invalid recommendation control: {name}.")
         vectors = self.model.encode(
             interest_texts(interests, self.topics), show_progress_bar=False,
             convert_to_numpy=True, normalize_embeddings=True,
@@ -105,8 +114,9 @@ class RecommendationEngine:
             seeds, seed_vectors = [interests[index]], np.asarray(vectors)[[index]]
         result = recommend(
             [self.topics[i] for i in eligible_indices], self.topic_vectors[eligible_indices],
-            seeds, seed_vectors, expansion=min(.07 + .01 * expansion_level, .15),
-            top_k=limit,
+            seeds, seed_vectors, radius=radius, expansion=min(expansion + .01 * expansion_level, 1),
+            overlap=overlap, diversity=diversity, max_overlap_fraction=max_overlap_fraction,
+            randomness=randomness, top_k=limit,
         )
         fields = ("topic", "domain", "description", "nearest_interest", "distance", "boundary_offset", "zone")
         return [dict(id=row["topic"], **{key: row[key] for key in fields}) for row in result]

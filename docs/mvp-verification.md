@@ -1,5 +1,23 @@
 # MVP verification — 2026-10-03
 
+## Recommendation controls and pagination 0.1.2
+
+The backend suite passed 193 tests, including bounded/finite option validation,
+legacy five-field request compatibility, actual band and familiar-share changes,
+and results beyond the old 20-topic cap. All 69 JavaScript tests passed, including
+100-topic local retention, parameter persistence, corrupted-setting recovery,
+stale-response cancellation and dismissal without an extra request.
+
+Both browser suites passed. The UI-only suite adds 31 fictional recommendations,
+pagination in Cards and List, page retention across language/layout switches,
+last-page clamping, cached replacement after dismissal, new-batch page reset,
+parameter draft preservation, invalid input rejection, reset-before-save behavior,
+and local preference persistence. The new settings and result layouts were
+inspected at 390px and 1100px with no horizontal overflow. No real browser profile
+or history was accessed. The real cached MPNet integration flow still passes with
+the expanded numeric request allowlist. Native permission prompt limitations below
+remain unchanged.
+
 ## UI update 0.1.1
 
 The pagination, English/Simplified Chinese UI, and Cards/List update passed all

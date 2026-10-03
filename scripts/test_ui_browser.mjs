@@ -55,7 +55,7 @@ try{
   assert.match(await rows.first().innerText(),/Topic 001/);
   assert.match(await rows.first().innerText(),/Fixture field/);
   assert.match(await page.locator('.selection-count').innerText(),/11/);
-  await page.locator('[data-view="settings"]').click();
+  await page.locator('[data-view="settings"]').first().click();
   await page.locator('#endpoint').fill('https://example.org');
   await page.locator('#access-token').fill('fictional-unsaved-code');
   await page.locator('#blocked-domains').fill('example.org\nexample.net');
@@ -113,16 +113,93 @@ try{
     checks.push(`${width}px list saves space and retains details/actions; Chinese layout fits`);
   }
 
+  // A batch larger than the former 20-item storage cap must remain fully browseable.
+  const batch=Array.from({length:31},(_,i)=>({id:`Recommendation ${i+1}`,topic:`Recommendation ${i+1}`,domain:'Fixture field',description:'English recommendation content.',nearest_interest:'Gardening'}));
+  await previewAction({type:'RECOMMENDATIONS',generation:(await getPreview()).generation,items:batch});
+  const recNext=page.locator('[data-action="recommendation-next"]');
+  const recPrev=page.locator('[data-action="recommendation-prev"]');
+  const recStatus=page.locator('.recommendation-pagination .page-status');
+  assert.equal(await page.locator('.recommendation-card').count(),10);
+  assert.match(await recStatus.innerText(),/1.*4/);
+  await recNext.click();
+  assert.match(await page.locator('.recommendation-card').first().innerText(),/Recommendation 11/);
+  await page.locator('#ui-language').selectOption('en');
+  await page.locator('[data-action="recommendation-view"][data-value="cards"]').click();
+  assert.match(await recStatus.innerText(),/2.*4/);
+  await recNext.click();await recNext.click();
+  assert.equal(await page.locator('.recommendation-card').count(),1);
+  await page.locator('.recommendation-card [data-action="dismiss"]').click();
+  assert.equal(await page.locator('.recommendation-card').count(),10);
+  assert.match(await recStatus.innerText(),/3.*3/);
+  assert.equal(await recNext.isDisabled(),true);
+  await recPrev.click();await recPrev.click();
+  await page.locator('.recommendation-card [data-action="dismiss"]').first().click();
+  assert.equal(await page.locator('.recommendation-card').count(),10);
+  assert.match(await page.locator('.recommendation-card').last().innerText(),/Recommendation 11/);
+  assert.equal((await getPreview()).recommendations.length,29);
+  await recNext.click();
+  await previewAction({type:'RECOMMENDATIONS',generation:(await getPreview()).generation,items:batch});
+  assert.match(await recStatus.innerText(),/1.*3/);
+  assert.equal((await getPreview()).recommendations.length,29,'Hidden topics stay hidden on refresh');
+  for(const width of [390,1100]){
+    await page.setViewportSize({width,height:850});
+    await page.locator('#ui-language').selectOption('zh-CN');
+    await page.locator('[data-action="recommendation-view"][data-value="list"]').click();
+    await page.locator('.recommendation-batch').scrollIntoViewIfNeeded();
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+    await page.screenshot({path:resolve(output,`${width}-recommendation-pages-zh.png`)});
+  }
+  checks.push('31 recommendations paginate in both layouts, dismiss fills/clamps pages, fresh batch resets and suppression persists');
+
+  const settings=await context.newPage();settings.on('pageerror',e=>errors.push(e.message));
+  await settings.goto(base+'?preview=1');await settings.locator('#ui-language').waitFor();
+  await settings.locator('[data-view="settings"]').first().click();
+  await settings.locator('#recommendation-limit').fill('40');
+  await settings.locator('#recommendation-advanced summary').click();
+  await settings.locator('#recommendation-overlap').fill('0.025');
+  await settings.locator('#ui-language').selectOption('zh-CN');
+  assert.equal(await settings.locator('#recommendation-limit').inputValue(),'40');
+  assert.equal(await settings.locator('#recommendation-overlap').inputValue(),'0.025');
+  assert.equal(await settings.locator('#recommendation-advanced').getAttribute('open')!==null,true);
+  const settingsState=()=>settings.evaluate(async()=> (await import('./dev-preview.js')).getState());
+  for(const [key,value]of [['limit','101'],['limit','1.5'],['overlap','-0.1'],['max_overlap_fraction','1']]){
+    const input=settings.locator(`#recommendation-${key}`),old=await input.inputValue();
+    await input.fill(value);await settings.locator('#settings-form button[type="submit"]').click();
+    assert.equal((await settingsState()).settings.recommendationOptions.limit,10);
+    assert.equal(await input.evaluate(element=>element.validity.valid),false);
+    await input.fill(old);
+  }
+  await settings.locator('#settings-form button[type="submit"]').click();
+  assert.equal((await settingsState()).settings.recommendationOptions.limit,40);
+  assert.equal((await settingsState()).settings.recommendationOptions.overlap,.025);
+  await settings.locator('[data-action="reset-recommendation-options"]').click();
+  assert.equal(await settings.locator('#recommendation-limit').inputValue(),'10');
+  assert.equal((await settingsState()).settings.recommendationOptions.limit,40,'Reset remains a draft until saved');
+  await settings.locator('#ui-language').selectOption('en');
+  assert.equal(await settings.locator('#recommendation-overlap').inputValue(),'0.015');
+  for(const width of [390,1100]){
+    await settings.setViewportSize({width,height:850});
+    await settings.locator('#ui-language').selectOption('zh-CN');
+    await settings.locator('.recommendation-settings').scrollIntoViewIfNeeded();
+    assert.equal(await settings.evaluate(()=>document.documentElement.scrollWidth),width);
+    await settings.screenshot({path:resolve(output,`${width}-recommendation-settings-zh.png`)});
+  }
+  await settings.locator('#settings-form button[type="submit"]').click();
+  assert.equal((await settingsState()).settings.recommendationOptions.limit,10);
+  checks.push('parameter drafts survive language changes; native bounds reject invalid inputs; save and draft-only default reset work at 390/1100px');
+
   const actual=await context.newPage();actual.on('pageerror',e=>errors.push(e.message));
   await actual.goto(base);await actual.locator('#ui-language').waitFor();
   await actual.locator('#manual-interest').fill('Gardening');await actual.locator('#manual-form button').click();
   await actual.locator('#ui-language').selectOption('zh-CN');
   await actual.locator('[data-action="recommendation-view"][data-value="list"]').click();
   await actual.waitForFunction(async()=>{const state=(await chrome.storage.local.get('state')).state;return state.settings.language==='zh-CN' && state.settings.recommendationView==='list';});
+  await actual.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_SETTINGS',patch:{recommendationOptions:{limit:75,overlap:.02}}}}));
   await actual.reload();await actual.locator('#ui-language').waitFor();
   assert.equal(await actual.locator('#ui-language').inputValue(),'zh-CN');
   assert.equal(await actual.locator('[data-action="recommendation-view"][data-value="list"]').getAttribute('aria-pressed'),'true');
   const state=await actual.evaluate(async()=> (await chrome.storage.local.get('state')).state);
+  assert.equal(state.settings.recommendationOptions.limit,75);assert.equal(state.settings.recommendationOptions.overlap,.02);
   assert.deepEqual(state.approved.map(topic=>topic.topic),['Gardening']);
   assert.equal((await actual.evaluate(()=>chrome.permissions.contains({permissions:['history']}))),false);
   checks.push('production Chrome storage keeps language/list preferences after reload without history permission');

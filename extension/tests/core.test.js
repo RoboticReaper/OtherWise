@@ -15,6 +15,38 @@ const observe = (name, hash='hash-'+name, at=NOW) => ({sourceHash:hash,host:'exa
 const apply = (state,type,fields={},at=NOW) => reduceState(state,{type,...fields},at);
 const approved = (...names) => names.reduce((s,name)=>apply(s,'ADD_INTEREST',{topic:name}),createState(NOW));
 
+test('recommendation options migrate safely and only finite bounded numbers enter the request',()=>{
+  let state=approved('Basketball'); delete state.settings.recommendationOptions;
+  state=apply(state,'PRUNE');
+  assert.deepEqual(state.settings.recommendationOptions,{limit:10,radius:.28,expansion:.07,overlap:.015,diversity:.2,max_overlap_fraction:.2,randomness:.03});
+  state=apply(state,'SET_SETTINGS',{patch:{recommendationOptions:{limit:75,overlap:.025,diversity:.4}}});
+  assert.equal(buildRequest(state).limit,75); assert.equal(buildRequest(state).overlap,.025);
+  assert.equal(buildRequest(state).radius,.28);
+  const before=state;
+  for(const options of [{limit:101},{limit:2.5},{radius:NaN},{expansion:Infinity},{overlap:-.1},{diversity:'0.2'},{randomness:true},{max_overlap_fraction:1},{private_topic:'secret'},null,[]]){
+    state=apply(before,'SET_SETTINGS',{patch:{recommendationOptions:options}});
+    assert.deepEqual(state.settings.recommendationOptions,before.settings.recommendationOptions);
+    assert.equal(state.generation,before.generation);
+    assert.match(state.lastError,/recommendation settings/i);
+  }
+  state.settings.recommendationOptions={limit:1000,radius:NaN,overlap:.02,private_topic:'secret'};
+  const request=buildRequest(state);
+  assert.equal(request.limit,10); assert.equal(request.radius,.28); assert.equal(request.overlap,.02);
+  assert.equal('private_topic' in request,false);
+});
+
+test('large batches remain available locally after dismissing without changing interests or request',()=>{
+  let state=approved('Basketball');
+  state=apply(state,'SET_SETTINGS',{patch:{recommendationOptions:{limit:100}}});
+  const request=buildRequest(state);
+  state=apply(state,'RECOMMENDATIONS',{generation:state.generation,items:Array.from({length:100},(_,i)=>topic(`Topic ${i}`))});
+  assert.equal(state.recommendations.length,100);
+  state=apply(state,'DISMISS',{id:'Topic 0'});
+  assert.equal(state.recommendations.length,99); assert.deepEqual(buildRequest(state),request);
+  state=apply(state,'RECOMMENDATIONS',{generation:state.generation,items:[topic('Topic 0'),topic('Fresh')]});
+  assert.deepEqual(state.recommendations.map(x=>x.topic),['Fresh']);
+});
+
 test('defaults disable analysis and refresh; every install uses a new salt',()=>{
   const a=createState(NOW), b=createState(NOW);
   assert.equal(a.settings.browsingEnabled,false); assert.equal(a.settings.autoRefresh,false);
@@ -77,7 +109,7 @@ test('approve selected candidates makes an initial baseline and sends only fixed
   state=apply(state,'APPROVE',{ids:['Basketball']});
   assert.deepEqual(state.approved.map(x=>x.id),['Basketball']); assert.deepEqual(state.baseline,['Basketball']);
   assert.equal(state.focus,'Basketball'); assert.equal(state.settings.globalLevel,0);
-  assert.deepEqual(buildRequest(state),{keywords:['Basketball'],mode:'path',focus:'Basketball',expansion_level:0,limit:10});
+  assert.deepEqual(buildRequest(state),{keywords:['Basketball'],mode:'path',focus:'Basketball',expansion_level:0,limit:10,radius:.28,expansion:.07,overlap:.015,diversity:.2,max_overlap_fraction:.2,randomness:.03});
   assert.deepEqual(state.candidates.map(x=>x.id),['Machine learning']);
 });
 

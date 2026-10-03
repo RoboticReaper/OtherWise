@@ -125,3 +125,55 @@ def test_model_device_is_optional_and_portable():
 
     assert "device" in inspect.signature(load_model).parameters
     assert inspect.signature(load_model).parameters["device"].default is None
+
+
+def test_configured_expansion_adds_progress_and_never_widens_an_empty_band():
+    engine = make_engine(["Below", "Base", "Later", "Above"], [.2, .42, .5, .61])
+    options = dict(mode="path", focus="First", limit=50, radius=.4, expansion=.05,
+                   overlap=0, randomness=0)
+    base = engine.recommend(["First"], expansion_level=0, **options)
+    later = engine.recommend(["First"], expansion_level=8, **options)
+    assert [row["id"] for row in base] == ["Base"]
+    assert {row["id"] for row in later} == {"Base", "Later"}
+    assert all(.4 <= row["distance"] <= .53 for row in later)
+    assert engine.recommend(["First"], mode="path", focus="First", expansion_level=8,
+                            limit=100, radius=.8, expansion=.01, overlap=0) == []
+
+
+def test_expansion_progress_is_clamped_when_the_base_is_already_one():
+    engine = make_engine(["Opposite"], [1])
+    result = engine.recommend(["First"], mode="global", focus=None, expansion_level=8,
+                              limit=100, radius=0, expansion=1, randomness=0)
+    assert [row["id"] for row in result] == ["Opposite"]
+
+
+def test_custom_diversity_and_disabled_randomness_affect_real_ranking():
+    engine = make_engine(["A", "Duplicate of A", "Different"], [.4, .4, -.4])
+    options = dict(mode="path", focus="First", expansion_level=0, limit=2,
+                   radius=.3, expansion=.2, overlap=0, randomness=0)
+    ordinary = engine.recommend(["First"], diversity=0, **options)
+    diverse = engine.recommend(["First"], diversity=.3, **options)
+    assert [row["id"] for row in ordinary] == ["A", "Duplicate of A"]
+    assert [row["id"] for row in diverse] == ["A", "Different"]
+
+
+@pytest.mark.parametrize("name", ["radius", "expansion", "overlap", "diversity", "max_overlap_fraction", "randomness"])
+@pytest.mark.parametrize("value", [True, "0.2", None, -.01, 1.01, math.nan, math.inf, -math.inf])
+def test_direct_engine_rejects_invalid_controls_before_encoding(name, value):
+    engine = make_engine(["A"], [.32])
+
+    class NoEncoding:
+        def encode(self, *args, **kwargs):
+            raise AssertionError("Invalid controls must be rejected before model inference.")
+
+    engine.model = NoEncoding()
+    with pytest.raises(ValueError):
+        engine.recommend(["First"], mode="path", focus="First", expansion_level=0,
+                         limit=10, **{name: value})
+
+
+@pytest.mark.parametrize("patch", [{"limit": 101}, {"limit": True}, {"max_overlap_fraction": .96}])
+def test_direct_engine_enforces_request_capacity_and_familiar_share_bounds(patch):
+    engine = make_engine(["A"], [.32])
+    with pytest.raises(ValueError):
+        engine.recommend(["First"], **(dict(mode="path", focus="First", expansion_level=0, limit=10) | patch))

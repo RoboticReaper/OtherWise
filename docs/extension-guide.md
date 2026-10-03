@@ -24,6 +24,8 @@ Switching language preserves drafts, selected candidates and loaded recommendati
 The **Cards / List** toggle beside **A little beyond** switches recommendations to
 compact rows. Both layouts retain search, save and dismiss actions. In List view,
 long descriptions can be expanded. The layout preference is also saved locally.
+Both layouts show ten recommendations per page. Page changes use the already
+downloaded batch and do not contact the server.
 
 1. Add **Gardening** manually. This saves an interest without accessing history.
    Alternatively, **Review recent browsing** asks Chrome for permission, processes
@@ -32,7 +34,7 @@ long descriptions can be expanded. The layout preference is also saved locally.
    The candidate inbox shows ten topics per page. Selections remain checked across
    pages; **Select this page** applies only to the visible page. The save button's
    count includes every selected page, so you can confirm the total before saving.
-2. Click **Find ideas**. Up to ten nearby topics appear, with the connection to a
+2. Click **Find ideas**. Up to ten nearby topics appear by default, with the connection to a
    saved interest and Google/YouTube search buttons.
 3. Search one topic. Open **Map** to see an exploration path. Searching does not
    change saved interests or indicate expertise.
@@ -43,6 +45,39 @@ long descriptions can be expanded. The layout preference is also saved locally.
    once, capped at eight increases. Searches and refreshes do not widen it.
 
 ## Optional ongoing updates
+
+### Recommendation settings
+
+In Settings, set the requested quantity from **1 to 100** (default 10). This is
+the maximum batch size; each page still shows ten. Saving changed parameters clears
+the old batch. Click **Refresh ideas**, or enable automatic refresh, to use them.
+Changing these numeric controls never approves or uploads browsing candidates.
+
+Advanced controls expose the existing recommendation engine:
+
+| API parameter | Default | Meaning |
+|---|---:|---|
+| `radius` | 0.28 | Distance at which a topic enters new territory; larger moves the boundary farther away. |
+| `expansion` | 0.07 | Allowed distance outward from that boundary. |
+| `overlap` | 0.015 | Allowed distance inward into familiar territory; this is a distance, not a percentage. |
+| `max_overlap_fraction` | 0.20 | Maximum familiar share of the actual returned batch; 0.20 means 20%. |
+| `diversity` | 0.20 | Preference for variety among selected topics. |
+| `randomness` | 0.03 | Small ranking variation within the allowed distance band. |
+
+Distance values use normalized angular distance from 0 to 1. Automatic expansion
+adds 0.01 for each saved expansion level, up to eight levels, on top of `expansion`
+(total capped at 1). **Reset defaults** edits the form; save to apply the defaults.
+See `docs/parameter-guide.md` for tuning examples.
+
+**Why fewer results after Not for me?** Dismissal hides a topic locally. When more
+cached results remain, they fill the current page; otherwise the list gets shorter.
+Dismissal does not make a new network request. Later responses are also filtered
+against the local hidden list, which is never sent to the server. A larger requested
+quantity can give you more to browse, but cannot guarantee a full batch: the catalog,
+distance band and familiar-content cap still apply. The service never silently
+widens your chosen band to fill the list.
+
+### Background controls
 
 Both controls start off and are independent:
 

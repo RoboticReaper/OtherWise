@@ -34,7 +34,7 @@ test('recommendation payload excludes unconfirmed observations and all source me
   await r.controller.dispatch({type:'SET_SETTINGS',patch:{accessToken:'team-secret'}});
   await r.controller.recommend();
   const request=r.requests[0]; const data=JSON.parse(request.options.body);
-  assert.deepEqual(Object.keys(data).sort(),['expansion_level','focus','keywords','limit','mode']);
+  assert.deepEqual(Object.keys(data).sort(),['diversity','expansion','expansion_level','focus','keywords','limit','max_overlap_fraction','mode','overlap','radius','randomness']);
   assert.deepEqual(data.keywords,['Gardening']);
   assert.equal(request.options.headers.Authorization,'Bearer team-secret');
   assert.equal(request.options.redirect,'error');
@@ -81,6 +81,25 @@ test('remote endpoints must use HTTPS and cannot hide credentials or paths',()=>
 });
 
 function deferred(){let resolve;const promise=new Promise(r=>{resolve=r;});return {promise,resolve};}
+
+test('recommendation tuning persists and cancels an old response; dismiss does not send a replacement request',async()=>{
+  const sent=deferred(),response=deferred();let signal;
+  const r=rig({fetchImpl:async(_url,options)=>{signal=options.signal;sent.resolve();await response.promise;return new Response(JSON.stringify({recommendations:[catalog[1]]}));}});
+  await r.controller.dispatch({type:'ADD_INTEREST',topic:catalog[0]});
+  await r.controller.dispatch({type:'SET_SETTINGS',patch:{accessToken:'team-secret'}});
+  const pending=r.controller.recommend();await sent.promise;
+  await r.controller.dispatch({type:'SET_SETTINGS',patch:{recommendationOptions:{limit:40,overlap:.03}}});
+  assert.equal(signal.aborted,true);
+  response.resolve();await pending;
+  assert.equal((await r.controller.getState()).recommendations.length,0);
+  const reloaded=rig({initialState:r.saved()});
+  await reloaded.controller.recommend();
+  const payload=JSON.parse(reloaded.requests[0].options.body);
+  assert.equal(payload.limit,40);assert.equal(payload.overlap,.03);
+  await reloaded.controller.dispatch({type:'DISMISS',id:'Botany'});
+  assert.equal(reloaded.requests.length,1);
+  assert.equal((await reloaded.controller.getState()).recommendations.length,0);
+});
 
 for(const [preference,initial,value]of [['language','en','zh-CN'],['recommendationView','cards','list']]) {
 test(`${preference} preference persists across controller reload without changing recommendation data or payload`,async()=>{

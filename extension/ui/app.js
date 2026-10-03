@@ -1,12 +1,14 @@
 import { getState, dispatch, importHistory, recommend, search, subscribe } from '../bridge.js';
 import { normalizeLanguage, translate, translateError } from './i18n.js';
 import { paginate } from './pagination.js';
+import { RECOMMENDATION_DEFAULTS, RECOMMENDATION_BOUNDS, normalizeRecommendationOptions } from '../core/recommendation-options.js';
 
 const app = document.querySelector('#app');
 const preview = new URLSearchParams(location.search).get('preview') === '1';
 const ui = {
-  view: 'discover', manual: '', days: '30', selected: new Set(), inboxOpen: true, candidatePage: 1,
+  view: 'discover', manual: '', days: '30', selected: new Set(), inboxOpen: true, candidatePage: 1, recommendationPage: 1,
   mapSelection: null, settingsDraft: null, settingsDirty: false, settingsSaved: false,
+  advancedOptionsOpen: false,
   pending: new Set(), expandedDescriptions: new Set(), error: null, announcement: '', loaded: false,
 };
 let state = null;
@@ -33,16 +35,19 @@ function snapshotSettings() {
   return {
     endpoint: settings.endpoint || 'http://127.0.0.1:8000', accessToken: settings.accessToken || '',
     blockedDomains: arr(settings.blockedDomains).join('\n'),
+    recommendationOptions: normalizeRecommendationOptions(settings.recommendationOptions),
   };
 }
 
 function applyState(next) {
   if (!next || typeof next !== 'object') return;
+  if (next.lastUpdated !== state?.lastUpdated) ui.recommendationPage = 1;
   state = next;
   ui.loaded = true;
   const candidates = new Set(arr(state.candidates).map(topicId));
   ui.selected = new Set([...ui.selected].filter(id => candidates.has(id)));
   ui.candidatePage = candidatePage().page;
+  ui.recommendationPage = paginate(arr(state.recommendations), ui.recommendationPage).page;
   if (!ui.settingsDirty) ui.settingsDraft = snapshotSettings();
   render();
 }
@@ -81,6 +86,8 @@ function render() {
     if (!details.isConnected || !recommendationIds.has(id)) return;
     details.open ? ui.expandedDescriptions.add(id) : ui.expandedDescriptions.delete(id);
   });
+  const advancedOptions = app.querySelector('#recommendation-advanced');
+  if (advancedOptions?.isConnected) ui.advancedOptionsOpen = advancedOptions.open;
   mapObserver?.disconnect();
   const error = ui.error || state?.lastError;
   document.documentElement.lang = language();
@@ -103,6 +110,8 @@ function render() {
     let target = [...app.querySelectorAll('[data-focus]')].find(element => element.dataset.focus === focusKey);
     // A boundary button becomes disabled after paging. Keep keyboard focus nearby.
     if (target?.disabled && focusKey.startsWith('candidate-')) target = app.querySelector('.inbox-pagination button:not(:disabled)') || app.querySelector('.candidate-inbox summary');
+    if (target?.disabled && focusKey.startsWith('recommendation-page-')) target = app.querySelector('.recommendation-pagination button:not(:disabled)') || app.querySelector('#recommendations-title');
+    if (!target && focusKey.startsWith('recommendation-dismiss:')) target = app.querySelector('.recommendation-card [data-action="dismiss"]') || app.querySelector('#recommendations-title');
     if (!target && (focusKey.startsWith('candidate-') || focusKey.startsWith('dismiss:'))) target = app.querySelector('.candidate-inbox summary');
     if (target) {
       target.focus({ preventScroll: true });
@@ -121,6 +130,8 @@ function discoverView() {
   const approved = arr(state.approved);
   const candidates = arr(state.candidates);
   const items = arr(state.recommendations);
+  const page = paginate(items, ui.recommendationPage);
+  ui.recommendationPage = page.page;
   const mode = state.settings?.mode || 'path';
   const listView = state.settings?.recommendationView === 'list';
   return `<section class="hero"><span class="little-star" aria-hidden="true">✧</span><p class="eyebrow">${text('curiosity')}</p><h1>${text('headlineFirst')}<br>${text('headlineSecond')}</h1><p>${text('heroDescription')}</p></section>
@@ -130,10 +141,11 @@ function discoverView() {
     <div class="import-row"><button type="button" data-action="import"${disabled(busy('import'))}>${text(busy('import') ? 'reviewing' : 'reviewBrowsing')}</button><label class="sr-only" for="history-days">${text('historyPeriod')}</label><select id="history-days" data-focus="history-days"${disabled(busy('import'))}><option value="7"${ui.days === '7' ? ' selected' : ''}>${text('historyDays', { days: 7 })}</option><option value="30"${ui.days === '30' ? ' selected' : ''}>${text('historyDays', { days: 30 })}</option></select></div>
     ${candidates.length ? inboxView(candidates) : ''}
     <section class="section" aria-labelledby="interests-title"><div class="section-heading"><h2 id="interests-title">${text('yourInterests')}</h2>${approved.length ? `<span class="muted small">${text('savedByYou')}</span>` : ''}</div>${approved.length ? `<div class="interests">${approved.map(topic => `<span class="interest-chip"><span>${escape(topicTitle(topic))}</span><button type="button" data-action="remove" data-id="${escape(topicId(topic))}" aria-label="${text('removeInterest', { topic: topicTitle(topic) })}">×</button></span>`).join('')}</div>` : `<p class="muted small">${text('firstInterest')}</p>`}</section>
-    <section class="section" aria-labelledby="recommendations-title"><div class="section-heading"><h2 id="recommendations-title">${text('beyond')}</h2><div class="view-switch" role="group" aria-label="${text('recommendationLayout')}">${['cards', 'list'].map(value => `<button type="button" data-action="recommendation-view" data-value="${value}" data-focus="recommendation-view-${value}" aria-pressed="${(value === 'list') === listView}">${text(value)}</button>`).join('')}</div></div>
+    <section class="section" aria-labelledby="recommendations-title"><div class="section-heading"><h2 id="recommendations-title" tabindex="-1">${text('beyond')}</h2><div class="view-switch" role="group" aria-label="${text('recommendationLayout')}">${['cards', 'list'].map(value => `<button type="button" data-action="recommendation-view" data-value="${value}" data-focus="recommendation-view-${value}" aria-pressed="${(value === 'list') === listView}">${text(value)}</button>`).join('')}</div></div>
     <div class="discovery-toolbar"><label class="sr-only" for="discovery-mode">${text('discoveryMode')}</label><select id="discovery-mode" data-focus="discovery-mode"><option value="path"${mode === 'path' ? ' selected' : ''}>${text('followPath')}</option><option value="global"${mode === 'global' ? ' selected' : ''}>${text('acrossInterests')}</option></select><button type="button" data-action="recommend"${disabled(!approved.length || busy('recommend'))}>${text(busy('recommend') ? 'finding' : items.length ? 'refreshIdeas' : 'findIdeas')} <span aria-hidden="true">↗</span></button></div>
     ${approved.length ? `<p class="focus-note">${mode === 'path' ? text('pathNote', { topic: state.focus || topicTitle(approved.at(-1)) }) : text('globalNote')}</p>` : ''}
-    ${items.length ? `<div class="recommendations${listView ? ' is-list' : ''}">${items.map(topic => cardView(topic, listView)).join('')}</div>` : `<div class="empty-state"><div class="empty-symbol" aria-hidden="true">✧</div><h3>${text(approved.length ? 'newRoom' : 'firstPage')}</h3><p>${text(approved.length ? 'findHelp' : 'firstHelp')}</p></div>`}
+    ${state.lastUpdated ? `<div class="recommendation-batch"><p class="recommendation-range">${text('recommendationRange', page)}</p><p>${text('recommendationBatchHelp')}</p><button type="button" class="quiet" data-action="view" data-view="settings">${text('adjustRecommendations')}</button></div>` : ''}
+    ${items.length ? `<div class="recommendations${listView ? ' is-list' : ''}">${page.items.map(topic => cardView(topic, listView)).join('')}</div>${page.pageCount > 1 ? `<nav class="recommendation-pagination" aria-label="${text('recommendationPagination')}"><button type="button" data-action="recommendation-prev" data-focus="recommendation-page-prev"${disabled(page.page === 1)}>${text('previous')}</button><span class="page-status" role="status">${text('page', { page: page.page, pages: page.pageCount })}</span><button type="button" data-action="recommendation-next" data-focus="recommendation-page-next"${disabled(page.page === page.pageCount)}>${text('next')}</button></nav>` : ''}` : `<div class="empty-state"><div class="empty-symbol" aria-hidden="true">✧</div><h3>${text(approved.length ? 'newRoom' : 'firstPage')}</h3><p>${text(approved.length ? 'findHelp' : 'firstHelp')}</p></div>`}
     ${state.lastUpdated ? `<p class="last-updated">${text('updated', { time: formatTime(state.lastUpdated) })}</p>` : ''}</section>`;
 }
 
@@ -159,7 +171,17 @@ function descriptionView(topic, listView) {
 function cardView(topic, listView = false) {
   const id = topicId(topic);
   const saved = isApproved(id);
-  return `<article class="recommendation-card"><div class="recommendation-content"><div class="recommendation-heading"><p class="eyebrow">${escape(topic.domain || t('newDirection'))}</p><h3>${escape(topicTitle(topic))}</h3></div>${descriptionView(topic, listView)}${topic.nearest_interest ? `<div class="related">${text('connectionFrom', { topic: topic.nearest_interest })}</div>` : ''}</div><div class="recommendation-actions"><div class="card-search">${searchButtons(topic)}</div><div class="card-feedback">${saved ? `<span class="saved-label">${text('savedLabel')}</span>` : `<button type="button" class="save" data-action="save-topic" data-id="${escape(id)}"${disabled(busy(`save:${id}`))}>${text('saveInterest')}</button>`}<button type="button" class="quiet" data-action="dismiss" data-id="${escape(id)}">${text('notForMe')}</button></div></div></article>`;
+  return `<article class="recommendation-card"><div class="recommendation-content"><div class="recommendation-heading"><p class="eyebrow">${escape(topic.domain || t('newDirection'))}</p><h3>${escape(topicTitle(topic))}</h3></div>${descriptionView(topic, listView)}${topic.nearest_interest ? `<div class="related">${text('connectionFrom', { topic: topic.nearest_interest })}</div>` : ''}</div><div class="recommendation-actions"><div class="card-search">${searchButtons(topic)}</div><div class="card-feedback">${saved ? `<span class="saved-label">${text('savedLabel')}</span>` : `<button type="button" class="save" data-action="save-topic" data-id="${escape(id)}"${disabled(busy(`save:${id}`))}>${text('saveInterest')}</button>`}<button type="button" class="quiet" data-action="dismiss" data-id="${escape(id)}" data-focus="recommendation-dismiss:${escape(id)}">${text('notForMe')}</button></div></div></article>`;
+}
+
+function recommendationOptionField(key, draft) {
+  const { min, max, integer } = RECOMMENDATION_BOUNDS[key];
+  const id = `recommendation-${key}`;
+  return `<label class="field recommendation-option"><span>${text(`option_${key}`)} <code>${escape(key)}</code></span><input id="${id}" name="${key}" data-recommendation-option="${key}" type="number" min="${min}" max="${max}" step="${integer ? '1' : 'any'}" required aria-describedby="${id}-help" data-focus="${id}" value="${escape(draft[key])}"><small id="${id}-help">${text(`optionHelp_${key}`)}</small></label>`;
+}
+
+function recommendationSettingsView(draft) {
+  return `<section class="settings-group recommendation-settings"><h2>${text('recommendationSettings')}</h2><p class="muted small">${text('recommendationSettingsHelp')}</p>${recommendationOptionField('limit', draft)}<details id="recommendation-advanced"${ui.advancedOptionsOpen ? ' open' : ''}><summary data-focus="recommendation-advanced-summary">${text('advancedRecommendations')}</summary><p class="muted small">${text('recommendationDistanceHelp')}</p><div class="recommendation-option-grid">${Object.keys(RECOMMENDATION_DEFAULTS).filter(key => key !== 'limit').map(key => recommendationOptionField(key, draft)).join('')}</div></details><button type="button" class="quiet" data-action="reset-recommendation-options">${text('resetRecommendationDefaults')}</button></section>`;
 }
 
 function searchButtons(topic) {
@@ -175,7 +197,7 @@ function settingsView() {
     <section class="settings-group"><h2>${text('discovery')}</h2><label class="field"><span>${text('connections')}</span><select id="settings-mode" data-focus="settings-mode" aria-label="${text('connections')}"><option value="path"${settings.mode !== 'global' ? ' selected' : ''}>${text('followLatest')}</option><option value="global"${settings.mode === 'global' ? ' selected' : ''}>${text('exploreAll')}</option></select><small>${text('modeHelp')}</small></label>
     <label class="toggle-row"><input id="browsing-enabled" type="checkbox" aria-label="${text('browsingEnabled')}" aria-describedby="browsing-help" data-focus="browsing-enabled"${checked(settings.browsingEnabled)}${disabled(busy('browsing'))}><span><strong>${text('browsingEnabled')}</strong><small id="browsing-help">${text('browsingHelp')}</small></span></label>
     <label class="toggle-row"><input id="auto-refresh" type="checkbox" aria-label="${text('autoRefresh')}" aria-describedby="refresh-help" data-focus="auto-refresh"${checked(settings.autoRefresh)}${disabled(busy('auto-refresh'))}><span><strong>${text('autoRefresh')}</strong><small id="refresh-help">${text('refreshHelp')}</small></span></label></section>
-    <form class="settings-form" id="settings-form"><section class="settings-group"><h2>${text('serviceConnection')}</h2><p class="muted small">${text('serviceHelp')}</p><label class="field"><span>${text('serviceAddress')}</span><input id="endpoint" name="endpoint" type="url" aria-label="${text('serviceAddress')}" aria-describedby="endpoint-help" data-focus="endpoint" value="${escape(draft.endpoint)}" placeholder="https://your-demo-address" spellcheck="false" autocomplete="off" required><small id="endpoint-help">${text('endpointHelp')}</small></label><label class="field"><span>${text('teamCode')}</span><input id="access-token" name="accessToken" type="password" aria-label="${text('teamCode')}" aria-describedby="token-help" data-focus="access-token" value="${escape(draft.accessToken)}" placeholder="${text('codePlaceholder')}" autocomplete="off" spellcheck="false"><small id="token-help">${text('codeHelp')}</small></label></section>
+    <form class="settings-form" id="settings-form" novalidate>${recommendationSettingsView(draft.recommendationOptions)}<section class="settings-group"><h2>${text('serviceConnection')}</h2><p class="muted small">${text('serviceHelp')}</p><label class="field"><span>${text('serviceAddress')}</span><input id="endpoint" name="endpoint" type="url" aria-label="${text('serviceAddress')}" aria-describedby="endpoint-help" data-focus="endpoint" value="${escape(draft.endpoint)}" placeholder="https://your-demo-address" spellcheck="false" autocomplete="off" required><small id="endpoint-help">${text('endpointHelp')}</small></label><label class="field"><span>${text('teamCode')}</span><input id="access-token" name="accessToken" type="password" aria-label="${text('teamCode')}" aria-describedby="token-help" data-focus="access-token" value="${escape(draft.accessToken)}" placeholder="${text('codePlaceholder')}" autocomplete="off" spellcheck="false"><small id="token-help">${text('codeHelp')}</small></label></section>
     <section class="settings-group"><h2>${text('excludedWebsites')}</h2><p class="muted small">${text('excludedHelp')}</p><label class="field"><span>${text('domainsToSkip')}</span><textarea id="blocked-domains" name="blockedDomains" aria-label="${text('domainsToSkip')}" aria-describedby="domains-help" data-focus="blocked-domains" spellcheck="false">${escape(draft.blockedDomains)}</textarea><small id="domains-help">${text('domainsHelp')}</small></label></section>
     <div class="actions"><button class="primary" data-focus="save-settings" type="submit"${disabled(busy('settings'))}>${text(busy('settings') ? 'saving' : 'saveSettings')}</button><span class="muted" role="status">${ui.settingsDirty ? text('unsaved') : ui.settingsSaved ? text('settingsSaved') : ''}</span></div></form>
     <section class="settings-group"><h2>${text('localData')}</h2><p class="muted small">${text('localDataHelp')}</p><div class="data-actions"><button type="button" data-action="clear-derived">${text('clearBrowsing')}</button><button type="button" class="danger" data-action="reset">${text('reset')}</button></div></section>
@@ -288,12 +310,15 @@ function bindEvents() {
   });
   document.querySelector('#history-days')?.addEventListener('change', event => { ui.days = event.target.value; });
   app.querySelector('.candidate-inbox')?.addEventListener('toggle', event => { if (event.target.isConnected) ui.inboxOpen = event.target.open; });
+  app.querySelector('#recommendation-advanced')?.addEventListener('toggle', event => { if (event.target.isConnected) ui.advancedOptionsOpen = event.target.open; });
   app.querySelectorAll('[data-candidate]').forEach(input => input.addEventListener('change', event => { const id = event.target.dataset.candidate; event.target.checked ? ui.selected.add(id) : ui.selected.delete(id); render(); }));
   for (const id of ['discovery-mode', 'settings-mode']) document.getElementById(id)?.addEventListener('change', event => run('mode', () => dispatch({ type: 'SET_SETTINGS', patch: { mode: event.target.value } }), 'modeSaved'));
   document.getElementById('browsing-enabled')?.addEventListener('change', event => run('browsing', () => dispatch({ type: 'SET_SETTINGS', patch: { browsingEnabled: event.target.checked } }), 'browsingSaved'));
   document.getElementById('auto-refresh')?.addEventListener('change', event => run('auto-refresh', () => dispatch({ type: 'SET_SETTINGS', patch: { autoRefresh: event.target.checked } }), 'refreshSaved'));
   app.querySelectorAll('#settings-form input, #settings-form textarea').forEach(input => input.addEventListener('input', event => {
-    ui.settingsDraft[event.target.name] = event.target.value;
+    const option = event.target.dataset.recommendationOption;
+    if (option) ui.settingsDraft.recommendationOptions[option] = event.target.value;
+    else ui.settingsDraft[event.target.name] = event.target.value;
     ui.settingsDirty = true;
     ui.settingsSaved = false;
     const status = document.querySelector('.settings-form .actions [role="status"]');
@@ -304,7 +329,17 @@ function bindEvents() {
 
 async function saveSettings(event) {
   event.preventDefault();
-  const draft = { ...ui.settingsDraft };
+  const form = event.currentTarget;
+  const invalid = [...form.querySelectorAll('input, textarea')].find(input => !input.checkValidity());
+  if (invalid) {
+    const details = invalid.closest('details');
+    if (details) { details.open = true; ui.advancedOptionsOpen = true; }
+    invalid.reportValidity();
+    invalid.focus();
+    return;
+  }
+  const draft = structuredClone(ui.settingsDraft);
+  const recommendationOptions = Object.fromEntries(Object.entries(draft.recommendationOptions).map(([key, value]) => [key, Number(value)]));
   const domains = [...new Set(draft.blockedDomains.split(/[\n,]+/).map(domain => domain.trim().toLowerCase()).filter(Boolean))];
   if (domains.some(domain => !/^[a-z0-9]+(?:[a-z0-9.-]*[a-z0-9])?$/.test(domain) || domain.includes('..'))) {
     ui.error = 'Enter domain names without https://, paths, or spaces. Use one domain per line.';
@@ -312,7 +347,7 @@ async function saveSettings(event) {
     document.querySelector('#blocked-domains')?.focus();
     return;
   }
-  const next = await run('settings', () => dispatch({ type: 'SET_SETTINGS', patch: { endpoint: draft.endpoint.trim(), accessToken: draft.accessToken.trim(), blockedDomains: domains } }), 'settingsSaved');
+  const next = await run('settings', () => dispatch({ type: 'SET_SETTINGS', patch: { endpoint: draft.endpoint.trim(), accessToken: draft.accessToken.trim(), blockedDomains: domains, recommendationOptions } }), 'settingsSaved');
   if (next && !next.lastError && JSON.stringify(ui.settingsDraft) === JSON.stringify(draft)) {
     ui.settingsDirty = false;
     ui.settingsSaved = true;
@@ -336,6 +371,16 @@ async function onAction(event) {
   if (action === 'approve') { await run('approve', () => dispatch({ type: 'APPROVE', ids: [...ui.selected] }), 'selectedSaved'); return; }
   if (action === 'candidate-prev' || action === 'candidate-next') {
     ui.candidatePage = paginate(arr(state.candidates), ui.candidatePage + (action === 'candidate-next' ? 1 : -1)).page;
+    render(); return;
+  }
+  if (action === 'recommendation-prev' || action === 'recommendation-next') {
+    ui.recommendationPage = paginate(arr(state.recommendations), ui.recommendationPage + (action === 'recommendation-next' ? 1 : -1)).page;
+    render(); return;
+  }
+  if (action === 'reset-recommendation-options') {
+    ui.settingsDraft.recommendationOptions = { ...RECOMMENDATION_DEFAULTS };
+    ui.settingsDirty = true;
+    ui.settingsSaved = false;
     render(); return;
   }
   if (action === 'select-all') {
@@ -363,7 +408,7 @@ async function onAction(event) {
     const confirmed = await confirmDialog(t(reset ? 'startOver' : 'confirmClear'), t(reset ? 'resetDescription' : 'clearDescription'), t(reset ? 'reset' : 'clearBrowsing'));
     if (!confirmed) return;
     const next = await run(action, () => dispatch({ type: reset ? 'RESET' : 'CLEAR_DERIVED' }), reset ? 'resetDone' : 'clearDone');
-    if (reset && next && !next.lastError) { ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.mapSelection = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.candidatePage = 1; ui.view = 'discover'; render(); }
+    if (reset && next && !next.lastError) { ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.mapSelection = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.candidatePage = 1; ui.recommendationPage = 1; ui.view = 'discover'; render(); }
   }
 }
 

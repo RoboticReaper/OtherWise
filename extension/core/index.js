@@ -1,3 +1,5 @@
+import {normalizeRecommendationOptions, validRecommendationOptions} from './recommendation-options.js';
+
 const RETENTION_MS = 30 * 86_400_000;
 const MAX_INTERESTS = 40;
 const MAX_TOPIC_LENGTH = 80;
@@ -26,6 +28,7 @@ export function createState(now = Date.now()) {
     settings: {
       browsingEnabled: false, autoRefresh: false, mode: 'path', globalLevel: 0, language: 'en', recommendationView: 'cards',
       endpoint: 'http://127.0.0.1:8000', accessToken: '',
+      recommendationOptions: normalizeRecommendationOptions(),
       blockedDomains: [...DEFAULT_BLOCKED_DOMAINS], analysisSince: 0,
     },
     approved: [], baseline: [], candidates: [], evidence: [], suppressed: [],
@@ -209,9 +212,13 @@ function updateSettings(state, patch, now) {
   if (!patch || typeof patch !== 'object') return;
   let changed = false;
   let error = null;
-  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView']) {
+  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'recommendationOptions']) {
     if (!(name in patch)) continue;
     let value = patch[name];
+    if (name === 'recommendationOptions') {
+      if (!validRecommendationOptions(value)) { error = 'Enter valid recommendation settings.'; continue; }
+      value = normalizeRecommendationOptions({...state.settings.recommendationOptions, ...value});
+    }
     if (['browsingEnabled', 'autoRefresh'].includes(name) && typeof value !== 'boolean') continue;
     if (name === 'mode' && !['path', 'global'].includes(value)) continue;
     if (name === 'language' && !['en', 'zh-CN'].includes(value)) continue;
@@ -247,6 +254,7 @@ export function reduceState(state, action, now = Date.now()) {
   if (['INGEST', 'RECOMMENDATIONS', 'ERROR'].includes(action.type) && action.generation !== undefined && action.generation !== state.generation) return state;
   if (action.type === 'RESET') { const reset = createState(now); reset.generation = state.generation + 1; return reset; }
   const next = structuredClone(state);
+  next.settings.recommendationOptions = normalizeRecommendationOptions(next.settings.recommendationOptions);
   if (!['en', 'zh-CN'].includes(next.settings.language)) next.settings.language = 'en';
   if (!['cards', 'list'].includes(next.settings.recommendationView)) next.settings.recommendationView = 'cards';
   // Existing installs can infer onboarding once, without retaining deleted baseline IDs.
@@ -310,7 +318,7 @@ export function reduceState(state, action, now = Date.now()) {
     case 'RECOMMENDATIONS': {
       // Missing generations cannot bypass the response guard.
       if (action.generation !== next.generation) break;
-      next.recommendations = Array.isArray(action.items) ? action.items.slice(0, 20).map(item => {
+      next.recommendations = Array.isArray(action.items) ? action.items.slice(0, 100).map(item => {
         const topic = sanitizeTopic(item);
         if (!topic) return null;
         const recommendation = {...topic};
@@ -338,6 +346,6 @@ export function buildRequest(state) {
   return {
     keywords, mode: state.settings?.mode === 'global' ? 'global' : 'path',
     focus: keywords.includes(state.focus) ? state.focus : null,
-    expansion_level: Math.max(0, Math.min(8, level)), limit: 10,
+    expansion_level: Math.max(0, Math.min(8, level)), ...normalizeRecommendationOptions(state.settings?.recommendationOptions),
   };
 }

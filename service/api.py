@@ -26,6 +26,7 @@ MAX_BODY_BYTES = 16_384
 REQUESTS_PER_MINUTE = 30
 LOGGER = logging.getLogger("otherwise.service")
 Phrase = Annotated[str, StringConstraints(strict=True, min_length=1, max_length=120)]
+UnitControl = Annotated[float, Field(ge=0, le=1, allow_inf_nan=False)]
 
 
 class RecommendationRequest(BaseModel):
@@ -35,7 +36,13 @@ class RecommendationRequest(BaseModel):
     mode: Literal["path", "global"]
     focus: Phrase | None
     expansion_level: Annotated[int, Field(ge=0, le=8)]
-    limit: Annotated[int, Field(ge=1, le=20)]
+    limit: Annotated[int, Field(ge=1, le=100)]
+    radius: UnitControl = .28
+    expansion: UnitControl = .07
+    overlap: UnitControl = .015
+    diversity: UnitControl = .20
+    max_overlap_fraction: Annotated[float, Field(ge=0, le=.95, allow_inf_nan=False)] = .20
+    randomness: UnitControl = .03
 
     @field_validator("keywords")
     @classmethod
@@ -166,7 +173,11 @@ def create_app(engine=None, token=None):
             return error("Recommendation service is busy. Try again shortly.", 429, **{"Retry-After": "2"})
         try:
             result = engine.recommend(payload.keywords, mode=payload.mode, focus=payload.focus,
-                                      expansion_level=payload.expansion_level, limit=payload.limit)
+                                      expansion_level=payload.expansion_level, limit=payload.limit,
+                                      radius=payload.radius, expansion=payload.expansion,
+                                      overlap=payload.overlap, diversity=payload.diversity,
+                                      max_overlap_fraction=payload.max_overlap_fraction,
+                                      randomness=payload.randomness)
             return {"recommendations": result, "mode": payload.mode, "expansion_level": payload.expansion_level}
         except Exception:
             LOGGER.warning("Recommendation computation failed.")

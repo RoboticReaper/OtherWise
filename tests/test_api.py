@@ -2,6 +2,7 @@
 
 import importlib
 import asyncio
+import json
 import threading
 from concurrent.futures import ThreadPoolExecutor
 
@@ -66,7 +67,7 @@ def test_environment_token_is_used(monkeypatch):
     {"keywords": ["x" * 121]}, {"keywords": ["private\ntext"]}, {"keywords": [42]},
     {"keywords": ["!!!"]}, {"focus": "Not approved"}, {"mode": "invalid"},
     {"expansion_level": -1}, {"expansion_level": 9}, {"expansion_level": True},
-    {"expansion_level": "1"}, {"limit": 0}, {"limit": 21}, {"limit": 1.5},
+    {"expansion_level": "1"}, {"limit": 0}, {"limit": 101}, {"limit": 1.5}, {"limit": True},
     {"raw_url": "https://private.example/secret"}, {"history": ["private browsing record"]},
 ])
 def test_invalid_extra_and_unbounded_inputs_are_rejected_without_echo(client, patch):
@@ -75,6 +76,48 @@ def test_invalid_extra_and_unbounded_inputs_are_rejected_without_echo(client, pa
     assert "private" not in response.text
     assert "Not approved" not in response.text
     assert "https://" not in response.text
+
+
+@pytest.mark.parametrize("name", ["radius", "expansion", "overlap", "diversity", "max_overlap_fraction", "randomness"])
+@pytest.mark.parametrize("value", [True, "0.2", None, -0.01, 1.01, float("nan"), float("inf"), -float("inf")])
+def test_recommendation_controls_reject_invalid_numbers_without_echo(client, name, value):
+    response = client.post("/api/recommend", headers=AUTH | {"Content-Type": "application/json"},
+                           content=json.dumps(PAYLOAD | {name: value}))
+    assert response.status_code == 422
+    assert response.json() == {"detail": "Invalid recommendation request."}
+
+
+def test_overlap_share_has_a_stricter_upper_bound(client):
+    assert client.post("/api/recommend", headers=AUTH,
+                       json=PAYLOAD | {"max_overlap_fraction": .96}).status_code == 422
+
+
+def test_custom_controls_change_the_band_and_actual_familiar_share():
+    engine = make_engine(["Too close", "Overlap A", "Overlap B", "New A", "New B", "Too far"],
+                         [.1, .22, .24, .31, .34, .6])
+    controls = {"radius": .3, "expansion": .1, "overlap": .1,
+                "diversity": 0, "max_overlap_fraction": .5, "randomness": 0}
+    with TestClient(app_factory(engine=engine, token=TOKEN)) as session:
+        response = session.post("/api/recommend", headers=AUTH, json=PAYLOAD | controls)
+        assert response.status_code == 200
+        recommendations = response.json()["recommendations"]
+        assert {row["id"] for row in recommendations} == {"Overlap A", "Overlap B", "New A", "New B"}
+        assert sum(row["zone"] == "Familiar overlap" for row in recommendations) == 2
+        without_overlap = session.post("/api/recommend", headers=AUTH,
+                                       json=PAYLOAD | controls | {"max_overlap_fraction": 0})
+        assert {row["id"] for row in without_overlap.json()["recommendations"]} == {"New A", "New B"}
+
+
+def test_api_returns_more_than_twenty_when_the_requested_band_has_room():
+    engine = make_engine([f"Topic {i}" for i in range(60)], [.30 + i * .0005 for i in range(60)])
+    with TestClient(app_factory(engine=engine, token=TOKEN)) as session:
+        response = session.post("/api/recommend", headers=AUTH, json=PAYLOAD | {"limit": 50, "randomness": 0})
+        assert response.status_code == 200
+        recommendations = response.json()["recommendations"]
+        assert len(recommendations) == len({row["id"] for row in recommendations}) == 50
+        sparse = session.post("/api/recommend", headers=AUTH, json=PAYLOAD | {"limit": 100, "randomness": 0})
+        assert sparse.status_code == 200
+        assert len(sparse.json()["recommendations"]) == 60
 
 
 def test_missing_fields_and_malformed_json_never_echo_input(client):
