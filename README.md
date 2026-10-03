@@ -1,5 +1,7 @@
 # Interest explorer
 
+**[Visit the OtherWise website →](https://RoboticReaper.github.io/OtherWise/)**
+
 A minimal notebook for discovering meaningful topics beyond your current interests.
 It searches an editable catalog of **3,452 topics across 23 domains**, using a local
 embedding model and an adjustable band around your existing interests.
