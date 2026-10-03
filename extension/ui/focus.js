@@ -267,8 +267,15 @@ export function createFocusView({container,data,snapshot={seedId:null,nodes:[],s
     if(gestureMoved&&!map.hasPointerCapture(event.pointerId))map.setPointerCapture(event.pointerId);
     pointers.set(event.pointerId,p);paint();
   });
-  const endPointer=event=>{pointers.delete(event.pointerId);if(map.hasPointerCapture(event.pointerId))map.releasePointerCapture(event.pointerId);if(event.type==='pointercancel'){gestureMoved=true;lastClick=null;doubleId=null;activation.cancel();}};
-  on(map,'pointerup',endPointer);on(map,'pointercancel',endPointer);
+  const endPointer=event=>{
+    if(!pointers.delete(event.pointerId))return;
+    if(map.hasPointerCapture(event.pointerId))map.releasePointerCapture(event.pointerId);
+    if(event.type==='pointercancel'||!event.composedPath().includes(map)){gestureMoved=true;clearClickSequence();}
+  };
+  // A fast star press can exit before any in-map move enables capture.
+  // Owner-window terminal events clean that path too; on() includes them in destroy cleanup.
+  const ownerWindow=map.ownerDocument.defaultView;
+  on(ownerWindow,'pointerup',endPointer,true);on(ownerWindow,'pointercancel',endPointer,true);
   on(map,'lostpointercapture',event=>{if(event.target===map&&pointers.delete(event.pointerId)){gestureMoved=true;clearClickSequence();}});
   on(map,'wheel',event=>{event.preventDefault();clearClickSequence();zoom(Math.exp(-event.deltaY*.0015),localPoint(event));},{passive:false});
   on(root,'keydown',event=>{
