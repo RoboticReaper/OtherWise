@@ -71,6 +71,23 @@ The first model load downloads public weights into `.cache/models`; inference ru
 locally and requires no API key. After downloading, set `HF_HUB_OFFLINE=1` if you
 want to run without any network requests.
 
+## Specific ideas and feedback
+
+The notebook now includes **section 10: Specific ideas and feedback**. It follows
+sourced Wikipedia category paths to specific concepts, checks their actual MPNet
+distances, and lets you independently mark **Curious**, **Already know**, **Too
+basic**, or **Too hard**. Feedback reranks the search immediately. An exploration
+share reserves places for less-shown eligible areas.
+
+The specific-concept catalog covers the same 23 domains as the broad catalog,
+with 160 concepts and three navigation areas per domain. Section 10 displays
+the measured coverage. All domains use the same traversal and sampling rules.
+
+Your profile is saved locally in `.local/feedback.json` (ignored by Git). The graph
+snapshot runs offline; its provenance and refresh instructions are in
+[data/discovery_graph_README.md](data/discovery_graph_README.md). See the
+[feedback and ranking guide](docs/graph-feedback.md) for the exact rules and limits.
+
 ## Controls
 
 - **Interest radius:** how much nearby material counts as already familiar.
