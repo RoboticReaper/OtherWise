@@ -164,3 +164,59 @@ dialog .dialog-actions { display: flex; gap: 8px; justify-content: flex-end; fle
 }
 @media (max-width: 340px) { .app-shell { padding-inline: 16px; } .connection-label { max-width: 94px; } .manual-form { flex-wrap: wrap; } .manual-form button { width: 100%; } }
 @media (prefers-reduced-motion: no-preference) { button { transition: background .15s, border-color .15s; } }
+
+/* Preferences stay within reach in both the side panel and wider pages. */
+.header-tools { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 9px 18px; min-width: 0; }
+.language-control { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--muted); }
+.language-control > span { white-space: nowrap; }
+.language-control select { width: auto; padding: 6px 8px; font-size: 12px; }
+.language-note { color: #c0cfce; font-size: 12px; border-left: 2px solid #769694; padding-left: 11px; margin: 0 0 18px; }
+.settings-group .language-control { justify-content: flex-start; margin: 15px 0; }
+.settings-group .language-note { margin-top: 15px; }
+.candidate-range { margin: 0; font-size: 11px; }
+.inbox-pagination { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 14px 0 12px; }
+.inbox-pagination button { padding: 7px 11px; font-size: 12px; }
+.inbox-pagination button:disabled { cursor: default; }
+.page-status { color: var(--silver); font-size: 12px; text-align: center; }
+.selection-count { margin: 10px 0 0; }
+.inbox-actions { margin-top: 9px; }
+
+.view-switch { display: flex; flex: 0 0 auto; border: 1px solid var(--control); border-radius: 8px; padding: 2px; gap: 2px; }
+.view-switch button { border: 0; border-radius: 5px; color: var(--muted); font-size: 11px; padding: 5px 9px; }
+.view-switch button[aria-pressed='true'] { background: #304447; color: var(--ivory); }
+.recommendation-content { min-width: 0; }
+.recommendations.is-list { display: flex; flex-direction: column; gap: 0; border: 1px solid #2b3b4c; border-radius: 11px; overflow: hidden; }
+.is-list .recommendation-card { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 10px 20px; border: 0; border-bottom: 1px solid #2b3b4c; border-radius: 0; padding: 13px 16px; background: #14212e; }
+.is-list .recommendation-card:last-child { border-bottom: 0; }
+.is-list .recommendation-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 3px 12px; margin-bottom: 5px; }
+.is-list .recommendation-heading h3 { order: -1; font-size: 18px; margin: 0; }
+.is-list .recommendation-heading .eyebrow { font-size: 9px; }
+.is-list .topic-description { font-size: 12px; margin: 0; }
+.is-list .related { margin-top: 5px; font-size: 10px; }
+.is-list .recommendation-actions { min-width: 169px; }
+.is-list .card-search { margin-top: 0; }
+.is-list .card-search button { padding: 5px 8px; }
+.is-list .card-feedback { margin-top: 4px; gap: 8px; }
+.is-list .card-feedback button { padding: 4px 0; }
+.description-details { font-size: 12px; color: var(--muted); }
+.description-details summary { cursor: pointer; overflow-wrap: anywhere; }
+.description-more, .description-less { color: var(--sage); font-size: 11px; white-space: nowrap; }
+.description-less, .description-details[open] .description-preview, .description-details[open] .description-more { display: none; }
+.description-details[open] .description-less { display: inline; }
+.description-details[open] .topic-description { margin-top: 5px; }
+@media (max-width: 600px) {
+  .app-header { align-items: flex-start; gap: 10px; }
+  .header-tools { flex-direction: column; align-items: flex-end; gap: 6px; }
+  .header-tools .language-control { align-items: flex-end; flex-direction: column; gap: 3px; }
+  .language-control select { padding: 5px 8px; }
+  .is-list .recommendation-card { grid-template-columns: minmax(0, 1fr); padding: 12px 14px; gap: 7px; }
+  .is-list .recommendation-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 14px; }
+  .is-list .card-feedback { margin: 0; flex: 1; justify-content: flex-start; gap: 14px; }
+  .is-list .recommendation-heading { gap: 2px 9px; }
+}
+@media (max-width: 340px) {
+  .inbox-pagination { gap: 5px; }
+  .inbox-pagination button { padding: 6px 8px; }
+  .page-status { font-size: 11px; }
+  .section-heading { gap: 8px; flex-wrap: wrap; }
+}

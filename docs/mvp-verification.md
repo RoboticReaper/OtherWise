@@ -1,5 +1,22 @@
 # MVP verification — 2026-10-03
 
+## UI update 0.1.1
+
+The pagination, English/Simplified Chinese UI, and Cards/List update passed all
+66 JavaScript tests and both browser suites. The original real-model extension
+flow still passes its 13 grouped checks. The new UI suite checks 103 fictional
+candidates, page-only bulk selection, cross-page approval, last-page deletion,
+literal English recommendation data, dirty drafts/caret, local preference
+persistence after reload, and compact rows at 390/1100px with no horizontal overflow.
+There were no external requests during the UI-only suite. An immediate native
+description toggle followed by language switching is covered after fixing its
+asynchronous toggle-event race. Independent scoped review found no remaining issues.
+
+Chinese support is limited to UI; this update does not add Chinese support to
+the recommendation system or change its request schema.
+
+## Initial MVP
+
 The first OtherWise extension MVP was verified on macOS using Python 3.13,
 Node 24, and an isolated Chromium 141 profile. No real user browser history was read.
 

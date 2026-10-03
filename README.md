@@ -1,8 +1,11 @@
 # OtherWise
 
-Your world, a little wider. OtherWise connects an English Chrome side panel to a
+Your world, a little wider. OtherWise connects a Chrome side panel to a
 local Python recommendation service. Browsing titles become candidate interests
 on the device; only interests explicitly saved by the user reach the service.
+The interface supports English and Simplified Chinese. Interest input and
+recommendation content remain English. Candidate topics are paginated; discoveries
+can be shown as cards or compact list rows.
 
 ## Run the extension demo
 

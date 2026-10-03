@@ -47,6 +47,14 @@ Storage is `chrome.storage.local`, restricted to trusted extension contexts.
 Messages accept only this extension's own pages. There are no content scripts.
 Production requests omit credentials and reject redirects.
 
+`settings.language` is a local UI preference (`en` or `zh-CN`). Existing installs
+default to English. Changing it does not invalidate recommendations, cancel an
+active request or trigger automatic refresh, and it never enters the API payload.
+Topic titles, domains and descriptions are data and stay in their original language.
+Candidate pagination is view state; selections keep topic IDs across pages.
+`settings.recommendationView` similarly stores `cards` (the existing default) or
+`list`, without changing profile generation, requests or recommendation contents.
+
 ## API
 
 `GET /health`: `{ "ready": true }` when the real engine is available; otherwise 503.

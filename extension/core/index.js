@@ -24,7 +24,7 @@ export function createState(now = Date.now()) {
   return {
     schemaVersion: 1, generation: 0, salt: randomSalt(), onboardingComplete: false,
     settings: {
-      browsingEnabled: false, autoRefresh: false, mode: 'path', globalLevel: 0,
+      browsingEnabled: false, autoRefresh: false, mode: 'path', globalLevel: 0, language: 'en', recommendationView: 'cards',
       endpoint: 'http://127.0.0.1:8000', accessToken: '',
       blockedDomains: [...DEFAULT_BLOCKED_DOMAINS], analysisSince: 0,
     },
@@ -209,11 +209,13 @@ function updateSettings(state, patch, now) {
   if (!patch || typeof patch !== 'object') return;
   let changed = false;
   let error = null;
-  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains']) {
+  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView']) {
     if (!(name in patch)) continue;
     let value = patch[name];
     if (['browsingEnabled', 'autoRefresh'].includes(name) && typeof value !== 'boolean') continue;
     if (name === 'mode' && !['path', 'global'].includes(value)) continue;
+    if (name === 'language' && !['en', 'zh-CN'].includes(value)) continue;
+    if (name === 'recommendationView' && !['cards', 'list'].includes(value)) continue;
     if (name === 'endpoint') {
       try {
         const parsed = new URL(value);
@@ -229,7 +231,8 @@ function updateSettings(state, patch, now) {
     if (JSON.stringify(state.settings[name]) !== JSON.stringify(value)) {
       if (name === 'browsingEnabled' && value) state.settings.analysisSince = now;
       state.settings[name] = value;
-      changed = true;
+      // Presentation preferences never change the profile or cancel work.
+      if (!['language', 'recommendationView'].includes(name)) changed = true;
     }
   }
   if (changed) {
@@ -244,6 +247,8 @@ export function reduceState(state, action, now = Date.now()) {
   if (['INGEST', 'RECOMMENDATIONS', 'ERROR'].includes(action.type) && action.generation !== undefined && action.generation !== state.generation) return state;
   if (action.type === 'RESET') { const reset = createState(now); reset.generation = state.generation + 1; return reset; }
   const next = structuredClone(state);
+  if (!['en', 'zh-CN'].includes(next.settings.language)) next.settings.language = 'en';
+  if (!['cards', 'list'].includes(next.settings.recommendationView)) next.settings.recommendationView = 'cards';
   // Existing installs can infer onboarding once, without retaining deleted baseline IDs.
   if (next.onboardingComplete === undefined) next.onboardingComplete = next.approved.length > 0 || next.baseline.length > 0;
   const observations = action.type === 'INGEST' && Array.isArray(action.observations) ? action.observations : [];

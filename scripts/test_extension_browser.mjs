@@ -38,7 +38,7 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  const worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');
  page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
  await page.goto(worker.url().replace('background.js','sidepanel.html'));
- await page.getByPlaceholder('An interest, a subject, a curiosity…').waitFor();
+ await page.locator('#manual-interest').waitFor();
  await until(async()=>!!(await get()));
  assert.equal((await get()).settings.browsingEnabled,false);
  assert.equal((await get()).settings.autoRefresh,false);

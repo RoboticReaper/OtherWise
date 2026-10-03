@@ -1,15 +1,18 @@
 import { getState, dispatch, importHistory, recommend, search, subscribe } from '../bridge.js';
+import { normalizeLanguage, translate, translateError } from './i18n.js';
+import { paginate } from './pagination.js';
 
 const app = document.querySelector('#app');
 const preview = new URLSearchParams(location.search).get('preview') === '1';
 const ui = {
-  view: 'discover', manual: '', days: '30', selected: new Set(), inboxOpen: true,
+  view: 'discover', manual: '', days: '30', selected: new Set(), inboxOpen: true, candidatePage: 1,
   mapSelection: null, settingsDraft: null, settingsDirty: false, settingsSaved: false,
-  pending: new Set(), error: null, announcement: '', loaded: false,
+  pending: new Set(), expandedDescriptions: new Set(), error: null, announcement: '', loaded: false,
 };
 let state = null;
 let mapObserver;
 let unsubscribe;
+let preferenceSequence = 0;
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
 const arr = value => Array.isArray(value) ? value : [];
@@ -20,6 +23,10 @@ const disabled = value => value ? ' disabled' : '';
 const checked = value => value ? ' checked' : '';
 const getTopic = id => [...arr(state?.approved), ...arr(state?.recommendations), ...arr(state?.explored), ...arr(state?.candidates)].find(topic => topicId(topic) === id);
 const isApproved = id => arr(state?.approved).some(topic => topicId(topic) === id);
+const language = () => normalizeLanguage(state?.settings?.language);
+const t = (key, values) => translate(language(), key, values);
+const text = (key, values) => escape(t(key, values));
+const candidatePage = () => paginate(arr(state?.candidates), ui.candidatePage);
 
 function snapshotSettings() {
   const settings = state?.settings || {};
@@ -35,6 +42,7 @@ function applyState(next) {
   ui.loaded = true;
   const candidates = new Set(arr(state.candidates).map(topicId));
   ui.selected = new Set([...ui.selected].filter(id => candidates.has(id)));
+  ui.candidatePage = candidatePage().page;
   if (!ui.settingsDirty) ui.settingsDraft = snapshotSettings();
   render();
 }
@@ -57,28 +65,45 @@ async function run(key, operation, announcement) {
   }
 }
 
+function languageSelect(id) {
+  return `<label class="language-control" for="${id}"><span>Language / 语言</span><select id="${id}" data-language data-focus="${id}" aria-label="Language / 语言"><option value="en"${language() === 'en' ? ' selected' : ''}>English</option><option value="zh-CN"${language() === 'zh-CN' ? ' selected' : ''}>简体中文</option></select></label>`;
+}
+
 function render() {
   const focused = document.activeElement;
   const focusKey = focused?.dataset?.focus;
   const selection = focused && 'selectionStart' in focused ? [focused.selectionStart, focused.selectionEnd] : null;
+  const recommendationIds = new Set(arr(state?.recommendations).map(topicId));
+  ui.expandedDescriptions = new Set([...ui.expandedDescriptions].filter(id => recommendationIds.has(id)));
+  // Native toggle events are queued; capture the live state before replacing the DOM.
+  app.querySelectorAll('[data-description]').forEach(details => {
+    const id = details.dataset.description;
+    if (!details.isConnected || !recommendationIds.has(id)) return;
+    details.open ? ui.expandedDescriptions.add(id) : ui.expandedDescriptions.delete(id);
+  });
   mapObserver?.disconnect();
   const error = ui.error || state?.lastError;
+  document.documentElement.lang = language();
+  document.title = t('title');
   app.setAttribute('aria-busy', String(!ui.loaded));
   app.innerHTML = `<div class="app-shell">
     <header class="app-header"><span class="brand">OtherWise<span class="brand-star" aria-hidden="true">✦</span></span>
-      <span class="connection-label${error ? ' has-error' : ''}">${!ui.loaded ? 'Opening…' : error ? 'Needs attention' : preview ? 'Demo preview' : 'Saved on this device'}</span>
+      <div class="header-tools">${languageSelect('ui-language')}<span class="connection-label${error ? ' has-error' : ''}">${text(!ui.loaded ? 'opening' : error ? 'attention' : preview ? 'demo' : 'local')}</span></div>
     </header>
-    ${preview ? '<div class="demo-notice"><strong>Demo preview</strong> · These are sample interests and exploration paths. This preview does not read your browser history.</div>' : ''}
-    <nav class="main-nav" aria-label="Main navigation">${[['discover', 'Discover'], ['map', 'Map'], ['settings', 'Settings']].map(([view, label]) => `<button type="button" data-action="view" data-view="${view}" data-focus="nav-${view}"${ui.view === view ? ' aria-current="page"' : ''}>${label}</button>`).join('')}</nav>
-    ${error ? `<div class="error-banner" role="alert"><p><strong>Couldn’t finish that.</strong><br>${escape(error)}${ui.view !== 'settings' ? '<br>Check the service connection in Settings, then try again.' : ''}</p><button type="button" class="quiet" data-action="clear-error" aria-label="Dismiss error">×</button></div>` : ''}
+    ${preview ? `<div class="demo-notice"><strong>${text('demo')}</strong> · ${text('demoNotice')}</div>` : ''}
+    <nav class="main-nav" aria-label="${text('mainNavigation')}">${['discover', 'map', 'settings'].map(view => `<button type="button" data-action="view" data-view="${view}" data-focus="nav-${view}"${ui.view === view ? ' aria-current="page"' : ''}>${text(view)}</button>`).join('')}</nav>
+    ${error ? `<div class="error-banner" role="alert"><p><strong>${text('errorHeading')}</strong><br>${escape(translateError(language(), error))}${ui.view !== 'settings' ? `<br>${text('errorHint')}` : ''}</p><button type="button" class="quiet" data-action="clear-error" aria-label="${text('dismissError')}">×</button></div>` : ''}
     <main id="main-view">${!ui.loaded ? loadingView() : ui.view === 'settings' ? settingsView() : ui.view === 'map' ? mapView() : discoverView()}</main>
-    <footer class="app-footer">A search is a step into a subject. Save an interest when it feels like yours.</footer>
-    <div class="sr-only" role="status" aria-live="polite">${escape(ui.announcement)}</div>
+    <footer class="app-footer">${text('footer')}</footer>
+    <div class="sr-only" role="status" aria-live="polite">${ui.announcement ? text(ui.announcement) : ''}</div>
   </div>`;
   bindEvents();
   if (ui.view === 'map' && ui.loaded) drawMap();
   if (focusKey) {
-    const target = [...app.querySelectorAll('[data-focus]')].find(element => element.dataset.focus === focusKey);
+    let target = [...app.querySelectorAll('[data-focus]')].find(element => element.dataset.focus === focusKey);
+    // A boundary button becomes disabled after paging. Keep keyboard focus nearby.
+    if (target?.disabled && focusKey.startsWith('candidate-')) target = app.querySelector('.inbox-pagination button:not(:disabled)') || app.querySelector('.candidate-inbox summary');
+    if (!target && (focusKey.startsWith('candidate-') || focusKey.startsWith('dismiss:'))) target = app.querySelector('.candidate-inbox summary');
     if (target) {
       target.focus({ preventScroll: true });
       if (selection && typeof target.setSelectionRange === 'function' && target.type !== 'number') {
@@ -89,7 +114,7 @@ function render() {
 }
 
 function loadingView() {
-  return `<section class="empty-state"><h1>Your world, a little wider.</h1><p>Opening your saved interests…</p>${ui.error ? '<button type="button" data-action="reload">Try again</button>' : ''}</section>`;
+  return `<section class="empty-state"><h1>${text('headline')}</h1><p>${text('loadingInterests')}</p>${ui.error ? `<button type="button" data-action="reload">${text('retry')}</button>` : ''}</section>`;
 }
 
 function discoverView() {
@@ -97,27 +122,44 @@ function discoverView() {
   const candidates = arr(state.candidates);
   const items = arr(state.recommendations);
   const mode = state.settings?.mode || 'path';
-  return `<section class="hero"><span class="little-star" aria-hidden="true">✧</span><p class="eyebrow">Follow your curiosity</p><h1>Your world,<br>a little wider.</h1><p>Start with what you love. Find a nearby subject you might never have thought to explore.</p></section>
-    ${!approved.length && !arr(state.baseline).length ? `<div class="intro"><p><strong>A small beginning is enough.</strong> Add an interest, or review topics found in your recent Chrome visits.</p><p class="small">Browsing topics stay on this device until you confirm them. Only your saved interest names are shared with the recommendation service.</p></div>` : ''}
-    <form class="manual-form" id="manual-form"><label class="sr-only" for="manual-interest">Add an interest</label><input id="manual-interest" data-focus="manual-interest" name="interest" placeholder="An interest, a subject, a curiosity…" maxlength="120" value="${escape(ui.manual)}" autocomplete="off"><button class="primary" data-focus="add-interest" type="submit"${disabled(busy('add'))}>${busy('add') ? 'Saving…' : 'Add'}</button></form>
-    <div class="import-row"><button type="button" data-action="import"${disabled(busy('import'))}>${busy('import') ? 'Reviewing visits…' : 'Review recent browsing'}</button><label class="sr-only" for="history-days">History review period</label><select id="history-days" data-focus="history-days"${disabled(busy('import'))}><option value="7"${ui.days === '7' ? ' selected' : ''}>Past 7 days</option><option value="30"${ui.days === '30' ? ' selected' : ''}>Past 30 days</option></select></div>
+  const listView = state.settings?.recommendationView === 'list';
+  return `<section class="hero"><span class="little-star" aria-hidden="true">✧</span><p class="eyebrow">${text('curiosity')}</p><h1>${text('headlineFirst')}<br>${text('headlineSecond')}</h1><p>${text('heroDescription')}</p></section>
+    ${!approved.length && !arr(state.baseline).length ? `<div class="intro"><p><strong>${text('smallBeginning')}</strong> ${text('intro')}</p><p class="small">${text('introPrivacy')}</p></div>` : ''}
+    <form class="manual-form" id="manual-form"><label class="sr-only" for="manual-interest">${text('addInterest')}</label><input id="manual-interest" data-focus="manual-interest" name="interest" placeholder="${text('interestPlaceholder')}" aria-describedby="interest-language-help" maxlength="120" value="${escape(ui.manual)}" autocomplete="off"><button class="primary" data-focus="add-interest" type="submit"${disabled(busy('add'))}>${text(busy('add') ? 'saving' : 'add')}</button></form>
+    <p class="language-note" id="interest-language-help">${text('languageScope')}</p>
+    <div class="import-row"><button type="button" data-action="import"${disabled(busy('import'))}>${text(busy('import') ? 'reviewing' : 'reviewBrowsing')}</button><label class="sr-only" for="history-days">${text('historyPeriod')}</label><select id="history-days" data-focus="history-days"${disabled(busy('import'))}><option value="7"${ui.days === '7' ? ' selected' : ''}>${text('historyDays', { days: 7 })}</option><option value="30"${ui.days === '30' ? ' selected' : ''}>${text('historyDays', { days: 30 })}</option></select></div>
     ${candidates.length ? inboxView(candidates) : ''}
-    <section class="section" aria-labelledby="interests-title"><div class="section-heading"><h2 id="interests-title">Your interests</h2>${approved.length ? '<span class="muted small">Saved by you</span>' : ''}</div>${approved.length ? `<div class="interests">${approved.map(topic => `<span class="interest-chip"><span>${escape(topicTitle(topic))}</span><button type="button" data-action="remove" data-id="${escape(topicId(topic))}" aria-label="Remove ${escape(topicTitle(topic))} from interests">×</button></span>`).join('')}</div>` : '<p class="muted small">Your first saved interest will be your starting point.</p>'}</section>
-    <section class="section" aria-labelledby="recommendations-title"><div class="section-heading"><h2 id="recommendations-title">A little beyond</h2></div>
-    <div class="discovery-toolbar"><label class="sr-only" for="discovery-mode">Discovery mode</label><select id="discovery-mode" data-focus="discovery-mode"><option value="path"${mode === 'path' ? ' selected' : ''}>Follow a path</option><option value="global"${mode === 'global' ? ' selected' : ''}>Explore across interests</option></select><button type="button" data-action="recommend"${disabled(!approved.length || busy('recommend'))}>${busy('recommend') ? 'Finding subjects…' : items.length ? 'Refresh ideas' : 'Find ideas'} <span aria-hidden="true">↗</span></button></div>
-    ${approved.length ? `<p class="focus-note">${mode === 'path' ? `Starting near <strong>${escape(state.focus || topicTitle(approved.at(-1)))}</strong>. Your most recently saved interest guides this path.` : 'Drawing from all your saved interests. The range grows only when you confirm a new interest.'}</p>` : ''}
-    ${items.length ? `<div class="recommendations">${items.map(cardView).join('')}</div>` : `<div class="empty-state"><div class="empty-symbol" aria-hidden="true">✧</div><h3>${approved.length ? 'There’s room for something new.' : 'A beginning, not a blank page.'}</h3><p>${approved.length ? 'Find ideas around your interests. If the service is unavailable, your saved interests and map are still here.' : 'Save an interest above. Your first discoveries will appear here.'}</p></div>`}
-    ${state.lastUpdated ? `<p class="last-updated">Ideas updated ${escape(formatTime(state.lastUpdated))}</p>` : ''}</section>`;
+    <section class="section" aria-labelledby="interests-title"><div class="section-heading"><h2 id="interests-title">${text('yourInterests')}</h2>${approved.length ? `<span class="muted small">${text('savedByYou')}</span>` : ''}</div>${approved.length ? `<div class="interests">${approved.map(topic => `<span class="interest-chip"><span>${escape(topicTitle(topic))}</span><button type="button" data-action="remove" data-id="${escape(topicId(topic))}" aria-label="${text('removeInterest', { topic: topicTitle(topic) })}">×</button></span>`).join('')}</div>` : `<p class="muted small">${text('firstInterest')}</p>`}</section>
+    <section class="section" aria-labelledby="recommendations-title"><div class="section-heading"><h2 id="recommendations-title">${text('beyond')}</h2><div class="view-switch" role="group" aria-label="${text('recommendationLayout')}">${['cards', 'list'].map(value => `<button type="button" data-action="recommendation-view" data-value="${value}" data-focus="recommendation-view-${value}" aria-pressed="${(value === 'list') === listView}">${text(value)}</button>`).join('')}</div></div>
+    <div class="discovery-toolbar"><label class="sr-only" for="discovery-mode">${text('discoveryMode')}</label><select id="discovery-mode" data-focus="discovery-mode"><option value="path"${mode === 'path' ? ' selected' : ''}>${text('followPath')}</option><option value="global"${mode === 'global' ? ' selected' : ''}>${text('acrossInterests')}</option></select><button type="button" data-action="recommend"${disabled(!approved.length || busy('recommend'))}>${text(busy('recommend') ? 'finding' : items.length ? 'refreshIdeas' : 'findIdeas')} <span aria-hidden="true">↗</span></button></div>
+    ${approved.length ? `<p class="focus-note">${mode === 'path' ? text('pathNote', { topic: state.focus || topicTitle(approved.at(-1)) }) : text('globalNote')}</p>` : ''}
+    ${items.length ? `<div class="recommendations${listView ? ' is-list' : ''}">${items.map(topic => cardView(topic, listView)).join('')}</div>` : `<div class="empty-state"><div class="empty-symbol" aria-hidden="true">✧</div><h3>${text(approved.length ? 'newRoom' : 'firstPage')}</h3><p>${text(approved.length ? 'findHelp' : 'firstHelp')}</p></div>`}
+    ${state.lastUpdated ? `<p class="last-updated">${text('updated', { time: formatTime(state.lastUpdated) })}</p>` : ''}</section>`;
 }
 
 function inboxView(candidates) {
-  return `<details class="candidate-inbox"${ui.inboxOpen ? ' open' : ''}><summary data-focus="inbox-summary">Waiting for your say <span class="count">${candidates.length} ${candidates.length === 1 ? 'topic' : 'topics'}</span></summary><p class="helper muted small">A visit can mean many things. Choose only the subjects you want to save as interests.</p><div>${candidates.map(topic => `<div class="candidate-row"><label><input type="checkbox" data-candidate="${escape(topicId(topic))}" data-focus="candidate-${escape(topicId(topic))}"${checked(ui.selected.has(topicId(topic)))}><span class="candidate-copy"><span class="topic">${escape(topicTitle(topic))}</span><span class="domain">${escape(topic.domain || 'Other subjects')} · Found in local browsing</span></span></label><button class="quiet" type="button" data-action="dismiss" data-id="${escape(topicId(topic))}" aria-label="Dismiss ${escape(topicTitle(topic))}">Dismiss</button></div>`).join('')}</div><div class="inbox-actions"><button class="primary" type="button" data-action="approve"${disabled(!ui.selected.size || busy('approve'))}>${busy('approve') ? 'Saving…' : `Save selected${ui.selected.size ? ` (${ui.selected.size})` : ''}`}</button><button class="quiet" type="button" data-action="select-all">${ui.selected.size === candidates.length ? 'Clear selection' : 'Select all'}</button></div></details>`;
+  const page = paginate(candidates, ui.candidatePage);
+  ui.candidatePage = page.page;
+  const allOnPageSelected = page.items.length > 0 && page.items.every(topic => ui.selected.has(topicId(topic)));
+  return `<details class="candidate-inbox"${ui.inboxOpen ? ' open' : ''}><summary data-focus="inbox-summary">${text('inbox')} <span class="count">${text(candidates.length === 1 ? 'oneTopic' : 'topicCount', { count: candidates.length })}</span></summary>
+    <p class="helper muted small">${text('inboxHelp')}</p><p class="candidate-range muted small">${text('range', page)}</p>
+    <div class="candidate-list">${page.items.map(topic => `<div class="candidate-row"><label><input type="checkbox" data-candidate="${escape(topicId(topic))}" data-focus="candidate-${escape(topicId(topic))}"${checked(ui.selected.has(topicId(topic)))}><span class="candidate-copy"><span class="topic">${escape(topicTitle(topic))}</span><span class="domain">${escape(topic.domain || t('otherSubjects'))} · ${text('localBrowsing')}</span></span></label><button class="quiet" type="button" data-action="dismiss" data-id="${escape(topicId(topic))}" aria-label="${text('dismissTopic', { topic: topicTitle(topic) })}">${text('dismiss')}</button></div>`).join('')}</div>
+    <nav class="inbox-pagination" aria-label="${text('candidatePagination')}"><button type="button" data-action="candidate-prev" data-focus="candidate-prev"${disabled(page.page === 1)}>${text('previous')}</button><span class="page-status" role="status">${text('page', { page: page.page, pages: page.pageCount })}</span><button type="button" data-action="candidate-next" data-focus="candidate-next"${disabled(page.page === page.pageCount)}>${text('next')}</button></nav>
+    <p class="selection-count muted small">${text('selectionCount', { count: ui.selected.size })}</p>
+    <div class="inbox-actions"><button class="primary" type="button" data-action="approve"${disabled(!ui.selected.size || busy('approve'))}>${busy('approve') ? text('saving') : text('saveSelected', { count: ui.selected.size })}</button><button class="quiet" type="button" data-action="select-all">${text(allOnPageSelected ? 'clearPage' : 'selectPage')}</button></div></details>`;
 }
 
-function cardView(topic) {
+function descriptionView(topic, listView) {
+  const description = topic.description || t('explorePace');
+  if (!listView || description.length <= 110) return `<p class="topic-description">${escape(description)}</p>`;
+  const id = topicId(topic);
+  return `<details class="description-details" data-description="${escape(id)}"${ui.expandedDescriptions.has(id) ? ' open' : ''}><summary data-focus="description-${escape(id)}"><span class="description-preview">${escape(description.slice(0, 110).trimEnd())}… </span><span class="description-more">${text('readMore')}</span><span class="description-less">${text('readLess')}</span></summary><p class="topic-description">${escape(description)}</p></details>`;
+}
+
+function cardView(topic, listView = false) {
   const id = topicId(topic);
   const saved = isApproved(id);
-  return `<article class="recommendation-card"><p class="eyebrow">${escape(topic.domain || 'A new direction')}</p><h3>${escape(topicTitle(topic))}</h3><p>${escape(topic.description || 'A subject to explore at your own pace.')}</p>${topic.nearest_interest ? `<div class="related">A connection from ${escape(topic.nearest_interest)}</div>` : ''}<div class="card-search">${searchButtons(topic)}</div><div class="card-feedback">${saved ? '<span class="saved-label">Saved to your interests</span>' : `<button type="button" class="save" data-action="save-topic" data-id="${escape(id)}"${disabled(busy(`save:${id}`))}>+ Save interest</button>`}<button type="button" class="quiet" data-action="dismiss" data-id="${escape(id)}">Not for me</button></div></article>`;
+  return `<article class="recommendation-card"><div class="recommendation-content"><div class="recommendation-heading"><p class="eyebrow">${escape(topic.domain || t('newDirection'))}</p><h3>${escape(topicTitle(topic))}</h3></div>${descriptionView(topic, listView)}${topic.nearest_interest ? `<div class="related">${text('connectionFrom', { topic: topic.nearest_interest })}</div>` : ''}</div><div class="recommendation-actions"><div class="card-search">${searchButtons(topic)}</div><div class="card-feedback">${saved ? `<span class="saved-label">${text('savedLabel')}</span>` : `<button type="button" class="save" data-action="save-topic" data-id="${escape(id)}"${disabled(busy(`save:${id}`))}>${text('saveInterest')}</button>`}<button type="button" class="quiet" data-action="dismiss" data-id="${escape(id)}">${text('notForMe')}</button></div></div></article>`;
 }
 
 function searchButtons(topic) {
@@ -128,24 +170,25 @@ function searchButtons(topic) {
 function settingsView() {
   const settings = state.settings || {};
   const draft = ui.settingsDraft || snapshotSettings();
-  return `<section class="settings"><div class="view-heading"><p class="eyebrow">Make it yours</p><h1>A little intention.</h1><p>You choose what becomes an interest, when to find new ideas, and what stays out of browsing review.</p></div>
-    <section class="settings-group"><h2>Discovery</h2><label class="field"><span>How ideas connect</span><select id="settings-mode" data-focus="settings-mode" aria-label="How ideas connect"><option value="path"${settings.mode !== 'global' ? ' selected' : ''}>Follow the latest saved interest</option><option value="global"${settings.mode === 'global' ? ' selected' : ''}>Explore across all saved interests</option></select><small>Saving a new interest changes the direction. Searching a subject records exploration.</small></label>
-    <label class="toggle-row"><input id="browsing-enabled" type="checkbox" aria-label="Review new browsing locally" aria-describedby="browsing-help" data-focus="browsing-enabled"${checked(settings.browsingEnabled)}${disabled(busy('browsing'))}><span><strong>Review new browsing locally</strong><small id="browsing-help">Find candidate topics from new Chrome visits, including YouTube. You still confirm every new interest. Turning this off stops new review; paused visits are not reviewed later.</small></span></label>
-    <label class="toggle-row"><input id="auto-refresh" type="checkbox" aria-label="Refresh ideas when interests change" aria-describedby="refresh-help" data-focus="auto-refresh"${checked(settings.autoRefresh)}${disabled(busy('auto-refresh'))}><span><strong>Refresh ideas when interests change</strong><small id="refresh-help">Automatically ask the service for ideas after you change your saved interests. This is separate from browsing review.</small></span></label></section>
-    <form class="settings-form" id="settings-form"><section class="settings-group"><h2>Service connection</h2><p class="muted small">For the shared demo, use the address and team access code provided by your host.</p><label class="field"><span>Service address</span><input id="endpoint" name="endpoint" type="url" aria-label="Service address" aria-describedby="endpoint-help" data-focus="endpoint" value="${escape(draft.endpoint)}" placeholder="https://your-demo-address" spellcheck="false" autocomplete="off" required><small id="endpoint-help">Use an HTTPS address, or the local service on this computer.</small></label><label class="field"><span>Team access code</span><input id="access-token" name="accessToken" type="password" aria-label="Team access code" aria-describedby="token-help" data-focus="access-token" value="${escape(draft.accessToken)}" placeholder="Enter the team access code" autocomplete="off" spellcheck="false"><small id="token-help">Stored on this device. It is sent only to your configured recommendation service.</small></label></section>
-    <section class="settings-group"><h2>Excluded websites</h2><p class="muted small">Visits to these domains are skipped. Include a domain such as mail.example.com, one per line. Subdomains are included.</p><label class="field"><span>Domains to skip</span><textarea id="blocked-domains" name="blockedDomains" aria-label="Domains to skip" aria-describedby="domains-help" data-focus="blocked-domains" spellcheck="false">${escape(draft.blockedDomains)}</textarea><small id="domains-help">Exclusions help reduce sensitive data collection, but cannot identify every sensitive topic.</small></label></section>
-    <div class="actions"><button class="primary" data-focus="save-settings" type="submit"${disabled(busy('settings'))}>${busy('settings') ? 'Saving…' : 'Save settings'}</button><span class="muted" role="status">${ui.settingsDirty ? 'You have unsaved changes.' : ui.settingsSaved ? 'Settings saved.' : ''}</span></div></form>
-    <section class="settings-group"><h2>Your local data</h2><p class="muted small">Clear browsing-derived topics while keeping the interests you saved and the paths you explored, or start over completely.</p><div class="data-actions"><button type="button" data-action="clear-derived">Clear browsing data</button><button type="button" class="danger" data-action="reset">Reset OtherWise</button></div></section>
-    <p class="privacy-note">Raw visit titles and addresses stay local. Only saved interest names and discovery preferences reach the service; the service and tunnel also receive network information. No account-wide YouTube history is imported.</p></section>`;
+  return `<section class="settings"><div class="view-heading"><p class="eyebrow">${text('makeYours')}</p><h1>${text('intention')}</h1><p>${text('settingsIntro')}</p></div>
+    <section class="settings-group"><h2>${text('interfaceLanguage')}</h2>${languageSelect('settings-language')}<p class="language-note">${text('languageScope')}</p></section>
+    <section class="settings-group"><h2>${text('discovery')}</h2><label class="field"><span>${text('connections')}</span><select id="settings-mode" data-focus="settings-mode" aria-label="${text('connections')}"><option value="path"${settings.mode !== 'global' ? ' selected' : ''}>${text('followLatest')}</option><option value="global"${settings.mode === 'global' ? ' selected' : ''}>${text('exploreAll')}</option></select><small>${text('modeHelp')}</small></label>
+    <label class="toggle-row"><input id="browsing-enabled" type="checkbox" aria-label="${text('browsingEnabled')}" aria-describedby="browsing-help" data-focus="browsing-enabled"${checked(settings.browsingEnabled)}${disabled(busy('browsing'))}><span><strong>${text('browsingEnabled')}</strong><small id="browsing-help">${text('browsingHelp')}</small></span></label>
+    <label class="toggle-row"><input id="auto-refresh" type="checkbox" aria-label="${text('autoRefresh')}" aria-describedby="refresh-help" data-focus="auto-refresh"${checked(settings.autoRefresh)}${disabled(busy('auto-refresh'))}><span><strong>${text('autoRefresh')}</strong><small id="refresh-help">${text('refreshHelp')}</small></span></label></section>
+    <form class="settings-form" id="settings-form"><section class="settings-group"><h2>${text('serviceConnection')}</h2><p class="muted small">${text('serviceHelp')}</p><label class="field"><span>${text('serviceAddress')}</span><input id="endpoint" name="endpoint" type="url" aria-label="${text('serviceAddress')}" aria-describedby="endpoint-help" data-focus="endpoint" value="${escape(draft.endpoint)}" placeholder="https://your-demo-address" spellcheck="false" autocomplete="off" required><small id="endpoint-help">${text('endpointHelp')}</small></label><label class="field"><span>${text('teamCode')}</span><input id="access-token" name="accessToken" type="password" aria-label="${text('teamCode')}" aria-describedby="token-help" data-focus="access-token" value="${escape(draft.accessToken)}" placeholder="${text('codePlaceholder')}" autocomplete="off" spellcheck="false"><small id="token-help">${text('codeHelp')}</small></label></section>
+    <section class="settings-group"><h2>${text('excludedWebsites')}</h2><p class="muted small">${text('excludedHelp')}</p><label class="field"><span>${text('domainsToSkip')}</span><textarea id="blocked-domains" name="blockedDomains" aria-label="${text('domainsToSkip')}" aria-describedby="domains-help" data-focus="blocked-domains" spellcheck="false">${escape(draft.blockedDomains)}</textarea><small id="domains-help">${text('domainsHelp')}</small></label></section>
+    <div class="actions"><button class="primary" data-focus="save-settings" type="submit"${disabled(busy('settings'))}>${text(busy('settings') ? 'saving' : 'saveSettings')}</button><span class="muted" role="status">${ui.settingsDirty ? text('unsaved') : ui.settingsSaved ? text('settingsSaved') : ''}</span></div></form>
+    <section class="settings-group"><h2>${text('localData')}</h2><p class="muted small">${text('localDataHelp')}</p><div class="data-actions"><button type="button" data-action="clear-derived">${text('clearBrowsing')}</button><button type="button" class="danger" data-action="reset">${text('reset')}</button></div></section>
+    <p class="privacy-note">${text('privacy')}</p></section>`;
 }
 
 function mapView() {
   const topics = mapTopics();
   const selected = topics.find(topic => topicId(topic) === ui.mapSelection);
-  return `<section><div class="view-heading"><p class="eyebrow">Your curiosity, connected</p><h1>A world taking shape.</h1><p>Saved interests give you a starting point. Subjects you search through OtherWise show where you’ve ventured.</p></div>
-    <div class="map-legend" aria-label="Map legend"><span><i class="legend-dot baseline" aria-hidden="true"></i>Starting interest</span><span><i class="legend-dot" aria-hidden="true"></i>Saved interest</span><span><i class="legend-dot explored" aria-hidden="true"></i>Explored</span></div>
-    ${topics.length ? '<div class="map-surface" id="map-surface"></div><p class="muted small map-helper">Choose a subject to explore it. Lines follow searches you made through OtherWise.</p>' : '<div class="empty-state"><div class="empty-symbol" aria-hidden="true">✧</div><h3>Your first point is waiting.</h3><p>Save an interest in Discover. Search a suggested subject to begin a path on your map.</p><button type="button" data-action="view" data-view="discover">Start in Discover</button></div>'}
-    <div class="map-detail" aria-live="polite">${selected ? `<p class="eyebrow">${escape(selected.domain || 'Other subjects')} · ${isApproved(topicId(selected)) ? 'Saved interest' : 'Explored subject'}</p><h3>${escape(topicTitle(selected))}</h3><p>${escape(selected.description || 'Follow this subject a little further.')}</p><div class="card-search">${searchButtons(selected)}${isApproved(topicId(selected)) ? `<button type="button" data-action="set-focus" data-id="${escape(topicId(selected))}"${disabled(busy('focus'))}>Explore from here</button>` : `<button type="button" data-action="save-topic" data-id="${escape(topicId(selected))}">+ Save interest</button>`}</div>` : topics.length ? '<p>Every point is an interest you saved or a subject you chose to search. Exploration does not imply expertise.</p>' : ''}</div></section>`;
+  return `<section><div class="view-heading"><p class="eyebrow">${text('mapEyebrow')}</p><h1>${text('mapHeading')}</h1><p>${text('mapIntro')}</p></div>
+    <div class="map-legend" aria-label="${text('mapLegend')}"><span><i class="legend-dot baseline" aria-hidden="true"></i>${text('startingInterest')}</span><span><i class="legend-dot" aria-hidden="true"></i>${text('savedInterest')}</span><span><i class="legend-dot explored" aria-hidden="true"></i>${text('explored')}</span></div>
+    ${topics.length ? `<div class="map-surface" id="map-surface"></div><p class="muted small map-helper">${text('mapHelper')}</p>` : `<div class="empty-state"><div class="empty-symbol" aria-hidden="true">✧</div><h3>${text('mapEmpty')}</h3><p>${text('mapEmptyHelp')}</p><button type="button" data-action="view" data-view="discover">${text('startDiscover')}</button></div>`}
+    <div class="map-detail" aria-live="polite">${selected ? `<p class="eyebrow">${escape(selected.domain || t('otherSubjects'))} · ${text(isApproved(topicId(selected)) ? 'savedInterest' : 'exploredSubject')}</p><h3>${escape(topicTitle(selected))}</h3><p>${escape(selected.description || t('followFurther'))}</p><div class="card-search">${searchButtons(selected)}${isApproved(topicId(selected)) ? `<button type="button" data-action="set-focus" data-id="${escape(topicId(selected))}"${disabled(busy('focus'))}>${text('exploreFrom')}</button>` : `<button type="button" data-action="save-topic" data-id="${escape(topicId(selected))}">${text('saveInterest')}</button>`}</div>` : topics.length ? `<p>${text('mapMeaning')}</p>` : ''}</div></section>`;
 }
 
 function mapTopics() {
@@ -166,7 +209,7 @@ function drawMap() {
     const columns = width > 760 ? 3 : width > 500 ? 2 : 1;
     const columnWidth = width / columns;
     const groups = new Map();
-    mapTopics().forEach(topic => { const domain = topic.domain || 'Other subjects'; if (!groups.has(domain)) groups.set(domain, []); groups.get(domain).push(topic); });
+    mapTopics().forEach(topic => { const domain = topic.domain || t('otherSubjects'); if (!groups.has(domain)) groups.set(domain, []); groups.get(domain).push(topic); });
     const domains = [...groups];
     const positions = new Map();
     const blocks = [];
@@ -193,9 +236,9 @@ function drawMap() {
     const nodes = [...positions].map(([id, { x, y, topic }]) => {
       const approved = isApproved(id);
       const lines = wrapLabel(topicTitle(topic), Math.max(18, Math.floor((columnWidth - 92) / 6.2)));
-      return `<g class="map-node${approved ? '' : ' is-explored'}${ui.mapSelection === id ? ' selected' : ''}" data-map-id="${escape(id)}" data-focus="map-${escape(id)}" tabindex="0" role="button" aria-label="${escape(topicTitle(topic))}, ${approved ? 'saved interest' : 'explored subject'}" aria-pressed="${ui.mapSelection === id}"><title>${escape(topicTitle(topic))}</title>${baseline.has(id) && approved ? `<circle class="baseline-ring" cx="${x}" cy="${y}" r="11"/>` : ''}<circle cx="${x}" cy="${y}" r="6"/><circle class="focus-ring" cx="${x}" cy="${y}" r="15"/><text x="${x + 24}" y="${y + (lines.length > 1 ? -2 : 4)}">${lines.map((line, index) => `<tspan x="${x + 24}" dy="${index ? 16 : 0}">${escape(line)}</tspan>`).join('')}</text></g>`;
+      return `<g class="map-node${approved ? '' : ' is-explored'}${ui.mapSelection === id ? ' selected' : ''}" data-map-id="${escape(id)}" data-focus="map-${escape(id)}" tabindex="0" role="button" aria-label="${text('mapNode', { topic: topicTitle(topic), status: t(approved ? 'savedInterest' : 'exploredSubject') })}" aria-pressed="${ui.mapSelection === id}"><title>${escape(topicTitle(topic))}</title>${baseline.has(id) && approved ? `<circle class="baseline-ring" cx="${x}" cy="${y}" r="11"/>` : ''}<circle cx="${x}" cy="${y}" r="6"/><circle class="focus-ring" cx="${x}" cy="${y}" r="15"/><text x="${x + 24}" y="${y + (lines.length > 1 ? -2 : 4)}">${lines.map((line, index) => `<tspan x="${x + 24}" dy="${index ? 16 : 0}">${escape(line)}</tspan>`).join('')}</text></g>`;
     }).join('');
-    surface.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${top + 4}" role="group" aria-label="Your interests and exploration paths, grouped by knowledge domain">${blocks.join('')}${edges}${nodes}</svg>`;
+    surface.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${top + 4}" role="group" aria-label="${text('mapLabel')}">${blocks.join('')}${edges}${nodes}</svg>`;
     surface.querySelectorAll('[data-map-id]').forEach(node => {
       const choose = () => { ui.mapSelection = node.dataset.mapId; const key = ui.mapSelection; render(); const target = [...document.querySelectorAll('[data-map-id]')].find(element => element.dataset.mapId === key); target?.focus({ preventScroll: true }); };
       node.addEventListener('click', choose);
@@ -220,6 +263,16 @@ function wrapLabel(title, maxChars) {
 }
 
 function bindEvents() {
+  app.querySelectorAll('[data-language]').forEach(select => select.addEventListener('change', event => {
+    const nextLanguage = normalizeLanguage(event.target.value);
+    void run(`language:${++preferenceSequence}`, () => dispatch({ type: 'SET_SETTINGS', patch: { language: nextLanguage } }), 'languageSaved');
+  }));
+  app.querySelectorAll('[data-description]').forEach(details => details.addEventListener('toggle', event => {
+    // Ignore queued toggle events from a detached render.
+    if (!event.target.isConnected) return;
+    const id = event.target.dataset.description;
+    event.target.open ? ui.expandedDescriptions.add(id) : ui.expandedDescriptions.delete(id);
+  }));
   app.querySelectorAll('[data-action]').forEach(button => {
     const { action, id = '', provider = '', view = '' } = button.dataset;
     if (!button.dataset.focus) button.dataset.focus = `${action}:${id}:${provider}:${view}`;
@@ -230,21 +283,21 @@ function bindEvents() {
     event.preventDefault();
     const topic = ui.manual.trim();
     if (!topic) { document.querySelector('#manual-interest')?.focus(); return; }
-    const next = await run('add', () => dispatch({ type: 'ADD_INTEREST', topic }), 'Interest saved.');
+    const next = await run('add', () => dispatch({ type: 'ADD_INTEREST', topic }), 'interestSaved');
     if (next && !next.lastError && ui.manual.trim() === topic) { ui.manual = ''; render(); document.querySelector('#manual-interest')?.focus(); }
   });
   document.querySelector('#history-days')?.addEventListener('change', event => { ui.days = event.target.value; });
-  app.querySelector('.candidate-inbox')?.addEventListener('toggle', event => { ui.inboxOpen = event.target.open; });
+  app.querySelector('.candidate-inbox')?.addEventListener('toggle', event => { if (event.target.isConnected) ui.inboxOpen = event.target.open; });
   app.querySelectorAll('[data-candidate]').forEach(input => input.addEventListener('change', event => { const id = event.target.dataset.candidate; event.target.checked ? ui.selected.add(id) : ui.selected.delete(id); render(); }));
-  for (const id of ['discovery-mode', 'settings-mode']) document.getElementById(id)?.addEventListener('change', event => run('mode', () => dispatch({ type: 'SET_SETTINGS', patch: { mode: event.target.value } }), 'Discovery mode saved.'));
-  document.getElementById('browsing-enabled')?.addEventListener('change', event => run('browsing', () => dispatch({ type: 'SET_SETTINGS', patch: { browsingEnabled: event.target.checked } }), 'Browsing review preference saved.'));
-  document.getElementById('auto-refresh')?.addEventListener('change', event => run('auto-refresh', () => dispatch({ type: 'SET_SETTINGS', patch: { autoRefresh: event.target.checked } }), 'Refresh preference saved.'));
+  for (const id of ['discovery-mode', 'settings-mode']) document.getElementById(id)?.addEventListener('change', event => run('mode', () => dispatch({ type: 'SET_SETTINGS', patch: { mode: event.target.value } }), 'modeSaved'));
+  document.getElementById('browsing-enabled')?.addEventListener('change', event => run('browsing', () => dispatch({ type: 'SET_SETTINGS', patch: { browsingEnabled: event.target.checked } }), 'browsingSaved'));
+  document.getElementById('auto-refresh')?.addEventListener('change', event => run('auto-refresh', () => dispatch({ type: 'SET_SETTINGS', patch: { autoRefresh: event.target.checked } }), 'refreshSaved'));
   app.querySelectorAll('#settings-form input, #settings-form textarea').forEach(input => input.addEventListener('input', event => {
     ui.settingsDraft[event.target.name] = event.target.value;
     ui.settingsDirty = true;
     ui.settingsSaved = false;
     const status = document.querySelector('.settings-form .actions [role="status"]');
-    if (status) status.textContent = 'You have unsaved changes.';
+    if (status) status.textContent = t('unsaved');
   }));
   document.querySelector('#settings-form')?.addEventListener('submit', saveSettings);
 }
@@ -259,7 +312,7 @@ async function saveSettings(event) {
     document.querySelector('#blocked-domains')?.focus();
     return;
   }
-  const next = await run('settings', () => dispatch({ type: 'SET_SETTINGS', patch: { endpoint: draft.endpoint.trim(), accessToken: draft.accessToken.trim(), blockedDomains: domains } }), 'Settings saved.');
+  const next = await run('settings', () => dispatch({ type: 'SET_SETTINGS', patch: { endpoint: draft.endpoint.trim(), accessToken: draft.accessToken.trim(), blockedDomains: domains } }), 'settingsSaved');
   if (next && !next.lastError && JSON.stringify(ui.settingsDraft) === JSON.stringify(draft)) {
     ui.settingsDirty = false;
     ui.settingsSaved = true;
@@ -271,32 +324,46 @@ async function saveSettings(event) {
 async function onAction(event) {
   const button = event.currentTarget;
   const { action, id, provider } = button.dataset;
+  if (action === 'recommendation-view') {
+    const recommendationView = button.dataset.value;
+    await run(`recommendation-view:${++preferenceSequence}`, () => dispatch({ type: 'SET_SETTINGS', patch: { recommendationView } }), 'layoutSaved');
+    return;
+  }
   if (action === 'view') { ui.view = button.dataset.view; if (ui.view === 'settings' && !ui.settingsDirty) ui.settingsDraft = snapshotSettings(); render(); return; }
   if (action === 'clear-error') { ui.error = null; if (state?.lastError) await run('clear-error', () => dispatch({ type: 'CLEAR_ERROR' })); else render(); return; }
   if (action === 'reload') { const next = await run('reload', getState); if (next && !unsubscribe) unsubscribe = subscribe(applyState); return; }
-  if (action === 'import') { ui.inboxOpen = true; await run('import', () => importHistory(Number(ui.days)), 'Recent browsing is ready to review.'); return; }
-  if (action === 'approve') { await run('approve', () => dispatch({ type: 'APPROVE', ids: [...ui.selected] }), 'Selected interests saved.'); return; }
-  if (action === 'select-all') { ui.selected = ui.selected.size === arr(state.candidates).length ? new Set() : new Set(arr(state.candidates).map(topicId)); render(); return; }
-  if (action === 'remove') { await run(`remove:${id}`, () => dispatch({ type: 'REMOVE_INTEREST', id }), 'Interest removed.'); return; }
-  if (action === 'dismiss') { await run(`dismiss:${id}`, () => dispatch({ type: 'DISMISS', id }), 'Topic dismissed.'); return; }
-  if (action === 'save-topic') { const topic = getTopic(id); if (topic) await run(`save:${id}`, () => dispatch({ type: 'ADD_INTEREST', topic }), 'Interest saved.'); return; }
+  if (action === 'import') { ui.inboxOpen = true; await run('import', () => importHistory(Number(ui.days)), 'importReady'); return; }
+  if (action === 'approve') { await run('approve', () => dispatch({ type: 'APPROVE', ids: [...ui.selected] }), 'selectedSaved'); return; }
+  if (action === 'candidate-prev' || action === 'candidate-next') {
+    ui.candidatePage = paginate(arr(state.candidates), ui.candidatePage + (action === 'candidate-next' ? 1 : -1)).page;
+    render(); return;
+  }
+  if (action === 'select-all') {
+    const ids = candidatePage().items.map(topicId);
+    const clearPage = ids.every(candidate => ui.selected.has(candidate));
+    ids.forEach(candidate => clearPage ? ui.selected.delete(candidate) : ui.selected.add(candidate));
+    render(); return;
+  }
+  if (action === 'remove') { await run(`remove:${id}`, () => dispatch({ type: 'REMOVE_INTEREST', id }), 'interestRemoved'); return; }
+  if (action === 'dismiss') { await run(`dismiss:${id}`, () => dispatch({ type: 'DISMISS', id }), 'topicDismissed'); return; }
+  if (action === 'save-topic') { const topic = getTopic(id); if (topic) await run(`save:${id}`, () => dispatch({ type: 'ADD_INTEREST', topic }), 'interestSaved'); return; }
   if (action === 'set-focus') {
     const next = await run('focus', async () => {
       const focused = await dispatch({ type: 'SET_FOCUS', id });
       if (focused?.lastError || focused?.settings?.mode === 'path') return focused;
       return dispatch({ type: 'SET_SETTINGS', patch: { mode: 'path' } });
-    }, 'Your starting interest has changed.');
+    }, 'focusChanged');
     if (next && !next.lastError) { ui.view = 'discover'; render(); document.querySelector('#discovery-mode')?.focus(); }
     return;
   }
-  if (action === 'search') { const topic = getTopic(id); if (topic) await run(`search:${id}:${provider}`, () => search(topic, provider), 'Exploration recorded.'); return; }
-  if (action === 'recommend') { await run('recommend', recommend, 'New ideas are ready.'); return; }
+  if (action === 'search') { const topic = getTopic(id); if (topic) await run(`search:${id}:${provider}`, () => search(topic, provider), 'explorationRecorded'); return; }
+  if (action === 'recommend') { await run('recommend', recommend, 'ideasReady'); return; }
   if (action === 'clear-derived' || action === 'reset') {
     const reset = action === 'reset';
-    const confirmed = await confirmDialog(reset ? 'Start over?' : 'Clear browsing data?', reset ? 'This removes your saved interests, browsing topics, exploration paths, and connection settings from this device. This cannot be undone.' : 'This removes topics and evidence found in browsing review. Your saved interests and OtherWise exploration paths stay here.', reset ? 'Reset OtherWise' : 'Clear browsing data');
+    const confirmed = await confirmDialog(t(reset ? 'startOver' : 'confirmClear'), t(reset ? 'resetDescription' : 'clearDescription'), t(reset ? 'reset' : 'clearBrowsing'));
     if (!confirmed) return;
-    const next = await run(action, () => dispatch({ type: reset ? 'RESET' : 'CLEAR_DERIVED' }), reset ? 'OtherWise has been reset.' : 'Browsing data cleared.');
-    if (reset && next && !next.lastError) { ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.mapSelection = null; ui.selected.clear(); ui.view = 'discover'; render(); }
+    const next = await run(action, () => dispatch({ type: reset ? 'RESET' : 'CLEAR_DERIVED' }), reset ? 'resetDone' : 'clearDone');
+    if (reset && next && !next.lastError) { ui.manual = ''; ui.settingsDirty = false; ui.settingsSaved = false; ui.settingsDraft = snapshotSettings(); ui.mapSelection = null; ui.selected.clear(); ui.expandedDescriptions.clear(); ui.candidatePage = 1; ui.view = 'discover'; render(); }
   }
 }
 
@@ -305,7 +372,7 @@ function confirmDialog(title, description, label) {
     const dialog = document.createElement('dialog');
     dialog.setAttribute('aria-labelledby', 'confirmation-title');
     dialog.setAttribute('aria-describedby', 'confirmation-description');
-    dialog.innerHTML = `<h2 id="confirmation-title">${escape(title)}</h2><p id="confirmation-description">${escape(description)}</p><div class="dialog-actions"><button type="button" data-choice="cancel" autofocus>Keep my data</button><button type="button" class="danger" data-choice="confirm">${escape(label)}</button></div>`;
+    dialog.innerHTML = `<h2 id="confirmation-title">${escape(title)}</h2><p id="confirmation-description">${escape(description)}</p><div class="dialog-actions"><button type="button" data-choice="cancel" autofocus>${text('keepData')}</button><button type="button" class="danger" data-choice="confirm">${escape(label)}</button></div>`;
     document.body.append(dialog);
     dialog.addEventListener('cancel', event => { event.preventDefault(); dialog.close('cancel'); });
     dialog.querySelectorAll('[data-choice]').forEach(button => button.addEventListener('click', () => dialog.close(button.dataset.choice)));
@@ -316,7 +383,7 @@ function confirmDialog(title, description, label) {
 
 function formatTime(timestamp) {
   const date = new Date(timestamp);
-  return Number.isNaN(date.getTime()) ? 'recently' : date.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+  return Number.isNaN(date.getTime()) ? t('recently') : date.toLocaleString(language(), { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
 }
 
 try {

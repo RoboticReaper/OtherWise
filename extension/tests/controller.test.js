@@ -82,6 +82,50 @@ test('remote endpoints must use HTTPS and cannot hide credentials or paths',()=>
 
 function deferred(){let resolve;const promise=new Promise(r=>{resolve=r;});return {promise,resolve};}
 
+for(const [preference,initial,value]of [['language','en','zh-CN'],['recommendationView','cards','list']]) {
+test(`${preference} preference persists across controller reload without changing recommendation data or payload`,async()=>{
+  const r=rig();
+  assert.equal((await r.controller.getState()).settings[preference],initial);
+  await r.controller.dispatch({type:'ADD_INTEREST',topic:catalog[0]});
+  await r.controller.dispatch({type:'SET_SETTINGS',patch:{accessToken:'team-secret',autoRefresh:true}});
+  await r.controller.recommend();
+  const before=await r.controller.getState(),count=r.requests.length;
+  const state=await r.controller.dispatch({type:'SET_SETTINGS',patch:{[preference]:value}});
+  assert.equal(state.settings[preference],value);
+  assert.equal(state.generation,before.generation);
+  assert.deepEqual(state.recommendations,before.recommendations);
+  assert.deepEqual(state.approved,before.approved);
+  assert.equal(r.requests.length,count);
+  const reloaded=rig({initialState:r.saved()});
+  assert.equal((await reloaded.controller.getState()).settings[preference],value);
+  await reloaded.controller.recommend();
+  assert.deepEqual(JSON.parse(reloaded.requests[0].options.body),JSON.parse(r.requests.at(-1).options.body));
+});
+
+test(`${preference} switching during an active recommendation keeps the request and its eventual results`,async()=>{
+  const sent=deferred(),response=deferred();let signal;
+  const r=rig({fetchImpl:async(_url,options)=>{signal=options.signal;sent.resolve();await response.promise;return new Response(JSON.stringify({recommendations:[catalog[1]]}));}});
+  await r.controller.dispatch({type:'ADD_INTEREST',topic:catalog[0]});
+  await r.controller.dispatch({type:'SET_SETTINGS',patch:{accessToken:'team-secret'}});
+  const pending=r.controller.recommend();await sent.promise;
+  await r.controller.dispatch({type:'SET_SETTINGS',patch:{[preference]:value}});
+  assert.equal(signal.aborted,false);
+  response.resolve();const state=await pending;
+  assert.equal(state.settings[preference],value);
+  assert.equal(state.recommendations[0].topic,'Botany');
+});
+}
+
+test('legacy and unsupported language preferences fall back to English without removing saved interests',async()=>{
+  const initialState=createState(now);delete initialState.settings.language;delete initialState.settings.recommendationView;
+  initialState.approved=[catalog[0]];
+  const r=rig({initialState});
+  assert.equal((await r.controller.getState()).settings.language,'en');
+  assert.equal((await r.controller.getState()).settings.recommendationView,'cards');
+  const state=await r.controller.dispatch({type:'SET_SETTINGS',patch:{language:'fr',recommendationView:'unrecognized'}});
+  assert.equal(state.settings.language,'en');assert.equal(state.settings.recommendationView,'cards');assert.deepEqual(state.approved,[catalog[0]]);
+});
+
 for(const action of [{type:'RESET'},{type:'SET_SETTINGS',patch:{browsingEnabled:false}},{type:'REMOVE_INTEREST',id:'Gardening'}]) {
   test(`${action.type} during endpoint permission wait prevents an old profile from being sent`,async()=>{
     const waiting=deferred(), permissionGate=deferred();

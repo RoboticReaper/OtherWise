@@ -16,10 +16,22 @@ instead. A teammate must use the shared HTTPS address, not their own localhost.
 
 ## A two-minute demonstration
 
+The header's **Language / 语言** selector switches between English and Simplified
+Chinese and remembers the choice on this device. Chinese support covers UI only:
+the recommendation system and local catalog remain English. Enter interests in
+English; topic names, domains and descriptions retain their original English text.
+Switching language preserves drafts, selected candidates and loaded recommendations.
+The **Cards / List** toggle beside **A little beyond** switches recommendations to
+compact rows. Both layouts retain search, save and dismiss actions. In List view,
+long descriptions can be expanded. The layout preference is also saved locally.
+
 1. Add **Gardening** manually. This saves an interest without accessing history.
    Alternatively, **Review recent browsing** asks Chrome for permission, processes
    up to 5,000 recent visits locally, then shows a candidate inbox. Choose topics and
    **Save selected**. Nothing in this inbox is uploaded before confirmation.
+   The candidate inbox shows ten topics per page. Selections remain checked across
+   pages; **Select this page** applies only to the visible page. The save button's
+   count includes every selected page, so you can confirm the total before saving.
 2. Click **Find ideas**. Up to ten nearby topics appear, with the connection to a
    saved interest and Google/YouTube search buttons.
 3. Search one topic. Open **Map** to see an exploration path. Searching does not
@@ -97,6 +109,10 @@ page titles. The integration fixture pregrants history/service permissions in a
 test-only copy of the manifest; the distributed manifest retains optional grants.
 Native Chrome permission prompts still require the user's choice during install
 and first use.
+
+`npm run test:ui` checks pagination with 103 synthetic candidates, cross-page
+selection, language persistence and preservation of drafts in an isolated browser.
+It uses the same optional Playwright setup described below and makes no API calls.
 
 To rerun the integration check with Node 22+, install Playwright as an optional
 development tool (`npm install --no-save playwright`, then `npx playwright install chromium`),
