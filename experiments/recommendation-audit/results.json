@@ -1,0 +1,1736 @@
+{
+  "generated_at": "2026-10-07 America/Chicago",
+  "scope": "Public catalog and synthetic inputs only; offline model; no production changes",
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "model_snapshot": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "device": "cpu",
+  "options": {
+    "radius": 0.28,
+    "expansion": 0.07,
+    "overlap": 0.015,
+    "top_k": 10,
+    "diversity": 0.2,
+    "randomness": 0,
+    "seed": 42,
+    "exploration_fraction": 0.3,
+    "max_overlap_fraction": 0.2,
+    "expansion_level": 0,
+    "mode": "global"
+  },
+  "note": "Counts use unique concept IDs; raw output rows use graph titles, unique in this snapshot. No human relevance or curiosity labels.",
+  "results": [
+    {
+      "input": "Gardening",
+      "broad_exact": true,
+      "graph_exact": true,
+      "broad_text": "Gardening: Growing and caring for plants in gardens and small outdoor spaces.",
+      "graph_text": "Gardening: Growing and caring for plants in gardens and small outdoor spaces.",
+      "eligible_all": 19,
+      "eligible_routed": 17,
+      "routed_recall": 0.8947,
+      "route_areas": [
+        "gardening",
+        "anthropology",
+        "agriculture",
+        "photography",
+        "ecology",
+        "travel",
+        "painting",
+        "architecture"
+      ],
+      "route_domains": [
+        "Biology & nature",
+        "Food & agriculture",
+        "Geography & travel",
+        "Home & crafts",
+        "Society & relationships",
+        "Visual arts & design"
+      ],
+      "original_count": 10,
+      "all_area_count": 10,
+      "broad_count": 10,
+      "broad": [
+        {
+          "topic": "Ethnobotany",
+          "distance": 0.3165,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Terrariums",
+          "distance": 0.3178,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Agronomy",
+          "distance": 0.3282,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Seed saving",
+          "distance": 0.3326,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Landscape photography",
+          "distance": 0.3377,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Permaculture",
+          "distance": 0.3364,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Ecology",
+          "distance": 0.3404,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Floral arrangement",
+          "distance": 0.345,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Balcony gardening",
+          "distance": 0.2732,
+          "zone": "Familiar overlap"
+        },
+        {
+          "topic": "Botany",
+          "distance": 0.2766,
+          "zone": "Familiar overlap"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "Indoor plants",
+          "distance": 0.2442
+        },
+        {
+          "topic": "Urban gardening",
+          "distance": 0.2458
+        },
+        {
+          "topic": "Balcony gardening",
+          "distance": 0.2732
+        }
+      ],
+      "original": [
+        {
+          "topic": "Garden World Images",
+          "distance": 0.3088,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Gardener",
+          "distance": 0.3084,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Mission Garden",
+          "distance": 0.3238,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Plant–animal interaction",
+          "distance": 0.3386,
+          "area_id": "ecology"
+        },
+        {
+          "topic": "Sowing",
+          "distance": 0.3415,
+          "area_id": "agriculture"
+        },
+        {
+          "topic": "Renaissance garden",
+          "distance": 0.3276,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Plant give-away",
+          "distance": 0.332,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Weed control",
+          "distance": 0.3477,
+          "area_id": "agriculture"
+        },
+        {
+          "topic": "Garden design",
+          "distance": 0.2762,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Garden tourism",
+          "distance": 0.2781,
+          "area_id": "gardening"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Garden World Images",
+          "distance": 0.3088,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Plant blindness",
+          "distance": 0.3248,
+          "area_id": "cognitive-biases"
+        },
+        {
+          "topic": "Gardener",
+          "distance": 0.3084,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Sensory garden",
+          "distance": 0.2996,
+          "area_id": "perception"
+        },
+        {
+          "topic": "Mission Garden",
+          "distance": 0.3238,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Plant–animal interaction",
+          "distance": 0.3386,
+          "area_id": "ecology"
+        },
+        {
+          "topic": "Sowing",
+          "distance": 0.3415,
+          "area_id": "agriculture"
+        },
+        {
+          "topic": "Renaissance garden",
+          "distance": 0.3276,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Garden design",
+          "distance": 0.2762,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Garden tourism",
+          "distance": 0.2781,
+          "area_id": "gardening"
+        }
+      ],
+      "common_final": 8
+    },
+    {
+      "input": "Python",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "Python",
+      "graph_text": "Python",
+      "eligible_all": 0,
+      "eligible_routed": 0,
+      "routed_recall": null,
+      "route_areas": [
+        "programming",
+        "computer-science",
+        "writing-systems",
+        "artificial-intelligence",
+        "learning",
+        "logic",
+        "graph-theory",
+        "linguistics"
+      ],
+      "route_domains": [
+        "Computing & information",
+        "Learning & language",
+        "Mathematics",
+        "Philosophy"
+      ],
+      "original_count": 0,
+      "all_area_count": 0,
+      "broad_count": 1,
+      "broad": [
+        {
+          "topic": "Python programming",
+          "distance": 0.3016,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "Python programming",
+          "distance": 0.3016
+        },
+        {
+          "topic": "BASIC",
+          "distance": 0.3534
+        },
+        {
+          "topic": "C (programming language)",
+          "distance": 0.3628
+        }
+      ],
+      "original": [],
+      "all_area": [],
+      "common_final": 0
+    },
+    {
+      "input": "Python snake",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "Python snake",
+      "graph_text": "Python snake",
+      "eligible_all": 1,
+      "eligible_routed": 0,
+      "routed_recall": 0,
+      "route_areas": [
+        "mythology",
+        "evolution",
+        "poetry",
+        "anthropology",
+        "ecology",
+        "musical-acoustics",
+        "genetics",
+        "folklore"
+      ],
+      "route_domains": [
+        "Biology & nature",
+        "Literature & storytelling",
+        "Music & performance",
+        "Religion & spirituality",
+        "Society & relationships"
+      ],
+      "original_count": 0,
+      "all_area_count": 1,
+      "broad_count": 3,
+      "broad": [
+        {
+          "topic": "Boidae",
+          "distance": 0.3015,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Chameleon",
+          "distance": 0.3403,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Snake",
+          "distance": 0.2849,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "Snake",
+          "distance": 0.2849
+        },
+        {
+          "topic": "Boidae",
+          "distance": 0.3015
+        },
+        {
+          "topic": "Chameleon",
+          "distance": 0.3403
+        }
+      ],
+      "original": [],
+      "all_area": [
+        {
+          "topic": "Infrared sensing in snakes",
+          "distance": 0.3355,
+          "area_id": "perception"
+        }
+      ],
+      "common_final": 0
+    },
+    {
+      "input": "Python programming",
+      "broad_exact": true,
+      "graph_exact": true,
+      "broad_text": "Python programming: Building software and analyzing data with the Python language.",
+      "graph_text": "Python programming: Building software and analyzing data with the Python language.",
+      "eligible_all": 5,
+      "eligible_routed": 5,
+      "routed_recall": 1,
+      "route_areas": [
+        "programming",
+        "computer-science",
+        "artificial-intelligence",
+        "learning",
+        "writing-systems",
+        "control",
+        "architecture",
+        "graph-theory"
+      ],
+      "route_domains": [
+        "Computing & information",
+        "Engineering & transport",
+        "Learning & language",
+        "Mathematics",
+        "Visual arts & design"
+      ],
+      "original_count": 5,
+      "all_area_count": 5,
+      "broad_count": 10,
+      "broad": [
+        {
+          "topic": "Data science",
+          "distance": 0.3147,
+          "zone": "New territory"
+        },
+        {
+          "topic": "C++ programming",
+          "distance": 0.3244,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Data engineering",
+          "distance": 0.305,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3304,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Database",
+          "distance": 0.3358,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Machine learning",
+          "distance": 0.3386,
+          "zone": "New territory"
+        },
+        {
+          "topic": "JavaScript programming",
+          "distance": 0.341,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Functional programming",
+          "distance": 0.3421,
+          "zone": "New territory"
+        },
+        {
+          "topic": "COBOL",
+          "distance": 0.3441,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Open science",
+          "distance": 0.3456,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "Data engineering",
+          "distance": 0.305
+        },
+        {
+          "topic": "Data science",
+          "distance": 0.3147
+        },
+        {
+          "topic": "C++ programming",
+          "distance": 0.3244
+        }
+      ],
+      "original": [
+        {
+          "topic": "Programming model",
+          "distance": 0.3214,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Dataflow programming",
+          "distance": 0.3267,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3304,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Probabilistic programming",
+          "distance": 0.3356,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Scripting language",
+          "distance": 0.337,
+          "area_id": "programming"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Programming model",
+          "distance": 0.3214,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Dataflow programming",
+          "distance": 0.3267,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3304,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Probabilistic programming",
+          "distance": 0.3356,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Scripting language",
+          "distance": 0.337,
+          "area_id": "programming"
+        }
+      ],
+      "common_final": 5
+    },
+    {
+      "input": "Java",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "Java",
+      "graph_text": "Java",
+      "eligible_all": 2,
+      "eligible_routed": 2,
+      "routed_recall": 1,
+      "route_areas": [
+        "programming",
+        "computer-science",
+        "writing-systems",
+        "artificial-intelligence",
+        "linguistics",
+        "graph-theory",
+        "video-games",
+        "architecture"
+      ],
+      "route_domains": [
+        "Computing & information",
+        "Games & sports",
+        "Learning & language",
+        "Mathematics",
+        "Visual arts & design"
+      ],
+      "original_count": 2,
+      "all_area_count": 2,
+      "broad_count": 7,
+      "broad": [
+        {
+          "topic": "BASIC",
+          "distance": 0.3183,
+          "zone": "New territory"
+        },
+        {
+          "topic": "JavaScript programming",
+          "distance": 0.3256,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Programming language",
+          "distance": 0.3298,
+          "zone": "New territory"
+        },
+        {
+          "topic": "COBOL",
+          "distance": 0.3429,
+          "zone": "New territory"
+        },
+        {
+          "topic": "C (programming language)",
+          "distance": 0.3458,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3473,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Computer program",
+          "distance": 0.3465,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "BASIC",
+          "distance": 0.3183
+        },
+        {
+          "topic": "JavaScript programming",
+          "distance": 0.3256
+        },
+        {
+          "topic": "Programming language",
+          "distance": 0.3298
+        }
+      ],
+      "original": [
+        {
+          "topic": "Programming model",
+          "distance": 0.338,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3473,
+          "area_id": "programming"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Programming model",
+          "distance": 0.338,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3473,
+          "area_id": "programming"
+        }
+      ],
+      "common_final": 2
+    },
+    {
+      "input": "Java island",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "Java island",
+      "graph_text": "Java island",
+      "eligible_all": 1,
+      "eligible_routed": 1,
+      "routed_recall": 1,
+      "route_areas": [
+        "human-geography",
+        "cartography",
+        "architecture",
+        "oceanography",
+        "travel",
+        "civil-engineering",
+        "anthropology",
+        "geometry"
+      ],
+      "route_domains": [
+        "Earth & environment",
+        "Engineering & transport",
+        "Geography & travel",
+        "Mathematics",
+        "Society & relationships",
+        "Visual arts & design"
+      ],
+      "original_count": 1,
+      "all_area_count": 1,
+      "broad_count": 7,
+      "broad": [
+        {
+          "topic": "Island studies",
+          "distance": 0.3206,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Honshu",
+          "distance": 0.33,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Artificial island",
+          "distance": 0.3319,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Borneo",
+          "distance": 0.3351,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Hawaiian Islands",
+          "distance": 0.3383,
+          "zone": "New territory"
+        },
+        {
+          "topic": "New Guinea",
+          "distance": 0.347,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Hokkaido",
+          "distance": 0.35,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "Island studies",
+          "distance": 0.3206
+        },
+        {
+          "topic": "Honshu",
+          "distance": 0.33
+        },
+        {
+          "topic": "Artificial island",
+          "distance": 0.3319
+        }
+      ],
+      "original": [
+        {
+          "topic": "Island country",
+          "distance": 0.3438,
+          "area_id": "human-geography"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Island country",
+          "distance": 0.3438,
+          "area_id": "human-geography"
+        }
+      ],
+      "common_final": 1
+    },
+    {
+      "input": "Java programming",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "Java programming",
+      "graph_text": "Java programming",
+      "eligible_all": 3,
+      "eligible_routed": 3,
+      "routed_recall": 1,
+      "route_areas": [
+        "programming",
+        "computer-science",
+        "writing-systems",
+        "artificial-intelligence",
+        "graph-theory",
+        "linguistics",
+        "woodworking",
+        "control"
+      ],
+      "route_domains": [
+        "Computing & information",
+        "Engineering & transport",
+        "Home & crafts",
+        "Learning & language",
+        "Mathematics"
+      ],
+      "original_count": 3,
+      "all_area_count": 3,
+      "broad_count": 10,
+      "broad": [
+        {
+          "topic": "Programming language",
+          "distance": 0.3162,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3088,
+          "zone": "New territory"
+        },
+        {
+          "topic": "JavaScript programming",
+          "distance": 0.3069,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Computer science",
+          "distance": 0.3237,
+          "zone": "New territory"
+        },
+        {
+          "topic": "BASIC",
+          "distance": 0.3265,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Computer programming",
+          "distance": 0.3267,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Computer program",
+          "distance": 0.3302,
+          "zone": "New territory"
+        },
+        {
+          "topic": "C++",
+          "distance": 0.3328,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Python programming",
+          "distance": 0.334,
+          "zone": "New territory"
+        },
+        {
+          "topic": "C (programming language)",
+          "distance": 0.3366,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "JavaScript programming",
+          "distance": 0.3069
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3088
+        },
+        {
+          "topic": "Programming language",
+          "distance": 0.3162
+        }
+      ],
+      "original": [
+        {
+          "topic": "Programming model",
+          "distance": 0.314,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3088,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Programming by permutation",
+          "distance": 0.3422,
+          "area_id": "programming"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Programming model",
+          "distance": 0.314,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3088,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Programming by permutation",
+          "distance": 0.3422,
+          "area_id": "programming"
+        }
+      ],
+      "common_final": 3
+    },
+    {
+      "input": "Mercury",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "Mercury",
+      "graph_text": "Mercury",
+      "eligible_all": 0,
+      "eligible_routed": 0,
+      "routed_recall": null,
+      "route_areas": [
+        "astronomy",
+        "materials",
+        "ancient-technology",
+        "chemical-bonding",
+        "logic",
+        "geology",
+        "chemistry",
+        "food-science"
+      ],
+      "route_domains": [
+        "Chemistry & materials",
+        "Earth & environment",
+        "Food & agriculture",
+        "History & culture",
+        "Philosophy",
+        "Physics & astronomy"
+      ],
+      "original_count": 0,
+      "all_area_count": 0,
+      "broad_count": 1,
+      "broad": [
+        {
+          "topic": "Amalgam (chemistry)",
+          "distance": 0.3171,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "Mercury (planet)",
+          "distance": 0.2692
+        },
+        {
+          "topic": "Amalgam (chemistry)",
+          "distance": 0.3171
+        },
+        {
+          "topic": "Jupiter",
+          "distance": 0.3753
+        }
+      ],
+      "original": [],
+      "all_area": [],
+      "common_final": 0
+    },
+    {
+      "input": "Mercury metal",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "Mercury metal",
+      "graph_text": "Mercury metal",
+      "eligible_all": 1,
+      "eligible_routed": 1,
+      "routed_recall": 1,
+      "route_areas": [
+        "materials",
+        "ancient-technology",
+        "astronomy",
+        "geology",
+        "chemical-bonding",
+        "civil-engineering",
+        "cooking",
+        "climate"
+      ],
+      "route_domains": [
+        "Chemistry & materials",
+        "Earth & environment",
+        "Engineering & transport",
+        "Food & agriculture",
+        "History & culture",
+        "Physics & astronomy"
+      ],
+      "original_count": 1,
+      "all_area_count": 1,
+      "broad_count": 6,
+      "broad": [
+        {
+          "topic": "Bronze",
+          "distance": 0.3183,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Mercury (planet)",
+          "distance": 0.3259,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Aluminium",
+          "distance": 0.3287,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Brass",
+          "distance": 0.3294,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Metal",
+          "distance": 0.347,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Stainless steel",
+          "distance": 0.3484,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "Amalgam (chemistry)",
+          "distance": 0.2509
+        },
+        {
+          "topic": "Bronze",
+          "distance": 0.3183
+        },
+        {
+          "topic": "Mercury (planet)",
+          "distance": 0.3259
+        }
+      ],
+      "original": [
+        {
+          "topic": "Lodestone",
+          "distance": 0.3486,
+          "area_id": "ancient-technology"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Lodestone",
+          "distance": 0.3486,
+          "area_id": "ancient-technology"
+        }
+      ],
+      "common_final": 1
+    },
+    {
+      "input": "Mercury planet",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "Mercury planet",
+      "graph_text": "Mercury planet",
+      "eligible_all": 0,
+      "eligible_routed": 0,
+      "routed_recall": null,
+      "route_areas": [
+        "astronomy",
+        "geology",
+        "mechanics",
+        "logic",
+        "ecology",
+        "painting",
+        "artificial-intelligence",
+        "evolution"
+      ],
+      "route_domains": [
+        "Biology & nature",
+        "Computing & information",
+        "Earth & environment",
+        "Philosophy",
+        "Physics & astronomy",
+        "Visual arts & design"
+      ],
+      "original_count": 0,
+      "all_area_count": 0,
+      "broad_count": 5,
+      "broad": [
+        {
+          "topic": "Earth",
+          "distance": 0.3162,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Extrasolar planet",
+          "distance": 0.3129,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Jupiter",
+          "distance": 0.3316,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Planet",
+          "distance": 0.3342,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Mars",
+          "distance": 0.344,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "Mercury (planet)",
+          "distance": 0.2194
+        },
+        {
+          "topic": "Extrasolar planet",
+          "distance": 0.3129
+        },
+        {
+          "topic": "Earth",
+          "distance": 0.3162
+        }
+      ],
+      "original": [],
+      "all_area": [],
+      "common_final": 0
+    },
+    {
+      "input": "Fermentation",
+      "broad_exact": true,
+      "graph_exact": true,
+      "broad_text": "Fermentation: Using microorganisms to transform and preserve foods.",
+      "graph_text": "Fermentation: metabolic process producing energy in the absence of oxygen",
+      "eligible_all": 3,
+      "eligible_routed": 3,
+      "routed_recall": 1,
+      "route_areas": [
+        "chemistry",
+        "cooking",
+        "food-science",
+        "photography",
+        "fitness",
+        "genetics",
+        "agriculture",
+        "control"
+      ],
+      "route_domains": [
+        "Biology & nature",
+        "Chemistry & materials",
+        "Engineering & transport",
+        "Food & agriculture",
+        "Health & medicine",
+        "Visual arts & design"
+      ],
+      "original_count": 2,
+      "all_area_count": 2,
+      "broad_count": 10,
+      "broad": [
+        {
+          "topic": "Food preservation",
+          "distance": 0.3181,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Cheesemaking",
+          "distance": 0.3086,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Home brewing",
+          "distance": 0.2992,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Blue cheese",
+          "distance": 0.3334,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Sourdough",
+          "distance": 0.2913,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Fish sauce",
+          "distance": 0.3418,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Microbiology",
+          "distance": 0.342,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Food engineering",
+          "distance": 0.3455,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Wine fermentation",
+          "distance": 0.2673,
+          "zone": "Familiar overlap"
+        },
+        {
+          "topic": "Water kefir",
+          "distance": 0.2664,
+          "zone": "Familiar overlap"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "Water kefir",
+          "distance": 0.2664
+        },
+        {
+          "topic": "Wine fermentation",
+          "distance": 0.2673
+        },
+        {
+          "topic": "Pickling",
+          "distance": 0.2768
+        }
+      ],
+      "original": [
+        {
+          "topic": "Thermogenesis",
+          "distance": 0.3212,
+          "area_id": "fitness"
+        },
+        {
+          "topic": "Mother of vinegar",
+          "distance": 0.3485,
+          "area_id": "food-science"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Thermogenesis",
+          "distance": 0.3212,
+          "area_id": "fitness"
+        },
+        {
+          "topic": "Mother of vinegar",
+          "distance": 0.3485,
+          "area_id": "food-science"
+        }
+      ],
+      "common_final": 2
+    },
+    {
+      "input": "cozy gaming",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "cozy gaming",
+      "graph_text": "cozy gaming",
+      "eligible_all": 2,
+      "eligible_routed": 2,
+      "routed_recall": 1,
+      "route_areas": [
+        "video-games",
+        "chess",
+        "storytelling",
+        "woodworking",
+        "social-psychology",
+        "architecture",
+        "memory",
+        "sports"
+      ],
+      "route_domains": [
+        "Games & sports",
+        "Home & crafts",
+        "Literature & storytelling",
+        "Mind & behavior",
+        "Society & relationships",
+        "Visual arts & design"
+      ],
+      "original_count": 2,
+      "all_area_count": 2,
+      "broad_count": 2,
+      "broad": [
+        {
+          "topic": "Board games",
+          "distance": 0.3449,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Cozy games",
+          "distance": 0.2832,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "Cozy games",
+          "distance": 0.2832
+        },
+        {
+          "topic": "Board games",
+          "distance": 0.3449
+        },
+        {
+          "topic": "Video game",
+          "distance": 0.3604
+        }
+      ],
+      "original": [
+        {
+          "topic": "Microconsole",
+          "distance": 0.342,
+          "area_id": "video-games"
+        },
+        {
+          "topic": "Friendslop",
+          "distance": 0.3478,
+          "area_id": "video-games"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Microconsole",
+          "distance": 0.342,
+          "area_id": "video-games"
+        },
+        {
+          "topic": "Friendslop",
+          "distance": 0.3478,
+          "area_id": "video-games"
+        }
+      ],
+      "common_final": 2
+    },
+    {
+      "input": "LLM interpretability",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "LLM interpretability",
+      "graph_text": "LLM interpretability",
+      "eligible_all": 1,
+      "eligible_routed": 1,
+      "routed_recall": 1,
+      "route_areas": [
+        "logic",
+        "legal-doctrines",
+        "historiography",
+        "artificial-intelligence",
+        "linguistics",
+        "mathematics",
+        "programming",
+        "computer-science"
+      ],
+      "route_domains": [
+        "Computing & information",
+        "History & culture",
+        "Learning & language",
+        "Mathematics",
+        "Philosophy",
+        "Politics & law"
+      ],
+      "original_count": 1,
+      "all_area_count": 1,
+      "broad_count": 0,
+      "broad": [],
+      "nearest": [
+        {
+          "topic": "Explainable AI",
+          "distance": 0.3588
+        },
+        {
+          "topic": "Semantics",
+          "distance": 0.3719
+        },
+        {
+          "topic": "Philosophy of language",
+          "distance": 0.3869
+        }
+      ],
+      "original": [
+        {
+          "topic": "Mechanistic interpretability",
+          "distance": 0.3455,
+          "area_id": "artificial-intelligence"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Mechanistic interpretability",
+          "distance": 0.3455,
+          "area_id": "artificial-intelligence"
+        }
+      ],
+      "common_final": 1
+    },
+    {
+      "input": "causal representation learning",
+      "broad_exact": false,
+      "graph_exact": false,
+      "broad_text": "causal representation learning",
+      "graph_text": "causal representation learning",
+      "eligible_all": 2,
+      "eligible_routed": 0,
+      "routed_recall": 0,
+      "route_areas": [
+        "artificial-intelligence",
+        "sociology",
+        "cognitive-biases",
+        "chemistry",
+        "perception",
+        "logic",
+        "graph-theory",
+        "philosophy-mind"
+      ],
+      "route_domains": [
+        "Chemistry & materials",
+        "Computing & information",
+        "Mathematics",
+        "Mind & behavior",
+        "Philosophy",
+        "Society & relationships"
+      ],
+      "original_count": 0,
+      "all_area_count": 2,
+      "broad_count": 1,
+      "broad": [
+        {
+          "topic": "causality",
+          "distance": 0.3364,
+          "zone": "New territory"
+        }
+      ],
+      "nearest": [
+        {
+          "topic": "causality",
+          "distance": 0.3364
+        },
+        {
+          "topic": "Causal inference",
+          "distance": 0.3531
+        },
+        {
+          "topic": "Machine learning",
+          "distance": 0.3864
+        }
+      ],
+      "original": [],
+      "all_area": [
+        {
+          "topic": "Targeted maximum likelihood estimation",
+          "distance": 0.3383,
+          "area_id": "epidemiology"
+        },
+        {
+          "topic": "Causal filter",
+          "distance": 0.3419,
+          "area_id": "control"
+        }
+      ],
+      "common_final": 0
+    },
+    {
+      "input": "Python programming + Gardening",
+      "keywords": [
+        "Python programming",
+        "Gardening"
+      ],
+      "eligible_all": 24,
+      "eligible_routed": 22,
+      "routed_recall": 0.9167,
+      "route_areas": [
+        "programming",
+        "gardening",
+        "computer-science",
+        "anthropology",
+        "agriculture",
+        "photography",
+        "artificial-intelligence",
+        "ecology"
+      ],
+      "route_domains": [
+        "Biology & nature",
+        "Computing & information",
+        "Food & agriculture",
+        "Home & crafts",
+        "Society & relationships",
+        "Visual arts & design"
+      ],
+      "original_count": 10,
+      "all_area_count": 10,
+      "broad_count": 10,
+      "broad": [
+        {
+          "topic": "Data science",
+          "distance": 0.3147,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Terrariums",
+          "distance": 0.3178,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Ethnobotany",
+          "distance": 0.3165,
+          "zone": "New territory"
+        },
+        {
+          "topic": "C++ programming",
+          "distance": 0.3244,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Data engineering",
+          "distance": 0.305,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Agronomy",
+          "distance": 0.3282,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3304,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Seed saving",
+          "distance": 0.3326,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Balcony gardening",
+          "distance": 0.2732,
+          "zone": "Familiar overlap"
+        },
+        {
+          "topic": "Botany",
+          "distance": 0.2766,
+          "zone": "Familiar overlap"
+        }
+      ],
+      "original": [
+        {
+          "topic": "Garden World Images",
+          "distance": 0.3088,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Programming model",
+          "distance": 0.3214,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Gardener",
+          "distance": 0.3084,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Dataflow programming",
+          "distance": 0.3267,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Mission Garden",
+          "distance": 0.3238,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Plant–animal interaction",
+          "distance": 0.3386,
+          "area_id": "ecology"
+        },
+        {
+          "topic": "Sowing",
+          "distance": 0.3415,
+          "area_id": "agriculture"
+        },
+        {
+          "topic": "Object-oriented programming",
+          "distance": 0.3304,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Garden design",
+          "distance": 0.2762,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Garden tourism",
+          "distance": 0.2781,
+          "area_id": "gardening"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Garden World Images",
+          "distance": 0.3088,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Programming model",
+          "distance": 0.3214,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Plant blindness",
+          "distance": 0.3248,
+          "area_id": "cognitive-biases"
+        },
+        {
+          "topic": "Gardener",
+          "distance": 0.3084,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Sensory garden",
+          "distance": 0.2996,
+          "area_id": "perception"
+        },
+        {
+          "topic": "Dataflow programming",
+          "distance": 0.3267,
+          "area_id": "programming"
+        },
+        {
+          "topic": "Mission Garden",
+          "distance": 0.3238,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Plant–animal interaction",
+          "distance": 0.3386,
+          "area_id": "ecology"
+        },
+        {
+          "topic": "Garden design",
+          "distance": 0.2762,
+          "area_id": "gardening"
+        },
+        {
+          "topic": "Garden tourism",
+          "distance": 0.2781,
+          "area_id": "gardening"
+        }
+      ],
+      "common_final": 8
+    },
+    {
+      "input": "Go",
+      "keywords": [
+        "Go"
+      ],
+      "eligible_all": 2,
+      "eligible_routed": 1,
+      "routed_recall": 0.5,
+      "route_areas": [
+        "video-games",
+        "chess",
+        "sports",
+        "anthropology",
+        "artificial-intelligence",
+        "travel",
+        "economics",
+        "mathematics"
+      ],
+      "route_domains": [
+        "Computing & information",
+        "Economics & organizations",
+        "Games & sports",
+        "Geography & travel",
+        "Mathematics",
+        "Society & relationships"
+      ],
+      "original_count": 1,
+      "all_area_count": 2,
+      "broad_count": 6,
+      "broad": [
+        {
+          "topic": "Go (game)",
+          "distance": 0.3089,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Backgammon",
+          "distance": 0.3014,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Mancala",
+          "distance": 0.3298,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Pong",
+          "distance": 0.3485,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Game",
+          "distance": 0.3483,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Chess",
+          "distance": 0.3481,
+          "zone": "New territory"
+        }
+      ],
+      "original": [
+        {
+          "topic": "Turn-based tactics",
+          "distance": 0.3304,
+          "area_id": "video-games"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Turn-based tactics",
+          "distance": 0.3304,
+          "area_id": "video-games"
+        },
+        {
+          "topic": "Games, Puzzles, and Computation",
+          "distance": 0.3376,
+          "area_id": "computer-science"
+        }
+      ],
+      "common_final": 1
+    },
+    {
+      "input": "Go programming",
+      "keywords": [
+        "Go programming"
+      ],
+      "eligible_all": 1,
+      "eligible_routed": 1,
+      "routed_recall": 1,
+      "route_areas": [
+        "programming",
+        "computer-science",
+        "writing-systems",
+        "artificial-intelligence",
+        "graph-theory",
+        "linguistics",
+        "voting",
+        "logic"
+      ],
+      "route_domains": [
+        "Computing & information",
+        "Learning & language",
+        "Mathematics",
+        "Philosophy",
+        "Politics & law"
+      ],
+      "original_count": 1,
+      "all_area_count": 1,
+      "broad_count": 5,
+      "broad": [
+        {
+          "topic": "COBOL",
+          "distance": 0.3098,
+          "zone": "New territory"
+        },
+        {
+          "topic": "C (programming language)",
+          "distance": 0.3255,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Programming language",
+          "distance": 0.3358,
+          "zone": "New territory"
+        },
+        {
+          "topic": "BASIC",
+          "distance": 0.3423,
+          "zone": "New territory"
+        },
+        {
+          "topic": "Compiler design",
+          "distance": 0.3464,
+          "zone": "New territory"
+        }
+      ],
+      "original": [
+        {
+          "topic": "Compile and go system",
+          "distance": 0.3383,
+          "area_id": "programming"
+        }
+      ],
+      "all_area": [
+        {
+          "topic": "Compile and go system",
+          "distance": 0.3383,
+          "area_id": "programming"
+        }
+      ],
+      "common_final": 1
+    }
+  ],
+  "public_source_sha256": {
+    "data/topics.json": "1378e2cb37b2c3b648c2319c6303dbbf6380f20d2f0ff10fe8db8a2f62bd2f44",
+    "data/discovery_graph.json": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309"
+  },
+  "embedding_cache_sha256": {
+    "broad": "ef932b938ffb824c3799b7154f0581641526ca519f7de9dc9cfbc52b60412918",
+    "concepts": "66f7c7cc045c991ee484a38a8ee50be7b5b1b1f615257c9765591827b8f5c13a",
+    "areas": "93095a332a119ffa7b00fe5c6c9512ca0de76f6686cd093e5931ec43feb802dc"
+  }
+}

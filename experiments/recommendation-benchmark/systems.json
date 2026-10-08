@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "systems": [
+    {
+      "name": "V0",
+      "variant": "V0",
+      "config": {}
+    },
+    {
+      "name": "V1",
+      "variant": "V1",
+      "config": {}
+    },
+    {
+      "name": "V2",
+      "variant": "V2",
+      "config": {}
+    },
+    {
+      "name": "V3",
+      "variant": "V3",
+      "config": {}
+    },
+    {
+      "name": "V3-no-lexical",
+      "variant": "V3-no-lexical",
+      "config": {}
+    },
+    {
+      "name": "V3-no-graph",
+      "variant": "V3-no-graph",
+      "config": {}
+    },
+    {
+      "name": "V3-no-ranking",
+      "variant": "V3-no-ranking",
+      "config": {}
+    },
+    {
+      "name": "R-connection",
+      "variant": "V3",
+      "config": {
+        "relevance": 0.8,
+        "band": 0.15,
+        "novelty": 0.05
+      }
+    },
+    {
+      "name": "R-depth",
+      "variant": "V3",
+      "config": {
+        "relevance": 0.7,
+        "band": 0.3,
+        "novelty": 0.0
+      }
+    },
+    {
+      "name": "R-outward",
+      "variant": "V3",
+      "config": {
+        "relevance": 0.25,
+        "band": 0.3,
+        "novelty": 0.45
+      }
+    },
+    {
+      "name": "R-variety",
+      "variant": "V3",
+      "config": {
+        "relevance": 0.55,
+        "band": 0.25,
+        "novelty": 0.2,
+        "diversity": 0.5
+      }
+    },
+    {
+      "name": "R-small-pool",
+      "variant": "V3",
+      "config": {
+        "pool_limit": 64
+      }
+    },
+    {
+      "name": "R-balance",
+      "variant": "V3",
+      "config": {
+        "relevance": 0.5,
+        "band": 0.25,
+        "novelty": 0.25,
+        "diversity": 0.35
+      }
+    },
+    {
+      "name": "R-band",
+      "variant": "V3",
+      "config": {
+        "relevance": 0.15,
+        "band": 0.75,
+        "novelty": 0.1
+      }
+    },
+    {
+      "name": "A-adaptive",
+      "variant": "V3-adaptive",
+      "config": {}
+    },
+    {
+      "name": "A-connection",
+      "variant": "V3-adaptive",
+      "config": {
+        "relevance": 0.8,
+        "band": 0.15,
+        "novelty": 0.05
+      }
+    },
+    {
+      "name": "A-depth",
+      "variant": "V3-adaptive",
+      "config": {
+        "relevance": 0.7,
+        "band": 0.3,
+        "novelty": 0.0
+      }
+    },
+    {
+      "name": "A-variety",
+      "variant": "V3-adaptive",
+      "config": {
+        "relevance": 0.55,
+        "band": 0.25,
+        "novelty": 0.2,
+        "diversity": 0.5
+      }
+    },
+    {
+      "name": "A-outward",
+      "variant": "V3-adaptive",
+      "config": {
+        "relevance": 0.25,
+        "band": 0.3,
+        "novelty": 0.45
+      }
+    }
+  ]
+}
