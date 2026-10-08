@@ -8,7 +8,7 @@ from pathlib import Path
 
 import numpy as np
 
-from explorer import EPSILON, _key, _unit_vectors, score_catalog
+from explorer import EPSILON, _key, _unit_vectors, score_catalog, _classification_distances
 from feedback import area_preferences, new_profile
 
 GRAPH_PATH = Path(__file__).resolve().parent / 'data' / 'discovery_graph.json'
@@ -111,7 +111,7 @@ def select_areas(areas, area_vectors, query_vectors, limit=8):
 def recommend_specific(graph, concept_vectors, interests, interest_vectors, *, area_ids=None,
                        profile=None, radius=.28, expansion=.07, overlap=.015, top_k=10,
                        diversity=.20, randomness=.03, seed=None, exploration_fraction=.30,
-                       max_overlap_fraction=.2):
+                       max_overlap_fraction=.2, classification_distances=None, include_unlinked=False):
     """Follow graph paths, then enforce actual concept distances before personal ranking.
 
     Reserve up to ceil(exploration_fraction * result count) selections from the
@@ -133,6 +133,7 @@ def recommend_specific(graph, concept_vectors, interests, interest_vectors, *, a
     if not concepts:
         return []
     scores = score_catalog(concepts, concept_vectors, interests, interest_vectors)
+    classifications = _classification_distances(classification_distances,[r['distance'] for r in scores])
     units = _unit_vectors(concept_vectors, 'Concept vectors')
     reached = {r['id']: r for r in graph_candidates(graph, area_ids)}
     titles = {_key(s) for s in interests}
@@ -140,12 +141,13 @@ def recommend_specific(graph, concept_vectors, interests, interest_vectors, *, a
     pool = []
     for row in scores:
         rating = profile['items'].get(row['id'], {})
-        if row['id'] not in reached or rating.get('known') or _key(row['topic']) in titles:
+        if (row['id'] not in reached and not include_unlinked) or rating.get('known') or _key(row['topic']) in titles:
             continue
         if not lower - EPSILON <= row['distance'] <= upper + EPSILON or row['distance'] <= .035:
             continue
-        pool.append(dict(row, area_ids=reached[row['id']]['area_ids'], paths=reached[row['id']]['paths'],
-                         zone='New territory' if row['distance'] >= radius - EPSILON else 'Familiar overlap',
+        provenance = reached.get(row['id'],dict(area_ids=[],paths={}))
+        pool.append(dict(row, area_ids=provenance['area_ids'], paths=provenance['paths'],
+                         zone='New territory' if classifications[row['catalog_index']] >= radius - EPSILON else 'Familiar overlap',
                          boundary_offset=row['distance'] - radius))
     if not pool:
         return []
@@ -157,7 +159,7 @@ def recommend_specific(graph, concept_vectors, interests, interest_vectors, *, a
     reserve_target = math.ceil(exploration_fraction * result_count)
     exposures, prefs = profile['exposures'], area_preferences(profile)
     eligible_areas = {a for row in pool for a in row['area_ids']}
-    least_seen = min(exposures.get(a, 0) for a in eligible_areas)
+    least_seen = min((exposures.get(a, 0) for a in eligible_areas),default=0)
     underexplored = {a for a in eligible_areas if exposures.get(a, 0) == least_seen}
     rng = np.random.default_rng(seed)
     # Draw in stable catalog order so feedback exclusions do not reshuffle noise.
@@ -176,7 +178,7 @@ def recommend_specific(graph, concept_vectors, interests, interest_vectors, *, a
 
         def evaluate(row):
             options = [a for a in row['area_ids'] if not reserve or a in underexplored]
-            area = min(options, key=lambda a: (area_counts[a], exposures.get(a, 0), row['area_ids'].index(a)))
+            area = min(options, key=lambda a: (area_counts[a], exposures.get(a, 0), row['area_ids'].index(a))) if options else None
             preference = prefs.get(area, {'curiosity': 0, 'level': None})
             rating = profile['items'].get(row['id'], {})
             fit = 1 - min(abs(row['distance'] - target) / scale, 1)
@@ -187,13 +189,14 @@ def recommend_specific(graph, concept_vectors, interests, interest_vectors, *, a
             redundancy = max(0., max((float(units[row['catalog_index']] @ units[s['catalog_index']]) for s in selected), default=0.))
             parts = dict(band_fit=(1-diversity)*fit, curiosity=curiosity, difficulty=difficulty,
                          presentation=presentation, diversity=-diversity*redundancy,
-                         area_variety=-.12*area_counts[area], randomness=jitter[row['id']])
+                         area_variety=-.12*area_counts[area] if area is not None else 0., randomness=jitter[row['id']])
             return sum(parts.values()), area, parts, desired
 
         evaluated = [(row, evaluate(row)) for row in available]
         best, (score, area, parts, desired) = max(evaluated, key=lambda item: (round(item[1][0], 12), -item[0]['catalog_index']))
-        path = best['paths'][area]
-        selected.append(dict(best, area_id=area, area=areas[area]['topic'], domain=areas[area]['domain'],
+        path = best['paths'].get(area,[])
+        selected.append(dict(best, area_id=area, area=areas[area]['topic'] if area else None,
+                             domain=areas[area]['domain'] if area else best.get('domain'),
                              graph_path=[nodes[i]['topic'] for i in path], path_ids=path,
                              preferred_level=desired, score=score, score_parts=parts,
                              exploration_pick=reserve, exploration_target=reserve_target))

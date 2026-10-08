@@ -143,14 +143,25 @@ The radius is an adjustable modeling assumption, not a measured boundary of a pe
 
 Run checks with `python -m pytest -q`.
 
+The [recommendation lab](recommendation_lab/README.md) compares canonical meaning
+resolution, global retrieval, semantic/keyword/graph fusion, and ranking variants
+under four frozen scorecards. [The first experiment](experiments/recommendation-benchmark/cycle-001/summary.md)
+records nineteen development configurations, assistant item judgments, held-out
+results, and a bounded improvement workflow. [Experiment 002](experiments/recommendation-benchmark/cycle-002/summary.md)
+adds an opt-in policy for unknown concepts within familiar fields, compares sixteen
+configurations on six fresh final families, and saves a three-system shortlist.
+Production retains its existing default while operational selection evidence
+remains incomplete. The saved experiments used the earlier 3,452-topic catalog;
+their scores do not evaluate the expanded default catalog.
+
 The default catalog combines **718 authored everyday interests** with
-**2,734 concepts from Wikidata**, selected using
-[Wikimedia's curated cross-disciplinary list](https://meta.wikimedia.org/wiki/List_of_articles_every_Wikipedia_should_have/Expanded).
-Each of 23 broad subjects has a **160-topic cap**, with rotation through
-subtopics. [Wikidata descriptions are CC0](https://www.wikidata.org/wiki/Wikidata:Licensing).
+**30,919 topics from Wikidata**. It preserves the original 3,452-topic balanced
+snapshot and adds 28,185 topics selected from
+[Wikipedia Vital Articles Level 5](https://en.wikipedia.org/wiki/Wikipedia:Vital_articles/Level/5),
+without a per-domain cap. [Wikidata descriptions are CC0](https://www.wikidata.org/wiki/Wikidata:Licensing).
 The [catalog notes](data/README.md) explain provenance, coverage and refresh steps.
 The prior OpenAlex catalog is preserved in `data/archives/topics_openalex.json`.
-Count balance does not establish cultural neutrality or exhaustive coverage.
+Catalog size does not establish cultural neutrality or exhaustive coverage.
 
 Embedding distance indicates semantic novelty; it does not establish usefulness,
 viewpoint diversity or an effect on polarization. Ambiguous inputs work better as
@@ -160,3 +171,16 @@ unmatched input phrases are embedded as written.
 Model: [all-mpnet-base-v2](https://huggingface.co/sentence-transformers/all-mpnet-base-v2)
 (768 dimensions, Apache 2.0). Method background:
 [Sentence Transformers semantic search](https://www.sbert.net/examples/sentence_transformer/applications/semantic-search/README.html).
+
+## License
+
+Except where otherwise noted, original material in this repository is licensed
+under [Creative Commons Attribution-NonCommercial 4.0 International
+(CC BY-NC 4.0)](LICENSE). See the [official license](https://creativecommons.org/licenses/by-nc/4.0/)
+for its attribution and noncommercial-use terms.
+
+Imported data, third-party materials, models, and dependencies retain their own
+licenses; this license does not impose additional restrictions on them. In
+particular, Wikidata material remains CC0, and Wikipedia-derived material retains
+the CC BY-SA 4.0 terms described in the [catalog notes](data/README.md) and
+[graph notes](data/discovery_graph_README.md).
