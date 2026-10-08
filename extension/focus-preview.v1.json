@@ -6,13 +6,13 @@
     "explanation": "Real RecommendationEngine output from the original cached all-mpnet-base-v2 catalog embeddings. Public topics only; no personal state. Recorded sampling is fixed in this file; Refresh reopens the same recorded batch offline.",
     "distance": "acos(clamp(cosine,-1,1))/pi",
     "identity": {
-      "catalog_sha256": "96dfb134b5a5fdaca331c2f8de32bca31b9526bddc7b735b8797d22ea7dcb3e0",
+      "catalog_sha256": "6fc5374d3c3b2140cb05b67c09c79e12dd35216296de2aeee2499cda73020091",
       "model": "sentence-transformers/all-mpnet-base-v2",
       "embedding": {
-        "sha256": "b7a40251d3ab0c1af391a99e244ced39d6a512fb8b635d56823dca89cddcbf91",
+        "sha256": "bbbf8f75a964172b4b5f41283d2a19efdc0301d0997927969121a5fd51bf9ca4",
         "dtype": "float64",
         "shape": [
-          3452,
+          31637,
           768
         ]
       }
@@ -22,13 +22,13 @@
     {
       "request": {
         "topic_id": "Gardening",
-        "catalog_sha256": "96dfb134b5a5fdaca331c2f8de32bca31b9526bddc7b735b8797d22ea7dcb3e0",
+        "catalog_sha256": "6fc5374d3c3b2140cb05b67c09c79e12dd35216296de2aeee2499cda73020091",
         "model": "sentence-transformers/all-mpnet-base-v2",
         "embedding": {
-          "sha256": "b7a40251d3ab0c1af391a99e244ced39d6a512fb8b635d56823dca89cddcbf91",
+          "sha256": "bbbf8f75a964172b4b5f41283d2a19efdc0301d0997927969121a5fd51bf9ca4",
           "dtype": "float64",
           "shape": [
-            3452,
+            31637,
             768
           ]
         },
@@ -44,25 +44,35 @@
         "schema_version": 1,
         "algorithm_version": "catalog-focus-band-v1",
         "seed_id": "Gardening",
-        "catalog_sha256": "96dfb134b5a5fdaca331c2f8de32bca31b9526bddc7b735b8797d22ea7dcb3e0",
+        "catalog_sha256": "6fc5374d3c3b2140cb05b67c09c79e12dd35216296de2aeee2499cda73020091",
         "model": "sentence-transformers/all-mpnet-base-v2",
         "embedding": {
-          "sha256": "b7a40251d3ab0c1af391a99e244ced39d6a512fb8b635d56823dca89cddcbf91",
+          "sha256": "bbbf8f75a964172b4b5f41283d2a19efdc0301d0997927969121a5fd51bf9ca4",
           "dtype": "float64",
           "shape": [
-            3452,
+            31637,
             768
           ]
         },
         "recommendations": [
+          {
+            "id": "Floriculture",
+            "topic": "Floriculture",
+            "domain": "Food & agriculture",
+            "description": "discipline of horticulture concerned with the cultivation of flowering and ornamental plants",
+            "nearest_interest": "Gardening",
+            "distance": 0.3147032086688634,
+            "boundary_offset": 0.034703208668863395,
+            "zone": "New territory"
+          },
           {
             "id": "Ethnobotany",
             "topic": "Ethnobotany",
             "domain": "Food & agriculture",
             "description": "Studying relationships between people, cultures and plants.",
             "nearest_interest": "Gardening",
-            "distance": 0.31648616613137276,
-            "boundary_offset": 0.03648616613137273,
+            "distance": 0.3164860555691339,
+            "boundary_offset": 0.03648605556913387,
             "zone": "New territory"
           },
           {
@@ -71,79 +81,59 @@
             "domain": "Home & crafts",
             "description": "Creating small enclosed or partially enclosed plant environments.",
             "nearest_interest": "Gardening",
-            "distance": 0.317813573642985,
-            "boundary_offset": 0.03781357364298499,
+            "distance": 0.31781359613498084,
+            "boundary_offset": 0.03781359613498081,
             "zone": "New territory"
           },
           {
-            "id": "Agronomy",
-            "topic": "Agronomy",
+            "id": "Plant propagation",
+            "topic": "Plant propagation",
             "domain": "Food & agriculture",
-            "description": "science and technology of producing and using plants for food, fuel, fiber, and reclamation",
+            "description": "process in growing new plants from a variety of sources",
             "nearest_interest": "Gardening",
-            "distance": 0.3281746203282221,
-            "boundary_offset": 0.04817462032822206,
+            "distance": 0.319308424891064,
+            "boundary_offset": 0.03930842489106395,
             "zone": "New territory"
           },
           {
-            "id": "Seed saving",
-            "topic": "Seed saving",
+            "id": "Persian gardens",
+            "topic": "Persian gardens",
             "domain": "Food & agriculture",
-            "description": "Collecting and preserving plant seeds for future growing seasons.",
+            "description": "tradition and style of garden",
             "nearest_interest": "Gardening",
-            "distance": 0.33264439969945636,
-            "boundary_offset": 0.052644399699456335,
+            "distance": 0.32242943774188093,
+            "boundary_offset": 0.042429437741880904,
             "zone": "New territory"
           },
           {
-            "id": "Landscape photography",
-            "topic": "Landscape photography",
-            "domain": "Geography & travel",
-            "description": "Photographing natural and built landscapes.",
-            "nearest_interest": "Gardening",
-            "distance": 0.33765257315649727,
-            "boundary_offset": 0.057652573156497244,
-            "zone": "New territory"
-          },
-          {
-            "id": "Permaculture",
-            "topic": "Permaculture",
+            "id": "Arboretum",
+            "topic": "Arboretum",
             "domain": "Food & agriculture",
-            "description": "Designing food-growing systems around ecological relationships and local conditions.",
+            "description": "botanical garden containing living collections of woody plants intended at least partly for scientific study",
             "nearest_interest": "Gardening",
-            "distance": 0.33642394787161134,
-            "boundary_offset": 0.05642394787161131,
+            "distance": 0.30714419210650223,
+            "boundary_offset": 0.027144192106502207,
             "zone": "New territory"
           },
           {
-            "id": "Ecology",
-            "topic": "Ecology",
-            "domain": "Biology & nature",
-            "description": "Studying relationships between organisms and their environments.",
-            "nearest_interest": "Gardening",
-            "distance": 0.3404476577357346,
-            "boundary_offset": 0.06044765773573457,
-            "zone": "New territory"
-          },
-          {
-            "id": "Floral arrangement",
-            "topic": "Floral arrangement",
+            "id": "Houseplant",
+            "topic": "Houseplant",
             "domain": "Home & crafts",
-            "description": "Composing flowers and foliage into decorative designs.",
+            "description": "plant that is grown indoors",
             "nearest_interest": "Gardening",
-            "distance": 0.3450407820479253,
-            "boundary_offset": 0.0650407820479253,
+            "distance": 0.3247369129936332,
+            "boundary_offset": 0.04473691299363319,
             "zone": "New territory"
           },
           {
-            "id": "Balcony gardening",
-            "topic": "Balcony gardening",
-            "domain": "Home & crafts",
-            "description": "Growing plants in compact elevated outdoor spaces.",
+            "id": "Urban agriculture",
+            "topic": "Urban agriculture",
+            "domain": "Food & agriculture",
+            "description": "agriculture in urban environments",
             "nearest_interest": "Gardening",
-            "distance": 0.2732300122893587,
-            "boundary_offset": -0.006769987710641301,
-            "zone": "Familiar overlap"
+            "distance": 0.32665830794785683,
+            "boundary_offset": 0.0466583079478568,
+            "zone": "New territory"
           },
           {
             "id": "Botany",
@@ -151,8 +141,18 @@
             "domain": "Biology & nature",
             "description": "Studying plants, their structures and their life processes.",
             "nearest_interest": "Gardening",
-            "distance": 0.2766209763377699,
-            "boundary_offset": -0.0033790236622301406,
+            "distance": 0.27662084772397066,
+            "boundary_offset": -0.0033791522760293624,
+            "zone": "Familiar overlap"
+          },
+          {
+            "id": "Balcony gardening",
+            "topic": "Balcony gardening",
+            "domain": "Home & crafts",
+            "description": "Growing plants in compact elevated outdoor spaces.",
+            "nearest_interest": "Gardening",
+            "distance": 0.2732301373223977,
+            "boundary_offset": -0.006769862677602323,
             "zone": "Familiar overlap"
           }
         ]
@@ -161,13 +161,13 @@
     {
       "request": {
         "topic_id": "Computer science",
-        "catalog_sha256": "96dfb134b5a5fdaca331c2f8de32bca31b9526bddc7b735b8797d22ea7dcb3e0",
+        "catalog_sha256": "6fc5374d3c3b2140cb05b67c09c79e12dd35216296de2aeee2499cda73020091",
         "model": "sentence-transformers/all-mpnet-base-v2",
         "embedding": {
-          "sha256": "b7a40251d3ab0c1af391a99e244ced39d6a512fb8b635d56823dca89cddcbf91",
+          "sha256": "bbbf8f75a964172b4b5f41283d2a19efdc0301d0997927969121a5fd51bf9ca4",
           "dtype": "float64",
           "shape": [
-            3452,
+            31637,
             768
           ]
         },
@@ -183,35 +183,65 @@
         "schema_version": 1,
         "algorithm_version": "catalog-focus-band-v1",
         "seed_id": "Computer science",
-        "catalog_sha256": "96dfb134b5a5fdaca331c2f8de32bca31b9526bddc7b735b8797d22ea7dcb3e0",
+        "catalog_sha256": "6fc5374d3c3b2140cb05b67c09c79e12dd35216296de2aeee2499cda73020091",
         "model": "sentence-transformers/all-mpnet-base-v2",
         "embedding": {
-          "sha256": "b7a40251d3ab0c1af391a99e244ced39d6a512fb8b635d56823dca89cddcbf91",
+          "sha256": "bbbf8f75a964172b4b5f41283d2a19efdc0301d0997927969121a5fd51bf9ca4",
           "dtype": "float64",
           "shape": [
-            3452,
+            31637,
             768
           ]
         },
         "recommendations": [
-          {
-            "id": "Data science",
-            "topic": "Data science",
-            "domain": "Computing & information",
-            "description": "Investigating questions through computation, statistics and data.",
-            "nearest_interest": "Computer science",
-            "distance": 0.31411615159417744,
-            "boundary_offset": 0.03411615159417741,
-            "zone": "New territory"
-          },
           {
             "id": "Information science",
             "topic": "Information science",
             "domain": "Computing & information",
             "description": "field primarily concerned with the analysis, collection, classification, manipulation, storage, retrieval and dissemination of information",
             "nearest_interest": "Computer science",
-            "distance": 0.3141837304314188,
-            "boundary_offset": 0.03418373043141876,
+            "distance": 0.3141838694393035,
+            "boundary_offset": 0.03418386943930346,
+            "zone": "New territory"
+          },
+          {
+            "id": "Recursion (computer science)",
+            "topic": "Recursion (computer science)",
+            "domain": "Computing & information",
+            "description": "algorithmic technique in computer science of solving a problem by reducing it to a smaller instance of the same problem",
+            "nearest_interest": "Computer science",
+            "distance": 0.3123483409845064,
+            "boundary_offset": 0.032348340984506396,
+            "zone": "New territory"
+          },
+          {
+            "id": "Data science",
+            "topic": "Data science",
+            "domain": "Computing & information",
+            "description": "Investigating questions through computation, statistics and data.",
+            "nearest_interest": "Computer science",
+            "distance": 0.31411623630956603,
+            "boundary_offset": 0.034116236309566006,
+            "zone": "New territory"
+          },
+          {
+            "id": "Parallel computing",
+            "topic": "Parallel computing",
+            "domain": "Computing & information",
+            "description": "programming paradigm in which many calculations or the execution of processes are carried out simultaneously",
+            "nearest_interest": "Computer science",
+            "distance": 0.31747676307889117,
+            "boundary_offset": 0.03747676307889114,
+            "zone": "New territory"
+          },
+          {
+            "id": "Data type",
+            "topic": "Data type",
+            "domain": "Computing & information",
+            "description": "classification of data in computer science",
+            "nearest_interest": "Computer science",
+            "distance": 0.3111242373638816,
+            "boundary_offset": 0.03112423736388159,
             "zone": "New territory"
           },
           {
@@ -220,68 +250,28 @@
             "domain": "Computing & information",
             "description": "field that develops and studies software enabling machines to exhibit intelligent behavior",
             "nearest_interest": "Computer science",
-            "distance": 0.318431305601178,
-            "boundary_offset": 0.03843130560117797,
+            "distance": 0.31843140314272655,
+            "boundary_offset": 0.03843140314272653,
             "zone": "New territory"
           },
           {
-            "id": "Computing",
-            "topic": "Computing",
+            "id": "Concurrent computing",
+            "topic": "Concurrent computing",
             "domain": "Computing & information",
-            "description": "human activity related to the processing of information by use of mechanical devices",
+            "description": "form of computing in which several computations logically execute during overlapping time periods",
             "nearest_interest": "Computer science",
-            "distance": 0.3202699614646345,
-            "boundary_offset": 0.04026996146463446,
+            "distance": 0.31743006419347214,
+            "boundary_offset": 0.03743006419347211,
             "zone": "New territory"
           },
           {
-            "id": "Mathematics",
-            "topic": "Mathematics",
+            "id": "Analysis of algorithms",
+            "topic": "Analysis of algorithms",
             "domain": "Mathematics",
-            "description": "field of study",
+            "description": "study of resources used by an algorithm",
             "nearest_interest": "Computer science",
-            "distance": 0.3240782789689461,
-            "boundary_offset": 0.04407827896894606,
-            "zone": "New territory"
-          },
-          {
-            "id": "Computer program",
-            "topic": "Computer program",
-            "domain": "Computing & information",
-            "description": "sequence of instructions written in programming language to perform a specified task with a computer",
-            "nearest_interest": "Computer science",
-            "distance": 0.32214061671265504,
-            "boundary_offset": 0.04214061671265501,
-            "zone": "New territory"
-          },
-          {
-            "id": "Computability theory",
-            "topic": "Computability theory",
-            "domain": "Mathematics",
-            "description": "study of computable functions and Turing degrees",
-            "nearest_interest": "Computer science",
-            "distance": 0.3254928056451149,
-            "boundary_offset": 0.045492805645114875,
-            "zone": "New territory"
-          },
-          {
-            "id": "Applied mathematics",
-            "topic": "Applied mathematics",
-            "domain": "Mathematics",
-            "description": "discipline of mathematics",
-            "nearest_interest": "Computer science",
-            "distance": 0.32338892083498183,
-            "boundary_offset": 0.0433889208349818,
-            "zone": "New territory"
-          },
-          {
-            "id": "C (programming language)",
-            "topic": "C (programming language)",
-            "domain": "Computing & information",
-            "description": "general-purpose programming language",
-            "nearest_interest": "Computer science",
-            "distance": 0.3005257794441125,
-            "boundary_offset": 0.02052577944411249,
+            "distance": 0.3220807638248902,
+            "boundary_offset": 0.04208076382489018,
             "zone": "New territory"
           },
           {
@@ -290,8 +280,18 @@
             "domain": "Mathematics",
             "description": "theoretical computer science and mathematics theory that classifies problems according to their inherent difficulty, and relates those classes to each other",
             "nearest_interest": "Computer science",
-            "distance": 0.2724969831500098,
-            "boundary_offset": -0.007503016849990218,
+            "distance": 0.27249706525069933,
+            "boundary_offset": -0.007502934749300694,
+            "zone": "Familiar overlap"
+          },
+          {
+            "id": "Informatics",
+            "topic": "Informatics",
+            "domain": "Computing & information",
+            "description": "study of computational systems, especially those for data storage and retrieval",
+            "nearest_interest": "Computer science",
+            "distance": 0.27440496567852357,
+            "boundary_offset": -0.005595034321476455,
             "zone": "Familiar overlap"
           }
         ]
@@ -300,13 +300,13 @@
     {
       "request": {
         "topic_id": "psychology",
-        "catalog_sha256": "96dfb134b5a5fdaca331c2f8de32bca31b9526bddc7b735b8797d22ea7dcb3e0",
+        "catalog_sha256": "6fc5374d3c3b2140cb05b67c09c79e12dd35216296de2aeee2499cda73020091",
         "model": "sentence-transformers/all-mpnet-base-v2",
         "embedding": {
-          "sha256": "b7a40251d3ab0c1af391a99e244ced39d6a512fb8b635d56823dca89cddcbf91",
+          "sha256": "bbbf8f75a964172b4b5f41283d2a19efdc0301d0997927969121a5fd51bf9ca4",
           "dtype": "float64",
           "shape": [
-            3452,
+            31637,
             768
           ]
         },
@@ -322,13 +322,13 @@
         "schema_version": 1,
         "algorithm_version": "catalog-focus-band-v1",
         "seed_id": "psychology",
-        "catalog_sha256": "96dfb134b5a5fdaca331c2f8de32bca31b9526bddc7b735b8797d22ea7dcb3e0",
+        "catalog_sha256": "6fc5374d3c3b2140cb05b67c09c79e12dd35216296de2aeee2499cda73020091",
         "model": "sentence-transformers/all-mpnet-base-v2",
         "embedding": {
-          "sha256": "b7a40251d3ab0c1af391a99e244ced39d6a512fb8b635d56823dca89cddcbf91",
+          "sha256": "bbbf8f75a964172b4b5f41283d2a19efdc0301d0997927969121a5fd51bf9ca4",
           "dtype": "float64",
           "shape": [
-            3452,
+            31637,
             768
           ]
         },
@@ -339,98 +339,98 @@
             "domain": "Mind & behavior",
             "description": "branch of psychology",
             "nearest_interest": "psychology",
-            "distance": 0.31429615948986517,
-            "boundary_offset": 0.03429615948986514,
+            "distance": 0.314296162914132,
+            "boundary_offset": 0.034296162914131956,
             "zone": "New territory"
           },
           {
-            "id": "clinical psychology",
-            "topic": "clinical psychology",
+            "id": "Cognitive behavioral therapy",
+            "topic": "Cognitive behavioral therapy",
             "domain": "Mind & behavior",
-            "description": "integration of science and clinical knowledge for the purpose of relieving psychologically based dysfunction",
+            "description": "psychotherapeutic approach that addresses dysfunctional emotions, behaviors and cognitions",
             "nearest_interest": "psychology",
-            "distance": 0.30743743969410514,
-            "boundary_offset": 0.027437439694105115,
+            "distance": 0.31347685629763405,
+            "boundary_offset": 0.03347685629763403,
             "zone": "New territory"
           },
           {
-            "id": "memory",
-            "topic": "memory",
+            "id": "Cognitive development",
+            "topic": "Cognitive development",
             "domain": "Mind & behavior",
-            "description": "mental faculties and processes involved in storing and retrieving information",
+            "description": "field of study in neuroscience and psychology",
             "nearest_interest": "psychology",
-            "distance": 0.32416284713275173,
-            "boundary_offset": 0.044162847132751704,
+            "distance": 0.31588905739177237,
+            "boundary_offset": 0.03588905739177234,
             "zone": "New territory"
           },
           {
-            "id": "anthropology",
-            "topic": "anthropology",
+            "id": "Social experiment",
+            "topic": "Social experiment",
             "domain": "Society & relationships",
-            "description": "scientific study of humans, human behavior, and societies",
+            "description": "mental experiment on humans in order to see how humans react to something",
             "nearest_interest": "psychology",
-            "distance": 0.32465961884429123,
-            "boundary_offset": 0.044659618844291205,
+            "distance": 0.31683816075674526,
+            "boundary_offset": 0.03683816075674523,
             "zone": "New territory"
           },
           {
-            "id": "personality",
-            "topic": "personality",
+            "id": "Psychiatry",
+            "topic": "Psychiatry",
+            "domain": "Health & medicine",
+            "description": "branch of medicine devoted to the study, diagnosis, treatment, and prevention of mental disorders",
+            "nearest_interest": "psychology",
+            "distance": 0.3129451002266781,
+            "boundary_offset": 0.03294510022667807,
+            "zone": "New territory"
+          },
+          {
+            "id": "Sociobiology",
+            "topic": "Sociobiology",
+            "domain": "Biology & nature",
+            "description": "subdiscipline of biology regarding social behavior",
+            "nearest_interest": "psychology",
+            "distance": 0.31587994946837306,
+            "boundary_offset": 0.03587994946837303,
+            "zone": "New territory"
+          },
+          {
+            "id": "Positive psychology",
+            "topic": "Positive psychology",
             "domain": "Mind & behavior",
-            "description": "psychological characteristics of an individual (usually referring to only humans)",
+            "description": "scientific study of the positive aspects of the human experience that make life worth living",
             "nearest_interest": "psychology",
-            "distance": 0.3291212556755831,
-            "boundary_offset": 0.049121255675583064,
+            "distance": 0.31177111463113255,
+            "boundary_offset": 0.031771114631132524,
             "zone": "New territory"
           },
           {
-            "id": "parapsychology",
-            "topic": "parapsychology",
-            "domain": "Philosophy",
-            "description": "study of paranormal and psychic phenomena",
-            "nearest_interest": "psychology",
-            "distance": 0.298939545228659,
-            "boundary_offset": 0.018939545228658983,
-            "zone": "New territory"
-          },
-          {
-            "id": "Sociology",
-            "topic": "Sociology",
-            "domain": "Society & relationships",
-            "description": "social science that studies human society and its development",
-            "nearest_interest": "psychology",
-            "distance": 0.32899840059339325,
-            "boundary_offset": 0.04899840059339322,
-            "zone": "New territory"
-          },
-          {
-            "id": "Gestalt psychology",
-            "topic": "Gestalt psychology",
+            "id": "Cognitivism (psychology)",
+            "topic": "Cognitivism (psychology)",
             "domain": "Mind & behavior",
-            "description": "theory of mind examining human perception, structures and organizing principles in sensory impressions",
+            "description": "theoretical psychological framework for understanding the mind that gained credence in the 1950s",
             "nearest_interest": "psychology",
-            "distance": 0.3316567635243737,
-            "boundary_offset": 0.05165676352437365,
+            "distance": 0.3179302912229957,
+            "boundary_offset": 0.03793029122299568,
             "zone": "New territory"
           },
           {
-            "id": "Cultural anthropology",
-            "topic": "Cultural anthropology",
-            "domain": "History & culture",
-            "description": "Studying human cultures, social practices and ways of living.",
-            "nearest_interest": "psychology",
-            "distance": 0.3291527298129855,
-            "boundary_offset": 0.04915272981298546,
-            "zone": "New territory"
-          },
-          {
-            "id": "behaviorism",
-            "topic": "behaviorism",
+            "id": "Psychological research",
+            "topic": "Psychological research",
             "domain": "Mind & behavior",
-            "description": "A systematic approach to psychology based on understanding the behavior of humans and other animals",
+            "description": "research that psychologists conduct to analyse the experiences' and behaviours of individuals or groups",
             "nearest_interest": "psychology",
-            "distance": 0.2775007759774052,
-            "boundary_offset": -0.002499224022594837,
+            "distance": 0.2697368709326604,
+            "boundary_offset": -0.010263129067339616,
+            "zone": "Familiar overlap"
+          },
+          {
+            "id": "Educational psychology",
+            "topic": "Educational psychology",
+            "domain": "Mind & behavior",
+            "description": "branch of psychology concerned with the scientific study of human learning",
+            "nearest_interest": "psychology",
+            "distance": 0.2690776756163643,
+            "boundary_offset": -0.010922324383635718,
             "zone": "Familiar overlap"
           }
         ]

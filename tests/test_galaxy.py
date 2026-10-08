@@ -91,6 +91,24 @@ def test_asset_uses_canonical_titles_and_only_public_geometry(monkeypatch, tmp_p
     assert json.loads((tmp_path / "galaxy.json").read_text()) == asset
 
 
+def test_domain_labels_follow_final_star_clusters_instead_of_separate_mds_anchors(monkeypatch, tmp_path):
+    m = module()
+    topics = [dict(topic=f"Star {i}", domain="A" if i < 5 else "B",
+                   description="Public topic description.") for i in range(8)]
+    positions = np.array([[0, 0], [.01, 0], [0, .01], [0, .02], [100, 100],
+                          [5, 5], [5.01, 5], [5, 5.01]])
+    far_anchors = np.array([[-10, 10], [10, -10]])
+    monkeypatch.setattr(m, "project_layout", lambda *args: (positions, far_anchors))
+    result = build(m, tmp_path, topics=topics, vectors=np.random.default_rng(7).normal(size=(8, 768)))
+    for label in result.asset['domains']:
+        own = [positions[i] for i, row in enumerate(topics) if row['domain'] == label['id']]
+        point = np.array([label['x'], label['y']])
+        assert any(np.array_equal(point, member) for member in own)
+        center = np.array([0, 0] if label['id'] == 'A' else [5, 5])
+        assert np.linalg.norm(point - center) < .1
+    assert [[row['x'], row['y']] for row in result.asset['topics']] == positions.tolist()
+
+
 def test_cache_hit_avoids_projection_and_republishes_output(monkeypatch, tmp_path):
     m = fast_projection(monkeypatch)
     first = build(m, tmp_path)
@@ -261,3 +279,40 @@ def test_blend_keeps_exact_fifteen_percent_anchor_contribution():
     radius = math.sqrt((x*x + y*y) / 2)
     expected = np.array([[x, 0.], [-x, 0.], [0., y], [0., -y]]) / radius
     assert module().blend_layout(graph, target) == pytest.approx(expected)
+
+
+def test_approved_b_projection_aligns_orientation_without_blending_anchors(monkeypatch):
+    import sys
+    import types
+    import sklearn.manifold
+    m = module()
+    observed = {}
+    anchors = np.array([[-1., -1.], [1., -1.], [1., 1.], [-1., 1.]])
+    rectangle = anchors * [2., 1.]
+    graph = rectangle @ np.array([[0., -1.], [1., 0.]]) * 8 + 10
+    class RecordingUMAP:
+        def __init__(self, **options):
+            observed.update(options)
+        def fit_transform(self, angular):
+            return graph
+    class FixedMDS:
+        def __init__(self, **options):
+            pass
+        def fit_transform(self, distances):
+            return anchors
+    monkeypatch.setitem(sys.modules, 'umap', types.SimpleNamespace(UMAP=RecordingUMAP))
+    monkeypatch.setattr(sklearn.manifold, 'MDS', FixedMDS)
+    topics = [dict(topic=f'Topic {i}', domain=f'Domain {i}', description='Public') for i in range(4)]
+    values = np.zeros((4, 768))
+    values[:, :4] = np.eye(4)
+    positions, _ = m.project_layout(topics, values, m.angular_distances(values), m.DEFAULT_PARAMETERS)
+    assert observed['n_neighbors'] == 12
+    assert observed['min_dist'] == .4
+    assert observed['spread'] == 1.5
+    assert observed['repulsion_strength'] == 2.5
+    assert observed['random_state'] == 42
+    assert observed['init'] == 'random'
+    assert observed['n_epochs'] == 300
+    # B uses MDS for orientation, with zero anchor interpolation: a rectangle
+    # remains a rectangle instead of becoming the square MDS anchor target.
+    assert positions == pytest.approx(rectangle / math.sqrt(5), abs=1e-7)

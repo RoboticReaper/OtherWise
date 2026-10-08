@@ -16,20 +16,21 @@ connects the sourced graph to the extension, with source paths and reading level
 Previously saved ratings retain undo and clear controls and remain local;
 the backend reconstructs a temporary profile per request.
 The **Dashboard ↗** button opens a full extension tab sharing the side panel's
-local profile. Its Galaxy map includes the complete public catalog, stable semantic
+local profile. Its Galaxy map includes the complete public catalog, the B island layout, adjustable display
 coordinates, domain filters, keyword search and true high-dimensional neighbors.
 Within Map, **Galaxy / Focus** switches between the whole catalog and a temporary
 semantic neighborhood. Opening Focus uses local nearest topics and makes no request.
 Its temporary center does not change Discover or save an interest. The optional
 Galaxy exploration mode starts off; when enabled, it highlights saved topics,
-their ten direct nearest topics, and individually searched topics.
+their ten direct nearest topics, and individually searched topics. Galaxy also has fit/fullscreen controls, independent domain/Interest label visibility, and authenticated layout previews. Custom layout requests send only public data-version identity and layout parameters.
 
 ## Run the extension demo
 
-1. Install Python dependencies in `.venv`: `python -m pip install -r requirements.txt`.
+1. Install Python dependencies in `.venv`: `python -m pip install -r requirements.txt`. For adjustable Galaxy previews, also install `requirements-layout.txt`.
 2. Build the extension: `python scripts/build_extension.py`.
 3. Start the backend and optional shared HTTPS demo using
-   [the backend guide](docs/demo-backend.md).
+   [the backend guide](docs/demo-backend.md). For local use, double-click
+   `Start-OtherWise-Local.command`.
 4. In Chrome's Extensions page, enable Developer mode and **Load unpacked** →
    `dist/otherwise-extension`.
 5. Open OtherWise. In Settings, save the service address and team access code
@@ -56,7 +57,7 @@ For a sample profile with the real whole-catalog map, build first, then serve
 **[Visit the OtherWise website →](https://RoboticReaper.github.io/OtherWise/)**
 
 A minimal notebook for discovering meaningful topics beyond your current interests.
-It searches an editable catalog of **3,452 topics across 23 domains**, using a local
+It searches an editable catalog of **31,637 topics across 23 domains**, using a local
 embedding model and an adjustable band around your existing interests.
 
 ## Open the demo

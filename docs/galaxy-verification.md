@@ -1,5 +1,7 @@
 # Whole Galaxy and dashboard verification
 
+Current expanded B and adjustable-controls verification: [2026-10-06 verification](galaxy-layout-controls-verification.md). The measurements below are the historical 2026-10-03 baseline.
+
 Verified 2026-10-03 in the managed product worktree, branch
 `codex/otherwise-development`, starting at `9e6d9a2`. Prototype source was read
 from local commit `fd581caed6e8c5fa7570fb5123ee2baa2eec0f41` on

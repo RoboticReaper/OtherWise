@@ -1,5 +1,12 @@
 export const galaxyDictionaries = {
   en: {
+    fit: 'Fit stars', fullscreen: 'Fullscreen', exitFullscreen: 'Exit fullscreen', fullscreenUnavailable: 'Fullscreen is unavailable. Open the map in a tab and try again.',
+    mapControls: 'Galaxy controls', layoutSettings: 'Layout settings', domainLabels: 'Subject labels', interestLabels: 'Interest labels',
+    closeLayout: 'Close layout settings', layoutNeighbors: 'Neighborhood size', layoutMinDist: 'Minimum distance', layoutSpread: 'Spread', layoutRepulsion: 'Repulsion',
+    layoutHelp: 'Generate a temporary preview using the original topic vectors. It may take tens of seconds. Save default keeps these parameters for future previews; Restore B returns to the packaged map.',
+    generatePreview: 'Generate preview', restoreB: 'Restore B', saveDefault: 'Save default', layoutPending: 'Generating preview…', layoutRequesting: 'Connecting to backend', layoutQueued: 'Waiting for the current preview', layoutPreparing: 'Preparing topic relationships', layoutProjecting: 'Arranging the stars', layoutFinishing: 'Placing labels',
+    layoutReady: 'Preview ready in this window.', layoutSaved: 'Default parameters saved. Generate a preview to apply them.', layoutFailed: 'Preview could not be generated. Your map is unchanged.',
+    layoutRequired: 'Enter a value for every layout parameter.', layoutOffline: 'Connect the backend in Settings to generate a layout preview.',
     search: 'Find a topic', searchPlaceholder: 'Search topics or keywords', domain: 'Subject area', allDomains: 'All subject areas',
     results: 'Search results', resultCount: '{count} matches shown', noResults: 'No matching topics in this subject area.',
     clearSearch: 'Clear search', reset: 'Reset view', zoomIn: 'Zoom in', zoomOut: 'Zoom out',
@@ -23,6 +30,13 @@ export const galaxyDictionaries = {
     google: 'Search Google', youtube: 'Search YouTube', actionError: 'This action could not be completed. Please try again.',
   },
   'zh-CN': {
+    fit: '居中显示星体', fullscreen: '全屏', exitFullscreen: '退出全屏', fullscreenUnavailable: '暂时无法全屏。请在新标签页中打开星图后重试。',
+    mapControls: '星图控制', layoutSettings: '布局设置', domainLabels: '领域标签', interestLabels: '兴趣标签',
+    closeLayout: '关闭布局设置', layoutNeighbors: '邻域大小', layoutMinDist: '最小距离', layoutSpread: '展开程度', layoutRepulsion: '排斥强度',
+    layoutHelp: '使用原始主题向量生成临时预览，可能需要几十秒。保存默认值可用于之后的预览；恢复 B 将返回扩展内置的星图。',
+    generatePreview: '生成预览', restoreB: '恢复 B', saveDefault: '保存默认值', layoutPending: '正在生成预览…', layoutRequesting: '正在连接后端', layoutQueued: '正在等待当前预览完成', layoutPreparing: '正在准备主题关系', layoutProjecting: '正在排列星体', layoutFinishing: '正在放置标签',
+    layoutReady: '预览已在此窗口中应用。', layoutSaved: '默认参数已保存。生成预览后可应用这些参数。', layoutFailed: '未能生成预览。星图保持不变。',
+    layoutRequired: '请填写每个布局参数。', layoutOffline: '请先在设置中连接后端，再生成布局预览。',
     search: '查找主题', searchPlaceholder: '搜索主题或关键词', domain: '学科领域', allDomains: '全部领域',
     results: '搜索结果', resultCount: '显示 {count} 个匹配结果', noResults: '该领域中没有匹配的主题。',
     clearSearch: '清空搜索', reset: '重置视图', zoomIn: '放大', zoomOut: '缩小',

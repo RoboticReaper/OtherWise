@@ -1,0 +1,41 @@
+# Clean workbench and single-topic discovery
+
+Verified locally on 2026-10-08. The approved direction is A (clean workbench), with B (one topic at a time) available as a Discover view.
+
+## Result
+
+- Three main navigation entries: Discover, Interests and Map. Settings lives in the header; the side panel has a compact Dashboard shortcut.
+- Browse shows a topic chooser and one selected detail. In narrow panels the detail appears above the chooser, and selecting a row brings the new detail into view.
+- One at a time uses the same downloaded batch, with Previous/Next and a position counter. Switching views, pages and UI language retains the selected topic in the current window. On opening, the side panel starts Discover in One at a time, and the web Dashboard starts Discover in Browse. Manual switches are local to each page; reopening restores the surface default.
+- Search opens Google/YouTube choices. Save interest remains visible. Additional topic actions, long descriptions, graph provenance, history review and settings expand on demand.
+- The original navy night-sky palette, ivory text and pale sage accents remain fixed in both system appearances. Static color tokens retain the manifest's Chrome 116 compatibility; older Chrome itself was not run.
+- Recommendation requests, saved-interest invalidation, privacy boundaries and Galaxy/Focus algorithms are unchanged.
+
+## Verification
+
+Used Node 24.19.0 and the installed Chromium with disposable profiles and fictional personal data. The fixture discovery service listened only on loopback.
+
+| Check | Result |
+| --- | --- |
+| `npm test` | 190 passed, 0 failed |
+| `npm run test:ui` | 19 checks passed, including independent surface defaults/reopening, 320/390/1100 px, fixed night-sky theme in both system appearances, shared selection, final-topic dismissal, hidden-field validation, page-local view and native map fullscreen |
+| `npm run test:discovery` | 10 checks passed: specific concepts, source text, existing feedback/undo, failure recovery and reset synchronization |
+| `node scripts/test_map_workspace_browser.mjs` | 5 checks passed: retained cameras/DOM, independent temporary Focus, keyboard return, saved interests and localized service guidance |
+| `npm run test:galaxy` | 16 checks passed: real packaged catalog, synchronized language, gestures, narrow layouts, custom interests and offline overlays |
+| `python3 scripts/build_extension.py` | Built the unpacked extension and ZIP with 31,637 catalog topics |
+
+An independent code review identified collapsed connection errors, narrow selection visibility and newer-only color syntax. Each was fixed; the first two were reproduced with failing browser checks before the fixes. The final suites returned exit code 0. The UI suite verified that persisted map label changes retain native fullscreen.
+
+Screenshots and detailed results are under `.cache/qa/ui-redesign/`; the combined record is `verification.json`. These are ignored local QA artifacts. The full test against the real model backend was not rerun for this presentation change. The user's installed extension was not reloaded or its profile changed.
+
+## Try it
+
+Reload the unpacked extension in Chrome and reopen its side panel. The refreshed package is `dist/otherwise-extension`, with `dist/OtherWise-extension.zip` for installation elsewhere. A local `dashboard.html?preview=1&view=discover` preview uses fictional samples without importing browser history.
+
+## Surface default follow-up
+
+The side panel and Dashboard now open Discover directly, with independent page-local layouts: One at a time in the side panel and Browse on the Dashboard. Manual switches survive navigation within that page; reopening uses its surface default. Explicit `view` URLs still open the requested page. The new opening/reopening check failed before implementation, then the full UI suite (19 checks) and unit suite (190 tests) passed. Logs for this follow-up are in `.cache/qa/ui-surface-defaults/`. The map/discovery checks above record the earlier redesign verification.
+
+## Night-sky palette correction
+
+Restored the original shared navy, ivory and sage tokens and the original page background gradients. Removed the workbench's system-dependent light/green overrides and declared a dark color scheme on both entry pages. Layout and surface defaults are unchanged. Rebuilt the extension; the unit suite (190 tests) and UI suite (19 checks) passed again, including both system appearances at 390/1100 px. Refreshed and visually inspected the existing Dashboard preview. Logs are in `.cache/qa/ui-star-theme/`.

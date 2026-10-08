@@ -22,6 +22,7 @@ from starlette.concurrency import run_in_threadpool
 
 from .engine import FocusIdentityConflict, RecommendationEngine, UnknownFocusTopic
 from .discovery import DiscoveryEngine
+from .galaxy_layout import GalaxyLayoutService, LayoutBusy, LayoutUnavailable
 
 MAX_BODY_BYTES = 16_384
 REQUESTS_PER_MINUTE = 30
@@ -124,6 +125,37 @@ class FocusRequest(BaseModel):
     randomness: UnitControl = .03
 
 
+class GalaxyLayoutParameters(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+
+    n_neighbors: Annotated[int, Field(ge=5, le=60)]
+    min_dist: UnitControl
+    spread: Annotated[float, Field(ge=.5, le=3, allow_inf_nan=False)]
+    repulsion_strength: Annotated[float, Field(ge=.5, le=4, allow_inf_nan=False)]
+
+    @field_validator("min_dist", "spread", "repulsion_strength", mode="before")
+    @classmethod
+    def numerical_controls(cls, value):
+        if type(value) not in {int, float}:
+            raise ValueError("Layout controls must be finite numbers.")
+        return value
+
+    @model_validator(mode="after")
+    def valid_spread(self):
+        if self.min_dist > self.spread:
+            raise ValueError("Minimum distance must not exceed spread.")
+        return self
+
+
+class GalaxyLayoutRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+
+    catalog_sha256: Digest
+    model: IdentityText
+    embedding: FocusEmbedding
+    parameters: GalaxyLayoutParameters
+
+
 def error(detail, status, **headers):
     return JSONResponse({"detail": detail}, status_code=status, headers=headers)
 
@@ -141,7 +173,11 @@ class RequestBoundary:
         self.requests = deque()
 
     async def __call__(self, scope, receive, send):
-        if scope["type"] != "http" or scope["path"] not in {"/api/recommend", "/api/focus", "/api/discover"} or scope["method"] != "POST":
+        if scope["type"] != "http":
+            return await self.app(scope, receive, send)
+        layout_poll = scope["path"].startswith("/api/galaxy-layout/") and scope["method"] == "GET"
+        guarded_post = scope["path"] in {"/api/recommend", "/api/focus", "/api/discover", "/api/galaxy-layout"} and scope["method"] == "POST"
+        if not layout_poll and not guarded_post:
             return await self.app(scope, receive, send)
         headers = dict(scope["headers"])
         authorization = headers.get(b"authorization", b"")
@@ -149,6 +185,10 @@ class RequestBoundary:
         if not self.token or not hmac.compare_digest(supplied, self.token):
             return await error("A valid access token is required.", 401,
                                **{"WWW-Authenticate": "Bearer"})(scope, receive, send)
+        # Safe authenticated status polls carry no input and do not consume the
+        # shared POST recommendation budget while a long UMAP job runs.
+        if layout_poll:
+            return await self.app(scope, receive, send)
         now = time.monotonic()
         while self.requests and self.requests[0] <= now - 60:
             self.requests.popleft()
@@ -190,13 +230,14 @@ class RequestBoundary:
         await self.app(scope, bounded_receive, send)
 
 
-def create_app(engine=None, token=None, discovery_engine=None):
+def create_app(engine=None, token=None, discovery_engine=None, layout_service=None):
     default_engine = engine is None
     engine = engine if engine is not None else RecommendationEngine(device=os.getenv("OTHERWISE_MODEL_DEVICE") or None)
     if discovery_engine is None and default_engine:
         discovery_engine = DiscoveryEngine(engine)
     access_token = token if token is not None else os.getenv("OTHERWISE_API_TOKEN", "")
     compute = threading.BoundedSemaphore(1)
+    layout_service = layout_service if layout_service is not None else GalaxyLayoutService(engine)
 
     @asynccontextmanager
     async def lifespan(app):
@@ -214,21 +255,49 @@ def create_app(engine=None, token=None, discovery_engine=None):
         except Exception:
             # Exception details can include input/model credentials; never log them.
             LOGGER.warning("Recommendation engine initialization failed.")
-        yield
-        app.state.ready = False
+        try:
+            yield
+        finally:
+            app.state.ready = False
+            await run_in_threadpool(layout_service.close)
 
     app = FastAPI(title="OtherWise", lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None)
     app.state.ready = False
+    app.state.galaxy_layout = layout_service
 
     @app.exception_handler(RequestValidationError)
     async def validation_error(request: Request, exc: RequestValidationError):
         # Pydantic's default error contains input values; discard the entire tree.
-        return error("Invalid recommendation request.", 422)
+        detail = "Invalid Galaxy layout request." if request.url.path == "/api/galaxy-layout" else "Invalid recommendation request."
+        return error(detail, 422)
 
     @app.get("/health")
     def health():
         ready = bool(app.state.ready)
         return JSONResponse({"ready": ready}, status_code=200 if ready else 503)
+
+    @app.post("/api/galaxy-layout")
+    def start_galaxy_layout(payload: GalaxyLayoutRequest):
+        if not app.state.ready:
+            return error("Galaxy layout service is unavailable. Start the backend and load the public catalog.", 503)
+        try:
+            return layout_service.start(payload.model_dump())
+        except FocusIdentityConflict:
+            return error("Catalog source version conflict.", 409)
+        except LayoutBusy:
+            return error("A Galaxy layout is already generating. Try again after it finishes.", 429, **{"Retry-After": "5"})
+        except LayoutUnavailable as exc:
+            return error(str(exc), 503)
+        except Exception:
+            LOGGER.warning("Galaxy layout startup failed.")
+            return error("Galaxy layout service is unavailable. Verify requirements-layout.txt and the public embedding cache.", 503)
+
+    @app.get("/api/galaxy-layout/{job_id}")
+    def galaxy_layout_status(job_id: str):
+        try:
+            return layout_service.status(job_id)
+        except KeyError:
+            return error("Galaxy layout job was not found. Generate a new preview.", 404)
 
     @app.post("/api/recommend")
     def recommendations(payload: RecommendationRequest):

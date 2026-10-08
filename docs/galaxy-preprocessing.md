@@ -34,6 +34,11 @@ when not already cached, and atomically saves the original normalized 768D vecto
 There is no enrichment step. `HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1` can be set
 when local model weights are already available and an offline build is desired.
 
+After changing the catalog or original vectors, also run
+`.venv/bin/python scripts/build_focus_preview.py` before packaging the extension.
+This refreshes the public offline Focus batches against the same catalog identity;
+it reads cached vectors and never encodes personal inputs.
+
 Available path options are `--catalog`, `--embeddings-dir`, `--cache-dir` and
 `--output`. Defaults are `data/topics.json`, `.cache/embeddings`, `.cache/galaxy`,
 and `data/galaxy-layout.json` relative to the repository. For a fresh reproducibility
@@ -44,11 +49,20 @@ all projection and pairwise-neighbor computation. JSON stdout reports `cache_hit
 ## Geometry and IDs
 
 1. Load and normalize the original 768D MPNet vectors using float64 arithmetic.
-2. Compute angular distances as `acos(clip(cosine, -1, 1)) / pi`, setting the
-   diagonal to zero. Select ten other topics per row, sorted by this original
-   distance, then literal topic title to resolve ties.
-3. Fit UMAP to that precomputed matrix: two dimensions, 30 neighbors,
-   `min_dist=0.15`, random seed 42, one job.
+2. Compute angular distances as `acos(clip(cosine, -1, 1)) / pi`. Select ten
+   other topics per row, sorted by this original distance, then literal topic
+   title to resolve ties. Up to 4,096 topics use the original dense matrix.
+   Larger catalogs use exact blocks of 256 rows and retain the nearest 11 other
+   topics for UMAP plus any additional requested exported neighbors. Partial
+   selection resolves all cutoff ties by literal title; no approximate neighbor
+   search or full catalog distance matrix is used on this route.
+3. Fit UMAP to the precomputed original angular distances: two dimensions,
+   12 neighbors (including self), `min_dist=0.40`, `spread=1.5`,
+   `repulsion_strength=2.5`, 300 epochs, random seed 42, one job.
+   Large catalogs supply symmetric sparse distances and the exact precomputed
+   neighbor arrays, with seeded random initialization. This prevents spectral
+   initialization from allocating component-by-catalog distance matrices for
+   disconnected graphs. Small catalogs retain the original spectral initialization.
 4. Average vectors within each literal catalog domain and normalize those means.
    Domain order is sorted by literal name. Fit metric MDS to domain angular
    distances: two dimensions, random seed 42, one initialization, at most 500
@@ -57,11 +71,17 @@ all projection and pairwise-neighbor computation. JSON stdout reports `cache_hit
    anchors. Weights are softmax of cosine affinities multiplied by 18; all other
    domains have zero weight. Center and scale these targets to unit RMS radius.
 6. Center and scale UMAP to unit RMS radius and orthogonally align it to those
-   targets using Procrustes. Blend 85% aligned UMAP and 15% targets, then center
+   targets using Procrustes. Use the aligned UMAP directly (B has 0% anchor blend), then center
    and scale the result to unit RMS radius.
 
 Two-dimensional distances are display geometry, never reported semantic distances.
-Domain label coordinates are the fitted MDS anchors. Topic IDs always equal the
+Domain label coordinates are chosen from the final stars of that domain, at the
+member with the smallest radius containing up to 32 same-domain stars (including
+itself); ties use the literal topic title. This places labels inside actual topic
+clusters. MDS anchors guide orientation through Procrustes, but their separate
+coordinates are not used as map labels. A domain may span multiple clusters, and
+one label marks its most compact neighborhood rather than every member.
+Topic IDs always equal the
 existing canonical `row["topic"]` strings, and domain IDs equal original domain
 names. A renamed topic needs an explicit product identity migration. Reordering a
 catalog changes its fingerprint and requires the correspondingly ordered original
@@ -84,7 +104,10 @@ Metadata records the algorithm version, full ordered catalog fingerprint, model,
 vector source identity, byte-content hash, shape and dtype, source dimensions and
 counts, all layout parameters, and numerical package versions (NumPy, SciPy,
 scikit-learn, UMAP, Numba, llvmlite and PyNNDescent). Catalog text is hashed, not
-copied into metadata.
+copied into metadata. Algorithm v2 records `distance_storage` (`dense-angular`
+or `exact-blockwise-knn`), the dense threshold, block size and sparse initialization.
+Distance working memory is O(256 × topic count), stored neighbors O(topic count ×
+neighbor count); exact distance computation still has quadratic time complexity.
 
 ## Cache validation and publication
 
@@ -114,7 +137,7 @@ overlay, ranking comparisons and metrics are not imported into production.
 The approved original embedding identity is
 `91c91f983e4d43d626c483aa64523c8db3a3cd8075b9c2b658d81325a6b9753f`.
 
-The generated asset contains 3,452 topics across 23 domains, based on 3,452 × 768
+The original v1 reference asset contained 3,452 topics across 23 domains, based on 3,452 × 768
 original vectors. On the implementation machine the first complete build took
 20.894 seconds and a verified cache hit took 0.233 seconds. Comparison by canonical
 title against the prototype's five-decimal exported coordinates found maximum
@@ -132,10 +155,18 @@ must rebuild the cache and recheck the result.
 Run focused verification with:
 
 ```sh
-.venv/bin/python -m pytest tests/test_galaxy.py -q
+PYTHONPATH=.cache/galaxy-prototype-deps:. .venv/bin/python -m pytest tests/test_galaxy.py tests/test_galaxy_scaling.py -q
 ```
 
 Tests cover hand-calculated angular distances, normalization, top-three affinity
 weights, Procrustes rotation, neighbor ordering, cache reuse/invalidation,
 reordered catalog identities, corrupt cache recovery, atomic writes, invalid
-vectors, standard-library packaging validation and standalone CLI reuse.
+vectors, standard-library packaging validation and standalone CLI reuse. Scaling
+tests compare blockwise neighbors with an independent full-matrix oracle, cover
+cutoff ties, and execute a real sparse UMAP build and verified cache reuse.
+
+## User-controlled preview
+
+The default is the user-selected B island configuration above. Settings stores the default four layout controls and separate domain/Interest label visibility flags. Galaxy’s dedicated toolbar opens a layout editor for a window-local preview; **Save default** persists controls, while **Restore B** returns to the packaged layout. Fit centers the whole Galaxy without clearing search, domain filter or selection, and fullscreen keeps map controls accessible. A custom Galaxy projection never changes Focus recommendations or original-vector neighbors.
+
+Live previews require the existing authenticated backend plus `requirements-layout.txt`. Parameters are bounded: neighbors 5–60, min_dist 0–1, spread 0.5–3 (min_dist ≤ spread), repulsion 0.5–4. Public identity mismatches reject the request. The extension validates every returned topic/domain ID and finite coordinate before installing geometry in that window. Progress is asynchronous; the old map stays visible until a complete result is ready. Closing, resetting, or changing the connection invalidates stale results.

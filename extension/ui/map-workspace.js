@@ -8,7 +8,7 @@ import {workspaceText} from './map-workspace-i18n.js';
 import {normalizeRecommendationOptions} from '../core/recommendation-options.js';
 
 /** All navigation, cameras and request results here belong to this window only. */
-export function createMapWorkspace({catalog,layout,state,language='en',presentation='dashboard',viewState,requestFocus,cancelFocus,onSave,onDismiss,onSearch,onSettings,onCustomFocus,preview=false}){
+export function createMapWorkspace({catalog,layout,state,language='en',presentation='dashboard',viewState,requestFocus,cancelFocus,onSave,onDismiss,onSearch,onSettings,onCustomFocus,preview=false,requestGalaxyLayout,pollGalaxyLayout,onGalaxySettings}){
  const data=prepareGalaxy(catalog,layout),element=document.createElement('section');element.className='map-workspace';
  element.innerHTML='<nav class="map-switch"><button type="button" data-map-view="galaxy"></button><button type="button" data-map-view="focus"></button><button type="button" data-map-action="refresh" hidden></button></nav><p class="map-preview-note" hidden></p><div class="map-focus-guidance" role="status" hidden><p></p><button type="button" data-map-action="settings"></button></div><div class="map-galaxy-host"></div><div class="map-focus-host" hidden></div>';
  const $=s=>element.querySelector(s),galaxyHost=$('.map-galaxy-host'),focusHost=$('.map-focus-host');
@@ -16,7 +16,7 @@ export function createMapWorkspace({catalog,layout,state,language='en',presentat
  let connection=connectionState(state),salt=state?.salt;
  let returnControl=null,entryControl=null,entryFocus=null,entryExpiry=0;
  const session=createFocusSession({request:requestFocus,cancel:cancelFocus,onChange:()=>renderFocus()});
- const galaxy=createGalaxyMap({container:galaxyHost,catalog,layout,state,language,viewState:viewState?.galaxy,onSave,onFocus:onCustomFocus,onEnterFocus:enterFocus,onSearch:(topic,provider)=>onSearch?.(topic,provider,data.byId.has(topic.id)?{source:'galaxy'}:undefined)});
+ const galaxy=createGalaxyMap({requestGalaxyLayout,pollGalaxyLayout,onGalaxySettings,container:galaxyHost,catalog,layout,state,language,viewState:viewState?.galaxy,onSave,onFocus:onCustomFocus,onEnterFocus:enterFocus,onSearch:(topic,provider)=>onSearch?.(topic,provider,data.byId.has(topic.id)?{source:'galaxy'}:undefined)});
  function connectionState(value){const s=value?.settings||{};return {endpoint:s.endpoint||'',token:s.accessToken||'',options:JSON.stringify(normalizeRecommendationOptions(s.recommendationOptions))};}
  function key(){return center?focusRequestKey({endpoint:state.settings?.endpoint,epoch,identity:layout.metadata,seedId:center,options:state.settings?.recommendationOptions}):null;}
  function selectSession(){const snapshot=session.getSnapshot();const seedId=active&&subview==='focus'?center:null,requestKey=seedId?key():null;if(snapshot.seedId!==seedId||snapshot.requestKey!==requestKey)session.select(seedId,requestKey);}
@@ -77,6 +77,7 @@ export function createMapWorkspace({catalog,layout,state,language='en',presentat
   update(patch={}){if(destroyed)return;if(patch.state){const next=connectionState(patch.state),reset=salt!==patch.state.salt;const changed=next.endpoint!==connection.endpoint||next.token!==connection.token||next.options!==connection.options;state=patch.state;connection=next;salt=state.salt;if(changed||reset){epoch++;session.invalidate();}if(reset){center=null;subview='galaxy';focusView?.destroy();focusView=null;}}if(patch.language!==undefined)language=patch.language;galaxy.update({state,language});sync();},
   setActive(value){if(destroyed||active===Boolean(value))return;active=Boolean(value);sync();},
   getViewState(){return {view:subview,centerId:center,galaxy:galaxy.getViewState(),focus:focusView?.getViewState()||null};},
+  openGalaxyLayoutEditor(){if(destroyed)return;switchView('galaxy');galaxy.openLayoutEditor();},
   invalidateFocus(){if(destroyed)return;epoch++;session.invalidate();selectSession();},
   destroy(){if(destroyed)return;destroyed=true;clearTimeout(entryExpiry);session.destroy();galaxy.destroy();focusView?.destroy();element.removeEventListener('click',captureEntry,true);element.removeEventListener('dblclick',captureEntry,true);element.removeEventListener('click',click);element.remove();},
  };

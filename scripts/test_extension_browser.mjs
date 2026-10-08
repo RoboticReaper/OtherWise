@@ -38,7 +38,7 @@ async function until(fn,ms=12000){const start=Date.now();for(;;){if(await fn())r
 async function visit(title,path=title){const p=await context.newPage();await p.goto(`https://example.org/${encodeURIComponent(path)}?title=${encodeURIComponent(title)}`);await p.waitForFunction(t=>document.title===t,title);await p.close();}
  const worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');
  page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
- await page.goto(worker.url().replace('background.js','sidepanel.html'));
+ await page.goto(worker.url().replace('background.js','sidepanel.html?view=interests'));
  await page.locator('#manual-interest').waitFor();
  await page.locator('#welcome-guide').waitFor();await page.locator('[data-guide-action="skip"]').click();await page.locator('#welcome-guide').waitFor({state:'detached'});
  await until(async()=>!!(await get()));
@@ -47,7 +47,7 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  await visit('Gardening and Botany for beginners');
  await visit('NBA Basketball explained','basketball');
  assert.equal((await get()).candidates.length,0);
- await page.getByRole('button',{name:'Review recent browsing',exact:true}).click();
+ await page.locator('[data-disclosure="history-review"] > summary').click();await page.locator('[data-action="import"]').click();
  await until(async()=> (await get()).candidates.some(t=>t.id==='Gardening'));
  let state=await get();assert.equal(state.approved.length,0);assert.equal(requests.length,0);
  assert.ok(state.evidence.length>=2);assert.ok(!JSON.stringify(state).includes('https://example.org/'));
@@ -56,7 +56,7 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  await until(async()=> (await get()).approved.length===1);
  assert.deepEqual((await get()).baseline,['Gardening']);
  await page.getByRole('button',{name:'Settings',exact:true}).click();
- await page.getByLabel('Service address',{exact:true}).fill(endpoint);
+ await page.locator('[data-disclosure="settings-connection"] > summary').click();await page.getByLabel('Service address',{exact:true}).fill(endpoint);
  await page.getByLabel('Team access code',{exact:true}).fill(token);
  await page.getByRole('button',{name:'Save settings',exact:true}).click();
  await until(async()=> (await get()).settings.endpoint===endpoint);
@@ -67,10 +67,10 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  assert.equal((await get()).recommendations.length,10);
  await page.screenshot({path:`${root}/.cache/qa/runtime-discover.png`,fullPage:true});
  const first=(await get()).recommendations[0];
- await page.locator('.recommendation-card').first().getByRole('button',{name:/Google/}).click();
+ await page.locator('.topic-search > summary').click();await page.locator('.topic-detail').getByRole('button',{name:/Google/}).click();
  await until(async()=> (await get()).explored.length===1);
  state=await get();assert.equal(state.approved.length,1);assert.equal(state.focus,'Gardening');assert.equal(state.edges[0].to,first.id);
- await page.locator('.recommendation-card').first().getByRole('button',{name:'+ Save interest',exact:true}).click();
+ await page.locator('.topic-detail [data-action="save-topic"]').click();
  await until(async()=> (await get()).approved.length===2);
  assert.equal((await get()).focus,first.id);
  await page.getByRole('button',{name:'Map',exact:true}).click();
@@ -88,7 +88,7 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  const afterFocus=await get();for(const key of ['approved','focus','recommendations','lastUpdated','generation'])assert.deepEqual(afterFocus[key],beforeFocus[key]);
  await page.locator('[data-focus-action="back"]').click();await page.locator('[data-map-view="focus"]').click();await page.locator('[data-focus-action="get-ideas"]').click();assert.equal(focusRequests.length,1);
  await page.locator('[data-map-action="refresh"]').click();await until(async()=>focusRequests.length===2&&!(await page.locator('[data-map-action="refresh"]').isDisabled()),45000);
- const dash=await context.newPage();dash.on('pageerror',e=>errors.push(e.message));await dash.goto(worker.url().replace('background.js','dashboard.html'));
+ const dash=await context.newPage();dash.on('pageerror',e=>errors.push(e.message));await dash.goto(worker.url().replace('background.js','dashboard.html?view=map'));
  await dash.locator('.galaxy-search').fill('Computer science');await dash.locator('.galaxy-result[data-galaxy-topic="Computer science"]').click();await dash.locator('[data-galaxy-action="enter-focus"]').click();
  const recommendPromise=page.evaluate(async()=>{const bridge=await import('./bridge.js');return bridge.recommend();});
  await Promise.all([page.locator('[data-map-action="refresh"]').click(),dash.locator('[data-focus-action="get-ideas"]').click(),recommendPromise]);
@@ -114,13 +114,13 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  // Existing Discover focus action still changes its saved-interest focus explicitly.
  await page.locator('[data-view="discover"]').click();await page.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_FOCUS',id:'Gardening'}}));await until(async()=> (await get()).focus==='Gardening');
  // The specific interface calls the real cached MPNet graph service.
- await page.locator('#recommendation-kind').selectOption('specific');
+ await page.locator('[data-disclosure="discovery-adjust"] > summary').click();await page.locator('#recommendation-kind').selectOption('specific');
  await until(async()=> (await get()).settings.recommendationKind==='specific');
  await page.locator('[data-action="recommend"]').click();
  await until(async()=> (await get()).recommendations.some(r=>r.discovery),45000);
  const graphBefore=await get(),concept=graphBefore.recommendations[0].discovery;
  assert.equal(discoveryRequests.length,1);assert.deepEqual(discoveryRequests[0].feedback,[]);
- assert.equal(await page.locator('.recommendation-card .graph-feedback').count(),0);
+ assert.equal(await page.locator('.topic-detail .graph-feedback').count(),0);
  assert.match(await page.locator('.graph-details a').first().getAttribute('href'),/^https:\/\/(www.wikidata.org|en.wikipedia.org)\/wiki\//);
  // Seed a pre-existing explicit rating through the trusted controller to verify
  // compatibility; cards no longer provide a feedback-entry form.
@@ -134,7 +134,7 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  await until(async()=> !(await get()).discovery.feedback[concept.concept_id] && (await get()).recommendations.some(r=>r.discovery.concept_id===concept.concept_id),45000);
  await page.locator('#recommendation-kind').selectOption('broad');await until(async()=> (await get()).settings.recommendationKind==='broad');
  await page.getByRole('button',{name:'Settings',exact:true}).click();
- await page.locator('#browsing-enabled').check();
+ if(await page.locator('[data-disclosure="settings-discovery"]').getAttribute('open')===null)await page.locator('[data-disclosure="settings-discovery"] > summary').click();await page.locator('#browsing-enabled').check();
  await until(async()=> (await get()).settings.browsingEnabled);
  await visit('Ecology connections','ecology-new');
  await until(async()=> (await get()).candidates.some(t=>t.id==='Ecology'));
@@ -142,13 +142,13 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  await until(async()=> !(await get()).settings.browsingEnabled);
  await visit('Urban planning possibilities','pause-urban');
  await new Promise(r=>setTimeout(r,1500));
- await page.locator('#browsing-enabled').check();
+ if(await page.locator('[data-disclosure="settings-discovery"]').getAttribute('open')===null)await page.locator('[data-disclosure="settings-discovery"] > summary').click();await page.locator('#browsing-enabled').check();
  await until(async()=> (await get()).settings.browsingEnabled);
  assert.ok(!(await get()).candidates.some(t=>t.id==='Urban planning'));
  await page.evaluate(()=>chrome.history.deleteAll());
  await until(async()=> (await get()).evidence.length===0);
  assert.equal((await get()).approved.length,2);assert.equal((await get()).explored.length,1);
-  await page.getByRole('button',{name:'Reset OtherWise',exact:true}).click();
+ await page.locator('[data-disclosure="settings-data"] > summary').click();await page.getByRole('button',{name:'Reset OtherWise',exact:true}).click();
  await page.getByRole('dialog').getByRole('button',{name:'Reset OtherWise',exact:true}).click();
  await until(async()=> (await get()).approved.length===0);
  state=await get();assert.equal(state.explored.length,0);assert.equal(state.evidence.length,0);assert.equal(state.settings.browsingEnabled,false);assert.equal(state.settings.accessToken,'');

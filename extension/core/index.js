@@ -1,3 +1,4 @@
+import {normalizeGalaxyLayoutOptions} from './galaxy-layout-options.js';
 import {normalizeRecommendationOptions, validRecommendationOptions} from './recommendation-options.js';
 import {createDiscoveryState, normalizeDiscovery, cleanDiscoveryMetadata, discoveryPayload, isConceptId, validRating} from './discovery.js';
 
@@ -30,6 +31,7 @@ export function createState(now = Date.now()) {
       browsingEnabled: false, autoRefresh: false, mode: 'path', globalLevel: 0, language: 'en', recommendationView: 'cards', galaxyExplorationMode: false, tutorialSeen: false,
       endpoint: 'http://127.0.0.1:8000', accessToken: '',
       recommendationOptions: normalizeRecommendationOptions(),
+      galaxyLayoutOptions: normalizeGalaxyLayoutOptions(), galaxyShowDomainLabels: true, galaxyShowInterestLabels: true,
       recommendationKind: 'broad', discoveryExploration: .3,
       blockedDomains: [...DEFAULT_BLOCKED_DOMAINS], analysisSince: 0,
     },
@@ -221,17 +223,23 @@ function updateSettings(state, patch, now) {
   if (!patch || typeof patch !== 'object') return;
   let changed = false;
   let error = null;
-  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'galaxyExplorationMode', 'recommendationOptions', 'recommendationKind', 'discoveryExploration', 'tutorialSeen']) {
+  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'galaxyExplorationMode', 'galaxyLayoutOptions', 'galaxyShowDomainLabels', 'galaxyShowInterestLabels', 'recommendationOptions', 'recommendationKind', 'discoveryExploration', 'tutorialSeen']) {
     if (!(name in patch)) continue;
     let value = patch[name];
+    if (name === 'galaxyLayoutOptions') {
+      try {
+        if (!value || typeof value !== 'object' || Array.isArray(value) || Object.keys(value).some(key => !Object.hasOwn(normalizeGalaxyLayoutOptions(), key))) throw new Error();
+        value = normalizeGalaxyLayoutOptions({...state.settings.galaxyLayoutOptions, ...value}, {strict:true});
+      } catch { error = 'Enter valid Galaxy layout settings. Minimum distance must not exceed spread.'; continue; }
+    }
     if (name === 'recommendationOptions') {
       if (!validRecommendationOptions(value)) { error = 'Enter valid recommendation settings.'; continue; }
       value = normalizeRecommendationOptions({...state.settings.recommendationOptions, ...value});
     }
-    if (['browsingEnabled', 'autoRefresh', 'galaxyExplorationMode', 'tutorialSeen'].includes(name) && typeof value !== 'boolean') continue;
+    if (['browsingEnabled', 'autoRefresh', 'galaxyExplorationMode', 'galaxyShowDomainLabels', 'galaxyShowInterestLabels', 'tutorialSeen'].includes(name) && typeof value !== 'boolean') continue;
     if (name === 'mode' && !['path', 'global'].includes(value)) continue;
     if (name === 'language' && !['en', 'zh-CN'].includes(value)) continue;
-    if (name === 'recommendationView' && !['cards', 'list'].includes(value)) continue;
+    if (name === 'recommendationView' && !['cards', 'list', 'single'].includes(value)) continue;
     if (name === 'recommendationKind' && !['broad', 'specific'].includes(value)) continue;
     if (name === 'discoveryExploration' && (typeof value !== 'number' || !Number.isFinite(value) || value < 0 || value > 1)) continue;
     if (name === 'endpoint') {
@@ -250,7 +258,7 @@ function updateSettings(state, patch, now) {
       if (name === 'browsingEnabled' && value) state.settings.analysisSince = now;
       state.settings[name] = value;
       // Presentation preferences never change the profile or cancel work.
-      if (!['language', 'recommendationView', 'galaxyExplorationMode', 'tutorialSeen'].includes(name)) changed = true;
+      if (!['language', 'recommendationView', 'galaxyExplorationMode', 'galaxyLayoutOptions', 'galaxyShowDomainLabels', 'galaxyShowInterestLabels', 'tutorialSeen'].includes(name)) changed = true;
     }
   }
   if (changed) {
@@ -269,8 +277,10 @@ export function reduceState(state, action, now = Date.now()) {
   if (!['broad', 'specific'].includes(next.settings.recommendationKind)) next.settings.recommendationKind = 'broad';
   if (!Number.isFinite(next.settings.discoveryExploration) || next.settings.discoveryExploration < 0 || next.settings.discoveryExploration > 1) next.settings.discoveryExploration = .3;
   next.settings.recommendationOptions = normalizeRecommendationOptions(next.settings.recommendationOptions);
+  next.settings.galaxyLayoutOptions = normalizeGalaxyLayoutOptions(next.settings.galaxyLayoutOptions);
+  for (const key of ['galaxyShowDomainLabels', 'galaxyShowInterestLabels']) if (typeof next.settings[key] !== 'boolean') next.settings[key] = true;
   if (!['en', 'zh-CN'].includes(next.settings.language)) next.settings.language = 'en';
-  if (!['cards', 'list'].includes(next.settings.recommendationView)) next.settings.recommendationView = 'cards';
+  if (!['cards', 'list', 'single'].includes(next.settings.recommendationView)) next.settings.recommendationView = 'cards';
   if (typeof next.settings.galaxyExplorationMode !== 'boolean') next.settings.galaxyExplorationMode = false;
   // Existing installs can infer onboarding once, without retaining deleted baseline IDs.
   if (next.onboardingComplete === undefined) next.onboardingComplete = next.approved.length > 0 || next.baseline.length > 0;

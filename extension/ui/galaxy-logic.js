@@ -114,3 +114,39 @@ export function hitTest(hits, pointer, radius = 14) {
   }
   return best;
 }
+
+/** Accept only geometry belonging to the packaged public vectors. Neighbors stay authoritative. */
+export function mergeGalaxyLayout(original, result, expectedParameters) {
+  const identity = original?.metadata;
+  const keys = ['n_neighbors', 'min_dist', 'spread', 'repulsion_strength'];
+  if (result?.schema_version !== 1 || !validId(result.cache_key) ||
+      result.catalog_sha256 !== identity?.catalog_sha256 || result.model !== identity?.model ||
+      !validId(result.catalog_sha256) || !validId(result.model) ||
+      result.embedding?.sha256 !== identity.embedding?.sha256 || !validId(result.embedding?.sha256) ||
+      result.embedding?.dtype !== identity.embedding?.dtype ||
+      JSON.stringify(result.embedding?.shape) !== JSON.stringify(identity.embedding?.shape) ||
+      !Array.isArray(result.topics) || !Array.isArray(result.domains) ||
+      !result.parameters || Object.keys(result.parameters).length !== keys.length ||
+      keys.some(key => !Number.isFinite(result.parameters[key]) || result.parameters[key] !== expectedParameters?.[key])) invalid();
+  const p = result.parameters;
+  if (!Number.isInteger(p.n_neighbors) || p.n_neighbors < 5 || p.n_neighbors > 60 || p.min_dist < 0 || p.min_dist > 1 || p.spread < .5 || p.spread > 3 || p.min_dist > p.spread || p.repulsion_strength < .5 || p.repulsion_strength > 4) invalid();
+  const merge = (source, points) => {
+    const allowed = new Set(source.map(point => point.id)), byId = new Map();
+    if (source.length !== points.length) invalid();
+    for (const point of points) {
+      if (!allowed.has(point?.id) || byId.has(point.id) || !coordinate(point.x) || !coordinate(point.y)) invalid();
+      byId.set(point.id, point);
+    }
+    return source.map(point => ({...point, x: byId.get(point.id).x, y: byId.get(point.id).y}));
+  };
+  return {...original, cache_key: result.cache_key,
+    metadata: {...identity, parameters: {...identity.parameters, ...p}},
+    topics: merge(original.topics, result.topics), domains: merge(original.domains, result.domains)};
+}
+
+/** Fit real coordinates with room for the caption, star halos and zoom controls. */
+export function fitGalaxyCamera(bounds, viewport) {
+  const spanX = Math.max(1, bounds.maxX - bounds.minX), spanY = Math.max(1, bounds.maxY - bounds.minY);
+  const scale = Math.min(Math.max(1, viewport.width - 72) / spanX, Math.max(1, viewport.height - 130) / spanY);
+  return {...defaultCamera(bounds), zoom: scale / cameraScale({zoom: 1}, viewport, bounds)};
+}

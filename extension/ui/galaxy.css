@@ -96,3 +96,31 @@
 .galaxy-candidate-list { display: grid; gap: 6px; }
 .galaxy-candidates button { min-height: 44px; text-align: left; padding: 8px 10px; overflow-wrap: anywhere; }
 .galaxy-candidates > button { margin-top: 8px; width: 100%; }
+
+.galaxy-view-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 12px; margin-bottom: 14px; }
+.galaxy-view-toolbar button { font-size: 12px; min-height: 38px; padding: 7px 10px; }
+.galaxy-view-toolbar label { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: #bccad3; min-height: 38px; cursor: pointer; }
+.galaxy-view-toolbar input[type='checkbox'] { width: 16px; height: 16px; margin: 0; accent-color: #bccfc5; }
+.galaxy-layout-editor { border: 1px solid #526777; border-radius: 12px; padding: 15px; background: #122132; margin: 0 0 16px; }
+.galaxy-layout-heading { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.galaxy-layout-heading h3 { margin: 0; font-size: 17px; }
+.galaxy-layout-heading button { min-width: 36px; min-height: 36px; font-size: 21px; }
+.galaxy-layout-help, .galaxy-layout-status { font-size: 12px; line-height: 1.6; color: #b9c7d0; margin: 9px 0; }
+.galaxy-layout-status.is-error { color: #e4b6b0; }
+.galaxy-layout-status:empty { display: none; }
+.galaxy-layout-fields { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 12px; }
+.galaxy-layout-fields label { display: grid; gap: 6px; font-size: 11px; color: #bdcbd4; min-width: 0; }
+.galaxy-layout-fields input { min-width: 0; width: 100%; box-sizing: border-box; min-height: 40px; font-size: 13px; }
+.galaxy-layout-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 13px; }
+.galaxy-layout-actions button { min-height: 40px; font-size: 12px; padding: 8px 12px; }
+.galaxy-layout-actions button[data-layout-action='generate'] { border-color: #9cbcaf; background: #233b43; }
+.map-fullscreen-error { position: relative; z-index: 10; margin: 9px 0; font-size: 12px; color: #e4b6b0; }
+.galaxy-root:fullscreen { display: flex; flex-direction: column; box-sizing: border-box; width: 100vw; height: 100dvh; padding: 16px; overflow: auto; background: #0a1422; }
+.galaxy-root:fullscreen .galaxy-toolbar { flex-shrink: 0; }
+.galaxy-root:fullscreen .galaxy-view-toolbar { flex-shrink: 0; }
+.galaxy-root:fullscreen .galaxy-body { display: flex; flex: 1; min-height: 260px; }
+.galaxy-root:fullscreen .galaxy-visual { display: flex; flex-direction: column; width: 100%; min-width: 0; }
+.galaxy-root:fullscreen .galaxy-surface { flex: 1; min-height: 260px; height: auto; }
+.galaxy-root:fullscreen .galaxy-detail, .galaxy-root:fullscreen .galaxy-legend, .galaxy-root:fullscreen .galaxy-domain-key, .galaxy-root:fullscreen .galaxy-geometry-note, .galaxy-root:fullscreen .galaxy-custom, .galaxy-root:fullscreen .galaxy-exploration-status { display: none; }
+.galaxy-root:fullscreen .galaxy-layout-editor { flex-shrink: 0; }
+@container (max-width: 540px) { .galaxy-layout-fields { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; } .galaxy-view-toolbar { gap: 5px 9px; } .galaxy-view-toolbar button { font-size: 11px; } }

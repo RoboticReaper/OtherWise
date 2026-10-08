@@ -1,5 +1,26 @@
 // UI copy only. Topic names, knowledge domains, descriptions and user drafts stay literal.
 const copy = {
+  browse: ['Browse', '浏览'], singleView: ['One at a time', '一次一个'],
+  layoutChanged: ['View changed.', '显示方式已切换。'],
+  discoverSubtitle: ['A new direction, at your pace.', '按自己的节奏，发现新的方向。'],
+  myInterests: ['My interests', '我的兴趣'], savedInterests: ['Saved interests', '已保存的兴趣'],
+  interestHint: ['Add an English keyword to start exploring.', '添加一个英文关键词，作为探索起点。'],
+  optional: ['Optional', '可选'], adjust: ['Adjust', '调整'],
+  startingFrom: ['Starting from {topic}', '从 {topic} 出发'],
+  recommendedTopics: ['Recommended topics', '推荐主题'], topicNavigation: ['Browse topics', '浏览主题'],
+  searchTopic: ['Search', '搜索'], searchWith: ['Search with', '搜索方式'],
+  saveCompact: ['Save interest', '保存兴趣'], savedCompact: ['Saved', '已保存'],
+  moreTopicActions: ['More topic actions', '更多主题操作'], sourceDetails: ['Source & details', '来源与详情'],
+  galaxyLayoutSettings: ['Galaxy layout', '星图布局'],
+  galaxyLayoutSettingsHelp: ['Adjust the real UMAP layout of the public catalog. Generating a preview requires the connected service and can take tens of seconds. Your current map stays available.', '调整公开主题目录的真实 UMAP 布局。生成预览需要连接服务，可能花费几十秒；当前星图仍可使用。'],
+  galaxyLayoutSaveHelp: ['Save Settings to keep these defaults. Open Galaxy layout to generate a preview for this window.', '保存设置以保留默认参数。在星图布局编辑器中为当前窗口生成预览。'],
+  galaxyOption_n_neighbors: ['Neighbors', '邻居数量'], galaxyOptionHelp_n_neighbors: ['5–60. Lower values emphasize local groups; higher values connect wider areas.', '5–60。较小值强调局部群组，较大值联系更广的领域。'],
+  galaxyOption_min_dist: ['Minimum distance', '最小距离'], galaxyOptionHelp_min_dist: ['0–1, no greater than spread. Lower values pack nearby stars more closely.', '0–1，不能大于扩展尺度。较小值让附近星点更紧密。'],
+  galaxyOption_spread: ['Spread', '扩展尺度'], galaxyOptionHelp_spread: ['0.5–3. Sets the scale over which nearby stars spread.', '0.5–3。控制附近星点展开的尺度。'],
+  galaxyOption_repulsion_strength: ['Repulsion strength', '排斥强度'], galaxyOptionHelp_repulsion_strength: ['0.5–4. Higher values push unrelated groups farther apart.', '0.5–4。较大值让不相关的群组分得更开。'],
+  galaxyShowDomainLabels: ['Show domain labels', '显示领域标签'], galaxyShowInterestLabels: ['Show Interest labels', '显示兴趣标签'],
+  restoreGalaxyB: ['Restore B defaults', '恢复 B 默认参数'], openGalaxyLayout: ['Open Galaxy layout', '打开星图布局'],
+
   discoverHeading: ['Find something a little beyond.', '发现兴趣之外的新主题。'], discoverIntro: ['Explore nearby subjects using the interests you saved.', '根据你保存的兴趣，探索附近的新主题。'],
   discoverySeeds: ['Based on {count} saved interests', '根据 {count} 个已保存的兴趣'], manageInterests: ['Manage interests', '管理兴趣'], openDiscover: ['Explore recommendations', '探索推荐'],
   guideTitle: ['Getting started', '开始探索'], showGuide: ['Show guide', '查看使用指引'], guideReplayHelp: ['A short guide beside Interests, Discover and Map. You can replay it anytime.', '与「兴趣」「发现」和「地图」并排显示的简短指引，可随时重新查看。'],
@@ -63,7 +84,7 @@ const copy = {
   browsingEnabled: ['Review new browsing locally', '在本地分析新的浏览记录'], browsingHelp: ['Find candidate topics from new Chrome visits, including YouTube. You still confirm every new interest. Turning this off stops new review; paused visits are not reviewed later.', '从新的 Chrome 浏览记录中寻找候选主题，包括 YouTube。每个新兴趣仍需你确认。关闭后会停止分析，暂停期间的浏览记录也不会在之后补充分析。'],
   galaxyExplorationMode: ['Show explored regions in Galaxy', '在星图显示已探索区域'], galaxyExplorationHelp: ['Light saved catalog interests, their ten direct neighbors, and topics you searched. Other stars stay selectable. This display setting sends no data.', '点亮已保存的目录兴趣、各自十个直接近邻以及搜索过的主题。其他星体仍可选择。此显示设置不会发送数据。'], explorationModeSaved: ['Galaxy display preference saved.', '星图显示偏好已保存。'],
   autoRefresh: ['Refresh ideas when interests change', '兴趣变化时刷新推荐'], refreshHelp: ['Automatically ask the service for ideas after you change your saved interests. This is separate from browsing review.', '已保存的兴趣变化后，自动向服务获取推荐。此功能与浏览记录分析相互独立。'],
-  recommendationSettings: ['Recommendation requests', '推荐请求'], recommendationSettingsHelp: ['These values are sent with your next recommendation request. Each page shows 10 topics. Saving changes clears the old batch. Refresh in Discover, or let automatic refresh load the next batch if enabled. Focus clears its temporary batches; press Get ideas to request another.', '这些参数会随下一次推荐请求发送。每页显示 10 个主题。修改并保存后会清除旧推荐。请回到「发现」刷新；若已开启自动刷新，则会自动请求下一批。「聚焦探索」会清除临时批次，请点击获取推荐重新请求。'],
+  recommendationSettings: ['Recommendation requests', '推荐请求'], recommendationSettingsHelp: ['Saving changed request settings clears the current batch. Refresh in Discover to apply them. Browse shows 10 topics per page; One at a time uses the same batch. Focus clears its temporary batches; press Get ideas to request another.', '修改并保存请求参数会清除当前推荐，回到「发现」刷新后生效。「浏览」每页显示 10 个主题，「一次一个」使用同一批推荐。「聚焦探索」会清除临时批次，请点击获取推荐重新请求。'],
   advancedRecommendations: ['Advanced range and ranking', '高级范围与排序'], resetRecommendationDefaults: ['Restore recommendation defaults', '恢复推荐默认值'],
   recommendationDistanceHelp: ['Distances range from 0 to 1. Eligible topics sit between radius − overlap and radius + expansion (bounded to 0–1). Automatic widening adds 0.01 per earned level to expansion, up to 8 levels. A wider range can find more topics, but does not guarantee a full batch.', '距离取值为 0–1。候选主题位于 radius − overlap 到 radius + expansion 之间（限制在 0–1）。自动扩大范围每积累一级会为 expansion 加 0.01，最多 8 级。扩大范围可能找到更多主题，但不保证填满请求数量。'],
   option_limit: ['Topics per request', '每次请求的主题数'], optionHelp_limit: ['1–100. This is a maximum batch size, separate from the 10 topics shown per page.', '1–100。这是每批请求的上限，与每页显示的 10 个主题分开。'],
@@ -101,6 +122,7 @@ export function translate(language, key, values = {}) {
 
 // Exact known application messages only; unknown text remains literal.
 export const errorTranslations = Object.freeze({
+  'Enter valid Galaxy layout settings. Minimum distance must not exceed spread.': '请输入有效的星图布局参数，最小距离不能大于扩展尺度。',
   'The service returned an invalid graph concept.': '服务返回的概念数据无效。',
   'Update the recommendation service to use specific concepts.': '请更新推荐服务以使用具体概念推荐。',
   'Review your interests or clear outdated concept feedback and try again.': '请检查兴趣，或清除已过期的概念反馈后重试。',

@@ -101,3 +101,30 @@ test('trusted Focus ports isolate same request IDs, cancel on disconnect, broadc
     responses[0]();b.disconnect();
   }finally{for(const release of responses)release();globalThis.fetch=originalFetch;delete globalThis.chrome;}
 });
+
+test('trusted Galaxy runtime messages return result envelopes and reject private extras and foreign callers',async()=>{
+  let stored;const requests=[];
+  const id='c'.repeat(32),base=`chrome-extension://${id}/`;
+  const runtime={id,getURL:path=>base+path,onMessage:event(),onInstalled:event(),onStartup:event()};
+  const identity={catalog_sha256:'a'.repeat(64),model:'MPNet',embedding:{sha256:'b'.repeat(64),dtype:'float64',shape:[1,768]}};
+  const parameters={n_neighbors:12,min_dist:.4,spread:1.5,repulsion_strength:2.5};
+  globalThis.chrome={runtime,permissions:{onAdded:event(),onRemoved:event(),contains:async()=>true},storage:{local:{setAccessLevel:async()=>{},get:async()=>({state:stored}),set:async x=>{stored=x.state;}}},tabs:{create:async()=>{}},sidePanel:{setPanelBehavior:async()=>{}},alarms:{onAlarm:event(),create:async()=>{}}};
+  const originalFetch=globalThis.fetch;
+  globalThis.fetch=async(url,options)=>{
+    if(String(url).endsWith('catalog.json'))return {json:async()=>[{topic:'Gardening',domain:'Nature'}]};
+    if(String(url).endsWith('galaxy-layout.json'))return {ok:true,json:async()=>({metadata:identity})};
+    requests.push({url,options});return new Response(JSON.stringify({job_id:'job-1',status:'queued',stage:'queued'}));
+  };
+  try{
+    await import(`../background.js?galaxy-runtime=${Date.now()}`);
+    const send=(message,sender={id,url:base+'dashboard.html'})=>new Promise(resolve=>runtime.onMessage.emit(message,sender,resolve));
+    await send({type:'ACTION',action:{type:'SET_SETTINGS',patch:{accessToken:'team-secret'}}});
+    for(const sender of [{id:'foreign',url:base+'dashboard.html'},{id,url:base+'dashboard.html',tab:{incognito:true}}]){
+      assert.ok((await send({type:'GALAXY_LAYOUT_START',parameters},sender)).error);
+    }
+    assert.ok((await send({type:'GALAXY_LAYOUT_START',parameters,history:['private']})).error);assert.equal(requests.length,0);
+    const started=await send({type:'GALAXY_LAYOUT_START',parameters});assert.equal(started.result.job_id,'job-1');assert.equal(started.state,undefined);
+    const polled=await send({type:'GALAXY_LAYOUT_STATUS',jobId:'job-1'});assert.equal(polled.result.status,'queued');assert.equal(polled.state,undefined);
+    assert.equal(requests.length,2);assert.deepEqual(Object.keys(JSON.parse(requests[0].options.body)).sort(),['catalog_sha256','embedding','model','parameters']);assert.equal(requests[1].options.method,'GET');
+  }finally{globalThis.fetch=originalFetch;delete globalThis.chrome;}
+});

@@ -118,3 +118,14 @@ export function subscribeFocusInvalidation(listener){
   try{connectFocus();}catch{/* Request-time errors give the user a recoverable message. */}
   return ()=>focusInvalidationListeners.delete(listener);
 }
+
+async function sendGalaxyLayout(message){
+  if(preview)throw new Error('Connect the extension to its service to generate a Galaxy preview. The packaged Galaxy is available offline.');
+  if(!globalThis.chrome?.runtime?.id)throw new Error('Open OtherWise from your Chrome extensions.');
+  const response=await chrome.runtime.sendMessage(message);
+  if(response?.error)throw new Error(response.error);
+  if(!response?.result)throw new Error('Galaxy layout is reconnecting. Reopen the panel and try again.');
+  return response.result;
+}
+export const requestGalaxyLayout=parameters=>sendGalaxyLayout({type:'GALAXY_LAYOUT_START',parameters});
+export const pollGalaxyLayout=jobId=>sendGalaxyLayout({type:'GALAXY_LAYOUT_STATUS',jobId});

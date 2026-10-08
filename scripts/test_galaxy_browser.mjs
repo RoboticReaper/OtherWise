@@ -75,8 +75,14 @@ try {
   checks.push(`All ${catalog.length} real catalog topics visible before saving, without history permission`);
 
   const opened=context.waitForEvent('page');await side.locator('[data-action="open-dashboard"]').click();
-  const dash=await opened;await dash.waitForLoadState();await mapReady(dash);
+  const dash=await opened;await dash.waitForLoadState();await dash.locator('[data-view="map"]').click();await mapReady(dash);
   assert.equal(new URL(dash.url()).pathname,'/dashboard.html');
+  for (const domain of data.domains) {
+    assert.ok(data.topics.some(topic=>topic.domain===domain.id && topic.x===domain.x && topic.y===domain.y),
+      `${domain.id} label must sit on its own final stars, not an independent anchor`);
+  }
+  await dash.locator('.galaxy-canvas').screenshot({path:resolve(output,'domain-labels-full-map.png')});
+  checks.push('Every domain label sits inside its actual final star distribution');
   await action(side,{type:'ADD_INTEREST',topic:catalog.find(t=>t.id==='Computer science')});
   await action(side,{type:'ADD_INTEREST',topic:catalog.find(t=>t.id==='Artificial intelligence')});
   await select(dash,'psychology');
@@ -95,8 +101,8 @@ try {
   assert.equal((await get(side)).approved.length,2);await searchTab.close();
   checks.push('Catalog-only Google search opens the canonical query and records exploration without saving; browser uses a closed loopback proxy');
   const beforeLanguage=await camera(dash);
-  await dash.locator('#ui-language').selectOption('zh-CN');
-  await until(async()=>await side.locator('#ui-language').inputValue()==='zh-CN');
+  await action(dash,{type:'SET_SETTINGS',patch:{language:'zh-CN'}});
+  await until(async()=>await side.locator('html').getAttribute('lang')==='zh-CN');
   await mapReady(dash);assert.deepEqual(await camera(dash),beforeLanguage);
   assert.equal(await dash.locator('.galaxy-search').inputValue(),'psychology');
   assert.equal(await dash.locator('.galaxy-description').innerText(),psychology.description);
@@ -113,7 +119,7 @@ try {
   // Formal Discover focus remains an explicit saved-interest action.
   await dash.locator('[data-view="discover"]').click();
   await action(dash,{type:'SET_FOCUS',id:'Computer science'});
-  await dash.waitForFunction(()=>document.querySelector('.focus-note')?.textContent.includes('Computer science'));
+  await dash.waitForFunction(()=>document.querySelector('.discovery-context > span')?.textContent.includes('Computer science'));
   assert.equal((await get(side)).focus,'Computer science');
   await dash.locator('[data-view="map"]').click();await mapReady(dash);
   for(const width of [1440,390,320]) {
@@ -155,7 +161,7 @@ try {
   await dash.locator('.galaxy-custom [data-galaxy-topic="My custom hobby"]').click();
   assert.equal(await dash.locator('.galaxy-neighbors').count(),0);
   assert.match(await dash.locator('.galaxy-custom-note').innerText(),/目录/);
-  await dash.locator('[data-galaxy-action="focus"]').click();await dash.locator('#discovery-mode').waitFor();
+  await dash.locator('[data-galaxy-action="focus"]').click();await dash.locator('#recommendations-title').waitFor();
   assert.equal((await get(dash)).focus,'My custom hobby');
   await dash.locator('[data-view="map"]').click();await mapReady(dash);
   const customSearch=context.waitForEvent('page',{timeout:5000});await dash.locator('[data-galaxy-action="google"]').click();
@@ -171,7 +177,7 @@ try {
   const touch=await context.newPage();await touch.setViewportSize({width:390,height:850});
   const cdp=await context.newCDPSession(touch);
   await cdp.send('Emulation.setTouchEmulationEnabled',{enabled:true,maxTouchPoints:2});
-  await touch.goto(base+'dashboard.html');await mapReady(touch);
+  await touch.goto(base+'dashboard.html?view=map');await mapReady(touch);
   await touch.locator('.galaxy-canvas').scrollIntoViewIfNeeded();
   const tb=await touch.locator('.galaxy-canvas').boundingBox(),cx=tb.x+tb.width/2,cy=tb.y+tb.height/2;
   await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x:cx-35,y:cy,id:1},{x:cx+35,y:cy,id:2}]});
@@ -181,7 +187,7 @@ try {
   assert.equal(await touch.locator('.galaxy-root').getAttribute('data-selected-id'),'');
   checks.push('Chromium two-finger pinch zooms without accidental selection');
   // Only explicit sample mode accepts internal recommendation fixtures.
-  const preview=await context.newPage();await preview.goto(base+'dashboard.html?preview=1');await mapReady(preview);
+  const preview=await context.newPage();await preview.goto(base+'dashboard.html?preview=1&view=map');await mapReady(preview);
   await preview.evaluate(async topic=>{
     const api=await import('./dev-preview.js');
     await api.dispatch({type:'RECOMMENDATIONS',generation:(await api.getState()).generation,items:[topic]});

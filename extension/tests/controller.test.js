@@ -111,8 +111,8 @@ test('recommendation tuning persists and cancels an old response; dismiss does n
   assert.equal((await reloaded.controller.getState()).recommendations.length,0);
 });
 
-for(const [preference,initial,value]of [['language','en','zh-CN'],['recommendationView','cards','list'],['galaxyExplorationMode',false,true]]) {
-test(`${preference} preference persists across controller reload without changing recommendation data or payload`,async()=>{
+for(const [preference,initial,value]of [['language','en','zh-CN'],['recommendationView','cards','list'],['recommendationView','cards','single'],['galaxyExplorationMode',false,true]]) {
+test(`${preference}=${value} persists across controller reload without changing recommendation data or payload`,async()=>{
   const r=rig();
   assert.equal((await r.controller.getState()).settings[preference],initial);
   await r.controller.dispatch({type:'ADD_INTEREST',topic:catalog[0]});
@@ -131,7 +131,7 @@ test(`${preference} preference persists across controller reload without changin
   assert.deepEqual(JSON.parse(reloaded.requests[0].options.body),JSON.parse(r.requests.at(-1).options.body));
 });
 
-test(`${preference} switching during an active recommendation keeps the request and its eventual results`,async()=>{
+test(`${preference}=${value} switching during an active recommendation keeps the request and its eventual results`,async()=>{
   const sent=deferred(),response=deferred();let signal;
   const r=rig({fetchImpl:async(_url,options)=>{signal=options.signal;sent.resolve();await response.promise;return new Response(JSON.stringify({recommendations:[catalog[1]]}));}});
   await r.controller.dispatch({type:'ADD_INTEREST',topic:catalog[0]});
@@ -421,4 +421,17 @@ test('cancelling a Focus owner never aborts an independent Discover request',asy
   const discover=r.controller.recommend();await sent.promise;r.controller.cancelFocus(owner);
   assert.equal(signals.focus.aborted,true);assert.equal(signals.discover.aborted,false);await rejected;
   releaseDiscover.resolve();assert.equal((await discover).recommendations[0].id,'Botany');releaseFocus.resolve();
+});
+
+test('Galaxy layout controller accepts presentation settings and invalidates pending geometry on connection reset',async()=>{
+  const identity={catalog_sha256:'a'.repeat(64),model:'MPNet',embedding:{sha256:'b'.repeat(64),dtype:'float64',shape:[2,768]}};
+  let release,sentResolve;const gate=new Promise(r=>release=r),sent=new Promise(r=>sentResolve=r);
+  const r=rig({loadIdentity:async()=>identity,fetchImpl:async()=>{sentResolve();await gate;return new Response(JSON.stringify({job_id:'job-1',status:'queued',stage:'queued'}));}});
+  await r.controller.dispatch({type:'SET_SETTINGS',patch:{accessToken:'team-secret',galaxyLayoutOptions:{n_neighbors:15},galaxyShowDomainLabels:false}});
+  const before=await r.controller.getState();
+  const pending=r.controller.startGalaxyLayout(before.settings.galaxyLayoutOptions),rejected=assert.rejects(pending,/cancel|invalidat/i);
+  await sent;
+  const next=await r.controller.dispatch({type:'SET_SETTINGS',patch:{galaxyLayoutOptions:{min_dist:.3},galaxyShowInterestLabels:false}});
+  assert.equal(next.generation,before.generation);
+  await r.controller.dispatch({type:'RESET'});await rejected;release();
 });

@@ -1,10 +1,11 @@
+import {createGalaxyLayoutTransport} from './galaxy-layout-transport.js';
 import {createState,reduceState,prepareObservation,hashUrl,buildRequest,isAllowedUrl} from './core/index.js';
 import {createFocusTransport} from './focus-transport.js';
 import {cleanDiscoveryMetadata} from './core/discovery.js';
 
 const FEEDBACK_ACTIONS=new Set(['SET_DISCOVERY_FEEDBACK','CLEAR_CONCEPT_FEEDBACK','UNDO_DISCOVERY_FEEDBACK']);
 const PUBLIC_ACTIONS=new Set(['APPROVE','ADD_INTEREST','REMOVE_INTEREST','DISMISS','SET_SETTINGS','SET_FOCUS','CLEAR_DERIVED','RESET','CLEAR_ERROR',...FEEDBACK_ACTIONS,'CLEAR_DISCOVERY_FEEDBACK']);
-const SETTING_KEYS=new Set(['browsingEnabled','autoRefresh','mode','endpoint','accessToken','blockedDomains','language','recommendationView','galaxyExplorationMode','recommendationOptions','recommendationKind','discoveryExploration','tutorialSeen']);
+const SETTING_KEYS=new Set(['browsingEnabled','autoRefresh','mode','endpoint','accessToken','blockedDomains','language','recommendationView','galaxyExplorationMode','galaxyLayoutOptions','galaxyShowDomainLabels','galaxyShowInterestLabels','recommendationOptions','recommendationKind','discoveryExploration','tutorialSeen']);
 const MAX_HISTORY=5000;
 class SafeError extends Error {}
 
@@ -31,15 +32,21 @@ function cleanRecommendations(value, specific = false) {
 }
 
 export function createController({catalog,readState,writeState,historySearch,hasHistoryPermission,hasEndpointPermission,fetchImpl=fetch,openTab,loadIdentity,clock=Date.now}) {
-  let state; let queue=Promise.resolve(); let activeRequest=null; let focusEpoch=0; const pendingFocus=new Map();
-  const focusTransport=createFocusTransport({catalog,fetchImpl,hasEndpointPermission,
-    loadIdentity:loadIdentity || (async()=>{
-      const response=await fetchImpl(new URL('./galaxy-layout.json',import.meta.url),{credentials:'omit',redirect:'error'});
-      if(!response.ok)throw new Error('Galaxy assets are unavailable.');
-      return (await response.json()).metadata;
-    }),
+  let state; let queue=Promise.resolve(); let activeRequest=null; let focusEpoch=0; let galaxyEpoch=0; const pendingFocus=new Map();
+  let identityPromise;
+  const readGalaxyIdentity=()=>identityPromise ||= (async()=>{
+    if(loadIdentity)return loadIdentity();
+    const response=await fetchImpl(new URL('./galaxy-layout.json',import.meta.url),{credentials:'omit',redirect:'error'});
+    if(!response.ok)throw new Error('Galaxy assets are unavailable.');
+    return (await response.json()).metadata;
+  })().catch(error=>{identityPromise=null;throw error;});
+  const focusTransport=createFocusTransport({catalog,fetchImpl,hasEndpointPermission,loadIdentity:readGalaxyIdentity,
     getConnection:()=>({endpoint:normalizeEndpoint(state.settings.endpoint),accessToken:state.settings.accessToken,epoch:focusEpoch}),
   });
+  const galaxyTransport=createGalaxyLayoutTransport({catalog,fetchImpl,hasEndpointPermission,loadIdentity:readGalaxyIdentity,
+    getConnection:()=>({endpoint:normalizeEndpoint(state.settings.endpoint),accessToken:state.settings.accessToken,epoch:galaxyEpoch}),
+  });
+  const galaxyConnectionKey=s=>JSON.stringify([s.settings.endpoint,s.settings.accessToken]);
   function invalidateFocus(){focusEpoch++;for(const pending of pendingFocus.values())pending.cancelled=true;pendingFocus.clear();focusTransport.invalidate();}
   const focusConnectionKey=s=>JSON.stringify([s.settings.endpoint,s.settings.accessToken,s.settings.recommendationOptions]);
   const initialized=(async()=>{
@@ -53,6 +60,7 @@ export function createController({catalog,readState,writeState,historySearch,has
   async function commit(action){
     const before=state;
     const next=reduceState(state,action,clock());
+    if(['RESET','CLEAR_DERIVED','DELETE_SOURCES','INVALIDATE'].includes(action.type) || galaxyConnectionKey(next)!==galaxyConnectionKey(before)){galaxyEpoch++;galaxyTransport.invalidate();}
     await writeState(next);
     if(next.generation!==before.generation) cancelRequest();
     if(['RESET','CLEAR_DERIVED','DELETE_SOURCES','INVALIDATE'].includes(action.type) || focusConnectionKey(next)!==focusConnectionKey(before)) invalidateFocus();
@@ -252,7 +260,9 @@ export function createController({catalog,readState,writeState,historySearch,has
     if(pending && (requestId===undefined || pending.requestId===requestId)){pending.cancelled=true;pendingFocus.delete(owner);}
     focusTransport.cancel(owner,requestId);
   }
+  const startGalaxyLayout=parameters=>serial(()=>({promise:galaxyTransport.start(parameters)})).then(started=>started.promise);
+  const getGalaxyLayoutJob=jobId=>serial(()=>({promise:galaxyTransport.status(jobId)})).then(started=>started.promise);
   const subscribeFocusInvalidation=listener=>focusTransport.subscribeInvalidation(listener);
   return {getState,dispatch,importHistory,observe,reconcile,removeHistory,revokeHistory,revokeEndpoint,recommend,search,
-    focusRecommendations,cancelFocus,subscribeFocusInvalidation};
+    focusRecommendations,cancelFocus,subscribeFocusInvalidation,startGalaxyLayout,getGalaxyLayoutJob};
 }

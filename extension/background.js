@@ -31,9 +31,15 @@ chrome.runtime.onMessage.addListener((message,sender,sendResponse)=>{
       case 'IMPORT_HISTORY':return c.importHistory(message.days);
       case 'RECOMMEND':return c.recommend();
       case 'SEARCH':return c.search(message.topic,message.provider,message.context);
+      case 'GALAXY_LAYOUT_START':
+        if(Object.keys(message).some(key=>!['type','parameters'].includes(key)))throw new Error('Invalid Galaxy layout request.');
+        return c.startGalaxyLayout(message.parameters);
+      case 'GALAXY_LAYOUT_STATUS':
+        if(Object.keys(message).some(key=>!['type','jobId'].includes(key)))throw new Error('Invalid Galaxy layout request.');
+        return c.getGalaxyLayoutJob(message.jobId);
       default:throw new Error('Unsupported request.');
     }
-  })().then(state=>sendResponse({state}),error=>sendResponse({error:error.message || 'OtherWise could not complete that action.'}));
+  })().then(value=>sendResponse(['GALAXY_LAYOUT_START','GALAXY_LAYOUT_STATUS'].includes(message?.type)?{result:value}:{state:value}),error=>sendResponse({error:error.message || 'OtherWise could not complete that action.'}));
   return true;
 });
 

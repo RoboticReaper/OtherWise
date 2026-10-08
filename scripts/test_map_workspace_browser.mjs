@@ -12,7 +12,7 @@ try{
  context.on('request',r=>{if(/^https?:/.test(r.url()))outbound.push(r.url());});
  context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));
  const worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker'),base=worker.url().replace('background.js','');
- const page=await context.newPage();await page.goto(base+'dashboard.html');await page.locator('#welcome-guide').waitFor();await page.locator('[data-guide-action="skip"]').click();await page.locator('#welcome-guide').waitFor({state:'detached'});await page.locator('.galaxy-canvas').waitFor();
+ const page=await context.newPage();await page.goto(base+'dashboard.html?view=map');await page.locator('#welcome-guide').waitFor();await page.locator('[data-guide-action="skip"]').click();await page.locator('#welcome-guide').waitFor({state:'detached'});await page.locator('.galaxy-canvas').waitFor();
  await page.locator('[data-map-view="focus"]').click({timeout:3000});await page.locator('.focus-search').waitFor();
  assert.equal(await page.locator('.galaxy-page > .view-heading').isVisible(),false,'Focus should reclaim the redundant Galaxy hero space');
  assert.equal(await page.locator('.focus-root').getAttribute('data-seed-id'),'');
@@ -29,7 +29,7 @@ try{
  await page.evaluate(()=>window.retainedGalaxy=document.querySelector('.galaxy-canvas'));
  await page.locator('[data-galaxy-action="enter-focus"]').click();await page.locator('.focus-root[data-seed-id="Computer science"]').waitFor();
  await page.locator('[data-focus-action="zoom-in"]').click();const focusZoom=await page.locator('.focus-map').getAttribute('data-zoom');
- await page.locator('#ui-language').selectOption('zh-CN');assert.equal(await page.locator('.focus-map').getAttribute('data-zoom'),focusZoom);
+ await page.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_SETTINGS',patch:{language:'zh-CN'}}}));await page.waitForFunction(()=>document.documentElement.lang==='zh-CN');assert.equal(await page.locator('.focus-map').getAttribute('data-zoom'),focusZoom);
  await page.locator('[data-view="discover"]').click();await page.locator('[data-view="map"]').click();assert.equal(await page.locator('.focus-map').getAttribute('data-zoom'),focusZoom);
  await page.locator('[data-focus-action="back"]').click();assert.deepEqual(await camera(),before);assert.equal(await page.evaluate(()=>window.retainedGalaxy===document.querySelector('.galaxy-canvas')),true);
  await page.locator('[data-map-view="focus"]').click();assert.equal(await page.locator('.focus-root').getAttribute('data-seed-id'),'Computer science');
@@ -40,12 +40,12 @@ try{
  await page.waitForFunction(async()=>((await chrome.storage.local.get('state')).state.approved.length)===1);
  assert.equal(await side.locator('.focus-root').getAttribute('data-seed-id'),'Gardening');assert.equal(await page.locator('.focus-root').getAttribute('data-seed-id'),'Computer science');
  checks.push('zero-upload entry, empty chooser, unconfigured guidance, retained DOM/cameras, temporary centers independent across windows and saved-interest synchronization');
- await page.locator('[data-view="settings"]').click();await page.locator('#galaxy-exploration-mode').check();await side.waitForFunction(async()=>((await chrome.storage.local.get('state')).state.settings.galaxyExplorationMode)===true);
+ await page.locator('[data-view="settings"]').click();await page.locator('[data-disclosure="settings-discovery"] > summary').click();await page.locator('#galaxy-exploration-mode').check();await side.waitForFunction(async()=>((await chrome.storage.local.get('state')).state.settings.galaxyExplorationMode)===true);
  await page.locator('[data-view="map"]').click();
  await page.locator('.focus-search').fill('');
  for(const width of [1440,390,320]){await page.setViewportSize({width,height:1000});assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);await page.screenshot({path:resolve(output,`focus-${width}.png`),fullPage:true});}
  checks.push('exploration setting persists and Focus fits desktop and narrow views');
- const keyboardPage=await context.newPage();await keyboardPage.goto(base+'dashboard.html');await keyboardPage.locator('.galaxy-canvas').waitFor();
+ const keyboardPage=await context.newPage();await keyboardPage.goto(base+'dashboard.html?view=map');await keyboardPage.locator('.galaxy-canvas').waitFor();
  // A rejected, unmatched double-click must not leave a stale transition origin.
  await keyboardPage.locator('.galaxy-canvas').focus();await keyboardPage.locator('.galaxy-canvas').dispatchEvent('dblclick');
  assert.equal(await keyboardPage.locator('.map-workspace').getAttribute('data-view'),'galaxy');
@@ -64,7 +64,7 @@ try{
  await keyboardPage.keyboard.press('Enter');await keyboardPage.locator('.focus-map').focus();await keyboardPage.keyboard.press('Escape');
  assert.equal(await explore.evaluate(node=>document.activeElement===node),true,'Escape restores the initiating Galaxy control');
  await keyboardPage.close();checks.push('keyboard Explore enters visible Focus controls; Back/Escape restore initiator or canvas, and routine updates preserve focus');
- const preview=await context.newPage();await preview.goto(base+'dashboard.html?preview=1');await preview.locator('.galaxy-canvas').waitFor();
+ const preview=await context.newPage();await preview.goto(base+'dashboard.html?preview=1&view=map');await preview.locator('.galaxy-canvas').waitFor();
  await preview.locator('[data-map-view="focus"]').click();await preview.locator('[data-focus-action="get-ideas"]').click();await preview.locator('.focus-candidate-list [data-focus-select]').first().waitFor();
  const records=await preview.evaluate(async()=> (await (await fetch('./focus-preview.v1.json')).json()).batches.find(b=>b.request.topic_id==='Gardening').envelope.recommendations);
  const candidateIds=await preview.locator('.focus-candidate-list [data-focus-select]').evaluateAll(nodes=>nodes.map(n=>n.dataset.focusSelect));assert.deepEqual(new Set(candidateIds),new Set(records.map(r=>r.id)));

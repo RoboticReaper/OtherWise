@@ -6,7 +6,7 @@
 2. Open Chrome's **Extensions → Manage extensions** (`chrome://extensions`).
 3. Turn on **Developer mode**, click **Load unpacked**, and select that folder.
 4. Pin OtherWise in the extensions menu. Click its icon to open the side panel.
-5. In **Settings**, paste the host's **Service address** and **Team access code**.
+5. Open the header's **Settings** icon, expand **Service connection**, and paste the host's **Service address** and **Team access code**.
    Click **Save settings** and allow access to that service address when Chrome asks.
 
 The shared demo works while the host's Mac and demo processes are running. A newly
@@ -16,7 +16,7 @@ instead. A teammate must use the shared HTTPS address, not their own localhost.
 
 ## First opening and page navigation
 
-The side panel starts on **Interests / 兴趣**. New profiles show a short guide beside the current page. It follows Interests,
+The side panel opens **Discover / 发现** in **One at a time**. The web Dashboard opens Discover in **Browse**. New profiles show a short guide beside the current page. It follows Interests,
 Discover and Map, and leaves the page controls usable. Use Next/Back to
 visit those pages, finish with **Finish guide**, or skip. On narrow screens, the
 guide sits above the page in normal flow. Completion and skipping are remembered on this device.
@@ -26,53 +26,56 @@ Existing profiles with saved interests skip the automatic guide.
 
 **Interests** contains the English keyword input, optional history review,
 candidate inbox and saved-interest management. **Discover** contains recommendation
-controls and results, plus a read-only summary of the interests used. Use
+results and a compact starting-interest summary. **Adjust** expands the discovery controls and help. Use
 **Explore recommendations** or **Manage interests** to move between the pages.
 Draft keyword input, candidate selections and loaded result pagination stay in the
 current window when switching pages. The selected page is reflected in its URL,
 so reload returns to the selected page. The Dashboard button and Dashboard's
-initial no-parameter view open Map. Reset starts a fresh profile and shows the guide
+initial no-parameter view open Discover in Browse. Reset starts a fresh profile and shows the guide
 again; it is not a way to refresh recommendations.
 
 ## A two-minute demonstration
 
-The header's **Language / 语言** selector switches between English and Simplified
+The **Language / 语言** selector in Settings switches between English and Simplified
 Chinese and remembers the choice on this device. Chinese support covers UI only:
 the recommendation system and local catalog remain English. Enter interests in
 English; topic names, domains and descriptions retain their original English text.
 Switching language preserves drafts, selected candidates and loaded recommendations.
-The **Cards / List** toggle beside **A little beyond** switches recommendations to
-compact rows. Both layouts retain search, save and dismiss actions. In List view,
-long descriptions can be expanded. The layout preference is also saved locally.
-Both layouts show ten recommendations per page. Page changes use the already
-downloaded batch and do not contact the server.
+The **Browse / One at a time** toggle switches between a compact topic chooser with
+one selected detail and a single-topic view with Previous/Next controls. The side
+panel places the selected detail above the chooser; wider windows place it beside
+the list. Switching views keeps the selected topic and uses the same downloaded
+batch without requesting more recommendations. A manual switch applies to the current page and stays active while navigating within it. Reopening starts with that surface's default; the side panel and Dashboard do not change each other's view. Browse shows ten topics per page; One at a time moves through the
+whole batch. **Search** opens Google/YouTube choices, **Save interest** saves the
+topic, and **… → Not for me** hides it and advances to the next available topic.
+Long descriptions and source details can be expanded when needed.
 
 1. Open **Interests / 兴趣** and add **Gardening** manually. This saves an interest without accessing history.
-   Alternatively, **Review recent browsing** asks Chrome for permission, processes
+   Alternatively, expand **Review recent browsing**, then use its review button. It asks Chrome for permission, processes
    up to 5,000 recent visits locally, then shows a candidate inbox. Choose topics and
    **Save selected**. Nothing in this inbox is uploaded before confirmation.
    The candidate inbox shows ten topics per page. Selections remain checked across
    pages; **Select this page** applies only to the visible page. The save button's
    count includes every selected page, so you can confirm the total before saving.
 2. Open **Discover / 发现**, then click **Find ideas**. Up to ten nearby topics appear by default, with the connection to a
-   saved interest and Google/YouTube search buttons.
+   saved interest. Select a topic, then use **Search** for Google or YouTube.
 3. Search one topic. Open **Map** to see the full interest galaxy and your exploration path. Searching does not
    change saved interests or indicate expertise.
 4. Click **Save interest** when a topic interests you. The next path starts nearby.
    On the map, choose an earlier saved interest and **Explore from here** to return.
-5. Switch to **Explore across interests** to use all saved interests. Each new
+5. Under **Adjust**, switch to **Explore across interests** to use all saved interests. Each new
    confirmed interest after the first onboarding selection increases the range
    once, capped at eight increases. Searches and refreshes do not widen it.
 
 ## Specific concepts and feedback
 
-In Discover, select **What to discover → Specific concepts**, then **Find ideas**.
+In Discover, expand **Adjust**, select **What to discover → Specific concepts**, then **Find ideas**.
 The same interests, path/global mode, quantity and distance controls now search
 3,642 sourced concepts across 69 areas. Every concept shows its observed graph
 path, reading level when reviewed, and a link to its public source. A graph path
 explains where it was found; it is not a prerequisite sequence or course outline.
 
-Recommendation cards show source details and search/save/dismiss actions, without
+The selected topic's **Source & details** shows provenance. Topic actions provide search/save/dismiss, without
 Curious/Known/difficulty feedback forms. Previously saved feedback stays in this
 browser and continues to affect specific ranking. **Saved feedback** lists these
 ratings, ten per page, including concepts absent from the current batch. You can
@@ -107,8 +110,8 @@ reviewed**, and the model does not measure a user's knowledge.
 
 ### Recommendation settings
 
-In Settings, set the requested quantity from **1 to 100** (default 10). This is
-the maximum batch size; each page still shows ten. Saving changed parameters clears
+In Settings, expand **Recommendation requests** and set the requested quantity from **1 to 100** (default 10). This is
+the maximum batch size; each Browse page still shows ten. Saving changed parameters clears
 the old batch. Click **Refresh ideas**, or enable automatic refresh, to use them.
 Changing these numeric controls never approves or uploads browsing candidates.
 
@@ -174,14 +177,24 @@ review the candidate inbox before saving interests you want to share.
 
 ## Current scope
 
-The catalog contains 3,452 English topics. Local extraction matches page-title
+The catalog contains 31,637 English topics. Local extraction matches page-title
 phrases and a few explicit aliases. It can miss implied topics, unrecognized
 phrases, missing titles and non-English content. YouTube visits are recognized
 from Chrome history; video tags and the account's complete watch history are not
 imported. Add an interest manually when needed.
 
+The public catalog retains the original authored interests and Wikimedia guide
+topics, and expands with [Wikipedia Vital Articles Level 5](https://en.wikipedia.org/wiki/Wikipedia:Vital_articles/Level/5).
+Short English descriptions come from [Wikidata, under CC0](https://www.wikidata.org/wiki/Wikidata:Licensing).
+List selection and structure are credited to Wikipedia and Wikimedia contributors,
+including the [previous expanded guide](https://meta.wikimedia.org/wiki/List_of_articles_every_Wikipedia_should_have/Expanded).
+Our filtering and domain grouping modify those lists; the derived selection and
+grouping are distributed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+The larger catalog has no per-domain truncation. The separately curated Specific
+discovery graph retains its source relationships.
+
 The Galaxy map projects all public catalog topics into two dimensions, using
-UMAP plus 15% domain anchors. This projection is approximate: its screen distances
+the B UMAP island layout, aligned to domain anchors with no anchor blend. This projection is approximate: its screen distances
 are not the distances used to rank recommendations or neighbors, or evidence of knowledge mastery. The
 recommendation engine explores semantic topics; it does not assess political
 stances or prove an effect on polarization.
@@ -193,7 +206,7 @@ It shares saved interests, recommendations, language and settings with the panel
 through this extension's local storage. No login, extra permission or data upload
 is needed to open the dashboard or browse the public map.
 
-The Galaxy displays all 3,452 catalog topics, even before you save an interest.
+The Galaxy displays all 31,637 catalog topics, even before you save an interest.
 Search an English keyword or filter by domain, then select a search result or star.
 The details show the original catalog description and ten nearest topics computed
 in the original 768-dimensional space. Neighbor links and your recorded exploration
@@ -300,3 +313,9 @@ down afterward. `OTHERWISE_CHROMIUM` can point to an existing Chromium executabl
 `OTHERWISE_PLAYWRIGHT_MODULE` can point to an existing Playwright module. It never
 uses your normal browser profile. Temporary fixture profiles contain synthetic
 data only and can be removed from the system temporary folder after the run.
+
+## Galaxy layout and labels
+
+Galaxy’s toolbar includes **Fit**, **Fullscreen**, and **Layout settings**. Fit centers the whole Galaxy and preserves the selected topic/search and domain filter. Fullscreen keeps the map and toolbar together; Escape exits. Domain labels use lighter captions and avoid overlapping each other or controls. Domain names and saved Interest names have independent visibility switches; hiding names keeps stars, hover names and selection available. These switches also appear in Settings.
+
+Open **Layout settings** to adjust neighbor count, minimum distance, spread, and repulsion strength. **Generate preview** recomputes all public topics on the connected backend and shows progress; the prior map remains usable while it runs. **Save default** stores the parameters in Settings. **Restore B** returns to the packaged B map. Layout settings do not change semantic recommendation distances or saved interests. The packaged map always remains available offline; custom preview needs the service address/access code and the backend layout dependencies.

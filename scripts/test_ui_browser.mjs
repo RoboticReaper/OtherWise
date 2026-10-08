@@ -7,7 +7,7 @@ import {tmpdir} from 'node:os';
 import assert from 'node:assert/strict';
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
-const output=resolve(root,'.cache/qa/ui-preferences');await mkdir(output,{recursive:true});
+const output=resolve(root,'.cache/qa/ui-redesign/browser');await mkdir(output,{recursive:true});
 const profile=await mkdtemp(resolve(tmpdir(),'otherwise-ui-'));
 const extension=resolve(root,'dist/otherwise-extension');
 let context;const checks=[],errors=[],outbound=[];
@@ -21,7 +21,15 @@ try{
   const worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');
   const base=worker.url().replace('background.js','sidepanel.html');
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
-  await page.goto(base+'?preview=1');await page.locator('#ui-language').waitFor();
+  await page.goto(base+'?preview=1');await page.locator('[data-focus="nav-settings"]').waitFor();
+  const openSection=async(target,key)=>{const section=target.locator(`[data-disclosure="${key}"]`);if(await section.getAttribute('open')===null)await section.locator(':scope > summary').click();};
+  const setLanguage=async(target,value)=>{
+    const view=new URL(target.url()).searchParams.get('view')||'discover';
+    await target.locator('[data-focus="nav-settings"]').click();
+    await target.locator('#settings-language').selectOption(value);
+    await target.waitForFunction(value=>document.documentElement.lang===value,value);
+    if(view!=='settings')await target.locator(`[data-focus="nav-${view}"]`).click();
+  };
   const previewAction=action=>page.evaluate(async action=>{const api=await import('./dev-preview.js');return api.dispatch(action);},action);
   const getPreview=()=>page.evaluate(async()=> (await import('./dev-preview.js')).getState());
   const seed=async count=>{
@@ -29,6 +37,25 @@ try{
     const seenAt=Date.now();
     await previewAction({type:'INGEST',observations:topics.map(topic=>({sourceHash:`fixture-${topic.id}`,host:'example.org',seenAt,source:'Chrome',topicIds:[topic.id],topics:[topic]}))});
   };
+  // Each surface starts independently, even when a legacy shared preference exists.
+  assert.equal(await page.locator('#recommendations-title').count(),1,'Side panel opens Discover by default');
+  assert.equal(await page.locator('[data-value="single"]').getAttribute('aria-pressed'),'true','Side panel starts One at a time');
+  await page.locator('[data-value="cards"]').click();
+  await page.locator('[data-view="interests"]').click();await page.locator('[data-view="discover"]').click();
+  assert.equal(await page.locator('[data-value="cards"]').getAttribute('aria-pressed'),'true','A switch stays active while navigating within the page');
+  const overview=await context.newPage();
+  await overview.goto(base.replace('sidepanel.html','dashboard.html')+'?preview=1');await overview.locator('[data-focus="nav-settings"]').waitFor();
+  assert.equal(await overview.locator('#recommendations-title').count(),1,'Dashboard opens Discover by default');
+  assert.equal(await overview.locator('[data-value="cards"]').getAttribute('aria-pressed'),'true','Dashboard starts Browse');
+  await overview.locator('[data-value="single"]').click();
+  assert.equal(await page.locator('[data-value="cards"]').getAttribute('aria-pressed'),'true','Dashboard changes do not change the side panel');
+  await page.reload();await page.locator('[data-value="single"]').waitFor();
+  assert.equal(await page.locator('[data-value="single"]').getAttribute('aria-pressed'),'true');
+  await overview.reload();await overview.locator('[data-value="cards"]').waitFor();
+  assert.equal(await overview.locator('[data-value="cards"]').getAttribute('aria-pressed'),'true');
+  await overview.close();
+  checks.push('fresh and reopened side panel starts Discover/One at a time; dashboard starts Discover/Browse; page-local switches remain independent');
+  await page.goto(base+'?preview=1&view=interests');await page.locator('#manual-interest').waitFor();
   const rows=page.locator('.candidate-row');
   const next=page.locator('[data-action="candidate-next"]');
   const previous=page.locator('[data-action="candidate-prev"]');
@@ -68,11 +95,13 @@ try{
   assert.match(await rows.first().innerText(),/Topic 001/);
   assert.match(await rows.first().innerText(),/Fixture field/);
   assert.match(await page.locator('.selection-count').innerText(),/11/);
-  await page.locator('[data-view="settings"]').first().click();
+  await page.locator('[data-focus="nav-settings"]').click();
+  await openSection(page,'settings-connection');
   await page.locator('#endpoint').fill('https://example.org');
   await page.locator('#access-token').fill('fictional-unsaved-code');
+  await openSection(page,'settings-exclusions');
   await page.locator('#blocked-domains').fill('example.org\nexample.net');
-  await page.locator('#ui-language').selectOption('en');
+  await page.locator('#settings-language').selectOption('en');
   assert.equal(await page.locator('#endpoint').inputValue(),'https://example.org');
   assert.equal(await page.locator('#access-token').inputValue(),'fictional-unsaved-code');
   assert.equal(await page.locator('#blocked-domains').inputValue(),'example.org\nexample.net');
@@ -95,95 +124,147 @@ try{
   await page.locator('[data-view="discover"]').click();
   await page.locator('[data-action="recommend"]').click();
   const recommended=await getPreview();
-  await previewAction({type:'RECOMMENDATIONS',generation:recommended.generation,items:recommended.recommendations.map((topic,index)=>index===0?{...topic,description:'How plants grow, adapt and connect with their environment. A longer English description explains plant structure, life cycles, ecosystems, and how people study the natural world.'}:topic)});
-  for(const width of [390,1100]){
-    await page.setViewportSize({width,height:850});
-    await page.locator('#ui-language').selectOption('zh-CN');
+  await previewAction({type:'RECOMMENDATIONS',generation:recommended.generation,items:recommended.recommendations.map((topic,index)=>index===0?{...topic,description:'How plants grow, adapt and connect with their environment. A longer English description explains plant structure, life cycles, ecosystems, and how people study the natural world. It also covers practical techniques for observing plants and learning about their relationships.'}:topic)});
+  for(const width of [320,390,1100]){
+    await page.setViewportSize({width,height:900});
+    await setLanguage(page,'zh-CN');
     await page.locator('[data-action="recommendation-view"][data-value="cards"]').click();
-    const cardsHeight=await page.locator('.recommendations').evaluate(element=>element.getBoundingClientRect().height);
-    const count=await page.locator('.recommendation-card').count();
-    await page.locator('[data-action="recommendation-view"][data-value="list"]').click();
-    assert.equal(await page.locator('.recommendations.is-list').count(),1);
-    assert.equal(await page.locator('.recommendation-card').count(),count);
-    const listHeight=await page.locator('.recommendations').evaluate(element=>element.getBoundingClientRect().height);
-    assert.ok(listHeight<cardsHeight,`${width}px list ${listHeight} must be shorter than cards ${cardsHeight}`);
-    const first=page.locator('.recommendation-card').first();
-    assert.match(await first.innerText(),/Botany/);
-    for(const provider of ['google','youtube'])assert.equal(await first.locator(`[data-action="search"][data-provider="${provider}"]`).isVisible(),true);
-    assert.equal(await first.locator('[data-action="save-topic"]').isVisible(),true);
-    assert.equal(await first.locator('[data-action="dismiss"]').isVisible(),true);
-    await first.locator('details summary').click();
-    assert.match(await first.innerText(),/How plants grow, adapt/);
-    await page.locator('#ui-language').selectOption('en');
-    assert.equal(await first.locator('details').getAttribute('open')!==null,true);
-    await first.locator('details summary').click();
-    await page.locator('#ui-language').selectOption('zh-CN');
-    assert.equal(await first.locator('details').getAttribute('open'),null,'Closing a description must survive an immediate language change');
+    await page.locator('.topic-row').first().click();
+    assert.equal(await page.locator('.topic-detail').count(),1);
+    assert.match(await page.locator('#selected-topic-title').innerText(),/Botany/);
+    assert.equal(await page.locator('#recommendation-kind').isVisible(),false,'Adjustment controls start collapsed');
+    assert.equal(await page.locator('.topic-search [data-action="search"]').first().isVisible(),false);
+    await page.locator('.topic-search > summary').click();
+    for(const provider of ['google','youtube'])assert.equal(await page.locator(`.topic-detail [data-action="search"][data-provider="${provider}"]`).isVisible(),true);
+    await page.keyboard.press('Escape');
+    assert.equal(await page.locator('.topic-search').getAttribute('open'),null);
+    assert.equal(await page.locator('.topic-detail [data-action="save-topic"]').isVisible(),true);
+    await page.locator('.description-details > summary').click();
+    await setLanguage(page,'en');
+    assert.equal(await page.locator('.description-details').getAttribute('open')!==null,true);
+    await page.locator('.description-details > summary').click();
+    await setLanguage(page,'zh-CN');
+    assert.equal(await page.locator('.description-details').getAttribute('open'),null);
+    await page.locator('.topic-row').nth(1).click();
+    const title=await page.locator('#selected-topic-title').innerText(),before=await getPreview();
+    await page.locator('[data-action="recommendation-view"][data-value="single"]').click();
+    assert.equal(await page.locator('.topic-row').count(),0);
+    assert.equal(await page.locator('#selected-topic-title').innerText(),title);
+    assert.match(await page.locator('.single-pagination [role="status"]').innerText(),/2 \/ 4/);
+    await page.locator('[data-action="topic-next"]').click();
+    assert.notEqual(await page.locator('#selected-topic-title').innerText(),title);
+    await page.locator('[data-action="topic-prev"]').click();
+    assert.equal(await page.locator('#selected-topic-title').innerText(),title);
+    await setLanguage(page,'en');
+    assert.equal(await page.locator('#selected-topic-title').innerText(),title);
+    await page.locator('[data-action="recommendation-view"][data-value="cards"]').click();
+    assert.equal(await page.locator('.topic-row[aria-current="true"] .topic-row-title').innerText(),title);
+    const after=await getPreview();
+    assert.deepEqual(after.recommendations,before.recommendations);assert.equal(after.generation,before.generation);assert.equal(after.lastUpdated,before.lastUpdated);
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
-    await page.locator('#recommendations-title').scrollIntoViewIfNeeded();
-    await page.screenshot({path:resolve(output,`${width}-list-zh.png`)});
-    await page.locator('[data-view="interests"]').click();
-    await page.locator('.candidate-inbox').scrollIntoViewIfNeeded();
-    await page.screenshot({path:resolve(output,`${width}-pagination-zh.png`)});
-    await page.locator('[data-view="discover"]').click();
-    checks.push(`${width}px list saves space and retains details/actions; Chinese layout fits`);
+    await page.screenshot({path:resolve(output,`${width}-browse.png`),fullPage:true});
+    await page.locator('[data-action="recommendation-view"][data-value="single"]').click();
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+    await page.screenshot({path:resolve(output,`${width}-single.png`),fullPage:true});
+    checks.push(`${width}px: Browse and One at a time preserve selection, batch and description state; search/save remain accessible; no overflow`);
   }
 
-  // A batch larger than the former 20-item storage cap must remain fully browseable.
   const batch=Array.from({length:31},(_,i)=>({id:`Recommendation ${i+1}`,topic:`Recommendation ${i+1}`,domain:'Fixture field',description:'English recommendation content.',nearest_interest:'Gardening'}));
   await previewAction({type:'RECOMMENDATIONS',generation:(await getPreview()).generation,items:batch});
+  await page.locator('[data-action="recommendation-view"][data-value="cards"]').click();
   const recNext=page.locator('[data-action="recommendation-next"]');
   const recPrev=page.locator('[data-action="recommendation-prev"]');
   const recStatus=page.locator('.recommendation-pagination .page-status');
-  assert.equal(await page.locator('.recommendation-card').count(),10);
+  assert.equal(await page.locator('.topic-row').count(),10);
   assert.match(await recStatus.innerText(),/1.*4/);
   await recNext.click();
-  assert.match(await page.locator('.recommendation-card').first().innerText(),/Recommendation 11/);
-  await page.locator('#ui-language').selectOption('en');
-  await page.locator('[data-action="recommendation-view"][data-value="cards"]').click();
+  assert.equal(await page.locator('#selected-topic-title').innerText(),'Recommendation 11');
+  await setLanguage(page,'en');
   assert.match(await recStatus.innerText(),/2.*4/);
   await recNext.click();await recNext.click();
-  assert.equal(await page.locator('.recommendation-card').count(),1);
-  await page.locator('.recommendation-card [data-action="dismiss"]').click();
-  assert.equal(await page.locator('.recommendation-card').count(),10);
+  assert.equal(await page.locator('.topic-row').count(),1);
+  await page.locator('[data-action="recommendation-view"][data-value="single"]').click();
+  assert.match(await page.locator('.single-pagination').innerText(),/31 \/ 31/);
+  assert.equal(await page.locator('[data-action="topic-next"]').isDisabled(),true);
+  await page.locator('.topic-more > summary').click();await page.locator('.topic-detail [data-action="dismiss"]').click();
+  assert.equal(await page.locator('#selected-topic-title').innerText(),'Recommendation 30');
+  assert.match(await page.locator('.single-pagination').innerText(),/30 \/ 30/);
+  assert.equal(await page.locator('#selected-topic-title').evaluate(el=>document.activeElement===el),true,'Dismiss restores keyboard focus to the next topic');
+  await page.locator('[data-action="recommendation-view"][data-value="cards"]').click();
+  assert.equal(await page.locator('.topic-row').count(),10);
   assert.match(await recStatus.innerText(),/3.*3/);
   assert.equal(await recNext.isDisabled(),true);
   await recPrev.click();await recPrev.click();
-  await page.locator('.recommendation-card [data-action="dismiss"]').first().click();
-  assert.equal(await page.locator('.recommendation-card').count(),10);
-  assert.match(await page.locator('.recommendation-card').last().innerText(),/Recommendation 11/);
+  await page.locator('.topic-more > summary').click();await page.locator('.topic-detail [data-action="dismiss"]').click();
+  assert.equal(await page.locator('#selected-topic-title').innerText(),'Recommendation 2');
+  assert.equal(await page.locator('.topic-row').count(),10);
+  assert.match(await page.locator('.topic-row').last().innerText(),/Recommendation 11/);
   assert.equal((await getPreview()).recommendations.length,29);
   await recNext.click();
   await previewAction({type:'RECOMMENDATIONS',generation:(await getPreview()).generation,items:batch});
   assert.match(await recStatus.innerText(),/1.*3/);
   assert.equal((await getPreview()).recommendations.length,29,'Hidden topics stay hidden on refresh');
-  for(const width of [390,1100]){
-    await page.setViewportSize({width,height:850});
-    await page.locator('#ui-language').selectOption('zh-CN');
-    await page.locator('[data-action="recommendation-view"][data-value="list"]').click();
-    await page.locator('.recommendation-batch').scrollIntoViewIfNeeded();
-    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
-    await page.screenshot({path:resolve(output,`${width}-recommendation-pages-zh.png`)});
+  checks.push('31-topic batch: Browse pagination and single-topic boundaries work; dismiss advances/clamps and retains focus; fresh batch resets; suppression persists');
+
+  await page.setViewportSize({width:390,height:600});
+  await page.locator('.topic-row').last().click();
+  const selectedBounds=await page.locator('#selected-topic-title').boundingBox();
+  assert.ok(selectedBounds.y>=0 && selectedBounds.y+selectedBounds.height<=600,'Choosing a lower row brings the selected detail into the narrow viewport');
+  checks.push('narrow Browse reveals the selected detail after choosing a topic below the fold');
+  await previewAction({type:'SET_SETTINGS',patch:{recommendationView:'list'}});
+  assert.equal(await page.locator('[data-value="cards"]').getAttribute('aria-pressed'),'true','Legacy shared preferences do not override this page choice');
+  await previewAction({type:'RECOMMENDATIONS',generation:(await getPreview()).generation,items:[{id:'Last topic',topic:'Last topic',domain:'Fixture field',description:'One remaining subject.'}]});
+  await page.locator('[data-value="single"]').click();
+  assert.match(await page.locator('.single-pagination').innerText(),/1 \/ 1/);
+  await page.locator('.topic-more > summary').click();await page.locator('[data-action="dismiss"]').click();
+  assert.equal(await page.locator('.single-pagination').count(),0);assert.equal(await page.locator('.empty-state').isVisible(),true);
+  assert.equal(await page.locator('#recommendations-title').evaluate(el=>document.activeElement===el),true);
+  checks.push('legacy shared preference leaves the page choice unchanged; dismissing the final single topic shows an honest empty state with keyboard focus');
+
+  await page.locator('[data-action="recommend"]').click();
+  for(const colorScheme of ['light','dark']){
+    await page.emulateMedia({colorScheme});
+    for(const width of [390,1100]){
+      await page.setViewportSize({width,height:900});
+      for(const view of ['cards','single']){
+        await page.locator(`[data-value="${view}"]`).click();
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth),width);
+        const theme=await page.evaluate(()=>({background:getComputedStyle(document.body).backgroundColor,ink:getComputedStyle(document.body).color}));
+        const channels=color=>color.match(/[\d.]+/g).slice(0,3).map(Number);
+        const [red,green,blue]=channels(theme.background);
+        assert.ok(Math.max(red,green,blue)<70,'Both system appearances retain a dark shell');
+        assert.ok(blue>green && green>red,'The shell retains its navy night-sky hue');
+        assert.ok(Math.min(...channels(theme.ink))>170,'Night-sky shell keeps readable light text');
+        await page.screenshot({path:resolve(output,`${width}-${view}-${colorScheme}.png`),fullPage:true});
+      }
+    }
   }
-  checks.push('31 recommendations paginate in both layouts, dismiss fills/clamps pages, fresh batch resets and suppression persists');
+  await page.emulateMedia({colorScheme:'light'});
+  checks.push('night-sky theme remains dark in both system appearances and fits both Discover views at 390/1100px');
 
   const settings=await context.newPage();settings.on('pageerror',e=>errors.push(e.message));
-  await settings.goto(base+'?preview=1');await settings.locator('#ui-language').waitFor();
-  await settings.locator('[data-view="settings"]').first().click();
+  await settings.goto(base+'?preview=1');await settings.locator('[data-focus="nav-settings"]').waitFor();
+  await settings.locator('[data-focus="nav-settings"]').click();
+  await openSection(settings,'settings-recommendations');
   await settings.locator('#recommendation-limit').fill('40');
   await settings.locator('#recommendation-advanced summary').click();
   await settings.locator('#recommendation-overlap').fill('0.025');
-  await settings.locator('#ui-language').selectOption('zh-CN');
+  await settings.locator('#settings-language').selectOption('zh-CN');
   assert.equal(await settings.locator('#recommendation-limit').inputValue(),'40');
   assert.equal(await settings.locator('#recommendation-overlap').inputValue(),'0.025');
   assert.equal(await settings.locator('#recommendation-advanced').getAttribute('open')!==null,true);
   const settingsState=()=>settings.evaluate(async()=> (await import('./dev-preview.js')).getState());
   for(const [key,value]of [['limit','101'],['limit','1.5'],['overlap','-0.1'],['max_overlap_fraction','1']]){
     const input=settings.locator(`#recommendation-${key}`),old=await input.inputValue();
-    await input.fill(value);await settings.locator('#settings-form button[type="submit"]').click();
+    await input.fill(value);
+    if(await settings.locator('#recommendation-advanced').getAttribute('open')!==null)await settings.locator('#recommendation-advanced > summary').click();
+    await settings.locator('[data-disclosure="settings-recommendations"] > summary').click();
+    await settings.locator('#settings-form button[type="submit"]').click();
+    assert.equal(await input.isVisible(),true,'Invalid fields open all collapsed ancestors before focusing');
     assert.equal((await settingsState()).settings.recommendationOptions.limit,10);
     assert.equal(await input.evaluate(element=>element.validity.valid),false);
     await input.fill(old);
+    if(await settings.locator('#recommendation-advanced').getAttribute('open')===null)await settings.locator('#recommendation-advanced > summary').click();
   }
   await settings.locator('#settings-form button[type="submit"]').click();
   assert.equal((await settingsState()).settings.recommendationOptions.limit,40);
@@ -191,11 +272,11 @@ try{
   await settings.locator('[data-action="reset-recommendation-options"]').click();
   assert.equal(await settings.locator('#recommendation-limit').inputValue(),'10');
   assert.equal((await settingsState()).settings.recommendationOptions.limit,40,'Reset remains a draft until saved');
-  await settings.locator('#ui-language').selectOption('en');
+  await settings.locator('#settings-language').selectOption('en');
   assert.equal(await settings.locator('#recommendation-overlap').inputValue(),'0.015');
   for(const width of [390,1100]){
     await settings.setViewportSize({width,height:850});
-    await settings.locator('#ui-language').selectOption('zh-CN');
+    await settings.locator('#settings-language').selectOption('zh-CN');
     await settings.locator('.recommendation-settings').scrollIntoViewIfNeeded();
     assert.equal(await settings.evaluate(()=>document.documentElement.scrollWidth),width);
     await settings.screenshot({path:resolve(output,`${width}-recommendation-settings-zh.png`)});
@@ -205,7 +286,7 @@ try{
   checks.push('parameter drafts survive language changes; native bounds reject invalid inputs; save and draft-only default reset work at 390/1100px');
 
   const actual=await context.newPage();actual.on('pageerror',e=>errors.push(e.message));
-  await actual.goto(base);await actual.locator('#ui-language').waitFor();
+  await actual.goto(base+'?view=interests');await actual.locator('[data-focus="nav-settings"]').waitFor();
   await actual.locator('#welcome-guide').waitFor();
   assert.match(await actual.locator('#guide-heading').innerText(),/Start with what you like/);
   assert.equal(outbound.length,0);
@@ -219,16 +300,24 @@ try{
   assert.equal(await actual.locator('#welcome-guide [role="alert"]').count(),0,'Page validation errors are not guide-save failures');
   await actual.locator('[data-action="clear-error"]').click();
   await actual.locator('#manual-interest').fill('Photography draft');
-  await actual.locator('[data-view="settings"]').click();await actual.locator('#settings-form').waitFor();
+  await actual.locator('[data-focus="nav-settings"]').click();await actual.locator('#settings-form').waitFor();
   assert.equal(await actual.locator('#welcome-guide').count(),0,'Settings is not a tutorial step');
   assert.equal(await actual.locator('.language-note').count(),0);
+  await openSection(actual,'settings-connection');
+  await actual.locator('#endpoint').fill('ftp://example.org');
+  await actual.locator('[data-disclosure="settings-connection"] > summary').click();
+  await actual.locator('[data-focus="save-settings"]').click();await actual.locator('.error-banner').waitFor();
+  assert.equal(await actual.locator('#endpoint').isVisible(),true,'Bridge errors reveal a collapsed connection section');
+  assert.equal(await actual.locator('#endpoint').evaluate(el=>document.activeElement===el),true);
+  await actual.locator('[data-action="clear-error"]').click();
   await actual.locator('#endpoint').fill('http://127.0.0.1:8765');
+  checks.push('invalid service address throws safely, reveals its collapsed section and restores field focus without a request');
   await actual.locator('[data-view="interests"]').click();
   assert.equal(await actual.locator('#manual-interest').inputValue(),'Photography draft');
-  await actual.locator('[data-view="settings"]').click();
+  await actual.locator('[data-focus="nav-settings"]').click();
   assert.equal(await actual.locator('#endpoint').inputValue(),'http://127.0.0.1:8765','Settings draft survives page navigation');
   await actual.locator('[data-view="interests"]').click();
-  await actual.locator('[data-guide-action="next"]').click();await actual.locator('#recommendation-kind').waitFor();
+  await actual.locator('[data-guide-action="next"]').click();await openSection(actual,'discovery-adjust');await actual.locator('#recommendation-kind').waitFor();
   assert.match(await actual.locator('#guide-heading').innerText(),/Find your next subject/);
   await actual.locator('#recommendation-kind').selectOption('broad');
   await actual.locator('[data-guide-action="next"]').click();
@@ -239,6 +328,7 @@ try{
   const wide=await context.newPage();wide.on('pageerror',e=>errors.push(e.message));
   await wide.setViewportSize({width:1440,height:1000});
   await wide.goto(base.replace('sidepanel.html','dashboard.html')+'?view=settings');
+  await openSection(wide,'settings-guide');
   await wide.locator('[data-action="open-guide"]').focus();await wide.keyboard.press('Enter');await wide.locator('#welcome-guide').waitFor();
   assert.equal(await wide.locator('#guide-heading').evaluate(node=>document.activeElement===node),true,'Reopening guide moves keyboard focus to its heading without trapping it');
   for(const view of ['interests','discover','map']){
@@ -252,10 +342,17 @@ try{
       await wide.locator('[data-galaxy-action="zoom-in"]').click();
       await wide.waitForFunction(previous=>document.querySelector('.galaxy-canvas')?.dataset.zoom!==previous,zoom);
       assert.notEqual(await wide.locator('.galaxy-canvas').getAttribute('data-zoom'),zoom,'Map controls work while guide is open');
+      await wide.locator('[data-galaxy-action="fullscreen"]').click();
+      await wide.waitForFunction(()=>document.fullscreenElement?.classList.contains('galaxy-root'));
+      await wide.locator('[data-galaxy-setting="galaxyShowDomainLabels"]').uncheck();
+      await wide.waitForFunction(async()=>((await chrome.storage.local.get('state')).state.settings.galaxyShowDomainLabels)===false);
+      assert.equal(await wide.evaluate(()=>document.fullscreenElement?.classList.contains('galaxy-root')),true,'Shell updates retain native map fullscreen');
+      await wide.keyboard.press('Escape');await wide.waitForFunction(()=>!document.fullscreenElement);
+      checks.push('native Galaxy fullscreen survives a persisted label change in the simplified shell');
     }
     await wide.screenshot({path:resolve(output,`1440-inline-guide-${view}.png`)});
   }
-  await wide.locator('#ui-language').selectOption('zh-CN');
+  await setLanguage(wide,'zh-CN');
   await wide.setViewportSize({width:320,height:1000});
   for(const view of ['interests','discover','map']){
     await wide.locator(`[data-view="${view}"]`).click();
@@ -264,7 +361,7 @@ try{
     assert.ok(bounds.mainTop>=bounds.guideBottom,'Narrow guide flows above the page without overlap');
     await wide.screenshot({path:resolve(output,`320-inline-guide-${view}-zh.png`)});
   }
-  await wide.locator('#ui-language').selectOption('en');
+  await setLanguage(wide,'en');
   await wide.close();
   await actual.locator('[data-view="map"]').click();
   await actual.locator('[data-guide-action="finish"]').click();await actual.locator('#welcome-guide').waitFor({state:'detached'});
@@ -272,24 +369,24 @@ try{
   await actual.locator('[data-view="interests"]').click();
   checks.push('inline guide follows all three tutorial pages, leaves controls usable, preserves drafts, sits beside desktop pages and stays dismissed after reload');
   await actual.locator('#manual-interest').fill('Gardening');await actual.locator('#manual-form button').click();
-  await actual.locator('#ui-language').selectOption('zh-CN');
+  await setLanguage(actual,'zh-CN');
   await actual.locator('[data-view="discover"]').click();
-  await actual.locator('[data-action="recommendation-view"][data-value="list"]').click();
-  await actual.waitForFunction(async()=>{const state=(await chrome.storage.local.get('state')).state;return state.settings.language==='zh-CN' && state.settings.recommendationView==='list';});
+  await actual.locator('[data-action="recommendation-view"][data-value="single"]').click();
+  await actual.waitForFunction(async()=>{const state=(await chrome.storage.local.get('state')).state;return state.settings.language==='zh-CN' && document.querySelector('[data-value="single"]')?.getAttribute('aria-pressed')==='true';});
   await actual.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_SETTINGS',patch:{recommendationOptions:{limit:75,overlap:.02}}}}));
-  await actual.reload();await actual.locator('#ui-language').waitFor();
-  assert.equal(await actual.locator('#ui-language').inputValue(),'zh-CN');
-  assert.equal(await actual.locator('[data-action="recommendation-view"][data-value="list"]').getAttribute('aria-pressed'),'true');
+  await actual.reload();await actual.locator('[data-focus="nav-settings"]').waitFor();
+  assert.equal(await actual.locator('html').getAttribute('lang'),'zh-CN');
+  assert.equal(await actual.locator('[data-action="recommendation-view"][data-value="single"]').getAttribute('aria-pressed'),'true');
   const state=await actual.evaluate(async()=> (await chrome.storage.local.get('state')).state);
   assert.equal(state.settings.recommendationOptions.limit,75);assert.equal(state.settings.recommendationOptions.overlap,.02);
   assert.deepEqual(state.approved.map(topic=>topic.topic),['Gardening']);
   assert.equal((await actual.evaluate(()=>chrome.permissions.contains({permissions:['history']}))),false);
   await actual.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'ADD_INTEREST',topic:'https://example.org'}}));
-  await actual.locator('[data-view="settings"]').click();await actual.locator('[data-action="open-guide"]').click();await actual.locator('#welcome-guide').waitFor();
+  await actual.locator('[data-focus="nav-settings"]').click();await openSection(actual,'settings-guide');await actual.locator('[data-action="open-guide"]').click();await actual.locator('#welcome-guide').waitFor();
   assert.match(await actual.locator('#guide-heading').innerText(),/从你喜欢/);await actual.locator('[data-guide-action="skip"]').click();await actual.locator('#welcome-guide').waitFor({state:'detached',timeout:5000});
   assert.deepEqual((await actual.evaluate(async()=> (await chrome.storage.local.get('state')).state)).approved,state.approved);
   checks.push('the bilingual guide can be reopened in Settings and closed despite a prior profile error, without changing interests');
-  checks.push('production Chrome storage keeps language/list preferences after reload without history permission');
+  checks.push('production Chrome storage keeps language; reopened side panel starts One at a time without history permission');
   assert.deepEqual(errors,[]);assert.deepEqual(outbound,[]);
   checks.push('no browser errors or external network requests');
   await writeFile(resolve(output,'results.json'),JSON.stringify({passed:true,checks},null,2));
