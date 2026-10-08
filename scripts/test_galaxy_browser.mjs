@@ -31,9 +31,13 @@ async function select(page, keyword) {
   await page.locator('.galaxy-search').fill(keyword);
   await page.locator(`.galaxy-result[data-galaxy-topic="${keyword}"]`).click();
   await until(async()=>await page.locator('.galaxy-root').getAttribute('data-selected-id')===keyword);
+  assert.equal(await page.locator('.galaxy-results').isVisible(),false,'Selecting a search result leaves the details unobstructed');
+  assert.equal(await page.locator('.galaxy-search').inputValue(),keyword,'Selecting keeps the search text');
 }
 async function gestures(page, width) {
   await page.setViewportSize({width,height:1000});
+  const closeDetails=page.locator('[data-galaxy-action="close-details"]');
+  if(await closeDetails.count())await closeDetails.click();
   await page.locator('[data-galaxy-action="reset"]').click(); await pause();
   const canvas=page.locator('.galaxy-canvas');
   await canvas.scrollIntoViewIfNeeded();
@@ -158,7 +162,9 @@ try {
 
   await action(side,{type:'ADD_INTEREST',topic:{id:'My custom hobby',topic:'My custom hobby',domain:'Personal',description:'Synthetic custom interest'}});
   await until(async()=>await dash.locator('.galaxy-custom [data-galaxy-topic="My custom hobby"]').count()===1);
+  await dash.locator('[data-galaxy-action="view-options"]').click();
   await dash.locator('.galaxy-custom [data-galaxy-topic="My custom hobby"]').click();
+  await dash.waitForFunction(()=>!document.querySelector('.galaxy-options-dialog').open && document.activeElement===document.querySelector('.galaxy-detail h2'));
   assert.equal(await dash.locator('.galaxy-neighbors').count(),0);
   assert.match(await dash.locator('.galaxy-custom-note').innerText(),/目录/);
   await dash.locator('[data-galaxy-action="focus"]').click();await dash.locator('#recommendations-title').waitFor();

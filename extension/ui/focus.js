@@ -304,6 +304,7 @@ export function createFocusView({container,data,snapshot={seedId:null,nodes:[],s
       if(next.state!==undefined)state=next.state;if(next.language!==undefined)language=next.language;refreshCopy();
     },
     getViewState(){return{seedId:snapshot.seedId,selected,camera:{...camera},page,woken:true};},
+    replayEntry(){if(destroyed||!active||document.hidden||!snapshot.seedId)return;age=0;intro=compact?'focus':'wake';root.dataset.intro=intro;syncAnimation();},
     setActive(value){if(destroyed)return;active=Boolean(value);if(!active){activation.cancel();lastClick=null;doubleId=null;pointers.clear();}syncAnimation();},
     destroy(){if(destroyed)return;destroyed=true;if(frame)cancelAnimationFrame(frame);frame=0;activation.destroy();observer.disconnect();cleanups.forEach(cleanup=>cleanup());records.forEach(record=>record.orb?.destroy());records.clear();root.remove();},
   };

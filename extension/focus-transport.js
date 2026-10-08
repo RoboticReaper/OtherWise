@@ -1,4 +1,5 @@
 import {buildFocusRequest, focusIdentity, validateFocusResponse} from './core/focus-contract.js';
+import {hasServiceConnection, connectionHeaders} from './core/connection.js';
 
 class FocusError extends Error {}
 const validRequestId = value => typeof value === 'string' && value.length > 0 && value.length <= 120;
@@ -37,7 +38,7 @@ export function createFocusTransport({catalog, loadIdentity, getConnection, hasE
     try {
       const connection = getConnection();
       if (!connection || typeof connection.endpoint !== 'string' || !connection.endpoint ||
-          typeof connection.accessToken !== 'string' || !connection.accessToken ||
+          typeof connection.accessToken !== 'string' || !hasServiceConnection(connection) ||
           !Number.isSafeInteger(connection.epoch) || connection.epoch < 0) {
         throw new FocusError('Add your connection and team access code in Settings.');
       }
@@ -64,7 +65,7 @@ export function createFocusTransport({catalog, loadIdentity, getConnection, hasE
         // The final epoch check and upload are synchronous: a reset cannot fit between them.
         assertCurrent();
         const response = await fetchImpl(`${connection.endpoint}/api/focus`, {
-          method: 'POST', headers: {'Content-Type': 'application/json', Authorization: `Bearer ${connection.accessToken}`},
+          method: 'POST', headers: connectionHeaders(connection),
           body: JSON.stringify(body), credentials: 'omit', redirect: 'error', signal: controller.signal,
         });
         assertCurrent();

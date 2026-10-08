@@ -13,6 +13,8 @@ try{
  context.on('page',p=>p.on('pageerror',e=>errors.push(e.message)));
  const worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker'),base=worker.url().replace('background.js','');
  const page=await context.newPage();await page.goto(base+'dashboard.html?view=map');await page.locator('#welcome-guide').waitFor();await page.locator('[data-guide-action="skip"]').click();await page.locator('#welcome-guide').waitFor({state:'detached'});await page.locator('.galaxy-canvas').waitFor();
+ const visibleRipple=()=>page.waitForFunction(()=>{const ring=document.querySelector('.focus-ripple');return Number(ring?.getAttribute('opacity'))>0&&Number(ring?.getAttribute('r'))>0;},null,{timeout:2500});
+ const finishedRipple=()=>page.waitForFunction(()=>document.querySelector('.focus-ripple')?.getAttribute('opacity')==='0',null,{timeout:2500});
  await page.locator('[data-map-view="focus"]').click({timeout:3000});await page.locator('.focus-search').waitFor();
  assert.equal(await page.locator('.galaxy-page > .view-heading').isVisible(),false,'Focus should reclaim the redundant Galaxy hero space');
  assert.equal(await page.locator('.focus-root').getAttribute('data-seed-id'),'');
@@ -20,6 +22,8 @@ try{
  assert.equal(await page.locator('.focus-root').getAttribute('data-seed-id'),'Gardening');assert.equal(await page.locator('.focus-neighbor-list button').count(),10);assert.deepEqual(outbound,[]);
  const state=()=>page.evaluate(async()=>(await chrome.storage.local.get('state')).state);
  assert.equal((await state()).approved.length,0);assert.equal((await state()).focus,null);
+ // The local-service default may already be available; explicitly exercise the unconfigured case.
+ await page.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_SETTINGS',patch:{endpoint:'https://example.invalid',accessToken:''}}}));
  await page.locator('[data-focus-action="get-ideas"]').click();await page.locator('.map-focus-guidance:not([hidden])').waitFor();assert.match(await page.locator('.map-focus-guidance').innerText(),/Settings/);assert.deepEqual(outbound,[]);
  await page.locator('[data-map-action="settings"]').click();await page.locator('#endpoint').waitFor();assert.equal(new URL(page.url()).searchParams.get('view'),'settings','Map settings entry must preserve its page on reload');
  await page.locator('[data-view="map"]').click();assert.equal(await page.locator('.focus-root').getAttribute('data-seed-id'),'Gardening');
@@ -28,11 +32,28 @@ try{
  const camera=()=>page.locator('.galaxy-canvas').evaluate(c=>[c.dataset.centerX,c.dataset.centerY,c.dataset.zoom]);const before=await camera();
  await page.evaluate(()=>window.retainedGalaxy=document.querySelector('.galaxy-canvas'));
  await page.locator('[data-galaxy-action="enter-focus"]').click();await page.locator('.focus-root[data-seed-id="Computer science"]').waitFor();
+ await visibleRipple();
+ const radius=Number(await page.locator('.focus-ripple').getAttribute('r'));
+ await page.waitForFunction(radius=>Number(document.querySelector('.focus-ripple').getAttribute('r'))>radius,radius,{timeout:1000});
+ await finishedRipple();
+ await page.evaluate(()=>window.retainedFocus=document.querySelector('.focus-root'));
  await page.locator('[data-focus-action="zoom-in"]').click();const focusZoom=await page.locator('.focus-map').getAttribute('data-zoom');
  await page.evaluate(()=>chrome.runtime.sendMessage({type:'ACTION',action:{type:'SET_SETTINGS',patch:{language:'zh-CN'}}}));await page.waitForFunction(()=>document.documentElement.lang==='zh-CN');assert.equal(await page.locator('.focus-map').getAttribute('data-zoom'),focusZoom);
+ assert.equal(await page.locator('.focus-ripple').getAttribute('opacity'),'0','Routine state updates do not replay the entry ripple');
  await page.locator('[data-view="discover"]').click();await page.locator('[data-view="map"]').click();assert.equal(await page.locator('.focus-map').getAttribute('data-zoom'),focusZoom);
+ assert.equal(await page.locator('.focus-ripple').getAttribute('opacity'),'0','Restoring the Map page does not replay a star entry');
  await page.locator('[data-focus-action="back"]').click();assert.deepEqual(await camera(),before);assert.equal(await page.evaluate(()=>window.retainedGalaxy===document.querySelector('.galaxy-canvas')),true);
  await page.locator('[data-map-view="focus"]').click();assert.equal(await page.locator('.focus-root').getAttribute('data-seed-id'),'Computer science');
+ await visibleRipple();await finishedRipple();
+ await page.locator('[data-focus-action="back"]').click();
+ await page.locator('[data-galaxy-action="enter-focus"]').click();
+ await visibleRipple();
+ assert.equal(await page.evaluate(()=>window.retainedFocus===document.querySelector('.focus-root')),true,'Repeated entry reuses the Focus scene');
+ assert.equal(await page.locator('.focus-map').getAttribute('data-zoom'),focusZoom,'Repeated entry preserves the Focus camera');
+ await finishedRipple();
+ await page.locator('[data-map-view="focus"]').click();await page.waitForTimeout(300);
+ assert.equal(await page.locator('.focus-ripple').getAttribute('opacity'),'0','Clicking the already-active Focus view does not replay entry');
+ checks.push('Every Galaxy-to-Focus entry replays the expanding ripple for the same or a different star; cameras and DOM persist, routine updates and page restoration stay quiet');
  const side=await context.newPage();await side.goto(base+'sidepanel.html?view=map');await side.locator('.galaxy-canvas').waitFor();assert.equal(await side.locator('.map-workspace').getAttribute('data-view'),'galaxy');
  await side.locator('.galaxy-search').fill('Gardening');await side.locator('[data-galaxy-topic="Gardening"].galaxy-result').click();await side.locator('[data-galaxy-action="enter-focus"]').click();
  assert.equal(await page.locator('.focus-root').getAttribute('data-seed-id'),'Computer science');

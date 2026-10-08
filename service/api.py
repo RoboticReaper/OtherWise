@@ -6,6 +6,7 @@ import asyncio
 import hmac
 import logging
 import os
+import re
 import threading
 import time
 import unicodedata
@@ -167,10 +168,22 @@ class RequestBoundary:
     for this shared-token single-worker demo, so no IP/profile keys are retained.
     """
 
-    def __init__(self, app, *, token):
+    def __init__(self, app, *, token, local_mode=False):
         self.app = app
         self.token = token.encode("utf-8") if token else None
+        self.local_mode = local_mode
         self.requests = deque()
+
+    def permits_local_request(self, scope, headers):
+        """Loopback alone is insufficient: public tunnels also reach loopback."""
+        if not self.local_mode or (scope.get("client") or (None,))[0] not in {"127.0.0.1", "::1"}:
+            return False
+        if not re.fullmatch(rb"(?:127\.0\.0\.1|localhost)(?::[0-9]{1,5})?", headers.get(b"host", b"").lower()):
+            return False
+        if any(key == b"forwarded" or key.startswith(b"x-forwarded-") or key == b"cf-connecting-ip" for key in headers):
+            return False
+        origin = headers.get(b"origin")
+        return origin is None or re.fullmatch(rb"chrome-extension://[a-p]{32}", origin) is not None
 
     async def __call__(self, scope, receive, send):
         if scope["type"] != "http":
@@ -182,7 +195,9 @@ class RequestBoundary:
         headers = dict(scope["headers"])
         authorization = headers.get(b"authorization", b"")
         supplied = authorization[7:] if authorization.startswith(b"Bearer ") else b""
-        if not self.token or not hmac.compare_digest(supplied, self.token):
+        authenticated = bool(self.token and hmac.compare_digest(supplied, self.token))
+        local_request = not authorization and self.permits_local_request(scope, headers)
+        if not authenticated and not local_request:
             return await error("A valid access token is required.", 401,
                                **{"WWW-Authenticate": "Bearer"})(scope, receive, send)
         # Safe authenticated status polls carry no input and do not consume the
@@ -360,7 +375,7 @@ def create_app(engine=None, token=None, discovery_engine=None, layout_service=No
         finally:
             compute.release()
 
-    app.add_middleware(RequestBoundary, token=access_token)
+    app.add_middleware(RequestBoundary, token=access_token, local_mode=os.getenv("OTHERWISE_LOCAL_MODE") == "1")
     origins = [item.strip() for item in os.getenv("OTHERWISE_CORS_ORIGINS", "").split(",") if item.strip()]
     app.add_middleware(CORSMiddleware, allow_origins=origins,
                        allow_origin_regex=r"chrome-extension://[a-p]{32}",

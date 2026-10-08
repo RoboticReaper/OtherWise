@@ -17,6 +17,7 @@ from demo_runtime import (
 
 
 def start(port=8000, local_only=False, startup_timeout=120):
+    auth_mode = "local" if local_only else "token"
     python = ROOT / ".venv/bin/python"
     if not python.exists():
         raise DemoError("The project .venv is missing. Follow docs/demo-backend.md to set it up.")
@@ -26,10 +27,10 @@ def start(port=8000, local_only=False, startup_timeout=120):
             active = (is_owned(previous.get("api"), ROOT) and health_ready(previous.get("local_endpoint", ""))
                       and authenticated_ready(previous.get("local_endpoint", ""), previous.get("token")))
             tunnel_ok = previous.get("local_only") or (is_owned(previous.get("tunnel"), ROOT) and health_ready(previous.get("endpoint", "")))
-            if active and tunnel_ok and previous.get("local_only") == local_only and previous.get("port") == port:
+            if active and tunnel_ok and previous.get("local_only") == local_only and previous.get("port") == port and previous.get("auth_mode") == auth_mode:
                 print("OtherWise demo is already running.")
                 print(f"Endpoint: {previous['endpoint']}")
-                print("Private token: .cache/demo/connection.json (not printed)")
+                print("Local mode: no access code needed. Choose Connect local service in extension Settings." if local_only else "Private token: .cache/demo/connection.json (not printed)")
                 return previous
             stop_record(previous, ROOT)
         require_free_port(port)
@@ -37,14 +38,17 @@ def start(port=8000, local_only=False, startup_timeout=120):
         token = secrets.token_urlsafe(32)
         local_endpoint = f"http://127.0.0.1:{port}"
         record = {"schema": 1, "root": str(ROOT), "created_at": int(time.time()),
-                  "port": port, "local_only": local_only, "local_endpoint": local_endpoint,
+                  "port": port, "local_only": local_only, "auth_mode": auth_mode, "local_endpoint": local_endpoint,
                   "endpoint": local_endpoint, "token": token, "api": None, "tunnel": None,
                   "ready": False}
         connection = ROOT / ".cache/demo/connection.json"
         private_json(connection, record)
         prior_token = os.environ.get("OTHERWISE_API_TOKEN")
+        prior_local_mode = os.environ.get("OTHERWISE_LOCAL_MODE")
         try:
             os.environ["OTHERWISE_API_TOKEN"] = token
+            # Shared launches override any inherited local-mode environment.
+            os.environ["OTHERWISE_LOCAL_MODE"] = "1" if local_only else "0"
             print("Starting the real recommendation model. This can take a moment.")
             _, record["api"] = spawn_owned([
                 str(python), "-m", "uvicorn", "main:app", "--app-dir", str(ROOT),
@@ -74,16 +78,20 @@ def start(port=8000, local_only=False, startup_timeout=120):
                 os.environ.pop("OTHERWISE_API_TOKEN", None)
             else:
                 os.environ["OTHERWISE_API_TOKEN"] = prior_token
+            if prior_local_mode is None:
+                os.environ.pop("OTHERWISE_LOCAL_MODE", None)
+            else:
+                os.environ["OTHERWISE_LOCAL_MODE"] = prior_local_mode
         print("OtherWise demo is ready.")
         print(f"Endpoint: {record['endpoint']}")
-        print("Private token: .cache/demo/connection.json (not printed)")
+        print("Local mode: no access code needed. Choose Connect local service in extension Settings." if local_only else "Private token: .cache/demo/connection.json (not printed)")
         print("Stop with Stop-OtherWise-Demo.command or scripts/stop_demo.py.")
         return record
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--local-only", action="store_true", help="Do not download or start a public tunnel.")
+    parser.add_argument("--local-only", action="store_true", help="Run a loopback-only service without an access code or public tunnel.")
     parser.add_argument("--port", type=int, default=8000)
     parser.add_argument("--startup-timeout", type=float, default=120)
     args = parser.parse_args()

@@ -42,3 +42,47 @@ test('dashboard opens a trusted extension page without requesting history or upl
     assert.deepEqual(opened,[{url:'chrome-extension://fixture/dashboard.html?view=map'},{url:'chrome-extension://fixture/dashboard.html?view=map'},{url:'chrome-extension://fixture/dashboard.html?view=interests'}]);
   }finally{globalThis.chrome=oldChrome;globalThis.location=oldLocation;}
 });
+
+
+test('dashboard waits for its tab before closing the side panel in that same window',async()=>{
+  const oldChrome=globalThis.chrome,oldLocation=globalThis.location,calls=[];
+  let finishOpening;
+  globalThis.location=new URL('chrome-extension://fixture/sidepanel.html');
+  globalThis.chrome={runtime:{id:'fixture',getURL:path=>'chrome-extension://fixture/'+path},
+    tabs:{create:opts=>{calls.push({type:'open',...opts});return new Promise(resolve=>{finishOpening=resolve;});}},
+    sidePanel:{close:async opts=>{calls.push({type:'close',...opts});}}};
+  try{
+    const {openDashboard}=await import('../bridge.js?dashboard-close-order');
+    const opening=openDashboard('discover');
+    assert.deepEqual(calls,[{type:'open',url:'chrome-extension://fixture/dashboard.html?view=discover'}]);
+    finishOpening({id:40,windowId:7});await opening;
+    assert.deepEqual(calls,[{type:'open',url:'chrome-extension://fixture/dashboard.html?view=discover'},{type:'close',windowId:7}]);
+  }finally{globalThis.chrome=oldChrome;globalThis.location=oldLocation;}
+});
+
+test('failed dashboard opening leaves the original side panel available',async()=>{
+  const oldChrome=globalThis.chrome,oldLocation=globalThis.location;
+  let closed=0;
+  globalThis.location=new URL('chrome-extension://fixture/sidepanel.html');
+  globalThis.chrome={runtime:{id:'fixture',getURL:path=>'chrome-extension://fixture/'+path},
+    tabs:{create:async()=>{throw new Error('Tab creation failed');}},sidePanel:{close:async()=>{closed++;}}};
+  try{
+    const {openDashboard}=await import('../bridge.js?dashboard-close-open-failure');
+    await assert.rejects(openDashboard('discover'),/Could not open the dashboard/);
+    assert.equal(closed,0);
+  }finally{globalThis.chrome=oldChrome;globalThis.location=oldLocation;}
+});
+
+test('unsupported or failed panel closing still opens the dashboard once',async()=>{
+  const oldChrome=globalThis.chrome,oldLocation=globalThis.location;
+  let opened=0,closed=0;
+  globalThis.location=new URL('chrome-extension://fixture/sidepanel.html');
+  globalThis.chrome={runtime:{id:'fixture',getURL:path=>'chrome-extension://fixture/'+path},
+    tabs:{create:async()=>{opened++;return {id:40,windowId:7};}},sidePanel:{}};
+  try{
+    const {openDashboard}=await import('../bridge.js?dashboard-close-compatibility');
+    await openDashboard('discover');assert.equal(opened,1);
+    chrome.sidePanel.close=async opts=>{assert.deepEqual(opts,{windowId:7});closed++;throw new Error('Panel close unavailable');};
+    await openDashboard('discover');assert.equal(opened,2);assert.equal(closed,1);
+  }finally{globalThis.chrome=oldChrome;globalThis.location=oldLocation;}
+});

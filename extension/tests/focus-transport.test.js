@@ -24,6 +24,14 @@ function rig({permission=async()=>true,loadIdentity=async()=>identity,fetchImpl}
 }
 const request=(transport,owner={},patch={})=>transport.request(owner,{requestId:'same-id',topicId:'Gardening',options:{},...patch});
 
+test('Focus supports local requests without a code but still requires codes remotely',async()=>{
+  const r=rig();r.setConnection({endpoint:'http://127.0.0.1:8000',accessToken:''});
+  assert.equal((await request(r.transport)).seed_id,'Gardening');
+  assert.equal(r.requests[0].options.headers.Authorization,undefined);
+  r.setConnection({endpoint:'https://service.example'});
+  await assert.rejects(request(r.transport),/access code/);assert.equal(r.requests.length,1);
+});
+
 // Removing the explicit-request boundary would upload before this assertion.
 test('Focus initialization and invalidation alone never load data or upload',async()=>{
   let loaded=0,checked=0,sent=0;

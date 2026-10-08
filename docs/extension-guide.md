@@ -6,13 +6,20 @@
 2. Open Chrome's **Extensions → Manage extensions** (`chrome://extensions`).
 3. Turn on **Developer mode**, click **Load unpacked**, and select that folder.
 4. Pin OtherWise in the extensions menu. Click its icon to open the side panel.
-5. Open the header's **Settings** icon, expand **Service connection**, and paste the host's **Service address** and **Team access code**.
-   Click **Save settings** and allow access to that service address when Chrome asks.
+5. For local testing, run **Start-OtherWise-Local.command**, open the header's
+   **Settings** icon, expand **Service connection**, and click **Connect local
+   service / 连接本机服务**. Allow access if Chrome asks. This saves the local
+   address and clears any old code; no further changes are needed after server restarts.
+   For a shared demo, paste the host's **Service address** and **Team access code**,
+   then click **Save settings** and allow access to that service address.
 
 The shared demo works while the host's Mac and demo processes are running. A newly
 started temporary tunnel can have a different address. The host shares both the
 address and code; the ZIP contains neither. The host can use `http://127.0.0.1:8000`
-instead. A teammate must use the shared HTTPS address, not their own localhost.
+instead, with the same code when the server runs in shared mode. Local mode is
+enabled only by the local launcher. A teammate must use the shared HTTPS address,
+not their own localhost. For a custom local port, save its address with an empty
+code; the local shortcut always selects port 8000.
 
 ## First opening and page navigation
 
@@ -24,13 +31,31 @@ guide sits above the page in normal flow. Completion and skipping are remembered
 The guide does not request history access, read visits or request recommendations.
 Existing profiles with saved interests skip the automatic guide.
 
-**Interests** contains the English keyword input, optional history review,
-candidate inbox and saved-interest management. **Discover** contains recommendation
+**Interests** has two tabs. **Saved / 已保存** contains the English keyword input
+and saved-interest management. **To review / 待确认** contains browsing candidates;
+its count stays visible on the tab. **Discover** contains recommendation
 results and a compact starting-interest summary. **Adjust** expands the discovery controls and help. Use
 **Explore recommendations** or **Manage interests** to move between the pages.
+Saved interests appear in a compact list: six per page in the side panel and
+eight in the Dashboard. Search filters interest names without changing your profile;
+click a truncated title to show it in full. **Manage** lets you select interests
+across pages and search results, then remove them together. **Undo** restores the
+most recent removal, including its original order. Adding or approving a new
+interest replaces that undo opportunity. Candidate review is a bounded workspace:
+only the list scrolls, while pagination and Save remain visible. **Review browsing**
+opens a small dialog with the time range and privacy details; nothing is imported
+until you confirm there. The list adapts to the remaining window height. The
+getting-started guide can still use normal page scrolling.
+Wide interest pages include **Your interest landscape / 兴趣概览** beside the list:
+saved-interest and explored-topic counts, up to four saved-interest subject areas,
+and the three latest distinct searched topics. Custom or missing subject areas
+remain separately unclassified; this summary does not infer preferences. In a
+narrow panel, **Overview / 概览** opens the same content in a dialog. Both the
+saved list and the wide overview scroll within their panels when needed.
+
 Draft keyword input, candidate selections and loaded result pagination stay in the
 current window when switching pages. The selected page is reflected in its URL,
-so reload returns to the selected page. The Dashboard button and Dashboard's
+so reload returns to the selected page and interest tab. The Dashboard button and Dashboard's
 initial no-parameter view open Discover in Browse. Reset starts a fresh profile and shows the guide
 again; it is not a way to refresh recommendations.
 
@@ -43,18 +68,31 @@ English; topic names, domains and descriptions retain their original English tex
 Switching language preserves drafts, selected candidates and loaded recommendations.
 The **Browse / One at a time** toggle switches between a compact topic chooser with
 one selected detail and a single-topic view with Previous/Next controls. The side
-panel places the selected detail above the chooser; wider windows place it beside
-the list. Switching views keeps the selected topic and uses the same downloaded
+panel places a short, independently scrolling chooser above the selected detail;
+wider windows place it beside the list. Browse uses the remaining window height,
+with Search and Save outside the scrolling description area. Switching views keeps the selected topic and uses the same downloaded
 batch without requesting more recommendations. A manual switch applies to the current page and stays active while navigating within it. Reopening starts with that surface's default; the side panel and Dashboard do not change each other's view. Browse shows ten topics per page; One at a time moves through the
 whole batch. **Search** opens Google/YouTube choices, **Save interest** saves the
 topic, and **… → Not for me** hides it and advances to the next available topic.
 Long descriptions and source details can be expanded when needed.
 
+Saving an interest while Discover is open keeps the current batch and reading
+position, with saved topics marked **Saved**. You can continue searching and
+saving the remaining suggestions without enabling automatic refresh. The batch
+keeps its original starting interest and update time. Leaving and reopening
+Discover, or reloading the page, stops showing an outdated batch; use **Find ideas**
+to fetch results for the updated interests. **Refresh ideas** replaces the batch
+when its response arrives. If automatic refresh is enabled, its new response can
+also replace the current batch. Reset, interest removal and privacy or discovery
+settings changes still clear outdated results.
+
+
 1. Open **Interests / 兴趣** and add **Gardening** manually. This saves an interest without accessing history.
-   Alternatively, expand **Review recent browsing**, then use its review button. It asks Chrome for permission, processes
-   up to 5,000 recent visits locally, then shows a candidate inbox. Choose topics and
-   **Save selected**. Nothing in this inbox is uploaded before confirmation.
-   The candidate inbox shows ten topics per page. Selections remain checked across
+   Alternatively, open **To review / 待确认**, click **Review browsing**, choose the
+   period in its dialog and confirm. It asks Chrome for permission and processes
+   up to 5,000 recent visits locally. Choose topics and **Save selected**.
+   Nothing in this inbox is uploaded before confirmation. The candidate inbox
+   shows five topics per page in the side panel and eight in the Dashboard. Selections remain checked across
    pages; **Select this page** applies only to the visible page. The save button's
    count includes every selected page, so you can confirm the total before saving.
 2. Open **Discover / 发现**, then click **Find ideas**. Up to ten nearby topics appear by default, with the connection to a
@@ -202,6 +240,10 @@ stances or prove an effect on polarization.
 ## Full dashboard and Galaxy
 
 Click **Dashboard ↗** beside the side panel's navigation to open a full browser tab.
+After the tab opens, OtherWise closes its side panel in that same window on
+[Chrome 141 or later](https://developer.chrome.com/docs/extensions/reference/api/sidePanel#method-close).
+Click the extension icon to reopen the panel. Older browsers still open the
+Dashboard normally; if opening fails, the original panel remains available.
 It shares saved interests, recommendations, language and settings with the panel
 through this extension's local storage. No login, extra permission or data upload
 is needed to open the dashboard or browse the public map.
@@ -219,7 +261,46 @@ Drag to pan, use the +/− buttons or mouse wheel to zoom, and **Reset view** to
 to the full map. Touch pinch and keyboard controls are supported. Filtering,
 selection and refreshing never recalculate star positions. Chinese changes interface
 labels only; topic names and descriptions retain their original language.
-Manually saved topics outside the catalog appear separately without invented positions.
+Galaxy fits the remaining window height. Its search results float over the canvas
+and close after selection while retaining the search text. Wide windows keep topic
+details beside the map; narrow windows use a dismissible detail card above the
+zoom controls. Long details scroll inside that panel. **Display & key / 显示与图例**
+opens label switches, the key, subject colors and custom interests in a dialog.
+Manually saved topics outside the catalog appear there without invented positions.
+
+## Optional sound effects
+
+Open **Settings → Sound effects / 音效** to enable exploration sounds,
+adjust volume, or preview Save, Explore and Bloom. Automatic sounds start off
+on both new and existing installs; the initial volume is 20%. Preview buttons
+work while automatic sounds are off. Preferences are shared between the side
+panel and Dashboard and do not change recommendations or send service requests.
+
+- **Save** uses the supplied `1.wav` after a genuinely new interest is saved.
+  Batch approvals produce at most one sound; duplicate saves, failed saves and
+  undo are silent.
+- **Explore** uses `2.wav` after a Focus center settles for 450 ms. Returning to
+  the same center or exploring another topic in the same domain can play again
+  after the short shared cooldown. Rapid center changes cancel the previous
+  pending sound. Selecting, hovering, searching, paging and refreshing
+  recommendations are silent.
+- **Bloom** uses `Bloom.wav` instead of Save when the visible Galaxy is in
+  exploration mode and a successful save adds at least five genuinely new lit
+  topics. Saved neighbors and previous searches already covered by the map do
+  not count again. Each newly lit neighborhood can play Bloom again after the
+  short shared cooldown.
+
+All automatic sounds in a window share only a **two-second cooldown** to prevent
+rapid repeated playback. There are no per-domain, per-session or rolling count
+limits. Ineligible sounds are discarded, never queued.
+Only the foreground window that receives the user's action plays audio; other
+windows and background state updates stay quiet. Leaving a page, switching away
+from the window, muting, or closing it stops playback and pending sounds.
+Changing a Focus center or returning to Galaxy also stops the previous sound.
+An unfinished save cannot play a late sound after leaving and returning.
+Explicit previews replace the previous preview and do not start the automatic
+cooldown. The three WAV files are packaged locally with matched volume;
+there is no audio API request or extra browser permission.
 
 ## Semantic Focus and exploration mode
 
@@ -231,6 +312,10 @@ the center search to choose any catalog topic, including one you have not saved.
 The side panel uses a compact scene with scrolling details below the map; Dashboard
 provides more room. **Back to Galaxy** restores the view, selection, search and domain
 filter from before entering Focus. Escape closes details first, then returns.
+Each explicit Dashboard entry or center change replays the expanding white ring,
+including repeated visits to the same star. Re-entering the same center keeps its
+current camera and selected details. Routine state updates and restoring the Map page do not
+restart the effect. Reduced motion keeps the scene still.
 
 **Get ideas** explicitly requests recommendations for the displayed center using
 the quantity and numeric controls in Settings. The disclosure beside it explains
@@ -304,6 +389,12 @@ selection, language persistence and preservation of drafts in an isolated browse
 It uses the same optional Playwright setup described below and makes no API calls.
 `npm run test:galaxy` checks the real packaged catalog map and the shared dashboard
 in an isolated extension profile at desktop, side-panel, 390px and 320px widths.
+`npm run test:local` checks the local connection shortcut, preservation of other
+settings drafts, both UI languages, real broad/specific Discover and Focus, layout
+authentication, and a server restart without updating the connection. It uses a
+temporary profile and API port, sends no access code, requires a cached model,
+and stops its own backend afterward. Layout authentication is checked without
+starting a full-catalog layout computation; layout generation has separate tests.
 
 To rerun the integration check with Node 22+, install Playwright as an optional
 development tool (`npm install --no-save playwright`, then `npx playwright install chromium`),
@@ -316,6 +407,6 @@ data only and can be removed from the system temporary folder after the run.
 
 ## Galaxy layout and labels
 
-Galaxy’s toolbar includes **Fit**, **Fullscreen**, and **Layout settings**. Fit centers the whole Galaxy and preserves the selected topic/search and domain filter. Fullscreen keeps the map and toolbar together; Escape exits. Domain labels use lighter captions and avoid overlapping each other or controls. Domain names and saved Interest names have independent visibility switches; hiding names keeps stars, hover names and selection available. These switches also appear in Settings.
+Galaxy’s toolbar includes **Fit**, **Fullscreen**, **Layout settings**, and **Display & key**. Fit centers the whole Galaxy and preserves the selected topic/search and domain filter. Fullscreen keeps the map and toolbar together. Escape closes an open dialog first, then exits fullscreen. Domain labels use lighter captions and avoid overlapping each other or controls. Domain names and saved Interest names have independent visibility switches; hiding names keeps stars, hover names and selection available. These switches also appear in Settings.
 
-Open **Layout settings** to adjust neighbor count, minimum distance, spread, and repulsion strength. **Generate preview** recomputes all public topics on the connected backend and shows progress; the prior map remains usable while it runs. **Save default** stores the parameters in Settings. **Restore B** returns to the packaged B map. Layout settings do not change semantic recommendation distances or saved interests. The packaged map always remains available offline; custom preview needs the service address/access code and the backend layout dependencies.
+Open the **Layout settings** dialog to adjust neighbor count, minimum distance, spread, and repulsion strength. **Generate preview** recomputes all public topics on the connected backend and shows progress; the prior map remains usable while it runs. **Save default** stores the parameters in Settings. **Restore B** returns to the packaged B map. Layout settings do not change semantic recommendation distances or saved interests. The packaged map always remains available offline; custom preview needs a local or shared service connection and the backend layout dependencies. Local mode needs no access code; shared mode requires one.

@@ -5,7 +5,7 @@ Verified locally on 2026-10-08. The approved direction is A (clean workbench), w
 ## Result
 
 - Three main navigation entries: Discover, Interests and Map. Settings lives in the header; the side panel has a compact Dashboard shortcut.
-- Browse shows a topic chooser and one selected detail. In narrow panels the detail appears above the chooser, and selecting a row brings the new detail into view.
+- Browse shows a topic chooser and one selected detail. In narrow panels a short chooser sits above the detail; each long region scrolls within the window.
 - One at a time uses the same downloaded batch, with Previous/Next and a position counter. Switching views, pages and UI language retains the selected topic in the current window. On opening, the side panel starts Discover in One at a time, and the web Dashboard starts Discover in Browse. Manual switches are local to each page; reopening restores the surface default.
 - Search opens Google/YouTube choices. Save interest remains visible. Additional topic actions, long descriptions, graph provenance, history review and settings expand on demand.
 - The original navy night-sky palette, ivory text and pale sage accents remain fixed in both system appearances. Static color tokens retain the manifest's Chrome 116 compatibility; older Chrome itself was not run.
@@ -39,3 +39,47 @@ The side panel and Dashboard now open Discover directly, with independent page-l
 ## Night-sky palette correction
 
 Restored the original shared navy, ivory and sage tokens and the original page background gradients. Removed the workbench's system-dependent light/green overrides and declared a dark color scheme on both entry pages. Layout and surface defaults are unchanged. Rebuilt the extension; the unit suite (190 tests) and UI suite (19 checks) passed again, including both system appearances at 390/1100 px. Refreshed and visually inspected the existing Dashboard preview. Logs are in `.cache/qa/ui-star-theme/`.
+
+## Window-height layout and interest landscape follow-up (2026-10-08)
+
+Discover Browse, One at a time, saved/review interests and Galaxy now use the
+remaining window height. Recommendation lists, descriptions, interest lists and
+Galaxy details own their long-content scrolling. Search/Save and pagination stay
+outside those scrolling regions. The getting-started guide retains normal page
+flow. Galaxy layout controls and Display & key use native dialogs; narrow selected
+details leave a strip for zoom/reset. Search selection dismisses its result overlay
+and retains the query. Escape closes a modal before leaving native fullscreen.
+Selecting a custom interest closes Display & key and focuses its topic heading.
+
+The wide Interests page includes a local, factual interest landscape: unique saved
+and explored counts, the top four known subject areas, separate unclassified/other
+counts, and the latest three distinct searched topics. A narrow Overview button
+opens the same content in a native dialog. No new stored data or service request
+is added. Existing recommendation retention after Save is preserved, including
+list and description scroll positions in the current batch.
+
+Current verification uses the Codex in-app browser with fictional personal state
+and the packaged public catalog. A loopback, no-cache preview adds 12 recommendations,
+24 saved interests, 306 review candidates and a long description; its fixture is
+outside the extension source. Before the change, a 1280×800 window measured 1095px
+for Browse and 1184px for Galaxy. Updated pages measure 800px at that same viewport.
+Browse and Galaxy also fit 390×850, 320×850 and 390×600; wide/narrow interest lists,
+review footer, overview dialogs, long descriptions, Search/Save retention, custom
+interest selection, map zoom, Focus return and both UI languages were checked.
+Native fullscreen was entered; Escape closed each dialog while keeping fullscreen,
+then exited fullscreen. Short windows use smaller surrounding margins so content
+still has room. This is a page-preview check, not a test of the user's installed
+extension or the model backend.
+
+The Node suite passes 242 tests, including five new overview aggregation tests and
+a regression test for fullscreen modal Escape order. Browser regression scripts
+were updated for the new dialogs and height assertions and syntax-checked; their
+full extension-profile suites were not rerun for this follow-up. Independent source
+review found wide-interest alignment, narrow map-control overlap and custom-interest
+dialog focus issues; all were fixed and reproduced in the page preview.
+
+The unpacked extension and ZIP were rebuilt with 31,637 catalog topics. Their
+runtime files and installation guide match the current source. The final preview
+was refreshed from that source; proof and measurements are recorded in the ignored
+`.cache/qa/compact-viewports/verification.json`, with three screenshots saved in
+the current task's visualization directory.

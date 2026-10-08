@@ -1,5 +1,5 @@
 /** Native fullscreen keeps the map and its controls together in the top layer. */
-export function createMapFullscreen({surface, button, text, onResize}) {
+export function createMapFullscreen({surface, button, text, onResize, hasOpenDialog = () => false}) {
   const document = surface.ownerDocument;
   let destroyed = false, pending = false, active = true;
   const error = document.createElement('p');
@@ -26,7 +26,7 @@ export function createMapFullscreen({surface, button, text, onResize}) {
   }
   function exit() { if (isFullscreen()) document.exitFullscreen().catch(() => {}); }
   function keydown(event) {
-    if (event.key === 'Escape' && isFullscreen()) {
+    if (event.key === 'Escape' && isFullscreen() && !hasOpenDialog()) {
       event.preventDefault(); event.stopPropagation(); exit();
     }
   }

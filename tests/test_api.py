@@ -62,6 +62,58 @@ def test_environment_token_is_used(monkeypatch):
         assert session.post("/api/recommend", headers=AUTH, json=PAYLOAD).status_code == 200
 
 
+@pytest.fixture
+def local_client(monkeypatch):
+    monkeypatch.setenv("OTHERWISE_LOCAL_MODE", "1")
+    with TestClient(app_factory(engine=make_engine(["A"], [.32]), token=TOKEN),
+                    base_url="http://127.0.0.1:8000", client=("127.0.0.1", 50000)) as session:
+        yield session
+
+
+def test_explicit_local_mode_allows_extension_without_access_code(local_client):
+    response = local_client.post("/api/recommend", json=PAYLOAD,
+                                 headers={"Origin": "chrome-extension://" + "a" * 32})
+    assert response.status_code == 200
+    assert local_client.post("/api/recommend", json=PAYLOAD).status_code == 200
+    assert local_client.post("/api/recommend", headers=AUTH, json=PAYLOAD).status_code == 200
+    assert local_client.post("/api/recommend", headers={"Authorization": "Bearer wrong"}, json=PAYLOAD).status_code == 401
+
+
+@pytest.mark.parametrize("path,method,status", [
+    ("/api/focus", "POST", 422), ("/api/discover", "POST", 422),
+    ("/api/galaxy-layout", "POST", 422), ("/api/galaxy-layout/missing", "GET", 404),
+])
+def test_local_mode_covers_all_guarded_routes(local_client, path, method, status):
+    assert local_client.request(method, path, json={} if method == "POST" else None).status_code == status
+
+
+@pytest.mark.parametrize("headers", [
+    {"Origin": "https://unconfigured.example"}, {"Origin": "http://localhost:9000"},
+    {"Origin": "null"}, {"Origin": "chrome-extension://invalid"},
+    {"Host": "demo.trycloudflare.com"}, {"Host": "localhost.evil.example:8000"},
+    {"X-Forwarded-For": "127.0.0.1"}, {"X-Forwarded-Host": "localhost"},
+    {"X-Forwarded-Proto": "https"}, {"Forwarded": "for=127.0.0.1"},
+    {"CF-Connecting-IP": "127.0.0.1"},
+])
+def test_local_mode_does_not_bypass_auth_for_websites_or_forwarded_requests(local_client, headers):
+    assert local_client.post("/api/recommend", headers=headers, json=PAYLOAD).status_code == 401
+
+
+def test_local_mode_requires_a_loopback_client(monkeypatch):
+    monkeypatch.setenv("OTHERWISE_LOCAL_MODE", "1")
+    with TestClient(app_factory(engine=make_engine(["A"], [.32]), token=TOKEN),
+                    base_url="http://localhost:8000", client=("192.168.1.10", 50000)) as session:
+        assert session.post("/api/recommend", json=PAYLOAD).status_code == 401
+
+
+def test_shared_mode_still_requires_code_on_localhost(monkeypatch):
+    monkeypatch.setenv("OTHERWISE_LOCAL_MODE", "0")
+    with TestClient(app_factory(engine=make_engine(["A"], [.32]), token=TOKEN),
+                    base_url="http://localhost:8000", client=("127.0.0.1", 50000)) as session:
+        assert session.post("/api/recommend", json=PAYLOAD).status_code == 401
+        assert session.post("/api/recommend", headers=AUTH, json=PAYLOAD).status_code == 200
+
+
 @pytest.mark.parametrize("patch", [
     {"keywords": []}, {"keywords": ["A"] * 41}, {"keywords": [" "]},
     {"keywords": ["x" * 121]}, {"keywords": ["private\ntext"]}, {"keywords": [42]},

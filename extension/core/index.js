@@ -1,4 +1,5 @@
 import {normalizeGalaxyLayoutOptions} from './galaxy-layout-options.js';
+import {LOCAL_ENDPOINT} from './connection.js';
 import {normalizeRecommendationOptions, validRecommendationOptions} from './recommendation-options.js';
 import {createDiscoveryState, normalizeDiscovery, cleanDiscoveryMetadata, discoveryPayload, isConceptId, validRating} from './discovery.js';
 
@@ -29,15 +30,16 @@ export function createState(now = Date.now()) {
     schemaVersion: 1, generation: 0, salt: randomSalt(), onboardingComplete: false,
     settings: {
       browsingEnabled: false, autoRefresh: false, mode: 'path', globalLevel: 0, language: 'en', recommendationView: 'cards', galaxyExplorationMode: false, tutorialSeen: false,
-      endpoint: 'http://127.0.0.1:8000', accessToken: '',
+      endpoint: LOCAL_ENDPOINT, accessToken: '',
       recommendationOptions: normalizeRecommendationOptions(),
       galaxyLayoutOptions: normalizeGalaxyLayoutOptions(), galaxyShowDomainLabels: true, galaxyShowInterestLabels: true,
       recommendationKind: 'broad', discoveryExploration: .3,
+      soundEffectsEnabled: false, soundEffectsVolume: .2,
       blockedDomains: [...DEFAULT_BLOCKED_DOMAINS], analysisSince: 0,
     },
     approved: [], baseline: [], candidates: [], evidence: [], suppressed: [],
-    explored: [], edges: [], recommendations: [], focus: null,
-    lastError: null, lastUpdated: null,
+    explored: [], edges: [], recommendations: [], recommendationBatch: null, focus: null,
+    lastError: null, lastUpdated: null, interestUndo: null,
     discovery: createDiscoveryState(),
   };
 }
@@ -180,9 +182,16 @@ function recomputeCandidates(state, metadata) {
   return [...grouped.values()].sort((a, b) => b.lastSeen - a.lastSeen || b.count - a.count || a.topic.localeCompare(b.topic));
 }
 
+function snapshotRecommendationBatch(state) {
+  return {token:randomSalt(), items:state.recommendations, updatedAt:state.lastUpdated,
+    focus:state.focus, mode:state.settings.mode, seedCount:state.approved.length,
+    kind:state.settings.recommendationKind};
+}
+
 function invalidate(state, keepDiscoveryContext = false) {
   state.generation++;
   state.recommendations = [];
+  state.recommendationBatch = null;
   state.lastUpdated = null;
   state.lastError = null;
   if (state.discovery && !keepDiscoveryContext) state.discovery.context = null;
@@ -200,13 +209,54 @@ function addTopics(state, values, now) {
   }
   if (!additions.length) { if (error) state.lastError = error; return; }
   const initial = !state.onboardingComplete;
+  const batch = state.recommendationBatch;
   invalidate(state);
+  // An already-open Discover page can finish this trusted batch after Save.
+  state.recommendationBatch = batch;
   state.lastError = error;
+  state.interestUndo = null;
   state.approved.push(...additions);
   if (initial) { state.baseline = additions.map(topic => topic.id); state.onboardingComplete = true; }
   else if (state.settings.mode === 'global') state.settings.globalLevel = Math.min(8, state.settings.globalLevel + additions.length);
   state.focus = additions.at(-1).id;
   state.suppressed = state.suppressed.filter(id => !additions.some(topic => topic.id === id));
+}
+
+function removeInterests(state, ids) {
+  const requested = new Set(Array.isArray(ids) ? ids : []);
+  const removed = state.approved.filter(topic => requested.has(topic.id));
+  if (!removed.length) return;
+  const undo = {token:randomSalt(), topics:removed, order:state.approved.map(topic => topic.id),
+    baseline:[...state.baseline], focus:state.focus, restoreFocus:true};
+  invalidate(state);
+  const removedIds = new Set(removed.map(topic => topic.id));
+  state.approved = state.approved.filter(topic => !removedIds.has(topic.id));
+  state.baseline = state.baseline.filter(id => !removedIds.has(id));
+  state.suppressed = [...new Set([...state.suppressed, ...removedIds])];
+  if (removedIds.has(state.focus)) state.focus = state.approved.at(-1)?.id ?? null;
+  state.interestUndo = {...undo, nextFocus:state.focus};
+}
+
+function undoInterestRemoval(state, token) {
+  const undo = state.interestUndo;
+  if (!undo || typeof token !== 'string' || token !== undo.token) return;
+  // Restore only the locally recorded removal, never topics supplied by a caller.
+  if (!Array.isArray(undo.topics) || !Array.isArray(undo.order) || !Array.isArray(undo.baseline)) {state.interestUndo = null; return;}
+  const topics = undo.topics.map(value => {
+    const topic = sanitizeTopic(value);
+    return topic && Number.isFinite(value.addedAt) ? {...topic, addedAt:value.addedAt} : null;
+  });
+  if (topics.some(topic => !topic) || state.approved.length + topics.length > MAX_INTERESTS) {state.interestUndo = null; return;}
+  const ids = new Set(topics.map(topic => topic.id));
+  if (state.approved.some(topic => ids.has(topic.id))) {state.interestUndo = null; return;}
+  const order = new Map(undo.order.map((id,index) => [id,index]));
+  invalidate(state);
+  state.approved = [...state.approved, ...topics].sort((a,b) => (order.get(a.id) ?? MAX_INTERESTS) - (order.get(b.id) ?? MAX_INTERESTS));
+  const approved = new Set(state.approved.map(topic => topic.id));
+  state.baseline = undo.baseline.filter(id => approved.has(id));
+  state.suppressed = state.suppressed.filter(id => !ids.has(id));
+  if (undo.restoreFocus !== false && state.focus === undo.nextFocus && approved.has(undo.focus)) state.focus = undo.focus;
+  state.interestUndo = null;
 }
 
 function cleanEvidence(item, now) {
@@ -223,7 +273,7 @@ function updateSettings(state, patch, now) {
   if (!patch || typeof patch !== 'object') return;
   let changed = false;
   let error = null;
-  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'galaxyExplorationMode', 'galaxyLayoutOptions', 'galaxyShowDomainLabels', 'galaxyShowInterestLabels', 'recommendationOptions', 'recommendationKind', 'discoveryExploration', 'tutorialSeen']) {
+  for (const name of ['browsingEnabled', 'autoRefresh', 'mode', 'endpoint', 'accessToken', 'blockedDomains', 'language', 'recommendationView', 'galaxyExplorationMode', 'galaxyLayoutOptions', 'galaxyShowDomainLabels', 'galaxyShowInterestLabels', 'recommendationOptions', 'recommendationKind', 'discoveryExploration', 'tutorialSeen', 'soundEffectsEnabled', 'soundEffectsVolume']) {
     if (!(name in patch)) continue;
     let value = patch[name];
     if (name === 'galaxyLayoutOptions') {
@@ -236,7 +286,8 @@ function updateSettings(state, patch, now) {
       if (!validRecommendationOptions(value)) { error = 'Enter valid recommendation settings.'; continue; }
       value = normalizeRecommendationOptions({...state.settings.recommendationOptions, ...value});
     }
-    if (['browsingEnabled', 'autoRefresh', 'galaxyExplorationMode', 'galaxyShowDomainLabels', 'galaxyShowInterestLabels', 'tutorialSeen'].includes(name) && typeof value !== 'boolean') continue;
+    if (['browsingEnabled', 'autoRefresh', 'galaxyExplorationMode', 'galaxyShowDomainLabels', 'galaxyShowInterestLabels', 'tutorialSeen', 'soundEffectsEnabled'].includes(name) && typeof value !== 'boolean') continue;
+    if (name === 'soundEffectsVolume' && (typeof value !== 'number' || !Number.isFinite(value) || value < 0 || value > 1)) continue;
     if (name === 'mode' && !['path', 'global'].includes(value)) continue;
     if (name === 'language' && !['en', 'zh-CN'].includes(value)) continue;
     if (name === 'recommendationView' && !['cards', 'list', 'single'].includes(value)) continue;
@@ -258,7 +309,7 @@ function updateSettings(state, patch, now) {
       if (name === 'browsingEnabled' && value) state.settings.analysisSince = now;
       state.settings[name] = value;
       // Presentation preferences never change the profile or cancel work.
-      if (!['language', 'recommendationView', 'galaxyExplorationMode', 'galaxyLayoutOptions', 'galaxyShowDomainLabels', 'galaxyShowInterestLabels', 'tutorialSeen'].includes(name)) changed = true;
+      if (!['language', 'recommendationView', 'galaxyExplorationMode', 'galaxyLayoutOptions', 'galaxyShowDomainLabels', 'galaxyShowInterestLabels', 'tutorialSeen', 'soundEffectsEnabled', 'soundEffectsVolume'].includes(name)) changed = true;
     }
   }
   if (changed) {
@@ -274,6 +325,8 @@ export function reduceState(state, action, now = Date.now()) {
   if (action.type === 'RESET') { const reset = createState(now); reset.generation = state.generation + 1; return reset; }
   const next = structuredClone(state);
   next.discovery = normalizeDiscovery(next.discovery);
+  if (next.recommendationBatch === undefined) next.recommendationBatch = Number.isFinite(next.lastUpdated) ? snapshotRecommendationBatch(next) : null;
+  if (!next.interestUndo) next.interestUndo = null;
   if (!['broad', 'specific'].includes(next.settings.recommendationKind)) next.settings.recommendationKind = 'broad';
   if (!Number.isFinite(next.settings.discoveryExploration) || next.settings.discoveryExploration < 0 || next.settings.discoveryExploration > 1) next.settings.discoveryExploration = .3;
   next.settings.recommendationOptions = normalizeRecommendationOptions(next.settings.recommendationOptions);
@@ -282,6 +335,8 @@ export function reduceState(state, action, now = Date.now()) {
   if (!['en', 'zh-CN'].includes(next.settings.language)) next.settings.language = 'en';
   if (!['cards', 'list', 'single'].includes(next.settings.recommendationView)) next.settings.recommendationView = 'cards';
   if (typeof next.settings.galaxyExplorationMode !== 'boolean') next.settings.galaxyExplorationMode = false;
+  if (typeof next.settings.soundEffectsEnabled !== 'boolean') next.settings.soundEffectsEnabled = false;
+  if (typeof next.settings.soundEffectsVolume !== 'number' || !Number.isFinite(next.settings.soundEffectsVolume) || next.settings.soundEffectsVolume < 0 || next.settings.soundEffectsVolume > 1) next.settings.soundEffectsVolume = .2;
   // Existing installs can infer onboarding once, without retaining deleted baseline IDs.
   if (next.onboardingComplete === undefined) next.onboardingComplete = next.approved.length > 0 || next.baseline.length > 0;
   if (typeof next.settings.tutorialSeen !== 'boolean') next.settings.tutorialSeen = Boolean(next.onboardingComplete || next.approved.length);
@@ -305,18 +360,16 @@ export function reduceState(state, action, now = Date.now()) {
     }
     case 'APPROVE': addTopics(next, next.candidates.filter(topic => Array.isArray(action.ids) && action.ids.includes(topic.id)), now); break;
     case 'ADD_INTEREST': addTopics(next, [action.topic], now); break;
-    case 'REMOVE_INTEREST': {
-      if (!next.approved.some(topic => topic.id === action.id)) break;
-      invalidate(next);
-      next.approved = next.approved.filter(topic => topic.id !== action.id);
-      next.baseline = next.baseline.filter(id => id !== action.id);
-      if (!next.suppressed.includes(action.id)) next.suppressed.push(action.id);
-      if (next.focus === action.id) next.focus = next.approved.at(-1)?.id ?? null;
+    case 'REMOVE_INTEREST': removeInterests(next, [action.id]); break;
+    case 'REMOVE_INTERESTS': removeInterests(next, action.ids); break;
+    case 'UNDO_REMOVE_INTERESTS': undoInterestRemoval(next, action.token); break;
+    case 'CLEAR_INTEREST_UNDO':
+      if (next.interestUndo?.token === action.token) next.interestUndo = null;
       break;
-    }
     case 'DISMISS': {
       if (typeof action.id === 'string' && validTopicText(action.id, 120) && !next.suppressed.includes(action.id)) next.suppressed.push(action.id);
       next.recommendations = next.recommendations.filter(topic => topic.id !== action.id);
+      if (next.recommendationBatch) next.recommendationBatch.items = next.recommendationBatch.items.filter(topic => topic.id !== action.id);
       break;
     }
     case 'EXPLORE': {
@@ -368,8 +421,9 @@ export function reduceState(state, action, now = Date.now()) {
     case 'CLEAR_DISCOVERY_FEEDBACK': next.discovery = createDiscoveryState(); invalidate(next); break;
     case 'INVALIDATE': invalidate(next); break;
     case 'SET_FOCUS': {
-      if (next.focus !== action.id && next.approved.some(topic => topic.id === action.id)) {
-        invalidate(next); next.focus = action.id;
+      if (next.approved.some(topic => topic.id === action.id)) {
+        if (next.interestUndo) next.interestUndo.restoreFocus = false;
+        if (next.focus !== action.id) { invalidate(next); next.focus = action.id; }
       }
       break;
     }
@@ -398,7 +452,8 @@ export function reduceState(state, action, now = Date.now()) {
           if (area) next.discovery.exposures[area] = Math.min(1e9, (next.discovery.exposures[area] || 0) + 1);
         }
       }
-      next.lastUpdated = now; next.lastError = null; break;
+      next.lastUpdated = now; next.lastError = null;
+      next.recommendationBatch = snapshotRecommendationBatch(next); break;
     }
     case 'ERROR': next.lastError = typeof action.message === 'string' ? action.message.slice(0, 300) : 'Something went wrong. Please try again.'; break;
     case 'CLEAR_ERROR': next.lastError = null; break;

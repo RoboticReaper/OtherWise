@@ -1,5 +1,6 @@
 export const galaxyDictionaries = {
   en: {
+    viewOptions: 'Display & key', closeViewOptions: 'Done',
     fit: 'Fit stars', fullscreen: 'Fullscreen', exitFullscreen: 'Exit fullscreen', fullscreenUnavailable: 'Fullscreen is unavailable. Open the map in a tab and try again.',
     mapControls: 'Galaxy controls', layoutSettings: 'Layout settings', domainLabels: 'Subject labels', interestLabels: 'Interest labels',
     closeLayout: 'Close layout settings', layoutNeighbors: 'Neighborhood size', layoutMinDist: 'Minimum distance', layoutSpread: 'Spread', layoutRepulsion: 'Repulsion',
@@ -16,7 +17,7 @@ export const galaxyDictionaries = {
     explorationOn: 'Exploration mode: saved interests, their nearest topics, and searched topics are lit. Gray stars still open details and Focus.',
     explorationOff: 'Full catalog colors. Click any star for details or double-click to explore.',
     candidateTitle: 'Choose a star', closeCandidates: 'Close star list',
-    count: '{count} topics', selectedAnnouncement: 'Selected {topic}. Topic details are below the map.',
+    count: '{count} topics', selectedAnnouncement: 'Selected {topic}. Topic details are open.',
     selectTitle: 'Where will curiosity take you?', selectHelp: 'Choose a star or search for a topic to see its description and closest connections.',
     selectNote: 'Selecting a topic only opens its details. Save it when you want it to become an interest.',
     save: 'Save interest', saved: 'Saved interest', saving: 'Saving…', focus: 'Explore from here', currentFocus: 'Current focus',
@@ -30,6 +31,7 @@ export const galaxyDictionaries = {
     google: 'Search Google', youtube: 'Search YouTube', actionError: 'This action could not be completed. Please try again.',
   },
   'zh-CN': {
+    viewOptions: '显示与图例', closeViewOptions: '完成',
     fit: '居中显示星体', fullscreen: '全屏', exitFullscreen: '退出全屏', fullscreenUnavailable: '暂时无法全屏。请在新标签页中打开星图后重试。',
     mapControls: '星图控制', layoutSettings: '布局设置', domainLabels: '领域标签', interestLabels: '兴趣标签',
     closeLayout: '关闭布局设置', layoutNeighbors: '邻域大小', layoutMinDist: '最小距离', layoutSpread: '展开程度', layoutRepulsion: '排斥强度',
@@ -46,7 +48,7 @@ export const galaxyDictionaries = {
     explorationOn: '探索模式：已保存兴趣、它们最近的主题和搜索过的主题会点亮。灰色星体仍可查看详情和进入 Focus。',
     explorationOff: '完整目录颜色。单击任意星体查看详情，双击进入探索。',
     candidateTitle: '选择一颗星', closeCandidates: '关闭星体列表',
-    count: '{count} 个主题', selectedAnnouncement: '已选择 {topic}。主题详情位于星图下方。',
+    count: '{count} 个主题', selectedAnnouncement: '已选择 {topic}。主题详情已打开。',
     selectTitle: '好奇心会带你去哪里？', selectHelp: '选择一颗星或搜索主题，查看它的描述和最相近的主题。',
     selectNote: '选择主题只会打开详情。想把它加入兴趣时，请点击保存。',
     save: '保存兴趣', saved: '已保存的兴趣', saving: '保存中…', focus: '从这里探索', currentFocus: '当前焦点',

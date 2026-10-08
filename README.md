@@ -33,9 +33,11 @@ their ten direct nearest topics, and individually searched topics. Galaxy also h
    `Start-OtherWise-Local.command`.
 4. In Chrome's Extensions page, enable Developer mode and **Load unpacked** →
    `dist/otherwise-extension`.
-5. Open OtherWise. In Settings, save the service address and team access code
-   from `.cache/demo/connection.json`. Add an interest, or review browsing topics,
-   then choose **Find ideas**.
+5. Open OtherWise. In **Settings → Service connection**, click **Connect local service**
+   and allow access when Chrome asks. Local mode needs no access code; the saved
+   address works after server restarts. For a shared demo, instead save the address
+   and team access code from `.cache/demo/connection.json`. Add an interest, or
+   review browsing topics, then choose **Find ideas**.
 
 [Extension guide](docs/extension-guide.md) · [Architecture and privacy](docs/extension-architecture.md) · [Focus verification status](docs/focus-exploration-verification.md) · [Specific discovery verification](docs/discovery-extension-verification.md)
 

@@ -24,8 +24,13 @@ export async function openDashboard(view='map'){
     return;
   }
   if(!globalThis.chrome?.runtime?.id)throw new Error('Open OtherWise from your Chrome extensions.');
-  try{await chrome.tabs.create({url:chrome.runtime.getURL(`dashboard.html?view=${selected}`)});}
+  let tab;
+  try{tab=await chrome.tabs.create({url:chrome.runtime.getURL(`dashboard.html?view=${selected}`)});}
   catch{throw new Error('Could not open the dashboard. Try again.');}
+  if(typeof chrome.sidePanel?.close==='function' && Number.isInteger(tab?.windowId)){
+    try{await chrome.sidePanel.close({windowId:tab.windowId});}
+    catch{/* The dashboard is already open; a close failure must not trigger a second tab. */}
+  }
 }
 export async function dispatch(action){
   if(preview)return api.dispatch(action);

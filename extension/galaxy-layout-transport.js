@@ -1,5 +1,6 @@
 import {focusIdentity} from './core/focus-contract.js';
 import {normalizeGalaxyLayoutOptions} from './core/galaxy-layout-options.js';
+import {hasServiceConnection,connectionHeaders} from './core/connection.js';
 
 class LayoutError extends Error {}
 const validJobId=value=>typeof value==='string' && /^[A-Za-z0-9_-]{1,120}$/.test(value);
@@ -43,7 +44,7 @@ export function createGalaxyLayoutTransport({catalog,loadIdentity,getConnection,
     const timer=setTimeout(()=>controller.abort(new LayoutError('The Galaxy layout request took too long. Try again.')),30000);
     try{
       const connection=getConnection();
-      if(!connection?.endpoint || !connection?.accessToken || !Number.isSafeInteger(connection.epoch) || connection.epoch<0)throw new LayoutError('Add your connection and team access code in Settings.');
+      if(!hasServiceConnection(connection) || !Number.isSafeInteger(connection.epoch) || connection.epoch<0)throw new LayoutError('Add your connection and team access code in Settings.');
       const key=connectionKey(connection);
       const assertCurrent=()=>{
         if(controller.signal.aborted || revision!==startedRevision || connectionKey(getConnection())!==key)throw new LayoutError('Galaxy layout request cancelled because the connection changed.');
@@ -56,7 +57,7 @@ export function createGalaxyLayoutTransport({catalog,loadIdentity,getConnection,
         if(known && known.connection!==key)throw new LayoutError('Galaxy layout job invalidated because the connection changed.');
         await checkPermission();assertCurrent();
         const response=await fetchImpl(`${connection.endpoint}/api/galaxy-layout${jobId?`/${encodeURIComponent(jobId)}`:''}`,{
-          method,headers:{'Content-Type':'application/json',Authorization:`Bearer ${connection.accessToken}`},
+          method,headers:connectionHeaders(connection),
           ...(parameters?{body:JSON.stringify({...identity,parameters})}:{}),credentials:'omit',redirect:'error',signal:controller.signal,
         });assertCurrent();
         if(!response.ok){

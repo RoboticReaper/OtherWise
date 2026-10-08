@@ -14,6 +14,7 @@ await cp(resolve(root,'dist/otherwise-extension'),extension,{recursive:true});
 const manifest=JSON.parse(await readFile(resolve(extension,'manifest.json')));manifest.host_permissions=['http://127.0.0.1/*'];await writeFile(resolve(extension,'manifest.json'),JSON.stringify(manifest));
 const records=[],errors=[],checks=[];let context,fail=false;
 const openSection=async(page,key)=>{const node=page.locator(`[data-disclosure="${key}"]`);if(await node.getAttribute('open')===null)await node.locator(':scope > summary').click();};
+const closeSection=async(page,key)=>{const node=page.locator(`[data-disclosure="${key}"]`);if(await node.getAttribute('open')!==null)await node.locator(':scope > summary').click();};
 const setLanguage=async(page,value)=>{await page.locator('[data-focus="nav-settings"]').click();await page.locator('#settings-language').selectOption(value);await page.waitForFunction(value=>document.documentElement.lang===value,value);await page.locator('[data-view="discover"]').click();};
 async function until(check,ms=12000){const start=Date.now();while(!await check()){if(Date.now()-start>ms)throw new Error('State did not reach expected condition');await new Promise(r=>setTimeout(r,50));}}
 const fixtures=['Pollinator garden','Soil microbiology','Companion planting'].map((topic,i)=>({id:topic,topic,domain:'Biology & nature',description:'Fictional public concept used for interface testing.',nearest_interest:'Gardening',distance:.32,boundary_offset:.04,zone:'New territory',discovery:{concept_id:`Q${100+i}`,area_id:'ecology',graph_path:['Ecology',topic],source_url:`https://www.wikidata.org/wiki/Q${100+i}`,level:i+1,exploration_pick:i===0,exploration_target:1,exploration_achieved:1}}));
@@ -47,6 +48,7 @@ try{
  catch(error){console.log('Settings failed:',await page.locator('body').innerText());throw error;}
  await page.locator('[data-view="discover"]').click();await openSection(page,'discovery-adjust');await page.locator('#recommendation-kind').selectOption('specific');
  await until(async()=>await page.evaluate(async()=> (await chrome.storage.local.get('state')).state.settings.recommendationKind==='specific'));
+ await closeSection(page,'discovery-adjust');
  await page.locator('[data-action="recommend"]').click();
  try{await page.locator('.topic-detail').filter({hasText:'Pollinator garden'}).waitFor({timeout:5000});}
  catch(error){console.log(JSON.stringify({body:await page.locator('body').innerText(),records,errors},null,2));throw error;}
@@ -84,10 +86,10 @@ try{
  await page.locator('[data-action="recommendation-view"][data-value="single"]').click();await page.locator('.single-discovery').waitFor();assert.equal(await page.locator('.topic-detail .graph-feedback').count(),0);await page.screenshot({path:resolve(output,'specific-list-320.png'),fullPage:true});
  checks.push('one-at-a-time view also omits all card feedback content');
  await page.reload();await page.locator('[data-action="undo-feedback"]').waitFor();assert.equal((await state()).discovery.feedback.Q101.curious,true);
- await openSection(page,'discovery-adjust');await page.locator('#recommendation-kind').selectOption('broad');await until(async()=>(await state()).settings.recommendationKind==='broad');assert.ok((await state()).discovery.feedback.Q101);
+ await openSection(page,'discovery-adjust');await page.locator('#recommendation-kind').selectOption('broad');await until(async()=>(await state()).settings.recommendationKind==='broad');await closeSection(page,'discovery-adjust');assert.ok((await state()).discovery.feedback.Q101);
  await page.locator('[data-view="map"]').click();await page.locator('.galaxy-canvas').waitFor();await page.locator('[data-map-view="focus"]').click();await page.locator('.focus-root').waitFor();
  checks.push('saved feedback survives reload and broad-mode switching; Galaxy and Focus remain available');
- await page.locator('[data-view="discover"]').click();await openSection(page,'discovery-adjust');await page.locator('#recommendation-kind').selectOption('specific');await until(async()=>(await state()).settings.recommendationKind==='specific');await page.locator('#discovery-feedback-panel').evaluate(n=>n.open=true);
+ await page.locator('[data-view="discover"]').click();await openSection(page,'discovery-adjust');await page.locator('#recommendation-kind').selectOption('specific');await until(async()=>(await state()).settings.recommendationKind==='specific');await closeSection(page,'discovery-adjust');await page.locator('#discovery-feedback-panel').evaluate(n=>n.open=true);
  await page.locator('[data-action="clear-feedback"]').click();await page.locator('dialog [data-choice="confirm"]').click();
  await until(async()=>!Object.keys((await state()).discovery.feedback).length && !Object.keys((await state()).discovery.exposures).length);assert.deepEqual((await state()).discovery.feedback,{});assert.deepEqual((await state()).discovery.exposures,{});assert.deepEqual((await state()).approved,before.approved);
  await page.locator('[data-action="recommend"]').click();await until(async()=>(await state()).recommendations.some(topic=>topic.topic==='Companion planting'));

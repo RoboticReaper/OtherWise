@@ -165,17 +165,24 @@ try{
   checks.push('Loading/error/personal updates keep the local scene; Escape closes details before returning');
   const saved=await page.evaluate(()=>scene.getViewState());
   await page.evaluate(v=>mount('dashboard',v),saved);assert.equal(await page.locator('.focus-root').getAttribute('data-intro'),'focus');
+  await page.evaluate(()=>scene.replayEntry());
+  await page.waitForFunction(()=>Number(document.querySelector('.focus-ripple').getAttribute('opacity'))>0,null,{timeout:2000});
+  assert.equal(await page.locator('.focus-root').getAttribute('data-intro'),'wake');
+  assert.deepEqual(await page.evaluate(()=>scene.getViewState()),saved,'Replaying entry preserves camera, selection and page state');
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.waitForFunction(()=>document.querySelector('.focus-root').dataset.motion==='reduced');
   assert.equal(await page.evaluate(()=>pendingFrames.size),0);
   assert.equal(await page.locator('.focus-ripple').getAttribute('opacity'),'0');
+  await page.evaluate(()=>scene.replayEntry());
+  assert.equal(await page.locator('.focus-ripple').getAttribute('opacity'),'0','Explicit entry respects reduced motion');
+  assert.equal(await page.evaluate(()=>pendingFrames.size),0);
   assert.equal(await page.locator('.focus-node').count(),11);
   const frozen=await page.locator('.focus-node[data-focus-id="Center"] .focus-orb-host').innerHTML();await page.waitForTimeout(160);assert.equal(await page.locator('.focus-node[data-focus-id="Center"] .focus-orb-host').innerHTML(),frozen);
   await page.emulateMedia({reducedMotion:'no-preference'});await page.waitForTimeout(100);assert.equal(await page.evaluate(()=>pendingFrames.size),1);
   await page.evaluate(()=>scene.setActive(false));assert.equal(await page.evaluate(()=>pendingFrames.size),0);
   const paused=await page.evaluate(()=>frameCalls);await page.waitForTimeout(100);assert.equal(await page.evaluate(()=>frameCalls),paused);
   await page.evaluate(()=>scene.setActive(true));await page.waitForTimeout(60);assert.equal(await page.evaluate(()=>pendingFrames.size),1);
-  checks.push('Repeat entry has a short transition; live reduced motion and inactive state pause the sole loop');
+  checks.push('Explicit re-entry replays the expanding wake without resetting view state; reduced motion and inactive state pause the sole loop');
   for(const width of [1440,390,320]){
     await page.setViewportSize({width,height:1050});await page.waitForTimeout(100);
     await page.evaluate(()=>scene.update({snapshot:ready,language:'zh-CN'}));

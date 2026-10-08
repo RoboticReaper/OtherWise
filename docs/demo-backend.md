@@ -1,8 +1,13 @@
 # Run the OtherWise recommendation demo
 
-The extension connects to the real MPNet recommendation API running on this Mac. The shared demo uses a temporary Cloudflare HTTPS URL and a bearer token. Keep the Mac awake while teammates use it.
+The extension connects to the real MPNet recommendation API running on this Mac.
+For personal testing, use **Start-OtherWise-Local.command** and the extension's
+**Settings → Service connection → Connect local service** shortcut once. No access
+code is needed, and restarting the server does not require changing the connection.
+The shared demo uses a temporary Cloudflare HTTPS URL and a bearer token. Keep the
+Mac awake while teammates use it.
 
-## Start and connect
+## Shared demo: start and connect
 
 1. Double-click **Start-OtherWise-Demo.command**. It starts the backend, waits for the real model to become ready, and opens a temporary HTTPS tunnel. The first start downloads Cloudflare's official Apple Silicon executable into `.cache/bin`, verifies its SHA256 against the official release metadata, and installs nothing globally.
 2. Open `.cache/demo/connection.json` in a text editor. Hidden folders can be reached in Finder with **Go → Go to Folder**. Copy `endpoint` and `token` into the extension's connection settings. The launcher prints the endpoint and private file location; it never prints the token.
@@ -16,7 +21,11 @@ Readiness also checks that a deliberately wrong token is denied and the generate
 ## Local-only testing
 
 Double-click **Start-OtherWise-Local.command** to start the local backend without
-a public tunnel. The same stop command and private connection file apply.
+a public tunnel. In the extension, choose **Settings → Service connection →
+Connect local service** and allow access if Chrome asks. This saves
+`http://127.0.0.1:8000` and clears any previous demo code. It saves only the
+connection; other unsaved settings drafts stay available. The same stop command
+applies. After stopping and starting again, the extension needs no changes.
 
 From the repository directory:
 
@@ -25,7 +34,24 @@ From the repository directory:
 .venv/bin/python scripts/stop_demo.py
 ```
 
-This uses `http://127.0.0.1:8000`, generates the same private token file, and starts no public tunnel or tunnel download. For a busy port, add `--port 8765`. Startup waits up to 120 seconds by default; use `--startup-timeout 300` if the first model download needs longer. The launcher binds only to the local loopback address, uses one backend worker, and disables HTTP access logs.
+This uses `http://127.0.0.1:8000` and starts no public tunnel or tunnel download.
+The launcher explicitly enables local mode (`OTHERWISE_LOCAL_MODE=1`). Missing
+access codes are accepted only for direct loopback requests with a loopback Host
+and either a Chrome extension Origin or no Origin. Ordinary web Origins and
+forwarding headers do not qualify, even when a tunnel reaches the loopback socket.
+Invalid supplied codes are still rejected. Request size and compute/rate limits
+apply in both modes. The private runtime file still contains an internal token
+used to verify ownership/readiness; it need not be copied into the extension.
+Shared launches explicitly disable local mode, regardless of the inherited
+environment. Starting the launcher after this update replaces a recorded older
+server that lacks the new authentication mode metadata.
+
+For a busy port, add `--port 8765`, then save `http://127.0.0.1:8765` in Settings
+with an empty access code once. The shortcut always selects port 8000. Startup
+waits up to 120 seconds by default; use `--startup-timeout 300` if the first model
+download needs longer. The launcher binds only to the local loopback address,
+uses one backend worker, and disables HTTP access logs. A manually launched backend
+defaults to requiring its configured token; use the local launcher for local mode.
 
 ## Python setup
 
@@ -57,4 +83,7 @@ The temporary hostname changes after restarting, ends when the tunnel stops, and
 
 The layout dependencies above enable Galaxy’s **Layout settings → Generate preview**. The backend recomputes the same public MPNet catalog, using bounded exact neighborhoods and UMAP. Requests carry only the public catalog/vector identity and four layout controls; saved interests and browsing history are not sent. The authenticated POST starts a job and authenticated GET polls its status. Only one new layout is computed at a time; repeated parameters reuse a bounded public geometry cache. Health and recommendations remain available while a layout runs. The first computation can take longer while original-vector neighbors are prepared.
 
-The packaged B layout works without a connection or these numerical dependencies. A failed preview retains the previous map. Restart the backend after updating its code; then copy the new local connection token into Settings if the launcher generated a new one.
+The packaged B layout works without a connection or these numerical dependencies.
+A failed preview retains the previous map. Restart the backend after updating its
+code. Local mode keeps the saved connection usable without copying a token;
+shared demos still require the current address and access code.

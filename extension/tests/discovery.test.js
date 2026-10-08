@@ -52,6 +52,13 @@ test('specific requests use authenticated graph route and feedback save reranks 
  assert.equal(second.seed,seed);assert.deepEqual(second.exposures,{});assert.equal(s.discovery.exposures.ecology,1);
  assert.equal(r.requests[1].options.headers.Authorization,'Bearer test-token');
 });
+test('code-free local specific discovery reranks saved feedback',async()=>{
+ const r=rig();await r.controller.dispatch({type:'SET_SETTINGS',patch:{accessToken:''}});
+ await r.controller.recommend();assert.equal(r.requests[0].options.headers.Authorization,undefined);
+ await r.controller.dispatch({type:'SET_DISCOVERY_FEEDBACK',conceptId:'Q12',curious:true,known:false,difficulty:'none'});
+ assert.equal(r.requests.length,2);assert.equal(r.requests[1].options.headers.Authorization,undefined);
+ assert.equal(JSON.parse(r.requests[1].options.body).feedback[0].concept_id,'Q12');
+});
 test('clearing feedback while permission is pending prevents transmission of the old profile',async()=>{
  let unblock,entered;const wait=new Promise(r=>unblock=r);const checking=new Promise(r=>entered=r);let calls=0;
  const r=rig({permission:async()=>{if(++calls===1){entered();await wait;}return true;}});

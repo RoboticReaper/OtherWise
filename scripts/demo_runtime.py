@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import fcntl
+import errno
 import hashlib
 import json
 import os
@@ -165,6 +166,13 @@ def stop_record(record, root=ROOT):
 def require_free_port(port):
     with socket.socket() as listener:
         try:
+            # macOS permits a reuse-enabled loopback bind over a wildcard
+            # listener. Refuse live listeners before allowing TIME_WAIT reuse.
+            with socket.socket() as probe:
+                probe.settimeout(1)
+                if probe.connect_ex(("127.0.0.1", port)) != errno.ECONNREFUSED:
+                    raise OSError
+            listener.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             listener.bind(("127.0.0.1", port))
         except OSError:
             raise DemoError("The requested port is already in use. Stop its owner or choose another --port.") from None

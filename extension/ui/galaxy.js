@@ -28,6 +28,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
   let fitted = viewState?.fitted === true;
   const customTopics = () => array(state.approved).filter(topic => !data.byId.has(topic.id));
   let view = restoreViewState(viewState, data, customTopics().map(topic => topic.id));
+  let searchResultsOpen = Boolean(view.query.trim());
   let destroyed = false, frame = 0, viewport = {width: 0, height: 0}, hits = [], hovered = null;
   let saved = new Set(), baseline = new Set(), recommended = new Set(), explored = new Set();
   let actionError = false, active = true, lit = new Set(), waves = [], candidateIds = [], releaseIds = [];
@@ -38,62 +39,69 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
   const t = (key, values) => galaxyText(language, key, values);
   const root = element('div', undefined, 'galaxy-root');
   root.dataset.topicCount = String(data.topics.length);
-  root.innerHTML = `<div class="galaxy-toolbar">
+  root.innerHTML = `<div class="galaxy-topbar"><div class="galaxy-toolbar">
     <label class="galaxy-search-field"><span data-galaxy-copy="search"></span><input type="search" class="galaxy-search" maxlength="200" autocomplete="off" spellcheck="false" data-focus="galaxy-search"></label>
     <label class="galaxy-domain-field"><span data-galaxy-copy="domain"></span><select class="galaxy-domain" data-focus="galaxy-domain"></select></label>
   </div>
   <div class="galaxy-view-toolbar" role="toolbar" aria-label="Galaxy controls">
     <button type="button" data-galaxy-action="fit" data-galaxy-copy="fit"></button>
     <button type="button" data-galaxy-action="fullscreen"></button>
-    <button type="button" data-galaxy-action="layout" data-galaxy-copy="layoutSettings" aria-expanded="false"></button>
-    <label><input type="checkbox" data-galaxy-setting="galaxyShowDomainLabels"><span data-galaxy-copy="domainLabels"></span></label>
-    <label><input type="checkbox" data-galaxy-setting="galaxyShowInterestLabels"><span data-galaxy-copy="interestLabels"></span></label>
-  </div>
-  <div class="galaxy-results" hidden><div class="galaxy-results-heading"><span class="galaxy-result-count" role="status"></span><button type="button" data-galaxy-action="clear-search" data-galaxy-copy="clearSearch"></button></div><div class="galaxy-result-list"></div></div>
+    <button type="button" data-galaxy-action="layout" data-galaxy-copy="layoutSettings" aria-haspopup="dialog" aria-expanded="false"></button>
+    <button type="button" data-galaxy-action="view-options" data-galaxy-copy="viewOptions" aria-haspopup="dialog" aria-expanded="false"></button>
+  </div></div>
   <div class="galaxy-body"><div class="galaxy-visual">
     <div class="galaxy-surface"><canvas class="galaxy-canvas" tabindex="0" role="img" data-focus="galaxy-canvas"></canvas>
       <div class="galaxy-map-caption" aria-hidden="true"><span class="galaxy-count"></span><span class="galaxy-filter-caption"></span></div>
       <div class="galaxy-controls"><button type="button" data-galaxy-action="zoom-out">−</button><output class="galaxy-zoom"></output><button type="button" data-galaxy-action="zoom-in">+</button><button type="button" data-galaxy-action="reset" data-galaxy-copy="reset"></button></div>
       <div class="galaxy-tooltip" hidden></div>
+      <div class="galaxy-results" hidden><div class="galaxy-results-heading"><span class="galaxy-result-count" role="status"></span><button type="button" data-galaxy-action="clear-search" data-galaxy-copy="clearSearch"></button></div><div class="galaxy-result-list"></div></div>
       <section class="galaxy-candidates" hidden><h3></h3><div class="galaxy-candidate-list"></div><button type="button" data-galaxy-action="close-candidates" data-galaxy-copy="closeCandidates"></button></section>
     </div>
-    <p class="galaxy-exploration-status" role="status"></p>
-    <p class="galaxy-gesture-help" data-galaxy-copy="gestures"></p>
-    <div class="galaxy-legend"></div>
-    <details class="galaxy-domain-key"><summary data-galaxy-copy="subjectColors"></summary><div class="galaxy-domain-colors"></div></details>
-    <p class="galaxy-geometry-note" data-galaxy-copy="geometryNote"></p>
-    <section class="galaxy-custom" hidden></section>
   </div><aside class="galaxy-detail" aria-label="Topic details"></aside></div>
+  <dialog class="galaxy-options-dialog"><form method="dialog" class="galaxy-options-heading"><h2 data-galaxy-copy="viewOptions"></h2><button type="submit" data-galaxy-copy="closeViewOptions"></button></form>
+    <div class="galaxy-label-toggles"><label><input type="checkbox" data-galaxy-setting="galaxyShowDomainLabels"><span data-galaxy-copy="domainLabels"></span></label><label><input type="checkbox" data-galaxy-setting="galaxyShowInterestLabels"><span data-galaxy-copy="interestLabels"></span></label></div>
+    <div class="galaxy-legend"></div><details class="galaxy-domain-key"><summary data-galaxy-copy="subjectColors"></summary><div class="galaxy-domain-colors"></div></details>
+    <p class="galaxy-geometry-note" data-galaxy-copy="geometryNote"></p><p class="galaxy-exploration-status" role="status"></p><p class="galaxy-gesture-help" data-galaxy-copy="gestures"></p><section class="galaxy-custom" hidden></section>
+  </dialog><dialog class="galaxy-layout-dialog"></dialog>
   <div class="galaxy-announcement galaxy-sr-only" role="status" aria-live="polite"></div>`;
   container.replaceChildren(root);
   const $ = selector => root.querySelector(selector);
   const canvas = $('.galaxy-canvas'), search = $('.galaxy-search'), domainSelect = $('.galaxy-domain');
+  let focusDetailOnOptionsClose = false;
+  const optionsDialog = $('.galaxy-options-dialog'), layoutDialog = $('.galaxy-layout-dialog');
   const context = canvas.getContext('2d');
   if (!context) { root.remove(); throw new Error('The Galaxy canvas is unavailable.'); }
   const on = (target, event, handler, options) => {
     target.addEventListener(event, handler, options);
     cleanups.push(() => target.removeEventListener(event, handler, options));
   };
-  const fullscreen = createMapFullscreen({surface: root, button: $('[data-galaxy-action="fullscreen"]'), text: t, onResize: resize});
+  const fullscreen = createMapFullscreen({surface: root, button: $('[data-galaxy-action="fullscreen"]'), text: t, onResize: resize, hasOpenDialog: () => optionsDialog.open || layoutDialog.open});
   const layoutSession = createGalaxyLayoutSession({request: requestGalaxyLayout, poll: pollGalaxyLayout,
     onReady: (result, parameters) => applyGeometry(mergeGalaxyLayout(layout, result, parameters)),
     onChange: snapshot => { root.dataset.layoutStatus = snapshot.status; layoutEditor?.update(snapshot); },
   });
-  let layoutEditor = createGalaxyLayoutEditor({host: root, text: t, getOptions: () => state.settings?.galaxyLayoutOptions,
+  let layoutEditor = createGalaxyLayoutEditor({host: layoutDialog, text: t, getOptions: () => state.settings?.galaxyLayoutOptions,
     available: typeof requestGalaxyLayout === 'function' && typeof pollGalaxyLayout === 'function',
     onGenerate: parameters => layoutSession.generate(parameters),
-    onClose: () => {$('[data-galaxy-action="layout"]').setAttribute('aria-expanded','false');$('[data-galaxy-action="layout"]').focus({preventScroll:true});},
+    onClose: () => layoutDialog.close(),
     onReset: () => {layoutSession.invalidate(); applyGeometry(layout);},
     onSave: async parameters => {if (typeof onGalaxySettings !== 'function') throw new Error(t('layoutOffline')); await onGalaxySettings({galaxyLayoutOptions: parameters});},
   });
-  root.insertBefore(layoutEditor.element, $('.galaxy-results'));
   root.dataset.layoutStatus = 'idle'; root.dataset.layoutCacheKey = data.cacheKey;
   function applyGeometry(next) {
     const prepared = prepareGalaxy(catalog, next); cancelInteraction(); data = prepared; fitted = true;
     view.camera = fitGalaxyCamera(data.bounds, viewport); root.dataset.layoutCacheKey = data.cacheKey;
     refreshPersonalState(); setCopy(); resize();
   }
-  function openLayoutEditor() { if (destroyed || !active) return; layoutEditor.open(); $('[data-galaxy-action="layout"]').setAttribute('aria-expanded','true'); }
+  function openLayoutEditor() { if (destroyed || !active || layoutDialog.open) return; layoutDialog.showModal(); layoutEditor.open(); $('[data-galaxy-action="layout"]').setAttribute('aria-expanded','true'); }
+  on(layoutDialog, 'close', () => {layoutEditor.element.hidden=true;const trigger=$('[data-galaxy-action="layout"]');trigger.setAttribute('aria-expanded','false');if(active && trigger.isConnected)trigger.focus({preventScroll:true});});
+  on(optionsDialog, 'close', () => {
+    const trigger=$('[data-galaxy-action="view-options"]');
+    trigger.setAttribute('aria-expanded','false');
+    const focusTarget=focusDetailOnOptionsClose ? $('.galaxy-detail h2') : trigger;
+    focusDetailOnOptionsClose=false;
+    if(active && focusTarget?.isConnected)focusTarget.focus({preventScroll:true});
+  });
   const point = topic => worldToScreen(topic, view.camera, viewport, data.bounds);
   const visible = position => position.x >= -12 && position.x <= viewport.width + 12 && position.y >= -12 && position.y <= viewport.height + 12;
   const topicFor = id => data.byId.get(id) || customTopics().find(topic => topic.id === id);
@@ -114,6 +122,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
 
   function setCopy() {
     fullscreen.update(); layoutEditor.copy();
+    optionsDialog.setAttribute('aria-label', t('viewOptions')); layoutDialog.setAttribute('aria-label',t('layoutSettings'));
     root.querySelectorAll('[data-galaxy-setting]').forEach(node => {node.checked = state.settings?.[node.dataset.galaxySetting] !== false;});
     $('.galaxy-view-toolbar').setAttribute('aria-label',t('mapControls'));
     root.lang = language === 'zh-CN' ? 'zh-CN' : 'en';
@@ -149,7 +158,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
 
   function renderResults() {
     const results = $('.galaxy-results'), list = $('.galaxy-result-list');
-    results.hidden = !view.query.trim(); list.replaceChildren();
+    results.hidden = !searchResultsOpen || !view.query.trim(); list.replaceChildren();
     if (results.hidden) return;
     const matches = searchTopics(data, view.query, view.domain);
     $('.galaxy-result-count').textContent = t('resultCount', {count: matches.length});
@@ -222,6 +231,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
 
   function select(id, moveCamera = true, {preserveReleaseIdentity = false} = {}) {
     const topic = topicFor(id); if (!topic) return;
+    searchResultsOpen = false;
     activation.cancel(); if (!preserveReleaseIdentity) releaseIds = []; closeCandidates(); view.selected = id; actionError = false;
     if (data.byId.has(id)) {
       if (view.domain && topic.domain !== view.domain) { view.domain = null; domainSelect.value = ''; }
@@ -325,7 +335,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
     const font = kind => `${kind === 'selected' ? '500' : '400'} ${kind === 'domain' ? 10 : 11}px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`;
     const measure = (text, kind) => {c.font = font(kind); return c.measureText(text).width;};
     const canvasRect = canvas.getBoundingClientRect();
-    const exclusions = ['.galaxy-map-caption','.galaxy-controls','.galaxy-candidates'].map(selector => $(selector)).filter(node => !node.hidden).map(node => {const r=node.getBoundingClientRect();return {x:r.left-canvasRect.left-5,y:r.top-canvasRect.top-5,width:r.width+10,height:r.height+10};});
+    const exclusions = ['.galaxy-map-caption','.galaxy-controls','.galaxy-candidates','.galaxy-results'].map(selector => $(selector)).filter(node => !node.hidden).map(node => {const r=node.getBoundingClientRect();return {x:r.left-canvasRect.left-5,y:r.top-canvasRect.top-5,width:r.width+10,height:r.height+10};});
     const candidates = galaxyLabelCandidates(data, view, state, saved, recommended, hovered).map(label => ({...label,...point(label)}));
     const labels = placeGalaxyLabels(candidates,viewport,measure,exclusions,view.camera.zoom);
     for (const label of labels) {
@@ -397,11 +407,16 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
     const target = event.target.closest('button[data-galaxy-action]'); if (!target || !root.contains(target)) return;
     const action = target.dataset.galaxyAction, id = target.dataset.galaxyTopic;
     activation.cancel(); releaseIds = [];
-    if (action === 'select') { select(id); $('.galaxy-detail h2')?.focus({preventScroll: true}); }
+    if (action === 'select') {
+      select(id);
+      if (optionsDialog.open) { focusDetailOnOptionsClose=true; optionsDialog.close(); }
+      else $('.galaxy-detail h2')?.focus({preventScroll: true});
+    }
     else if (action === 'close-candidates') { closeCandidates(); canvas.focus(); }
     else if (action === 'fit') fitView();
     else if (action === 'fullscreen') {cancelInteraction(); void fullscreen.toggle();}
     else if (action === 'layout') openLayoutEditor();
+    else if (action === 'view-options') { optionsDialog.showModal(); target.setAttribute('aria-expanded','true'); }
     else if (action === 'reset') reset();
     else if (action === 'zoom-in') zoom(1.3);
     else if (action === 'zoom-out') zoom(1 / 1.3);
@@ -422,10 +437,11 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
     catch {state = {...state,settings:{...state.settings,[key]:previous}};event.target.checked=previous;$('.galaxy-announcement').textContent=t('actionError');scheduleDraw();}
   });
   on(root, 'click', event => {if (event.target.closest('[data-layout-action="close"]')) $('[data-galaxy-action="layout"]').setAttribute('aria-expanded','false');});
-  on(search, 'input', () => { view.query = search.value; renderResults(); });
+  on(search, 'input', () => { searchResultsOpen = true; view.query = search.value; renderResults(); });
+  on(search, 'focus', () => { if (view.query.trim()) { searchResultsOpen = true; renderResults(); } });
   on(search, 'keydown', event => {
     if (event.key === 'Escape') { view.query = ''; search.value = ''; renderResults(); }
-    if (event.key === 'ArrowDown') { const first = $('.galaxy-result'); if (first) { event.preventDefault(); first.focus(); } }
+    if (event.key === 'ArrowDown') { searchResultsOpen = true; renderResults(); const first = $('.galaxy-result'); if (first) { event.preventDefault(); first.focus(); } }
     if (event.key === 'Enter') { const first = searchTopics(data, view.query, view.domain, 1)[0]; if (first) { event.preventDefault(); select(first.id); } }
   });
   on(domainSelect, 'change', () => {
@@ -524,7 +540,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
     },
     setActive(value) {
       if (destroyed) return;
-      const nextActive = Boolean(value); if (active && !nextActive) layoutSession.invalidate(); active = nextActive; fullscreen.setActive(active);
+      const nextActive = Boolean(value); if (active && !nextActive) layoutSession.invalidate(); active = nextActive; if (!active) { if (optionsDialog.open) optionsDialog.close(); if (layoutDialog.open) layoutDialog.close(); } fullscreen.setActive(active);
       if (!active) { cancelInteraction(); stopAnimation(); } else resize();
     },
     openLayoutEditor,

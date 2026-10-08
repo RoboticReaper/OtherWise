@@ -19,6 +19,7 @@ graph. Specific requests rebuild an ephemeral profile from explicit client ratin
 |---|---|
 | `extension/background.js` | Chrome events, optional permissions, trusted messages, local storage |
 | `extension/controller.js` | Serialized state changes, async cancellation, import/analysis, API/search |
+| `extension/core/connection.js` | Shared endpoint validation, exact HTTP loopback detection, optional bearer headers |
 | `extension/core/index.js` | Pure state transitions, topic extraction, hashing, approved-only payload |
 | `extension/bridge.js` | UI/runtime messages and user-triggered permission requests |
 | `extension/ui/` | Separate Interests and Discover pages, map, Settings and first-run guide |
@@ -78,6 +79,23 @@ repopulating local state. Reset also rotates the local hashing salt.
 Storage is `chrome.storage.local`, restricted to trusted extension contexts.
 Messages accept only this extension's own pages. There are no content scripts.
 Production requests omit credentials and reject redirects.
+
+**Connect local service** requests optional access to `http://127.0.0.1:8000`,
+then saves only that endpoint and an empty access token. Other settings drafts
+are preserved. Discover (including automatic refresh and feedback reranking),
+Focus and Galaxy layout start/polling share the same connection rules: exact
+HTTP loopback endpoints may omit a token; shared endpoints require one. An
+existing supplied token is still sent, supporting hosts of authenticated shared
+servers using a local URL.
+
+The backend remains token-required by default. The local launcher explicitly
+sets `OTHERWISE_LOCAL_MODE=1`; shared launches explicitly set it to `0`. Local
+mode permits code-free requests only from a loopback client to a loopback Host,
+with a Chrome extension Origin or no Origin, and without forwarding headers.
+An invalid supplied token is rejected. These checks also cover Galaxy status
+polls; POST size/rate/compute limits are retained. The launcher keeps a private
+internal token to prove process readiness and records the authentication mode
+so older running servers are restarted when upgraded.
 
 Dashboard and side panel subscribe to the same local state changes. The packaged
 Galaxy asset is public and contains coordinates and high-dimensional neighbor IDs;
@@ -245,3 +263,13 @@ and retry guidance. The renderer neither fetches nor persists personal state.
 The shared-token, one-worker server is suitable for a small hackathon demo.
 Deploying a persistent multi-user service would require a different operational
 design for authentication, availability and abuse limits.
+
+
+Discover retains one trusted `recommendationBatch` (token, items, update time and
+original seed context) when adding interests. The ordinary recommendation list
+still invalidates and the request generation still advances. An open UI session
+may display only a retained token it was already showing; leaving Discover or
+reloading loses that session permission. The controller resolves searches against
+the retained trusted records, including noncatalog concepts after a worker restart.
+A new response replaces the token, and hard invalidation clears the batch. Batch
+data is local and does not enter recommendation payloads.

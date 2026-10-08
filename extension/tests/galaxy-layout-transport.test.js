@@ -12,6 +12,13 @@ function rig({permission=async()=>true,fetchImpl,loadIdentity=async()=>identity}
  fetchImpl:fetchImpl || (async(url,options)=>{requests.push({url,options});return new Response(JSON.stringify(options.method==='POST'?{job_id:'job-1',status:'queued',stage:'queued'}:{job_id:'job-1',status:'ready',stage:'ready',result:result()}));})});
  return {transport,requests,change:patch=>{connection={...connection,...patch};}};
 }
+test('local Galaxy layout start and polling work without a code; remote still needs one',async()=>{
+ const r=rig();r.change({endpoint:'http://localhost:8000',accessToken:''});
+ const job=await r.transport.start(parameters);assert.equal((await r.transport.status(job.job_id)).status,'ready');
+ for(const {options} of r.requests)assert.equal(options.headers.Authorization,undefined);
+ r.change({endpoint:'https://service.example'});await assert.rejects(r.transport.start(parameters),/access code/);
+ assert.equal(r.requests.length,2);
+});
 test('Galaxy start uploads only public identity and four controls; poll uses bounded authenticated GET',async()=>{
  const r=rig();const job=await r.transport.start(parameters);assert.equal(job.status,'queued');
  assert.deepEqual(JSON.parse(r.requests[0].options.body),{...identity,parameters});

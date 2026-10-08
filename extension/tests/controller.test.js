@@ -92,6 +92,36 @@ test('remote endpoints must use HTTPS and cannot hide credentials or paths',()=>
 
 function deferred(){let resolve;const promise=new Promise(r=>{resolve=r;});return {promise,resolve};}
 
+test('local recommendations need no code and survive a controller restart',async()=>{
+  const r=rig();await r.controller.dispatch({type:'ADD_INTEREST',topic:catalog[0]});
+  await r.controller.recommend();
+  assert.equal(r.requests[0].url,'http://127.0.0.1:8000/api/recommend');
+  assert.equal(r.requests[0].options.headers.Authorization,undefined);
+  const reloaded=rig({initialState:r.saved()});await reloaded.controller.recommend();
+  assert.equal(reloaded.requests.length,1);assert.equal(reloaded.requests[0].options.headers.Authorization,undefined);
+});
+
+test('code-free local requests still require endpoint permission',async()=>{
+  const r=rig({endpointPermission:async()=>false});await r.controller.dispatch({type:'ADD_INTEREST',topic:catalog[0]});
+  const state=await r.controller.recommend();assert.match(state.lastError,/allow this service/);assert.equal(r.requests.length,0);
+});
+
+test('only exact HTTP loopback addresses allow a missing code',async()=>{
+  for(const endpoint of ['http://localhost:8765','http://127.0.0.1:8000','https://service.example','https://localhost:8000','https://localhost.evil.example']){
+    const r=rig();await r.controller.dispatch({type:'ADD_INTEREST',topic:catalog[0]});
+    await r.controller.dispatch({type:'SET_SETTINGS',patch:{endpoint}});
+    if(endpoint.startsWith('http:')){await r.controller.recommend();assert.equal(r.requests.length,1);}
+    else{await assert.rejects(r.controller.recommend(),/access code/);assert.equal(r.requests.length,0);}
+  }
+});
+
+test('automatic refresh works on a code-free local connection',async()=>{
+  const sent=deferred();const r=rig({fetchImpl:async()=>{sent.resolve();return new Response(JSON.stringify({recommendations:[]}));}});
+  await r.controller.dispatch({type:'SET_SETTINGS',patch:{autoRefresh:true}});
+  await r.controller.dispatch({type:'ADD_INTEREST',topic:catalog[0]});
+  await Promise.race([sent.promise,new Promise((_,reject)=>setTimeout(()=>reject(new Error('Local auto-refresh did not send')),100))]);
+});
+
 test('recommendation tuning persists and cancels an old response; dismiss does not send a replacement request',async()=>{
   const sent=deferred(),response=deferred();let signal;
   const r=rig({fetchImpl:async(_url,options)=>{signal=options.signal;sent.resolve();await response.promise;return new Response(JSON.stringify({recommendations:[catalog[1]]}));}});
@@ -434,4 +464,25 @@ test('Galaxy layout controller accepts presentation settings and invalidates pen
   const next=await r.controller.dispatch({type:'SET_SETTINGS',patch:{galaxyLayoutOptions:{min_dist:.3},galaxyShowInterestLabels:false}});
   assert.equal(next.generation,before.generation);
   await r.controller.dispatch({type:'RESET'});await rejected;release();
+});
+
+
+test('bulk interest removal and Undo commit atomically through the public controller',async()=>{
+  let stored=createState(now); let writes=0; let fail=false;
+  const controller=createController({catalog,clock:()=>now,readState:async()=>stored,
+    writeState:async value=>{if(fail)throw new Error('Storage unavailable');stored=structuredClone(value);writes++;},
+    hasHistoryPermission:async()=>true,hasEndpointPermission:async()=>true,historySearch:async()=>[],openTab:async()=>{},
+  });
+  await controller.dispatch({type:'ADD_INTEREST',topic:'Gardening'});
+  await controller.dispatch({type:'ADD_INTEREST',topic:'Botany'});
+  const before=await controller.getState(); const count=writes;
+  const removed=await controller.dispatch({type:'REMOVE_INTERESTS',ids:['Gardening','Botany']});
+  assert.equal(writes,count+1); assert.deepEqual(removed.approved,[]);
+  fail=true;
+  await assert.rejects(()=>controller.dispatch({type:'UNDO_REMOVE_INTERESTS',token:removed.interestUndo.token}),/Storage/);
+  assert.deepEqual((await controller.getState()).approved,[]);
+  fail=false;
+  const restored=await controller.dispatch({type:'UNDO_REMOVE_INTERESTS',token:removed.interestUndo.token});
+  assert.deepEqual(restored.approved,before.approved);
+  await controller.dispatch({type:'CLEAR_INTEREST_UNDO',token:removed.interestUndo.token});
 });

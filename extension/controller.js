@@ -2,20 +2,14 @@ import {createGalaxyLayoutTransport} from './galaxy-layout-transport.js';
 import {createState,reduceState,prepareObservation,hashUrl,buildRequest,isAllowedUrl} from './core/index.js';
 import {createFocusTransport} from './focus-transport.js';
 import {cleanDiscoveryMetadata} from './core/discovery.js';
+import {normalizeEndpoint,hasServiceConnection,connectionHeaders} from './core/connection.js';
+export {normalizeEndpoint} from './core/connection.js';
 
 const FEEDBACK_ACTIONS=new Set(['SET_DISCOVERY_FEEDBACK','CLEAR_CONCEPT_FEEDBACK','UNDO_DISCOVERY_FEEDBACK']);
-const PUBLIC_ACTIONS=new Set(['APPROVE','ADD_INTEREST','REMOVE_INTEREST','DISMISS','SET_SETTINGS','SET_FOCUS','CLEAR_DERIVED','RESET','CLEAR_ERROR',...FEEDBACK_ACTIONS,'CLEAR_DISCOVERY_FEEDBACK']);
-const SETTING_KEYS=new Set(['browsingEnabled','autoRefresh','mode','endpoint','accessToken','blockedDomains','language','recommendationView','galaxyExplorationMode','galaxyLayoutOptions','galaxyShowDomainLabels','galaxyShowInterestLabels','recommendationOptions','recommendationKind','discoveryExploration','tutorialSeen']);
+const PUBLIC_ACTIONS=new Set(['APPROVE','ADD_INTEREST','REMOVE_INTEREST','REMOVE_INTERESTS','UNDO_REMOVE_INTERESTS','CLEAR_INTEREST_UNDO','DISMISS','SET_SETTINGS','SET_FOCUS','CLEAR_DERIVED','RESET','CLEAR_ERROR',...FEEDBACK_ACTIONS,'CLEAR_DISCOVERY_FEEDBACK']);
+const SETTING_KEYS=new Set(['browsingEnabled','autoRefresh','mode','endpoint','accessToken','blockedDomains','language','recommendationView','galaxyExplorationMode','galaxyLayoutOptions','galaxyShowDomainLabels','galaxyShowInterestLabels','recommendationOptions','recommendationKind','discoveryExploration','tutorialSeen','soundEffectsEnabled','soundEffectsVolume']);
 const MAX_HISTORY=5000;
 class SafeError extends Error {}
-
-export function normalizeEndpoint(value) {
-  let u;
-  try {u=new URL(String(value).trim());} catch {throw new SafeError('Enter a valid service address.');}
-  if(u.username || u.password || u.search || u.hash || (u.pathname && u.pathname!=='/')) throw new SafeError('Use only the service address, without a path or credentials.');
-  if(u.protocol!=='https:' && !(u.protocol==='http:' && ['127.0.0.1','localhost'].includes(u.hostname))) throw new SafeError('Use HTTPS, or a local development address.');
-  return u.origin;
-}
 
 function cleanRecommendations(value, specific = false) {
   if(!Array.isArray(value) || value.length>100) throw new SafeError('The service returned an invalid recommendation list.');
@@ -98,10 +92,10 @@ export function createController({catalog,readState,writeState,historySearch,has
       }
       return {before,after:snapshot()};
     });
-    if(FEEDBACK_ACTIONS.has(action.type) && result.after.generation !== result.before.generation && result.after.settings.recommendationKind === 'specific' && result.after.discovery.context && result.after.approved.length && result.after.settings.accessToken){
+    if(FEEDBACK_ACTIONS.has(action.type) && result.after.generation !== result.before.generation && result.after.settings.recommendationKind === 'specific' && result.after.discovery.context && result.after.approved.length && hasServiceConnection(result.after.settings)){
       return recommend({rerank:true});
     }
-    if(!FEEDBACK_ACTIONS.has(action.type) && action.type !== 'CLEAR_DISCOVERY_FEEDBACK' && result.after.settings.autoRefresh && result.after.approved.length && result.after.settings.accessToken && (requestKey(result.before)!==requestKey(result.after) || !result.before.settings.autoRefresh)) {
+    if(!FEEDBACK_ACTIONS.has(action.type) && action.type !== 'CLEAR_DISCOVERY_FEEDBACK' && result.after.settings.autoRefresh && result.after.approved.length && hasServiceConnection(result.after.settings) && (requestKey(result.before)!==requestKey(result.after) || !result.before.settings.autoRefresh)) {
       void recommend().catch(()=>{});
     }
     return result.after;
@@ -176,7 +170,7 @@ export function createController({catalog,readState,writeState,historySearch,has
       if(context)payload.exposures=structuredClone(context.exposures);
     }
     const endpoint=normalizeEndpoint(current.settings.endpoint);
-    if(!current.settings.accessToken) throw new Error('Add your team access code in Settings to connect.');
+    if(!hasServiceConnection(current.settings)) throw new Error('Add your team access code in Settings to connect.');
     let controller=null, timer=null;
     try{
       if(!await hasEndpointPermission(endpoint)) throw new SafeError('Save the connection in Settings to allow this service.');
@@ -187,7 +181,7 @@ export function createController({catalog,readState,writeState,historySearch,has
         cancelRequest();controller=new AbortController();activeRequest=controller;
         timer=setTimeout(()=>controller.abort(),30000);
         return {response:fetchImpl(`${endpoint}${specific?'/api/discover':'/api/recommend'}`,{
-          method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${current.settings.accessToken}`},
+          method:'POST',headers:connectionHeaders(current.settings),
           body:JSON.stringify(payload),credentials:'omit',redirect:'error',signal:controller.signal,
         })};
       });
@@ -233,14 +227,18 @@ export function createController({catalog,readState,writeState,historySearch,has
     // The whole Galaxy exposes public catalog topics before they are recommended.
     // Trust the packaged record, not the caller's supplied title or description.
     const found=context!==undefined?catalog.find(t=>t.topic===id):
-      [...current.recommendations,...current.approved,...current.explored].find(t=>t.id===id || t.topic===id)
+      [...current.recommendations,...(current.recommendationBatch?.items || []),...current.approved,...current.explored].find(t=>t.id===id || t.topic===id)
       || catalog.find(t=>t.id===id || t.topic===id);
     if(!found) throw new Error('Choose a topic from your recommendations or map.');
     const query=encodeURIComponent(found.topic);
     const url=provider==='youtube'?`https://www.youtube.com/results?search_query=${query}`:`https://www.google.com/search?q=${query}`;
-    const recommended=current.recommendations.some(item=>item.id===found.id);
+    const batch=current.recommendationBatch;
+    const fromBatch=batch?.items.some(item=>item.id===found.id);
+    const recommended=fromBatch || current.recommendations.some(item=>item.id===found.id);
     const nearestApproved=current.approved.some(item=>item.id===found.nearest_interest);
-    const parentId=current.settings.mode==='global' && recommended && nearestApproved?found.nearest_interest:current.focus;
+    const mode=fromBatch?batch.mode:current.settings.mode;
+    const focus=fromBatch?batch.focus:current.focus;
+    const parentId=mode==='global' && recommended && nearestApproved?found.nearest_interest:focus;
     try {await openTab(url);} catch {throw new SafeError('Could not open the search. Please try again.');}
     return serial(()=>state.generation===current.generation?commit({type:context===undefined?'EXPLORE':'EXPLORE_FROM_CATALOG',topic:found,parentId:context===undefined?parentId:catalogParent}):snapshot());
   }

@@ -47,7 +47,9 @@ async function visit(title,path=title){const p=await context.newPage();await p.g
  await visit('Gardening and Botany for beginners');
  await visit('NBA Basketball explained','basketball');
  assert.equal((await get()).candidates.length,0);
- await page.locator('[data-disclosure="history-review"] > summary').click();await page.locator('[data-action="import"]').click();
+ await page.getByRole('tab',{name:/To review/}).click();
+ await page.locator('[data-action="import"]').click();
+ await page.getByRole('dialog').getByRole('button',{name:'Review browsing',exact:true}).click();
  await until(async()=> (await get()).candidates.some(t=>t.id==='Gardening'));
  let state=await get();assert.equal(state.approved.length,0);assert.equal(requests.length,0);
  assert.ok(state.evidence.length>=2);assert.ok(!JSON.stringify(state).includes('https://example.org/'));
