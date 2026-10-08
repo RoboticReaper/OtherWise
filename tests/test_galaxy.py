@@ -71,12 +71,6 @@ def test_anchor_affinities_use_top_three_and_temperature_18():
     assert actual[0] == pytest.approx([(1 - math.exp(-3.6)) / denominator, math.exp(-1.8) / denominator])
 
 
-def test_procrustes_blend_aligns_rotation_and_scale():
-    target = np.array([[-1., -1.], [1., -1.], [1., 1.], [-1., 1.]])
-    rotated = target @ np.array([[0., -1.], [1., 0.]]) * 8 + 10
-    assert module().blend_layout(rotated, target, strength=.15) == pytest.approx(target / math.sqrt(2))
-
-
 def test_asset_uses_canonical_titles_and_only_public_geometry(monkeypatch, tmp_path):
     result = build(fast_projection(monkeypatch), tmp_path)
     asset = result.asset

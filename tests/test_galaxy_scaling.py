@@ -26,6 +26,7 @@ def test_blockwise_neighbors_match_full_brute_force_with_ties_at_cutoff():
         assert distances[row] == pytest.approx([entry[0] for entry in expected], abs=1e-14)
 
 
+@pytest.mark.layout_integration
 @pytest.mark.skipif(importlib.util.find_spec("umap") is None, reason="Optional offline layout dependencies")
 def test_whole_catalog_sparse_build_publishes_exact_neighbors_without_dense_distances(monkeypatch, tmp_path):
     # Taking the dense distance route for a large pool must fail before publication.

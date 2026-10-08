@@ -43,8 +43,18 @@ The installable ZIP is `dist/OtherWise-extension.zip`. Unzip it before loading i
 in Chrome. No browser model or frontend dependency installation is required.
 Python 3.11+ and Chrome 116+ are required; development tests use Node 22+.
 
-Checks: `python -m pytest -q` and `npm test`. Browser regression checks are documented
-in the extension guide. The original notebook and its catalog remain available below.
+After activating the project's Python environment and using Node 22+, run
+`npm run test:quick` for daily checks: all frontend tests and Python tests except
+the two real UMAP layout checks. Run `npm run test:full` before a release or after
+changing layout code or dependencies; it includes those layout checks when the
+optional layout dependencies are installed. `python -m pytest -q` still runs the
+complete default Python suite, and `npm test` still runs every frontend test.
+The two cached-MPNet checks remain opt-in through `OTHERWISE_RUN_REAL_FOCUS=1`
+and `OTHERWISE_RUN_REAL_DISCOVERY=1`. Building with `npm run build` validates the
+packaged resources without running tests or regenerating the layout. Browser
+regression commands remain independent: select checks for the feature being
+changed and run the complete browser set before a release, as documented in the
+extension guide. The original notebook and its catalog remain available below.
 
 The checked-in `data/galaxy-layout.json` makes normal extension builds independent
 of layout libraries. Regenerate it only when the catalog, embedding model or layout

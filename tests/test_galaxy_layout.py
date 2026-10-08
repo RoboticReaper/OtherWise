@@ -232,6 +232,7 @@ def test_projection_failure_is_safe_and_releases_capacity(monkeypatch, tmp_path)
         service.close()
 
 
+@pytest.mark.layout_integration
 @pytest.mark.skipif(find_spec('umap') is None, reason='Optional UMAP dependencies')
 def test_real_umap_job_produces_finite_public_geometry_and_b_cache(tmp_path):
     m = layout_module()

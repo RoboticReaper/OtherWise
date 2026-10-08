@@ -8,6 +8,8 @@
   },
   "scripts": {
     "test": "node --test extension/tests/*.test.js",
+    "test:quick": "npm test && python3 -m pytest -q -m \"not layout_integration\"",
+    "test:full": "npm test && python3 -m pytest -q",
     "build": "python3 scripts/build_extension.py",
     "test:browser": "node scripts/test_extension_browser.mjs",
     "test:ui": "node scripts/test_ui_browser.mjs",
