@@ -4,7 +4,11 @@ This package runs the recommendation systems without changing the production API
 
 [Experiment 001](../experiments/recommendation-benchmark/cycle-001/summary.md) contains the first nineteen-configuration comparison, 284 assistant judgments, frozen finalists, and held-out results. Its held-out profiles are now historical evidence. The example commands below can reproduce a development workflow; a new final comparison requires a new profiles file with fresh held-out families via `--profiles`.
 
+[Experiment 002](../experiments/recommendation-benchmark/cycle-002/summary.md) compares sixteen configurations, with 699 complete development/final grade keys and six fresh final families. Its [shortlist](../experiments/recommendation-benchmark/cycle-002/shortlist.json) preserves three runnable choices: K-connection leads all four specific metrics, K-literal leads broad discovery, and V3 is a faster specific hybrid control. These are provisional observed leaders; the default API remains unchanged. Both cycles' final families are now historical for subsequent optimization.
+
 The controls are V0 (original routing), V1 (every graph area), and V2 (identities/meaning choices). V3 adds semantic/BM25/graph reciprocal-rank fusion and explicit ranking components. Three ablations remove lexical search, graph signals, or the new ranker. V3-adaptive is a separate experiment using angular distance 0.08–0.55 instead of the requested hard band; it is not an implicit slider change. Ranking configurations in `systems.json` vary one serving policy at a time. V4b is an optional adapter contract; no paid provider is configured.
+
+V5-known is a separately named unknown-concept experiment. It excludes verified known IDs and input near-restatements (distance <=0.035), with an explicit configurable distance cap of 0.50 by default. Other nearby, separately identified concepts remain eligible. Canonical/literal semantic retrieval, lexical support, a disclosed description-shape heuristic, and soft redundancy rank this pool. For V5, the original radius/expansion/overlap and overlap-share controls do not gate results: their band/overlap labels are diagnostics, and the response declares this policy. Original variants retain their control semantics. Description shape is not an evaluator grade or measured curiosity.
 
 The local model must already exist in `.cache/models/`. The runner uses the pinned MPNet revision, full vectors, CPU deterministic inference, and revision-aware public caches. It does not download a model or persist personal request embeddings. First-run public cache migration requires matching catalog, model revision, and audited embedding file hashes. Model initialization and request encoding are reported separately from warm runs.
 
@@ -30,7 +34,7 @@ A ratings file contains the packet's `packet_id` and `evaluator` unchanged, plus
   --out .local/recommendation-cycle/heldout
 ```
 
-Grade the held-out packet and run `compare` with its ratings. Nomination locks the source/model/evaluator/code/split/config identities. A cycle claims held-out data once; create fresh held-out families before using those results for later tuning. The bounded search accepts development cases only, at most five rounds of twenty configurations, and stops after two rounds without a 0.01 gain. Unrated new candidate content cannot produce a champion. To extend experiments, add candidate configurations, run them, grade only new profile/content keys, and start a new sealed cycle. The CLI does not schedule recurring jobs or deploy anything.
+Grade the held-out packet and run `compare` with its ratings. Nomination locks the source/model/evaluator/code/split/config identities and retains the union of broad/specific per-metric development champions plus controls. A cycle claims held-out data once; create fresh held-out families before using those results for later tuning. The bounded search accepts development cases only, at most five rounds of twenty configurations, and stops after two rounds without a 0.01 gain. Unrated new candidate content cannot produce a champion. To extend experiments, add candidate configurations, run them, grade only new profile/content keys, and start a new sealed cycle. The CLI does not schedule recurring jobs or deploy anything.
 
 Connection, discovery, depth, and relevant variety are scored separately with requested slots as denominator. Empty slots count zero; missing grades make a score unavailable. Shared gates reject known identities, duplicates, unsupported source records, and C<2. Broad and specific universes have separate scoreboards. Variety uses a separately frozen hashed TF-IDF embedding space, measuring lexical rather than full semantic diversity. Serving rankers never read grades.
 
@@ -42,12 +46,18 @@ Python usage:
 
 ```python
 from recommendation_lab.benchmark import load_runtime
-from recommendation_lab.systems import Request
+from recommendation_lab.systems import Request, RankConfig
 
 lab, evaluation_vectors, manifest = load_runtime()
-batch = lab.recommend(Request(["computers", "soccer"]), "V3")
+batch = lab.recommend(
+    Request(["computers", "soccer"], goal="discovery"),
+    "V5-known",
+    RankConfig(relevance=.95, content=.05, novelty=0., diversity=.05),
+)  # K-connection: opt-in experimental configuration
 # For an ambiguous phrase, inspect batch['resolutions']; resubmit a chosen ID
 # with inventory_version=batch['inventory_version'].
 ```
+
+To use V5's connection/discovery/depth/variety goal presets, leave ranking weights unset with `RankConfig()`. Explicit shortlist weights override those defaults. To load a frozen choice, use its `variant` and `RankConfig(**choice['config'])`; keep broad/specific settings separate. Saved scores are tied to their exact benchmark and are not promises for a new interest profile.
 
 External reranking accepts at most 30 source-backed results and 20,000 characters. The caller enforces a maximum 20-second wait within the remaining 30-second request budget and allows one worker per lab. Its adapter owns cancellation of underlying network operations and must return an exact ID permutation. A noncooperative adapter occupies that bounded worker until it exits; later calls return a local busy fallback. Invalid output, unavailable configuration, or provider failure retains the local order with a recorded fallback. The experiment package is not an authenticated HTTP service; V2 API/client integration remains a later stage after operational selection.

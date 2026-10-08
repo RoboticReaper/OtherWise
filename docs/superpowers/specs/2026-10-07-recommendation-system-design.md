@@ -105,6 +105,9 @@ For the new pipeline, global eligibility measures distance to the closest approv
 | V3 | V2 with lexical/semantic/optional graph fusion and relevance/discovery/diversity ranking |
 | V4a | V3 with externally assisted sense resolution |
 | V4b | V3 with external candidate reranking |
+| V5-known | Separately declared unknown-concept policy, with explicit distance cap, canonical/literal semantic retrieval and soft redundancy |
+
+The [cycle 002 policy plan](../plans/2026-10-08-recommendation-policy-improvement.md) implements V5 as an opt-in lab treatment. Verified known IDs and input near-restatements are excluded; other separately identified nearby concepts remain eligible. For this treatment the original geometric band/overlap labels are diagnostics, with the cap declared separately, rather than hidden changes to existing slider semantics. Its description-shape feature is a heuristic and never reads evaluator grades. Original variants retain their eligibility controls.
 
 Keep broad and specific comparisons separate. For V3, ablate lexical retrieval, graph contribution, and ranking changes independently. Human-confirmed meanings can be used as a separate diagnostic arm, clearly identified as oracle input rather than an automatic resolver result. Only automatic or interactive arms qualify for product comparison.
 
@@ -215,3 +218,5 @@ This spec adopts the user's confirmed direction and synthesizes the existing res
 - [Saved public results and fingerprints](../../../experiments/recommendation-audit/results.json)
 
 The [implementation plan](../plans/2026-10-07-recommendation-experiments.md) delivered the benchmark and local correction stage. Optional source/AI challengers and client rollout remain ordered work with the acceptance checks above; a small held-out score lead does not authorize automatic rollout.
+
+The [second comparison](../../../experiments/recommendation-benchmark/cycle-002/summary.md) delivers the known-concept policy, sixteen development configurations, both-track nomination, a six-family sealed final run and a three-system experimental shortlist. K-connection leads the final specific metrics; K-literal leads broad discovery. Specific uncertainty and unverified independent-judge stability prevent an operational selection. No additional human trial was required for this experiment stage.

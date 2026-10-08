@@ -134,8 +134,11 @@ The [recommendation lab](recommendation_lab/README.md) compares canonical meanin
 resolution, global retrieval, semantic/keyword/graph fusion, and ranking variants
 under four frozen scorecards. [The first experiment](experiments/recommendation-benchmark/cycle-001/summary.md)
 records nineteen development configurations, assistant item judgments, held-out
-results, and a bounded improvement workflow. Production retains its existing
-default while selection evidence remains inconclusive.
+results, and a bounded improvement workflow. [Experiment 002](experiments/recommendation-benchmark/cycle-002/summary.md)
+adds an opt-in policy for unknown concepts within familiar fields, compares sixteen
+configurations on six fresh final families, and saves a three-system shortlist.
+Production retains its existing default while operational selection evidence
+remains incomplete.
 
 The default catalog combines **718 authored everyday interests** with
 **2,734 concepts from Wikidata**, selected using

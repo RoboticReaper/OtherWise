@@ -19,7 +19,7 @@ sys.path.insert(0, str(ROOT))
 from explorer import load_catalog
 from graph_explorer import load_graph
 from recommendation_lab.__main__ import code_identity, runtime_fingerprint
-from recommendation_lab.benchmark import evaluate_runs, evaluation_space, write_json
+from recommendation_lab.benchmark import evaluate_runs, evaluation_space, paired_uncertainty, write_json
 from recommendation_lab.evaluation import GradeStore, valid_source
 from recommendation_lab.inventory import Inventory, digest
 
@@ -140,6 +140,15 @@ def main():
         diagnostics['comparisons'][f'{split}/{kind}'] = tracks
     write_json(HERE/'validation.json', validation)
     write_json(HERE/'sensitivity.json', diagnostics)
+    final_board = read(HERE/'heldout/scoreboard.json')
+    by_kind_uncertainty = {}
+    for kind in ('specific', 'broad'):
+        ids = {r['profile']['id'] for r in runs if r['profile'].get('controls', {}).get('result_kind', 'specific') == kind}
+        kind_records = [r for r in records if r['profile_id'] in ids]
+        champions = final_board['by_kind'][kind]['champions']
+        by_kind_uncertainty[kind] = {baseline: paired_uncertainty(kind_records, champions, baseline=baseline)
+                                    for baseline in ('V0', 'V3')}
+    write_json(HERE/'uncertainty-by-kind.json', by_kind_uncertainty)
     print(json.dumps(validation, indent=2))
     for kind in ('specific', 'broad'):
         for metric, cases in diagnostics['comparisons'][f'heldout/{kind}'].items():

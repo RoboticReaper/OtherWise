@@ -64,6 +64,8 @@ Check order/format sensitivity, repeated-judgment stability, and agreement on a 
 
 The first cycle's frozen-grade sensitivity diagnostic transfers 0.05 between score weights. Primary score leaders remain stable across those settings, but discovery/depth gain intervals span zero across only three held-out families. Repeated/order and second-judge checks were not performed. The score leaders remain provisional, and production retains its existing default. The used held-out profiles are now history for any later optimization cycle.
 
+[Cycle 002](../experiments/recommendation-benchmark/cycle-002/summary.md) freezes sixteen development configurations and nominates both broad/specific leaders before one final comparison on six new families. K-connection has the highest observed final specific scores on all four metrics; K-literal has the highest broad discovery score. Specific gain intervals include zero, while broad gains are positive against V0/V3 under this benchmark. Photography regressed despite the aggregate improvement. All 699 grade keys are complete, with 149 exact prior keys reused and 550 new keys reviewed by the requested assistant. Weight-sensitivity leaders remain stable; repeat/order and independent-judge checks remain unperformed. These results support an experimental shortlist, with the current production default retained.
+
 LLM judging is a proposed approximation for this application. Research identifies position, verbosity, and self-enhancement biases; conversational benchmark agreement does not establish discovery-topic curiosity prediction. [Zheng et al., 2023](https://arxiv.org/abs/2306.05685).
 
 ## Controlled comparisons
