@@ -99,6 +99,43 @@ def test_integrity_failure_still_reports_penalized_baseline_score():
     assert result['systems']['baseline']['eligible_for_selection'] is False
 
 
+def test_fabricated_identity_or_mismatched_source_cannot_pass_integrity():
+    fake = dict(row('not-inventory'),sources=[dict(source_url='https://example.invalid/fake',source_id='Q900')])
+    result = score_batch(PROFILE,dict(status='ok',recommendations=[fake]),store_for([fake]),{'not-inventory':[1,0]})
+    assert result['integrity_failures'] == 1
+    assert result['connection'] == 0
+
+
+def test_import_rejects_conflicts_with_existing_frozen_grades():
+    packet = make_packet([dict(profile=PROFILE,batch=dict(recommendations=[row()]))],EVALUATOR)
+    rating = dict(key=packet['items'][0]['key'],C=3,N=2,E=2,A=None,bridge='Engineering method.',reason='Specific method.')
+    initial = dict(packet_id=packet['packet_id'],evaluator=packet['evaluator'],ratings=[rating])
+    store = GradeStore.from_packet(packet,initial)
+    changed = dict(initial,ratings=[dict(rating,C=2)])
+    with pytest.raises(ValueError,match='Conflicting'):
+        GradeStore.from_packet(packet,changed,existing=store.to_dict())
+
+
+def test_invalid_empty_batch_and_wrong_automatic_sense_are_not_selectable():
+    from recommendation_lab.inventory import Inventory
+    inv = Inventory.from_sources([dict(topic='anchor',description='Engineering anchor.',wikidata_id='Q1'),
+                                  dict(topic='method',description='Engineering method.',wikidata_id='Q2')],dict(nodes=[]))
+    profile = dict(PROFILE,interests=['anchor'])
+    bad = dict(schema_version=2,inventory_version='stale',status='ok',resolutions=[],recommendations=[])
+    score = score_batch(profile,bad,GradeStore(EVALUATOR),{},inventory=inv)
+    assert score['integrity_failures'] >= 1
+    report = scoreboard([dict(system='bad',profile_id='one',scores=score,seconds=.1,cost_usd=0.)])
+    assert report['systems']['bad']['eligible_for_selection'] is False
+    candidate = dict(concept_id='Q2',topic='method',description='Engineering method.',sources=inv.concepts['Q2']['records'])
+    store = GradeStore(EVALUATOR)
+    store.add(profile,candidate,dict(C=3,N=2,E=2,A=None,bridge='Engineering method.',reason='Specific method.'))
+    wrong = dict(schema_version=2,inventory_version=inv.version,status='ok',algorithm='V3',
+                 resolutions=[dict(status='resolved',concept_id='Q3')],recommendations=[candidate])
+    score = score_batch(profile,wrong,store,{'Q2':[1,0]},inventory=inv)
+    assert score['integrity_failures'] >= 1
+    assert score['connection'] == 0
+
+
 @pytest.mark.parametrize('grade', [dict(C=True,N=2,E=2,A=None),dict(C=4,N=2,E=2,A=None),dict(C=2,N=2,E=2,A=.5)])
 def test_invalid_grades_are_rejected(grade):
     with pytest.raises(ValueError):

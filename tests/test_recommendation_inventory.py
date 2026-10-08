@@ -77,6 +77,25 @@ def test_public_registry_has_reviewed_sport_and_game_identities_and_distinct_sen
     assert inv.resolve(['food fermentation'])[0]['concept_id'] != 'Q41760'
 
 
+def test_authored_equivalence_preserves_authored_source_locator():
+    record = inventory().concepts['Q11413']['records'][0]
+    assert record['source_url'] == 'data/topics.json#record-0'
+    assert record['equivalence_evidence'] == 'https://www.wikidata.org/wiki/Q11413'
+
+
+def test_selected_meaning_must_be_in_recomputed_displayed_choices():
+    inv = inventory()
+    inv.aliases['many senses'] = set(inv.concepts)
+    # Add enough supported choices to exceed the display cap.
+    for i in range(6):
+        inv.concepts[f'Q{i+900}'] = dict(id=f'Q{i+900}',topic=f'sense {i}',description='A supported sense.',source_url='source')
+        inv.aliases['many senses'].add(f'Q{i+900}')
+    choices = inv.resolve(['many senses'])[0]['choices']
+    hidden = next(iter(inv.aliases['many senses']-{r['id'] for r in choices}))
+    with pytest.raises(ValueError,match='offered'):
+        inv.resolve([dict(phrase='many senses',concept_id=hidden)],inventory_version=inv.version)
+
+
 @pytest.mark.parametrize('value', [[], [''], ['x' * 121], ['Python\x00'], [123], ['a'] * 41])
 def test_invalid_interests_fail(value):
     with pytest.raises(ValueError):

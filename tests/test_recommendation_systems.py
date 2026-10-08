@@ -133,3 +133,53 @@ def test_broad_path_legacy_ranker_uses_only_one_focus_vector():
     system = lab()
     response = system.recommend(Request(['engineering','unrelated'],result_kind='broad',mode='path',focus_index=0),'V2')
     assert response['recommendations']
+
+
+@pytest.mark.parametrize('variant',['V2','V3-no-ranking'])
+@pytest.mark.parametrize('kind',['broad','specific'])
+def test_path_overlap_quota_uses_nearest_of_all_interests(variant,kind):
+    system = lab(5)
+    class PathEncoder:
+        def encode(self,texts,**kwargs):
+            return np.asarray([vec(.031) if text == 'second' else vec(0) for text in texts])
+    system.model = PathEncoder()
+    system.broad_vectors[:] = system.concept_vectors[:] = [vec(.30)]*4+[vec(.32)]
+    rows = system.recommend(Request(['engineering','second'],mode='path',focus_index=0,result_kind=kind,limit=5),variant)['recommendations']
+    assert len(rows) == 1
+    assert rows[0]['zone'] == 'New territory'
+
+
+@pytest.mark.parametrize('variant',['V3','V3-no-graph','V3-no-ranking'])
+def test_global_retrieval_does_not_require_graph_reachability(variant):
+    system = lab(1)
+    system.graph['edges'] = []
+    system.reached = {}
+    rows = system.recommend(Request(['engineering']),variant)['recommendations']
+    assert len(rows) == 1
+    assert rows[0]['graph'] is None
+
+
+@pytest.mark.parametrize('interests',[None,[None],[{}]])
+def test_legacy_validation_uses_controlled_value_errors(interests):
+    with pytest.raises(ValueError):
+        lab().recommend(Request(interests),'V0')
+
+
+def test_noncooperative_reranker_deadline_and_bounded_worker():
+    import threading
+    system = lab(5)
+    release = threading.Event()
+    calls=[]
+    def blocked(payload,timeout):
+        calls.append(timeout)
+        release.wait()
+        return payload['ids']
+    try:
+        request = Request(['engineering'],limit=5)
+        result = system.recommend(request,'V4b',reranker=blocked,rerank_timeout=.01)
+        assert result['execution']['external_status'] == 'timeout_local_fallback'
+        busy = system.recommend(request,'V4b',reranker=blocked,rerank_timeout=.01)
+        assert busy['execution']['external_status'] == 'busy_local_fallback'
+        assert len(calls) == 1
+    finally:
+        release.set()

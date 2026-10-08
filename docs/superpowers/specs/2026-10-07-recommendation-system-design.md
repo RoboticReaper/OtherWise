@@ -1,6 +1,6 @@
 # OtherWise recommendation system — implementation spec
 
-Date: 2026-10-07. Status: approved direction; this written spec is ready for review before implementation planning. No metric-specific proxy champion has been selected. Human trials are optional; the initial personal rubric sanity check is complete, with versioned challenger treatments recorded in the evaluation design.
+Date: 2026-10-07. Status: implementation authorized; local variants and the evaluation lab are implemented, with experimental comparisons in progress. Operational selection and production integration remain gated by the evidence below. Human trials are optional; the initial personal rubric sanity check is complete. The user selected the session assistant as the initial automated proxy evaluator.
 
 ## Problem Statement
 

@@ -50,6 +50,7 @@ def run(args):
     profiles = [p for p in profiles if p['split'] == args.split]
     if not profiles:
         raise ValueError('No profiles in this split.')
+    args.out.mkdir(parents=True,exist_ok=False)
     start = time.perf_counter()
     lab,vectors,runtime = load_runtime()
     if nomination and nomination['identity']['runtime_fingerprint'] != runtime_fingerprint(runtime):
@@ -63,6 +64,7 @@ def run(args):
     manifest = dict(schema_version=1,split=args.split,profiles_sha256=digest(profiles_document),
                     code_sha256=code_identity(),runtime=runtime,runtime_fingerprint=runtime_fingerprint(runtime),
                     systems=systems,evaluator=evaluator.identity(),packet_id=packet['packet_id'],
+                    outputs_sha256=digest(runs),
                     initialization_seconds=initialization,nomination_digest=nomination['digest'] if nomination else None,
                     note='Public synthetic profiles; no participant ratings. Cold model setup separate; serving times include first-time interest encoding.')
     write_json(args.out/'manifest.json',manifest)
@@ -95,14 +97,17 @@ def compare(args):
     manifest,runs,packet = [load_json(args.run/name) for name in ('manifest.json','outputs.json','packet.json')]
     if packet['packet_id'] != manifest['packet_id']:
         raise ValueError('Packet does not belong to this run.')
-    grades = GradeStore.from_packet(packet,load_json(args.ratings))
+    if digest(runs) != manifest['outputs_sha256']:
+        raise ValueError('Raw outputs changed after the run.')
+    existing = load_json(args.run/'grades.json') if (args.run/'grades.json').exists() else None
+    grades = GradeStore.from_packet(packet,load_json(args.ratings),existing=existing)
     if grades.evaluator.identity() != manifest['evaluator']:
         raise ValueError('Run and grade evaluator versions differ.')
     inventory = Inventory.from_sources(load_catalog(),load_graph(),load_json(ROOT/'data/recommendation-identities.json'))
     vectors,identity = evaluation_space({cid:inventory.text(cid) for cid in inventory.concepts})
     if inventory.version != manifest['runtime']['inventory_version'] or identity != manifest['runtime']['evaluation_embedding']:
         raise ValueError('Inventory/evaluator vectors changed; start a new benchmark.')
-    records,report = evaluate_runs(runs,grades,vectors)
+    records,report = evaluate_runs(runs,grades,vectors,inventory=inventory)
     by_kind = {}
     for kind in ('specific','broad'):
         ids = {r['profile']['id'] for r in runs if r['profile'].get('controls',{}).get('result_kind','specific') == kind}

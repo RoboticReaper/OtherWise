@@ -27,11 +27,12 @@ class Inventory:
         self.concepts = {}
         self.aliases = defaultdict(set)
         self.source_ids = {'broad': [], 'specific': []}
-        overrides = {}
+        overrides, evidence = {}, {}
         for mapping in registry.get('equivalences', []):
             if not mapping.get('evidence'):
                 raise ValueError('Reviewed equivalences need evidence.')
             overrides[mapping['kind'], mapping['index']] = mapping['id']
+            evidence[mapping['kind'], mapping['index']] = mapping['evidence']
 
         def add(concept_id, row, kind, index):
             if not all(isinstance(row.get(k), str) and row[k].strip() for k in ('topic', 'description')):
@@ -43,8 +44,10 @@ class Inventory:
                           source_revision=row.get('source_revision'), source_id=row.get('id', concept_id))
             # Authored provenance is a repository record, not an invented web citation.
             if not record['source_url']:
-                record['source_url'] = (f'https://www.wikidata.org/wiki/{concept_id}'
-                                        if concept_id.startswith('Q') else f'data/topics.json#record-{index}')
+                record['source_url'] = (f"https://www.wikidata.org/wiki/{row['wikidata_id']}" if row.get('wikidata_id')
+                    else f'data/topics.json#record-{index}' if kind == 'broad' else f'data/discovery_graph.json#concept-{index}')
+            if (kind,index) in evidence:
+                record['equivalence_evidence'] = evidence[kind,index]
             concept['records'].append(record)
             concept['aliases'].update([row['topic'], *row.get('aliases', [])])
 
@@ -98,7 +101,9 @@ class Inventory:
         for i, record in enumerate(parsed):
             phrase, selected = record['phrase'], record.get('concept_id')
             offered = self.aliases.get(_key(phrase), set())
-            if selected is not None and (not isinstance(selected, str) or selected not in offered):
+            context = set(_key(' '.join(p['phrase'] for j,p in enumerate(parsed) if i != j)).split())
+            choices = sorted(offered,key=lambda cid:(-len(context & set(_key(self.text(cid)).split())),cid))[:5]
+            if selected is not None and (not isinstance(selected, str) or selected not in choices):
                 raise ValueError('Selected meaning was not offered for this phrase.')
             concept_id = selected or (next(iter(offered)) if len(offered) == 1 else None)
             identity = concept_id or f'phrase:{_key(phrase)}'
@@ -110,8 +115,6 @@ class Inventory:
                                    text=self.text(concept_id), choices=[]))
             elif offered:
                 # This transparent lexical contextual ordering is NOT calibrated confidence.
-                context = set(_key(' '.join(p['phrase'] for j, p in enumerate(parsed) if i != j)).split())
-                choices = sorted(offered, key=lambda cid: (-len(context & set(_key(self.text(cid)).split())), cid))[:5]
                 result.append(dict(phrase=phrase, status='clarification_needed', concept_id=None,
                                    text=None, choices=[self.choice(cid) for cid in choices],
                                    ordering='context word overlap; no automatic sense selection'))

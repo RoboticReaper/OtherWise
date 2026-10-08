@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import math
+import re
 from dataclasses import asdict, dataclass
 from statistics import mean
 
@@ -75,7 +76,7 @@ class GradeStore:
         return dict(evaluator=self.evaluator.identity(), grades=self.grades)
 
     @classmethod
-    def from_packet(cls, packet, ratings):
+    def from_packet(cls, packet, ratings, *, existing=None):
         identity = packet['evaluator']
         evaluator = Evaluator(identity['name'],identity['rubric'],identity['prompt'])
         if identity != evaluator.identity() or ratings.get('evaluator') != identity or ratings.get('packet_id') != packet['packet_id']:
@@ -85,6 +86,12 @@ class GradeStore:
             raise ValueError('Packet content digest mismatch.')
         items = {item['key']:item for item in packet['items']}
         store, seen = cls(evaluator), set()
+        if existing is not None:
+            if existing.get('evaluator') != evaluator.identity() or set(existing.get('grades',{}))-set(items):
+                raise ValueError('Existing grade store belongs to a different evaluator or packet.')
+            for key,grade in existing['grades'].items():
+                item = items[key]
+                store.add(item['profile'],item['candidate'],grade)
         for rating in ratings['ratings']:
             key = rating.get('key')
             if key not in items or key in seen:
@@ -109,15 +116,48 @@ def make_packet(runs, evaluator, *, seed=42):
     return dict(packet_id=digest(body),**body)
 
 
-def score_batch(profile, batch, store, evaluation_vectors, *, limit=10):
+def valid_source(row, inventory=None):
+    cid, sources = row.get('concept_id'),row.get('sources')
+    if not isinstance(cid,str) or not sources:
+        return False
+    if inventory is not None:
+        concept = inventory.concepts.get(cid)
+        return bool(concept and sources == concept['records'] and any(
+            row.get('topic') == r['topic'] and row.get('description') == r['description'] for r in concept['records']))
+    # Fixture/import mode still refuses arbitrary identities and unrelated citations.
+    if not re.fullmatch(r'Q[1-9]\d*|local:[a-zA-Z0-9:_-]+',cid):
+        return False
+    return all(isinstance(s,dict) and (s.get('source_url') == f'https://www.wikidata.org/wiki/{cid}'
+        or re.fullmatch(r'data/(topics|discovery_graph)\.json#(record|concept)-\d+',s.get('source_url','')))
+        and s.get('source_id',cid) == cid for s in sources)
+
+
+def score_batch(profile, batch, store, evaluation_vectors, *, limit=10, inventory=None):
     if type(limit) is not int or limit < 1:
         raise ValueError('Requested slots must be a positive integer.')
     totals = dict.fromkeys(METRICS,0.)
     passed, seen, missing, integrity, unknown = [], set(), 0, 0, 0
     known = set(profile.get('known_ids',[])) | {r.get('concept_id') for r in batch.get('resolutions',[]) if r.get('concept_id')}
+    invalid_batch = inventory is not None and (batch.get('inventory_version') != inventory.version or
+        batch.get('schema_version') != 2 or batch.get('status') not in ('ok','clarification_needed'))
+    if batch.get('status') == 'clarification_needed' and batch['recommendations']:
+        invalid_batch = True
+    if inventory is not None:
+        expected = inventory.resolve(profile['interests'],inventory_version=inventory.version)
+        for i,(intended,actual) in enumerate(zip(expected,batch.get('resolutions',[]))):
+            if intended['status'] == 'clarification_needed' and actual.get('status') != 'legacy_lookup' and batch.get('status') != 'clarification_needed':
+                invalid_batch = True
+            legacy = batch.get('algorithm') in ('V0','V1') and actual.get('status') == 'legacy_lookup'
+            explicit = isinstance(profile['interests'][i],dict) and profile['interests'][i].get('concept_id') is not None
+            if (not legacy or explicit) and (intended['concept_id'] != actual.get('concept_id') or intended['status'] != actual.get('status')):
+                invalid_batch = True
+        if len(batch.get('resolutions',[])) != len(expected):
+            invalid_batch = True
+        known |= {r['concept_id'] for r in expected if r['concept_id']}
+    integrity += int(invalid_batch)+int(len(batch['recommendations']) > limit)
     for row in batch['recommendations'][:limit]:
         cid = row.get('concept_id')
-        if not cid or cid in seen or cid in known or not row.get('sources') or any(not s.get('source_url') for s in row['sources']):
+        if invalid_batch or cid in seen or cid in known or not valid_source(row,inventory):
             integrity += 1
             continue
         seen.add(cid)

@@ -4,6 +4,8 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+import tempfile
+import os
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -18,12 +20,24 @@ from .evaluation import METRICS, score_batch, scoreboard
 REVISION = 'e8c3b32edf5434bc2275fc9bab85f82640a19130'
 
 
-def write_json(path, value):
+def write_json(path, value, *, exclusive=False):
     path = Path(path)
     path.parent.mkdir(parents=True,exist_ok=True)
-    temporary = path.with_suffix(path.suffix+'.tmp')
-    temporary.write_text(json.dumps(value,indent=2,ensure_ascii=False,allow_nan=False)+'\n')
-    temporary.replace(path)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(mode='w',dir=path.parent,suffix='.tmp',delete=False,encoding='utf-8') as stream:
+            temporary = Path(stream.name)
+            json.dump(value,stream,indent=2,ensure_ascii=False,allow_nan=False)
+            stream.write('\n')
+            stream.flush()
+            os.fsync(stream.fileno())
+        if exclusive:
+            os.link(temporary,path)  # Atomic, complete publication; never overwrite a winner.
+        else:
+            temporary.replace(path)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
 
 
 def cache_identity(texts, model_identity):
@@ -92,11 +106,12 @@ def seal_finalists(directory, champions, identity):
     path = Path(directory)/'nomination.json'
     body = dict(champions=champions,identity=identity)
     nomination = dict(**body,digest=digest(body))
-    if path.exists():
+    path.parent.mkdir(parents=True,exist_ok=True)
+    try:
+        write_json(path,nomination,exclusive=True)
+    except FileExistsError:
         if json.loads(path.read_text()) != nomination:
             raise ValueError('Finalists are frozen; create a fresh cycle with new held-out families.')
-    else:
-        write_json(path,nomination)
     return nomination
 
 
@@ -109,9 +124,7 @@ def claim_heldout(directory, nomination):
     receipt = dict(nomination_digest=nomination['digest'],status='claimed',policy='One held-out run; reused cases become history before another tuning cycle.')
     path.parent.mkdir(parents=True,exist_ok=True)
     try:
-        with path.open('x') as stream:
-            json.dump(receipt,stream,indent=2)
-            stream.write('\n')
+        write_json(path,receipt,exclusive=True)
     except FileExistsError as error:
         raise ValueError('Held-out split already claimed in this cycle.') from error
     return receipt
@@ -168,7 +181,7 @@ def load_runtime():
         contract = dict(**identity,inventory_version=inventory.version,source_kind=kind)
         key = cache_identity(texts,contract)
         path = ROOT/'.cache/recommendation-lab'/f'{key}.npy'
-        expected = (len(rows),model.get_sentence_embedding_dimension())
+        expected = (len(rows),model.get_embedding_dimension())
         if path.exists():
             values = np.load(path,allow_pickle=False)
             if values.shape == expected:
@@ -184,9 +197,15 @@ def load_runtime():
         if values.shape != expected:
             raise ValueError('Public embedding cache shape mismatch.')
         path.parent.mkdir(parents=True,exist_ok=True)
-        with path.with_suffix('.tmp').open('wb') as stream:
-            np.save(stream,values,allow_pickle=False)
-        path.with_suffix('.tmp').replace(path)
+        temporary = None
+        try:
+            with tempfile.NamedTemporaryFile(dir=path.parent,suffix='.tmp',delete=False) as stream:
+                temporary = Path(stream.name)
+                np.save(stream,values,allow_pickle=False)
+            temporary.replace(path)
+        finally:
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
         return _unit_vectors(values,'Public embeddings')
     bv = public_vectors(broad,'broad')
     cv = public_vectors(graph_concepts(graph),'specific','discovery-')
@@ -216,13 +235,13 @@ def run_cases(lab, profiles, systems):
     return runs
 
 
-def evaluate_runs(runs, store, vectors):
+def evaluate_runs(runs, store, vectors, *, inventory=None):
     records = []
     for run in runs:
         if not run['profile'].get('quality',True):
             continue
-        records.append(dict(system=run['system'],profile_id=run['profile']['id'],
-            scores=score_batch(run['profile'],run['batch'],store,vectors,limit=run['profile'].get('controls',{}).get('limit',10)),
+        records.append(dict(system=run['system'],profile_id=run['profile']['id'],family=run['profile']['family'],
+            scores=score_batch(run['profile'],run['batch'],store,vectors,limit=run['profile'].get('controls',{}).get('limit',10),inventory=inventory),
             seconds=run['batch']['execution']['seconds'],cost_usd=run['batch']['execution']['serving_cost_usd']))
     return records,scoreboard(records)
 
@@ -230,19 +249,24 @@ def evaluate_runs(runs, store, vectors):
 def paired_uncertainty(records, champions, *, baseline='V0',seed=42,draws=2000):
     by_system = {}
     for row in records:
-        by_system.setdefault(row['system'],{})[row['profile_id']] = row['scores']
+        by_system.setdefault(row['system'],{})[row['profile_id']] = row
     result = {}
     rng = np.random.default_rng(seed)
     for metric,champion in champions.items():
         if champion not in by_system or baseline not in by_system:
             continue
         keys = sorted(set(by_system[champion]) & set(by_system[baseline]))
-        deltas = [by_system[champion][k][metric]-by_system[baseline][k][metric] for k in keys
-                  if by_system[champion][k][metric] is not None and by_system[baseline][k][metric] is not None]
-        if not deltas:
+        pairs = {k:by_system[champion][k]['scores'][metric]-by_system[baseline][k]['scores'][metric] for k in keys
+                  if by_system[champion][k]['scores'][metric] is not None and by_system[baseline][k]['scores'][metric] is not None}
+        if not pairs:
             continue
-        boot = np.mean(rng.choice(deltas,size=(draws,len(deltas)),replace=True),axis=1)
-        result[metric] = dict(champion=champion,baseline=baseline,profile_deltas=dict(zip(keys,deltas)),
-                             mean_gain=float(np.mean(deltas)),bootstrap_95=[float(np.percentile(boot,2.5)),float(np.percentile(boot,97.5))],
-                             independent_families=len(deltas),note='Small synthetic benchmark; uncertainty is not user satisfaction.')
+        families = {}
+        for key,delta in pairs.items():
+            families.setdefault(by_system[champion][key].get('family',key),[]).append(delta)
+        clusters = list(families.values())
+        samples = rng.integers(0,len(clusters),size=(draws,len(clusters)))
+        boot = [float(np.mean([delta for i in sample for delta in clusters[i]])) for sample in samples]
+        result[metric] = dict(champion=champion,baseline=baseline,profile_deltas=pairs,
+                             mean_gain=float(np.mean(list(pairs.values()))),bootstrap_95=[float(np.percentile(boot,2.5)),float(np.percentile(boot,97.5))],
+                             independent_families=len(families),note='Family cluster bootstrap; small synthetic benchmark, not user satisfaction.')
     return result

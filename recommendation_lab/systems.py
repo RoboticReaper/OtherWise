@@ -5,6 +5,8 @@ import math
 import re
 import sqlite3
 import time
+import queue
+import threading
 from dataclasses import asdict, dataclass, field
 
 import numpy as np
@@ -40,6 +42,8 @@ class Request:
     seed: int = 42
 
     def validate(self):
+        if not isinstance(self.interests,list) or not 1 <= len(self.interests) <= 40:
+            raise ValueError('Provide 1–40 interests.')
         if self.result_kind not in ('broad', 'specific') or self.goal not in GOALS or self.mode not in ('global', 'path'):
             raise ValueError('Invalid kind, goal, or mode.')
         if type(self.limit) is not int or not 1 <= self.limit <= 100 or type(self.seed) is not int or not 0 <= self.seed <= 2**32-1:
@@ -112,6 +116,7 @@ class RecommendationLab:
         self.reached = {r['id']: r for r in graph_candidates(graph)}
         self.areas = {r['id']: r for r in graph['areas']}
         self._encoded = {}  # Ephemeral request texts; never persisted by serving.
+        self._rerank_slot = threading.BoundedSemaphore(1)
         try:
             self.lexical = LexicalIndex(inventory, broad, self.concepts)
         except sqlite3.OperationalError:
@@ -171,7 +176,7 @@ class RecommendationLab:
             area_ids=self._routing(phrases, seeds, request) if variant == 'V0' else None,
             profile=profile, exploration_fraction=request.exploration_fraction, **opts)
 
-    def recommend(self, request, variant='V3', config=None, *, reranker=None):
+    def recommend(self, request, variant='V3', config=None, *, reranker=None, rerank_timeout=20.):
         start = time.perf_counter()
         request.validate()
         if variant not in VARIANTS:
@@ -180,15 +185,15 @@ class RecommendationLab:
         config.validate()
         profile = self._profile(request)
         legacy = variant in ('V0', 'V1')
+        validated = self.inventory.resolve(request.interests,inventory_version=request.inventory_version)
         if legacy:
             # Preserve old lookup, including its known meaning collisions, for a fair control.
-            phrases = [r if isinstance(r, str) else r['phrase'] for r in request.interests]
-            self.inventory.resolve(request.interests, inventory_version=request.inventory_version)  # validate only
+            phrases = [r['phrase'] for r in validated]
             rows = self.broad if request.result_kind == 'broad' else self.broad + self.concepts
             resolutions = [dict(phrase=p, status='legacy_lookup', concept_id=None, text=t, choices=[])
                            for p, t in zip(phrases, interest_texts(phrases, rows))]
         else:
-            resolutions = self.inventory.resolve(request.interests, inventory_version=request.inventory_version)
+            resolutions = validated
             phrases = [r['phrase'] for r in resolutions]
         batch = dict(schema_version=2, status='ok', algorithm=variant, config=asdict(config),
                      algorithm_id=digest(dict(variant=variant, config=asdict(config), goal=request.goal, version=1)),
@@ -220,7 +225,7 @@ class RecommendationLab:
             eligible = not known and nearest[i] > .035 and lower-EPSILON <= anchored[i] <= upper+EPSILON
             if not legacy:
                 eligible = eligible and nearest[i] >= lower-EPSILON and cid not in seen
-            if request.result_kind == 'specific' and row['id'] not in self.reached:
+            if request.result_kind == 'specific' and row['id'] not in self.reached and (legacy or variant == 'V2'):
                 eligible = False
             if not eligible:
                 continue
@@ -255,13 +260,15 @@ class RecommendationLab:
                     selected = recommend_specific(self.graph, units, [phrases[i] for i in indices], seeds[indices],
                         profile=profile, radius=request.radius, expansion=upper-request.radius, overlap=request.overlap,
                         top_k=request.limit, diversity=request.diversity, randomness=request.randomness,
-                        max_overlap_fraction=request.max_overlap_fraction, seed=request.seed, exploration_fraction=request.exploration_fraction)
+                        max_overlap_fraction=request.max_overlap_fraction, seed=request.seed, exploration_fraction=request.exploration_fraction,
+                        classification_distances=nearest,include_unlinked=variant == 'V3-no-ranking')
                 else:
                     indexes = [r['catalog_index'] for r in candidates]
                     selected = broad_recommend([rows[i] for i in indexes], units[indexes], phrases if request.mode == 'global' else [phrases[request.focus_index]],
                         seeds if request.mode == 'global' else seeds[[request.focus_index]], radius=request.radius,
                         expansion=upper-request.radius, overlap=request.overlap, top_k=request.limit, diversity=request.diversity,
-                        randomness=request.randomness, max_overlap_fraction=request.max_overlap_fraction, seed=request.seed) if indexes else []
+                        randomness=request.randomness, max_overlap_fraction=request.max_overlap_fraction, seed=request.seed,
+                        classification_distances=nearest[indexes]) if indexes else []
                     for row in selected:
                         row['catalog_index'] = indexes[row['catalog_index']]
             else:
@@ -274,7 +281,7 @@ class RecommendationLab:
             cid = self.inventory.source_ids[request.result_kind][i]
             values = by_index.get(i, {})
             graph = None
-            if request.result_kind == 'specific':
+            if request.result_kind == 'specific' and source['id'] in self.reached:
                 reached = self.reached[source['id']]
                 area = row.get('area_id', min(reached['area_ids']))
                 path = reached['paths'][area]
@@ -286,7 +293,10 @@ class RecommendationLab:
                 nearest_interest=phrases[int(nearest_indices[i])], zone=values.get('zone', row['zone']),
                 score_parts=row.get('score_parts', {}), exploration_pick=row.get('exploration_pick', False)))
         if variant == 'V4b':
-            output, status = self._rerank(output, request, reranker)
+            if isinstance(rerank_timeout,bool) or not isinstance(rerank_timeout,(int,float)) or not math.isfinite(rerank_timeout) or not 0 < rerank_timeout <= 20:
+                raise ValueError('Reranking deadline must be positive and no more than twenty seconds.')
+            deadline = min(rerank_timeout,max(0,30-(time.perf_counter()-start)-.25))
+            output, status = self._rerank(output, request, reranker,deadline)
             batch['execution']['external_status'] = status
         batch['recommendations'] = output
         batch['diagnostics'] = dict(eligible_count=len(eligible_ids), retrieved_count=len(reached_ids),
@@ -362,7 +372,7 @@ class RecommendationLab:
                     curiosity=.30*bool(rating.get('curious'))+.18*preference['curiosity'],
                     difficulty=.25*(1-abs(level-desired)) if level is not None and desired is not None else 0.,
                     presentation=-.35 if rating.get('difficulty','none') != 'none' else 0.,
-                    diversity=-diversity*redundancy, area_variety=-.12*area_counts.get(area,0), randomness=jitter[r['concept_id']])
+                    diversity=-diversity*redundancy, area_variety=-.12*area_counts.get(area,0) if area is not None else 0., randomness=jitter[r['concept_id']])
                 return sum(parts.values()), area, parts
             evaluated = [(r,evaluate(r)) for r in available]
             best,(score,area,parts) = max(evaluated,key=lambda pair:(round(pair[1][0],12),-pair[0]['catalog_index']))
@@ -373,8 +383,7 @@ class RecommendationLab:
             pool.remove(best)
         return selected
 
-    @staticmethod
-    def _rerank(rows, request, reranker):
+    def _rerank(self, rows, request, reranker,timeout):
         if reranker is None:
             return rows, 'unconfigured_local_fallback'
         if len(rows) > 30:
@@ -383,15 +392,28 @@ class RecommendationLab:
                        candidates=[{k:r[k] for k in ('concept_id','topic','description','sources')} for r in rows])
         if len(str(payload)) > 20000:
             return rows, 'input_limit_local_fallback'
-        # Adapters must honor the supplied deadline. No retries, and no provider is enabled by default.
+        if timeout <= 0:
+            return rows, 'deadline_local_fallback'
+        if not self._rerank_slot.acquire(blocking=False):
+            return rows, 'busy_local_fallback'
+        result = queue.Queue(maxsize=1)
+        def execute():
+            try:
+                result.put(('ok',reranker(payload,timeout=timeout)))
+            except Exception:
+                result.put(('error',None))
+            finally:
+                self._rerank_slot.release()
+        # A noncooperative adapter cannot block the caller or spawn unbounded workers.
+        # The adapter still owns cancellation of any underlying network request.
+        threading.Thread(target=execute,daemon=True).start()
         try:
-            start = time.perf_counter()
-            order = reranker(payload, timeout=20.)
-            if time.perf_counter()-start > 20:
-                return rows, 'timeout_local_fallback'
+            status,order = result.get(timeout=timeout)
+            if status != 'ok':
+                return rows, 'provider_error_local_fallback'
             if not isinstance(order,list) or not all(isinstance(cid,str) for cid in order) or len(order) != len(rows) or set(order) != set(payload['ids']):
                 return rows, 'invalid_output'
             by_id = {r['concept_id']:r for r in rows}
             return [by_id[cid] for cid in order], 'ok'
-        except Exception:
-            return rows, 'provider_error_local_fallback'
+        except queue.Empty:
+                return rows, 'timeout_local_fallback'

@@ -3,7 +3,7 @@ import json
 import pytest
 
 from recommendation_lab.benchmark import (cache_identity, validate_profiles, SearchBudget,
-    bounded_search, seal_finalists, claim_heldout, evaluation_space, run_cases)
+    bounded_search, seal_finalists, claim_heldout, evaluation_space, run_cases, paired_uncertainty, write_json)
 
 
 def test_cache_key_changes_with_revision_and_encoding_contract():
@@ -71,3 +71,51 @@ def test_benchmark_measures_warm_serving_separately_from_first_request():
     result = run_cases(FixtureLab(),[dict(id='one',interests=['engineering'])],[dict(name='V3',variant='V3')])
     assert result[0]['batch']['execution']['seconds'] == .1
     assert result[0]['batch']['execution']['first_request_seconds'] == .8
+
+
+def test_bootstrap_resamples_families_and_preserves_filtered_profile_keys():
+    records = []
+    for system in ('V0','new'):
+        for pid,score in [('missing',None),('one',.1 if system == 'V0' else .4),('two',.2 if system == 'V0' else .5)]:
+            records.append(dict(system=system,profile_id=pid,family='same',scores={'discovery':score}))
+    result = paired_uncertainty(records,{'discovery':'new'})['discovery']
+    assert result['independent_families'] == 1
+    assert result['profile_deltas'] == pytest.approx({'one':.3,'two':.3})
+
+
+def test_concurrent_json_writes_have_private_temporary_files(tmp_path):
+    from concurrent.futures import ThreadPoolExecutor
+    path = tmp_path/'report.json'
+    with ThreadPoolExecutor(max_workers=4) as pool:
+        list(pool.map(lambda i:write_json(path,{'value':i}),range(20)))
+    assert json.loads(path.read_text())['value'] in range(20)
+    assert not list(tmp_path.glob('*.tmp'))
+
+
+def test_concurrent_identical_nominations_publish_complete_json_once(tmp_path):
+    from concurrent.futures import ThreadPoolExecutor
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        results = list(pool.map(lambda _:seal_finalists(tmp_path,{'discovery':'V3'},{'benchmark':'one'}),range(30)))
+    assert all(value == results[0] for value in results)
+    assert json.loads((tmp_path/'nomination.json').read_text()) == results[0]
+
+
+def test_nomination_filename_is_invisible_until_json_is_complete(tmp_path,monkeypatch):
+    import threading
+    from concurrent.futures import ThreadPoolExecutor
+    from recommendation_lab import benchmark
+    ready,release = threading.Event(),threading.Event()
+    original = benchmark.json.dump
+    def delayed(value,stream,*args,**kwargs):
+        ready.set()
+        release.wait(2)
+        return original(value,stream,*args,**kwargs)
+    monkeypatch.setattr(benchmark.json,'dump',delayed)
+    with ThreadPoolExecutor(max_workers=1) as pool:
+        future = pool.submit(seal_finalists,tmp_path,{'discovery':'V3'},{'benchmark':'one'})
+        try:
+            assert ready.wait(2)
+            assert not (tmp_path/'nomination.json').exists()
+        finally:
+            release.set()
+        assert future.result()['champions']['discovery'] == 'V3'

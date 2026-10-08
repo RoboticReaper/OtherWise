@@ -115,7 +115,8 @@ def nearest_topics(topics, topic_vectors, interests, interest_vectors, top_k=10)
 
 def recommend(topics, topic_vectors, interests, interest_vectors, *,
               radius=0.28, expansion=0.07, overlap=0.015, top_k=10,
-              diversity=0.20, max_overlap_fraction=0.2, randomness=0.03, seed=None) -> list[dict]:
+              diversity=0.20, max_overlap_fraction=0.2, randomness=0.03, seed=None,
+              classification_distances=None) -> list[dict]:
     """Search a band around a union of interest neighborhoods.
 
     All distances are angular: acos(cosine_similarity) / pi, in [0, 1].
@@ -139,13 +140,14 @@ def recommend(topics, topic_vectors, interests, interest_vectors, *,
         raise ValueError("seed must be a nonnegative integer or None.")
 
     rows = score_catalog(topics, topic_vectors, interests, interest_vectors)
+    classifications = _classification_distances(classification_distances,[r['distance'] for r in rows])
     units = _unit_vectors(topic_vectors, "Topic embeddings")
     input_titles = {_key(s) for s in interests}
     lower, upper = max(0.0, radius - overlap), min(1.0, radius + expansion)
     eligible = [r for r in rows if lower - EPSILON <= r["distance"] <= upper + EPSILON
                 and r["distance"] > 0.035 and _key(r["topic"]) not in input_titles]
-    new = [r for r in eligible if r["distance"] >= radius - EPSILON]
-    familiar = [r for r in eligible if r["distance"] < radius - EPSILON]
+    new = [r for r in eligible if classifications[r['catalog_index']] >= radius - EPSILON]
+    familiar = [r for r in eligible if classifications[r['catalog_index']] < radius - EPSILON]
 
     # n_familiar / (n_familiar + n_new) <= fraction, even for sparse bands.
     familiar_count = min(len(familiar), math.floor(top_k * max_overlap_fraction + EPSILON),
@@ -174,3 +176,11 @@ def recommend(topics, topic_vectors, interests, interest_vectors, *,
         remaining[best["zone"]] -= 1
         selected.append(dict(best, boundary_offset=best["distance"] - radius))
     return selected
+
+
+def _classification_distances(values, default):
+    """Optional all-interest quota geometry for a separately focused candidate band."""
+    result = np.asarray(default if values is None else values,dtype=float)
+    if result.shape != (len(default),) or not np.isfinite(result).all() or np.any((result < 0)|(result > 1)):
+        raise ValueError('Classification distances must match candidates and lie in [0,1].')
+    return result
