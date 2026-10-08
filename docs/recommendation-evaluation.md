@@ -1,6 +1,6 @@
 # Recommendation evaluation design
 
-Updated 2026-10-07. The user requested evaluation without a required human trial. This design maintains a separate automated proxy champion for each objective; it does not claim to measure actual personal curiosity.
+Updated 2026-10-07. The evaluation lab and first local experiment cycle are implemented. The user selected the session assistant as evaluator; no additional human trial was required. This design maintains a separate proxy champion for each objective; it does not claim to measure actual personal curiosity. [Experiment 001](../experiments/recommendation-benchmark/cycle-001/summary.md) records the results and limitations.
 
 The confirmed product goal is tunable, defaulting to unfamiliar, connected discovery. External AI services are acceptable when quality improves. Ambiguous phrases use saved-interest context and offer a meaning choice when uncertainty remains. Definitions are in [CONTEXT.md](../CONTEXT.md); evidence is in [the audit](recommendation-audit.md) and [research](recommendation-research.md).
 
@@ -10,7 +10,7 @@ The confirmed product goal is tunable, defaulting to unfamiliar, connected disco
 
 Use two evaluation layers. Deterministic checks enforce concept identity, sources, known exclusions, duplicates, intended senses on labeled fixtures, and request constraints. An evaluator separate from the recommender grades discovery quality from the same interest/context and source-backed candidate text.
 
-The original reference rubric, rubric-v0, uses 0–3 grades, normalized to [0,1]. The initial personal check is complete; the challenger treatments below are proposed for comparison, with personal evidence retained outside public artifacts. No automated evaluator has been calibrated or algorithm champion selected by that check.
+The original reference rubric, rubric-v0, uses 0–3 grades, normalized to [0,1]. The initial personal check is complete; the challenger treatments below are proposed for comparison, with personal evidence retained outside public artifacts. That check did not calibrate an automated evaluator or select an algorithm. Experiment 001 separately used 284 explicit assistant judgments and frozen scorecards. It selected experimental score leaders, with inconclusive evidence for changing the operational default.
 
 | Component | Question | Default weight |
 |---|---|---:|
@@ -34,7 +34,7 @@ Maintain a separate champion for each frozen scorecard:
 | Deeper exploration | DepthScore@10 = avg10(0.55C + 0.30E + 0.15A) | Useful and approachable further exploration |
 | Relevant variety | RelevantDiversity@10 = 0.60 × avg10(C) + 0.40 × (passing count / 10) × D | A varied list that remains connected |
 
-D is mean pairwise angular distance normalized to [0,1] in a separately frozen evaluator embedding space, over passing concepts only; it is zero for fewer than two. Shared relevance/identity gates prevent unrelated randomness from winning. DiscoveryScore was previously called ProxyDiscovery; human-rated QualifiedDiscovery remains separate.
+D is mean pairwise angular distance normalized to [0,1] in a separately frozen evaluator embedding space, over passing concepts only; it is zero for fewer than two. The first cycle uses independent hashed TF-IDF vectors, measuring lexical variety with weaker semantic interpretation than a separately trained semantic encoder. Shared relevance/identity gates prevent unrelated randomness from winning. DiscoveryScore was previously called ProxyDiscovery; human-rated QualifiedDiscovery remains separate.
 
 Report every system on every scorecard. One system may win several tracks. Keep serving latency/cost and Pareto comparisons alongside quality rather than converting dollars into an arbitrary interest score. Ranking weights may be tuned on development cases; the scorecards must stay frozen. These weights and thresholds are declared engineering choices, not scientifically calibrated constants.
 
@@ -56,9 +56,13 @@ The original human QualifiedDiscovery@10 definition remains a strict diagnostic 
 
 Use a fixed, independently configured evaluator model or evaluator ensemble for C, N, E, and A. The recommender must not grade itself using its own ranking score. Provide identical sourced content, hide algorithm identity, and require structured grades with concise reasons and supporting input evidence. Treat candidate text as data, not judge instructions.
 
+For the initial cycle, the user explicitly chose the session assistant instead of configuring a provider. The evaluator identity is `session-assistant-review-2026-10-07-v1`, with its rubric/prompt digest recorded in packets and manifests. This assistant is separate from the deterministic serving rankers but retains implementation context. Packet fields are method-blind; fresh-judge independence, order/repeat stability, and second-judge agreement remain unverified. No external evaluator calls were made and ordinary assistant usage was not estimated as free compute.
+
 Cache judgments by profile/context, concept ID, content digest, rubric, prompt, and evaluator version so identical candidates receive the same evaluation across variants. Record failures and uncertainty rather than converting a timeout into a negative preference. Without a configured semantic judge, report structural/local diagnostics; do not manufacture a complete proxy score.
 
 Check order/format sensitivity, repeated-judgment stability, and agreement on a fixed audit subset with a second independent judge. Freeze prompts and evaluator versions before the held-out run. Report the subset size and which profiles were checked. Large disagreement or a reversed ranking under modest rubric-weight changes yields an inconclusive comparison rather than an unquestioned winner.
+
+The first cycle's frozen-grade sensitivity diagnostic transfers 0.05 between score weights. Primary score leaders remain stable across those settings, but discovery/depth gain intervals span zero across only three held-out families. Repeated/order and second-judge checks were not performed. The score leaders remain provisional, and production retains its existing default. The used held-out profiles are now history for any later optimization cycle.
 
 LLM judging is a proposed approximation for this application. Research identifies position, verbosity, and self-enhancement biases; conversational benchmark agreement does not establish discovery-topic curiosity prediction. [Zheng et al., 2023](https://arxiv.org/abs/2306.05685).
 

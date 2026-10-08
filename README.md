@@ -130,6 +130,13 @@ The radius is an adjustable modeling assumption, not a measured boundary of a pe
 
 Run checks with `python -m pytest -q`.
 
+The [recommendation lab](recommendation_lab/README.md) compares canonical meaning
+resolution, global retrieval, semantic/keyword/graph fusion, and ranking variants
+under four frozen scorecards. [The first experiment](experiments/recommendation-benchmark/cycle-001/summary.md)
+records nineteen development configurations, assistant item judgments, held-out
+results, and a bounded improvement workflow. Production retains its existing
+default while selection evidence remains inconclusive.
+
 The default catalog combines **718 authored everyday interests** with
 **2,734 concepts from Wikidata**, selected using
 [Wikimedia's curated cross-disciplinary list](https://meta.wikimedia.org/wiki/List_of_articles_every_Wikipedia_should_have/Expanded).

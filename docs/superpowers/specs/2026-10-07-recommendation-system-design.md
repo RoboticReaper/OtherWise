@@ -1,6 +1,6 @@
 # OtherWise recommendation system — implementation spec
 
-Date: 2026-10-07. Status: implementation authorized; local variants and the evaluation lab are implemented, with experimental comparisons in progress. Operational selection and production integration remain gated by the evidence below. Human trials are optional; the initial personal rubric sanity check is complete. The user selected the session assistant as the initial automated proxy evaluator.
+Date: 2026-10-07. Status: Stage 1 is complete, including local variants, identity/resolution corrections, the evaluation lab, and the first sealed experiment cycle. Nineteen development configurations and five held-out finalists have explicit session-assistant grades and per-metric scoreboards. Evidence for changing the operational default is inconclusive; source-expansion challengers and production integration remain later stages. Human trials are optional; the initial personal rubric sanity check is complete. The user selected the session assistant as the initial proxy evaluator. [Experiment 001](../../../experiments/recommendation-benchmark/cycle-001/summary.md) records the findings.
 
 ## Problem Statement
 
@@ -214,4 +214,4 @@ This spec adopts the user's confirmed direction and synthesizes the existing res
 - [Evaluation rubric and study proposal](../../recommendation-evaluation.md)
 - [Saved public results and fingerprints](../../../experiments/recommendation-audit/results.json)
 
-The next artifact is the implementation plan, after review of this written spec. Keep the benchmark, local corrections, optional challengers, and client rollout as ordered work with explicit acceptance checks.
+The [implementation plan](../plans/2026-10-07-recommendation-experiments.md) delivered the benchmark and local correction stage. Optional source/AI challengers and client rollout remain ordered work with the acceptance checks above; a small held-out score lead does not authorize automatic rollout.
