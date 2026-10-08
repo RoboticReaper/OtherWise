@@ -146,19 +146,33 @@ def tune(args):
     scores = load_json(args.run/'scoreboard.json')
     profiles = {r['profile']['id']:r['profile'] for r in runs if r['profile'].get('quality',True)}
     names = [s['name'] for s in manifest['systems']]
-    result = bounded_search(names,list(profiles.values()),lambda name,p:
-        {k:scores['systems'][name][k] if scores['systems'][name]['eligible_for_selection'] else None for k in METRICS},
-        SearchBudget(args.rounds,args.per_round,args.patience,.01))
-    if any(name is None for name in result['champions'].values()):
-        raise ValueError('Complete eligible grades are required before nominating finalists.')
-    finalists = set(result['champions'].values()) | {'V0','V1','V2','V3'}
+    kinds = {p.get('controls',{}).get('result_kind','specific') for p in profiles.values()}
+    tables = scores.get('by_kind',{})
+    if not tables and len(kinds) == 1:
+        tables = {next(iter(kinds)):scores}
+    if not kinds or not kinds.issubset(tables):
+        raise ValueError('A complete scoreboard is required for each result kind.')
+    searches = {}
+    for kind in sorted(kinds):
+        table = tables[kind]['systems']
+        selected_profiles = [p for p in profiles.values() if p.get('controls',{}).get('result_kind','specific') == kind]
+        searches[kind] = bounded_search(names,selected_profiles,lambda name,p:
+            {k:table[name][k] if table[name]['eligible_for_selection'] else None for k in METRICS},
+            SearchBudget(args.rounds,args.per_round,args.patience,.01))
+        if any(name is None for name in searches[kind]['champions'].values()):
+            raise ValueError('Complete eligible grades are required before nominating finalists.')
+    result = searches.get('specific',next(iter(searches.values())))
+    track_champions = {kind:search['champions'] for kind,search in searches.items()}
+    finalists = {name for champions in track_champions.values() for name in champions.values()} | {'V0','V1','V2','V3'}
     finalist_systems = [s for s in manifest['systems'] if s['name'] in finalists]
     identity = dict(profiles_sha256=manifest['profiles_sha256'],code_sha256=manifest['code_sha256'],
                     runtime_fingerprint=manifest['runtime_fingerprint'],evaluator=manifest['evaluator'],
-                    finalist_systems=finalist_systems,development_packet_id=manifest['packet_id'])
+                    finalist_systems=finalist_systems,development_packet_id=manifest['packet_id'],
+                    track_champions=track_champions)
     nomination = seal_finalists(args.cycle,result['champions'],identity)
-    write_json(args.cycle/'search.json',result)
-    print(json.dumps(dict(champions=result['champions'],stop_reason=result['stop_reason'],attempts=len(result['attempts']),nomination=nomination['digest'])))
+    write_json(args.cycle/'search.json',dict(result,by_kind=searches))
+    print(json.dumps(dict(champions=result['champions'],track_champions=track_champions,
+                         stop_reason=result['stop_reason'],attempts=len(result['attempts']),nomination=nomination['digest'])))
 
 
 def main():

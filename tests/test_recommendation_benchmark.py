@@ -119,3 +119,28 @@ def test_nomination_filename_is_invisible_until_json_is_complete(tmp_path,monkey
         finally:
             release.set()
         assert future.result()['champions']['discovery'] == 'V3'
+
+
+def test_nomination_preserves_broad_and_specific_metric_champions(tmp_path):
+    import json
+    from argparse import Namespace
+    from recommendation_lab.__main__ import tune, DEFAULT_EVALUATOR
+    from recommendation_lab.evaluation import METRICS
+    run=tmp_path/'development'
+    run.mkdir()
+    names=['V0','V1','V2','V3','specific-winner','broad-winner']
+    manifest=dict(split='development',systems=[dict(name=name,variant='V3',config={}) for name in names],
+                  profiles_sha256='profiles',code_sha256='code',runtime_fingerprint='runtime',
+                  evaluator=DEFAULT_EVALUATOR.identity(),packet_id='packet')
+    profiles=[dict(id='specific',family='one',split='development',interests=['example']),
+              dict(id='broad',family='one',split='development',interests=['example'],controls=dict(result_kind='broad'))]
+    def table(winner):
+        return dict(systems={name:dict(eligible_for_selection=True,**{metric:.9 if name==winner else .1 for metric in METRICS}) for name in names})
+    report=dict(**table('specific-winner'),by_kind=dict(specific=table('specific-winner'),broad=table('broad-winner')))
+    for name,document in [('manifest.json',manifest),('outputs.json',[dict(system='V0',profile=p) for p in profiles]),('scoreboard.json',report)]:
+        (run/name).write_text(json.dumps(document))
+    cycle=tmp_path/'cycle'
+    tune(Namespace(run=run,cycle=cycle,rounds=5,per_round=20,patience=2))
+    nomination=json.loads((cycle/'nomination.json').read_text())
+    assert {s['name'] for s in nomination['identity']['finalist_systems']}==set(names)
+    assert set(nomination['identity']['track_champions']['broad'].values())=={'broad-winner'}
