@@ -15,8 +15,9 @@ from explorer import EPSILON, _key, _unit_vectors, interest_texts, recommend as 
 from feedback import new_profile, set_feedback, area_preferences
 from graph_explorer import graph_candidates, graph_concepts, recommend_specific, select_areas
 from .inventory import digest
+from .known_policy import rank_known
 
-VARIANTS = ('V0', 'V1', 'V2', 'V3', 'V3-no-lexical', 'V3-no-graph', 'V3-no-ranking', 'V3-adaptive', 'V4b')
+VARIANTS = ('V0', 'V1', 'V2', 'V3', 'V3-no-lexical', 'V3-no-graph', 'V3-no-ranking', 'V3-adaptive', 'V4b', 'V5-known')
 GOALS = ('connection', 'discovery', 'depth', 'variety')
 
 
@@ -71,13 +72,20 @@ class RankConfig:
     band: float | None = None
     novelty: float | None = None
     diversity: float | None = None
+    content: float | None = None
+    literal_weight: float = .35
+    distance_cap: float = .50
 
     def validate(self):
         if type(self.pool_limit) is not int or not 1 <= self.pool_limit <= 10000 or type(self.rrf_k) is not int or not 1 <= self.rrf_k <= 1000:
             raise ValueError('Invalid retrieval bounds.')
-        for value in (self.relevance, self.band, self.novelty, self.diversity):
+        for value in (self.relevance, self.band, self.novelty, self.diversity, self.content, self.literal_weight):
             if value is not None and (isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or not 0 <= value <= 1):
                 raise ValueError('Ranking weights must be finite in [0,1].')
+        if self.literal_weight is None:
+            raise ValueError('Literal weight must be a finite number in [0,1].')
+        if isinstance(self.distance_cap,bool) or not isinstance(self.distance_cap,(int,float)) or not math.isfinite(self.distance_cap) or not .035 < self.distance_cap <= .60:
+            raise ValueError('Experimental distance cap must be above .035 and at most .60.')
 
 
 class LexicalIndex:
@@ -200,6 +208,10 @@ class RecommendationLab:
                      inventory_version=self.inventory.version, model_identity=self.model_identity,
                      resolutions=resolutions, recommendations=[], execution=dict(external_status='not_requested', serving_cost_usd=0.,
                      eligibility_policy='adaptive-experiment-v1' if variant == 'V3-adaptive' else 'requested-hard-band'), diagnostics={})
+        if variant == 'V5-known':
+            batch['execution'].update(eligibility_policy='known-concept-experiment-v1',
+                overlap_policy='geometric-diagnostic-only',distance_cap=config.distance_cap,
+                content_feature='description-shape-v1')
         if any(r['status'] == 'clarification_needed' for r in resolutions):
             batch['status'] = 'clarification_needed'
             batch['execution']['seconds'] = time.perf_counter()-start
@@ -216,6 +228,8 @@ class RecommendationLab:
             # Explicit experiment: broad anchors often have no specific neighbors inside
             # the old annulus. These bounds are declared, not fitted to held-out results.
             lower, upper = .08, .55
+        elif variant == 'V5-known':
+            lower, upper = .035, config.distance_cap
         resolved_ids = {r['concept_id'] for r in resolutions if r['concept_id']}
         explicit_known = {cid for cid, r in request.feedback.items() if r.get('known')}
         candidates, seen = [], set()
@@ -243,7 +257,9 @@ class RecommendationLab:
             else:
                 reached_ids = eligible_ids
         else:
-            if variant != 'V2':
+            if variant == 'V5-known':
+                candidates = self._known_retrieve(candidates,request,config,distances,resolutions)
+            elif variant != 'V2':
                 candidates = self._fuse(candidates, request, variant, config, seeds, distances, phrases,
                                         [r['text'] for r in resolutions])
             reached_ids = {r['concept_id'] for r in candidates}
@@ -271,6 +287,8 @@ class RecommendationLab:
                         classification_distances=nearest[indexes]) if indexes else []
                     for row in selected:
                         row['catalog_index'] = indexes[row['catalog_index']]
+            elif variant == 'V5-known':
+                selected = rank_known(candidates,units,request,config,profile,self.reached)
             else:
                 selected = self._rank(candidates, units, request, config, profile)
         output = []
@@ -306,6 +324,28 @@ class RecommendationLab:
             exploration_achieved=sum(r['exploration_pick'] for r in output))
         batch['execution']['seconds'] = time.perf_counter()-start
         return batch
+
+    def _known_retrieve(self,candidates,request,config,distances,resolutions):
+        if self.lexical is None:
+            raise RuntimeError('Lexical index unavailable for this variant.')
+        units = self.broad_vectors if request.result_kind=='broad' else self.concept_vectors
+        indices = [request.focus_index] if request.mode=='path' else list(range(len(resolutions)))
+        literals = self._encode([r['phrase'] for r in resolutions])
+        similarities, lexical = [], dict.fromkeys((r['catalog_index'] for r in candidates),0.)
+        for j in indices:
+            resolution = resolutions[j]
+            # An explicitly chosen ambiguous meaning cannot be diluted by the bare word.
+            weight = 0. if len(self.inventory.aliases.get(_key(resolution['phrase']),set()))>1 else config.literal_weight
+            canonical = np.cos(np.pi*distances[:,j])
+            similarities.append((1-weight)*canonical+weight*(units @ literals[j]))
+            query = resolution['text'] if weight==0 else resolution['phrase']+' '+resolution['text']
+            for rank,i in enumerate(self.lexical.search(request.result_kind,query),1):
+                if i in lexical:
+                    lexical[i] = max(lexical[i],1/(1+rank/20))
+        semantic = np.max(similarities,axis=0)
+        ranked = [dict(row,retrieval=.90*max(0.,float(semantic[row['catalog_index']]))+.10*lexical[row['catalog_index']])
+                  for row in candidates]
+        return sorted(ranked,key=lambda r:(-r['retrieval'],-r['anchor_distance'],r['catalog_index']))[:config.pool_limit]
 
     def _fuse(self, candidates, request, variant, config, seeds, distances, phrases, texts):
         if variant != 'V3-no-lexical' and self.lexical is None:

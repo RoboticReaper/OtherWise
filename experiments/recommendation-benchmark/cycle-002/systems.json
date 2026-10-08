@@ -1,0 +1,148 @@
+{
+  "version": 2,
+  "systems": [
+    {
+      "name": "V0",
+      "variant": "V0",
+      "config": {}
+    },
+    {
+      "name": "V1",
+      "variant": "V1",
+      "config": {}
+    },
+    {
+      "name": "V2",
+      "variant": "V2",
+      "config": {}
+    },
+    {
+      "name": "V3",
+      "variant": "V3",
+      "config": {}
+    },
+    {
+      "name": "A-connection",
+      "variant": "V3-adaptive",
+      "config": {
+        "relevance": 0.8,
+        "band": 0.15,
+        "novelty": 0.05
+      }
+    },
+    {
+      "name": "K-connection",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.95,
+        "content": 0.05,
+        "novelty": 0.0,
+        "diversity": 0.05
+      }
+    },
+    {
+      "name": "K-depth",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.65,
+        "content": 0.35,
+        "novelty": 0.0,
+        "diversity": 0.1
+      }
+    },
+    {
+      "name": "K-discovery",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.65,
+        "content": 0.2,
+        "novelty": 0.15,
+        "diversity": 0.15
+      }
+    },
+    {
+      "name": "K-variety",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.7,
+        "content": 0.2,
+        "novelty": 0.1,
+        "diversity": 0.45
+      }
+    },
+    {
+      "name": "K-no-content",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.9,
+        "content": 0.0,
+        "novelty": 0.1,
+        "diversity": 0.15
+      }
+    },
+    {
+      "name": "K-canonical",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.65,
+        "content": 0.2,
+        "novelty": 0.15,
+        "diversity": 0.15,
+        "literal_weight": 0.0
+      }
+    },
+    {
+      "name": "K-literal",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.65,
+        "content": 0.2,
+        "novelty": 0.15,
+        "diversity": 0.15,
+        "literal_weight": 0.75
+      }
+    },
+    {
+      "name": "K-near",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.65,
+        "content": 0.2,
+        "novelty": 0.15,
+        "diversity": 0.15,
+        "distance_cap": 0.35
+      }
+    },
+    {
+      "name": "K-wide",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.65,
+        "content": 0.2,
+        "novelty": 0.15,
+        "diversity": 0.15,
+        "distance_cap": 0.6
+      }
+    },
+    {
+      "name": "K-deep-content",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.5,
+        "content": 0.5,
+        "novelty": 0.0,
+        "diversity": 0.15
+      }
+    },
+    {
+      "name": "K-diverse",
+      "variant": "V5-known",
+      "config": {
+        "relevance": 0.6,
+        "content": 0.25,
+        "novelty": 0.15,
+        "diversity": 0.65
+      }
+    }
+  ]
+}
