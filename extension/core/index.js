@@ -104,7 +104,7 @@ function validTopicText(value, maxLength = MAX_TOPIC_LENGTH) {
     !value.includes('://');
 }
 
-function sanitizeTopic(value) {
+export function sanitizeTopic(value) {
   const record = typeof value === 'string' ? {topic: value} : value;
   let discovery;
   if (record?.discovery) {

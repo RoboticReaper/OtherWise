@@ -28,6 +28,7 @@ chrome.runtime.onMessage.addListener((message,sender,sendResponse)=>{
     switch(message?.type){
       case 'GET_STATE':return c.getState();
       case 'ACTION':return c.dispatch(message.action);
+      case 'IMPORT_BACKUP':return c.importBackup(message.backup,message.mode);
       case 'IMPORT_HISTORY':return c.importHistory(message.days);
       case 'RECOMMEND':return c.recommend();
       case 'SEARCH':return c.search(message.topic,message.provider,message.context);

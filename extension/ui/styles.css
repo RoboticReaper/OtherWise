@@ -276,3 +276,18 @@ dialog .dialog-actions { display: flex; gap: 8px; justify-content: flex-end; fle
 }
 
 .galaxy-settings-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:14px; }
+
+.backup-dialog { width: min(540px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); overflow: auto; }
+.backup-summary { display: flex; flex-wrap: wrap; gap: 16px 28px; margin: 24px 0; }
+.backup-summary dt { font-size: 12px; color: var(--muted); }
+.backup-summary dd { margin: 4px 0 0; font-size: 24px; }
+.backup-modes { border: 0; padding: 0; margin: 20px 0; min-width: 0; }
+.backup-modes legend { margin-bottom: 12px; }
+.backup-modes label { display: grid; grid-template-columns: 20px 1fr; gap: 5px 8px; margin: 16px 0; cursor: pointer; }
+.backup-modes input { grid-row: span 2; width: auto; margin: 3px 0; }
+.backup-modes small { grid-column: 2; color: var(--muted); line-height: 1.6; }
+.backup-ack { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; line-height: 1.6; margin: 16px 0; }
+.backup-ack[hidden] { display: none; }
+.backup-ack input { width: auto; margin-top: 4px; }
+.backup-error { color: var(--danger, #f6b9a9); font-size: 13px; }
+.backup-dialog .dialog-actions { flex-wrap: wrap; }

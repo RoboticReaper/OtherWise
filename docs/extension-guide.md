@@ -410,3 +410,21 @@ data only and can be removed from the system temporary folder after the run.
 Galaxy’s toolbar includes **Fit**, **Fullscreen**, **Layout settings**, and **Display & key**. Fit centers the whole Galaxy and preserves the selected topic/search and domain filter. Fullscreen keeps the map and toolbar together. Escape closes an open dialog first, then exits fullscreen. Domain labels use lighter captions and avoid overlapping each other or controls. Domain names and saved Interest names have independent visibility switches; hiding names keeps stars, hover names and selection available. These switches also appear in Settings.
 
 Open the **Layout settings** dialog to adjust neighbor count, minimum distance, spread, and repulsion strength. **Generate preview** recomputes all public topics on the connected backend and shows progress; the prior map remains usable while it runs. **Save default** stores the parameters in Settings. **Restore B** returns to the packaged B map. Layout settings do not change semantic recommendation distances or saved interests. The packaged map always remains available offline; custom preview needs a local or shared service connection and the backend layout dependencies. Local mode needs no access code; shared mode requires one.
+
+### Import and export
+
+Open **Settings → Import & export** to download a local JSON backup of saved
+interests, exploration paths, dismissed topics, concept feedback and preferences.
+Service addresses, access codes, browsing evidence and temporary recommendations
+are excluded. Keep the file private because it contains your personal interests.
+
+To restore, choose **Import backup** and review the date and record counts.
+**Merge** adds missing records while keeping this device's preferences and existing
+ratings. **Replace** restores the backup's saved data and preferences after you
+acknowledge replacement. You can export the current profile from the preview first.
+Connection settings remain local. Restored website exclusions also remove matching
+local browsing evidence. Import never grants history access or requests recommendations.
+
+Save any pending Settings edits before importing. Files must use the OtherWise
+backup format and be no larger than 5 MiB. An import that would exceed 40 interests
+is rejected without changing your data; remove some interests or choose Replace.

@@ -1,3 +1,4 @@
+import {restoreBackup} from './core/backup.js';
 import {createGalaxyLayoutTransport} from './galaxy-layout-transport.js';
 import {createState,reduceState,prepareObservation,hashUrl,buildRequest,isAllowedUrl} from './core/index.js';
 import {createFocusTransport} from './focus-transport.js';
@@ -52,14 +53,17 @@ export function createController({catalog,readState,writeState,historySearch,has
   const snapshot=()=>structuredClone(state);
   function cancelRequest(){activeRequest?.abort();activeRequest=null;}
   async function commit(action){
+    return persist(reduceState(state,action,clock()),action.type);
+  }
+  async function persist(next,type){
     const before=state;
-    const next=reduceState(state,action,clock());
-    if(['RESET','CLEAR_DERIVED','DELETE_SOURCES','INVALIDATE'].includes(action.type) || galaxyConnectionKey(next)!==galaxyConnectionKey(before)){galaxyEpoch++;galaxyTransport.invalidate();}
     await writeState(next);
+    if(['RESET','CLEAR_DERIVED','DELETE_SOURCES','INVALIDATE','IMPORT_BACKUP'].includes(type) || galaxyConnectionKey(next)!==galaxyConnectionKey(before)){galaxyEpoch++;galaxyTransport.invalidate();}
     if(next.generation!==before.generation) cancelRequest();
-    if(['RESET','CLEAR_DERIVED','DELETE_SOURCES','INVALIDATE'].includes(action.type) || focusConnectionKey(next)!==focusConnectionKey(before)) invalidateFocus();
+    if(['RESET','CLEAR_DERIVED','DELETE_SOURCES','INVALIDATE','IMPORT_BACKUP'].includes(type) || focusConnectionKey(next)!==focusConnectionKey(before)) invalidateFocus();
     state=next;return snapshot();
   }
+  const importBackup=(backup,mode)=>serial(()=>persist(restoreBackup(state,backup,mode,clock()),'IMPORT_BACKUP'));
   const getState=()=>serial(async()=>{
     const next=reduceState(state,{type:'PRUNE'},clock());
     if(JSON.stringify(next)!==JSON.stringify(state)){state=next;await writeState(state);}
@@ -261,6 +265,6 @@ export function createController({catalog,readState,writeState,historySearch,has
   const startGalaxyLayout=parameters=>serial(()=>({promise:galaxyTransport.start(parameters)})).then(started=>started.promise);
   const getGalaxyLayoutJob=jobId=>serial(()=>({promise:galaxyTransport.status(jobId)})).then(started=>started.promise);
   const subscribeFocusInvalidation=listener=>focusTransport.subscribeInvalidation(listener);
-  return {getState,dispatch,importHistory,observe,reconcile,removeHistory,revokeHistory,revokeEndpoint,recommend,search,
+  return {getState,dispatch,importBackup,importHistory,observe,reconcile,removeHistory,revokeHistory,revokeEndpoint,recommend,search,
     focusRecommendations,cancelFocus,subscribeFocusInvalidation,startGalaxyLayout,getGalaxyLayoutJob};
 }

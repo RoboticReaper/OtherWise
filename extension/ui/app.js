@@ -1,5 +1,6 @@
+import {backupText, backupSettingsView, downloadBackup, readBackupFile, backupError, reviewBackup} from './backup.js';
 import {GALAXY_LAYOUT_DEFAULTS, GALAXY_LAYOUT_BOUNDS, normalizeGalaxyLayoutOptions} from '../core/galaxy-layout-options.js';
-import { getState, dispatch, importHistory, recommend, search, subscribe, openDashboard, requestFocus, cancelFocus, subscribeFocusInvalidation, requestGalaxyLayout, pollGalaxyLayout } from '../bridge.js';
+import { getState, dispatch, importBackup, importHistory, recommend, search, subscribe, openDashboard, requestFocus, cancelFocus, subscribeFocusInvalidation, requestGalaxyLayout, pollGalaxyLayout } from '../bridge.js';
 import { normalizeLanguage, translate, translateError } from './i18n.js';
 import { paginate, PAGE_SIZE, recommendationCursor } from './pagination.js';
 import { icon } from './icons.js';
@@ -430,6 +431,7 @@ function settingsView() {
     <form class="settings-form" id="settings-form" novalidate>${recommendationSettingsView(draft.recommendationOptions)}${galaxySettingsView(draft)}${settingsSection('settings-connection','serviceConnection',`<p class="muted small">${text('localServiceHelp')}</p><button type="button" data-action="connect-local" data-focus="connect-local"${disabled(busy('settings'))}>${text('connectLocal')}</button><p class="muted small">${text('serviceHelp')}</p><label class="field"><span>${text('serviceAddress')}</span><input id="endpoint" name="endpoint" type="url" aria-label="${text('serviceAddress')}" aria-describedby="endpoint-help" data-focus="endpoint" value="${escape(draft.endpoint)}" placeholder="https://your-demo-address" spellcheck="false" autocomplete="off" required><small id="endpoint-help">${text('endpointHelp')}</small></label><label class="field"><span>${text('teamCode')}</span><input id="access-token" name="accessToken" type="password" aria-label="${text('teamCode')}" aria-describedby="token-help" data-focus="access-token" value="${escape(draft.accessToken)}" placeholder="${text('codePlaceholder')}" autocomplete="off" spellcheck="false"><small id="token-help">${text('codeHelp')}</small></label>`)}
     ${settingsSection('settings-exclusions','excludedWebsites',`<p class="muted small">${text('excludedHelp')}</p><label class="field"><span>${text('domainsToSkip')}</span><textarea id="blocked-domains" name="blockedDomains" aria-label="${text('domainsToSkip')}" aria-describedby="domains-help" data-focus="blocked-domains" spellcheck="false">${escape(draft.blockedDomains)}</textarea><small id="domains-help">${text('domainsHelp')}</small></label>`)}
     <div class="actions"><button class="primary" data-focus="save-settings" type="submit"${disabled(busy('settings'))}>${text(busy('settings') ? 'saving' : 'saveSettings')}</button><span class="muted" role="status">${ui.settingsDirty ? text('unsaved') : ui.settingsSaved ? text('settingsSaved') : ''}</span></div></form>
+    <details class="settings-group disclosure" data-disclosure="settings-backup"${ui.openSections.has('settings-backup') ? ' open' : ''}><summary data-focus="settings-backup">${backupText(language(),'title')}</summary><div class="disclosure-body">${backupSettingsView(language(),ui.settingsDirty,busy('backup'))}</div></details>
     ${settingsSection('settings-data','localData',`<p class="muted small">${text('localDataHelp')}</p><div class="data-actions"><button type="button" data-action="clear-derived">${text('clearBrowsing')}</button><button type="button" class="danger" data-action="reset">${text('reset')}</button></div><p class="privacy-note">${text('privacy')}</p>`)}
     ${settingsSection('settings-guide','guideTitle',`<p class="muted small">${text('guideReplayHelp')}</p><button type="button" data-action="open-guide" data-focus="open-guide">${text('showGuide')}</button>`)}</section>`;
 }
@@ -578,8 +580,30 @@ function bindEvents() {
     ui.settingsSaved = false;
     const status = document.querySelector('.settings-form .actions [role="status"]');
     if (status) status.textContent = t('unsaved');
+    const backupImport = document.querySelector('[data-action="backup-import"]');
+    if (backupImport) backupImport.disabled = true;
+    const backupNote = document.querySelector('#backup-draft-note');
+    if (backupNote) backupNote.hidden = false;
   }));
   document.querySelector('#settings-form')?.addEventListener('submit', saveSettings);
+  document.querySelector('#backup-file')?.addEventListener('change', async event => {
+    const file = event.target.files[0]; event.target.value = '';
+    if (!file || ui.settingsDirty || busy('backup')) return;
+    try {
+      const backup = await readBackupFile(file);
+      reviewBackup({backup,language:language(),onExport:async () => downloadBackup(await getState()),onImport:async (backup,mode) => {
+        ui.pending.add('backup');
+        try {
+          const next = await importBackup(backup,mode);
+          mapWorkspace?.destroy(); mapWorkspace = null; ui.galaxyView = null;
+          ui.settingsDirty = false; ui.settingsSaved = false; ui.error = null;
+          ui.selected.clear(); ui.interestSelected.clear(); ui.expandedDescriptions.clear();
+          ui.feedbackPage = 1; ui.candidatePage = 1; ui.recommendationPage = 1;
+          ui.announcement = 'backupImported'; applyState(next);
+        } finally {ui.pending.delete('backup');render();}
+      }});
+    } catch(error) {ui.error = backupError(language(),error);render();}
+  });
 }
 
 async function saveSettings(event) {
@@ -664,6 +688,10 @@ async function onAction(event) {
   if (action === 'reload') { const next = await run('reload', getState); if (next && !unsubscribe) unsubscribe = subscribe(applyState); return; }
   if (action === 'interest-overview') { interestOverviewDialog(button); return; }
   if (action === 'interests-tab') { selectInterestTab(button.dataset.interestTab); return; }
+  if (action === 'backup-import') {document.querySelector('#backup-file')?.click();return;}
+  if (action === 'backup-export') {
+    await run('backup',async () => {downloadBackup(await getState());},'backupExported');return;
+  }
   if (action === 'import') { reviewBrowsingDialog(); return; }
   if (action === 'approve') { await run('approve', () => dispatch({ type: 'APPROVE', ids: [...ui.selected] }), 'selectedSaved', {sound: true}); return; }
   if (action === 'candidate-prev' || action === 'candidate-next') {

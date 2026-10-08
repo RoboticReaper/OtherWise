@@ -1,5 +1,7 @@
 // UI copy only. Topic names, knowledge domains, descriptions and user drafts stay literal.
 const copy = {
+  backupImported: ['Backup imported. Refresh Discover when you are ready for new ideas.', '备份已导入。需要新推荐时，请在「发现」中刷新。'],
+  backupExported: ['Backup download started.', '备份下载已开始。'],
   interestOverview: ['Your interest landscape', '兴趣概览'], interestOverviewShort: ['Overview', '概览'],
   interestOverviewHelp: ['A snapshot of what you have saved and explored.', '看看你保存了哪些兴趣，又探索过哪些主题。'],
   overviewSaved: ['Saved interests', '已保存兴趣'], overviewExplored: ['Topics explored', '探索过的主题'],

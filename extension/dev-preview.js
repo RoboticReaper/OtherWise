@@ -1,3 +1,4 @@
+import {restoreBackup} from './core/backup.js';
 // Explicit, offline design preview. Production never falls back to these samples.
 import {createState,reduceState,prepareObservation} from './core/index.js';
 import {createFocusPreview} from './ui/focus-preview.js';
@@ -28,6 +29,9 @@ export async function dispatch(action){
   if (['RESET','CLEAR_DERIVED','DELETE_SOURCES','INVALIDATE'].includes(action.type)||['endpoint','accessToken','recommendationOptions'].some(key=>JSON.stringify(previous.settings[key])!==JSON.stringify(state.settings[key]))) invalidateFocus();
   if(['SET_DISCOVERY_FEEDBACK','CLEAR_CONCEPT_FEEDBACK','UNDO_DISCOVERY_FEEDBACK'].includes(action.type) && state.generation!==previous.generation && state.settings.recommendationKind==='specific' && state.discovery.context)return recommend({rerank:true});
   return notify();
+}
+export async function importBackup(backup,mode='merge'){
+  state=restoreBackup(state,backup,mode);invalidateFocus();return notify();
 }
 export async function importHistory(){
   const observation=await prepareObservation({url:'https://example.org/sample-ecology',title:'Ecology — sample article',lastVisitTime:Date.now()},samples,{salt:state.salt,blockedDomains:[]});

@@ -486,3 +486,47 @@ test('bulk interest removal and Undo commit atomically through the public contro
   assert.deepEqual(restored.approved,before.approved);
   await controller.dispatch({type:'CLEAR_INTEREST_UNDO',token:removed.interestUndo.token});
 });
+
+test('backup restore persists once, makes no network or permission request and survives reopening', async () => {
+  const {createBackup} = await import('../core/backup.js');
+  const source = rig(); await source.controller.dispatch({type:'ADD_INTEREST',topic:'Botany'});
+  const backup = createBackup(await source.controller.getState(), now);
+  const target = rig({permission:false,endpointPermission:async()=>{throw new Error('Must not request access');}});
+  await target.controller.dispatch({type:'ADD_INTEREST',topic:'Gardening'});
+  const restored = await target.controller.importBackup(backup,'merge');
+  assert.deepEqual(restored.approved.map(row=>row.id),['Gardening','Botany']);
+  assert.equal(target.requests.length,0);
+  const reopened = rig({initialState:target.saved()});
+  assert.deepEqual((await reopened.controller.getState()).approved,restored.approved);
+  const saved = structuredClone(target.saved());
+  await assert.rejects(()=>target.controller.importBackup({...backup,version:999},'replace'));
+  assert.deepEqual(target.saved(),saved);
+});
+
+test('failed backup persistence leaves the live controller profile intact', async () => {
+  const {createBackup} = await import('../core/backup.js');
+  const local = createState(now), source = rig();
+  await source.controller.dispatch({type:'ADD_INTEREST',topic:'Botany'});
+  const controller = createController({catalog,clock:()=>now,
+    readState:async()=>local,writeState:async()=>{throw new Error('Storage full');},
+    hasHistoryPermission:async()=>false,hasEndpointPermission:async()=>false});
+  await controller.getState();
+  const backup = createBackup(await source.controller.getState(),now);
+  await assert.rejects(()=>controller.importBackup(backup,'replace'),/Storage full/);
+  assert.deepEqual((await controller.getState()).approved,[]);
+});
+
+test('backup import cancels an older recommendation response and does not auto-refresh', async () => {
+  const {createBackup} = await import('../core/backup.js');
+  let release, started;
+  const gate = new Promise(resolve=>release=resolve), begin = new Promise(resolve=>started=resolve);
+  const target = rig({fetchImpl:async()=>{started();await gate;return new Response(JSON.stringify({recommendations:[catalog[1]]}));}});
+  await target.controller.dispatch({type:'ADD_INTEREST',topic:'Gardening'});
+  const pending = target.controller.recommend();await begin;
+  const source = rig();await source.controller.dispatch({type:'ADD_INTEREST',topic:'Botany'});
+  const backup = createBackup(await source.controller.getState(),now);
+  await target.controller.importBackup(backup,'replace');release();await pending;
+  const result = await target.controller.getState();
+  assert.deepEqual(result.approved.map(row=>row.id),['Botany']);
+  assert.deepEqual(result.recommendations,[]);
+});

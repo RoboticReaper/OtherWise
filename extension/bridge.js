@@ -51,6 +51,7 @@ export async function dispatch(action){
   }
   return send({type:'ACTION',action});
 }
+export async function importBackup(backup,mode='merge'){return preview?api.importBackup(backup,mode):send({type:'IMPORT_BACKUP',backup,mode});}
 export async function importHistory(days=30){if(preview)return api.importHistory(days);await requestHistory();return send({type:'IMPORT_HISTORY',days});}
 export async function recommend(){return preview?api.recommend():send({type:'RECOMMEND'});}
 export async function search(topic,provider,context){return preview?api.search(topic,provider,context):send({type:'SEARCH',topic,provider,...(context===undefined?{}:{context})});}
