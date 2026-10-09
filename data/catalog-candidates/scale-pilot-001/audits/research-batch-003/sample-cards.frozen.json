@@ -1,0 +1,3781 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-003",
+  "pre_audit_candidate_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+  "sample": [
+    {
+      "id": "local:catalog:foundation-species",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:foundation-species",
+        "label": "Foundation species",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Biology & nature"
+        ],
+        "learning_takeaway": "Connect habitat structure supplied by organisms with the communities that depend on it.",
+        "card": "Foundation species help build the physical setting of a community. Kelp forms underwater forests, while reef-building corals create habitats used by many other organisms. Their importance comes from shaping the environment that supports the community, rather than simply being another species within it.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/biology-2e/pages/45-6-community-ecology"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-community",
+            "locator": "Foundation Species",
+            "note": "OpenStax’s Foundation Species passage identifies kelp forests and coral habitat construction as community-shaping examples."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:ecosystem-engineering",
+            "type": "related_to",
+            "note": "Habitat construction by foundation species can be compared with ecosystem engineering, while avoiding an assertion that the two categories are identical.",
+            "source_ids": [
+              "bio-community",
+              "bio-isle"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:variable-rate-irrigation",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:variable-rate-irrigation",
+        "label": "Variable-rate irrigation",
+        "aliases": [
+          "VRI"
+        ],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Food & agriculture"
+        ],
+        "learning_takeaway": "Match irrigation amounts to different areas of a field instead of assuming every area needs the same water.",
+        "card": "Variable-rate irrigation changes water delivery across different parts of a field. Control zones and prescription maps can account for meaningful differences in soil or crop demand. The technology answers where and how much to apply; its advantage is limited when a field has little relevant variation.",
+        "original_description": null,
+        "identity_urls": [
+          "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/irrigation/variable-rate-irrigation"
+        ],
+        "evidence": [
+          {
+            "source_id": "food-vri",
+            "locator": "Benefits; Zone control; Prescription maps",
+            "note": "UMN describes zone control, prescription maps and reduced benefit in sufficiently uniform fields."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q11453",
+            "type": "facet_of",
+            "note": "Spatially varied application is a specific control approach within irrigation rather than a second identity for irrigation as a whole.",
+            "source_ids": [
+              "food-vri"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:mauna-loa-observatory",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:mauna-loa-observatory",
+        "label": "Mauna Loa Observatory",
+        "aliases": [
+          "MLO"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Earth & environment"
+        ],
+        "learning_takeaway": "See how representative air sampling and repeated calibration support an atmospheric CO2 record.",
+        "card": "Mauna Loa Observatory’s carbon-dioxide record depends on more than taking repeated readings. Air samples are assessed for background conditions, and the analyzer is frequently checked against reference gases. Reporting carbon dioxide in dry air helps prevent changing water vapor from masquerading as a change in carbon dioxide.",
+        "original_description": null,
+        "identity_urls": [
+          "https://gml.noaa.gov/ccgg/about/co2_measurements.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "earth-maunaloa",
+            "locator": "Summary; Mole fraction; Calibration",
+            "note": "NOAA explains background selection, frequent calibration and why dry-air mole fraction removes dilution effects of variable water vapor."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:landsat",
+            "type": "related_to",
+            "note": "Mauna Loa and Landsat offer different long-term environmental records whose comparability depends on calibration, an editorial measurement-practice bridge.",
+            "source_ids": [
+              "earth-maunaloa",
+              "earth-landsat"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:convergent-evolution",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:convergent-evolution",
+        "label": "Convergent evolution",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Biology & nature"
+        ],
+        "learning_takeaway": "Explain similar functions that evolved separately rather than being inherited from a shared ancestor.",
+        "card": "Convergent evolution produces similar features in separate evolutionary lineages. Bird and bat wings both serve flight, but their wing structures arose independently. Their underlying forelimbs still share ancestry, showing that the answer depends on which feature and evolutionary level a comparison is examining.",
+        "original_description": null,
+        "identity_urls": [
+          "https://evolution.berkeley.edu/evolution-101/the-history-of-life-looking-at-the-patterns/homologies-and-analogies/"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-homology",
+            "locator": "Bird and bat wing comparison",
+            "note": "Berkeley connects analogous wings with convergent evolution while distinguishing homologous forelimbs."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:homology-biology",
+            "type": "related_to",
+            "note": "Contrasting wing function with forelimb ancestry makes convergence and biological homology distinguishable without making them mutually exclusive at every level.",
+            "source_ids": [
+              "bio-homology"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:mortise-and-tenon-joint",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:mortise-and-tenon-joint",
+        "label": "Mortise-and-tenon joint",
+        "aliases": [
+          "Mortice and tenon",
+          "Mortise and tenon"
+        ],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Home & crafts"
+        ],
+        "learning_takeaway": "Connect a fitted projection, its matching recess and seated shoulders with a strong wooden joint.",
+        "card": "A mortise-and-tenon joint fits a projecting end of one piece into a matching recess in another. Close-fitting faces provide contact for bonding, while the shoulders seat against the receiving piece. The arrangement connects shape and fit with joint performance, rather than relying on an end-to-end butt connection alone.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.woodmagazine.com/tune-up-a-tenon-11834098"
+        ],
+        "evidence": [
+          {
+            "source_id": "home-tenon",
+            "locator": "Opening definition; Finesse the Fit",
+            "note": "The original WOOD instruction defines projection/recess, glue surface and shoulder contact as components of the fitted joint."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000334",
+            "type": "facet_of",
+            "note": "This is a specific geometric method of joining wooden components within woodworking.",
+            "source_ids": [
+              "home-tenon",
+              "home-adhesives"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:egg-protein-coagulation",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:egg-protein-coagulation",
+        "label": "Egg protein coagulation",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Food & agriculture",
+          "Chemistry & materials"
+        ],
+        "learning_takeaway": "Explain why a liquid egg becomes a network that traps water as it is heated.",
+        "card": "Heating egg white unfolds proteins and allows them to connect with one another. The resulting network traps water, changing a flowing liquid into a firmer structure. Too much heating can make that network rubbery, showing how the same molecular process can produce very different cooking textures.",
+        "original_description": null,
+        "identity_urls": [
+          "https://annex.exploratorium.edu/cooking/eggs/eggscience.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "food-eggs",
+            "locator": "Heating egg proteins",
+            "note": "Exploratorium describes heat unfolding egg-white proteins, intermolecular bonds, trapped water and rubberiness after excessive heating."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:hollandaise-emulsification",
+            "type": "related_to",
+            "note": "Eggs can stabilize food in different ways: heat-linked protein networks versus yolk emulsifiers separating fat droplets.",
+            "source_ids": [
+              "food-eggs",
+              "food-hollandaise"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:mulching",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:mulching",
+        "label": "Mulching",
+        "aliases": [
+          "Mulch"
+        ],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Food & agriculture",
+          "Home & crafts"
+        ],
+        "learning_takeaway": "Explain how a surface covering changes evaporation, weed growth and soil temperature.",
+        "card": "Mulching covers the soil surface with a chosen material. The layer can slow evaporation, reduce light available to weeds and alter soil temperature. Those effects depend on the material, so a gardener’s choice of covering changes more than the appearance of the bed.",
+        "original_description": null,
+        "identity_urls": [
+          "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/mulching-for-soil-and-garden-health"
+        ],
+        "evidence": [
+          {
+            "source_id": "food-mulch",
+            "locator": "Benefits, moisture, light and temperature",
+            "note": "UMN explains surface cover, moisture conservation, weed-light restriction and material-dependent thermal effects."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000000",
+            "type": "facet_of",
+            "note": "A mulch layer is a specific gardening intervention affecting root-zone conditions.",
+            "source_ids": [
+              "food-mulch"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:understitching",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:understitching",
+        "label": "Understitching",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Home & crafts"
+        ],
+        "learning_takeaway": "Keep a facing from rolling to the garment’s outside by securing its seam allowance to the facing.",
+        "card": "Understitching secures a seam allowance to the facing on the inside of a garment. This encourages the seam to roll inward and helps prevent the facing from showing on the outside. It controls an already assembled edge, rather than stabilizing a loose pattern piece before sewing.",
+        "original_description": null,
+        "identity_urls": [
+          "https://pubs.nmsu.edu/_c/C233/index.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "home-facings",
+            "locator": "Seam-allowance understitching; Tips for Applying Facings",
+            "note": "NMSU describes pressing the allowance toward the facing, understitching and preventing the facing from rolling outside."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:staystitching",
+            "type": "related_to",
+            "note": "These stitching operations differ in timing and purpose: control of an assembled facing versus stabilization of an unjoined cut edge.",
+            "source_ids": [
+              "home-facings",
+              "home-staystitch"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:scribing-to-fit",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:scribing-to-fit",
+        "label": "Scribing to fit",
+        "aliases": [
+          "Transfer scribing"
+        ],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Home & crafts"
+        ],
+        "learning_takeaway": "Fit a new component to an irregular existing surface by transferring its contour onto the workpiece.",
+        "card": "Scribing to fit transfers the contour of an existing surface onto a new workpiece. A cabinet panel beside an uneven wall, for example, can be marked to match that wall’s profile. The method handles irregularity directly instead of assuming that every surrounding surface is straight.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.leevalley.com/en-ca/shop/tools/hand-tools/marking-and-measuring/marking-tools/32577-veritas-transfer-log-scribe?item=05U0501"
+        ],
+        "evidence": [
+          {
+            "source_id": "home-scribing",
+            "locator": "Transferring wall contours onto a panel",
+            "note": "Lee Valley describes transferring contours and specifically copying an old irregular wall profile onto a cabinet panel."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:story-stick",
+            "type": "related_to",
+            "note": "The contrast separates copying an encountered contour from reusing dimensions already stored on a story stick.",
+            "source_ids": [
+              "home-scribing",
+              "home-storystick"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:swarna-sub1",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:swarna-sub1",
+        "label": "Swarna-Sub1",
+        "aliases": [
+          "Swarna Sub1"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Food & agriculture",
+          "Biology & nature"
+        ],
+        "learning_takeaway": "See flood tolerance as a bounded crop trait rather than an ability to survive indefinitely underwater.",
+        "card": "Swarna-Sub1 adds temporary flood tolerance to a widely grown rice variety through the SUB1 breeding trait. It can survive periods of submergence that threaten ordinary crops, but longer floods still pose serious limits. The case shows why a tolerant variety is not an invulnerable one.",
+        "original_description": null,
+        "identity_urls": [
+          "https://ricetoday.irri.org/thinking-beyond-the-sub1-gene-making-rice-survive-longer-and-yield-more/"
+        ],
+        "evidence": [
+          {
+            "source_id": "food-sub1",
+            "locator": "SUB1 varieties and submergence duration",
+            "note": "IRRI names Swarna-Sub1 and describes SUB1-enabled temporary submergence survival with sharply reduced performance in longer floods."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:ir8",
+            "type": "related_to",
+            "note": "The two named rice varieties illustrate different breeding objectives: semidwarf crop architecture and temporary flood tolerance.",
+            "source_ids": [
+              "food-sub1",
+              "food-ir8"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:karner-blue-butterfly",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:karner-blue-butterfly",
+        "label": "Karner blue butterfly",
+        "aliases": [
+          "Lycaeides melissa samuelis"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Biology & nature"
+        ],
+        "learning_takeaway": "Explore how ant attendance can protect butterfly larvae while the ants receive carbohydrate-rich secretions.",
+        "card": "Karner blue butterfly larvae can exchange a sugary secretion for protection from ants. The ants gain food, while their attendance can reduce threats to the caterpillars. This butterfly offers a concrete example of mutualism, with the particular ant partners varying between locations.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/biology-2e/pages/44-1-the-scope-of-ecology"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-ecology",
+            "locator": "Community Ecology",
+            "note": "The community-ecology passage describes carbohydrate-rich larval secretions, ant protection and variation in attending ant species."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:mutualism",
+            "type": "related_to",
+            "note": "The documented food-for-protection exchange illustrates mutualism in this named butterfly.",
+            "source_ids": [
+              "bio-ecology"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:endosymbiotic-theory",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:endosymbiotic-theory",
+        "label": "Endosymbiotic theory",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "topic",
+        "domains": [
+          "Biology & nature"
+        ],
+        "learning_takeaway": "Use organelle genomes, division and membranes as evidence of ancestry from once-independent cells.",
+        "card": "Mitochondria retain their own genetic material, divide in a bacteria-like way and have surrounding membranes consistent with an engulfed ancestor. These clues support endosymbiotic origins from once-independent cells. The broad ancestry is well supported even while details of the earliest host–partner sequence remain debated.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/biology-2e/pages/23-1-eukaryotic-origins"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-endo",
+            "locator": "Endosymbiotic Theory; Mitochondria",
+            "note": "OpenStax discusses mitochondrial genomes, fission-like division, membranes and unresolved ordering relative to the host nucleus."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:homology-biology",
+            "type": "related_to",
+            "note": "Organelle similarities and shared ancestry offer a molecular/cellular setting for the ancestry reasoning introduced by biological homology.",
+            "source_ids": [
+              "bio-endo",
+              "bio-homology"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:turbidity",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:turbidity",
+        "label": "Turbidity",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Earth & environment"
+        ],
+        "learning_takeaway": "Connect suspended matter with light scattering, absorption and reduced underwater visibility.",
+        "card": "Turbidity describes water cloudiness associated with suspended particles and other material that interferes with light. Sediment or algae can reduce visibility and the light reaching underwater plants. Cloudy water is not automatically polluted, since some waters are naturally turbid, but the change can still matter ecologically.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.epa.gov/national-aquatic-resource-surveys/indicators-water-clarity"
+        ],
+        "evidence": [
+          {
+            "source_id": "earth-clarity",
+            "locator": "What is water clarity?",
+            "note": "EPA’s clarity account links suspended matter/algae, lower visibility and light available to aquatic plants, including naturally turbid waters."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:secchi-disk",
+            "type": "related_to",
+            "note": "A Secchi disk provides a visual clarity assessment, while turbidity describes the clouding property influencing underwater light.",
+            "source_ids": [
+              "earth-clarity"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:healthy-volunteer-bias-in-screening-studies",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:healthy-volunteer-bias-in-screening-studies",
+        "label": "Healthy-volunteer bias in screening studies",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Health & medicine"
+        ],
+        "learning_takeaway": "Explain why screened and unscreened groups can differ in outcomes for reasons unrelated to the screening.",
+        "card": "People who choose to participate in screening may differ from those who do not, including in health behaviors and other risks. Better outcomes in volunteers can therefore reflect those starting differences. Healthy-volunteer bias makes a simple screened-versus-unscreened comparison an unreliable measure of the screening’s effect.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.cancer.gov/about-cancer/screening/hp-screening-overview-pdq"
+        ],
+        "evidence": [
+          {
+            "source_id": "health-screening",
+            "locator": "Study Designs",
+            "note": "NCI’s study-design discussion identifies self-selected participants’ different health behavior and lower unrelated mortality as a screening-evaluation concern."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:randomized-controlled-trial",
+            "type": "related_to",
+            "note": "A randomized comparison can address initial selection differences that a simple volunteer/nonvolunteer contrast cannot, though later participation and follow-up still matter.",
+            "source_ids": [
+              "health-screening",
+              "health-rct"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:renal-countercurrent-multiplication",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:renal-countercurrent-multiplication",
+        "label": "Renal countercurrent multiplication",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Health & medicine"
+        ],
+        "learning_takeaway": "Explain how opposite flows and unequal permeability build a medullary concentration gradient.",
+        "card": "Fluid travels in opposite directions through neighboring limbs of the kidney’s loop of Henle. The descending limb allows water to leave, while the thick ascending limb moves salt outward without water following. These differences help build the medullary concentration gradient used to recover water.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-6-tubular-reabsorption"
+        ],
+        "evidence": [
+          {
+            "source_id": "health-renalwater",
+            "locator": "Descending Loop; Ascending Loop; Countercurrent Multiplier System",
+            "note": "The descending/thick-ascending passages support unequal water permeability, active salt reabsorption and the opposing-flow arrangement."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:adh-dependent-aquaporin-trafficking",
+            "type": "related_to",
+            "note": "The gradient-building arrangement supports the water recovery that ADH-regulated collecting-duct channels permit.",
+            "source_ids": [
+              "health-renalwater"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:elwha-river-restoration",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:elwha-river-restoration",
+        "label": "Elwha River restoration",
+        "aliases": [
+          "Elwha River Restoration"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "facet_or_application",
+        "domains": [
+          "Earth & environment",
+          "Geography & travel"
+        ],
+        "learning_takeaway": "Explore how removing dams reconnects fish migration and sediment movement.",
+        "card": "Removing dams from the Elwha River restored connections between upstream habitat and the sea. The project reopened routes used by migrating fish and allowed sediment to move again. It demonstrates that river restoration can involve reconnecting processes across a whole watershed, not only repairing one riverbank.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.nps.gov/olym/learn/nature/elwha-ecosystem-restoration.htm"
+        ],
+        "evidence": [
+          {
+            "source_id": "earth-elwha",
+            "locator": "Dam impacts and removal history",
+            "note": "NPS describes the dams’ barriers to fish and sediment and the restoration through dam removal."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000638",
+            "type": "related_to",
+            "note": "Reconnecting fish movement and sediment transport makes the Elwha project an ecological case linking organisms with physical processes.",
+            "source_ids": [
+              "earth-elwha",
+              "bio-ecology"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:coral-bleaching",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:coral-bleaching",
+        "label": "Coral bleaching",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Biology & nature",
+          "Earth & environment"
+        ],
+        "learning_takeaway": "Distinguish stress-driven loss of symbiotic algae from immediate coral death.",
+        "card": "Stressed corals can lose the symbiotic algae living in their tissues, leaving them pale or white. This bleaching also removes an important food source. A bleached coral is not necessarily dead, but prolonged stress makes recovery harder and can ultimately lead to death.",
+        "original_description": null,
+        "identity_urls": [
+          "https://oceanservice.noaa.gov/facts/coral_bleach.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-coral",
+            "locator": "Main explanation; Infographic transcript",
+            "note": "NOAA explains stress-driven expulsion of symbiotic algae, loss of color and food, possible recovery and death if stress persists."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:mutualism",
+            "type": "related_to",
+            "note": "Bleaching shows what can happen when a coral’s beneficial partnership with algae is disrupted.",
+            "source_ids": [
+              "bio-coral",
+              "bio-ecology"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:lake-effect-snow",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:lake-effect-snow",
+        "label": "Lake-effect snow",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Earth & environment"
+        ],
+        "learning_takeaway": "Trace narrow snow bands to cold air gaining heat and moisture over unfrozen lake water.",
+        "card": "Cold air moving across a warmer, unfrozen lake gains heat and moisture. As that air rises, narrow cloud bands can form and deliver lake-effect snow downwind. Wind direction strongly affects where the snow falls, so heavy snowfall can occur close to places receiving very little.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.weather.gov/safety/winter-lake-effect-snow"
+        ],
+        "evidence": [
+          {
+            "source_id": "earth-lakesnow",
+            "locator": "Mechanism and wind-direction explanation",
+            "note": "NWS describes heat/moisture transfer over unfrozen Great Lakes, rising air, narrow snow bands and strong wind-direction dependence."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:atmospheric-river",
+            "type": "related_to",
+            "note": "These are different routes to precipitation: local moisture uptake over a lake versus concentrated long-distance vapor transport.",
+            "source_ids": [
+              "earth-lakesnow",
+              "earth-atmriver"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:homology-biology",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:homology-biology",
+        "label": "Homology (biology)",
+        "aliases": [
+          "Biological homology",
+          "Homology"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Biology & nature"
+        ],
+        "learning_takeaway": "Identify similarity inherited from common ancestry, even when present-day functions differ.",
+        "card": "In biology, homologous features resemble one another because they descend from a shared ancestral feature. Bird and bat forelimbs are homologous, even though their wings evolved separately as flight structures. The comparison shows why common ancestry and similarity of present-day function must be distinguished.",
+        "original_description": null,
+        "identity_urls": [
+          "https://evolution.berkeley.edu/evolution-101/the-history-of-life-looking-at-the-patterns/homologies-and-analogies/"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-homology",
+            "locator": "Main explanation; tetrapod limbs",
+            "note": "Berkeley explicitly treats bird/bat forelimbs as homologous and their wings as independently evolved analogous flight structures."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:convergent-evolution",
+            "type": "related_to",
+            "note": "The same bird–bat comparison separates common-ancestry resemblance from independently evolved similarity in flight.",
+            "source_ids": [
+              "bio-homology"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:enzymatic-browning",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:enzymatic-browning",
+        "label": "Enzymatic browning",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Food & agriculture",
+          "Chemistry & materials"
+        ],
+        "learning_takeaway": "Connect a cut fruit surface, oxygen and enzyme activity with a change in color.",
+        "card": "Cutting an apple exposes its tissues to oxygen, allowing enzymes to drive browning reactions. Changing conditions such as acidity can slow the process. The color change therefore connects damage to plant cells with chemical activity, rather than being explained solely by the fruit drying out.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.acs.org/education/celebrating-chemistry-editions/2021-ncw/slowing-apple-browning.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "food-browning",
+            "locator": "How does it work?",
+            "note": "ACS’s explanatory section connects exposed apple tissue, oxygen, enzymes and the slowing effect of acidity."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:blanching-vegetables-before-freezing",
+            "type": "related_to",
+            "note": "Both topics concern food-quality changes mediated by enzymes, while acidifying an exposed surface and heat-blanching before freezing are different interventions.",
+            "source_ids": [
+              "food-browning",
+              "food-blanching"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:cascadia-subduction-zone",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:cascadia-subduction-zone",
+        "label": "Cascadia Subduction Zone",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Earth & environment",
+          "Geography & travel"
+        ],
+        "learning_takeaway": "Explain the paired coastal and volcanic ranges produced by the descending Juan de Fuca Plate.",
+        "card": "In the Cascadia Subduction Zone, the Juan de Fuca Plate descends beneath North America. Scraped-off material helps build coastal ranges, while deeper processes support the Cascade volcanic arc inland. The region shows how one convergent boundary can produce distinct landscape features at different distances.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.nps.gov/subjects/geology/plate-tectonics-subduction-zones.htm"
+        ],
+        "evidence": [
+          {
+            "source_id": "earth-subduction",
+            "locator": "Cascadia Subduction Zone",
+            "note": "NPS’s Cascadia section links the descending Juan de Fuca Plate, coastal accreted material and inland volcanic chain."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q176318",
+            "type": "related_to",
+            "note": "Cascadia is a particular geographic example of the broader subduction process.",
+            "source_ids": [
+              "earth-subduction"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:crop-rotation",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:fine_application_wording, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:crop-rotation",
+        "label": "Crop rotation",
+        "aliases": [
+          "Crop rotations"
+        ],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Food & agriculture"
+        ],
+        "learning_takeaway": "Disrupt recurring crop-pest associations by changing the crop grown in a field over time.",
+        "card": "Crop rotation changes the crops grown in a field through a planned sequence over time. This can interrupt recurring pest associations and diversify how the field is used. It is a preventive management practice, rather than simply moving an existing pest after it has become a problem.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.epa.gov/safepestcontrol/integrated-pest-management-ipm-principles"
+        ],
+        "evidence": [
+          {
+            "source_id": "food-ipm",
+            "locator": "Prevention",
+            "note": "Identifies crop rotation as a way to prevent pest problems within IPM."
+          },
+          {
+            "source_id": "food-nrcs",
+            "locator": "Conservation Crop Rotation",
+            "note": "Defines planned crop sequence over time on the same field and reduced pest pressure as a possible benefit."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q525309",
+            "type": "application_of",
+            "note": "EPA explicitly includes rotation among preventive practices within integrated pest management.",
+            "source_ids": [
+              "food-ipm"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:leather-temper",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:leather-temper",
+        "label": "Leather temper",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Home & crafts",
+          "Chemistry & materials"
+        ],
+        "learning_takeaway": "Distinguish a hide’s pliability from its thickness when choosing between draping and shape-holding uses.",
+        "card": "Leather temper describes how readily a hide bends, drapes or holds its shape. It is different from thickness: equally thick pieces can feel quite different. A soft garment panel and a firm structured bag may require different tempers, so flexing a sample reveals information a thickness measurement cannot.",
+        "original_description": null,
+        "identity_urls": [
+          "https://unitedleather.com/blog/leather-temper-guide",
+          "https://tandyleather.com/pages/leather-education"
+        ],
+        "evidence": [
+          {
+            "source_id": "home-leather",
+            "locator": "Definition; Matching temper to the job; Describing temper",
+            "note": "United Leather distinguishes temper from thickness and relates soft/firm behavior to garment and structured-bag uses; Tandy independently defines pliability."
+          },
+          {
+            "source_id": "home-leathergloss",
+            "locator": "Temper or Hand",
+            "note": "The independent supplier glossary defines temper as finished-leather pliability from stiff to supple."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q286",
+            "type": "facet_of",
+            "note": "Temper is a particular mechanical property of finished leather, not a different material identity or simply its thickness.",
+            "source_ids": [
+              "home-leather",
+              "home-leathergloss"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:authored:000634",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:authored:000634",
+        "label": "Genetics",
+        "aliases": [
+          "Genetics"
+        ],
+        "entity_kind": "idea",
+        "scope": "broad_field",
+        "domains": [
+          "Biology & nature"
+        ],
+        "learning_takeaway": "Connect inherited DNA variation with environmental influences rather than treating genes as destiny.",
+        "card": "Genetics studies inheritance and variation, including how genes interact with the environment. A DNA difference can influence a trait without determining it alone. Studying genes alongside behavior and surroundings helps explain why genetic information is only part of the story of health.",
+        "original_description": "Studying inheritance and variation in living organisms.",
+        "identity_urls": [],
+        "evidence": [
+          {
+            "source_id": "bio-genetics",
+            "locator": "Definition; Narration",
+            "note": "NHGRI defines inheritance, DNA variation and environmental interaction; its narration explicitly treats behavior and surroundings as additional health influences."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:mosaicism",
+            "type": "related_to",
+            "note": "Mosaicism extends the inheritance discussion to DNA differences arising after fertilization, showing why genetic variation need not be shared by every cell.",
+            "source_ids": [
+              "bio-genetics",
+              "bio-mosaicism"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 2,
+        "imported_records": [
+          {
+            "description": "Studying inheritance and variation in living organisms.",
+            "domain": "Biology & nature",
+            "index": 634,
+            "inventory_kind": "broad",
+            "source": "ProductSpace",
+            "subsection": "Foundations of natural science",
+            "topic": "Genetics"
+          }
+        ]
+      }
+    },
+    {
+      "id": "local:catalog:arterial-blood-gas-testing",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:fine_application_wording",
+      "card": {
+        "id": "local:catalog:arterial-blood-gas-testing",
+        "label": "Arterial blood gas testing",
+        "aliases": [
+          "ABG test"
+        ],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Health & medicine"
+        ],
+        "learning_takeaway": "Distinguish blood oxygenation, carbon-dioxide removal and acid-base measurements in one arterial sample.",
+        "card": "An arterial blood gas test analyzes a blood sample for oxygen, carbon dioxide and pH. These measurements address oxygenation, removal of carbon dioxide and acid–base balance together. Unlike a light-based pulse-oximeter reading, the test requires blood from an artery and supplies information beyond oxygen saturation.",
+        "original_description": null,
+        "identity_urls": [
+          "https://medlineplus.gov/lab-tests/arterial-blood-gas-abg-test/"
+        ],
+        "evidence": [
+          {
+            "source_id": "health-abg",
+            "locator": "What is an arterial blood gas test?",
+            "note": "Supports arterial blood sampling and the oxygen, carbon dioxide and pH measurements."
+          },
+          {
+            "source_id": "health-pulse",
+            "locator": "What happens during pulse oximetry?",
+            "note": "Supports the light-based, noninvasive oxygen-saturation comparison."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:pulse-oximetry",
+            "type": "related_to",
+            "note": "An arterial sample can assess CO2 and pH alongside oxygen, whereas the optical method estimates saturation; the methods are not interchangeable.",
+            "source_ids": [
+              "health-abg",
+              "health-pulse"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "Q2293576",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "Q2293576",
+        "label": "F1 hybrid",
+        "aliases": [
+          "F1 hybrid"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Food & agriculture",
+          "Biology & nature"
+        ],
+        "learning_takeaway": "Distinguish a deliberate parental cross from the variable offspring produced by saving seed from that hybrid.",
+        "card": "An F1 hybrid is the first generation produced by crossing distinct parental lines. In crop varieties, that cross can combine useful traits, but saved seed from the hybrid need not reproduce the same combination. Later offspring can vary, even when the original hybrid plants seemed very consistent.",
+        "original_description": "first-generation hybrid (or crossbreed) animal or plant",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q2293576"
+        ],
+        "evidence": [
+          {
+            "source_id": "food-f1jax",
+            "locator": "Glossary definition",
+            "note": "Verifies F1 as first filial generation from a cross of parental strains."
+          },
+          {
+            "source_id": "food-hybrid",
+            "locator": "Hybrid plants",
+            "note": "Supports combining traits of different parental varieties in crop hybrids."
+          },
+          {
+            "source_id": "food-f1maryland",
+            "locator": "Seed saved from hybrid cultivar",
+            "note": "Explicitly supports the variability of offspring grown from seed saved from F1 hybrids."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000634",
+            "type": "application_of",
+            "note": "A deliberate parental cross and variation in later generations provide a practical crop-breeding application of inheritance and variation.",
+            "source_ids": [
+              "food-f1jax",
+              "food-f1maryland",
+              "food-hybrid",
+              "bio-genetics"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": [
+          {
+            "id": "Q2293576",
+            "topic": "F1 hybrid",
+            "description": "first-generation hybrid (or crossbreed) animal or plant",
+            "kind": "concept",
+            "wikidata_id": "Q2293576",
+            "source_url": "https://www.wikidata.org/wiki/Q2293576",
+            "description_source": "Wikidata",
+            "source_revision": 2426990899,
+            "wikipedia_title": "F1 hybrid",
+            "wikipedia_url": "https://en.wikipedia.org/wiki/F1_hybrid",
+            "wikipedia_page_id": 1183979,
+            "level": null,
+            "inventory_kind": "specific",
+            "index": 1214
+          }
+        ]
+      }
+    },
+    {
+      "id": "local:authored:000631",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:authored:000631",
+        "label": "Oceanography",
+        "aliases": [
+          "Oceanography"
+        ],
+        "entity_kind": "idea",
+        "scope": "broad_field",
+        "domains": [
+          "Earth & environment"
+        ],
+        "learning_takeaway": "Connect ocean chemistry, life, seafloor history and water movement as interacting research areas.",
+        "card": "Oceanography studies the ocean through its water movement, chemistry, living communities and seafloor history. These perspectives overlap: circulation can move nutrients that influence marine life. Field observations, experiments and models connect the ocean’s physical setting with the organisms and chemical processes operating within it.",
+        "original_description": "Investigating the physical, chemical and biological properties of oceans.",
+        "identity_urls": [],
+        "evidence": [
+          {
+            "source_id": "earth-oceanography",
+            "locator": "Descriptions of oceanographic disciplines",
+            "note": "Supports the field’s physical, chemical, biological and geological scope and research methods."
+          },
+          {
+            "source_id": "earth-upwelling",
+            "locator": "Nutrient-rich water and productivity",
+            "note": "Supports the example connecting circulation, nutrients and marine productivity."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:coastal-upwelling",
+            "type": "related_to",
+            "note": "Coastal upwelling illustrates how circulation delivers nutrients and connects physical with biological oceanography.",
+            "source_ids": [
+              "earth-oceanography",
+              "earth-upwelling"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": [
+          {
+            "topic": "Oceanography",
+            "domain": "Earth & environment",
+            "description": "Investigating the physical, chemical and biological properties of oceans.",
+            "source": "ProductSpace",
+            "subsection": "Foundations of natural science",
+            "inventory_kind": "broad",
+            "index": 631
+          }
+        ]
+      }
+    },
+    {
+      "id": "local:catalog:starch-retrogradation",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:starch-retrogradation",
+        "label": "Starch retrogradation",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Food & agriculture",
+          "Chemistry & materials"
+        ],
+        "learning_takeaway": "Distinguish molecular re-ordering during storage from the initial swelling of starch during cooking.",
+        "card": "After starch has been cooked, its molecules can associate again and develop more ordered structures during storage. This retrogradation changes the starch matrix and can affect texture and digestibility. It is a later rearrangement, distinct from the initial water uptake and swelling of heated starch granules.",
+        "original_description": null,
+        "identity_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/42692639/"
+        ],
+        "evidence": [
+          {
+            "source_id": "food-retrogradation",
+            "locator": "Abstract, opening and structural-results paragraphs",
+            "note": "Supports chain reassociation and ordering during storage and effects on structure and digestibility."
+          },
+          {
+            "source_id": "food-gelatinization",
+            "locator": "Starch gelatinization definition",
+            "note": "Supports initial water uptake/swelling during heating, used as the explicit comparison."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:starch-gelatinization",
+            "type": "related_to",
+            "note": "The comparison separates initial heat-driven granule swelling from later chain reassociation.",
+            "source_ids": [
+              "food-retrogradation",
+              "food-gelatinization"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:flat-felled-seam",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:fine_application_wording",
+      "card": {
+        "id": "local:catalog:flat-felled-seam",
+        "label": "Flat-felled seam",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Home & crafts"
+        ],
+        "learning_takeaway": "Create an enclosed-edge seam that is folded down and secured flat with visible stitching.",
+        "card": "A flat-felled seam wraps one fabric edge within a folded edge and secures the assembly flat with stitching. The enclosed raw edges and additional stitching produce a durable finish familiar from jeans and other hard-wearing garments. Its flattened construction distinguishes it from a French seam’s enclosed ridge.",
+        "original_description": null,
+        "identity_urls": [
+          "https://simplicity.com/how-to-sew-flat-felled-seam"
+        ],
+        "evidence": [
+          {
+            "source_id": "home-flatfell",
+            "locator": "Introductory explanation; Tips to Remember",
+            "note": "Supports folded enclosure, stitching flat, durability and jeans use."
+          },
+          {
+            "source_id": "home-frenchseam",
+            "locator": "Opening definition; final seam",
+            "note": "Supports the contrast with enclosing one seam inside another."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:french-seam",
+            "type": "related_to",
+            "note": "The connection compares two genuinely different enclosed-edge constructions rather than counting synonymous finishes.",
+            "source_ids": [
+              "home-flatfell",
+              "home-frenchseam"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:randomized-controlled-trial",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship",
+      "card": {
+        "id": "local:catalog:randomized-controlled-trial",
+        "label": "Randomized controlled trial",
+        "aliases": [
+          "RCT",
+          "Randomised controlled trial"
+        ],
+        "entity_kind": "idea",
+        "scope": "topic",
+        "domains": [
+          "Health & medicine"
+        ],
+        "learning_takeaway": "Use chance-based assignment and a comparison group to assess an intervention’s effects.",
+        "card": "A randomized controlled trial uses chance to assign participants to an intervention or comparison group. Comparing outcomes helps separate the intervention’s effects from differences that might influence who receives it. Randomization is a design tool; clear follow-up and careful analysis are still needed for a trustworthy result.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.nccih.nih.gov/health/placebo-effect"
+        ],
+        "evidence": [
+          {
+            "source_id": "health-rct",
+            "locator": "Randomized placebo-controlled trial explanation",
+            "note": "Supports chance assignment and comparing experimental and control outcomes."
+          },
+          {
+            "source_id": "health-cochrane",
+            "locator": "§8.2.4 and domains of bias; §8.5",
+            "note": "Supports the qualification that randomization alone does not remove analysis or missing-outcome concerns."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:allocation-concealment",
+            "type": "related_to",
+            "note": "Concealing forthcoming assignments protects the random allocation process against selective enrollment.",
+            "source_ids": [
+              "health-rct",
+              "health-cochrane"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:international-hapmap-project",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:international-hapmap-project",
+        "label": "International HapMap Project",
+        "aliases": [
+          "HapMap"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Biology & nature"
+        ],
+        "learning_takeaway": "See how patterns of co-inherited DNA variants helped connect genomic variation with disease.",
+        "card": "The International HapMap Project charted common patterns of human DNA variation, especially groups of variants often inherited together. These genomic neighborhoods helped researchers connect variation with disease. Its contribution was a map of shared variation patterns, rather than merely another sequence from a single individual.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.genome.gov/genetics-glossary/hapmap"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-hapmap",
+            "locator": "Definition; Narration",
+            "note": "NHGRI identifies the project, co-inherited haplotypes, common human variation and the use of linkage-disequilibrium patterns in disease studies."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:genetic-linkage",
+            "type": "related_to",
+            "note": "HapMap’s co-inherited variant neighborhoods give a named research example of genomic linkage patterns; the project is not the general linkage mechanism.",
+            "source_ids": [
+              "bio-hapmap",
+              "bio-linkage"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:e-coli-long-term-evolution-experiment",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:e-coli-long-term-evolution-experiment",
+        "label": "E. coli Long-Term Evolution Experiment",
+        "aliases": [
+          "LTEE",
+          "Long-Term Evolution Experiment"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Biology & nature"
+        ],
+        "learning_takeaway": "See how revived archived populations let researchers test whether prior mutations enabled a later innovation.",
+        "card": "In the E. coli Long-Term Evolution Experiment, researchers replayed evolution using bacteria from different points in one population’s history. Later samples were more likely to evolve citrate use. The result showed how earlier genetic changes could enable a later innovation, making evolutionary history experimentally testable.",
+        "original_description": null,
+        "identity_urls": [
+          "https://pubmed.ncbi.nlm.nih.gov/18524956/"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-ltee",
+            "locator": "Abstract; Figure 1 caption",
+            "note": "The 2008 primary abstract reports replay experiments from different generations and a higher probability of citrate use in later clones, supporting historical contingency."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000634",
+            "type": "related_to",
+            "note": "Replaying different inherited genetic backgrounds links this experiment to genetics through the effect of prior changes on a later trait.",
+            "source_ids": [
+              "bio-ltee",
+              "bio-genetics"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:broadbalk-wheat-experiment",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:broadbalk-wheat-experiment",
+        "label": "Broadbalk Wheat Experiment",
+        "aliases": [
+          "Broadbalk Wheat Experiment",
+          "Broadbalk experiment"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Food & agriculture",
+          "History & culture"
+        ],
+        "learning_takeaway": "Use a persistent untreated comparison to interpret crop responses to fertilizer over many years.",
+        "card": "Broadbalk compares wheat grown under different nutrient treatments across many years. An unfertilized strip maintained since 1843 provides a persistent reference against which fertilized plots can be read. The experiment shows how a long-lived control helps separate treatment effects from the changing background of agricultural seasons.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.era.rothamsted.ac.uk/Broadbalk"
+        ],
+        "evidence": [
+          {
+            "source_id": "food-broadbalk",
+            "locator": "Objectives; Untreated control",
+            "note": "Rothamsted states the nutrient-treatment purpose and unfertilized control strip maintained since 1843."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:park-grass-experiment",
+            "type": "related_to",
+            "note": "Broadbalk and Park Grass are separate long-term Rothamsted experiments, useful for comparing arable nutrient studies with permanent-grassland treatment histories.",
+            "source_ids": [
+              "food-broadbalk",
+              "food-parkgrass"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:park-grass-experiment",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:park-grass-experiment",
+        "label": "Park Grass Experiment",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Food & agriculture",
+          "Biology & nature",
+          "History & culture"
+        ],
+        "learning_takeaway": "Interpret a long-term grassland experiment in light of treatment design and changes in measurement methods.",
+        "card": "Park Grass has studied grassland responses to fertilizer and liming since the nineteenth century. Its long record is not a single unchanging protocol: later liming subplots and changes in harvesting affect comparisons. Reading the experiment requires the treatment and measurement history alongside the hay-yield numbers.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.era.rothamsted.ac.uk/dataset/rpg5/01-PGYields19652024"
+        ],
+        "evidence": [
+          {
+            "source_id": "food-parkgrass",
+            "locator": "Study description; Liming design; Harvest methods",
+            "note": "The e-RA dataset describes the experiment’s 1856 origin, 1965 liming subplots, hay yields and historical harvesting changes affecting comparability."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:broadbalk-wheat-experiment",
+            "type": "related_to",
+            "note": "Both experiments offer long records, but the inspected Park Grass design is a distinct grassland/liming study rather than another name for Broadbalk wheat plots.",
+            "source_ids": [
+              "food-parkgrass",
+              "food-broadbalk"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:encode",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:encode",
+        "label": "ENCODE",
+        "aliases": [
+          "Encyclopedia of DNA Elements"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Biology & nature"
+        ],
+        "learning_takeaway": "Distinguish identifying functional genomic elements from merely obtaining a DNA sequence.",
+        "card": "ENCODE, the Encyclopedia of DNA Elements, investigates the working parts of the genome. Its research includes epigenomic maps from different cell types, helping distinguish the DNA sequence a cell carries from the regions it uses. A shared genome can support different cellular patterns of activity.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.genome.gov/about-genomics/fact-sheets/Epigenomics-Fact-Sheet"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-epigenome",
+            "locator": "How are researchers exploring the epigenome?",
+            "note": "NHGRI states that ENCODE catalogs working genomic parts and includes cell-type epigenomic maps; the same fact sheet explains differentiated cells and altered marks."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:histone-modification",
+            "type": "related_to",
+            "note": "Histone marks are one kind of epigenomic information that makes ENCODE’s cell-type maps useful for studying differential genome use.",
+            "source_ids": [
+              "bio-epigenome"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:isle-royale",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:isle-royale",
+        "label": "Isle Royale",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Biology & nature",
+          "Geography & travel"
+        ],
+        "learning_takeaway": "Use an isolated island study to distinguish predator effects from climate, disease and food availability.",
+        "card": "On Isle Royale in Lake Superior, a long-running study follows wolves, moose and their environment. Predator numbers matter, but disease, climate and available food also influence population changes. The island illustrates why a predator–prey relationship cannot be understood from two population counts alone.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.nps.gov/articles/000/predator-prey-relationships-on-isle-royale.htm"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-isle",
+            "locator": "Why is Isle Royale a Unique Research Location?; Predator-Prey Relationships",
+            "note": "NPS locates the island in Lake Superior and documents the long-running study, disease effects and changing roles of climate and forage."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000638",
+            "type": "related_to",
+            "note": "The island study demonstrates ecology’s need to consider interacting predators, prey and environmental conditions.",
+            "source_ids": [
+              "bio-isle",
+              "bio-ecology"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:maydianne-andrade",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:maydianne-andrade",
+        "label": "Maydianne Andrade",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Biology & nature"
+        ],
+        "learning_takeaway": "See how competing explanations for redback mating behavior can be tested with observations and experiments.",
+        "card": "Maydianne Andrade investigated why male redback spiders sometimes risk being eaten during mating. Her observations and experiments compared nutritional, remating and paternity explanations. The case shows how an apparently self-defeating behavior can be studied by separating competing hypotheses and measuring reproductive consequences.",
+        "original_description": null,
+        "identity_urls": [
+          "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/sexual-selection/"
+        ],
+        "evidence": [
+          {
+            "source_id": "bio-sexual",
+            "locator": "Digging Data—Hypotheses; Data",
+            "note": "Berkeley’s teaching case names Andrade, lays out the three hypotheses and describes observations and laboratory experiments."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:sexual-cannibalism-in-redback-spiders",
+            "type": "related_to",
+            "note": "Andrade’s named research program supplies the experiments used to study the redback sexual-cannibalism case.",
+            "source_ids": [
+              "bio-sexual"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:framingham-heart-study",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:framingham-heart-study",
+        "label": "Framingham Heart Study",
+        "aliases": [
+          "FHS"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Health & medicine"
+        ],
+        "learning_takeaway": "See how repeated examinations across generations established patterns of cardiovascular risk.",
+        "card": "The Framingham Heart Study follows community participants over time, with repeated examinations and later generations joining the research. It connected factors such as blood pressure and cholesterol with future cardiovascular disease. Its long view shows how risk can be studied before illness becomes apparent.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.nhlbi.nih.gov/science/framingham-heart-study-fhs"
+        ],
+        "evidence": [
+          {
+            "source_id": "health-framingham",
+            "locator": "Goals; How is FHS conducted?",
+            "note": "NHLBI describes repeated cohort examinations, multigenerational participation and identification of cardiovascular risk factors including pressure and cholesterol."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000120",
+            "type": "related_to",
+            "note": "Population follow-up can identify prevention targets, linking this specific study with public health’s community-level focus.",
+            "source_ids": [
+              "health-framingham",
+              "health-public"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:steam-bending",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:fine_application_wording, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:steam-bending",
+        "label": "Steam bending",
+        "aliases": [
+          "Steam bending wood"
+        ],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Home & crafts",
+          "Chemistry & materials"
+        ],
+        "learning_takeaway": "Use heat and moisture to soften wood, then retain a curved shape while it cools and dries.",
+        "card": "Steam bending uses heat and moisture to make suitable wood more flexible. The piece is shaped and then restrained while it cools and dries, helping it retain the curve. Moisture changes later can still alter that shape, so bending success involves both forming and conditioning the material.",
+        "original_description": null,
+        "identity_urls": [
+          "https://research.fs.usda.gov/download/treesearch/62266.pdf"
+        ],
+        "evidence": [
+          {
+            "source_id": "home-steambend",
+            "locator": "Principles of Plasticizing and Bending; Fixing the Bend",
+            "note": "USDA Chapter 19 describes heat/moisture plasticization, restraint during cooling/drying and later moisture-dependent curvature changes."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000334",
+            "type": "facet_of",
+            "note": "Steam bending is a wood-shaping process whose success depends on the material’s moisture and heat response.",
+            "source_ids": [
+              "home-steambend",
+              "home-adhesives"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:bias-facings",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:fine_application_wording, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:bias-facings",
+        "label": "Bias facings",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Home & crafts"
+        ],
+        "learning_takeaway": "Finish a curved fabric edge using a narrow strip whose bias orientation allows it to conform to the curve.",
+        "card": "A bias facing uses a narrow strip of fabric cut on the bias to finish a curved edge. The strip can be shaped to follow the curve without the bulk of a wider facing. Its usefulness comes from how the fabric direction allows the finish to conform.",
+        "original_description": null,
+        "identity_urls": [
+          "https://pubs.nmsu.edu/_c/C233/index.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "home-facings",
+            "locator": "Bias Facings",
+            "note": "NMSU describes narrow bias strips shaped to curves and their use to reduce visible or heavy facings."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000345",
+            "type": "facet_of",
+            "note": "A bias facing is a specific sewn curved-edge finish within garment construction.",
+            "source_ids": [
+              "home-facings"
+            ],
+            "assertion": "editorial"
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    }
+  ],
+  "all_frozen_sources": [
+    {
+      "displayed_update_date": "2026-10-08",
+      "id": "bio-genetics",
+      "inspection_artifact": "source-responses/005-genetics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and Narration",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:00:22.636744+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHGRI: Genetics",
+      "url": "https://www.genome.gov/genetics-glossary/Genetics"
+    },
+    {
+      "displayed_update_date": "2020-08-16",
+      "id": "bio-epigenome",
+      "inspection_artifact": "source-responses/006-biology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What makes up the epigenome?; What is imprinting?; How are researchers exploring the epigenome?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:00:35.891531+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHGRI: Epigenomics Fact Sheet",
+      "url": "https://www.genome.gov/about-genomics/fact-sheets/Epigenomics-Fact-Sheet"
+    },
+    {
+      "displayed_update_date": "2026-10-08",
+      "id": "bio-mosaicism",
+      "inspection_artifact": "source-responses/002-biology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and Narration",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T18:59:37.673975+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHGRI: Mosaicism",
+      "url": "https://www.genome.gov/genetics-glossary/Mosaicism"
+    },
+    {
+      "displayed_update_date": "2026-10-08",
+      "id": "bio-splicing",
+      "inspection_artifact": "source-responses/005-genetics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:00:22.636744+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHGRI: Alternative Splicing",
+      "url": "https://www.genome.gov/genetics-glossary/Alternative-Splicing"
+    },
+    {
+      "displayed_update_date": "2026-10-08",
+      "id": "bio-linkage",
+      "inspection_artifact": "source-responses/005-genetics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and Narration",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:00:22.636744+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHGRI: Linkage",
+      "url": "https://www.genome.gov/genetics-glossary/Linkage"
+    },
+    {
+      "displayed_update_date": "2026-10-08",
+      "id": "bio-centimorgan",
+      "inspection_artifact": "source-responses/005-genetics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and Narration",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:00:22.636744+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHGRI: Centimorgan (cM)",
+      "url": "https://www.genome.gov/genetics-glossary/Centimorgan-cM"
+    },
+    {
+      "displayed_update_date": "2026-10-08",
+      "id": "bio-map",
+      "inspection_artifact": "source-responses/005-genetics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:00:22.636744+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHGRI: Genetic Map",
+      "url": "https://www.genome.gov/genetics-glossary/Genetic-Map"
+    },
+    {
+      "displayed_update_date": "2021-04-19",
+      "id": "bio-penetrance",
+      "inspection_artifact": "source-responses/005-genetics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Reduced penetrance; Variable expressivity",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:00:22.636744+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "MedlinePlus Genetics: Reduced penetrance and variable expressivity",
+      "url": "https://medlineplus.gov/genetics/understanding/inheritance/penetranceexpressivity/"
+    },
+    {
+      "displayed_update_date": "2026-10-08",
+      "id": "bio-hapmap",
+      "inspection_artifact": "source-responses/005-genetics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and Narration",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:00:22.636744+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHGRI: HapMap",
+      "url": "https://www.genome.gov/genetics-glossary/hapmap"
+    },
+    {
+      "displayed_update_date": "2021-04-19",
+      "id": "bio-anticipation",
+      "inspection_artifact": "source-responses/012-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Explanatory paragraphs 1–5",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:02:49.299511+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "MedlinePlus Genetics: What do geneticists mean by anticipation?",
+      "url": "https://medlineplus.gov/genetics/understanding/inheritance/anticipation/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-ecology",
+      "inspection_artifact": "source-responses/008-biology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening; Population Ecology; Community Ecology",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:01:49.922399+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Biology 2e §44.1: The Scope of Ecology",
+      "url": "https://openstax.org/books/biology-2e/pages/44-1-the-scope-of-ecology"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-community",
+      "inspection_artifact": "source-responses/006-biology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Competitive Exclusion Principle; Foundation Species",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:00:35.891531+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Biology 2e §45.6: Community Ecology",
+      "url": "https://openstax.org/books/biology-2e/pages/45-6-community-ecology"
+    },
+    {
+      "displayed_update_date": "2020-12-07",
+      "id": "bio-seastar",
+      "inspection_artifact": "source-responses/014-ecology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening paragraphs on keystone predation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:03:28.216207+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NPS Redwood: Sea Stars",
+      "url": "https://www.nps.gov/redw/learn/nature/seastars.htm"
+    },
+    {
+      "displayed_update_date": "2025-07-06",
+      "id": "bio-isle",
+      "inspection_artifact": "source-responses/008-biology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Why is Isle Royale a Unique Research Location?; Wolves and Beaver; Predator-Prey Relationships",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:01:49.922399+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NPS: Predator-Prey Relationships on Isle Royale",
+      "url": "https://www.nps.gov/articles/000/predator-prey-relationships-on-isle-royale.htm"
+    },
+    {
+      "displayed_update_date": "2026-09-23",
+      "id": "bio-coral",
+      "inspection_artifact": "source-responses/009-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Main explanation and infographic transcript",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:02:16.602897+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA: What is coral bleaching?",
+      "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-edna",
+      "inspection_artifact": "source-responses/014-ecology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "EDNA; Metabarcoding; Inhibited Sample; Internal Positive Control",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:03:28.216207+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USGS: eDNA—Environmental DNA Glossary",
+      "url": "https://www.usgs.gov/glossary/edna-environmental-dna-glossary-umesc"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-succession",
+      "inspection_artifact": "source-responses/014-ecology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Key Findings; Glossary: Succession",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:03:28.216207+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USDA Forest Service: Mount St. Helens—A Living Laboratory for Ecological Research",
+      "url": "https://research.fs.usda.gov/pnw/projects/mountsthelens"
+    },
+    {
+      "displayed_update_date": "2020-06",
+      "id": "bio-drift",
+      "inspection_artifact": "source-responses/008-biology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Main explanation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:01:49.922399+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "UC Berkeley Understanding Evolution: Genetic drift",
+      "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/genetic-drift/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-bottleneck",
+      "inspection_artifact": "source-responses/009-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Population bottlenecks; Founder effects",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:02:16.602897+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "UC Berkeley Understanding Evolution: Bottlenecks and founder effects",
+      "url": "https://evolution.berkeley.edu/bottlenecks-and-founder-effects/"
+    },
+    {
+      "displayed_update_date": "2020-06",
+      "id": "bio-sexual",
+      "inspection_artifact": "source-responses/009-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening; Digging Data—Maydianne Andrade and redback spiders",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:02:16.602897+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "UC Berkeley Understanding Evolution: Sexual selection",
+      "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/sexual-selection/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-coevolution",
+      "inspection_artifact": "source-responses/009-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and acacia–ant example",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:02:16.602897+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "UC Berkeley Understanding Evolution: Coevolution",
+      "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/coevolution/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-homology",
+      "inspection_artifact": "source-responses/012-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Main explanation, tetrapod limbs and bird/bat wings",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:02:49.299511+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "UC Berkeley Understanding Evolution: Homologies and analogies",
+      "url": "https://evolution.berkeley.edu/evolution-101/the-history-of-life-looking-at-the-patterns/homologies-and-analogies/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-neutral",
+      "inspection_artifact": "source-responses/012-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Main explanation and explicit qualifications",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:02:49.299511+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "UC Berkeley Understanding Evolution: Neutral theory",
+      "url": "https://evolution.berkeley.edu/neutral-theory-the-relative-importance-of-drift-and-selection/"
+    },
+    {
+      "displayed_update_date": "2026-10-08",
+      "id": "bio-duplication",
+      "inspection_artifact": "source-responses/012-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and Narration",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:02:49.299511+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHGRI: Duplication",
+      "url": "https://www.genome.gov/genetics-glossary/Duplication"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-exapt",
+      "inspection_artifact": "source-responses/018-physiology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and feather example",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:07:13.859097+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "UC Berkeley Understanding Evolution: Exaptations",
+      "url": "https://evolution.berkeley.edu/exaptations/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-endo",
+      "inspection_artifact": "source-responses/016-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Endosymbiotic Theory; Mitochondria",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:06:45.015057+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Biology 2e §23.1: Eukaryotic Origins",
+      "url": "https://openstax.org/books/biology-2e/pages/23-1-eukaryotic-origins"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-hgt",
+      "inspection_artifact": "source-responses/017-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening explanation and three mechanisms",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:07:01.294458+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Microbiology §11.6: How Asexual Prokaryotes Achieve Genetic Diversity",
+      "url": "https://openstax.org/books/microbiology/pages/11-6-how-asexual-prokaryotes-achieve-genetic-diversity"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "bio-ltee",
+      "inspection_artifact": "source-responses/017-evolution-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Abstract and Figure 1 caption",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:07:01.294458+00:00",
+      "revision": "doi:10.1073/pnas.0803151105",
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Blount, Borland and Lenski (2008): Historical contingency and the evolution of a key innovation in an experimental population of Escherichia coli",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18524956/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-homeostasis",
+      "inspection_artifact": "source-responses/022-physiology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening and Negative Feedback",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:10:02.923975+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Anatomy and Physiology 2e §1.5: Homeostasis",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-5-homeostasis"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-vascular",
+      "inspection_artifact": "source-responses/019-physiology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Baroreceptor Reflexes; Renin-Angiotensin-Aldosterone Mechanism; Atrial Natriuretic Hormone",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:08:33.471792+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Anatomy and Physiology 2e §20.4: Homeostatic Regulation of the Vascular System",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/20-4-homeostatic-regulation-of-the-vascular-system"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-renalflow",
+      "inspection_artifact": "source-responses/020-physiology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Autoregulation; Arteriole Myogenic Mechanism; Tubuloglomerular Feedback",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:09:20.877632+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Anatomy and Physiology 2e §25.7: Regulation of Renal Blood Flow",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-7-regulation-of-renal-blood-flow"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-renalwater",
+      "inspection_artifact": "source-responses/020-physiology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Countercurrent Multiplier System; Collecting Ducts and Recovery of Water",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:09:20.877632+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Anatomy and Physiology 2e §25.6: Tubular Reabsorption",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/25-6-tubular-reabsorption"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-acidbase",
+      "inspection_artifact": "source-responses/020-physiology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Respiratory Regulation of Acid-Base Balance, physiological mechanism only",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:09:20.877632+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Anatomy and Physiology 2e §26.4: Acid-Base Balance",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/26-4-acid-base-balance"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-gases",
+      "inspection_artifact": "source-responses/020-physiology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Oxygen Dissociation from Hemoglobin; Carbon Dioxide Transport",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:09:20.877632+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Anatomy and Physiology 2e §22.5: Transport of Gases",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-5-transport-of-gases"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-thyroid",
+      "inspection_artifact": "source-responses/022-physiology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Regulation of TH Synthesis",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:10:02.923975+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Anatomy and Physiology 2e §17.4: The Thyroid Gland",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-4-the-thyroid-gland"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-pancreas",
+      "inspection_artifact": "source-responses/022-physiology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Regulation of Blood Glucose Levels by Insulin and Glucagon",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:10:02.923975+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Anatomy and Physiology 2e §17.9: The Endocrine Pancreas",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/17-9-the-endocrine-pancreas"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-surfactant",
+      "inspection_artifact": "source-responses/032-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Causes and risk factors",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:13:57.830152+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHLBI: Respiratory Distress Syndrome",
+      "url": "https://www.nhlbi.nih.gov/health/respiratory-distress-syndrome"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-lungtests",
+      "inspection_artifact": "source-responses/021-diagnostic-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Common lung function tests; What happens during lung function testing?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:09:39.704375+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "MedlinePlus: Lung Function Tests",
+      "url": "https://medlineplus.gov/lab-tests/lung-function-tests/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-abg",
+      "inspection_artifact": "source-responses/021-diagnostic-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What is an arterial blood gas test?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:09:39.704375+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "MedlinePlus: Arterial Blood Gas Test",
+      "url": "https://medlineplus.gov/lab-tests/arterial-blood-gas-abg-test/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-pulse",
+      "inspection_artifact": "source-responses/026-diagnostics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What happens?; Preparation; Is there anything else?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:11:31.983959+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "MedlinePlus: Pulse Oximetry",
+      "url": "https://medlineplus.gov/lab-tests/pulse-oximetry/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-hearing",
+      "inspection_artifact": "source-responses/026-diagnostics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Audiometry; Tympanometry",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:11:31.983959+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "MedlinePlus: Hearing Tests for Adults",
+      "url": "https://medlineplus.gov/lab-tests/hearing-tests-for-adults/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-oae",
+      "inspection_artifact": "source-responses/026-diagnostics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Otoacoustic Emissions (OAE) Test",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:11:31.983959+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "ASHA/Communication Health Support Association: Types of Hearing Tests",
+      "url": "https://helpingyoucommunicate.org/article/types-of-hearing-tests"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-a1c",
+      "inspection_artifact": "source-responses/024-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What is the test?; Is there anything else?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:10:51.427983+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "MedlinePlus: Hemoglobin A1C Test",
+      "url": "https://medlineplus.gov/lab-tests/hemoglobin-a1c-hba1c-test/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-lab",
+      "inspection_artifact": "source-responses/024-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What is a reference range?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:10:51.427983+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "MedlinePlus: How to Understand Your Lab Results",
+      "url": "https://medlineplus.gov/lab-tests/how-to-understand-your-lab-results/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-screening",
+      "inspection_artifact": "source-responses/025-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Screening test performance; Interpreting survival; Study Designs; Harms",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:11:10.474958+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NCI: Cancer Screening Overview (PDQ), Health Professional Version",
+      "url": "https://www.cancer.gov/about-cancer/screening/hp-screening-overview-pdq"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-bp",
+      "inspection_artifact": "source-responses/031-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "24-hour blood pressure monitoring",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:13:34.546776+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHS: Blood pressure test",
+      "url": "https://www.nhs.uk/tests-and-treatments/blood-pressure-test/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-public",
+      "inspection_artifact": "source-responses/031-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What is public health?; Prevention examples; Comparison with health care",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:13:34.546776+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "American Public Health Association: What is public health?",
+      "url": "https://www.apha.org/what-is-public-health"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-rct",
+      "inspection_artifact": "source-responses/031-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening explanation of randomized placebo-controlled trials",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:13:34.546776+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NCCIH: Placebo Effect",
+      "url": "https://www.nccih.nih.gov/health/placebo-effect"
+    },
+    {
+      "displayed_update_date": "2019-10",
+      "id": "health-cochrane",
+      "inspection_artifact": "source-responses/029-methods-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "§8.2.2; §8.3; §8.3.2",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:12:34.986113+00:00",
+      "revision": "Cochrane Handbook version 6.5, 2024; chapter updated October 2019",
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Cochrane Handbook Chapter 8: Assessing risk of bias in a randomized trial",
+      "url": "https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-08"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-n1",
+      "inspection_artifact": "source-responses/031-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Randomized multiple crossover design; washout periods",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:13:34.546776+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "UK Office for Health Improvement and Disparities: N-of-1 study—comparative studies",
+      "url": "https://www.gov.uk/guidance/n-of-1-study-comparative-studies"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-surrogate",
+      "inspection_artifact": "source-responses/029-methods-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and examples",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:12:34.986113+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NCI: Surrogate endpoint",
+      "url": "https://www.cancer.gov/publications/dictionaries/cancer-terms/def/surrogate-endpoint"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-framingham",
+      "inspection_artifact": "source-responses/031-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Goals; Findings; How is FHS conducted?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:13:34.546776+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHLBI: Framingham Heart Study",
+      "url": "https://www.nhlbi.nih.gov/science/framingham-heart-study-fhs"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-sprint",
+      "inspection_artifact": "source-responses/026-diagnostics-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Why was SPRINT important?; Key findings; Side effects",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:11:31.983959+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NHLBI: Systolic Blood Pressure Intervention Trial",
+      "url": "https://www.nhlbi.nih.gov/science/systolic-blood-pressure-intervention-trial-sprint-study"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-lind",
+      "inspection_artifact": "source-responses/029-methods-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Biography, scurvy experiment and interpretation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:12:34.986113+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Royal College of Physicians of Edinburgh: James Lind",
+      "url": "https://www.rcpe.ac.uk/heritage/james-lind"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-apgar",
+      "inspection_artifact": "source-responses/029-methods-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Biography, standardized score paragraphs",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:12:34.986113+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NLM Changing the Face of Medicine: Virginia Apgar",
+      "url": "https://www.nlm.nih.gov/exhibition/changing-the-face-of-medicine/physicians/biography_virginia_apgar.html?id=item-13"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-nightingale",
+      "inspection_artifact": "source-responses/032-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Abstract; Rose Diagram; mortality dataset reconstruction",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:13:57.830152+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Science Museum Group Journal: A statistical campaign—Florence Nightingale and Harriet Martineau’s England and her Soldiers",
+      "url": "https://journal.sciencemuseum.ac.uk/article/nightingale-and-martineau/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "health-graft",
+      "inspection_artifact": "source-responses/031-health-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What is a skin graft?; Risks—graft take",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:13:34.546776+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University Hospitals Sussex NHS: Looking after your split thickness skin graft and donor site",
+      "url": "https://www.uhsussex.nhs.uk/resources/looking-after-your-split-thickness-skin-graft-and-donor-site/"
+    },
+    {
+      "displayed_update_date": "2023-08-08",
+      "id": "earth-geology",
+      "inspection_artifact": "source-responses/037-geology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening definition and scientific-method explanation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:18:39.480527+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NPS: Geoscience Concepts",
+      "url": "https://www.nps.gov/subjects/geology/geology-concepts.htm"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-subduction",
+      "inspection_artifact": "source-responses/038-ocean-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Introduction; Subduction Zones; Cascadia Subduction Zone",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:19:02.960968+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NPS: Convergent Plate Boundaries—Subduction Zones",
+      "url": "https://www.nps.gov/subjects/geology/plate-tectonics-subduction-zones.htm"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-rebound",
+      "inspection_artifact": "source-responses/037-geology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Explanatory paragraphs and fence example",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:18:39.480527+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USGS: Reid’s Elastic Rebound Theory",
+      "url": "https://earthquake.usgs.gov/earthquakes/events/1906calif/18april/reid.php"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-liquefaction",
+      "inspection_artifact": "source-responses/035-geology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening explanation and earthquake examples",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:17:31.235255+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USGS: What is liquefaction?",
+      "url": "https://www.usgs.gov/faqs/what-liquefaction"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-slowslip",
+      "inspection_artifact": "source-responses/035-geology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Abstract",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:17:31.235255+00:00",
+      "revision": "doi:10.1130/B30287.1",
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Gomberg et al. (2010): Slow slip phenomena in Cascadia from 2007 and beyond",
+      "url": "https://www.usgs.gov/publications/slow-slip-phenomena-cascadia-2007-and-beyond-a-review"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-tomography",
+      "inspection_artifact": "source-responses/037-geology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Abstract",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:18:39.480527+00:00",
+      "revision": "doi:10.1785/0120230229",
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Fichtner et al. (2024): Seismic tomography 2023",
+      "url": "https://www.usgs.gov/publications/seismic-tomography-2023"
+    },
+    {
+      "displayed_update_date": "2023-11-07",
+      "id": "earth-deformation",
+      "inspection_artifact": "source-responses/035-geology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening; Global Positioning System; Tiltmeter",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:17:31.235255+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USGS: Deformation Monitoring at Mount St. Helens",
+      "url": "https://www.usgs.gov/volcanoes/mount-st.-helens/science/deformation-monitoring-mount-st-helens"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-lahar",
+      "inspection_artifact": "source-responses/043-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Summary",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:21:15.291358+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USGS: Lahar—River of volcanic mud and debris",
+      "url": "https://www.usgs.gov/publications/lahar-river-volcanic-mud-and-debris"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-joints",
+      "inspection_artifact": "source-responses/037-geology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Igneous Structures, pillow basalt and columnar jointing paragraphs only",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:18:39.480527+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USGS: Geology of Shenandoah National Park",
+      "url": "https://www.usgs.gov/geology-and-ecology-of-national-parks/geology-shenandoah-national-park"
+    },
+    {
+      "displayed_update_date": "2023-11-24",
+      "id": "earth-kilauea",
+      "inspection_artifact": "source-responses/037-geology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening; Dike migration; Summit collapse sequence",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:18:39.480527+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USGS: 2018 lower East Rift Zone Eruption and Summit Collapse at Kīlauea",
+      "url": "https://www.usgs.gov/volcanoes/kilauea/science/2018-lower-east-rift-zone-eruption-and-summit-collapse"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-lavatube",
+      "inspection_artifact": "source-responses/037-geology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Lava Tube Formation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:18:39.480527+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NPS: Lava Caves/Tubes",
+      "url": "https://www.nps.gov/subjects/caves/lava-caves-or-tubes.htm"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-karst",
+      "inspection_artifact": "source-responses/037-geology-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening explanation of dissolution and subsurface drainage",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:18:39.480527+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NPS: Karst Landscapes",
+      "url": "https://www.nps.gov/subjects/caves/karst-landscapes.htm"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-oceanography",
+      "inspection_artifact": "source-responses/039-ocean-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Descriptions of four oceanographic disciplines",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:19:40.321649+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA: What does an oceanographer do?",
+      "url": "https://oceanservice.noaa.gov/facts/oceanographer.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-rainshadow",
+      "inspection_artifact": "source-responses/046-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Windward precipitation and leeward drying mechanism",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:22:56.661156+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA Climate.gov: Rain Shadows on the Summits of Hawaii",
+      "url": "https://prod-01-asg-www-climate.woc.noaa.gov/news-features/featured-images/rain-shadows-summits-hawaii"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-ekman",
+      "inspection_artifact": "source-responses/038-ocean-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Main explanation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:19:02.960968+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA: The Ekman Spiral",
+      "url": "https://oceanservice.noaa.gov/education/tutorial_currents/04currents4.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-upwelling",
+      "inspection_artifact": "source-responses/038-ocean-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Main explanation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:19:02.960968+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA: What is upwelling?",
+      "url": "https://oceanservice.noaa.gov/facts/upwelling.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-thermohaline",
+      "inspection_artifact": "source-responses/039-ocean-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Main explanation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:19:40.321649+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA: Thermohaline Circulation",
+      "url": "https://oceanservice.noaa.gov/education/tutorial_currents/05conveyor1.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-enso",
+      "inspection_artifact": "source-responses/041-atmosphere-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Normal Pacific conditions; El Niño; La Niña",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:20:31.862576+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA: What are El Niño and La Niña?",
+      "url": "https://oceanservice.noaa.gov/facts/ninonina.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-heatwave",
+      "inspection_artifact": "source-responses/041-atmosphere-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What are marine heat waves?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:20:31.862576+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA NCEI: The Data Behind Our Warming Oceans",
+      "url": "https://www.ncei.noaa.gov/news/data-behind-our-warming-oceans"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-acidification",
+      "inspection_artifact": "source-responses/041-atmosphere-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Main explanation of CO2, hydrogen and carbonate ions",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:20:31.862576+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA: What is Ocean Acidification?",
+      "url": "https://oceanservice.noaa.gov/facts/acidification.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-thermocline",
+      "inspection_artifact": "source-responses/039-ocean-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Main explanation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:19:40.321649+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA: What is a thermocline?",
+      "url": "https://oceanservice.noaa.gov/facts/thermocline.html"
+    },
+    {
+      "displayed_update_date": "2025-02-21",
+      "id": "earth-atmriver",
+      "inspection_artifact": "source-responses/039-ocean-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition; rainfall and water-supply consequences",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:19:40.321649+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA: What are atmospheric rivers?",
+      "url": "https://www.noaa.gov/stories/what-are-atmospheric-rivers"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-inversion",
+      "inspection_artifact": "source-responses/041-atmosphere-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition; How inversions develop; Air quality",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:20:31.862576+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "National Weather Service: What is a temperature inversion?",
+      "url": "https://www.weather.gov/lmk/inversion"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-lakesnow",
+      "inspection_artifact": "source-responses/041-atmosphere-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Mechanism and wind-direction explanation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:20:31.862576+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "National Weather Service: What is Lake Effect Snow?",
+      "url": "https://www.weather.gov/safety/winter-lake-effect-snow"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-argo",
+      "inspection_artifact": "source-responses/041-atmosphere-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What does an Argo float do?; External bladder",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:20:31.862576+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Argo Program/Scripps: How do floats work?",
+      "url": "https://argo.ucsd.edu/how-do-floats-work/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-maunaloa",
+      "inspection_artifact": "source-responses/041-atmosphere-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Summary; Mole fraction; Calibration",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:20:31.862576+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA GML: How we measure background CO2 levels on Mauna Loa",
+      "url": "https://gml.noaa.gov/ccgg/about/co2_measurements.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-stratus",
+      "inspection_artifact": "source-responses/046-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What are Marine Layer Clouds?; Advection; Dissipation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:22:56.661156+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "National Weather Service: Marine Layer Information",
+      "url": "https://www.weather.gov/source/zhu/ZHU_Training_Page/clouds/stratus_form_dissipate/Marine_Layer.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-bod",
+      "inspection_artifact": "source-responses/043-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening; BOD definition; organic-matter consumption of oxygen",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:21:15.291358+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USGS: Biochemical Oxygen Demand (BOD) and Water",
+      "url": "https://www.usgs.gov/water-science-school/science/biochemical-oxygen-demand-bod-and-water"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-clarity",
+      "inspection_artifact": "source-responses/046-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What is water clarity?; ecological relevance",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:22:56.661156+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "EPA: Indicators—Water Clarity",
+      "url": "https://www.epa.gov/national-aquatic-resource-surveys/indicators-water-clarity"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-benthos",
+      "inspection_artifact": "source-responses/044-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Why evaluate them?; What do they tell us?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:21:55.488076+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "EPA: Indicators—Benthic Macroinvertebrates",
+      "url": "https://www.epa.gov/national-aquatic-resource-surveys/indicators-benthic-macroinvertebrates"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-buffer",
+      "inspection_artifact": "source-responses/046-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition; benefits; factors affecting effectiveness",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:22:56.661156+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USDA Forest Service: Riparian Forest Buffers",
+      "url": "https://research.fs.usda.gov/centers/nac/riparianforestbuffers"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-wetland",
+      "inspection_artifact": "source-responses/044-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening explanation and treatment-system descriptions",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:21:55.488076+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "EPA: Constructed Wetlands",
+      "url": "https://www.epa.gov/wetlands/constructed-wetlands"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-shoreline",
+      "inspection_artifact": "source-responses/044-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and infographic transcript",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:21:55.488076+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NOAA: What is a living shoreline?",
+      "url": "https://oceanservice.noaa.gov/facts/living-shoreline.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-landsat",
+      "inspection_artifact": "source-responses/046-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Overview; About Landsat, calibration and long-term comparisons",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:22:56.661156+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NASA: Landsat",
+      "url": "https://science.nasa.gov/mission/landsat/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-elwha",
+      "inspection_artifact": "source-responses/044-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Dam impacts and removal history",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:21:55.488076+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NPS Olympic: Elwha River Restoration",
+      "url": "https://www.nps.gov/olym/learn/nature/elwha-ecosystem-restoration.htm"
+    },
+    {
+      "displayed_update_date": "2018-06-20",
+      "id": "earth-recharge",
+      "inspection_artifact": "source-responses/046-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Sand Hollow case, infiltration rates and monitoring",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:22:56.661156+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USGS: Managed Aquifer Recharge",
+      "url": "https://www.usgs.gov/centers/utah-water-science-center/science/managed-aquifer-recharge"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-artesian",
+      "inspection_artifact": "source-responses/043-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Artesian Water; Example of an aquifer system",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:21:15.291358+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USGS: Artesian Water and Artesian Wells",
+      "url": "https://www.usgs.gov/water-science-school/science/artesian-water-and-artesian-wells"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-thermokarst",
+      "inspection_artifact": "source-responses/043-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Thermokarst Lakes",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:21:15.291358+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "NPS: Permafrost Landforms as Indicators of Climate Change in Parks Across the Arctic",
+      "url": "https://www.nps.gov/articles/aps-v12-i2-c7.htm"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "earth-heat",
+      "inspection_artifact": "source-responses/043-environment-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Causes; Characteristics",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:21:15.291358+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "EPA: What Are Heat Islands?",
+      "url": "https://www.epa.gov/heatislands/what-are-heat-islands"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-apples",
+      "inspection_artifact": "source-responses/051-cultivation-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Rootstocks; Planting, graft-union height",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:28:55.891344+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Growing apples",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-apples"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-nrcs",
+      "inspection_artifact": "source-responses/055-food-chemistry-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Residue and Tillage Management, No Till; Cover Crop",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:32:15.670748+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USDA NRCS: Climate-Smart Mitigation Activities",
+      "url": "https://www.nrcs.usda.gov/conservation-basics/climate/climate-smart-mitigation-activities"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-mulch",
+      "inspection_artifact": "source-responses/055-food-chemistry-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What is mulch?; Benefits, moisture, light and temperature",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:32:15.670748+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Mulching for soil and garden health",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/mulching-for-soil-and-garden-health"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-ipm",
+      "inspection_artifact": "source-responses/051-cultivation-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Set Action Thresholds; Monitor and Identify Pests; Prevention; Control",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:28:55.891344+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "EPA: Integrated Pest Management Principles",
+      "url": "https://www.epa.gov/safepestcontrol/integrated-pest-management-ipm-principles"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-trap",
+      "inspection_artifact": "source-responses/051-cultivation-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Trap cropping; fleabeetle example; limits of companion-planting evidence",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:28:55.891344+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Companion planting in home gardens",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/companion-planting-in-home-gardens"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-plantresponses",
+      "inspection_artifact": "source-responses/051-cultivation-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Photoperiodism; Auxins; Cytokinins",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:28:55.891344+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "OpenStax Biology 2e: Plant Sensory Systems and Responses",
+      "url": "https://openstax.org/books/biology-2e/pages/30-6-plant-sensory-systems-and-responses"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-bolting",
+      "inspection_artifact": "source-responses/051-cultivation-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Bolting",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:28:55.891344+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Non-pest issues in cool-season crops",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/yard-and-garden-problems/non-pest-issues-in-cool-season-crops"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-pollination",
+      "inspection_artifact": "source-responses/051-cultivation-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Cucumbers, parthenocarpic varieties",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:28:55.891344+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Pollination requirements",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/pollination/requirements"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-stonefruit",
+      "inspection_artifact": "source-responses/051-cultivation-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Pollination, compatible plum varieties",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:28:55.891344+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Growing stone fruits in the home garden",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-stone-fruits-in-the-home-garden"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-fermentation",
+      "inspection_artifact": "source-responses/061-food-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Section 2.2.3, fermentation products and food preservation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:35:34.942668+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "FAO: Fermented fruits and vegetables, Chapter 2",
+      "url": "https://www.fao.org/4/x0560e/x0560e07.htm"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-bread",
+      "inspection_artifact": "source-responses/055-food-chemistry-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Gluten formation; Kneading; Yeast",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:32:15.670748+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Exploratorium: Bread Science",
+      "url": "https://annex.exploratorium.edu/cooking/bread/bread_science.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-gelatinization",
+      "inspection_artifact": "source-responses/055-food-chemistry-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and effects of heat and water on starch",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:32:15.670748+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "BCcampus: Gelatinization",
+      "url": "https://opentextbc.ca/modernpastryandplateddesserts/chapter/gelatinization/"
+    },
+    {
+      "displayed_update_date": "2026-08-19",
+      "id": "food-retrogradation",
+      "inspection_artifact": "source-responses/061-food-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Abstract",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:35:34.942668+00:00",
+      "revision": "doi:10.1016/j.carbpol.2026.125774",
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "A phycocyanin-resveratrol-containing extrusion system modulates starch reassociation toward V-type ordering with reduced retrogradation and digestibility",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42692639/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-eggs",
+      "inspection_artifact": "source-responses/055-food-chemistry-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Heating egg proteins",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:32:15.670748+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Exploratorium: Egg Science",
+      "url": "https://annex.exploratorium.edu/cooking/eggs/eggscience.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-browning",
+      "inspection_artifact": "source-responses/061-food-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "How does it work?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:35:34.942668+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "American Chemical Society: Slowing Apple Browning",
+      "url": "https://www.acs.org/education/celebrating-chemistry-editions/2021-ncw/slowing-apple-browning.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-pectin",
+      "inspection_artifact": "source-responses/055-food-chemistry-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Pectin; traditional and low/no-sugar formulations",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:32:15.670748+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Fruit spreads",
+      "url": "https://extension.umn.edu/food/preparing/cooking-at-home/food-preservation/fruit-spreads"
+    },
+    {
+      "displayed_update_date": "2020-11-13",
+      "id": "food-syneresis",
+      "inspection_artifact": "source-responses/062-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Gel contraction and released water",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:36:50.112021+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Kansas State University: What is syneresis?",
+      "url": "https://www.k-state.edu/news/you-asked-it/articles/2020/11/what-is-syneresis.html"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-tempering",
+      "inspection_artifact": "source-responses/062-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Why is fluidity important?; Why temper chocolate?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:36:50.112021+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Callebaut: Tempering chocolate on a marble top",
+      "url": "https://www.callebaut.com/en/callebaut-chocolate-academy/tutorials/tempering/table"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-bloom",
+      "inspection_artifact": "source-responses/061-food-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "How does fat bloom occur?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:35:34.942668+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Callebaut: Storage temperature too high",
+      "url": "https://www.callebaut.com/en-US/callebaut-chocolate-academy/tutorials/storage-temperature-high"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-hollandaise",
+      "inspection_artifact": "source-responses/055-food-chemistry-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Emulsion and egg-yolk emulsifiers",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:32:15.670748+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Exploratorium: Hollandaise sauce",
+      "url": "https://annex.exploratorium.edu/cooking/eggs/hollandaise-pop.html"
+    },
+    {
+      "displayed_update_date": "1984-04-16",
+      "id": "food-aw",
+      "inspection_artifact": "source-responses/061-food-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition and equilibrium vapor pressure",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:35:34.942668+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "FDA: Water Activity (aw) in Foods",
+      "url": "https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/inspection-technical-guides/water-activity-aw-foods"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-blanching",
+      "inspection_artifact": "source-responses/055-food-chemistry-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Why blanch vegetables before freezing?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:32:15.670748+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "National Center for Home Food Preservation: Blanching vegetables",
+      "url": "https://nchfp.uga.edu/how/freeze/freeze-generalinformation/blanching-vegetables/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-hydroponics",
+      "inspection_artifact": "source-responses/062-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening definition; Nutrient film technique; Drip systems",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:36:50.112021+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Small-scale hydroponics",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/small-scale-hydroponics"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-tensiometer",
+      "inspection_artifact": "source-responses/062-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Soil tension; Tensiometers",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:36:50.112021+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Irrigation strategies for vegetables",
+      "url": "https://extension.umn.edu/agriculture/specialty-crops/vegetable-farming/irrigation-strategies-for-vegetables"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-vri",
+      "inspection_artifact": "source-responses/066-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Benefits; Zone control; Prescription maps",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:39:29.206849+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Variable rate irrigation",
+      "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/irrigation/variable-rate-irrigation"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-mas",
+      "inspection_artifact": "source-responses/066-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Plant breeding and marker-assisted selection introduction",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:39:29.206849+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Nebraska–Lincoln PASSeL: Marker Assisted Selection",
+      "url": "https://passel2.unl.edu/view/lesson/a7b9c8f0ffa2/2"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-hybrid",
+      "inspection_artifact": "source-responses/064-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Hybrid varieties and subsequent seed generations",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:37:52.529149+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "University of Minnesota Extension: Saving vegetable seeds",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/saving-vegetable-seeds"
+    },
+    {
+      "displayed_update_date": "2020-11-15",
+      "id": "food-ir8",
+      "inspection_artifact": "source-responses/062-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Breeding history, Peta and Dee-geo-woo-gen",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:36:50.112021+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "IRRI Rice Today: Changing the world with seeds—the breeding history of IR8",
+      "url": "https://ricetoday.irri.org/changing-the-world-with-seeds-the-breeding-history-of-ir8/"
+    },
+    {
+      "displayed_update_date": "2023-11-07",
+      "id": "food-sub1",
+      "inspection_artifact": "source-responses/066-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "SUB1 varieties and duration-dependent submergence tolerance",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:39:29.206849+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "IRRI Rice Today: Thinking beyond the SUB1 gene",
+      "url": "https://ricetoday.irri.org/thinking-beyond-the-sub1-gene-making-rice-survive-longer-and-yield-more/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-broadbalk",
+      "inspection_artifact": "source-responses/062-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Objectives; Fertilizer treatments and untreated control",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:36:50.112021+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Rothamsted e-RA: Broadbalk Wheat Experiment",
+      "url": "https://www.era.rothamsted.ac.uk/Broadbalk"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "food-parkgrass",
+      "inspection_artifact": "source-responses/066-agtech-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Study description; Liming design; Harvest-method comparability",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:39:29.206849+00:00",
+      "revision": "doi:10.23637/rpg5-PGYields19652024-1; dataset version 1.0",
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Rothamsted e-RA: Park Grass Yields and Fertilizer Treatments 1965–2024",
+      "url": "https://www.era.rothamsted.ac.uk/dataset/rpg5/01-PGYields19652024"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-adhesives",
+      "inspection_artifact": "source-responses/076-materials-passages.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Introduction and Bond Formation, p. 10–1; Density and Porosity, p. 10–6; End-Grain Joints, pp. 10–16 to 10–17",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:50:28.334178+00:00",
+      "revision": "FPL-GTR-282, 2021, Chapter 10",
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USDA Wood Handbook, Chapter 10: Wood Adhesives—Bond Formation and Performance",
+      "url": "https://research.fs.usda.gov/download/treesearch/62250.pdf"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-emc",
+      "inspection_artifact": "source-responses/076-materials-passages.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Equilibrium Moisture Content, p. 4–3; Sorption Hysteresis, pp. 4–4 to 4–5",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:50:28.334178+00:00",
+      "revision": "FPL-GTR-282, 2021, Chapter 4",
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USDA Wood Handbook, Chapter 4: Moisture Relations and Physical Properties of Wood",
+      "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-steambend",
+      "inspection_artifact": "source-responses/075-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Principles of Plasticizing and Bending, p. 19–1; Bending of Solid Members and Fixing the Bend, pp. 19–3 to 19–4",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:50:07.605820+00:00",
+      "revision": "FPL-GTR-282, 2021, Chapter 19",
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "USDA Wood Handbook, Chapter 19: Specialty Treatments",
+      "url": "https://research.fs.usda.gov/download/treesearch/62266.pdf"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-paper",
+      "inspection_artifact": "source-responses/075-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Machine-made paper, grain direction and folding/adhesive behavior",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:50:07.605820+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Cornell Library Preservation and Conservation Tutorial: Paper",
+      "url": "https://chinapreservationtutorial.library.cornell.edu/content/paper/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-clay",
+      "inspection_artifact": "source-responses/080-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening definition; Details; differential drying and cracking",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:51:32.035684+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Digitalfire, Tony Hansen: Drying Shrinkage",
+      "url": "https://www.digitalfire.com/glossary/drying%2Bshrinkage"
+    },
+    {
+      "displayed_update_date": "2026-08-30",
+      "id": "home-leather",
+      "inspection_artifact": "source-responses/086-leather-inspection.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Definition; Matching temper to the job; Describing temper",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:54:22.702846+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "United Leather: Leather Temper Guide—From Soft to Firm",
+      "url": "https://unitedleather.com/blog/leather-temper-guide"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-leathergloss",
+      "inspection_artifact": "source-responses/076-materials-passages.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Temper or Hand",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:50:28.334178+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Tandy Leather: Leather Education",
+      "url": "https://tandyleather.com/pages/leather-education"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-tenon",
+      "inspection_artifact": "source-responses/078-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening definition; Finesse the Fit",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:51:04.875169+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "WOOD, original workshop instruction: Tune Up a Tenon",
+      "url": "https://www.woodmagazine.com/tune-up-a-tenon-11834098"
+    },
+    {
+      "displayed_update_date": "2024-10-11",
+      "id": "home-dovetail",
+      "inspection_artifact": "source-responses/083-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Transcript opening, through and half-blind dovetails",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:52:34.668846+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "WOOD, Jim Heavey: Using a Dovetail Jig",
+      "url": "https://www.woodmagazine.com/video/using-a-dovetail-jig"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-drawbore",
+      "inspection_artifact": "source-responses/069-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Description, offset peg holes and test-fitting",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:44:54.752484+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Lee Valley: Stainless-Steel Drawbore Pins",
+      "url": "https://www.leevalley.com/en-ca/shop/tools/hand-tools/62746-stainless-steel-drawbore-pins"
+    },
+    {
+      "displayed_update_date": "2024-11-26",
+      "id": "home-kerf",
+      "inspection_artifact": "source-responses/069-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Transcript, kerf spacing/depth and backer requirement",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:44:54.752484+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "WOOD, Vince Ancona: How To Kerf Bend Wood",
+      "url": "https://www.woodmagazine.com/video/how-to-kerf-bend-wood"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-cleat",
+      "inspection_artifact": "source-responses/078-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Wall Storage",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:51:04.875169+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Lee Valley: Small Workshop Solutions",
+      "url": "https://www.leevalley.com/en-ca/discover/woodworking/small-workshop-solutions"
+    },
+    {
+      "displayed_update_date": "2016-12-28",
+      "id": "home-storystick",
+      "inspection_artifact": "source-responses/078-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening explanation of full-scale marked dimensions",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:51:04.875169+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "WOOD: Measure once, cut forever with a story stick",
+      "url": "https://www.woodmagazine.com/woodworking-tips/techniques/layout-measuring-marking/story-stick"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-scribing",
+      "inspection_artifact": "source-responses/078-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Description, transferring irregular wall contours onto a cabinet panel",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:51:04.875169+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Lee Valley: Veritas Transfer/Log Scribe",
+      "url": "https://www.leevalley.com/en-ca/shop/tools/hand-tools/marking-and-measuring/marking-tools/32577-veritas-transfer-log-scribe?item=05U0501"
+    },
+    {
+      "displayed_update_date": "2022-05-06",
+      "id": "home-burr",
+      "inspection_artifact": "source-responses/082-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Official support answer dated 6 May 2022",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:51:57.280172+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Tormek Support: Why do I need to hone my tool after sharpening?",
+      "url": "https://faq.tormek.com/org/tormek/d/why-do-i-need-to-hone-my-tool-after-sharpening/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-weaving",
+      "inspection_artifact": "source-responses/082-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Warp and Weft, PDF p. 2; even tension, PDF pp. 8–10; Helpful Hints—Tension, PDF p. 15",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:51:57.280172+00:00",
+      "revision": "LTWKL V25",
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Ashford Handicrafts: Learn to Weave on the Knitters Loom",
+      "url": "https://www.ashford.co.nz/booklet/learn-to-weave-on-the-knitters-loom.pdf"
+    },
+    {
+      "displayed_update_date": "2010-10",
+      "id": "home-facings",
+      "inspection_artifact": "source-responses/072-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Bias Facings; Tips for Applying Facings; seam-allowance understitching",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:49:14.436910+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "New Mexico State University: Facings Made Easy, Guide C-233",
+      "url": "https://pubs.nmsu.edu/_c/C233/index.html"
+    },
+    {
+      "displayed_update_date": "2026-06-05",
+      "id": "home-staystitch",
+      "inspection_artifact": "source-responses/078-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "What is it?; When to staystitch",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:51:04.875169+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "American Sewing Guild: Staystitching",
+      "url": "https://www.asg.org/staystitching/"
+    },
+    {
+      "displayed_update_date": "2019-04-11",
+      "id": "home-frenchseam",
+      "inspection_artifact": "source-responses/078-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Opening definition; two-stage seam procedure",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:51:04.875169+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "BERNINA WeAllSew, Jaime David: How to Sew a French Seam",
+      "url": "https://weallsew.com/how-to-sew-a-french-seam/"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-flatfell",
+      "inspection_artifact": "source-responses/078-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Introductory seam construction explanation",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:51:04.875169+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Simplicity: How-to Sew—Flat Felled Seams",
+      "url": "https://simplicity.com/how-to-sew-flat-felled-seam"
+    },
+    {
+      "displayed_update_date": null,
+      "id": "home-gauge",
+      "inspection_artifact": "source-responses/075-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Gauge; making and measuring a swatch",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:50:07.605820+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Craft Yarn Council: Reading Instructions and Other Basics",
+      "url": "https://media.craftyarncouncil.com/read_instructions.html"
+    },
+    {
+      "displayed_update_date": "2009-12-17",
+      "id": "home-blocking",
+      "inspection_artifact": "source-responses/083-home-inspections.json",
+      "inspection_status": "passage_inspected",
+      "locator": "Purpose; fiber-dependent methods; gauge-swatch test",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:52:34.668846+00:00",
+      "revision": null,
+      "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+      "title": "Knit Picks: Blocking a sweater",
+      "url": "https://tutorials.knitpicks.com/blocking-a-sweater/"
+    },
+    {
+      "id": "food-f1maryland",
+      "title": "University of Maryland Extension: Vegetables Not True to Type",
+      "url": "https://extension.umd.edu/resource/vegetables-not-true-type",
+      "locator": "Seed saved from hybrid cultivar",
+      "revision": null,
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T21:03:12.404992+00:00",
+      "timestamp_basis": "Evidence capture-file timestamp after completed web-tool response",
+      "inspection_artifact": "source-responses/088-f1-inspections.json",
+      "inspection_status": "passage_inspected"
+    },
+    {
+      "id": "food-f1jax",
+      "title": "Mouse Genome Informatics: F1 Hybrid",
+      "url": "https://www.informatics.jax.org/glossary/f1_hybrid",
+      "locator": "Glossary definition",
+      "revision": null,
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T21:03:12.404992+00:00",
+      "timestamp_basis": "Evidence capture-file timestamp after completed web-tool response",
+      "inspection_artifact": "source-responses/088-f1-inspections.json",
+      "inspection_status": "passage_inspected"
+    }
+  ]
+}

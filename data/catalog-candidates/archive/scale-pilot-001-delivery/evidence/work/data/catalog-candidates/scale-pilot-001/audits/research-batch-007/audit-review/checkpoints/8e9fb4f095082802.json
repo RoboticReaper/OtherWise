@@ -1,0 +1,58 @@
+{
+  "id": "local:catalog:just-intonation",
+  "label": "Just intonation",
+  "sample_kind": "random_new",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T21:59:09.676164+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "topic",
+    "entity_kind": "idea",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q6057278",
+        "label": "Interval ratio",
+        "original_description": "ratio of the frequencies of the pitches in a musical interval",
+        "prior_card_takeaways": []
+      },
+      {
+        "id": "Q1971526",
+        "label": "Harmonic seventh",
+        "original_description": "musical interval with a frequency ratio of 7:4 (approximatley 969 cents); slightly narrower than a minor seventh (9:5 under just temperament, 1018 cents); equal temperament (1000 cents) does not distinguish between the two",
+        "prior_card_takeaways": []
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:meantone-temperament",
+        "label": "Meantone temperament"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Pure 3:2 fifth-chain mismatch with pure third and fixed versus adjustable instruments follow the worked example; compromises rather than universally best tuning is supported. Meantone comparison is direct.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s032"
+      ],
+      "locator": "FAQ: temperament lines 257–263; web-12/web-13"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:meantone-temperament",
+      "type": "related_to",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

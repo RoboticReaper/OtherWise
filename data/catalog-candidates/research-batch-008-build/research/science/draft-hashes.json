@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "status": "draft_ready_for_independent_audit",
+  "stable_until_coordinator_repair_request": true,
+  "global_selection_manifest_sha256": "5e15d76acee1c29775a9b7b003f7d01447e494974da200c9c15afa3a25f5df9d",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "files": {
+    "candidate.json": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+    "author-review.json": "a3413473802a05cf3dbf8e8f9f018ba37ccb33c0896fe7025cb8738d67c25052",
+    "research-notes.md": "d5ce54f6cd85e2c7e6edad539744b5357cbe16e53e18005ba5ff2374c9058631",
+    "draft-validation.json": "ee4ea3bbe29f55e9b036fd94f3c994e7ce527c4be841d7219593062a3eff7b5d",
+    "source-word-budgets.json": "d3c715ff0eddf53e973d4ed8306eb14953ef30d44ae3a146cafe96dc27f9b172",
+    "additional-sources.json": "3ec089ee32c586e7fd967714c32bf1f682ce5becf565a99bc40f42f4ba07d39e",
+    "draft-inspection-log.json": "7710f25c1ea876853e2a368b6607707d29fc1ec567ecdd421e02615dfefbfbac",
+    "approved-selection.json": "d32966cde775ec6d9a9921b6adcb81fe121b19200a39144877faa79c3be9e149",
+    "proposals.json": "e821392a94e823cf230afecee17390abce840bd54a6f9137e0f630f74bf942ad",
+    "inspected-sources.json": "1ee0317519042cc4e935b46a7fbef3889d29fe3713c2976920948790fb3464a3",
+    "selection-review.md": "72e235da7d3c72862adaa8a380981bad65bcab1aed672e8aab97376262f426af"
+  },
+  "checks": [
+    "stock validator passed",
+    "exact 69 approved primaries and 69 author reviews",
+    "all approved canonical meanings and relation type/assertion pairs preserved",
+    "all control originals/raw rows/full prior bundle hashes preserved",
+    "all frozen selection snapshots unchanged",
+    "all shared-page derived prose budgets passed"
+  ],
+  "independent_audit": "pending; coordinator owns freezing and sampling"
+}

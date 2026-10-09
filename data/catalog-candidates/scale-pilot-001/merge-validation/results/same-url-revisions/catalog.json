@@ -1,0 +1,420 @@
+{
+  "batch": {
+    "alias_index": {
+      "capillarity": [
+        "fixture:a"
+      ],
+      "java island": [
+        "fixture:b"
+      ]
+    },
+    "baseline": {
+      "identity_count": 1,
+      "role": "pinned_target_snapshot_not_emitted",
+      "sha256": "3aa9b679f0e8f6015b76d1db67e75f504b9d9008d61205a09b76b640e80c32f0"
+    },
+    "concept_provenance": {
+      "fixture:a": [
+        {
+          "batch_id": "research-batch-003",
+          "card_version": 1,
+          "combined_source_id_map": {
+            "r1": "research-batch-003::r1"
+          },
+          "input_sha256": "12af23ca76ac901326cbd0852517fe6060974c085e23716da45f3fdad8874346",
+          "original_id": "fixture:a",
+          "original_record": {
+            "aliases": [
+              "Capillarity"
+            ],
+            "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+            "card_version": 1,
+            "domains": [
+              "Mathematics"
+            ],
+            "entity_kind": "idea",
+            "evidence": [
+              {
+                "locator": "Fixture section 1",
+                "note": "Supports the synthetic explanatory claim.",
+                "source_id": "r1"
+              }
+            ],
+            "id": "fixture:a",
+            "identity_urls": [
+              "https://example.org/fixture/a"
+            ],
+            "imported_records": [],
+            "label": "Capillarity",
+            "learning_takeaway": "Understand this synthetic mechanism for the labeled fixture only.",
+            "original_description": null,
+            "relations": [],
+            "scope": "idea"
+          },
+          "reference_namespace": {
+            "batch_id": "research-batch-003",
+            "input_sha256": "12af23ca76ac901326cbd0852517fe6060974c085e23716da45f3fdad8874346",
+            "scope": "original_snapshot_local_ids"
+          }
+        }
+      ],
+      "fixture:b": [
+        {
+          "batch_id": "research-batch-004",
+          "card_version": 1,
+          "combined_source_id_map": {
+            "r1": "research-batch-004::r1",
+            "r2": "research-batch-004::r2"
+          },
+          "input_sha256": "81a8efa0cf65f1a8e2903a685091f271a3f3611e9007744f4a2b5bf5d9934a60",
+          "original_id": "fixture:b",
+          "original_record": {
+            "aliases": [
+              "Java island"
+            ],
+            "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+            "card_version": 1,
+            "domains": [
+              "Mathematics"
+            ],
+            "entity_kind": "idea",
+            "evidence": [
+              {
+                "locator": "Fixture section 1",
+                "note": "Supports the synthetic explanatory claim.",
+                "source_id": "r1"
+              },
+              {
+                "locator": "Fixture section 2",
+                "note": "Second separately preserved passage supports another premise.",
+                "source_id": "r2"
+              }
+            ],
+            "id": "fixture:b",
+            "identity_urls": [
+              "https://example.org/fixture/a"
+            ],
+            "imported_records": [],
+            "label": "Java island",
+            "learning_takeaway": "Understand this synthetic mechanism for the labeled fixture only.",
+            "original_description": null,
+            "relations": [
+              {
+                "assertion": "editorial",
+                "note": "The fixture uses a baseline target to exercise link resolution.",
+                "source_ids": [
+                  "r1"
+                ],
+                "target_id": "baseline:mathematics",
+                "type": "related_to"
+              }
+            ],
+            "scope": "idea"
+          },
+          "reference_namespace": {
+            "batch_id": "research-batch-004",
+            "input_sha256": "81a8efa0cf65f1a8e2903a685091f271a3f3611e9007744f4a2b5bf5d9934a60",
+            "scope": "original_snapshot_local_ids"
+          }
+        }
+      ]
+    },
+    "id": "scale-pilot-001",
+    "identity_decisions": {
+      "batch_versions": {},
+      "concept_versions": {},
+      "distinctness": [],
+      "equivalences": [],
+      "schema_version": 1,
+      "unresolved": []
+    },
+    "identity_decisions_sha256": "12fd2b8d2b7cc9fe9c92fdf19a87374b68b7ba10c782a3284f1a3b7cb91f085c",
+    "input_provenance": [
+      {
+        "batch_id": "research-batch-003",
+        "candidate_snapshot": {
+          "batch": {
+            "completion_status": "synthetic_fixture",
+            "fixture": true,
+            "id": "research-batch-003",
+            "revision": 1,
+            "selection_manifest": []
+          },
+          "concepts": [
+            {
+              "aliases": [
+                "Capillarity"
+              ],
+              "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+              "card_version": 1,
+              "domains": [
+                "Mathematics"
+              ],
+              "entity_kind": "idea",
+              "evidence": [
+                {
+                  "locator": "Fixture section 1",
+                  "note": "Supports the synthetic explanatory claim.",
+                  "source_id": "r1"
+                }
+              ],
+              "id": "fixture:a",
+              "identity_urls": [
+                "https://example.org/fixture/a"
+              ],
+              "imported_records": [],
+              "label": "Capillarity",
+              "learning_takeaway": "Understand this synthetic mechanism for the labeled fixture only.",
+              "original_description": null,
+              "relations": [],
+              "scope": "idea"
+            }
+          ],
+          "issues": [],
+          "schema_version": 1,
+          "sources": [
+            {
+              "id": "r1",
+              "locator": "Fixture section 1",
+              "retrieved_at": "2024-04-03T12:34:56+00:00",
+              "revision": null,
+              "title": "Synthetic fixture reference",
+              "url": "https://example.org/fixture/a"
+            }
+          ],
+          "validation": {}
+        },
+        "input_sha256": "12af23ca76ac901326cbd0852517fe6060974c085e23716da45f3fdad8874346",
+        "reference_namespace": {
+          "batch_id": "research-batch-003",
+          "input_sha256": "12af23ca76ac901326cbd0852517fe6060974c085e23716da45f3fdad8874346",
+          "scope": "original_snapshot_local_ids"
+        },
+        "selected": true
+      },
+      {
+        "batch_id": "research-batch-004",
+        "candidate_snapshot": {
+          "batch": {
+            "completion_status": "synthetic_fixture",
+            "fixture": true,
+            "id": "research-batch-004",
+            "revision": 1,
+            "selection_manifest": []
+          },
+          "concepts": [
+            {
+              "aliases": [
+                "Java island"
+              ],
+              "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+              "card_version": 1,
+              "domains": [
+                "Mathematics"
+              ],
+              "entity_kind": "idea",
+              "evidence": [
+                {
+                  "locator": "Fixture section 1",
+                  "note": "Supports the synthetic explanatory claim.",
+                  "source_id": "r1"
+                },
+                {
+                  "locator": "Fixture section 2",
+                  "note": "Second separately preserved passage supports another premise.",
+                  "source_id": "r2"
+                }
+              ],
+              "id": "fixture:b",
+              "identity_urls": [
+                "https://example.org/fixture/a"
+              ],
+              "imported_records": [],
+              "label": "Java island",
+              "learning_takeaway": "Understand this synthetic mechanism for the labeled fixture only.",
+              "original_description": null,
+              "relations": [
+                {
+                  "assertion": "editorial",
+                  "note": "The fixture uses a baseline target to exercise link resolution.",
+                  "source_ids": [
+                    "r1"
+                  ],
+                  "target_id": "baseline:mathematics",
+                  "type": "related_to"
+                }
+              ],
+              "scope": "idea"
+            }
+          ],
+          "issues": [],
+          "schema_version": 1,
+          "sources": [
+            {
+              "id": "r1",
+              "locator": "Fixture section 1",
+              "retrieval_date": "2026-10-08",
+              "retrieved_at": "2024-04-03T12:34:56+00:00",
+              "revision": "revision-A",
+              "title": "Synthetic fixture reference",
+              "url": "https://example.org/fixture/a"
+            },
+            {
+              "id": "r2",
+              "locator": "Fixture section 2",
+              "retrieval_date": "2026-10-08",
+              "retrieved_at": "2024-04-03T12:34:56+00:00",
+              "revision": "revision-B",
+              "title": "Synthetic fixture reference",
+              "url": "https://example.org/fixture/a"
+            }
+          ],
+          "validation": {}
+        },
+        "input_sha256": "81a8efa0cf65f1a8e2903a685091f271a3f3611e9007744f4a2b5bf5d9934a60",
+        "reference_namespace": {
+          "batch_id": "research-batch-004",
+          "input_sha256": "81a8efa0cf65f1a8e2903a685091f271a3f3611e9007744f4a2b5bf5d9934a60",
+          "scope": "original_snapshot_local_ids"
+        },
+        "selected": true
+      }
+    ],
+    "kind": "combined_pilot_candidate",
+    "selected_card_versions": {
+      "fixture:a": {
+        "batch_id": "research-batch-003",
+        "card_version": 1,
+        "input_sha256": "12af23ca76ac901326cbd0852517fe6060974c085e23716da45f3fdad8874346",
+        "original_id": "fixture:a"
+      },
+      "fixture:b": {
+        "batch_id": "research-batch-004",
+        "card_version": 1,
+        "input_sha256": "81a8efa0cf65f1a8e2903a685091f271a3f3611e9007744f4a2b5bf5d9934a60",
+        "original_id": "fixture:b"
+      }
+    }
+  },
+  "concepts": [
+    {
+      "aliases": [
+        "Capillarity"
+      ],
+      "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+      "card_version": 1,
+      "domains": [
+        "Mathematics"
+      ],
+      "entity_kind": "idea",
+      "evidence": [
+        {
+          "locator": "Fixture section 1",
+          "note": "Supports the synthetic explanatory claim.",
+          "source_id": "research-batch-003::r1"
+        }
+      ],
+      "id": "fixture:a",
+      "identity_urls": [
+        "https://example.org/fixture/a"
+      ],
+      "imported_records": [],
+      "label": "Capillarity",
+      "learning_takeaway": "Understand this synthetic mechanism for the labeled fixture only.",
+      "original_description": null,
+      "relations": [],
+      "scope": "idea"
+    },
+    {
+      "aliases": [
+        "Java island"
+      ],
+      "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+      "card_version": 1,
+      "domains": [
+        "Mathematics"
+      ],
+      "entity_kind": "idea",
+      "evidence": [
+        {
+          "locator": "Fixture section 1",
+          "note": "Supports the synthetic explanatory claim.",
+          "source_id": "research-batch-004::r1"
+        },
+        {
+          "locator": "Fixture section 2",
+          "note": "Second separately preserved passage supports another premise.",
+          "source_id": "research-batch-004::r2"
+        }
+      ],
+      "id": "fixture:b",
+      "identity_urls": [
+        "https://example.org/fixture/a"
+      ],
+      "imported_records": [],
+      "label": "Java island",
+      "learning_takeaway": "Understand this synthetic mechanism for the labeled fixture only.",
+      "original_description": null,
+      "relations": [
+        {
+          "assertion": "editorial",
+          "note": "The fixture uses a baseline target to exercise link resolution.",
+          "source_ids": [
+            "research-batch-004::r1"
+          ],
+          "target_id": "baseline:mathematics",
+          "type": "related_to"
+        }
+      ],
+      "scope": "idea"
+    }
+  ],
+  "issues": [],
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "research-batch-003::r1",
+      "locator": "Fixture section 1",
+      "original_id": "r1",
+      "originating_batch_id": "research-batch-003",
+      "originating_input_sha256": "12af23ca76ac901326cbd0852517fe6060974c085e23716da45f3fdad8874346",
+      "retrieved_at": "2024-04-03T12:34:56+00:00",
+      "revision": null,
+      "title": "Synthetic fixture reference",
+      "url": "https://example.org/fixture/a"
+    },
+    {
+      "id": "research-batch-004::r1",
+      "locator": "Fixture section 1",
+      "original_id": "r1",
+      "originating_batch_id": "research-batch-004",
+      "originating_input_sha256": "81a8efa0cf65f1a8e2903a685091f271a3f3611e9007744f4a2b5bf5d9934a60",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2024-04-03T12:34:56+00:00",
+      "revision": "revision-A",
+      "title": "Synthetic fixture reference",
+      "url": "https://example.org/fixture/a"
+    },
+    {
+      "id": "research-batch-004::r2",
+      "locator": "Fixture section 2",
+      "original_id": "r2",
+      "originating_batch_id": "research-batch-004",
+      "originating_input_sha256": "81a8efa0cf65f1a8e2903a685091f271a3f3611e9007744f4a2b5bf5d9934a60",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2024-04-03T12:34:56+00:00",
+      "revision": "revision-B",
+      "title": "Synthetic fixture reference",
+      "url": "https://example.org/fixture/a"
+    }
+  ],
+  "validation": {
+    "baseline_snapshot_records_added": 0,
+    "canonical_content_sha256": "f897e72a001a4ab69d13a866ea9a072a2f44f829a030536cbe173d0d8c271de6",
+    "distinct_concept_count": 2,
+    "limit": "Structural validation does not certify facts, source inspection, semantic distinctness, or independent audit completion.",
+    "reference_count": 3,
+    "relation_count": 1,
+    "structural_passed": true
+  }
+}

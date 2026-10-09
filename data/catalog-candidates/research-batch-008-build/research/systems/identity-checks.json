@@ -1,0 +1,1813 @@
+{
+  "schema_version": 1,
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "normalizer": "casefold; trim; collapse whitespace, underscores, hyphens and U+2010-U+2015 to a single space",
+  "proposals_sha256": "3b691e1f2367003acc323a406aecac437e0650aae738abeda5e91cb404edb50a",
+  "note": "Exact checks accompany focused local searches of labels, aliases, imported descriptions and prior cards. A no-alias-match result alone was never treated as proof of a new meaning.",
+  "subjects": [
+    {
+      "id": "local:catalog:ephemeron",
+      "alias_checks": [
+        {
+          "query": "Ephemeron",
+          "normalized_key": "ephemeron",
+          "matched_ids": []
+        },
+        {
+          "query": "Ephemerons",
+          "normalized_key": "ephemerons",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q5521979",
+          "label": "Garbage (computer science)",
+          "reason": "Garbage (computer science) describes unusable objects; ephemeron is the specifically defined reachability construct."
+        }
+      ],
+      "identity_reason": "Garbage (computer science) describes unusable objects; ephemeron is the specifically defined reachability construct."
+    },
+    {
+      "id": "local:catalog:hazard-pointer",
+      "alias_checks": [
+        {
+          "query": "Hazard pointer",
+          "normalized_key": "hazard pointer",
+          "matched_ids": []
+        },
+        {
+          "query": "Hazard pointers",
+          "normalized_key": "hazard pointers",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q128392",
+          "label": "Concurrent computing",
+          "reason": "Concurrent computing is broader than this named memory-reclamation methodology."
+        }
+      ],
+      "identity_reason": "Concurrent computing is broader than this named memory-reclamation methodology."
+    },
+    {
+      "id": "local:catalog:epoch-based-memory-reclamation",
+      "alias_checks": [
+        {
+          "query": "Epoch-based memory reclamation",
+          "normalized_key": "epoch based memory reclamation",
+          "matched_ids": []
+        },
+        {
+          "query": "Epoch-based reclamation",
+          "normalized_key": "epoch based reclamation",
+          "matched_ids": []
+        },
+        {
+          "query": "EBR",
+          "normalized_key": "ebr",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q128392",
+          "label": "Concurrent computing",
+          "reason": "Epoch-and-pinning reclamation differs from general concurrency and individual hazard pointers."
+        }
+      ],
+      "identity_reason": "Epoch-and-pinning reclamation differs from general concurrency and individual hazard pointers."
+    },
+    {
+      "id": "local:catalog:qpack-field-compression",
+      "alias_checks": [
+        {
+          "query": "QPACK field compression",
+          "normalized_key": "qpack field compression",
+          "matched_ids": []
+        },
+        {
+          "query": "QPACK",
+          "normalized_key": "qpack",
+          "matched_ids": []
+        },
+        {
+          "query": "QPACK header compression",
+          "normalized_key": "qpack header compression",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8777",
+          "label": "Hypertext Transfer Protocol",
+          "reason": "This separately specified HTTP/3 compression format is a facet of the broader protocol."
+        }
+      ],
+      "identity_reason": "This separately specified HTTP/3 compression format is a facet of the broader protocol."
+    },
+    {
+      "id": "local:catalog:http-structured-field-dictionary",
+      "alias_checks": [
+        {
+          "query": "HTTP structured field dictionary",
+          "normalized_key": "http structured field dictionary",
+          "matched_ids": []
+        },
+        {
+          "query": "Structured Fields dictionary",
+          "normalized_key": "structured fields dictionary",
+          "matched_ids": []
+        },
+        {
+          "query": "Dictionary Structured Field",
+          "normalized_key": "dictionary structured field",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8777",
+          "label": "Hypertext Transfer Protocol",
+          "reason": "A defined HTTP data container, rather than HTTP itself or a generic dictionary data structure."
+        }
+      ],
+      "identity_reason": "A defined HTTP data container, rather than HTTP itself or a generic dictionary data structure."
+    },
+    {
+      "id": "local:catalog:http-message-signatures",
+      "alias_checks": [
+        {
+          "query": "HTTP Message Signatures",
+          "normalized_key": "http message signatures",
+          "matched_ids": []
+        },
+        {
+          "query": "HTTP message signature",
+          "normalized_key": "http message signature",
+          "matched_ids": []
+        },
+        {
+          "query": "RFC 9421",
+          "normalized_key": "rfc 9421",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q220849",
+          "label": "Digital signature",
+          "reason": "This HTTP-specific canonicalization and field mechanism is distinct from digital signatures generally."
+        }
+      ],
+      "identity_reason": "This HTTP-specific canonicalization and field mechanism is distinct from digital signatures generally."
+    },
+    {
+      "id": "local:catalog:oblivious-http",
+      "alias_checks": [
+        {
+          "query": "Oblivious HTTP",
+          "normalized_key": "oblivious http",
+          "matched_ids": []
+        },
+        {
+          "query": "OHTTP",
+          "normalized_key": "ohttp",
+          "matched_ids": []
+        },
+        {
+          "query": "RFC 9458",
+          "normalized_key": "rfc 9458",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8777",
+          "label": "Hypertext Transfer Protocol",
+          "reason": "An explicitly specified encrypted relaying protocol, rather than a new explanation of HTTP."
+        }
+      ],
+      "identity_reason": "An explicitly specified encrypted relaying protocol, rather than a new explanation of HTTP."
+    },
+    {
+      "id": "local:catalog:merkle-inclusion-proof",
+      "alias_checks": [
+        {
+          "query": "Merkle inclusion proof",
+          "normalized_key": "merkle inclusion proof",
+          "matched_ids": []
+        },
+        {
+          "query": "Merkle membership proof",
+          "normalized_key": "merkle membership proof",
+          "matched_ids": []
+        },
+        {
+          "query": "Merkle audit path",
+          "normalized_key": "merkle audit path",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000527",
+          "label": "Cryptography",
+          "reason": "One-leaf membership differs from append-only consistency; cryptography is the broad parent."
+        }
+      ],
+      "identity_reason": "One-leaf membership differs from append-only consistency; cryptography is the broad parent."
+    },
+    {
+      "id": "local:catalog:merkle-consistency-proof",
+      "alias_checks": [
+        {
+          "query": "Merkle consistency proof",
+          "normalized_key": "merkle consistency proof",
+          "matched_ids": []
+        },
+        {
+          "query": "Merkle append-only proof",
+          "normalized_key": "merkle append only proof",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000527",
+          "label": "Cryptography",
+          "reason": "Append-only prefix preservation differs from leaf membership and general cryptography."
+        }
+      ],
+      "identity_reason": "Append-only prefix preservation differs from leaf membership and general cryptography."
+    },
+    {
+      "id": "Q65123731",
+      "alias_checks": [
+        {
+          "query": "Gale–Shapley deferred acceptance algorithm",
+          "normalized_key": "gale shapley deferred acceptance algorithm",
+          "matched_ids": []
+        },
+        {
+          "query": "Deferred acceptance algorithm",
+          "normalized_key": "deferred acceptance algorithm",
+          "matched_ids": []
+        },
+        {
+          "query": "Gale-Shapley algorithm",
+          "normalized_key": "gale shapley algorithm",
+          "matched_ids": [
+            "Q65123731"
+          ]
+        },
+        {
+          "query": "DAA",
+          "normalized_key": "daa",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q65123731",
+          "label": "Gale–Shapley algorithm",
+          "reason": "Same deferred-acceptance procedure, including the explicit source synonym."
+        },
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "Stable matching problem is the problem; deferred acceptance is a separately named solution procedure."
+        }
+      ],
+      "identity_reason": "Baseline Q65123731 describes the algorithm for solving the stable matching problem; the source explicitly equates deferred acceptance with Gale-Shapley. Reuse the existing ID for the same procedure."
+    },
+    {
+      "id": "local:catalog:rural-hospitals-theorem",
+      "alias_checks": [
+        {
+          "query": "Rural hospitals theorem",
+          "normalized_key": "rural hospitals theorem",
+          "matched_ids": []
+        },
+        {
+          "query": "Rural hospital theorem",
+          "normalized_key": "rural hospital theorem",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "This invariance theorem differs from the broad stable matching problem and from an algorithm."
+        }
+      ],
+      "identity_reason": "This invariance theorem differs from the broad stable matching problem and from an algorithm."
+    },
+    {
+      "id": "local:catalog:runway-incursion",
+      "alias_checks": [
+        {
+          "query": "Runway incursion",
+          "normalized_key": "runway incursion",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q184590",
+          "label": "Runway",
+          "reason": "Runway is infrastructure; an incursion is a separately defined safety occurrence."
+        }
+      ],
+      "identity_reason": "Runway is infrastructure; an incursion is a separately defined safety occurrence."
+    },
+    {
+      "id": "local:catalog:saturation-flow-rate",
+      "alias_checks": [
+        {
+          "query": "Saturation flow rate at a signalized intersection",
+          "normalized_key": "saturation flow rate at a signalized intersection",
+          "matched_ids": []
+        },
+        {
+          "query": "Saturation flow rate",
+          "normalized_key": "saturation flow rate",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8004",
+          "label": "Traffic light",
+          "reason": "Traffic light is a device; saturation flow is a defined discharge-rate quantity."
+        }
+      ],
+      "identity_reason": "Traffic light is a device; saturation flow is a defined discharge-rate quantity."
+    },
+    {
+      "id": "local:catalog:stableford-scoring",
+      "alias_checks": [
+        {
+          "query": "Stableford scoring",
+          "normalized_key": "stableford scoring",
+          "matched_ids": []
+        },
+        {
+          "query": "Stableford",
+          "normalized_key": "stableford",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7435308",
+          "label": "Score (sport)",
+          "reason": "Score (sport) is broad; Stableford is a distinct named points system."
+        }
+      ],
+      "identity_reason": "Score (sport) is broad; Stableford is a distinct named points system."
+    },
+    {
+      "id": "local:catalog:maximum-score-golf",
+      "alias_checks": [
+        {
+          "query": "Maximum Score golf",
+          "normalized_key": "maximum score golf",
+          "matched_ids": []
+        },
+        {
+          "query": "Maximum Score format",
+          "normalized_key": "maximum score format",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7435308",
+          "label": "Score (sport)",
+          "reason": "Capped stroke totals differ from Stableford points and scoring in sport generally."
+        }
+      ],
+      "identity_reason": "Capped stroke totals differ from Stableford points and scoring in sport generally."
+    },
+    {
+      "id": "local:catalog:libero-volleyball",
+      "alias_checks": [
+        {
+          "query": "Libero in volleyball",
+          "normalized_key": "libero in volleyball",
+          "matched_ids": []
+        },
+        {
+          "query": "Volleyball libero",
+          "normalized_key": "volleyball libero",
+          "matched_ids": []
+        },
+        {
+          "query": "Libero player",
+          "normalized_key": "libero player",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000287",
+          "label": "Volleyball",
+          "reason": "Volleyball is the game; libero is a defined player role with distinct permissions."
+        }
+      ],
+      "identity_reason": "Volleyball is the game; libero is a defined player role with distinct permissions."
+    },
+    {
+      "id": "local:catalog:event-segmentation-theory",
+      "alias_checks": [
+        {
+          "query": "Event Segmentation Theory",
+          "normalized_key": "event segmentation theory",
+          "matched_ids": []
+        },
+        {
+          "query": "EST",
+          "normalized_key": "est",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q160402",
+          "label": "perception",
+          "reason": "A named account of event boundaries differs from perception generally."
+        }
+      ],
+      "identity_reason": "A named account of event boundaries differs from perception generally."
+    },
+    {
+      "id": "Q21198",
+      "alias_checks": [
+        {
+          "query": "Computer science",
+          "normalized_key": "computer science",
+          "matched_ids": [
+            "Q21198"
+          ]
+        },
+        {
+          "query": "Computer science",
+          "normalized_key": "computer science",
+          "matched_ids": [
+            "Q21198"
+          ]
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q21198",
+          "label": "Computer science",
+          "reason": "Same broad field as the imported study-of-computation identity; a teaching perspective reuses the ID."
+        }
+      ],
+      "identity_reason": "Same broad field as the imported study-of-computation identity; a teaching perspective reuses the ID."
+    },
+    {
+      "id": "local:catalog:top-trading-cycles",
+      "alias_checks": [
+        {
+          "query": "Top trading cycles",
+          "normalized_key": "top trading cycles",
+          "matched_ids": []
+        },
+        {
+          "query": "TTC",
+          "normalized_key": "ttc",
+          "matched_ids": []
+        },
+        {
+          "query": "Top trading cycles mechanism",
+          "normalized_key": "top trading cycles mechanism",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "The cycle-trading algorithm is distinct from the deferred-acceptance procedure and from the stable-matching problem; its school-choice variant can trade efficiency against justified envy."
+        },
+        {
+          "id": "Q65123731",
+          "label": "Gale–Shapley algorithm",
+          "reason": "The cycle-trading algorithm is distinct from the deferred-acceptance procedure and from the stable-matching problem; its school-choice variant can trade efficiency against justified envy."
+        }
+      ],
+      "identity_reason": "The cycle-trading algorithm is distinct from the deferred-acceptance procedure and from the stable-matching problem; its school-choice variant can trade efficiency against justified envy."
+    },
+    {
+      "id": "local:catalog:boston-immediate-acceptance-mechanism",
+      "alias_checks": [
+        {
+          "query": "Boston immediate acceptance mechanism",
+          "normalized_key": "boston immediate acceptance mechanism",
+          "matched_ids": []
+        },
+        {
+          "query": "Boston mechanism",
+          "normalized_key": "boston mechanism",
+          "matched_ids": []
+        },
+        {
+          "query": "Boston student assignment mechanism",
+          "normalized_key": "boston student assignment mechanism",
+          "matched_ids": []
+        },
+        {
+          "query": "Immediate acceptance mechanism",
+          "normalized_key": "immediate acceptance mechanism",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q65123731",
+          "label": "Gale–Shapley algorithm",
+          "reason": "Immediate final assignments differ from deferred acceptance, which holds proposals tentatively; this is a separately described school-choice mechanism."
+        },
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "Immediate final assignments differ from deferred acceptance, which holds proposals tentatively; this is a separately described school-choice mechanism."
+        }
+      ],
+      "identity_reason": "Immediate final assignments differ from deferred acceptance, which holds proposals tentatively; this is a separately described school-choice mechanism."
+    },
+    {
+      "id": "local:catalog:clarke-pivot-rule",
+      "alias_checks": [
+        {
+          "query": "Clarke pivot rule",
+          "normalized_key": "clarke pivot rule",
+          "matched_ids": []
+        },
+        {
+          "query": "Clarke tax",
+          "normalized_key": "clarke tax",
+          "matched_ids": []
+        },
+        {
+          "query": "Pivotal mechanism",
+          "normalized_key": "pivotal mechanism",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:second-price-sealed-bid-auction",
+          "label": "Second-price sealed-bid auction",
+          "reason": "The externality payment rule applies to multi-outcome allocation problems; a single-item second-price auction is one special case, not the same general subject."
+        },
+        {
+          "id": "Q7731670",
+          "label": "Incentive compatibility",
+          "reason": "The externality payment rule applies to multi-outcome allocation problems; a single-item second-price auction is one special case, not the same general subject."
+        }
+      ],
+      "identity_reason": "The externality payment rule applies to multi-outcome allocation problems; a single-item second-price auction is one special case, not the same general subject."
+    },
+    {
+      "id": "local:catalog:moral-hazard-in-teams",
+      "alias_checks": [
+        {
+          "query": "Moral hazard in teams",
+          "normalized_key": "moral hazard in teams",
+          "matched_ids": []
+        },
+        {
+          "query": "Team moral hazard",
+          "normalized_key": "team moral hazard",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:moral-hazard",
+          "label": "Moral hazard",
+          "reason": "The source defines a distinct multiagent model with hidden individual actions, shared output and budget-balance constraints, extending the moral-hazard problem."
+        },
+        {
+          "id": "Q1053211",
+          "label": "Principal–agent problem",
+          "reason": "A separately modeled multi-agent application with shared-output and budget-balance constraints, rather than another example of generic hidden action."
+        }
+      ],
+      "identity_reason": "The source defines a distinct multiagent model with hidden individual actions, shared output and budget-balance constraints, extending the moral-hazard problem."
+    },
+    {
+      "id": "local:catalog:relative-performance-evaluation",
+      "alias_checks": [
+        {
+          "query": "Relative performance evaluation",
+          "normalized_key": "relative performance evaluation",
+          "matched_ids": []
+        },
+        {
+          "query": "RPE",
+          "normalized_key": "rpe",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1414816",
+          "label": "Incentive",
+          "reason": "Using peer outcomes as an informative contractual signal is distinct from generic incentives, productivity, or team free-riding."
+        },
+        {
+          "id": "Q1053211",
+          "label": "Principal–agent problem",
+          "reason": "Using peer outcomes as an informative contractual signal is distinct from generic incentives, productivity, or team free-riding."
+        }
+      ],
+      "identity_reason": "Using peer outcomes as an informative contractual signal is distinct from generic incentives, productivity, or team free-riding."
+    },
+    {
+      "id": "local:catalog:multitask-incentive-problem",
+      "alias_checks": [
+        {
+          "query": "Multitask incentive problem",
+          "normalized_key": "multitask incentive problem",
+          "matched_ids": []
+        },
+        {
+          "query": "Multitask principal-agent problem",
+          "normalized_key": "multitask principal agent problem",
+          "matched_ids": []
+        },
+        {
+          "query": "Multitask incentives",
+          "normalized_key": "multitask incentives",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1053211",
+          "label": "Principal–agent problem",
+          "reason": "The paper identifies a distinct multidimensional principal-agent model: allocation of attention across tasks, not merely hidden action or any unintended incentive."
+        },
+        {
+          "id": "Q1414816",
+          "label": "Incentive",
+          "reason": "The paper identifies a distinct multidimensional principal-agent model: allocation of attention across tasks, not merely hidden action or any unintended incentive."
+        },
+        {
+          "id": "Q2169419",
+          "label": "Perverse incentive",
+          "reason": "The paper identifies a distinct multidimensional principal-agent model: allocation of attention across tasks, not merely hidden action or any unintended incentive."
+        }
+      ],
+      "identity_reason": "The paper identifies a distinct multidimensional principal-agent model: allocation of attention across tasks, not merely hidden action or any unintended incentive."
+    },
+    {
+      "id": "local:catalog:market-unraveling",
+      "alias_checks": [
+        {
+          "query": "Unraveling in matching markets",
+          "normalized_key": "unraveling in matching markets",
+          "matched_ids": []
+        },
+        {
+          "query": "Market unraveling",
+          "normalized_key": "market unraveling",
+          "matched_ids": []
+        },
+        {
+          "query": "Matching-market unraveling",
+          "normalized_key": "matching market unraveling",
+          "matched_ids": []
+        },
+        {
+          "query": "Early contracting in matching markets",
+          "normalized_key": "early contracting in matching markets",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "This subject concerns earlier appointment dates in matching markets. It differs from stable-matching algorithms and adverse-selection explanations of market collapse."
+        },
+        {
+          "id": "Q65123731",
+          "label": "Gale–Shapley algorithm",
+          "reason": "This subject concerns earlier appointment dates in matching markets. It differs from stable-matching algorithms and adverse-selection explanations of market collapse."
+        },
+        {
+          "id": "local:catalog:adverse-selection",
+          "label": "Adverse selection",
+          "reason": "The existing insurance-selection meaning concerns changing risk composition; this proposed identity concerns transaction timing."
+        }
+      ],
+      "identity_reason": "This subject concerns earlier appointment dates in matching markets. It differs from stable-matching algorithms and adverse-selection explanations of market collapse."
+    },
+    {
+      "id": "local:catalog:dutch-roll",
+      "alias_checks": [
+        {
+          "query": "Dutch roll",
+          "normalized_key": "dutch roll",
+          "matched_ids": []
+        },
+        {
+          "query": "Dutch-roll oscillation",
+          "normalized_key": "dutch roll oscillation",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8424",
+          "label": "Aerodynamics",
+          "reason": "A defined lateral-directional oscillation mode rather than aerodynamics generally or a generic aircraft turn."
+        },
+        {
+          "id": "Q765633",
+          "label": "Aviation",
+          "reason": "A defined lateral-directional oscillation mode rather than aerodynamics generally or a generic aircraft turn."
+        }
+      ],
+      "identity_reason": "A defined lateral-directional oscillation mode rather than aerodynamics generally or a generic aircraft turn."
+    },
+    {
+      "id": "local:catalog:p-factor",
+      "alias_checks": [
+        {
+          "query": "P-factor",
+          "normalized_key": "p factor",
+          "matched_ids": []
+        },
+        {
+          "query": "Asymmetric propeller loading",
+          "normalized_key": "asymmetric propeller loading",
+          "matched_ids": []
+        },
+        {
+          "query": "P-Factor",
+          "normalized_key": "p factor",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q205451",
+          "label": "Propeller",
+          "reason": "A named asymmetry in propeller loading, distinct from torque reaction, gyroscopic precession, or adverse yaw."
+        },
+        {
+          "id": "Q8424",
+          "label": "Aerodynamics",
+          "reason": "A named asymmetry in propeller loading, distinct from torque reaction, gyroscopic precession, or adverse yaw."
+        }
+      ],
+      "identity_reason": "A named asymmetry in propeller loading, distinct from torque reaction, gyroscopic precession, or adverse yaw."
+    },
+    {
+      "id": "local:catalog:adverse-yaw",
+      "alias_checks": [
+        {
+          "query": "Adverse yaw",
+          "normalized_key": "adverse yaw",
+          "matched_ids": []
+        },
+        {
+          "query": "Aileron adverse yaw",
+          "normalized_key": "aileron adverse yaw",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1705284",
+          "label": "Flight control surfaces",
+          "reason": "The differential-drag yaw accompanying aileron use is distinct from propeller P-factor and roll-yaw oscillation."
+        },
+        {
+          "id": "Q8424",
+          "label": "Aerodynamics",
+          "reason": "The differential-drag yaw accompanying aileron use is distinct from propeller P-factor and roll-yaw oscillation."
+        }
+      ],
+      "identity_reason": "The differential-drag yaw accompanying aileron use is distinct from propeller P-factor and roll-yaw oscillation."
+    },
+    {
+      "id": "local:catalog:etcs-braking-curve",
+      "alias_checks": [
+        {
+          "query": "ETCS braking curve",
+          "normalized_key": "etcs braking curve",
+          "matched_ids": []
+        },
+        {
+          "query": "ETCS braking curves",
+          "normalized_key": "etcs braking curves",
+          "matched_ids": []
+        },
+        {
+          "query": "European Train Control System braking curve",
+          "normalized_key": "european train control system braking curve",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q862562",
+          "label": "Railway signal",
+          "reason": "A specific ETCS supervision calculation differs from the brake hardware, general railway signaling, and braking itself."
+        },
+        {
+          "id": "Q4260703",
+          "label": "Railway engineering",
+          "reason": "A specific ETCS supervision calculation differs from the brake hardware, general railway signaling, and braking itself."
+        }
+      ],
+      "identity_reason": "A specific ETCS supervision calculation differs from the brake hardware, general railway signaling, and braking itself."
+    },
+    {
+      "id": "local:catalog:airport-surface-hotspot",
+      "alias_checks": [
+        {
+          "query": "Airport surface hotspot",
+          "normalized_key": "airport surface hotspot",
+          "matched_ids": []
+        },
+        {
+          "query": "Runway safety hotspot",
+          "normalized_key": "runway safety hotspot",
+          "matched_ids": []
+        },
+        {
+          "query": "Airport hot spot",
+          "normalized_key": "airport hot spot",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q184590",
+          "label": "Runway",
+          "reason": "A risk-designated location differs from a runway incursion incident; either history or potential risk can qualify."
+        },
+        {
+          "id": "Q765633",
+          "label": "Aviation",
+          "reason": "A risk-designated location differs from a runway incursion incident; either history or potential risk can qualify."
+        }
+      ],
+      "identity_reason": "A risk-designated location differs from a runway incursion incident; either history or potential risk can qualify."
+    },
+    {
+      "id": "local:catalog:start-up-lost-time",
+      "alias_checks": [
+        {
+          "query": "Start-up lost time at a traffic signal",
+          "normalized_key": "start up lost time at a traffic signal",
+          "matched_ids": []
+        },
+        {
+          "query": "Start-up lost time",
+          "normalized_key": "start up lost time",
+          "matched_ids": []
+        },
+        {
+          "query": "Startup lost time",
+          "normalized_key": "startup lost time",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8004",
+          "label": "Traffic light",
+          "reason": "The named initial lost-time quantity is different from saturation flow’s hypothetical hourly discharge and from intersection delay generally."
+        }
+      ],
+      "identity_reason": "The named initial lost-time quantity is different from saturation flow’s hypothetical hourly discharge and from intersection delay generally."
+    },
+    {
+      "id": "local:catalog:bus-queue-jump",
+      "alias_checks": [
+        {
+          "query": "Bus queue jump",
+          "normalized_key": "bus queue jump",
+          "matched_ids": []
+        },
+        {
+          "query": "Queue jump lane",
+          "normalized_key": "queue jump lane",
+          "matched_ids": []
+        },
+        {
+          "query": "Queue jumper",
+          "normalized_key": "queue jumper",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1740966",
+          "label": "Public transport bus service",
+          "reason": "The combined lane-and-signal treatment differs from generic bus service or signal priority alone."
+        },
+        {
+          "id": "Q8004",
+          "label": "Traffic light",
+          "reason": "The combined lane-and-signal treatment differs from generic bus service or signal priority alone."
+        }
+      ],
+      "identity_reason": "The combined lane-and-signal treatment differs from generic bus service or signal priority alone."
+    },
+    {
+      "id": "Q11023",
+      "alias_checks": [
+        {
+          "query": "Engineering",
+          "normalized_key": "engineering",
+          "matched_ids": [
+            "Q11023"
+          ]
+        },
+        {
+          "query": "Engineering",
+          "normalized_key": "engineering",
+          "matched_ids": [
+            "Q11023"
+          ]
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11023",
+          "label": "Engineering",
+          "reason": "The same broad engineering identity already has card version 1; this new source perspective requires ID reuse."
+        }
+      ],
+      "identity_reason": "The same broad engineering identity already has card version 1; this new source perspective requires ID reuse."
+    },
+    {
+      "id": "local:catalog:volleyball-rotational-fault",
+      "alias_checks": [
+        {
+          "query": "Volleyball rotational fault",
+          "normalized_key": "volleyball rotational fault",
+          "matched_ids": []
+        },
+        {
+          "query": "Rotational fault in volleyball",
+          "normalized_key": "rotational fault in volleyball",
+          "matched_ids": []
+        },
+        {
+          "query": "Serving out of rotation",
+          "normalized_key": "serving out of rotation",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000287",
+          "label": "Volleyball",
+          "reason": "Rule 7.7 names wrong service order, distinct from a positional fault involving players’ locations."
+        }
+      ],
+      "identity_reason": "Rule 7.7 names wrong service order, distinct from a positional fault involving players’ locations."
+    },
+    {
+      "id": "local:catalog:tennis-service-let",
+      "alias_checks": [
+        {
+          "query": "Tennis service let",
+          "normalized_key": "tennis service let",
+          "matched_ids": []
+        },
+        {
+          "query": "Service let",
+          "normalized_key": "service let",
+          "matched_ids": []
+        },
+        {
+          "query": "Let on service",
+          "normalized_key": "let on service",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q847",
+          "label": "Tennis",
+          "reason": "A specifically defined nullified serve differs from a fault and from a general rally let."
+        }
+      ],
+      "identity_reason": "A specifically defined nullified serve differs from a fault and from a general rally let."
+    },
+    {
+      "id": "local:catalog:wheelchair-tennis-two-bounce-rule",
+      "alias_checks": [
+        {
+          "query": "Wheelchair tennis two-bounce rule",
+          "normalized_key": "wheelchair tennis two bounce rule",
+          "matched_ids": []
+        },
+        {
+          "query": "Two-bounce rule in wheelchair tennis",
+          "normalized_key": "two bounce rule in wheelchair tennis",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q847",
+          "label": "Tennis",
+          "reason": "This named wheelchair-tennis rule is a separately specified adaptation rather than generic tennis or wheelchair use."
+        },
+        {
+          "id": "Q191931",
+          "label": "Wheelchair",
+          "reason": "This named wheelchair-tennis rule is a separately specified adaptation rather than generic tennis or wheelchair use."
+        }
+      ],
+      "identity_reason": "This named wheelchair-tennis rule is a separately specified adaptation rather than generic tennis or wheelchair use."
+    },
+    {
+      "id": "local:catalog:rugby-union-advantage",
+      "alias_checks": [
+        {
+          "query": "Advantage in rugby union",
+          "normalized_key": "advantage in rugby union",
+          "matched_ids": []
+        },
+        {
+          "query": "Rugby advantage",
+          "normalized_key": "rugby advantage",
+          "matched_ids": []
+        },
+        {
+          "query": "Advantage law in rugby",
+          "normalized_key": "advantage law in rugby",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q5849",
+          "label": "Rugby union",
+          "reason": "The separately named rugby Law 7 differs from advantage in other sports and from sports rules generally."
+        }
+      ],
+      "identity_reason": "The separately named rugby Law 7 differs from advantage in other sports and from sports rules generally."
+    },
+    {
+      "id": "local:catalog:duckworth-lewis-stern-method",
+      "alias_checks": [
+        {
+          "query": "Duckworth–Lewis–Stern method",
+          "normalized_key": "duckworth lewis stern method",
+          "matched_ids": []
+        },
+        {
+          "query": "DLS method",
+          "normalized_key": "dls method",
+          "matched_ids": []
+        },
+        {
+          "query": "Duckworth Lewis Stern",
+          "normalized_key": "duckworth lewis stern",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000291",
+          "label": "Cricket",
+          "reason": "A distinct target-adjustment methodology rather than cricket itself or simple proportional overs-based scoring."
+        },
+        {
+          "id": "Q7435308",
+          "label": "Score (sport)",
+          "reason": "A distinct target-adjustment methodology rather than cricket itself or simple proportional overs-based scoring."
+        }
+      ],
+      "identity_reason": "A distinct target-adjustment methodology rather than cricket itself or simple proportional overs-based scoring."
+    },
+    {
+      "id": "Q11413",
+      "alias_checks": [
+        {
+          "query": "Go (board game)",
+          "normalized_key": "go (board game)",
+          "matched_ids": [
+            "Q11413"
+          ]
+        },
+        {
+          "query": "Go",
+          "normalized_key": "go",
+          "matched_ids": [
+            "Q11413",
+            "Q37227"
+          ]
+        },
+        {
+          "query": "Go (game)",
+          "normalized_key": "go (game)",
+          "matched_ids": [
+            "Q11413"
+          ]
+        },
+        {
+          "query": "Go (board game)",
+          "normalized_key": "go (board game)",
+          "matched_ids": [
+            "Q11413"
+          ]
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11413",
+          "label": "Go",
+          "reason": "The existing board-game identity is reused; Q37227 is the unrelated Go programming-language sense of the same name."
+        },
+        {
+          "id": "Q37227",
+          "label": "Go (programming language)",
+          "reason": "The existing board-game identity is reused; Q37227 is the unrelated Go programming-language sense of the same name."
+        }
+      ],
+      "identity_reason": "The existing board-game identity is reused; Q37227 is the unrelated Go programming-language sense of the same name."
+    },
+    {
+      "id": "local:catalog:voice-onset-time",
+      "alias_checks": [
+        {
+          "query": "Voice onset time",
+          "normalized_key": "voice onset time",
+          "matched_ids": []
+        },
+        {
+          "query": "VOT",
+          "normalized_key": "vot",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q35395",
+          "label": "Phonetics",
+          "reason": "A defined acoustic interval for stop consonants, distinct from phonetics broadly and from categorical perception of that interval."
+        },
+        {
+          "id": "Q8183",
+          "label": "Phoneme",
+          "reason": "A defined acoustic interval for stop consonants, distinct from phonetics broadly and from categorical perception of that interval."
+        }
+      ],
+      "identity_reason": "A defined acoustic interval for stop consonants, distinct from phonetics broadly and from categorical perception of that interval."
+    },
+    {
+      "id": "local:catalog:mcgurk-effect",
+      "alias_checks": [
+        {
+          "query": "McGurk effect",
+          "normalized_key": "mcgurk effect",
+          "matched_ids": []
+        },
+        {
+          "query": "McGurk illusion",
+          "normalized_key": "mcgurk illusion",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8183",
+          "label": "Phoneme",
+          "reason": "A specifically studied audiovisual speech illusion, distinct from phoneme categorization generally and from lexical interpretation biases."
+        },
+        {
+          "id": "Q2459671",
+          "label": "Categorical perception",
+          "reason": "A specifically studied audiovisual speech illusion, distinct from phoneme categorization generally and from lexical interpretation biases."
+        },
+        {
+          "id": "Q160402",
+          "label": "perception",
+          "reason": "A specifically studied audiovisual speech illusion, distinct from phoneme categorization generally and from lexical interpretation biases."
+        }
+      ],
+      "identity_reason": "A specifically studied audiovisual speech illusion, distinct from phoneme categorization generally and from lexical interpretation biases."
+    },
+    {
+      "id": "local:catalog:mutual-exclusivity-word-learning",
+      "alias_checks": [
+        {
+          "query": "Mutual exclusivity in word learning",
+          "normalized_key": "mutual exclusivity in word learning",
+          "matched_ids": []
+        },
+        {
+          "query": "Mutual exclusivity bias",
+          "normalized_key": "mutual exclusivity bias",
+          "matched_ids": []
+        },
+        {
+          "query": "Lexical mutual exclusivity",
+          "normalized_key": "lexical mutual exclusivity",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q815859",
+          "label": "Language acquisition",
+          "reason": "The distinct word-learning bias restricts candidate referents; it is not logical mutual exclusion or the whole-object assumption."
+        }
+      ],
+      "identity_reason": "The distinct word-learning bias restricts candidate referents; it is not logical mutual exclusion or the whole-object assumption."
+    },
+    {
+      "id": "local:catalog:whole-object-assumption",
+      "alias_checks": [
+        {
+          "query": "Whole-object assumption in word learning",
+          "normalized_key": "whole object assumption in word learning",
+          "matched_ids": []
+        },
+        {
+          "query": "Whole object assumption",
+          "normalized_key": "whole object assumption",
+          "matched_ids": []
+        },
+        {
+          "query": "Whole-object bias",
+          "normalized_key": "whole object bias",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q815859",
+          "label": "Language acquisition",
+          "reason": "The paper separately names this initial referent hypothesis and mutual exclusivity; one chooses whole-object scope, the other rejects an additional label."
+        }
+      ],
+      "identity_reason": "The paper separately names this initial referent hypothesis and mutual exclusivity; one chooses whole-object scope, the other rejects an additional label."
+    },
+    {
+      "id": "local:catalog:generation-effect",
+      "alias_checks": [
+        {
+          "query": "Generation effect",
+          "normalized_key": "generation effect",
+          "matched_ids": []
+        },
+        {
+          "query": "Self-generation effect",
+          "normalized_key": "self generation effect",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q492",
+          "label": "memory",
+          "reason": "The generate-versus-read encoding comparison is distinct from recalling already studied material in retrieval practice."
+        },
+        {
+          "id": "Q7705913",
+          "label": "Testing effect",
+          "reason": "The generate-versus-read encoding comparison is distinct from recalling already studied material in retrieval practice."
+        }
+      ],
+      "identity_reason": "The generate-versus-read encoding comparison is distinct from recalling already studied material in retrieval practice."
+    },
+    {
+      "id": "local:catalog:productive-failure",
+      "alias_checks": [
+        {
+          "query": "Productive failure",
+          "normalized_key": "productive failure",
+          "matched_ids": []
+        },
+        {
+          "query": "Productive failure in learning",
+          "normalized_key": "productive failure in learning",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q133500",
+          "label": "Learning",
+          "reason": "The study names latent learning benefits from initially unsuccessful exploration; this is distinct from the worked-example effect or generic learning from mistakes."
+        },
+        {
+          "id": "local:catalog:worked-example",
+          "label": "Worked example",
+          "reason": "The study names latent learning benefits from initially unsuccessful exploration; this is distinct from the worked-example effect or generic learning from mistakes."
+        }
+      ],
+      "identity_reason": "The study names latent learning benefits from initially unsuccessful exploration; this is distinct from the worked-example effect or generic learning from mistakes."
+    },
+    {
+      "id": "local:catalog:desirable-difficulties",
+      "alias_checks": [
+        {
+          "query": "Desirable difficulties",
+          "normalized_key": "desirable difficulties",
+          "matched_ids": []
+        },
+        {
+          "query": "Desirable difficulty",
+          "normalized_key": "desirable difficulty",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1095859",
+          "label": "Spacing effect",
+          "reason": "An umbrella learning-performance distinction includes spacing and testing but is broader than either individual effect; not all difficulty is desirable."
+        },
+        {
+          "id": "Q7705913",
+          "label": "Testing effect",
+          "reason": "An umbrella learning-performance distinction includes spacing and testing but is broader than either individual effect; not all difficulty is desirable."
+        },
+        {
+          "id": "Q133500",
+          "label": "Learning",
+          "reason": "An umbrella learning-performance distinction includes spacing and testing but is broader than either individual effect; not all difficulty is desirable."
+        },
+        {
+          "id": "Q57660658",
+          "label": "Sans forgetica",
+          "reason": "Sans forgetica is a particular typeface whose imported description invokes desirable difficulty. It is distinct from the general learning principle, and its efficacy is not assumed here."
+        }
+      ],
+      "identity_reason": "An umbrella learning-performance distinction includes spacing and testing but is broader than either individual effect; not all difficulty is desirable."
+    },
+    {
+      "id": "Q7705913",
+      "alias_checks": [
+        {
+          "query": "Testing effect",
+          "normalized_key": "testing effect",
+          "matched_ids": [
+            "Q7705913"
+          ]
+        },
+        {
+          "query": "Practice testing",
+          "normalized_key": "practice testing",
+          "matched_ids": [
+            "Q7705913"
+          ]
+        },
+        {
+          "query": "Retrieval practice",
+          "normalized_key": "retrieval practice",
+          "matched_ids": [
+            "Q7705913"
+          ]
+        },
+        {
+          "query": "Testing effect",
+          "normalized_key": "testing effect",
+          "matched_ids": [
+            "Q7705913"
+          ]
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7705913",
+          "label": "Testing effect",
+          "reason": "The imported testing-effect identity and its retrieval-practice aliases are the same subject; primary-author evidence updates the reference bundle."
+        }
+      ],
+      "identity_reason": "The imported testing-effect identity and its retrieval-practice aliases are the same subject; primary-author evidence updates the reference bundle."
+    },
+    {
+      "id": "local:catalog:change-blindness",
+      "alias_checks": [
+        {
+          "query": "Change blindness",
+          "normalized_key": "change blindness",
+          "matched_ids": []
+        },
+        {
+          "query": "Visual change blindness",
+          "normalized_key": "visual change blindness",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:inattentional-blindness",
+          "label": "Inattentional blindness",
+          "reason": "Failure to compare successive scene states differs from missing an unexpected object during another task and from rapid-sequence attentional blink."
+        },
+        {
+          "id": "local:catalog:attentional-blink",
+          "label": "Attentional blink",
+          "reason": "Failure to compare successive scene states differs from missing an unexpected object during another task and from rapid-sequence attentional blink."
+        },
+        {
+          "id": "Q160402",
+          "label": "perception",
+          "reason": "Failure to compare successive scene states differs from missing an unexpected object during another task and from rapid-sequence attentional blink."
+        }
+      ],
+      "identity_reason": "Failure to compare successive scene states differs from missing an unexpected object during another task and from rapid-sequence attentional blink."
+    },
+    {
+      "id": "local:catalog:choice-blindness",
+      "alias_checks": [
+        {
+          "query": "Choice blindness",
+          "normalized_key": "choice blindness",
+          "matched_ids": []
+        },
+        {
+          "query": "Choice-outcome blindness",
+          "normalized_key": "choice outcome blindness",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q210501",
+          "label": "Introspection",
+          "reason": "The named intention-versus-presented-outcome mismatch differs from visual change detection or simply overlooking an unexpected object."
+        },
+        {
+          "id": "local:catalog:inattentional-blindness",
+          "label": "Inattentional blindness",
+          "reason": "The named intention-versus-presented-outcome mismatch differs from visual change detection or simply overlooking an unexpected object."
+        }
+      ],
+      "identity_reason": "The named intention-versus-presented-outcome mismatch differs from visual change detection or simply overlooking an unexpected object."
+    },
+    {
+      "id": "local:catalog:illusion-of-explanatory-depth",
+      "alias_checks": [
+        {
+          "query": "Illusion of explanatory depth",
+          "normalized_key": "illusion of explanatory depth",
+          "matched_ids": []
+        },
+        {
+          "query": "IOED",
+          "normalized_key": "ioed",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1126970",
+          "label": "Metacognition",
+          "reason": "The paper explicitly distinguishes overestimating explanatory understanding from general confidence about facts, procedures, or narratives."
+        },
+        {
+          "id": "Q210501",
+          "label": "Introspection",
+          "reason": "The paper explicitly distinguishes overestimating explanatory understanding from general confidence about facts, procedures, or narratives."
+        }
+      ],
+      "identity_reason": "The paper explicitly distinguishes overestimating explanatory understanding from general confidence about facts, procedures, or narratives."
+    },
+    {
+      "id": "local:catalog:stop-signal-reaction-time",
+      "alias_checks": [
+        {
+          "query": "Stop-signal reaction time",
+          "normalized_key": "stop signal reaction time",
+          "matched_ids": []
+        },
+        {
+          "query": "SSRT",
+          "normalized_key": "ssrt",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q783092",
+          "label": "Executive functions",
+          "reason": "The estimated covert stopping latency is distinct from overt go reaction time, signal delay, and executive functioning generally."
+        },
+        {
+          "id": "Q500096",
+          "label": "Psychophysics",
+          "reason": "The estimated covert stopping latency is distinct from overt go reaction time, signal delay, and executive functioning generally."
+        }
+      ],
+      "identity_reason": "The estimated covert stopping latency is distinct from overt go reaction time, signal delay, and executive functioning generally."
+    },
+    {
+      "id": "local:catalog:simon-effect",
+      "alias_checks": [
+        {
+          "query": "Simon effect",
+          "normalized_key": "simon effect",
+          "matched_ids": []
+        },
+        {
+          "query": "Spatial Simon effect",
+          "normalized_key": "spatial simon effect",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q384176",
+          "label": "Stroop effect",
+          "reason": "Spatial stimulus-response correspondence defines the Simon task; the Stroop effect instead uses an irrelevant word dimension and is not the same subject."
+        },
+        {
+          "id": "Q6501338",
+          "label": "attention",
+          "reason": "Spatial stimulus-response correspondence defines the Simon task; the Stroop effect instead uses an irrelevant word dimension and is not the same subject."
+        }
+      ],
+      "identity_reason": "Spatial stimulus-response correspondence defines the Simon task; the Stroop effect instead uses an irrelevant word dimension and is not the same subject."
+    },
+    {
+      "id": "local:catalog:duration-neglect",
+      "alias_checks": [
+        {
+          "query": "Duration neglect",
+          "normalized_key": "duration neglect",
+          "matched_ids": []
+        },
+        {
+          "query": "Duration neglect in remembered experience",
+          "normalized_key": "duration neglect in remembered experience",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q492",
+          "label": "memory",
+          "reason": "Underweighting episode length is a specifically tested evaluation phenomenon, distinct from forgetting duration or memory broadly."
+        },
+        {
+          "id": "Q1126970",
+          "label": "Metacognition",
+          "reason": "Underweighting episode length is a specifically tested evaluation phenomenon, distinct from forgetting duration or memory broadly."
+        }
+      ],
+      "identity_reason": "Underweighting episode length is a specifically tested evaluation phenomenon, distinct from forgetting duration or memory broadly."
+    },
+    {
+      "id": "local:catalog:inattentional-blindness",
+      "alias_checks": [
+        {
+          "query": "Inattentional blindness",
+          "normalized_key": "inattentional blindness",
+          "matched_ids": [
+            "local:catalog:inattentional-blindness"
+          ]
+        },
+        {
+          "query": "Inattentional blindness",
+          "normalized_key": "inattentional blindness",
+          "matched_ids": [
+            "local:catalog:inattentional-blindness"
+          ]
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:inattentional-blindness",
+          "label": "Inattentional blindness",
+          "reason": "The same existing phenomenon and counting-task demonstration are retained; a new original-paper bundle does not create a new identity."
+        }
+      ],
+      "identity_reason": "The same existing phenomenon and counting-task demonstration are retained; a new original-paper bundle does not create a new identity."
+    },
+    {
+      "id": "local:catalog:homophily",
+      "alias_checks": [
+        {
+          "query": "Homophily",
+          "normalized_key": "homophily",
+          "matched_ids": []
+        },
+        {
+          "query": "Social homophily",
+          "normalized_key": "social homophily",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q17029202",
+          "label": "Heterophily",
+          "reason": "Similarity among connected people is distinct from heterophily, its opposite tendency, and from closing a triangle between friends of friends."
+        },
+        {
+          "id": "Q2715623",
+          "label": "Social network",
+          "reason": "Similarity among connected people is distinct from heterophily, its opposite tendency, and from closing a triangle between friends of friends."
+        },
+        {
+          "id": "local:catalog:triadic-closure",
+          "label": "Triadic closure",
+          "reason": "Similarity among connected people is distinct from heterophily, its opposite tendency, and from closing a triangle between friends of friends."
+        }
+      ],
+      "identity_reason": "Similarity among connected people is distinct from heterophily, its opposite tendency, and from closing a triangle between friends of friends."
+    },
+    {
+      "id": "local:catalog:focal-closure",
+      "alias_checks": [
+        {
+          "query": "Focal closure",
+          "normalized_key": "focal closure",
+          "matched_ids": []
+        },
+        {
+          "query": "Shared-focus closure",
+          "normalized_key": "shared focus closure",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:triadic-closure",
+          "label": "Triadic closure",
+          "reason": "The shared neighbor is an activity focus and the new edge is person-to-person; baseline triadic closure uses a shared person."
+        },
+        {
+          "id": "Q2715623",
+          "label": "Social network",
+          "reason": "The shared neighbor is an activity focus and the new edge is person-to-person; baseline triadic closure uses a shared person."
+        }
+      ],
+      "identity_reason": "The shared neighbor is an activity focus and the new edge is person-to-person; baseline triadic closure uses a shared person."
+    },
+    {
+      "id": "local:catalog:membership-closure",
+      "alias_checks": [
+        {
+          "query": "Membership closure",
+          "normalized_key": "membership closure",
+          "matched_ids": []
+        },
+        {
+          "query": "Friend-mediated affiliation",
+          "normalized_key": "friend mediated affiliation",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:triadic-closure",
+          "label": "Triadic closure",
+          "reason": "The new edge links a person to a focus, distinct from focal closure’s new friendship and triadic closure’s person-person link."
+        },
+        {
+          "id": "Q2715623",
+          "label": "Social network",
+          "reason": "The new edge links a person to a focus, distinct from focal closure’s new friendship and triadic closure’s person-person link."
+        }
+      ],
+      "identity_reason": "The new edge links a person to a focus, distinct from focal closure’s new friendship and triadic closure’s person-person link."
+    },
+    {
+      "id": "local:catalog:complex-contagion",
+      "alias_checks": [
+        {
+          "query": "Complex contagion",
+          "normalized_key": "complex contagion",
+          "matched_ids": []
+        },
+        {
+          "query": "Complex social contagion",
+          "normalized_key": "complex social contagion",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q106283193",
+          "label": "Social contagion",
+          "reason": "The named multi-contact adoption process is distinct from generic social contagion or diffusion of information through one contact."
+        },
+        {
+          "id": "local:catalog:weak-ties",
+          "label": "Weak ties",
+          "reason": "The named multi-contact adoption process is distinct from generic social contagion or diffusion of information through one contact."
+        },
+        {
+          "id": "local:catalog:local-bridge-in-a-network",
+          "label": "Local bridge in a network",
+          "reason": "The named multi-contact adoption process is distinct from generic social contagion or diffusion of information through one contact."
+        }
+      ],
+      "identity_reason": "The named multi-contact adoption process is distinct from generic social contagion or diffusion of information through one contact."
+    },
+    {
+      "id": "local:catalog:friendship-paradox",
+      "alias_checks": [
+        {
+          "query": "Friendship paradox",
+          "normalized_key": "friendship paradox",
+          "matched_ids": []
+        },
+        {
+          "query": "Friends-have-more-friends paradox",
+          "normalized_key": "friends have more friends paradox",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q2715623",
+          "label": "Social network",
+          "reason": "A degree-weighted sampling phenomenon differs from homophily, friendship quality, or social-network analysis generally."
+        },
+        {
+          "id": "Q7551269",
+          "label": "Social network analysis",
+          "reason": "A degree-weighted sampling phenomenon differs from homophily, friendship quality, or social-network analysis generally."
+        }
+      ],
+      "identity_reason": "A degree-weighted sampling phenomenon differs from homophily, friendship quality, or social-network analysis generally."
+    },
+    {
+      "id": "local:catalog:preferential-attachment",
+      "alias_checks": [
+        {
+          "query": "Preferential attachment",
+          "normalized_key": "preferential attachment",
+          "matched_ids": []
+        },
+        {
+          "query": "Degree-preferential attachment",
+          "normalized_key": "degree preferential attachment",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000046",
+          "label": "Network science",
+          "reason": "A specific degree-dependent link-formation rule differs from generic popularity and from the unrelated psychological attachment theory."
+        },
+        {
+          "id": "Q909609",
+          "label": "Attachment theory",
+          "reason": "A specific degree-dependent link-formation rule differs from generic popularity and from the unrelated psychological attachment theory."
+        }
+      ],
+      "identity_reason": "A specific degree-dependent link-formation rule differs from generic popularity and from the unrelated psychological attachment theory."
+    },
+    {
+      "id": "local:catalog:schelling-segregation-model",
+      "alias_checks": [
+        {
+          "query": "Schelling segregation model",
+          "normalized_key": "schelling segregation model",
+          "matched_ids": []
+        },
+        {
+          "query": "Schelling model of segregation",
+          "normalized_key": "schelling model of segregation",
+          "matched_ids": []
+        },
+        {
+          "query": "Spatial segregation model",
+          "normalized_key": "spatial segregation model",
+          "matched_ids": []
+        }
+      ],
+      "nearest_baseline_matches": [
+        {
+          "id": "Q59816",
+          "label": "Racial segregation",
+          "reason": "The specifically named agent-on-grid mechanism differs from segregation as a social outcome and from homophily as an aggregate tie tendency."
+        },
+        {
+          "id": "Q17029202",
+          "label": "Heterophily",
+          "reason": "The specifically named agent-on-grid mechanism differs from segregation as a social outcome and from homophily as an aggregate tie tendency."
+        }
+      ],
+      "identity_reason": "The specifically named agent-on-grid mechanism differs from segregation as a social outcome and from homophily as an aggregate tie tendency."
+    }
+  ]
+}

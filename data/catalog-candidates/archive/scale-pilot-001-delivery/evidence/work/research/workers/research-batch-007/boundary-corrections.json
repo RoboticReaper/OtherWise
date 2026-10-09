@@ -1,0 +1,2639 @@
+{
+  "batch_id": "research-batch-007",
+  "before_batch_revision": 1,
+  "after_batch_revision": 2,
+  "before_candidate_sha256": "9529a1feb92abd597d86aed66eab26656d344813f2d81e62a8fffc6e7fa75492",
+  "after_candidate_sha256": "1989b1a2ea351e4f277012d1860f37c5f02662a1d7d857a3e278a5ea68ea9952",
+  "changes": [
+    {
+      "id": "local:catalog:touch-move-rule",
+      "label": "Touch-move rule",
+      "reason": "The binding rule applies to the player whose turn it is and the first own piece that can legally move. Revision makes both timing and first-touch ordering explicit.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:touch-move-rule",
+        "label": "Touch-move rule",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "Understand how deliberate touching commits a player when a legal move exists.",
+        "card": "In over-the-board chess, deliberately touching one of your pieces with the intention of moving it normally commits you to move that piece if a legal move exists. Adjusting a piece after announcing that intention is different. Accidental contact is not treated as deliberate selection.",
+        "original_description": null,
+        "identity_urls": [
+          "https://handbook.fide.com/chapter/E012023"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s001",
+            "locator": "Articles 4.2–4.5",
+            "note": "FIDE 4.2–4.5 support intentional contact, prior adjustment declaration and legal-move qualification; this describes own-piece handling rather than every multi-piece exception."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000254",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "FIDE's Act of Moving the Pieces regulates how a player's physical selection becomes binding.",
+            "source_ids": [
+              "b007-s001"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:touch-move-rule",
+        "label": "Touch-move rule",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "Understand how deliberate touching commits a player when a legal move exists.",
+        "card": "In over-the-board chess, a player whose turn it is normally must move the first deliberately touched own piece that has a legal move. Announcing an intention to adjust a piece before touching it is different. Clearly accidental contact does not count as deliberate selection.",
+        "original_description": null,
+        "identity_urls": [
+          "https://handbook.fide.com/chapter/E012023"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s001",
+            "locator": "Articles 4.2–4.5",
+            "note": "FIDE 4.2–4.5 restricts binding touch to the player having the move, prioritizes the first legally movable own piece, and distinguishes announced adjustment and clearly accidental contact."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000254",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "FIDE's Act of Moving the Pieces regulates how a player's physical selection becomes binding.",
+            "source_ids": [
+              "b007-s001"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://handbook.fide.com/chapter/E012023",
+              "requested_ref": "https://handbook.fide.com/chapter/E012023",
+              "method": "open",
+              "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+              "retrieved_at": "2026-10-08T19:19:28.806Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-fide-first.json",
+              "raw_sha256": "3546b102e6aa9f5cda344afa39188124e9735a47302e20e8d8c732de484e4c8c"
+            },
+            {
+              "url": "https://handbook.fide.com/chapter/E012023",
+              "requested_ref": "https://handbook.fide.com/chapter/E012023",
+              "method": "open",
+              "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+              "retrieved_at": "2026-10-08T19:18:48.347Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-fide.json",
+              "raw_sha256": "ca4ea7bf5a42f97374fff4094c9510bb1a7e39c732faf527002e9ed2ba392005"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s001",
+          "inspection_artifacts": [
+            "source-raw/games-fide-first.json",
+            "source-raw/games-fide.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Articles 1.4–1.5; Articles 3.7.3.1–3.7.3.2; Article 3.8.2; Article 5.2.1; Article 5.2.2; Articles 4.2–4.5; Articles 9.2–9.2.3; Articles 3.7.3.3–3.7.3.5; Articles 1.4–1.5; Articles 3.7.3.1–3.7.3.2; Article 3.8.2; Article 5.2.1; Article 5.2.2; Articles 4.2–4.5; Articles 9.2–9.2.3; Articles 3.7.3.3–3.7.3.5",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:19:28.806Z",
+          "revision": null,
+          "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+          "url": "https://handbook.fide.com/chapter/E012023"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://handbook.fide.com/chapter/E012023",
+              "requested_ref": "https://handbook.fide.com/chapter/E012023",
+              "method": "open",
+              "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+              "retrieved_at": "2026-10-08T19:19:28.806Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-fide-first.json",
+              "raw_sha256": "3546b102e6aa9f5cda344afa39188124e9735a47302e20e8d8c732de484e4c8c"
+            },
+            {
+              "url": "https://handbook.fide.com/chapter/E012023",
+              "requested_ref": "https://handbook.fide.com/chapter/E012023",
+              "method": "open",
+              "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+              "retrieved_at": "2026-10-08T19:18:48.347Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-fide.json",
+              "raw_sha256": "ca4ea7bf5a42f97374fff4094c9510bb1a7e39c732faf527002e9ed2ba392005"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s001",
+          "inspection_artifacts": [
+            "source-raw/games-fide-first.json",
+            "source-raw/games-fide.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Articles 1.4–1.5; Articles 3.7.3.1–3.7.3.2; Article 3.8.2; Article 5.2.1; Article 5.2.2; Articles 4.2–4.5; Articles 9.2–9.2.3; Articles 3.7.3.3–3.7.3.5; Articles 1.4–1.5; Articles 3.7.3.1–3.7.3.2; Article 3.8.2; Article 5.2.1; Article 5.2.2; Articles 4.2–4.5; Articles 9.2–9.2.3; Articles 3.7.3.3–3.7.3.5",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:19:28.806Z",
+          "revision": null,
+          "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+          "url": "https://handbook.fide.com/chapter/E012023"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:threefold-repetition",
+      "label": "Threefold repetition",
+      "reason": "FIDE requires a proper claim by the player to move; an intended-move claim precedes execution and includes declaration to the arbiter. Revision adds that procedural boundary while preserving fivefold's automatic contrast.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:threefold-repetition",
+        "label": "Threefold repetition",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "Explain the claimable three-occurrence draw procedure, including the timing of a claim before a qualifying intended move.",
+        "card": "Under the cited FIDE rules, threefold repetition creates a claimable draw rather than automatically stopping play. A player whose turn it is may claim when the position has just appeared for the third time, or first record an intended move that will produce that recurrence.",
+        "original_description": null,
+        "identity_urls": [
+          "https://handbook.fide.com/chapter/E012023"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s001",
+            "locator": "Articles 9.2–9.2.3",
+            "note": "FIDE 9.2.1–2 supports both current-position and intended-move claims by the player to move; the contrast with 9.6.1 avoids repeating only fivefold's position-identity lesson."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:fivefold-repetition-chess",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The rules distinguish a player's threefold claim from the automatic fivefold repetition draw.",
+            "source_ids": [
+              "b007-s001"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:threefold-repetition",
+        "label": "Threefold repetition",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "Explain the claimable three-occurrence draw procedure, including the timing of a claim before a qualifying intended move.",
+        "card": "Under FIDE rules, threefold repetition permits a draw claim rather than automatically ending play. The player to move may claim when the position has appeared for the third time, or record an intended move producing it and declare that intention to the arbiter before moving.",
+        "original_description": null,
+        "identity_urls": [
+          "https://handbook.fide.com/chapter/E012023"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s001",
+            "locator": "Articles 9.2–9.2.3",
+            "note": "FIDE 9.2.1–2 supports current-position claims and intended-move claims recorded and declared to the arbiter before execution; 9.6.1 separately supplies the automatic fivefold contrast."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:fivefold-repetition-chess",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The rules distinguish a player's threefold claim from the automatic fivefold repetition draw.",
+            "source_ids": [
+              "b007-s001"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://handbook.fide.com/chapter/E012023",
+              "requested_ref": "https://handbook.fide.com/chapter/E012023",
+              "method": "open",
+              "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+              "retrieved_at": "2026-10-08T19:19:28.806Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-fide-first.json",
+              "raw_sha256": "3546b102e6aa9f5cda344afa39188124e9735a47302e20e8d8c732de484e4c8c"
+            },
+            {
+              "url": "https://handbook.fide.com/chapter/E012023",
+              "requested_ref": "https://handbook.fide.com/chapter/E012023",
+              "method": "open",
+              "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+              "retrieved_at": "2026-10-08T19:18:48.347Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-fide.json",
+              "raw_sha256": "ca4ea7bf5a42f97374fff4094c9510bb1a7e39c732faf527002e9ed2ba392005"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s001",
+          "inspection_artifacts": [
+            "source-raw/games-fide-first.json",
+            "source-raw/games-fide.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Articles 1.4–1.5; Articles 3.7.3.1–3.7.3.2; Article 3.8.2; Article 5.2.1; Article 5.2.2; Articles 4.2–4.5; Articles 9.2–9.2.3; Articles 3.7.3.3–3.7.3.5; Articles 1.4–1.5; Articles 3.7.3.1–3.7.3.2; Article 3.8.2; Article 5.2.1; Article 5.2.2; Articles 4.2–4.5; Articles 9.2–9.2.3; Articles 3.7.3.3–3.7.3.5",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:19:28.806Z",
+          "revision": null,
+          "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+          "url": "https://handbook.fide.com/chapter/E012023"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://handbook.fide.com/chapter/E012023",
+              "requested_ref": "https://handbook.fide.com/chapter/E012023",
+              "method": "open",
+              "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+              "retrieved_at": "2026-10-08T19:19:28.806Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-fide-first.json",
+              "raw_sha256": "3546b102e6aa9f5cda344afa39188124e9735a47302e20e8d8c732de484e4c8c"
+            },
+            {
+              "url": "https://handbook.fide.com/chapter/E012023",
+              "requested_ref": "https://handbook.fide.com/chapter/E012023",
+              "method": "open",
+              "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+              "retrieved_at": "2026-10-08T19:18:48.347Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-fide.json",
+              "raw_sha256": "ca4ea7bf5a42f97374fff4094c9510bb1a7e39c732faf527002e9ed2ba392005"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s001",
+          "inspection_artifacts": [
+            "source-raw/games-fide-first.json",
+            "source-raw/games-fide.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Articles 1.4–1.5; Articles 3.7.3.1–3.7.3.2; Article 3.8.2; Article 5.2.1; Article 5.2.2; Articles 4.2–4.5; Articles 9.2–9.2.3; Articles 3.7.3.3–3.7.3.5; Articles 1.4–1.5; Articles 3.7.3.1–3.7.3.2; Article 3.8.2; Article 5.2.1; Article 5.2.2; Articles 4.2–4.5; Articles 9.2–9.2.3; Articles 3.7.3.3–3.7.3.5",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:19:28.806Z",
+          "revision": null,
+          "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+          "url": "https://handbook.fide.com/chapter/E012023"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:doubling-cube",
+      "label": "Doubling cube",
+      "reason": "The standard cube procedure applies at the start of one's own turn before rolling; some formats temporarily forbid doubling. Revision preserves those limits rather than implying unrestricted offers.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:doubling-cube",
+        "label": "Doubling cube",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "See how accepting a double transfers the right to offer the next redouble.",
+        "card": "Backgammon's doubling cube lets a player offer to raise the game's value before rolling. The opponent can decline and concede at the old value, or accept. Acceptance transfers ownership of the cube, so only that player may offer the next redouble.",
+        "original_description": null,
+        "identity_urls": [
+          "https://usbgf.org/backgammon-basics-how-to-play/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s004",
+            "locator": "Doubling",
+            "note": "USBGF Doubling supports timing, decline cost and ownership transfer; describe points rather than instructing anyone to gamble or implying tournament exceptions do not exist."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000257",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "The federation presents the cube as the game's mechanism for offering and accepting increased stakes.",
+            "source_ids": [
+              "b007-s004"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:doubling-cube",
+        "label": "Doubling cube",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "See how accepting a double transfers the right to offer the next redouble.",
+        "card": "When doubling is allowed in backgammon, a player offers it at the start of their own turn, before rolling. The opponent can decline and lose at the old value, or accept. Acceptance gives that player the cube and the exclusive right to offer the next redouble.",
+        "original_description": null,
+        "identity_urls": [
+          "https://usbgf.org/backgammon-basics-how-to-play/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s004",
+            "locator": "Doubling",
+            "note": "USBGF Doubling supports own-turn timing, before rolling, refusal cost and ownership. When allowed preserves format exceptions such as the separately discussed Crawford game; this is descriptive scoring, not advice to gamble."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000257",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "The federation presents the cube as the game's mechanism for offering and accepting increased stakes.",
+            "source_ids": [
+              "b007-s004"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://usbgf.org/backgammon-basics-how-to-play/",
+              "requested_ref": "https://usbgf.org/backgammon-basics-how-to-play/",
+              "method": "open",
+              "title": "Backgammon Basics: How To Play | U.S. Backgammon Federation",
+              "retrieved_at": "2026-10-08T19:16:50.216Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-backgammon.json",
+              "raw_sha256": "fb3ead2730fd5ba44268518c4e5d268ceada4008151aca7963cd1575c4e8ace1"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s004",
+          "inspection_artifacts": [
+            "source-raw/games-backgammon.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Object of the Game and Movement; Doubling; Gammons and Backgammons; Bearing Off; Hitting and Entering; Optional Rules: Jacoby Rule; Object of the Game and Movement; Doubling; Gammons and Backgammons; Bearing Off; Hitting and Entering; Optional Rules: Jacoby Rule",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:50.216Z",
+          "revision": null,
+          "title": "Backgammon Basics: How To Play | U.S. Backgammon Federation",
+          "url": "https://usbgf.org/backgammon-basics-how-to-play/"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://usbgf.org/backgammon-basics-how-to-play/",
+              "requested_ref": "https://usbgf.org/backgammon-basics-how-to-play/",
+              "method": "open",
+              "title": "Backgammon Basics: How To Play | U.S. Backgammon Federation",
+              "retrieved_at": "2026-10-08T19:16:50.216Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-backgammon.json",
+              "raw_sha256": "fb3ead2730fd5ba44268518c4e5d268ceada4008151aca7963cd1575c4e8ace1"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s004",
+          "inspection_artifacts": [
+            "source-raw/games-backgammon.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Object of the Game and Movement; Doubling; Gammons and Backgammons; Bearing Off; Hitting and Entering; Optional Rules: Jacoby Rule; Object of the Game and Movement; Doubling; Gammons and Backgammons; Bearing Off; Hitting and Entering; Optional Rules: Jacoby Rule",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:50.216Z",
+          "revision": null,
+          "title": "Backgammon Basics: How To Play | U.S. Backgammon Federation",
+          "url": "https://usbgf.org/backgammon-basics-how-to-play/"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:jacoby-rule",
+      "label": "Jacoby rule",
+      "reason": "The federation labels Jacoby optional and excludes it from standard match play. Revision explicitly preserves that format boundary instead of leaving the optional convention apparently available everywhere.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:jacoby-rule",
+        "label": "Jacoby rule",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "See how an optional scoring rule encourages use of the doubling cube.",
+        "card": "The Jacoby rule is an optional backgammon scoring convention: a gammon or backgammon counts only as a single game unless a double has been offered. It removes the extra payoff for avoiding the cube merely to pursue a multiple-value win.",
+        "original_description": null,
+        "identity_urls": [
+          "https://usbgf.org/backgammon-basics-how-to-play/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s004",
+            "locator": "Optional Rules: Jacoby Rule",
+            "note": "USBGF Optional Rules explicitly labels Jacoby optional and states its incentive; do not apply it automatically to all match formats."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:doubling-cube",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The source explains Jacoby's purpose through whether players use the doubling cube during the game.",
+            "source_ids": [
+              "b007-s004"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:jacoby-rule",
+        "label": "Jacoby rule",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "See how an optional scoring rule encourages use of the doubling cube.",
+        "card": "The optional Jacoby rule makes a gammon or backgammon count as a single game unless a double has been offered. It encourages use of the cube rather than waiting for a multiple-value win. The cited standard match-play rules do not use it.",
+        "original_description": null,
+        "identity_urls": [
+          "https://usbgf.org/backgammon-basics-how-to-play/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s004",
+            "locator": "Optional Rules: Jacoby Rule; FAQ on match play",
+            "note": "USBGF Optional Rules gives the condition and incentive; its match-play FAQ explicitly excludes Jacoby. The card preserves that format boundary instead of treating the optional convention as universal."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:doubling-cube",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The source explains Jacoby's purpose through whether players use the doubling cube during the game.",
+            "source_ids": [
+              "b007-s004"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://usbgf.org/backgammon-basics-how-to-play/",
+              "requested_ref": "https://usbgf.org/backgammon-basics-how-to-play/",
+              "method": "open",
+              "title": "Backgammon Basics: How To Play | U.S. Backgammon Federation",
+              "retrieved_at": "2026-10-08T19:16:50.216Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-backgammon.json",
+              "raw_sha256": "fb3ead2730fd5ba44268518c4e5d268ceada4008151aca7963cd1575c4e8ace1"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s004",
+          "inspection_artifacts": [
+            "source-raw/games-backgammon.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Object of the Game and Movement; Doubling; Gammons and Backgammons; Bearing Off; Hitting and Entering; Optional Rules: Jacoby Rule; Object of the Game and Movement; Doubling; Gammons and Backgammons; Bearing Off; Hitting and Entering; Optional Rules: Jacoby Rule",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:50.216Z",
+          "revision": null,
+          "title": "Backgammon Basics: How To Play | U.S. Backgammon Federation",
+          "url": "https://usbgf.org/backgammon-basics-how-to-play/"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://usbgf.org/backgammon-basics-how-to-play/",
+              "requested_ref": "https://usbgf.org/backgammon-basics-how-to-play/",
+              "method": "open",
+              "title": "Backgammon Basics: How To Play | U.S. Backgammon Federation",
+              "retrieved_at": "2026-10-08T19:16:50.216Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-backgammon.json",
+              "raw_sha256": "fb3ead2730fd5ba44268518c4e5d268ceada4008151aca7963cd1575c4e8ace1"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s004",
+          "inspection_artifacts": [
+            "source-raw/games-backgammon.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Object of the Game and Movement; Doubling; Gammons and Backgammons; Bearing Off; Hitting and Entering; Optional Rules: Jacoby Rule; Object of the Game and Movement; Doubling; Gammons and Backgammons; Bearing Off; Hitting and Entering; Optional Rules: Jacoby Rule",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:50.216Z",
+          "revision": null,
+          "title": "Backgammon Basics: How To Play | U.S. Backgammon Federation",
+          "url": "https://usbgf.org/backgammon-basics-how-to-play/"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:shogi-impasse",
+      "label": "Shogi impasse",
+      "reason": "The professional FAQ requires both kings in enemy territory, no mating prospect and no further captures, with at least twenty-four points each. Revision replaces vague advancement with the specific territorial condition.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:shogi-impasse",
+        "label": "Shogi impasse",
+        "aliases": [
+          "Jishogi"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "Explore material counting when neither advanced king can plausibly be mated.",
+        "card": "Shogi's professional impasse procedure addresses positions with both kings advanced, no realistic mate and no further captures. Material is counted: rooks and bishops are worth five points, other nonking pieces one. If both players reach twenty-four points, the cited procedure requires a draw and replay.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.shogi.or.jp/faq/rules/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s003",
+            "locator": "持将棋の規定はどうなっていますか",
+            "note": "Japanese FAQ supports advanced kings, no mating prospect, no further captures, material values and twenty-four-point threshold; explicitly limited to its professional procedure, not every amateur or declaration rule."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000256",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "The official FAQ describes material-count adjudication as a shogi procedure and distinguishes professional from amateur variants.",
+            "source_ids": [
+              "b007-s003"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:shogi-impasse",
+        "label": "Shogi impasse",
+        "aliases": [
+          "Jishogi"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "Explore material counting when neither advanced king can plausibly be mated.",
+        "card": "Under the cited professional shogi impasse procedure, both kings have entered enemy territory and neither mating prospects nor further captures remain. Rooks and bishops count five points; other nonking pieces count one. Both players having at least twenty-four points leads to a draw and replay.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.shogi.or.jp/faq/rules/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s003",
+            "locator": "持将棋の規定はどうなっていますか",
+            "note": "The Japan Shogi Association FAQ specifies professional play, both kings entering enemy territory, no mating prospect or further captures, and at least 24 points each. Amateur 27-point and declaration procedures are not generalized."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000256",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "The official FAQ describes material-count adjudication as a shogi procedure and distinguishes professional from amateur variants.",
+            "source_ids": [
+              "b007-s003"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.shogi.or.jp/faq/rules/",
+              "requested_ref": "https://www.shogi.or.jp/faq/rules/",
+              "method": "open",
+              "title": "将棋のルールに関するご質問 | よくある質問 | 日本将棋連盟",
+              "retrieved_at": "2026-10-08T19:16:49.056Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-shogi-rules.json",
+              "raw_sha256": "b671eba30ff68d0ddbdaec475cd65006e85442c03dde101d66e2ee550943857c"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s003",
+          "inspection_artifacts": [
+            "source-raw/games-shogi-rules.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Questions on check, impasse and repeated check; 連続王手の千日手というのは反則なのですか; 持将棋の規定はどうなっていますか; 連続王手の千日手というのは反則なのですか; 持将棋の規定はどうなっていますか",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:49.056Z",
+          "revision": null,
+          "title": "将棋のルールに関するご質問 | よくある質問 | 日本将棋連盟",
+          "url": "https://www.shogi.or.jp/faq/rules/"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.shogi.or.jp/faq/rules/",
+              "requested_ref": "https://www.shogi.or.jp/faq/rules/",
+              "method": "open",
+              "title": "将棋のルールに関するご質問 | よくある質問 | 日本将棋連盟",
+              "retrieved_at": "2026-10-08T19:16:49.056Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-shogi-rules.json",
+              "raw_sha256": "b671eba30ff68d0ddbdaec475cd65006e85442c03dde101d66e2ee550943857c"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s003",
+          "inspection_artifacts": [
+            "source-raw/games-shogi-rules.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Questions on check, impasse and repeated check; 連続王手の千日手というのは反則なのですか; 持将棋の規定はどうなっていますか; 連続王手の千日手というのは反則なのですか; 持将棋の規定はどうなっていますか",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:49.056Z",
+          "revision": null,
+          "title": "将棋のルールに関するご質問 | よくある質問 | 日本将棋連盟",
+          "url": "https://www.shogi.or.jp/faq/rules/"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:offside-in-association-football",
+      "label": "Offside in association football",
+      "reason": "Law 11 judges position at a teammate's play or touch and requires specified active involvement. Revision makes that timing explicit; direct-receipt exceptions remain limited to the three listed restarts.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:offside-in-association-football",
+        "label": "Offside in association football",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "Distinguish occupying an offside position from committing an offside offence.",
+        "card": "Being in an offside position is not itself an offence. Under the cited football law, punishment depends on becoming involved in active play after a teammate plays the ball. Receiving it directly from a goal kick, throw-in or corner kick creates no offside offence.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.theifab.com/laws/latest/offside/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s012",
+            "locator": "Law 11.1–11.3",
+            "note": "IFAB Law 11 separates position and active involvement and lists three direct-receipt exceptions; card deliberately avoids exhaustive positional geometry and goalkeeper-contact timing nuances."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q2736",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "IFAB identifies offside as Law 11 within association football's Laws of the Game.",
+            "source_ids": [
+              "b007-s012"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:offside-in-association-football",
+        "label": "Offside in association football",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Games & sports"
+        ],
+        "learning_takeaway": "Distinguish occupying an offside position from committing an offside offence.",
+        "card": "An offside position is judged when a teammate plays or touches the ball, but position alone is not an offence. Penalization requires the specified involvement in active play. A player receiving the ball directly from a goal kick, throw-in or corner kick commits no offside offence.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.theifab.com/laws/latest/offside/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s012",
+            "locator": "Law 11.1–11.3",
+            "note": "IFAB Law 11.1–11.3 fixes the position assessment at the teammate play/touch and separately requires active involvement. Direct goal-kick, throw-in and corner-kick receipt are the stated exceptions; no exhaustive geometry or contact-point nuance is asserted."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q2736",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "IFAB identifies offside as Law 11 within association football's Laws of the Game.",
+            "source_ids": [
+              "b007-s012"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.theifab.com/laws/latest/offside/",
+              "requested_ref": "https://www.theifab.com/laws/latest/offside/",
+              "method": "open",
+              "title": "Law 11 - Offside | IFAB",
+              "retrieved_at": "2026-10-08T19:00:25.537266Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "filesystem capture timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/initial-memory-offside.json",
+              "raw_sha256": "2c7f55c3cbe1ae9ad15c80acd38d5572afed834a407db48b557ec3c815da73d2"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s012",
+          "inspection_artifacts": [
+            "source-raw/initial-memory-offside.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Law 11.1–11.3",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:00:25.537266Z",
+          "revision": null,
+          "title": "Law 11 - Offside | IFAB",
+          "url": "https://www.theifab.com/laws/latest/offside/"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.theifab.com/laws/latest/offside/",
+              "requested_ref": "https://www.theifab.com/laws/latest/offside/",
+              "method": "open",
+              "title": "Law 11 - Offside | IFAB",
+              "retrieved_at": "2026-10-08T19:00:25.537266Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "filesystem capture timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/initial-memory-offside.json",
+              "raw_sha256": "2c7f55c3cbe1ae9ad15c80acd38d5572afed834a407db48b557ec3c815da73d2"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s012",
+          "inspection_artifacts": [
+            "source-raw/initial-memory-offside.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Law 11.1–11.3",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:00:25.537266Z",
+          "revision": null,
+          "title": "Law 11 - Offside | IFAB",
+          "url": "https://www.theifab.com/laws/latest/offside/"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:tennis-racket-sweet-spot",
+      "label": "Tennis racket sweet spot",
+      "reason": "Cross distinguishes a vibration node from other candidate sweet spots. Revision attributes that terminology and states that removing vibration does not cancel rotation or translation forces at the hand.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:tennis-racket-sweet-spot",
+        "label": "Tennis racket sweet spot",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Games & sports",
+          "Physics & astronomy"
+        ],
+        "learning_takeaway": "Distinguish a low-vibration impact location from the point of maximum rebound speed.",
+        "card": "A tennis racket's sweet spot is associated with reduced vibration reaching the hand. It does not necessarily coincide with the point of fastest ball rebound or zero total force on the hand. Rotation, translation and vibration contribute separately to what the player feels.",
+        "original_description": null,
+        "identity_urls": [
+          "https://physics.usyd.edu.au/~cross/tennis.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s015",
+            "locator": "1 Sweet spot",
+            "note": "Cross's Sweet spot section explicitly rejects both common identifications and lists three handle motions; do not equate the vibration node with an invariant center of percussion."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:center-of-percussion-in-a-tennis-racket",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The source directly compares a vibration-node sweet spot with the separate center-of-percussion concept.",
+            "source_ids": [
+              "b007-s015"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:tennis-racket-sweet-spot",
+        "label": "Tennis racket sweet spot",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Games & sports",
+          "Physics & astronomy"
+        ],
+        "learning_takeaway": "Distinguish a low-vibration impact location from the point of maximum rebound speed.",
+        "card": "Physicist Rod Cross distinguishes a tennis racket's vibration-node sweet spot from its center of percussion and point of fastest rebound. An impact at the vibration node removes that component of handle motion, but rotation and translation can still transmit forces to the hand.",
+        "original_description": null,
+        "identity_urls": [
+          "https://physics.usyd.edu.au/~cross/tennis.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s015",
+            "locator": "1 Sweet spot",
+            "note": "Cross sections 1 and 3 expressly separate the vibration node, center of percussion and maximum rebound, with rotation/translation/vibration components. Attribution avoids treating one terminology choice as the only sense of sweet spot."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:center-of-percussion-in-a-tennis-racket",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The source directly compares a vibration-node sweet spot with the separate center-of-percussion concept.",
+            "source_ids": [
+              "b007-s015"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://physics.usyd.edu.au/~cross/tennis.html",
+              "requested_ref": "https://physics.usyd.edu.au/~cross/tennis.html",
+              "method": "open",
+              "title": "Tennis Raquet Physics",
+              "retrieved_at": "2026-10-08T19:18:50.814Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-tennis.json",
+              "raw_sha256": "dcb8e1ade42965925e951ac943729e9817b90760fc878607db607aefd7e79b62"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s015",
+          "inspection_artifacts": [
+            "source-raw/games-tennis.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "6 Ball Spin; 1 Sweet spot; 3 Centre of percussion; 4 Dead spot; 6 Ball Spin; 1 Sweet spot; 3 Centre of percussion; 4 Dead spot",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:18:50.814Z",
+          "revision": null,
+          "title": "Tennis Raquet Physics",
+          "url": "https://physics.usyd.edu.au/~cross/tennis.html"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://physics.usyd.edu.au/~cross/tennis.html",
+              "requested_ref": "https://physics.usyd.edu.au/~cross/tennis.html",
+              "method": "open",
+              "title": "Tennis Raquet Physics",
+              "retrieved_at": "2026-10-08T19:18:50.814Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-tennis.json",
+              "raw_sha256": "dcb8e1ade42965925e951ac943729e9817b90760fc878607db607aefd7e79b62"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s015",
+          "inspection_artifacts": [
+            "source-raw/games-tennis.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "6 Ball Spin; 1 Sweet spot; 3 Centre of percussion; 4 Dead spot; 6 Ball Spin; 1 Sweet spot; 3 Centre of percussion; 4 Dead spot",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:18:50.814Z",
+          "revision": null,
+          "title": "Tennis Raquet Physics",
+          "url": "https://physics.usyd.edu.au/~cross/tennis.html"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:sweeping-in-curling",
+      "label": "Sweeping in curling",
+      "reason": "The cited source is a 2024 report of athlete practices and disagreements, not a controlled verdict on every technique. Revision makes the date and practitioner-report status explicit.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:sweeping-in-curling",
+        "label": "Sweeping in curling",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Games & sports",
+          "Physics & astronomy"
+        ],
+        "learning_takeaway": "Explore altering stone travel through work on the ice rather than touching the stone.",
+        "card": "Curling sweepers influence a moving stone by working on the ice ahead of it. Pressure, brush angle and technique can affect how far it travels and how its path bends. World Curling's account emphasizes experimentation and acknowledges disagreement about the effectiveness of some techniques.",
+        "original_description": null,
+        "identity_urls": [
+          "https://worldcurling.org/2024/01/last-one-sweeping-the-latest-techniques-and-approaches-to-sweeping/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s017",
+            "locator": "Sweeping techniques; Single sweeper",
+            "note": "World Curling's 2024 report supports distance, directional influence and uncertainty over knifing; it is a historical explanatory account, not a claim that all described techniques remain competition-legal in 2026."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q136851",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "The governing body's report describes sweeping as a technique within curling that changes the stone's travel through surface work.",
+            "source_ids": [
+              "b007-s017"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:sweeping-in-curling",
+        "label": "Sweeping in curling",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Games & sports",
+          "Physics & astronomy"
+        ],
+        "learning_takeaway": "Explore altering stone travel through work on the ice rather than touching the stone.",
+        "card": "World Curling's 2024 report describes sweepers using pressure, brush angle and technique to influence a stone's distance and curl. Athletes test methods on different ice surfaces and disagree about some effects. The account documents evolving practice rather than establishing that every reported technique works equally well.",
+        "original_description": null,
+        "identity_urls": [
+          "https://worldcurling.org/2024/01/last-one-sweeping-the-latest-techniques-and-approaches-to-sweeping/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s017",
+            "locator": "Sweeping techniques; Single sweeper",
+            "note": "The 12 January 2024 governing-body report quotes athletes about pressure, angle, surface testing and disputed knifing effects. Claims are attributed to this historical practitioner account, not certified as universal controlled findings or current equipment legality."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q136851",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "The governing body's report describes sweeping as a technique within curling that changes the stone's travel through surface work.",
+            "source_ids": [
+              "b007-s017"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://worldcurling.org/2024/01/last-one-sweeping-the-latest-techniques-and-approaches-to-sweeping/",
+              "requested_ref": "https://worldcurling.org/2024/01/last-one-sweeping-the-latest-techniques-and-approaches-to-sweeping/",
+              "method": "open",
+              "title": "Last one sweeping — The latest techniques and approaches to sweeping - World Curling",
+              "retrieved_at": "2026-10-08T19:16:52.277Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-curling.json",
+              "raw_sha256": "3490178f997138126ffd849613d86e47a1b044214c9c837fb83301a1056513c5"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s017",
+          "inspection_artifacts": [
+            "source-raw/games-curling.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Sweeping techniques; Single sweeper",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:52.277Z",
+          "revision": null,
+          "title": "Last one sweeping — The latest techniques and approaches to sweeping - World Curling",
+          "url": "https://worldcurling.org/2024/01/last-one-sweeping-the-latest-techniques-and-approaches-to-sweeping/"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://worldcurling.org/2024/01/last-one-sweeping-the-latest-techniques-and-approaches-to-sweeping/",
+              "requested_ref": "https://worldcurling.org/2024/01/last-one-sweeping-the-latest-techniques-and-approaches-to-sweeping/",
+              "method": "open",
+              "title": "Last one sweeping — The latest techniques and approaches to sweeping - World Curling",
+              "retrieved_at": "2026-10-08T19:16:52.277Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/games-curling.json",
+              "raw_sha256": "3490178f997138126ffd849613d86e47a1b044214c9c837fb83301a1056513c5"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s017",
+          "inspection_artifacts": [
+            "source-raw/games-curling.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Sweeping techniques; Single sweeper",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:52.277Z",
+          "revision": null,
+          "title": "Last one sweeping — The latest techniques and approaches to sweeping - World Curling",
+          "url": "https://worldcurling.org/2024/01/last-one-sweeping-the-latest-techniques-and-approaches-to-sweeping/"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:two-pages",
+      "label": "Two Pages",
+      "reason": "The analysis explicitly concerns the opening of the piece. Revision states that boundary and attributes the example to the cited analysis rather than suggesting every section follows the same subtraction pattern.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:two-pages",
+        "label": "Two Pages",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Music & performance"
+        ],
+        "learning_takeaway": "Explore Glass's additive process through repetitions that successively omit final notes.",
+        "card": "In Philip Glass's Two Pages, growth comes from adding repetitions, but successive copies lose their final notes. A motive can therefore be extended while the newly added units become shorter. The piece demonstrates how repetition and subtraction can work together within an additive process.",
+        "original_description": null,
+        "identity_urls": [
+          "https://musictheory.pugetsound.edu/mt21c/AdditiveMinimalism.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s023",
+            "locator": "35.1 opening example",
+            "note": "The textbook's opening analysis states that each added repetition subtracts the previous repetition's final note; it labels the displayed notation a transcription, not the published score."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:additive-minimalism",
+            "type": "application_of",
+            "assertion": "source_asserted",
+            "note": "The textbook names Two Pages as its opening example of Glass's additive process.",
+            "source_ids": [
+              "b007-s023"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:two-pages",
+        "label": "Two Pages",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Music & performance"
+        ],
+        "learning_takeaway": "Explore Glass's additive process through repetitions that successively omit final notes.",
+        "card": "At the opening of Philip Glass's Two Pages, growth comes from adding repetitions whose final notes are progressively removed. A motive can therefore expand while newly added units become shorter. The cited analysis illustrates how repetition and subtraction can cooperate within an additive process.",
+        "original_description": null,
+        "identity_urls": [
+          "https://musictheory.pugetsound.edu/mt21c/AdditiveMinimalism.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s023",
+            "locator": "35.1 opening example",
+            "note": "Puget Sound 35.1 explicitly limits its Two Pages demonstration to the opening and labels the notation a transcription/analysis. The card does not assert that every section of the entire work follows the displayed process."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:additive-minimalism",
+            "type": "application_of",
+            "assertion": "source_asserted",
+            "note": "The textbook analyzes the opening of Glass's Two Pages as an example of additive process, with shortening repetitions inside the expanding unit.",
+            "source_ids": [
+              "b007-s023"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://musictheory.pugetsound.edu/mt21c/AdditiveMinimalism.html",
+              "requested_ref": "turn679view0",
+              "method": "open",
+              "title": "Additive Minimalism",
+              "retrieved_at": "2026-10-08T19:03:35.653Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/music-structure-passages-2.json",
+              "raw_sha256": "e7ecebb155e73a9ee7fdaa6d0bb25479d7c7f79fca1e83e1c3d0dbba2a8e9223"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s023",
+          "inspection_artifacts": [
+            "source-raw/music-structure-passages-2.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "35.1 Two Pages and Einstein on the Beach examples; 35.1 opening example; 35.1 Act 1 Scene 1 Train; 35.1 Two Pages and Einstein on the Beach examples; 35.1 opening example; 35.1 Act 1 Scene 1 Train",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:03:35.653Z",
+          "revision": null,
+          "title": "Additive Minimalism",
+          "url": "https://musictheory.pugetsound.edu/mt21c/AdditiveMinimalism.html"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://musictheory.pugetsound.edu/mt21c/AdditiveMinimalism.html",
+              "requested_ref": "turn679view0",
+              "method": "open",
+              "title": "Additive Minimalism",
+              "retrieved_at": "2026-10-08T19:03:35.653Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/music-structure-passages-2.json",
+              "raw_sha256": "e7ecebb155e73a9ee7fdaa6d0bb25479d7c7f79fca1e83e1c3d0dbba2a8e9223"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s023",
+          "inspection_artifacts": [
+            "source-raw/music-structure-passages-2.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "35.1 Two Pages and Einstein on the Beach examples; 35.1 opening example; 35.1 Act 1 Scene 1 Train; 35.1 Two Pages and Einstein on the Beach examples; 35.1 opening example; 35.1 Act 1 Scene 1 Train",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:03:35.653Z",
+          "revision": null,
+          "title": "Additive Minimalism",
+          "url": "https://musictheory.pugetsound.edu/mt21c/AdditiveMinimalism.html"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:adagio-for-strings",
+      "label": "Adagio for Strings",
+      "reason": "The source uses a 4–3 analytical label and explains reduction of compound intervals. Revision avoids implying that the sounding interval must literally be a simple fourth in register.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:adagio-for-strings",
+        "label": "Adagio for Strings",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Music & performance"
+        ],
+        "learning_takeaway": "Hear how a 4–3 suspension delays resolution in Barber's work.",
+        "card": "Samuel Barber's Adagio for Strings supplies a textbook example of a 4–3 suspension. A prepared note remains while the harmony changes, creating a dissonant fourth above the bass before stepping down to a third. The delayed resolution makes harmony unfold through the movement of individual voices.",
+        "original_description": null,
+        "identity_urls": [
+          "https://musictheory.pugetsound.edu/mt21c/Suspension.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s021",
+            "locator": "10.9 Figure 10.9.3",
+            "note": "The suspension chapter explicitly labels its Barber example 4–3; general preparation and stepwise resolution come from the same section. No unsupported emotional or biographical claim is added."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:suspension-in-tonal-music",
+            "type": "application_of",
+            "assertion": "source_asserted",
+            "note": "The named score example is explicitly introduced as a 4–3 suspension.",
+            "source_ids": [
+              "b007-s021"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:adagio-for-strings",
+        "label": "Adagio for Strings",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Music & performance"
+        ],
+        "learning_takeaway": "Hear how a 4–3 suspension delays resolution in Barber's work.",
+        "card": "Samuel Barber's Adagio for Strings provides a textbook example of a 4–3 suspension. A prepared note becomes dissonant against the bass before resolving downward by step. The numbers describe the suspension and resolution as interval classes, so compound intervals can receive the same analytical label.",
+        "original_description": null,
+        "identity_urls": [
+          "https://musictheory.pugetsound.edu/mt21c/Suspension.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s021",
+            "locator": "10.9 definition, interval classification and Figure 10.9.3",
+            "note": "Puget Sound 10.9 labels the Barber example 4–3 and explains reduction of compound intervals in suspension labels. The revised card does not require the sounding interval to occupy a literal simple-fourth register."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:suspension-in-tonal-music",
+            "type": "application_of",
+            "assertion": "source_asserted",
+            "note": "The named score example is explicitly introduced as a 4–3 suspension.",
+            "source_ids": [
+              "b007-s021"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://musictheory.pugetsound.edu/mt21c/Suspension.html",
+              "requested_ref": "turn675view0",
+              "method": "open",
+              "title": "Suspension",
+              "retrieved_at": "2026-10-08T19:03:33.170Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/music-structure-passages-2.json",
+              "raw_sha256": "e7ecebb155e73a9ee7fdaa6d0bb25479d7c7f79fca1e83e1c3d0dbba2a8e9223"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s021",
+          "inspection_artifacts": [
+            "source-raw/music-structure-passages-2.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "10.9 definition and interval classification; 10.9 Figure 10.9.3; 10.9 definition; 10.9 definition and interval classification; 10.9 Figure 10.9.3",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:03:33.170Z",
+          "revision": null,
+          "title": "Suspension",
+          "url": "https://musictheory.pugetsound.edu/mt21c/Suspension.html"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://musictheory.pugetsound.edu/mt21c/Suspension.html",
+              "requested_ref": "turn675view0",
+              "method": "open",
+              "title": "Suspension",
+              "retrieved_at": "2026-10-08T19:03:33.170Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/music-structure-passages-2.json",
+              "raw_sha256": "e7ecebb155e73a9ee7fdaa6d0bb25479d7c7f79fca1e83e1c3d0dbba2a8e9223"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s021",
+          "inspection_artifacts": [
+            "source-raw/music-structure-passages-2.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "10.9 definition and interval classification; 10.9 Figure 10.9.3; 10.9 definition; 10.9 definition and interval classification; 10.9 Figure 10.9.3",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:03:33.170Z",
+          "revision": null,
+          "title": "Suspension",
+          "url": "https://musictheory.pugetsound.edu/mt21c/Suspension.html"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:species-counterpoint",
+      "label": "Species counterpoint",
+      "reason": "The source supports rhythmic restrictions and two-to-four-voice teaching examples, not a measured educational outcome. Revision removes an inferred staged-coordination benefit and keeps the described exercises.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:species-counterpoint",
+        "label": "Species counterpoint",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "topic",
+        "domains": [
+          "Music & performance"
+        ],
+        "learning_takeaway": "Learn how controlled note ratios organize practice in combining independent melodies.",
+        "card": "Species counterpoint organizes practice in combining melodies through controlled rhythmic relationships. A learner might write one, two, three or four notes against a longer note in another voice. The constraints isolate different problems of coordination before more freely varied contrapuntal textures are attempted.",
+        "original_description": null,
+        "identity_urls": [
+          "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s031",
+            "locator": "30.1 opening paragraph",
+            "note": "Puget Sound 30.1 supports the rhythmic species and educational framing; the final sentence is a modest explanation of the controlled-practice structure, not a claimed universal learning outcome."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q186393",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "The textbook explicitly presents species counterpoint as a method for learning contrapuntal composition.",
+            "source_ids": [
+              "b007-s031"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:species-counterpoint",
+        "label": "Species counterpoint",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "topic",
+        "domains": [
+          "Music & performance"
+        ],
+        "learning_takeaway": "Learn how controlled note ratios organize practice in combining independent melodies.",
+        "card": "Species counterpoint teaches melodic combination through restricted rhythmic relationships. Exercises can place one, two, three or four notes against a note in another voice. The cited textbook focuses on two voices, while noting that a longer college course may extend the method to four.",
+        "original_description": null,
+        "identity_urls": [
+          "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s031",
+            "locator": "30.1 opening paragraph",
+            "note": "Puget Sound 30.1 explicitly describes rhythmic ratios, its two-voice focus and up to four voices in a semester course. No uninspected claim of a staged educational or coordination benefit remains."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q186393",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "note": "The textbook explicitly presents species counterpoint as a method for learning contrapuntal composition.",
+            "source_ids": [
+              "b007-s031"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html",
+              "requested_ref": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html",
+              "method": "open",
+              "title": "Species Counterpoint",
+              "retrieved_at": "2026-10-08T19:06:14.650Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/counterpoint.json",
+              "raw_sha256": "230c09c692849fe8f4f674b657b8ba1eadb77e325df7ca6520ce270933245773"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s031",
+          "inspection_artifacts": [
+            "source-raw/counterpoint.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "30.1 opening paragraph; 30.1 definition and texture comparison; 30.1 opening paragraph; 30.1 definition and texture comparison",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:06:14.650Z",
+          "revision": null,
+          "title": "Species Counterpoint",
+          "url": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html",
+              "requested_ref": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html",
+              "method": "open",
+              "title": "Species Counterpoint",
+              "retrieved_at": "2026-10-08T19:06:14.650Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/counterpoint.json",
+              "raw_sha256": "230c09c692849fe8f4f674b657b8ba1eadb77e325df7ca6520ce270933245773"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s031",
+          "inspection_artifacts": [
+            "source-raw/counterpoint.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "30.1 opening paragraph; 30.1 definition and texture comparison; 30.1 opening paragraph; 30.1 definition and texture comparison",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:06:14.650Z",
+          "revision": null,
+          "title": "Species Counterpoint",
+          "url": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:gradus-ad-parnassum",
+      "label": "Gradus ad Parnassum",
+      "reason": "The textbook identifies Fux's 1725 work and species teaching. Revision removes a potentially misleading longer-note comparison and limits historical interpretation to its documented instructional arrangement.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:gradus-ad-parnassum",
+        "label": "Gradus ad Parnassum",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Music & performance",
+          "History & culture"
+        ],
+        "learning_takeaway": "Explore Fux's historical organization of contrapuntal practice into rhythmic species.",
+        "card": "Johann Joseph Fux's Gradus ad Parnassum, published in 1725, teaches contrapuntal composition through species counterpoint. Its historical importance includes organizing melodic combination into constrained rhythmic exercises. Comparing one note against a longer note with several notes against it reveals the organizing idea behind that approach.",
+        "original_description": null,
+        "identity_urls": [
+          "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s031",
+            "locator": "30.1 opening paragraph",
+            "note": "Puget Sound names Fux, date and species pedagogy; the explanatory comparison comes from the section's species definitions, not a claim about every exercise in the original book."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:species-counterpoint",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The textbook explicitly states that Fux's work teaches composition through species counterpoint.",
+            "source_ids": [
+              "b007-s031"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:gradus-ad-parnassum",
+        "label": "Gradus ad Parnassum",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Music & performance",
+          "History & culture"
+        ],
+        "learning_takeaway": "Explore Fux's historical organization of contrapuntal practice into rhythmic species.",
+        "card": "Johann Joseph Fux's Gradus ad Parnassum (1725) teaches contrapuntal composition through species counterpoint. The cited textbook explains this approach through one, two, three or four notes against another voice's note. The work offers a historical example of organizing musical instruction around constrained rhythmic relationships.",
+        "original_description": null,
+        "identity_urls": [
+          "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s031",
+            "locator": "30.1 opening paragraph",
+            "note": "Puget Sound 30.1 gives Fux, 1725 and species pedagogy with rhythmic relationships. The revised wording does not imply that first species necessarily places a note against a longer note or claim a measured instructional outcome."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:species-counterpoint",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The textbook explicitly states that Fux's work teaches composition through species counterpoint.",
+            "source_ids": [
+              "b007-s031"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html",
+              "requested_ref": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html",
+              "method": "open",
+              "title": "Species Counterpoint",
+              "retrieved_at": "2026-10-08T19:06:14.650Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/counterpoint.json",
+              "raw_sha256": "230c09c692849fe8f4f674b657b8ba1eadb77e325df7ca6520ce270933245773"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s031",
+          "inspection_artifacts": [
+            "source-raw/counterpoint.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "30.1 opening paragraph; 30.1 definition and texture comparison; 30.1 opening paragraph; 30.1 definition and texture comparison",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:06:14.650Z",
+          "revision": null,
+          "title": "Species Counterpoint",
+          "url": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html",
+              "requested_ref": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html",
+              "method": "open",
+              "title": "Species Counterpoint",
+              "retrieved_at": "2026-10-08T19:06:14.650Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/counterpoint.json",
+              "raw_sha256": "230c09c692849fe8f4f674b657b8ba1eadb77e325df7ca6520ce270933245773"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s031",
+          "inspection_artifacts": [
+            "source-raw/counterpoint.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "30.1 opening paragraph; 30.1 definition and texture comparison; 30.1 opening paragraph; 30.1 definition and texture comparison",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:06:14.650Z",
+          "revision": null,
+          "title": "Species Counterpoint",
+          "url": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:signal-detection-theory",
+      "label": "Signal detection theory",
+      "reason": "The criterion tradeoff presumes the available evidence distribution is held fixed. The card's distinction between sensitivity and willingness to say yes preserves that model logic without importing clinical advice or a specific neural implementation.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:signal-detection-theory",
+        "label": "Signal detection theory",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "topic",
+        "domains": [
+          "Mind & behavior"
+        ],
+        "learning_takeaway": "Explore detecting a target among noise when expectations and task goals influence reports.",
+        "card": "Signal detection theory separates available evidence from the criterion used to decide that a signal is present. Lowering the criterion can increase both hits and false alarms; raising it can reduce both. Better sensitivity and a greater willingness to answer yes are therefore different kinds of change.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s037",
+            "locator": "Motivation and signal detection",
+            "note": "Heeger's actual Information and Criterion and criterion-shift passages support the distinction and tradeoff. This is a theory of uncertain decisions, not a synonym for detection ability."
+          },
+          {
+            "source_id": "b007-s087",
+            "locator": "Information and Criterion; criterion-shift paragraphs",
+            "note": "Separates information quality and decision criterion, and shows the hit/false-alarm tradeoff."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:absolute-sensory-threshold",
+            "type": "related_to",
+            "assertion": "editorial",
+            "note": "A fifty-percent detection threshold summarizes responses, while signal detection theory distinguishes evidence quality from the criterion behind those responses.",
+            "source_ids": [
+              "b007-s037",
+              "b007-s087"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:signal-detection-theory",
+        "label": "Signal detection theory",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "topic",
+        "domains": [
+          "Mind & behavior"
+        ],
+        "learning_takeaway": "Explore detecting a target among noise when expectations and task goals influence reports.",
+        "card": "Signal detection theory separates sensory evidence from the criterion for reporting a signal. With evidence quality held fixed, lowering the criterion can increase both hits and false alarms; raising it can reduce both. Better sensitivity and greater willingness to answer yes are different changes.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s037",
+            "locator": "Motivation and signal detection",
+            "note": "Heeger’s Information and Criterion discussion and Figures 2–4 distinguish changing a criterion along one ROC from changing evidence quality. The revised card explicitly holds information fixed for the criterion tradeoff and makes no clinical recommendation."
+          },
+          {
+            "source_id": "b007-s087",
+            "locator": "Information and Criterion; criterion-shift paragraphs",
+            "note": "Separates information quality and decision criterion, and shows the hit/false-alarm tradeoff."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:absolute-sensory-threshold",
+            "type": "related_to",
+            "assertion": "editorial",
+            "note": "A fifty-percent detection threshold summarizes responses, while signal detection theory distinguishes evidence quality from the criterion behind those responses.",
+            "source_ids": [
+              "b007-s037",
+              "b007-s087"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
+              "requested_ref": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
+              "method": "open",
+              "title": "5.1 Sensation versus Perception - Psychology 2e | OpenStax",
+              "retrieved_at": "2026-10-08T19:08:13.909Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/mind-perception.json",
+              "raw_sha256": "8c1e0e3cbd4bba48a40ebabd4482bbd0f1a4d37d8613bdd1eca55bd6ed2fa059"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s037",
+          "inspection_artifacts": [
+            "source-raw/mind-perception.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Sensation: absolute threshold; Sensation: difference threshold; Perception: sensory adaptation; Selective attention and Simons–Chabris study; Motivation and signal detection",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:08:13.909Z",
+          "revision": null,
+          "title": "5.1 Sensation versus Perception - Psychology 2e | OpenStax",
+          "url": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception"
+        },
+        {
+          "id": "b007-s087",
+          "title": "Signal Detection Theory — Professor David Heeger, New York University",
+          "url": "https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html",
+          "locator": "Information and Criterion; The role of the criterion; criterion-shift paragraphs; Information and Criterion; Information and Criterion; criterion-shift paragraphs",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T20:57:16.516Z",
+          "revision": null,
+          "inspection_artifacts": [
+            "source-raw/stage-b-sdt-primary.json"
+          ],
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html",
+              "requested_ref": "https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html",
+              "method": "open",
+              "title": "Signal Detection Theory",
+              "retrieved_at": "2026-10-08T20:57:16.516Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/stage-b-sdt-primary.json",
+              "raw_sha256": "fe42d6fd691ae64fbc833b0b674e2359eb06754b7659cc27e0451aa065373155"
+            }
+          ]
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
+              "requested_ref": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
+              "method": "open",
+              "title": "5.1 Sensation versus Perception - Psychology 2e | OpenStax",
+              "retrieved_at": "2026-10-08T19:08:13.909Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/mind-perception.json",
+              "raw_sha256": "8c1e0e3cbd4bba48a40ebabd4482bbd0f1a4d37d8613bdd1eca55bd6ed2fa059"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s037",
+          "inspection_artifacts": [
+            "source-raw/mind-perception.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Sensation: absolute threshold; Sensation: difference threshold; Perception: sensory adaptation; Selective attention and Simons–Chabris study; Motivation and signal detection",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:08:13.909Z",
+          "revision": null,
+          "title": "5.1 Sensation versus Perception - Psychology 2e | OpenStax",
+          "url": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception"
+        },
+        {
+          "id": "b007-s087",
+          "title": "Signal Detection Theory — Professor David Heeger, New York University",
+          "url": "https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html",
+          "locator": "Information and Criterion; The role of the criterion; criterion-shift paragraphs; Information and Criterion; Information and Criterion; criterion-shift paragraphs",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T20:57:16.516Z",
+          "revision": null,
+          "inspection_artifacts": [
+            "source-raw/stage-b-sdt-primary.json"
+          ],
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html",
+              "requested_ref": "https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html",
+              "method": "open",
+              "title": "Signal Detection Theory",
+              "retrieved_at": "2026-10-08T20:57:16.516Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/stage-b-sdt-primary.json",
+              "raw_sha256": "fe42d6fd691ae64fbc833b0b674e2359eb06754b7659cc27e0451aa065373155"
+            }
+          ]
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:parliament-act-1911",
+      "label": "Parliament Act 1911",
+      "reason": "The legislation concerns most Commons public bills, with specific exclusions. Revision makes the protected extension boundary beyond five years explicit rather than implying every change to parliamentary duration is excluded.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:parliament-act-1911",
+        "label": "Parliament Act 1911",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Politics & law",
+          "History & culture"
+        ],
+        "learning_takeaway": "Connect the 1909 budget conflict with replacing most Lords vetoes by delay.",
+        "card": "The Parliament Act 1911 followed conflict over the Lords' rejection of the 1909 budget. It replaced the Lords' veto over most Commons public bills with delay, while protecting bills extending Parliament's lifetime. A later Act in 1949 shortened that delaying power, showing how legislative authority shifted between chambers.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.parliament.uk/about/how/laws/parliamentacts/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s063",
+            "locator": "Why were the Parliament Acts brought into force?",
+            "note": "UK Parliament's history and exceptions sections support the budget conflict, qualified veto reduction and later 1949 change; most Commons public bills avoids applying the procedure to every bill."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:bicameralism",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The official explanation sets the Act within normal Commons–Lords agreement and specifies circumstances where one chamber's consent can be bypassed.",
+            "source_ids": [
+              "b007-s063"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:parliament-act-1911",
+        "label": "Parliament Act 1911",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Politics & law",
+          "History & culture"
+        ],
+        "learning_takeaway": "Connect the 1909 budget conflict with replacing most Lords vetoes by delay.",
+        "card": "The Parliament Act 1911 followed the Lords' rejection of the 1909 budget. It replaced their veto over most Commons public bills with delay, while excluding bills extending Parliament beyond five years. The 1949 Act shortened that delay, showing how legislative power shifted between the chambers.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.parliament.uk/about/how/laws/parliamentacts/"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s063",
+            "locator": "Why were the Parliament Acts brought into force?; Bills not subject to the Parliament Acts",
+            "note": "UK Parliament history and Bills not subject sections support the 1909 conflict, qualified veto reduction, exclusion of extensions beyond five years and 1949 shortening. This is not a rule for every bill or all changes to parliamentary duration."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:bicameralism",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The official explanation sets the Act within normal Commons–Lords agreement and specifies circumstances where one chamber's consent can be bypassed.",
+            "source_ids": [
+              "b007-s063"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.parliament.uk/about/how/laws/parliamentacts/",
+              "requested_ref": "https://www.parliament.uk/about/how/laws/parliamentacts/",
+              "method": "open",
+              "title": "The Parliament Acts - UK Parliament",
+              "retrieved_at": "2026-10-08T19:21:08.268Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/politics-institutions-1.json",
+              "raw_sha256": "ab87d88c908ee093efef9f9597b322afd9da5eed70d459f99cfdbe73183481d5"
+            },
+            {
+              "url": "https://www.parliament.uk/about/how/laws/parliamentacts/",
+              "requested_ref": "https://www.parliament.uk/about/how/laws/parliamentacts/",
+              "method": "open",
+              "title": "The Parliament Acts - UK Parliament",
+              "retrieved_at": "2026-10-08T19:21:38.038Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/politics-parliamentacts.json",
+              "raw_sha256": "0c39e9fb3df1de2f1f4b358a41ed5da980bb8f55a56aa5f2fbc90150eb0081de"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s063",
+          "inspection_artifacts": [
+            "source-raw/politics-institutions-1.json",
+            "source-raw/politics-parliamentacts.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Why were the Parliament Acts brought into force?; The Salisbury Convention; Bills subject to the Parliament Acts; Opening and Bills subject to the Parliament Acts; Why were the Parliament Acts brought into force?; The Salisbury Convention; Bills subject to the Parliament Acts; Opening and Bills subject to the Parliament Acts",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:21:38.038Z",
+          "revision": null,
+          "title": "The Parliament Acts - UK Parliament",
+          "url": "https://www.parliament.uk/about/how/laws/parliamentacts/"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.parliament.uk/about/how/laws/parliamentacts/",
+              "requested_ref": "https://www.parliament.uk/about/how/laws/parliamentacts/",
+              "method": "open",
+              "title": "The Parliament Acts - UK Parliament",
+              "retrieved_at": "2026-10-08T19:21:08.268Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/politics-institutions-1.json",
+              "raw_sha256": "ab87d88c908ee093efef9f9597b322afd9da5eed70d459f99cfdbe73183481d5"
+            },
+            {
+              "url": "https://www.parliament.uk/about/how/laws/parliamentacts/",
+              "requested_ref": "https://www.parliament.uk/about/how/laws/parliamentacts/",
+              "method": "open",
+              "title": "The Parliament Acts - UK Parliament",
+              "retrieved_at": "2026-10-08T19:21:38.038Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/politics-parliamentacts.json",
+              "raw_sha256": "0c39e9fb3df1de2f1f4b358a41ed5da980bb8f55a56aa5f2fbc90150eb0081de"
+            }
+          ],
+          "displayed_update": null,
+          "id": "b007-s063",
+          "inspection_artifacts": [
+            "source-raw/politics-institutions-1.json",
+            "source-raw/politics-parliamentacts.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Why were the Parliament Acts brought into force?; The Salisbury Convention; Bills subject to the Parliament Acts; Opening and Bills subject to the Parliament Acts; Why were the Parliament Acts brought into force?; The Salisbury Convention; Bills subject to the Parliament Acts; Opening and Bills subject to the Parliament Acts",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:21:38.038Z",
+          "revision": null,
+          "title": "The Parliament Acts - UK Parliament",
+          "url": "https://www.parliament.uk/about/how/laws/parliamentacts/"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:amicus-curiae",
+      "label": "Amicus curiae",
+      "reason": "The definition and procedural sources concern US court practice. Revision makes that setting explicit while retaining court-specific rules rather than an absolute permission requirement or automatic party status.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:amicus-curiae",
+        "label": "Amicus curiae",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Politics & law"
+        ],
+        "learning_takeaway": "Understand how a nonparty can contribute a brief to a court's consideration.",
+        "card": "An amicus curiae is a nonparty who offers a court arguments or information through a brief. Having an interest in a case does not make the contributor a litigant. Participation follows the court's applicable rules, which govern when and how such outside submissions may be made.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.law.cornell.edu/wex/amicus_curiae"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s067",
+            "locator": "Opening; applicable court rules",
+            "note": "Cornell defines nonparty participation and identifies Supreme Court Rule 37 and appellate Rule 29; the card avoids an absolute permission requirement because procedures differ by court and filing context."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:standing-to-sue",
+            "type": "related_to",
+            "assertion": "editorial",
+            "note": "Compare a nonparty's rule-governed contribution with the injury-based requirements for a plaintiff's federal standing. An amicus brief does not itself give its author party status.",
+            "source_ids": [
+              "b007-s067",
+              "b007-s066"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:amicus-curiae",
+        "label": "Amicus curiae",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Politics & law"
+        ],
+        "learning_takeaway": "Understand how a nonparty can contribute a brief to a court's consideration.",
+        "card": "In US court practice, an amicus curiae is a nonparty offering arguments or information through a brief. An interest in the case does not make the contributor a litigant. Each court's applicable rules govern when and how such outside submissions may be made.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.law.cornell.edu/wex/amicus_curiae"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s067",
+            "locator": "Opening; applicable court rules",
+            "note": "Cornell defines the nonparty role and cites US Supreme Court Rule 37 and Federal Appellate Rule 29. US scope is explicit, while court-specific requirements avoid a universal permission or party-status claim."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:standing-to-sue",
+            "type": "related_to",
+            "assertion": "editorial",
+            "note": "Compare a nonparty's rule-governed contribution with the injury-based requirements for a plaintiff's federal standing. An amicus brief does not itself give its author party status.",
+            "source_ids": [
+              "b007-s067",
+              "b007-s066"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/standing",
+              "requested_ref": "https://www.law.cornell.edu/wex/standing",
+              "method": "open",
+              "title": "standing | Wex | US Law | LII / Legal Information Institute",
+              "retrieved_at": "2026-10-08T19:22:16.470Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed in June of 2024 by the cite27†Wex Definitions Team†about.law.cornell.edu ]",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/law-standing.json",
+              "raw_sha256": "a486a527b3f0c97e8997226aaf8039dadcc11764d709886b45abe7e0e71c6f1e"
+            }
+          ],
+          "displayed_update": "Last reviewed in June of 2024 by the cite27†Wex Definitions Team†about.law.cornell.edu ]",
+          "id": "b007-s066",
+          "inspection_artifacts": [
+            "source-raw/law-standing.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Federal standing; Lujan test",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:22:16.470Z",
+          "revision": null,
+          "title": "standing | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/standing"
+        },
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/amicus_curiae",
+              "requested_ref": "https://www.law.cornell.edu/wex/amicus_curiae",
+              "method": "open",
+              "title": "amicus curiae | Wex | US Law | LII / Legal Information Institute",
+              "retrieved_at": "2026-10-08T19:22:20.269Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed in June of 2022 by the cite24†Wex Definitions Team†about.law.cornell.edu ]",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/law-amicus.json",
+              "raw_sha256": "7f7209a288f04c95764ae807058884f0cbd9adbcc56e4b3c09760fd48612d267"
+            }
+          ],
+          "displayed_update": "Last reviewed in June of 2022 by the cite24†Wex Definitions Team†about.law.cornell.edu ]",
+          "id": "b007-s067",
+          "inspection_artifacts": [
+            "source-raw/law-amicus.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Opening; applicable court rules",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:22:20.269Z",
+          "revision": null,
+          "title": "amicus curiae | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/amicus_curiae"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/standing",
+              "requested_ref": "https://www.law.cornell.edu/wex/standing",
+              "method": "open",
+              "title": "standing | Wex | US Law | LII / Legal Information Institute",
+              "retrieved_at": "2026-10-08T19:22:16.470Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed in June of 2024 by the cite27†Wex Definitions Team†about.law.cornell.edu ]",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/law-standing.json",
+              "raw_sha256": "a486a527b3f0c97e8997226aaf8039dadcc11764d709886b45abe7e0e71c6f1e"
+            }
+          ],
+          "displayed_update": "Last reviewed in June of 2024 by the cite27†Wex Definitions Team†about.law.cornell.edu ]",
+          "id": "b007-s066",
+          "inspection_artifacts": [
+            "source-raw/law-standing.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Federal standing; Lujan test",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:22:16.470Z",
+          "revision": null,
+          "title": "standing | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/standing"
+        },
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/amicus_curiae",
+              "requested_ref": "https://www.law.cornell.edu/wex/amicus_curiae",
+              "method": "open",
+              "title": "amicus curiae | Wex | US Law | LII / Legal Information Institute",
+              "retrieved_at": "2026-10-08T19:22:20.269Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed in June of 2022 by the cite24†Wex Definitions Team†about.law.cornell.edu ]",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/law-amicus.json",
+              "raw_sha256": "7f7209a288f04c95764ae807058884f0cbd9adbcc56e4b3c09760fd48612d267"
+            }
+          ],
+          "displayed_update": "Last reviewed in June of 2022 by the cite24†Wex Definitions Team†about.law.cornell.edu ]",
+          "id": "b007-s067",
+          "inspection_artifacts": [
+            "source-raw/law-amicus.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Opening; applicable court rules",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:22:20.269Z",
+          "revision": null,
+          "title": "amicus curiae | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/amicus_curiae"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    },
+    {
+      "id": "local:catalog:stare-decisis",
+      "label": "Stare decisis",
+      "reason": "The cited account is US law, where horizontal and vertical precedent differ. Revision identifies the Supreme Court's ability to overrule its own precedents rather than suggesting lower courts may disregard binding higher decisions.",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:stare-decisis",
+        "label": "Stare decisis",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Politics & law"
+        ],
+        "learning_takeaway": "Compare following a higher court with following one's own prior decisions.",
+        "card": "Stare decisis directs courts to follow precedent, supporting consistent and predictable law. Vertical precedent comes from a higher court; horizontal precedent concerns a court's own earlier decisions. The doctrine allows some precedents to be overruled, so continuity is a strong consideration rather than an absolute prohibition on change.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.law.cornell.edu/wex/stare_decisis"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s070",
+            "locator": "Definition; horizontal and vertical operation",
+            "note": "Cornell distinguishes horizontal and vertical operation and states that precedent is not an inexorable command; some precedents does not imply lower courts may disregard binding higher-court decisions at will."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:brown-v-board-of-education",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "Cornell explicitly uses Brown's rejection of the separate-but-equal precedent as an example showing that stare decisis is not absolute.",
+            "source_ids": [
+              "b007-s070"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:stare-decisis",
+        "label": "Stare decisis",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Politics & law"
+        ],
+        "learning_takeaway": "Compare following a higher court with following one's own prior decisions.",
+        "card": "Stare decisis promotes consistency by directing courts to follow precedent. In the cited US account, vertical precedent comes from higher courts; horizontal precedent concerns a court's own earlier decisions. The Supreme Court can overrule its precedents, so continuity does not make every prior ruling permanent.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.law.cornell.edu/wex/stare_decisis"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s070",
+            "locator": "Definition; horizontal and vertical operation",
+            "note": "Cornell distinguishes horizontal and vertical precedent, cites the US Supreme Court’s limits on stare decisis and gives Brown as an example. The revised card does not imply lower courts may disregard binding higher-court precedent."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:brown-v-board-of-education",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "Cornell explicitly uses Brown's rejection of the separate-but-equal precedent as an example showing that stare decisis is not absolute.",
+            "source_ids": [
+              "b007-s070"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/stare_decisis",
+              "requested_ref": "https://www.law.cornell.edu/wex/stare_decisis",
+              "method": "open",
+              "title": "stare decisis | Wex | US Law | LII / Legal Information Institute",
+              "retrieved_at": "2026-10-08T19:22:59.615Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed in December of 2021 by the cite11†Wex Definitions Team†about.law.cornell.edu ]",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/law-stare.json",
+              "raw_sha256": "97829240a3b0b78c60d7849ff492563c172ddaf2ac84cc66ff631f208e4fae1d"
+            }
+          ],
+          "displayed_update": "Last reviewed in December of 2021 by the cite11†Wex Definitions Team†about.law.cornell.edu ]",
+          "id": "b007-s070",
+          "inspection_artifacts": [
+            "source-raw/law-stare.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Definition; horizontal and vertical operation",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:22:59.615Z",
+          "revision": null,
+          "title": "stare decisis | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/stare_decisis"
+        }
+      ],
+      "after_source_bundle": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/stare_decisis",
+              "requested_ref": "https://www.law.cornell.edu/wex/stare_decisis",
+              "method": "open",
+              "title": "stare decisis | Wex | US Law | LII / Legal Information Institute",
+              "retrieved_at": "2026-10-08T19:22:59.615Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed in December of 2021 by the cite11†Wex Definitions Team†about.law.cornell.edu ]",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/law-stare.json",
+              "raw_sha256": "97829240a3b0b78c60d7849ff492563c172ddaf2ac84cc66ff631f208e4fae1d"
+            }
+          ],
+          "displayed_update": "Last reviewed in December of 2021 by the cite11†Wex Definitions Team†about.law.cornell.edu ]",
+          "id": "b007-s070",
+          "inspection_artifacts": [
+            "source-raw/law-stare.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Definition; horizontal and vertical operation",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:22:59.615Z",
+          "revision": null,
+          "title": "stare decisis | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/stare_decisis"
+        }
+      ],
+      "decision": "Select the incremented version after source-boundary recheck; preserve the prior complete record and its source bundle.",
+      "recheck": "The author reinspected the actual cited sections captured in the source artifacts; revised claims and attached relations remain within those passages."
+    }
+  ]
+}

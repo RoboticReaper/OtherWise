@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-004",
+  "reviewed_revision": 5,
+  "status": "narrow_final_recheck_complete_no_residual_substantive_findings_in_reviewed_scope",
+  "started_at": "2026-10-08T22:34:55+00:00",
+  "completed_at": "2026-10-08T22:36:14.832462+00:00",
+  "candidate_path": "research/workers/research-batch-004/candidate.post-recheck.json",
+  "candidate_sha256": "dd8af872210586f6e46b6f0fecdfcf1c4b6078061146f094b47a2a76a8edaf02",
+  "canonical_candidate_sha256": "dd8af872210586f6e46b6f0fecdfcf1c4b6078061146f094b47a2a76a8edaf02",
+  "predecessor_candidate_path": "research/workers/research-batch-004/candidate.revised.json",
+  "predecessor_candidate_sha256": "43544752f00b38264a23f6eaf25823bfb95e5a480217fc833df89790dc276619",
+  "archived_predecessor_sha256": "43544752f00b38264a23f6eaf25823bfb95e5a480217fc833df89790dc276619",
+  "preserved_revision4_recheck": {
+    "path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-004/audit-review/audit.recheck.json",
+    "sha256": "39940b4419395804551c5fce0011c072f50bc1c6d3b7bc0d8d6e257996694bdc",
+    "archived_sha256": "39940b4419395804551c5fce0011c072f50bc1c6d3b7bc0d8d6e257996694bdc"
+  },
+  "preserved_initial_audit": {
+    "path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-004/audit-review/audit.initial.json",
+    "sha256": "ef88d9b261d0db5adb176166e766cf836c85100ac4a082a799a5c7aa0aff4d0b"
+  },
+  "scope": "One Graph theory learning-takeaway refinement, checked against already independently inspected m18/m21 public passages. No new source acquisition, expanded card audit or source-record changes.",
+  "records": [
+    {
+      "id": "local:authored:000604",
+      "original_sample_kind": "risk_selected",
+      "previous_card_version": 4,
+      "current_card_version": 5,
+      "before_learning_takeaway": "Represent a simple graph’s connections with an adjacency matrix, and explain why relabeling vertices can change the matrix without changing the underlying graph.",
+      "after_learning_takeaway": "Separate a network’s underlying connections from the way its vertices and edges are drawn or labeled.",
+      "result": "supported",
+      "independent_source_assessment": "m18 identifies the subject as formal mathematical graphs. m21 encodes connections through vertex adjacency, then explicitly distinguishes a graph’s underlying connections from its vertex labels. Its definition does not depend on drawing coordinates. The revised sentence is a bounded pedagogical summary of this structure-versus-representation distinction; it adds no claim that changing the actual connections preserves the graph. It agrees with the unchanged card.",
+      "source_passages": [
+        {
+          "source_id": "m18",
+          "url": "https://mathworld.wolfram.com/GraphTheory.html",
+          "locator": "Definition, preserved snapshot paragraph-2 (index 1); independent web capture line 13.",
+          "independent_public_capture": "recheck-web.json",
+          "result_ref": "turn1532view0"
+        },
+        {
+          "source_id": "m21",
+          "url": "https://mathworld.wolfram.com/AdjacencyMatrix.html",
+          "locator": "Adjacency definition and label-permutation discussion, preserved snapshot paragraph-2/paragraph-4 (indices 1,3); independent web capture lines 14 and 20-23.",
+          "independent_public_capture": "recheck-web.json",
+          "result_ref": "turn1532view1"
+        }
+      ],
+      "relationship_result": "The unchanged source_asserted related_to link to Q727035 remains supported by the same adjacency-matrix discussion.",
+      "original_finding_b004_f01": "remains_resolved; the uncited bipartite-colorability claim is absent",
+      "residual_substantive_findings": [],
+      "required_fix": null
+    }
+  ],
+  "independent_revision_comparison": {
+    "changed_ids": [
+      "local:authored:000604"
+    ],
+    "changed_fields": {
+      "local:authored:000604": [
+        "card_version",
+        "learning_takeaway"
+      ]
+    },
+    "other_199_records_unchanged": true,
+    "all_card_text_unchanged": true,
+    "all_evidence_unchanged": true,
+    "all_relationships_unchanged": true,
+    "all_sources_unchanged": true,
+    "added_ids": [],
+    "removed_ids": [],
+    "version_increment_correct": true
+  },
+  "coverage_carried_forward": {
+    "original_random_new": 20,
+    "original_risk_selected": 20,
+    "original_additional_targeted": 57,
+    "original_unique_ids": 97,
+    "original_boundary_change_bundles": 76,
+    "boundary_overlap_fixed_sample": 19,
+    "original_boundary_card_text_changes": 63,
+    "original_boundary_relationship_bundle_changes": 6,
+    "original_boundary_source_changes": 8,
+    "original_relationships_checked": 94,
+    "original_public_sources_inspected": 99,
+    "additional_full_factual_reviews_this_recheck": 0,
+    "takeaway_refinements_checked_this_recheck": 1,
+    "do_not_pool_denominators": true,
+    "original_initial_finding_count": 1,
+    "original_finding_b004_f01_resolution": "resolved_in_revision4_and_remains_resolved_in_revision5",
+    "residual_substantive_findings_by_group": {
+      "random_new": 0,
+      "risk_selected": 0,
+      "additional_targeted": 0
+    },
+    "reference_only_scope_note": "Three extra targeted IDs remain shared-reference-metadata-only checks, not full factual audits."
+  },
+  "historical_provenance_carried_forward": {
+    "initial_missing_raw_count": 31,
+    "verified_recovered_source_ids": [
+      "c04",
+      "p19"
+    ],
+    "remaining_missing_count": 29,
+    "remaining_missing_source_ids": [
+      "c01",
+      "c02",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "p02",
+      "p03",
+      "p04",
+      "p05",
+      "p06",
+      "p07",
+      "p08",
+      "p09",
+      "p11",
+      "p13",
+      "p15",
+      "p17",
+      "p18",
+      "p21",
+      "p23"
+    ],
+    "original_required_sources_with_raw_hash_recomputed": 70,
+    "independent_verification_path": "verification.recheck-provenance.json",
+    "independent_verification_sha256": "6c6508f29a0970446cce45a12a18cd9212859856a347e3b7e079f810dd9dbbb7",
+    "no_refetch_or_reconstruction": true
+  },
+  "evidence_preservation": {
+    "source_snapshots": [
+      {
+        "source_id": "m18",
+        "snapshot_path": "research/workers/research-batch-004/source-cache/m18.json",
+        "snapshot_sha256": "d01103e6564e515558efa4dd35a620628f83e13d1fd81a46bc0f58907152b6f0",
+        "unchanged_since_initial_inspection": true
+      },
+      {
+        "source_id": "m21",
+        "snapshot_path": "research/workers/research-batch-004/source-cache/m21.json",
+        "snapshot_sha256": "6915317f790689e3ed329ec5c94e83828c31f6683f319e0e60b0bfd925e57d60",
+        "unchanged_since_initial_inspection": true
+      }
+    ],
+    "independent_web_capture_sha256": "b3ab52074ca43eda204bc6024a2508082cd00d041b68ddf0e2dc0fa5124bba7f",
+    "initial_report_and_recorded_artifacts_unchanged": true,
+    "revision4_recheck_and_recorded_artifacts_unchanged": true
+  },
+  "input_hashes": {
+    "research/workers/research-batch-004/semantic-corrections.json": "4c0825786ff29d3147dae8461fe10ef0adbc7dfa05e95a97709812b415af7be5",
+    "research/workers/research-batch-004/semantic-handoff.json": "faab8d35ce4b92a535e9a40d14f944a9cbec18e96ce4c9a296bbf74c81831961",
+    "data/catalog-candidates/scale-pilot-001/checkpoint-semantic-004-validation.json": "293316981bbb396411a37bb3119a834143ce4504b0d4c09876affd5fe9227c5f"
+  },
+  "source_attempts_this_recheck": 0,
+  "residual_substantive_findings": [],
+  "limitations": [
+    "29 required historical raw acquisition files remain unavailable; no bytes were refetched or reconstructed.",
+    "The original 20/20/57 audit scope and distinctions are carried forward, not broadened. Unsampled facts and exhaustive semantic uniqueness are not certified.",
+    "The preserved public-source capture may reflect indexed crawl content and does not prove historical author browsing."
+  ],
+  "acceptance_owner": "pilot coordinator",
+  "final_acceptance_decision": null
+}

@@ -1,0 +1,832 @@
+{
+  "schema_version": 1,
+  "assignment": "systems",
+  "status": "in_progress",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "proposals": [
+    {
+      "id": "local:catalog:ephemeron",
+      "label": "Ephemeron",
+      "aliases": [
+        "Ephemerons"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Garbage collection",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Conditional retention by a separately reachable key avoids keeping key/value cycles alive.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q5521979",
+          "label": "Garbage (computer science)",
+          "reason": "Garbage (computer science) describes unusable objects; ephemeron is the specifically defined reachability construct."
+        }
+      ],
+      "identity_reason": "Garbage (computer science) describes unusable objects; ephemeron is the specifically defined reachability construct.",
+      "discovery_evidence": [
+        {
+          "url": "https://docs.racket-lang.org/reference/ephemerons.html",
+          "locator": "16.2, lines 42-48",
+          "note": "Conditional retention by a separately reachable key avoids keeping key/value cycles alive.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q21198",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://docs.racket-lang.org/reference/ephemerons.html",
+        "locator": "16.2, lines 42-48",
+        "note": "Garbage (computer science) describes unusable objects; ephemeron is the specifically defined reachability construct."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:hazard-pointer",
+      "label": "Hazard pointer",
+      "aliases": [
+        "Hazard pointers"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Concurrent memory reclamation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Reclaim nodes removed from lock-free objects for safe later reuse.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q128392",
+          "label": "Concurrent computing",
+          "reason": "Concurrent computing is broader than this named memory-reclamation methodology."
+        }
+      ],
+      "identity_reason": "Concurrent computing is broader than this named memory-reclamation methodology.",
+      "discovery_evidence": [
+        {
+          "url": "https://research.ibm.com/publications/hazard-pointers-safe-memory-reclamation-for-lock-free-objects",
+          "locator": "Abstract, lines 10-13",
+          "note": "Reclaim nodes removed from lock-free objects for safe later reuse.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q128392",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://research.ibm.com/publications/hazard-pointers-safe-memory-reclamation-for-lock-free-objects",
+        "locator": "Abstract, lines 10-13",
+        "note": "Concurrent computing is broader than this named memory-reclamation methodology."
+      },
+      "limits": [
+        "Only primary abstract inspected so far; inspect detailed mechanism before drafting."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:epoch-based-memory-reclamation",
+      "label": "Epoch-based memory reclamation",
+      "aliases": [
+        "Epoch-based reclamation",
+        "EBR"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Concurrent memory reclamation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Epochs and pinned readers delay destruction until no earlier reader can reference retired nodes.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q128392",
+          "label": "Concurrent computing",
+          "reason": "Epoch-and-pinning reclamation differs from general concurrency and individual hazard pointers."
+        }
+      ],
+      "identity_reason": "Epoch-and-pinning reclamation differs from general concurrency and individual hazard pointers.",
+      "discovery_evidence": [
+        {
+          "url": "https://docs.rs/crossbeam-epoch/latest/crossbeam_epoch/",
+          "locator": "Description; Pinning; Garbage, lines 29-42",
+          "note": "Epochs and pinned readers delay destruction until no earlier reader can reference retired nodes.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q128392",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://docs.rs/crossbeam-epoch/latest/crossbeam_epoch/",
+        "locator": "Description; Pinning; Garbage, lines 29-42",
+        "note": "Epoch-and-pinning reclamation differs from general concurrency and individual hazard pointers."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:qpack-field-compression",
+      "label": "QPACK field compression",
+      "aliases": [
+        "QPACK",
+        "QPACK header compression"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "HTTP protocols",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Separate instruction streams let HTTP/3 field compression trade table reuse against blocked decoding.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8777",
+          "label": "Hypertext Transfer Protocol",
+          "reason": "This separately specified HTTP/3 compression format is a facet of the broader protocol."
+        }
+      ],
+      "identity_reason": "This separately specified HTTP/3 compression format is a facet of the broader protocol.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9204.html",
+          "locator": "Sections 1, 2, 2.1.2",
+          "note": "Separate instruction streams let HTTP/3 field compression trade table reuse against blocked decoding.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8777",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.rfc-editor.org/rfc/rfc9204.html",
+        "locator": "Sections 1, 2, 2.1.2",
+        "note": "This separately specified HTTP/3 compression format is a facet of the broader protocol."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:http-structured-field-dictionary",
+      "label": "HTTP structured field dictionary",
+      "aliases": [
+        "Structured Fields dictionary",
+        "Dictionary Structured Field"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "HTTP data representation",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "HTTP field dictionaries map unique textual keys to typed items or inner lists.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8777",
+          "label": "Hypertext Transfer Protocol",
+          "reason": "A defined HTTP data container, rather than HTTP itself or a generic dictionary data structure."
+        }
+      ],
+      "identity_reason": "A defined HTTP data container, rather than HTTP itself or a generic dictionary data structure.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc8941.html",
+          "locator": "3.2 Dictionaries, lines 307-309",
+          "note": "HTTP field dictionaries map unique textual keys to typed items or inner lists.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8777",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.rfc-editor.org/rfc/rfc8941.html",
+        "locator": "3.2 Dictionaries, lines 307-309",
+        "note": "A defined HTTP data container, rather than HTTP itself or a generic dictionary data structure."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:http-message-signatures",
+      "label": "HTTP Message Signatures",
+      "aliases": [
+        "HTTP message signature",
+        "RFC 9421"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Message authentication",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A signature verifies the chosen covered HTTP components and associated signature metadata.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q220849",
+          "label": "Digital signature",
+          "reason": "This HTTP-specific canonicalization and field mechanism is distinct from digital signatures generally."
+        }
+      ],
+      "identity_reason": "This HTTP-specific canonicalization and field mechanism is distinct from digital signatures generally.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9421.html",
+          "locator": "Abstract; section 3, line 1399",
+          "note": "A signature verifies the chosen covered HTTP components and associated signature metadata.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q220849",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://www.rfc-editor.org/rfc/rfc9421.html",
+        "locator": "Abstract; section 3, line 1399",
+        "note": "This HTTP-specific canonicalization and field mechanism is distinct from digital signatures generally."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:oblivious-http",
+      "label": "Oblivious HTTP",
+      "aliases": [
+        "OHTTP",
+        "RFC 9458"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Network privacy",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Separate relay and gateway split knowledge of client identity and request contents.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8777",
+          "label": "Hypertext Transfer Protocol",
+          "reason": "An explicitly specified encrypted relaying protocol, rather than a new explanation of HTTP."
+        }
+      ],
+      "identity_reason": "An explicitly specified encrypted relaying protocol, rather than a new explanation of HTTP.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9458.html",
+          "locator": "2.1 Applicability; section 6, lines 540-550",
+          "note": "Separate relay and gateway split knowledge of client identity and request contents.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8777",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://www.rfc-editor.org/rfc/rfc9458.html",
+        "locator": "2.1 Applicability; section 6, lines 540-550",
+        "note": "An explicitly specified encrypted relaying protocol, rather than a new explanation of HTTP."
+      },
+      "limits": [
+        "Requires separated relay/gateway ownership and explicit support; application state and traffic analysis can affect unlinkability."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:merkle-inclusion-proof",
+      "label": "Merkle inclusion proof",
+      "aliases": [
+        "Merkle membership proof",
+        "Merkle audit path"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Cryptographic transparency",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "An authentication path recomputes a root to establish one leaf’s membership in a tree.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000527",
+          "label": "Cryptography",
+          "reason": "One-leaf membership differs from append-only consistency; cryptography is the broad parent."
+        }
+      ],
+      "identity_reason": "One-leaf membership differs from append-only consistency; cryptography is the broad parent.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+          "locator": "2.1.3 and 2.1.3.2, lines 325-341",
+          "note": "An authentication path recomputes a root to establish one leaf’s membership in a tree.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000527",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+        "locator": "2.1.3 and 2.1.3.2, lines 325-341",
+        "note": "One-leaf membership differs from append-only consistency; cryptography is the broad parent."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:merkle-consistency-proof",
+      "label": "Merkle consistency proof",
+      "aliases": [
+        "Merkle append-only proof"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Cryptographic transparency",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Intermediate hashes establish that a larger tree preserves an earlier tree’s unchanged prefix.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000527",
+          "label": "Cryptography",
+          "reason": "Append-only prefix preservation differs from leaf membership and general cryptography."
+        }
+      ],
+      "identity_reason": "Append-only prefix preservation differs from leaf membership and general cryptography.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+          "locator": "2.1.4, lines 342-344",
+          "note": "Intermediate hashes establish that a larger tree preserves an earlier tree’s unchanged prefix.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000527",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+        "locator": "2.1.4, lines 342-344",
+        "note": "Append-only prefix preservation differs from leaf membership and general cryptography."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "Q65123731",
+      "label": "Gale–Shapley deferred acceptance algorithm",
+      "aliases": [
+        "Deferred acceptance algorithm",
+        "Gale-Shapley algorithm",
+        "DAA"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Matching market design",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Proposals and provisionally held best offers produce a stable allocation under the specified preference model.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q65123731",
+          "label": "Gale–Shapley algorithm",
+          "reason": "Same deferred-acceptance procedure, including the explicit source synonym."
+        },
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "Stable matching problem is the problem; deferred acceptance is a separately named solution procedure."
+        }
+      ],
+      "identity_reason": "Baseline Q65123731 describes the algorithm for solving the stable matching problem; the source explicitly equates deferred acceptance with Gale-Shapley. Reuse the existing ID for the same procedure.",
+      "discovery_evidence": [
+        {
+          "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+          "locator": "2.2, PDF page 3, lines 47-66",
+          "note": "Proposals and provisionally held best offers produce a stable allocation under the specified preference model.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q620702",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+        "locator": "2.2, PDF page 3, lines 47-66",
+        "note": "Stable matching problem is the problem; deferred acceptance is a separately named solution procedure."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:rural-hospitals-theorem",
+      "label": "Rural hospitals theorem",
+      "aliases": [
+        "Rural hospital theorem"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Matching market design",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Stable matchings cannot change which doctors an undersubscribed hospital hires under strict responsive preferences.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "This invariance theorem differs from the broad stable matching problem and from an algorithm."
+        }
+      ],
+      "identity_reason": "This invariance theorem differs from the broad stable matching problem and from an algorithm.",
+      "discovery_evidence": [
+        {
+          "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+          "locator": "Section 4, PDF page 7, lines 142-166",
+          "note": "Stable matchings cannot change which doctors an undersubscribed hospital hires under strict responsive preferences.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q620702",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+        "locator": "Section 4, PDF page 7, lines 142-166",
+        "note": "This invariance theorem differs from the broad stable matching problem and from an algorithm."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:runway-incursion",
+      "label": "Runway incursion",
+      "aliases": [],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Airport surface safety",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Incorrect presence on a runway protected area qualifies even without immediate collision consequences.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q184590",
+          "label": "Runway",
+          "reason": "Runway is infrastructure; an incursion is a separately defined safety occurrence."
+        }
+      ],
+      "identity_reason": "Runway is infrastructure; an incursion is a separately defined safety occurrence.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.faa.gov/airports/runway_safety/resources/runway_incursions",
+          "locator": "Definition and Category D, lines 115-125",
+          "note": "Incorrect presence on a runway protected area qualifies even without immediate collision consequences.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q765633",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.faa.gov/airports/runway_safety/resources/runway_incursions",
+        "locator": "Definition and Category D, lines 115-125",
+        "note": "Runway is infrastructure; an incursion is a separately defined safety occurrence."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:saturation-flow-rate",
+      "label": "Saturation flow rate at a signalized intersection",
+      "aliases": [
+        "Saturation flow rate"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Traffic signal capacity",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Continuous-green discharge with no lost time is a reference rate, distinct from actual signal capacity.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8004",
+          "label": "Traffic light",
+          "reason": "Traffic light is a device; saturation flow is a defined discharge-rate quantity."
+        }
+      ],
+      "identity_reason": "Traffic light is a device; saturation flow is a defined discharge-rate quantity.",
+      "discovery_evidence": [
+        {
+          "url": "https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter3.htm",
+          "locator": "3.1, lines 75-77; 3.3.2",
+          "note": "Continuous-green discharge with no lost time is a reference rate, distinct from actual signal capacity.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8004",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter3.htm",
+        "locator": "3.1, lines 75-77; 3.3.2",
+        "note": "Traffic light is a device; saturation flow is a defined discharge-rate quantity."
+      },
+      "limits": [
+        "Archived manual; do not use historical numeric defaults as current guidance."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:stableford-scoring",
+      "label": "Stableford scoring",
+      "aliases": [
+        "Stableford"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Golf scoring formats",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Hole-by-hole points relative to a fixed target determine the winning total.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7435308",
+          "label": "Score (sport)",
+          "reason": "Score (sport) is broad; Stableford is a distinct named points system."
+        }
+      ],
+      "identity_reason": "Score (sport) is broad; Stableford is a distinct named points system.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-21",
+          "locator": "21.1a-b, lines 83-99",
+          "note": "Hole-by-hole points relative to a fixed target determine the winning total.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q7435308",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-21",
+        "locator": "21.1a-b, lines 83-99",
+        "note": "Score (sport) is broad; Stableford is a distinct named points system."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:maximum-score-golf",
+      "label": "Maximum Score golf",
+      "aliases": [
+        "Maximum Score format"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Golf scoring formats",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A committee-set cap limits each hole’s stroke score, including holes not finished.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7435308",
+          "label": "Score (sport)",
+          "reason": "Capped stroke totals differ from Stableford points and scoring in sport generally."
+        }
+      ],
+      "identity_reason": "Capped stroke totals differ from Stableford points and scoring in sport generally.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-21",
+          "locator": "21.2a-b, lines 136-151",
+          "note": "A committee-set cap limits each hole’s stroke score, including holes not finished.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q7435308",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-21",
+        "locator": "21.2a-b, lines 136-151",
+        "note": "Capped stroke totals differ from Stableford points and scoring in sport generally."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:libero-volleyball",
+      "label": "Libero in volleyball",
+      "aliases": [
+        "Volleyball libero",
+        "Libero player"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Volleyball player roles",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A back-row specialist has distinct replacement rights and attacking, blocking and serving limits.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000287",
+          "label": "Volleyball",
+          "reason": "Volleyball is the game; libero is a defined player role with distinct permissions."
+        }
+      ],
+      "identity_reason": "Volleyball is the game; libero is a defined player role with distinct permissions.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.fivb.com/wp-content/uploads/2025/01/FIVB-Volleyball_Rules2025_2028-EN.pdf",
+          "locator": "19.3.1, printed page 41 / PDF page 43, lines 1513-1528",
+          "note": "A back-row specialist has distinct replacement rights and attacking, blocking and serving limits.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000287",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.fivb.com/wp-content/uploads/2025/01/FIVB-Volleyball_Rules2025_2028-EN.pdf",
+        "locator": "19.3.1, printed page 41 / PDF page 43, lines 1513-1528",
+        "note": "Volleyball is the game; libero is a defined player role with distinct permissions."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:event-segmentation-theory",
+      "label": "Event Segmentation Theory",
+      "aliases": [
+        "EST"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Perception of continuous activity",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Transient prediction errors mark perceived event boundaries in the proposed account of ongoing activity.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q160402",
+          "label": "perception",
+          "reason": "A named account of event boundaries differs from perception generally."
+        }
+      ],
+      "identity_reason": "A named account of event boundaries differs from perception generally.",
+      "discovery_evidence": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852534/",
+          "locator": "Abstract; A Theory of Event Segmentation, lines 94-113",
+          "note": "Transient prediction errors mark perceived event boundaries in the proposed account of ongoing activity.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q160402",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852534/",
+        "locator": "Abstract; A Theory of Event Segmentation, lines 94-113",
+        "note": "A named account of event boundaries differs from perception generally."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    }
+  ],
+  "issues": [],
+  "sources_inspected": [
+    {
+      "id": "systems-source-001",
+      "title": "Ephemeron supporting source",
+      "url": "https://docs.racket-lang.org/reference/ephemerons.html",
+      "locator": "16.2, lines 42-48",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-002",
+      "title": "Hazard pointer supporting source",
+      "url": "https://research.ibm.com/publications/hazard-pointers-safe-memory-reclamation-for-lock-free-objects",
+      "locator": "Abstract, lines 10-13",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-003",
+      "title": "Epoch-based memory reclamation supporting source",
+      "url": "https://docs.rs/crossbeam-epoch/latest/crossbeam_epoch/",
+      "locator": "Description; Pinning; Garbage, lines 29-42",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-004",
+      "title": "QPACK field compression supporting source",
+      "url": "https://www.rfc-editor.org/rfc/rfc9204.html",
+      "locator": "Sections 1, 2, 2.1.2",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-005",
+      "title": "HTTP structured field dictionary supporting source",
+      "url": "https://www.rfc-editor.org/rfc/rfc8941.html",
+      "locator": "3.2 Dictionaries, lines 307-309",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-006",
+      "title": "HTTP Message Signatures supporting source",
+      "url": "https://www.rfc-editor.org/rfc/rfc9421.html",
+      "locator": "Abstract; section 3, line 1399",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-007",
+      "title": "Oblivious HTTP supporting source",
+      "url": "https://www.rfc-editor.org/rfc/rfc9458.html",
+      "locator": "2.1 Applicability; section 6, lines 540-550",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-008",
+      "title": "Merkle inclusion proof supporting source",
+      "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+      "locator": "2.1.3 and 2.1.3.2, lines 325-341",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-009",
+      "title": "Gale–Shapley deferred acceptance algorithm supporting source",
+      "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+      "locator": "2.2, PDF page 3, lines 47-66",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-010",
+      "title": "Runway incursion supporting source",
+      "url": "https://www.faa.gov/airports/runway_safety/resources/runway_incursions",
+      "locator": "Definition and Category D, lines 115-125",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-011",
+      "title": "Saturation flow rate at a signalized intersection supporting source",
+      "url": "https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter3.htm",
+      "locator": "3.1, lines 75-77; 3.3.2",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-012",
+      "title": "Stableford scoring supporting source",
+      "url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-21",
+      "locator": "21.1a-b, lines 83-99",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-013",
+      "title": "Libero in volleyball supporting source",
+      "url": "https://www.fivb.com/wp-content/uploads/2025/01/FIVB-Volleyball_Rules2025_2028-EN.pdf",
+      "locator": "19.3.1, printed page 41 / PDF page 43, lines 1513-1528",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    },
+    {
+      "id": "systems-source-014",
+      "title": "Event Segmentation Theory supporting source",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852534/",
+      "locator": "Abstract; A Theory of Event Segmentation, lines 94-113",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML/PDF passage"
+    }
+  ]
+}

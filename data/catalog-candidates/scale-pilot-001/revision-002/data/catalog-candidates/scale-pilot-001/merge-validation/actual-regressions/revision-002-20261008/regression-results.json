@@ -1,0 +1,370 @@
+{
+  "cases": [
+    {
+      "canonical_content_sha256": "54e1862884529950c4929a603e9bb764f9de7e575dcd444ac8d580989605ec88",
+      "checks": [
+        "pilot_only_concepts",
+        "repeated_import",
+        "reversed_input_order",
+        "source_and_target_resolution",
+        "structural_validation"
+      ],
+      "distinct_concept_count": 1000,
+      "name": "actual_unchanged_reverse_repeat",
+      "output": "unchanged/regression-catalog.json",
+      "reference_count": 582,
+      "status": "passed"
+    },
+    {
+      "colliding_local_ids": {},
+      "evidence_links_checked": 1107,
+      "name": "actual_source_scoping",
+      "relation_source_links_checked": 1323,
+      "source_count": 582,
+      "status": "passed"
+    },
+    {
+      "groups": {
+        "bond": [
+          "Q11693",
+          "Q44424"
+        ],
+        "constitution": [
+          "Q7755",
+          "local:catalog:material-constitution"
+        ],
+        "graft": [
+          "Q1591440",
+          "Q222958"
+        ],
+        "homology": [
+          "Q1144780",
+          "Q224180"
+        ],
+        "pitch": [
+          "Q118819",
+          "local:catalog:pitch-material"
+        ]
+      },
+      "name": "actual_shared_name_aliases",
+      "shared_alias_group_count": 5,
+      "status": "passed"
+    },
+    {
+      "name": "actual_aliases_and_provenance",
+      "original_concept_records_checked": 1000,
+      "original_input_snapshots_checked": 5,
+      "status": "passed"
+    },
+    {
+      "colliding_local_ids": {
+        "REGRESSION_ONLY_SHARED_LOCAL_REFERENCE": [
+          "research-batch-003",
+          "research-batch-004"
+        ]
+      },
+      "counts_toward_research": false,
+      "evidence_links_checked": 1107,
+      "mode": "regression_only_reference_renaming",
+      "name": "forced_local_reference_collision",
+      "relation_source_links_checked": 1323,
+      "source_count": 582,
+      "status": "passed"
+    },
+    {
+      "counts_toward_research": false,
+      "mode": "regression_only_date_field_omission",
+      "name": "historical_retrieved_at_only",
+      "notice": "Metadata shape mutation only; no historical browsing claim is made.",
+      "retrieved_at": "2026-10-08T19:00:22.636744+00:00",
+      "source_id": "research-batch-003::bio-genetics",
+      "status": "passed"
+    },
+    {
+      "after_sha256": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65",
+      "before_sha256": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65",
+      "expected_quarantine_code": "concept_conflict",
+      "last_valid_retained": true,
+      "name": "concept_conflict_quarantine",
+      "report": "concept-conflict/combiner-report.json",
+      "status": "passed"
+    },
+    {
+      "counts_toward_research": false,
+      "mode": "synthetic_competing_version_of_actual_card",
+      "name": "explicit_concept_version_choice",
+      "original_provenance_records": 2,
+      "selected_input_sha256": "2194ee79a8bd0ee8ad1a349e73a11531f214629a38e0d40b1db49420a240d339",
+      "status": "passed"
+    },
+    {
+      "after_sha256": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65",
+      "before_sha256": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65",
+      "expected_quarantine_code": "missing_field",
+      "last_valid_retained": true,
+      "name": "malformed_input_quarantine",
+      "report": "malformed-input/combiner-report.json",
+      "status": "passed"
+    },
+    {
+      "after_sha256": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65",
+      "before_sha256": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65",
+      "expected_quarantine_code": "unresolved_target",
+      "last_valid_retained": true,
+      "name": "unresolved_target_quarantine",
+      "report": "unresolved-target/combiner-report.json",
+      "status": "passed"
+    },
+    {
+      "counts_toward_research": false,
+      "factual_equivalence_assertion": false,
+      "mode": "synthetic_derived_copy",
+      "name": "equivalence_mechanics",
+      "original_card_id": "local:authored:000634",
+      "retained_provenance_records": 2,
+      "status": "passed"
+    },
+    {
+      "name": "input_integrity",
+      "protected_file_count": 8,
+      "sha256": {
+        "data/catalog-candidates/research-batch-003.json": "62e84a58709b2823f51f6be36be38d9ad1941ce949d9c6b566916f34e319722d",
+        "data/catalog-candidates/research-batch-004.json": "a633431fa0ba117d9e617d193ee7a1ce21b55c10b4744c0ae66ee3cb1a173d9b",
+        "data/catalog-candidates/research-batch-005.json": "a747e6626d2783363cd9b413cb5466bac26c3c035ad69c86fb176249f8e10765",
+        "data/catalog-candidates/research-batch-006.json": "43bf7cb9ced5d61277e777c9de52c0a41f185abcbe78a8db427145a4e94a5435",
+        "data/catalog-candidates/research-batch-007.json": "bd973e57914e48a7c8c6ae9f7038ba3ce05100a38ffa0c03596043c5377520bf",
+        "data/catalog-candidates/scale-pilot-001/baseline-index.json": "8b2f19ff516a6ce012a675681c6754f58efc1f99040290979a46c27673def65f",
+        "data/catalog-candidates/scale-pilot-001/catalog.json": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65",
+        "data/catalog-candidates/scale-pilot-001/identity-decisions.json": "31e9c2135a632068b67484075adaf3c24445b4c54575c5954f1c2feddb135113"
+      },
+      "status": "passed"
+    }
+  ],
+  "combiner_sha256": "094f37f552a3c184419889f7e62f44cd965f12d54d397fa5f97a2ccac100148e",
+  "commands": [
+    {
+      "actual_exit_code": 0,
+      "case_directory": "unchanged",
+      "command": [
+        "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/tools/catalog_combiner.py",
+        "verify-actual",
+        "--inputs",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/research-batch-003.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/research-batch-004.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/research-batch-005.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/research-batch-006.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/research-batch-007.json",
+        "--baseline",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/baseline-index.json",
+        "--decisions",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/identity-decisions.json",
+        "--output",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/unchanged/regression-catalog.json",
+        "--report",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/unchanged/combiner-report.json",
+        "--require-all-batches"
+      ],
+      "expected_exit_code": 0
+    },
+    {
+      "actual_exit_code": 0,
+      "case_directory": "forced-reference-collision",
+      "command": [
+        "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/tools/catalog_combiner.py",
+        "combine",
+        "--inputs",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/forced-reference-collision/inputs/research-batch-003.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/forced-reference-collision/inputs/research-batch-004.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/forced-reference-collision/inputs/research-batch-005.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/forced-reference-collision/inputs/research-batch-006.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/forced-reference-collision/inputs/research-batch-007.json",
+        "--baseline",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/baseline-index.json",
+        "--decisions",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/forced-reference-collision/inputs/identity-decisions.json",
+        "--output",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/forced-reference-collision/regression-catalog.json",
+        "--report",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/forced-reference-collision/combiner-report.json",
+        "--require-all-batches"
+      ],
+      "expected_exit_code": 0
+    },
+    {
+      "actual_exit_code": 0,
+      "case_directory": "historical-timestamp-only",
+      "command": [
+        "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/tools/catalog_combiner.py",
+        "combine",
+        "--inputs",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/historical-timestamp-only/inputs/research-batch-003.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/historical-timestamp-only/inputs/research-batch-004.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/historical-timestamp-only/inputs/research-batch-005.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/historical-timestamp-only/inputs/research-batch-006.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/historical-timestamp-only/inputs/research-batch-007.json",
+        "--baseline",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/baseline-index.json",
+        "--decisions",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/historical-timestamp-only/inputs/identity-decisions.json",
+        "--output",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/historical-timestamp-only/regression-catalog.json",
+        "--report",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/historical-timestamp-only/combiner-report.json",
+        "--require-all-batches"
+      ],
+      "expected_exit_code": 0
+    },
+    {
+      "actual_exit_code": 1,
+      "case_directory": "concept-conflict",
+      "command": [
+        "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/tools/catalog_combiner.py",
+        "combine",
+        "--inputs",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/concept-conflict/inputs/research-batch-003.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/concept-conflict/inputs/research-batch-004.json",
+        "--baseline",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/baseline-index.json",
+        "--decisions",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/concept-conflict/inputs/identity-decisions.json",
+        "--output",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/concept-conflict/regression-catalog.json",
+        "--report",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/concept-conflict/combiner-report.json"
+      ],
+      "expected_exit_code": 1
+    },
+    {
+      "actual_exit_code": 0,
+      "case_directory": "explicit-version-choice",
+      "command": [
+        "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/tools/catalog_combiner.py",
+        "verify-actual",
+        "--inputs",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/explicit-version-choice/inputs/research-batch-003.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/explicit-version-choice/inputs/research-batch-004.json",
+        "--baseline",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/baseline-index.json",
+        "--decisions",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/explicit-version-choice/inputs/identity-decisions.json",
+        "--output",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/explicit-version-choice/regression-catalog.json",
+        "--report",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/explicit-version-choice/combiner-report.json"
+      ],
+      "expected_exit_code": 0
+    },
+    {
+      "actual_exit_code": 1,
+      "case_directory": "malformed-input",
+      "command": [
+        "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/tools/catalog_combiner.py",
+        "combine",
+        "--inputs",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/malformed-input/inputs/research-batch-003.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/malformed-input/inputs/research-batch-004.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/malformed-input/inputs/research-batch-005.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/malformed-input/inputs/research-batch-006.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/malformed-input/inputs/research-batch-007.json",
+        "--baseline",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/baseline-index.json",
+        "--decisions",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/malformed-input/inputs/identity-decisions.json",
+        "--output",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/malformed-input/regression-catalog.json",
+        "--report",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/malformed-input/combiner-report.json",
+        "--require-all-batches"
+      ],
+      "expected_exit_code": 1
+    },
+    {
+      "actual_exit_code": 1,
+      "case_directory": "unresolved-target",
+      "command": [
+        "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/tools/catalog_combiner.py",
+        "combine",
+        "--inputs",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/unresolved-target/inputs/research-batch-003.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/unresolved-target/inputs/research-batch-004.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/unresolved-target/inputs/research-batch-005.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/unresolved-target/inputs/research-batch-006.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/unresolved-target/inputs/research-batch-007.json",
+        "--baseline",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/baseline-index.json",
+        "--decisions",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/unresolved-target/inputs/identity-decisions.json",
+        "--output",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/unresolved-target/regression-catalog.json",
+        "--report",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/unresolved-target/combiner-report.json",
+        "--require-all-batches"
+      ],
+      "expected_exit_code": 1
+    },
+    {
+      "actual_exit_code": 0,
+      "case_directory": "equivalence-mechanics",
+      "command": [
+        "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/tools/catalog_combiner.py",
+        "verify-actual",
+        "--inputs",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/equivalence-mechanics/inputs/research-batch-003.json",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/equivalence-mechanics/inputs/research-batch-004.json",
+        "--baseline",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/frozen-inputs/baseline-index.json",
+        "--decisions",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/equivalence-mechanics/inputs/identity-decisions.json",
+        "--output",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/equivalence-mechanics/regression-catalog.json",
+        "--report",
+        "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/revision-002-20261008/equivalence-mechanics/combiner-report.json"
+      ],
+      "expected_exit_code": 0
+    }
+  ],
+  "completed_at": "2026-10-09T00:01:20.050135+00:00",
+  "counts_toward_research": false,
+  "expected_input_sha256": {
+    "data/catalog-candidates/research-batch-003.json": "62e84a58709b2823f51f6be36be38d9ad1941ce949d9c6b566916f34e319722d",
+    "data/catalog-candidates/research-batch-004.json": "a633431fa0ba117d9e617d193ee7a1ce21b55c10b4744c0ae66ee3cb1a173d9b",
+    "data/catalog-candidates/research-batch-005.json": "a747e6626d2783363cd9b413cb5466bac26c3c035ad69c86fb176249f8e10765",
+    "data/catalog-candidates/research-batch-006.json": "43bf7cb9ced5d61277e777c9de52c0a41f185abcbe78a8db427145a4e94a5435",
+    "data/catalog-candidates/research-batch-007.json": "bd973e57914e48a7c8c6ae9f7038ba3ce05100a38ffa0c03596043c5377520bf",
+    "data/catalog-candidates/scale-pilot-001/baseline-index.json": "8b2f19ff516a6ce012a675681c6754f58efc1f99040290979a46c27673def65f",
+    "data/catalog-candidates/scale-pilot-001/identity-decisions.json": "31e9c2135a632068b67484075adaf3c24445b4c54575c5954f1c2feddb135113"
+  },
+  "failed": [],
+  "final_catalog_written": false,
+  "fixture_only": false,
+  "limits": [
+    "Regression mechanics do not certify independent audit completion or factual support.",
+    "Synthetic mutations and derived subsets never count as accepted research."
+  ],
+  "passed": [
+    "actual_unchanged_reverse_repeat",
+    "actual_source_scoping",
+    "actual_shared_name_aliases",
+    "actual_aliases_and_provenance",
+    "forced_local_reference_collision",
+    "historical_retrieved_at_only",
+    "concept_conflict_quarantine",
+    "explicit_concept_version_choice",
+    "malformed_input_quarantine",
+    "unresolved_target_quarantine",
+    "equivalence_mechanics",
+    "input_integrity"
+  ],
+  "runner_sha256": "eb0750252022529a2bce9494f55b916fa86190040f5d9511eaeed3eec278a5f8",
+  "schema_version": 1,
+  "status": "passed",
+  "unrun": []
+}

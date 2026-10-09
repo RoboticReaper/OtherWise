@@ -1,0 +1,62 @@
+{
+  "accepted_new_card_target": 5000,
+  "assignments": {
+    "culture": {
+      "Geography & travel": 8,
+      "History & culture": 9,
+      "Literature & storytelling": 8,
+      "Music & performance": 8,
+      "Philosophy": 8,
+      "Politics & law": 8,
+      "Religion & spirituality": 8,
+      "Visual arts & design": 8
+    },
+    "science": {
+      "Biology & nature": 9,
+      "Chemistry & materials": 9,
+      "Earth & environment": 9,
+      "Food & agriculture": 9,
+      "Health & medicine": 9,
+      "Home & crafts": 9,
+      "Mathematics": 8,
+      "Physics & astronomy": 8
+    },
+    "systems": {
+      "Computing & information": 10,
+      "Economics & organizations": 9,
+      "Engineering & transport": 10,
+      "Games & sports": 9,
+      "Learning & language": 9,
+      "Mind & behavior": 9,
+      "Society & relationships": 9
+    }
+  },
+  "audit": {
+    "random_cards_per_batch": 20,
+    "random_seed": "otherwise-catalog-production-001",
+    "risk_cards_per_batch": 20
+  },
+  "batch_size": 200,
+  "checkpoint_cards": 200,
+  "client_date": "2026-10-08",
+  "continuation_cards": 4800,
+  "continuation_rule": "Review the externally completed 200-card checkpoint before handing off the remaining 4,800. No internal agent execution is scheduled.",
+  "counts": {
+    "accepted_cards": 0,
+    "remaining_target": 5000
+  },
+  "execution_method": "user_supplied_external_workspace_ai",
+  "gate": {
+    "pause_on_failure": "Retain valid partial artifacts, expand review and repair. Do not proceed through a failed checkpoint.",
+    "required": "All structural checks pass; author-source checks cover every card; all sampled findings and affected-source followups resolved; short-card clarity reviewed independently."
+  },
+  "id": "catalog-production-001",
+  "preserve_existing_cards": true,
+  "schema_version": 1,
+  "selection_inputs": "Frozen public catalog inventory only; private preference ratings excluded.",
+  "source_budget_policy": "Track retrieved-source derived prose across card bodies, takeaways and substantive notes; same-page/companion representations share the applicable allowance. Preserve actual page limits and access failures.",
+  "stage": "awaiting_external_ai_completion",
+  "word_counting": "Whitespace-separated card body; titles and sources excluded.",
+  "words_max": 25,
+  "words_min": 1
+}

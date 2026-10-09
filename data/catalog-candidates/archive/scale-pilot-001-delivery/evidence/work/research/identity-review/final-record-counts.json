@@ -1,0 +1,412 @@
+{
+  "schema_version": 1,
+  "computed_at": "2026-10-08T22:35:48.670785+00:00",
+  "inputs": [
+    {
+      "batch_id": "research-batch-003",
+      "path": "data/catalog-candidates/research-batch-003.json",
+      "sha256": "e2062d3bf8244df18bb9c2cfec27c170c6e9413038b20af3a60431cc8da6a242",
+      "concepts": 200,
+      "semantic_sha256": "8aa7bccc20b81c296128037f8c74326e651d3adbf927b60eac3b7ddf2f32f6fd"
+    },
+    {
+      "batch_id": "research-batch-004",
+      "path": "data/catalog-candidates/research-batch-004.json",
+      "sha256": "dd8af872210586f6e46b6f0fecdfcf1c4b6078061146f094b47a2a76a8edaf02",
+      "concepts": 200,
+      "semantic_sha256": "72546008e08e47412c6e69bc1a077e34ce28840561bd253a5dfff9f97cb6c5a5"
+    },
+    {
+      "batch_id": "research-batch-005",
+      "path": "data/catalog-candidates/research-batch-005.json",
+      "sha256": "4df6efb168ceaced979cfe0392b0f2946c7edb12c275efe4105eafe9e372506d",
+      "concepts": 200,
+      "semantic_sha256": "6c48fc8e22884ffb0202e00e3a7d0c57f15edb751bc24e8e6d88ebe3bd2ec6f4"
+    },
+    {
+      "batch_id": "research-batch-006",
+      "path": "data/catalog-candidates/research-batch-006.json",
+      "sha256": "49f1e931c7833e572bbc77467de7d4b0307ef83c837991cafcbc30ed800b847c",
+      "concepts": 200,
+      "semantic_sha256": "9046e3f33558a13dadbcdaeb5a9e61dac6dbcc002d94247aeb2c8c9c0b14298d"
+    },
+    {
+      "batch_id": "research-batch-007",
+      "path": "data/catalog-candidates/research-batch-007.json",
+      "sha256": "8a6e51c889065ecc5abc165f45953bec3be7bec72f155aebc362380c90b22860",
+      "concepts": 200,
+      "semantic_sha256": "afa6505aaf8335d43903393347c3fcbd2f0651d0f8af72195956fb4781807585"
+    }
+  ],
+  "baseline_index_sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9",
+  "selection_manifest_sha256": "d6f16948056fb6552b7eba52409ef879e40a6477c58008e1b01025a7a450acab",
+  "selection_version": 3,
+  "semantic_sha256": "d426ecaa8cf72b3fe38d84a394c0f4806319380c7bd6bdf861a7a11f180e9fe0",
+  "semantic_projection_definition": "Identity/card semantic projection: NFC and whitespace-normalized id, label, learning_takeaway and card; exact scope/entity_kind; sorted unique aliases/domains; owner/primary_domain/primary_subfield from central selection v3. Excludes card versions, source/evidence/relationship metadata, locators, timestamps and validation/audit bookkeeping. It is a canonical content projection, not a claim that arbitrary paraphrases have identical hashes.",
+  "counting_rules": {
+    "novelty": "Exact accepted ID absence from the frozen baseline, after recorded central identity adjudications; no historical equivalence proposal is silently applied.",
+    "fine": "New identities whose actual scope is idea or facet_or_application, including named subjects of those scopes. Entity-kind split is separately reported to avoid confusing fine scope with entity_kind=idea.",
+    "primary_coverage": "Count each ID once under the central primary domain and subfield, never secondary memberships."
+  },
+  "per_batch": {
+    "research-batch-003": {
+      "accepted": 200,
+      "unique_ids": 200,
+      "new": 164,
+      "existing_controls": 36,
+      "new_fine_by_scope": 138,
+      "new_fine_idea_entities": 137,
+      "new_fine_named_subjects": 1,
+      "named_subjects": 23,
+      "new_named_subjects": 21,
+      "scopes": {
+        "broad_field": 7,
+        "facet_or_application": 76,
+        "idea": 82,
+        "topic": 35
+      },
+      "entity_kinds": {
+        "idea": 177,
+        "named_subject": 23
+      },
+      "primary_domains": {
+        "Biology & nature": 45,
+        "Earth & environment": 45,
+        "Food & agriculture": 40,
+        "Health & medicine": 45,
+        "Home & crafts": 25
+      },
+      "primary_subfields": {
+        "Agricultural technologies and history": 11,
+        "Atmospheric and ocean processes": 15,
+        "Construction and repair methods": 8,
+        "Cultivation and crop systems": 15,
+        "Ecology and species interactions": 15,
+        "Environmental measurement and restoration": 15,
+        "Evolution and biological mechanisms": 15,
+        "Food chemistry and preparation": 14,
+        "Genetics and development": 15,
+        "Geological processes": 15,
+        "Material behavior in making": 8,
+        "Measurement and diagnostic methods": 14,
+        "Medical history and evidence": 15,
+        "Physiological regulation": 15,
+        "Textile and domestic craft techniques": 9,
+        "Tissue repair and reconstructive techniques": 1
+      }
+    },
+    "research-batch-004": {
+      "accepted": 200,
+      "unique_ids": 200,
+      "new": 161,
+      "existing_controls": 39,
+      "new_fine_by_scope": 144,
+      "new_fine_idea_entities": 144,
+      "new_fine_named_subjects": 0,
+      "named_subjects": 22,
+      "new_named_subjects": 17,
+      "scopes": {
+        "broad_field": 9,
+        "facet_or_application": 35,
+        "idea": 122,
+        "topic": 34
+      },
+      "entity_kinds": {
+        "idea": 178,
+        "named_subject": 22
+      },
+      "primary_domains": {
+        "Chemistry & materials": 50,
+        "Engineering & transport": 50,
+        "Mathematics": 50,
+        "Physics & astronomy": 50
+      },
+      "primary_subfields": {
+        "Analytical and manufacturing methods": 17,
+        "Astronomical objects and observing methods": 17,
+        "Chemical reactions and equilibrium": 17,
+        "Discrete structures and algebra": 17,
+        "Energy, propulsion and control": 17,
+        "Geometry and topology": 18,
+        "Light, matter and measurement": 16,
+        "Material structures and properties": 16,
+        "Mechanics and fields": 17,
+        "Probability and mathematical modeling": 15,
+        "Structures and mechanical design": 17,
+        "Transport systems and engineered case studies": 16
+      }
+    },
+    "research-batch-005": {
+      "accepted": 200,
+      "unique_ids": 200,
+      "new": 160,
+      "existing_controls": 40,
+      "new_fine_by_scope": 128,
+      "new_fine_idea_entities": 128,
+      "new_fine_named_subjects": 0,
+      "named_subjects": 27,
+      "new_named_subjects": 25,
+      "scopes": {
+        "broad_field": 8,
+        "facet_or_application": 35,
+        "idea": 114,
+        "topic": 43
+      },
+      "entity_kinds": {
+        "idea": 173,
+        "named_subject": 27
+      },
+      "primary_domains": {
+        "Computing & information": 60,
+        "Economics & organizations": 55,
+        "Learning & language": 45,
+        "Society & relationships": 40
+      },
+      "primary_subfields": {
+        "Algorithms and information representation": 20,
+        "Communication and relationship mechanisms": 13,
+        "Economic history and documented business cases": 15,
+        "Language change and communication": 15,
+        "Language structure and meaning": 15,
+        "Learning mechanisms and instructional methods": 15,
+        "Market mechanisms and information": 20,
+        "Organizational coordination and institutions": 20,
+        "Programming and distributed systems": 20,
+        "Security and computing history": 20,
+        "Social institutions and collective behavior": 13,
+        "Social interaction and networks": 14
+      }
+    },
+    "research-batch-006": {
+      "accepted": 200,
+      "unique_ids": 200,
+      "new": 169,
+      "existing_controls": 31,
+      "new_fine_by_scope": 163,
+      "new_fine_idea_entities": 112,
+      "new_fine_named_subjects": 51,
+      "named_subjects": 56,
+      "new_named_subjects": 53,
+      "scopes": {
+        "broad_field": 10,
+        "facet_or_application": 17,
+        "idea": 158,
+        "topic": 15
+      },
+      "entity_kinds": {
+        "idea": 144,
+        "named_subject": 56
+      },
+      "primary_domains": {
+        "Geography & travel": 35,
+        "History & culture": 45,
+        "Literature & storytelling": 45,
+        "Religion & spirituality": 35,
+        "Visual arts & design": 40
+      },
+      "primary_subfields": {
+        "Cultural exchange and everyday history": 13,
+        "Design principles and perception": 10,
+        "Genre and literary techniques": 15,
+        "Historical methods and material evidence": 15,
+        "Image-making methods and materials": 15,
+        "Institutions, events and historical change": 17,
+        "Narrative form and perspective": 15,
+        "Place-based learning cases": 13,
+        "Religious history and institutions": 10,
+        "Rituals and material practices": 13,
+        "Settlement, movement and regional landscapes": 9,
+        "Spatial analysis and mapping": 13,
+        "Texts and interpretive traditions": 12,
+        "Works, authors and literary history": 15,
+        "Works, movements and historical design cases": 15
+      }
+    },
+    "research-batch-007": {
+      "accepted": 200,
+      "unique_ids": 200,
+      "new": 165,
+      "existing_controls": 35,
+      "new_fine_by_scope": 130,
+      "new_fine_idea_entities": 129,
+      "new_fine_named_subjects": 1,
+      "named_subjects": 30,
+      "new_named_subjects": 25,
+      "scopes": {
+        "broad_field": 3,
+        "facet_or_application": 32,
+        "idea": 120,
+        "topic": 45
+      },
+      "entity_kinds": {
+        "idea": 170,
+        "named_subject": 30
+      },
+      "primary_domains": {
+        "Games & sports": 45,
+        "Mind & behavior": 45,
+        "Music & performance": 40,
+        "Philosophy": 35,
+        "Politics & law": 35
+      },
+      "primary_subfields": {
+        "Acoustics, instruments and performance": 13,
+        "Attention, perception and memory": 18,
+        "Ethical arguments and thought experiments": 10,
+        "Games, traditions and sporting history": 10,
+        "Institutional design and political processes": 14,
+        "Judgment, motivation and behavior": 17,
+        "Knowledge, inference and reasoning": 12,
+        "Legal procedures and interpretive questions": 10,
+        "Metaphysics and philosophical traditions": 13,
+        "Movement and sporting phenomena": 9,
+        "Musical structure and transformation": 16,
+        "Psychological methods and qualified findings": 10,
+        "Public-policy mechanisms and historical cases": 11,
+        "Rules and strategic mechanisms": 26,
+        "Works, traditions and musical history": 11
+      }
+    }
+  },
+  "pilot": {
+    "accepted": 1000,
+    "unique_ids": 1000,
+    "new": 819,
+    "existing_controls": 181,
+    "new_fine_by_scope": 703,
+    "new_fine_idea_entities": 650,
+    "new_fine_named_subjects": 53,
+    "named_subjects": 158,
+    "new_named_subjects": 141,
+    "scopes": {
+      "broad_field": 37,
+      "facet_or_application": 195,
+      "idea": 596,
+      "topic": 172
+    },
+    "entity_kinds": {
+      "idea": 842,
+      "named_subject": 158
+    },
+    "primary_domains": {
+      "Biology & nature": 45,
+      "Chemistry & materials": 50,
+      "Computing & information": 60,
+      "Earth & environment": 45,
+      "Economics & organizations": 55,
+      "Engineering & transport": 50,
+      "Food & agriculture": 40,
+      "Games & sports": 45,
+      "Geography & travel": 35,
+      "Health & medicine": 45,
+      "History & culture": 45,
+      "Home & crafts": 25,
+      "Learning & language": 45,
+      "Literature & storytelling": 45,
+      "Mathematics": 50,
+      "Mind & behavior": 45,
+      "Music & performance": 40,
+      "Philosophy": 35,
+      "Physics & astronomy": 50,
+      "Politics & law": 35,
+      "Religion & spirituality": 35,
+      "Society & relationships": 40,
+      "Visual arts & design": 40
+    },
+    "primary_subfields": {
+      "Acoustics, instruments and performance": 13,
+      "Agricultural technologies and history": 11,
+      "Algorithms and information representation": 20,
+      "Analytical and manufacturing methods": 17,
+      "Astronomical objects and observing methods": 17,
+      "Atmospheric and ocean processes": 15,
+      "Attention, perception and memory": 18,
+      "Chemical reactions and equilibrium": 17,
+      "Communication and relationship mechanisms": 13,
+      "Construction and repair methods": 8,
+      "Cultivation and crop systems": 15,
+      "Cultural exchange and everyday history": 13,
+      "Design principles and perception": 10,
+      "Discrete structures and algebra": 17,
+      "Ecology and species interactions": 15,
+      "Economic history and documented business cases": 15,
+      "Energy, propulsion and control": 17,
+      "Environmental measurement and restoration": 15,
+      "Ethical arguments and thought experiments": 10,
+      "Evolution and biological mechanisms": 15,
+      "Food chemistry and preparation": 14,
+      "Games, traditions and sporting history": 10,
+      "Genetics and development": 15,
+      "Genre and literary techniques": 15,
+      "Geological processes": 15,
+      "Geometry and topology": 18,
+      "Historical methods and material evidence": 15,
+      "Image-making methods and materials": 15,
+      "Institutional design and political processes": 14,
+      "Institutions, events and historical change": 17,
+      "Judgment, motivation and behavior": 17,
+      "Knowledge, inference and reasoning": 12,
+      "Language change and communication": 15,
+      "Language structure and meaning": 15,
+      "Learning mechanisms and instructional methods": 15,
+      "Legal procedures and interpretive questions": 10,
+      "Light, matter and measurement": 16,
+      "Market mechanisms and information": 20,
+      "Material behavior in making": 8,
+      "Material structures and properties": 16,
+      "Measurement and diagnostic methods": 14,
+      "Mechanics and fields": 17,
+      "Medical history and evidence": 15,
+      "Metaphysics and philosophical traditions": 13,
+      "Movement and sporting phenomena": 9,
+      "Musical structure and transformation": 16,
+      "Narrative form and perspective": 15,
+      "Organizational coordination and institutions": 20,
+      "Physiological regulation": 15,
+      "Place-based learning cases": 13,
+      "Probability and mathematical modeling": 15,
+      "Programming and distributed systems": 20,
+      "Psychological methods and qualified findings": 10,
+      "Public-policy mechanisms and historical cases": 11,
+      "Religious history and institutions": 10,
+      "Rituals and material practices": 13,
+      "Rules and strategic mechanisms": 26,
+      "Security and computing history": 20,
+      "Settlement, movement and regional landscapes": 9,
+      "Social institutions and collective behavior": 13,
+      "Social interaction and networks": 14,
+      "Spatial analysis and mapping": 13,
+      "Structures and mechanical design": 17,
+      "Textile and domestic craft techniques": 9,
+      "Texts and interpretive traditions": 12,
+      "Tissue repair and reconstructive techniques": 1,
+      "Transport systems and engineered case studies": 16,
+      "Works, authors and literary history": 15,
+      "Works, movements and historical design cases": 15,
+      "Works, traditions and musical history": 11
+    }
+  },
+  "manifest_alignment_failures": [],
+  "identity_snapshot_path": "research/identity-review/final-semantic-snapshot.json",
+  "selected_text_changes": 46,
+  "coverage_plan_sha256": "be2e359a86decfd6ca5cda2920d9db52f37dae448c3d28dfd13ef98e9f4f6fd6",
+  "coverage_checks": {
+    "primary_domain_count": 23,
+    "starting_subfield_count": 69,
+    "starting_subfield_minimum_actual": 8,
+    "starting_subfield_shortfalls": [],
+    "primary_domain_target_mismatches": [],
+    "additional_primary_subfields": [
+      "Tissue repair and reconstructive techniques"
+    ]
+  },
+  "metadata_only_input_refreshes": [
+    {
+      "batch_id": "research-batch-006",
+      "previous_sha256": "53c28378537fb1bd8d07c4f7ca83e7c45be3889e34c7d5110e24c3bc53a74e4d",
+      "current_sha256": "49f1e931c7833e572bbc77467de7d4b0307ef83c837991cafcbc30ed800b847c",
+      "semantic_projection_unchanged": true
+    }
+  ],
+  "input_hashes_verified_at": "2026-10-08T22:49:14.232542+00:00"
+}

@@ -1,0 +1,429 @@
+{
+  "batch_id": "research-batch-003",
+  "updated_at": "2026-10-08T22:08:34.783508+00:00",
+  "prior_candidate_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+  "original_reports_preserved": true,
+  "summary": {
+    "reviewed_ids": 200,
+    "required_ids": 200,
+    "changed_ids": 11,
+    "retained_ids": 189,
+    "field_changes": 20,
+    "changed_card_texts": 11,
+    "changed_evidence_notes": 8,
+    "changed_relationships": 1,
+    "source_record_changes": 0,
+    "new_sources": 0,
+    "excluded_ids": [],
+    "new_identity_ids": []
+  },
+  "source_changes": [],
+  "changes": [
+    {
+      "concept_id": "local:catalog:neutral-theory-of-molecular-evolution",
+      "label": "Neutral theory of molecular evolution",
+      "field": "card",
+      "before": "The neutral theory of molecular evolution emphasizes mutations and genetic drift in explaining much genetic variation. If alternative versions have similar effects on reproductive success, chance can change their frequencies. This does not mean all variation is neutral or that natural selection is unimportant.",
+      "after": "The neutral theory of molecular evolution emphasizes mutation and genetic drift in explaining much genetic variation. When alternative gene versions do not differ in fitness, chance can change their frequencies. This does not mean all variation is neutral or that natural selection is unimportant.",
+      "reason": "Tighten the illustrative neutral condition from merely similar reproductive effects to the source’s no-fitness-difference condition.",
+      "source_evidence": [
+        {
+          "source_id": "bio-neutral",
+          "url": "https://evolution.berkeley.edu/neutral-theory-the-relative-importance-of-drift-and-selection/",
+          "locator": "Main explanation, lines 61–71",
+          "observed_support": "The source defines neutral variation as gene-version differences that do not affect fitness, and rejects all-variation/all-selection overgeneralizations."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:neutral-theory-of-molecular-evolution",
+      "label": "Neutral theory of molecular evolution",
+      "field": "evidence.0.note",
+      "before": "Berkeley states the theory’s emphasis on mutation/drift and explicitly rejects the three overgeneralizations about all variation and the importance of selection.",
+      "after": "Berkeley emphasizes mutation and drift and defines the illustrative neutral alternatives as having no difference in fitness. It explicitly rejects claims that all variation is neutral or selection is unimportant.",
+      "reason": "Align the support note with the restored neutral-fitness condition.",
+      "source_evidence": [
+        {
+          "source_id": "bio-neutral",
+          "url": "https://evolution.berkeley.edu/neutral-theory-the-relative-importance-of-drift-and-selection/",
+          "locator": "Main explanation and qualifications, lines 61–71",
+          "observed_support": "Gene version A versus B does not affect fitness in the source’s neutral example."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:neutral-theory-of-molecular-evolution",
+      "label": "Neutral theory of molecular evolution",
+      "field": "relations.0.note",
+      "before": "Neutral theory assigns a major explanatory role to genetic drift for variation with little fitness effect, rather than introducing a different drift mechanism.",
+      "after": "Neutral theory assigns a major explanatory role to genetic drift for variants with no fitness difference, rather than introducing a different drift mechanism.",
+      "reason": "Keep the relation’s factual premise consistent with the stricter illustrative neutral condition.",
+      "source_evidence": [
+        {
+          "source_id": "bio-neutral",
+          "url": "https://evolution.berkeley.edu/neutral-theory-the-relative-importance-of-drift-and-selection/",
+          "locator": "Main explanation, lines 61–71",
+          "observed_support": "Neutral alternatives have no fitness difference; their frequencies can change by drift."
+        },
+        {
+          "source_id": "bio-drift",
+          "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/genetic-drift/",
+          "locator": "Main explanation",
+          "observed_support": "Chance, rather than advantage, can change variant frequencies."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:e-coli-long-term-evolution-experiment",
+      "label": "E. coli Long-Term Evolution Experiment",
+      "field": "card",
+      "before": "In the E. coli Long-Term Evolution Experiment, researchers replayed evolution using bacteria from different points in one population’s history. Later samples were more likely to evolve citrate use. The result showed how earlier genetic changes could enable a later innovation, making evolutionary history experimentally testable.",
+      "after": "In the E. coli Long-Term Evolution Experiment, researchers replayed evolution using bacteria from different points in one population’s history. Later samples were more likely to evolve aerobic citrate use. The result showed how earlier genetic changes could enable a later innovation, making evolutionary history experimentally testable.",
+      "reason": "Repair independent finding 003-risk-LTEE-qualification-01 by restoring the material oxygen condition.",
+      "source_evidence": [
+        {
+          "source_id": "bio-ltee",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18524956/",
+          "locator": "Primary abstract, lines 242–245",
+          "observed_support": "The glucose-limited experimental medium contained citrate that ancestral E. coli could not use as a carbon source under oxic conditions; replay experiments tested emergence of that aerobic ability."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:e-coli-long-term-evolution-experiment",
+      "label": "E. coli Long-Term Evolution Experiment",
+      "field": "evidence.0.note",
+      "before": "The 2008 primary abstract reports replay experiments from different generations and a higher probability of citrate use in later clones, supporting historical contingency.",
+      "after": "The 2008 primary abstract reports replay experiments from different generations and a higher probability of aerobic citrate use in later clones, supporting historical contingency under the experiment’s oxic conditions.",
+      "reason": "Restore the same oxygen qualification in the evidence note wherever the citrate innovation is named.",
+      "source_evidence": [
+        {
+          "source_id": "bio-ltee",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18524956/",
+          "locator": "Primary abstract, lines 242–245",
+          "observed_support": "Oxic conditions delimit the citrate-use innovation; later archived clones were more likely to produce Cit+ variants."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:pulse-oximetry",
+      "label": "Pulse oximetry",
+      "field": "card",
+      "before": "A pulse oximeter shines light through tissue to estimate blood oxygen saturation. A small sensor can provide this information without drawing arterial blood. The reading is an estimate, however, and factors including circulation, movement or skin pigmentation can affect its accuracy.",
+      "after": "A pulse oximeter shines light through tissue to estimate blood oxygen saturation. A small sensor can provide this information without drawing arterial blood. The reading is an estimate, however, and factors including poor circulation, cold skin or skin pigmentation can affect its accuracy.",
+      "reason": "Replace movement with limitations actually listed in the cited MedlinePlus passage; this is a source-attribution repair, not a denial that movement can matter.",
+      "source_evidence": [
+        {
+          "source_id": "health-pulse",
+          "url": "https://medlineplus.gov/lab-tests/pulse-oximetry/",
+          "locator": "What happens? lines 65–69; Preparation lines 73–79",
+          "observed_support": "The optical method is described, and the explicit limitations list includes poor circulation, cold skin and darker skin pigmentation; movement is not in that list."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:pulse-oximetry",
+      "label": "Pulse oximetry",
+      "field": "evidence.0.note",
+      "before": "MedlinePlus describes the optical sensor and estimated oxygen saturation, and its limitations include circulation, movement and pigmentation.",
+      "after": "MedlinePlus describes the optical sensor and estimated oxygen saturation; its listed limitations include poor circulation, cold skin and darker skin pigmentation.",
+      "reason": "Align the support note with the actual limitations list.",
+      "source_evidence": [
+        {
+          "source_id": "health-pulse",
+          "url": "https://medlineplus.gov/lab-tests/pulse-oximetry/",
+          "locator": "Preparation, lines 73–79",
+          "observed_support": "The cited list supports the three retained examples directly."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:systolic-blood-pressure-intervention-trial",
+      "label": "Systolic Blood Pressure Intervention Trial",
+      "field": "card",
+      "before": "SPRINT compared systolic-pressure targets below 120 and 140 mmHg in higher-risk adults aged fifty or older without diabetes or prior stroke. Intensive treatment reduced cardiovascular events and deaths, but increased some adverse effects. Its results must be read together with those eligibility limits and tradeoffs.",
+      "after": "SPRINT compared systolic-pressure targets below 120 and 140 mmHg in higher-risk adults aged fifty or older with initial systolic pressure at least 130 mmHg, excluding diabetes and prior stroke. Intensive treatment reduced cardiovascular events and deaths but increased some adverse effects; eligibility limits matter.",
+      "reason": "Restore the baseline blood-pressure eligibility boundary alongside the already retained age, cardiovascular-risk and exclusion qualifications.",
+      "source_evidence": [
+        {
+          "source_id": "health-sprint",
+          "url": "https://www.nhlbi.nih.gov/science/systolic-blood-pressure-intervention-trial-sprint-study",
+          "locator": "At a Glance, line 106; How conducted, line 163; cardiovascular/kidney findings, lines 126–141",
+          "observed_support": "Participants were at least fifty, had initial systolic pressure of at least 130 mmHg and additional cardiovascular risk; the trial reported both benefits and adverse effects."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:systolic-blood-pressure-intervention-trial",
+      "label": "Systolic Blood Pressure Intervention Trial",
+      "field": "evidence.0.note",
+      "before": "NHLBI states the two targets, age/risk criteria, exclusions, cardiovascular/death benefit and increased hypotension-related, electrolyte and kidney adverse effects.",
+      "after": "NHLBI states the two targets, age fifty or older, initial systolic pressure at least 130 mmHg, additional cardiovascular risk, diabetes/prior-stroke exclusions, cardiovascular/death benefit and increased hypotension-related, electrolyte and kidney adverse effects.",
+      "reason": "Make the restored entry-pressure criterion explicit in the evidence note.",
+      "source_evidence": [
+        {
+          "source_id": "health-sprint",
+          "url": "https://www.nhlbi.nih.gov/science/systolic-blood-pressure-intervention-trial-sprint-study",
+          "locator": "At a Glance; How conducted; Key findings",
+          "observed_support": "The source distinguishes eligibility criteria from assigned treatment targets and reports the benefit–harm comparison."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:marine-heatwave",
+      "label": "Marine heatwave",
+      "field": "card",
+      "before": "A marine heatwave is unusually warm ocean water measured against the normal conditions for that place and season. A common definition requires temperatures above the seasonal ninetieth percentile for at least five days. The comparison is local and time-specific, not one temperature threshold for every sea.",
+      "after": "A marine heatwave is unusually warm ocean water measured against the normal conditions for that place and season. A common definition requires temperatures above the seasonal ninetieth percentile for at least five consecutive days. The comparison is local and time-specific, not one temperature threshold for every sea.",
+      "reason": "Retain the source’s uninterrupted-duration condition for the stated marine-heatwave definition.",
+      "source_evidence": [
+        {
+          "source_id": "earth-heatwave",
+          "url": "https://www.ncei.noaa.gov/news/data-behind-our-warming-oceans",
+          "locator": "What are marine heat waves?, line 13",
+          "observed_support": "The definition requires temperature above the seasonal ninetieth percentile for five or more days in a row."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:temperature-inversion",
+      "label": "Temperature inversion",
+      "field": "card",
+      "before": "During a temperature inversion, warmer air lies above cooler air near the ground. This stable arrangement can suppress mixing and trap pollutants in the lower atmosphere. Inversions may form through nighttime surface cooling or the arrival of warmer air above an existing cool layer.",
+      "after": "A temperature inversion occurs where air becomes warmer with height. Near the ground, warm air above cooler air can suppress mixing and trap pollution. Such inversions may form through nighttime surface cooling or warm-air advection above an existing cool layer.",
+      "reason": "Distinguish the general temperature-with-height definition from the near-ground pollution example; the original opening implicitly restricted all inversions to the surface.",
+      "source_evidence": [
+        {
+          "source_id": "earth-inversion",
+          "url": "https://www.weather.gov/lmk/inversion",
+          "locator": "Definition, line 156; Development, line 161; Air quality, line 165",
+          "observed_support": "NWS defines temperature increasing with height generally, then describes surface cooling/advection and the near-ground pollution lid."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:temperature-inversion",
+      "label": "Temperature inversion",
+      "field": "evidence.0.note",
+      "before": "NWS defines reversed temperature increase with height, describes nighttime cooling/warm-air advection and explains the pollution-trapping lid effect.",
+      "after": "NWS defines an inversion as air temperature increasing with height. Its near-ground examples describe nighttime surface cooling or warm-air advection, with a stable lid that can trap pollution.",
+      "reason": "Keep the general definition and the surface example distinct in the source attribution.",
+      "source_evidence": [
+        {
+          "source_id": "earth-inversion",
+          "url": "https://www.weather.gov/lmk/inversion",
+          "locator": "Definition; Development; Air quality",
+          "observed_support": "The source’s general temperature profile and its near-ground examples support the revised scope."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:argo",
+      "label": "Argo",
+      "field": "card",
+      "before": "Argo floats repeatedly move through the ocean to measure conditions such as temperature and salinity. Pumping oil into an external bladder changes volume without changing mass, allowing a float to rise or sink. After profiling, it surfaces to transmit data, then begins another cycle.",
+      "after": "Argo floats repeatedly move through the ocean to measure conditions such as temperature and salinity. Pumping oil into an external bladder changes volume without changing mass, allowing a float to rise or sink. On a typical profiling cycle, it surfaces to transmit data, then descends again.",
+      "reason": "Qualify surfacing as the described standard cycle rather than an exceptionless statement about every float mission.",
+      "source_evidence": [
+        {
+          "source_id": "earth-argo",
+          "url": "https://argo.ucsd.edu/how-do-floats-work/",
+          "locator": "What does an Argo float do?, lines 49–50; External bladder",
+          "observed_support": "The program identifies the described mission as the standard Argo cycle and explains buoyancy control and surface satellite communication."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:argo",
+      "label": "Argo",
+      "field": "evidence.0.note",
+      "before": "The Argo program describes profiling missions, CTD measurements, buoyancy changes through an oil bladder and satellite communication at the surface.",
+      "after": "The Argo program describes its standard profiling mission, CTD measurements, buoyancy changes through an oil bladder and satellite communication at the surface. The card marks this as a typical cycle.",
+      "reason": "Preserve the program’s standard-mission qualification in the evidence note.",
+      "source_evidence": [
+        {
+          "source_id": "earth-argo",
+          "url": "https://argo.ucsd.edu/how-do-floats-work/",
+          "locator": "What does an Argo float do?; External bladder",
+          "observed_support": "The cycle is presented by the program as standard, not as a universal statement about all missions."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:artesian-aquifer",
+      "label": "Artesian aquifer",
+      "field": "card",
+      "before": "An artesian aquifer holds groundwater under pressure beneath relatively impermeable layers. A well tapping it can rise above the aquifer’s top, but water flows out at the surface only if the pressure level is high enough. Depth alone does not make a well artesian.",
+      "after": "An artesian aquifer holds groundwater under pressure beneath relatively impermeable layers. Water in a well tapping it can rise above the aquifer’s top, but water flows out at the surface only if the pressure level is high enough. Depth alone does not make a well artesian.",
+      "reason": "Correct the grammatical subject of pressure-driven rise: water rises within the well; the well itself does not rise.",
+      "source_evidence": [
+        {
+          "source_id": "earth-artesian",
+          "url": "https://www.usgs.gov/water-science-school/science/artesian-water-and-artesian-wells",
+          "locator": "Artesian Water, line 47/206; Example, lines 60–61",
+          "observed_support": "USGS states that water in a well can rise above the aquifer and distinguishes a flowing well by pressure level relative to the land surface."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 2,
+      "new_card_version": 3
+    },
+    {
+      "concept_id": "local:catalog:rootstock-dwarfing",
+      "label": "Rootstock dwarfing",
+      "field": "card",
+      "before": "A dwarfing rootstock can keep an apple tree smaller even when its scion belongs to a familiar full-size fruit variety. The two parts have different jobs. If a buried scion forms its own roots, the intended dwarfing influence can be lost, changing the tree’s eventual growth.",
+      "after": "A dwarfing rootstock can limit an apple tree’s size while its scion determines the fruit variety. If a buried scion forms its own roots, the rootstock’s dwarfing influence can be lost. Tree size therefore depends partly on which root system supports the grafted shoot.",
+      "reason": "Remove the ambiguous full-size-fruit-variety phrase and state the source’s separate tree-size and fruit-variety roles directly.",
+      "source_evidence": [
+        {
+          "source_id": "food-apples",
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-apples",
+          "locator": "Rootstocks, lines 277–296; Planting, lines 416–417",
+          "observed_support": "The scion produces the desired fruit variety; rootstocks influence tree size, and scion rooting at a buried graft union can defeat dwarfing."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:variable-rate-irrigation",
+      "label": "Variable-rate irrigation",
+      "field": "card",
+      "before": "Variable-rate irrigation changes water delivery across different parts of a field. Control zones and prescription maps can account for meaningful differences in soil or crop demand. The technology answers where and how much to apply; its advantage is limited when a field has little relevant variation.",
+      "after": "Variable-rate irrigation changes water delivery across a field using control zones and prescription maps. Those maps specify irrigation amounts, but soil and crop information must guide the prescription. The technology applies the planned pattern; it does not independently determine how much water a crop needs.",
+      "reason": "Restore the source’s explicit distinction between applying spatial prescriptions and determining crop water need; the original sentence could attribute both decisions to the technology alone.",
+      "source_evidence": [
+        {
+          "source_id": "food-vri",
+          "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/irrigation/variable-rate-irrigation",
+          "locator": "How VRI works, lines 297–305; Zones define where, not how much, lines 308–311",
+          "observed_support": "Maps assign irrigation depths, controllers apply them by position, and the source explicitly says crop need requires soil, rooting, demand and moisture information."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:variable-rate-irrigation",
+      "label": "Variable-rate irrigation",
+      "field": "evidence.0.note",
+      "before": "UMN describes zone control, prescription maps and reduced benefit in sufficiently uniform fields.",
+      "after": "UMN describes control zones and prescription maps, then explicitly distinguishes spatial application from determining crop water need. Agronomic information and irrigation-scheduling tools are required to assign appropriate amounts.",
+      "reason": "Make the missing decision boundary explicit in the support note.",
+      "source_evidence": [
+        {
+          "source_id": "food-vri",
+          "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/irrigation/variable-rate-irrigation",
+          "locator": "How VRI works; Zones define where, not how much",
+          "observed_support": "Spatial zone delineation alone does not determine an appropriate irrigation depth."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:wood-sorption-hysteresis",
+      "label": "Wood sorption hysteresis",
+      "field": "card",
+      "before": "Wood’s moisture content can depend on whether it approached a humidity level by drying or by absorbing water. At the same relative humidity, the drying path can retain more moisture. This sorption hysteresis means that present air conditions alone do not always describe the material’s state completely.",
+      "after": "Wood’s equilibrium moisture content can depend on whether it reached a humidity level by drying or by absorbing water. At the same temperature and relative humidity, the drying path can retain more moisture. This sorption hysteresis makes moisture history relevant even after equilibrium is reached.",
+      "reason": "Restore constant temperature alongside relative humidity and identify equilibrium path dependence, rather than leaving the example confusable with ordinary transient lag.",
+      "source_evidence": [
+        {
+          "source_id": "home-emc",
+          "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf",
+          "locator": "Sorption Hysteresis, pp. 4–4 to 4–5, lines 457–496",
+          "observed_support": "USDA defines sorption isotherms at constant temperature, states that history affects EMC and places desorption EMC above absorption EMC at a given relative humidity."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    },
+    {
+      "concept_id": "local:catalog:wood-sorption-hysteresis",
+      "label": "Wood sorption hysteresis",
+      "field": "evidence.0.note",
+      "before": "USDA’s sorption-hysteresis section states history dependence and higher EMC on desorption than absorption at given relative humidity.",
+      "after": "USDA describes sorption isotherms at constant temperature and history-dependent equilibrium moisture content, with higher EMC on desorption than absorption at the same relative humidity.",
+      "reason": "Keep both controlled conditions and the equilibrium property in the attribution.",
+      "source_evidence": [
+        {
+          "source_id": "home-emc",
+          "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf",
+          "locator": "Sorption Hysteresis, pp. 4–4 to 4–5",
+          "observed_support": "The comparison concerns equilibrium moisture at constant temperature and matched relative humidity, not merely different rates of drying."
+        }
+      ],
+      "prior_artifact_path": "research/workers/research-batch-003/candidate.authored.json",
+      "prior_artifact_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+      "old_card_version": 1,
+      "new_card_version": 2
+    }
+  ]
+}

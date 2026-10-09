@@ -1,0 +1,51 @@
+Batch 005 independent correction recheck
+
+Status: pass_with_disclosed_source_access_limitation
+Candidate: research/workers/research-batch-005/candidate.revised.json
+SHA-256: 4df6efb168ceaced979cfe0392b0f2946c7edb12c275efe4105eafe9e372506d
+Canonical candidate is byte-identical. Initial audit and frozen sample are unchanged.
+
+Results
+- All 17 affected bundles checked: 15 changed-card/evidence reviews and 2 shared-source-only checks.
+- Random sample: 2 changed cards rechecked; its 1 minor initial note is resolved. No substantive finding existed.
+- Risk sample: 5 changed cards rechecked; its 1 substantive and 2 minor initial findings are resolved.
+- Additional targeted coverage: 8 changed cards fully checked, plus 2 metadata-only bundle checks.
+- No residual substantive or minor finding; no exclusions recommended.
+
+Initial finding resolutions
+- 005-K01: Rollback-journal comparison explicitly names SQLite’s WAL mode (SQLite WAL §2–2.1).
+- 005-R01: Baby metadata separates the 1998 replica object from its account of the original 1948 machine.
+- 005-K02: Cue-only wording in the label and card matches IES Recommendation 6a, pp. 23–24.
+- 005-K03: ICA evidence points to Principles 4 and 6; shared metadata still retains Principle 3.
+
+Reviewed IDs
+
+Original random sample
+- local:catalog:atomic-commit
+- local:catalog:manchester-baby
+
+Original risk sample
+- local:catalog:rollback-journal
+- Q169399
+- local:catalog:delayed-judgments-of-learning
+- local:catalog:international-cooperative-alliance
+- local:catalog:other-initiated-conversational-repair
+
+Additional targeted checks
+- local:authored:000520
+- local:catalog:write-ahead-logging
+- local:catalog:wal-checkpointing
+- local:catalog:distributed-consensus
+- local:catalog:minimal-pair
+- local:catalog:patronage-based-surplus-distribution (shared-source metadata and unchanged-card diff only)
+- local:catalog:south-sea-bubble
+- local:catalog:rochdale-pioneers (shared-source metadata and unchanged-card diff only)
+- local:catalog:conversational-turn-taking
+- local:catalog:grounding-in-communication
+
+Evidence and limits
+Ten source URLs returned fresh public-tool passages. Five unchanged premises retain their prior independent audit support. Grounding’s URL returned two unusable internal-error responses; retries stopped. The checker read the original public passages in hash-verified web-120.json and web-131.json, covering the mutual-belief criterion, common-ground relationship, acknowledgments, purpose and medium.
+The all-200 boundary pass remains author review. The exact 200 IDs were verified, but this recheck does not independently certify all 200 facts. Original random and risk findings remain separate; additional checks are targeted, not a new random sample.
+
+Detailed report: audit.recheck.json
+Report SHA-256: 8e7602e30d1c4ec07cfea3a005a3d75f241c1105de0b670339435821a23ac095

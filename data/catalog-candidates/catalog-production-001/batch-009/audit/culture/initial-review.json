@@ -1,0 +1,723 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-009",
+  "reviewer": "/root/production001_audit_culture",
+  "authored_sampled_cards": false,
+  "audit_recorded_at": "2026-10-09T05:03:02Z",
+  "draft_candidate_sha256": "4612287612b3e2e15fa22a8e8d60bd4f8eb35c4528a5d5f3bf8e506988e35154",
+  "sample_sha256": "71e56fbb2968f8b0b444647a395243a2bb591cc173b81bd1538fdff6cd9e7f28",
+  "input_sha256": {
+    "data/catalog-candidates/catalog-production-001/batch-009/audit/culture/assignment.json": "ff81da7d219b4ae66ac912f3053c8ad45c073a845fa1458ba976f14f5f187c8b",
+    "data/catalog-candidates/catalog-production-001/baseline-index.json": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+    "data/catalog-candidates/catalog-production-001/batch-009/audit-sample.json": "71e56fbb2968f8b0b444647a395243a2bb591cc173b81bd1538fdff6cd9e7f28",
+    "data/catalog-candidates/catalog-production-001/batch-009/frozen-initial/manifest.json": "cce2ff4b93ffadc39baebf8e9cc92368e4e22a366054bb11890ebb4d605ecdb3",
+    "data/catalog-candidates/catalog-production-001/batch-009/frozen-initial/draft-candidate.json": "4612287612b3e2e15fa22a8e8d60bd4f8eb35c4528a5d5f3bf8e506988e35154"
+  },
+  "reviews": [
+    {
+      "id": "Q1697305",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "needs_repair",
+      "word_count": 17,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-os-motif",
+          "url": "https://liberalarts.oregonstate.edu/wlf/what-motif",
+          "locator": "Transcript, lines 34–38",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn742view0",
+          "supported": false,
+          "reasoning": "Definition supported; the functional effects are optional in the passage."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": false,
+        "scope_appropriate_wording": true,
+        "note": "The final wording drops the optional-effect qualification."
+      },
+      "relations": [
+        {
+          "target_id": "Q1318295",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "research-batch-009-culture::culture-os-motif"
+          ],
+          "url": "https://liberalarts.oregonstate.edu/wlf/what-motif",
+          "locator": "Transcript, lines 34–38",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn742view0",
+          "supported": true,
+          "reasoning": "The passage places the concept within stories; the target meaning matches.",
+          "target_meaning_verified": true,
+          "target_label": "Narrative",
+          "target_meaning_locator": "baseline-index.json#/concepts/Q1318295",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": [
+        {
+          "severity": "material",
+          "field": "card",
+          "problem": "Optional effects become defining properties of every motif.",
+          "evidence": "The inspected passage qualifies both functions rather than requiring them.",
+          "proposed_repair": "Use can before connect; retain the optional force for both effects.",
+          "source_id": "research-batch-009-culture::culture-os-motif",
+          "tool_ref": "turn742view0"
+        }
+      ]
+    },
+    {
+      "id": "Q1506365",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "verified",
+      "word_count": 20,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-nara-migration",
+          "url": "https://www.archives.gov/research/african-americans/migrations/great-migration",
+          "locator": "Introduction, lines 52–59",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn742view1",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q309",
+          "type": "broader_topic",
+          "assertion": "editorial",
+          "source_ids": [
+            "research-batch-009-culture::culture-nara-migration"
+          ],
+          "url": "https://www.archives.gov/research/african-americans/migrations/great-migration",
+          "locator": "Introduction, lines 52–59",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn742view1",
+          "supported": true,
+          "reasoning": "Inspected historical subject supports editorial topical grouping; no source taxonomy claimed.",
+          "target_meaning_verified": true,
+          "target_label": "History",
+          "target_meaning_locator": "baseline-index.json#/concepts/Q309",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "Q44325",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "verified",
+      "word_count": 20,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-sep-ontology",
+          "url": "https://plato.stanford.edu/entries/logic-ontology/",
+          "locator": "Section 3.1 Different conceptions of ontology, lines 113–120",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn753view0",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "local:authored:000431",
+          "type": "broader_topic",
+          "assertion": "editorial",
+          "source_ids": [
+            "research-batch-009-culture::culture-sep-ontology"
+          ],
+          "url": "https://plato.stanford.edu/entries/logic-ontology/",
+          "locator": "Section 3.1 Different conceptions of ontology, lines 113–120",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn753view0",
+          "supported": true,
+          "reasoning": "The passage expressly places ontology within metaphysics; the target meaning matches.",
+          "target_meaning_verified": true,
+          "target_label": "Metaphysics",
+          "target_meaning_locator": "baseline-index.json#/concepts/local:authored:000431",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "Q12602483",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "needs_repair",
+      "word_count": 17,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-uscourts-juries",
+          "url": "https://www.uscourts.gov/court-programs/jury-service/types-juries",
+          "locator": "Types of Juries / Petit Jury, lines 569–577",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn753view1",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q36442",
+          "type": "broader_topic",
+          "assertion": "editorial",
+          "source_ids": [
+            "research-batch-009-culture::culture-uscourts-juries"
+          ],
+          "url": "https://www.uscourts.gov/court-programs/jury-service/types-juries",
+          "locator": "Types of Juries / Petit Jury, lines 569–577",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn753view1",
+          "supported": false,
+          "reasoning": "The passage establishes trial procedure, not this disciplinary parentage.",
+          "target_meaning_verified": true,
+          "target_label": "Political science",
+          "target_meaning_locator": "baseline-index.json#/concepts/Q36442",
+          "target_inspection_tool_ref": "exec_command:ed4923",
+          "proposed_replacement": {
+            "target_id": "Q837675",
+            "type": "broader_topic",
+            "assertion": "source_asserted",
+            "supported": true,
+            "url": "https://www.uscourts.gov/court-programs/jury-service/types-juries",
+            "locator": "Types of Juries / Petit Jury, lines 569–571",
+            "inspection_mode": "web_open_text",
+            "tool_ref": "turn753view1",
+            "target_meaning_locator": "baseline-index.json#/concepts/Q837675",
+            "target_inspection_tool_ref": "exec_command:e9ac88",
+            "reasoning": "The passage explicitly identifies petit and grand as jury types."
+          }
+        }
+      ],
+      "findings": [
+        {
+          "severity": "material",
+          "field": "relations[0]",
+          "problem": "Political science is an unsupported disciplinary parent for this court procedure.",
+          "evidence": "The cited passage identifies jury types and functions, not the proposed parentage.",
+          "proposed_repair": "Replace the target with Q837675 Jury, supported explicitly at lines 569–571.",
+          "source_id": "research-batch-009-culture::culture-uscourts-juries",
+          "tool_ref": "turn753view1"
+        }
+      ]
+    },
+    {
+      "id": "Q131361",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "verified",
+      "word_count": 18,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-os-irony",
+          "url": "https://liberalarts.oregonstate.edu/wlf/what-irony",
+          "locator": "Transcript, lines 33–35 and 49–51",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn746view0",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q8242",
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "research-batch-009-culture::culture-os-irony"
+          ],
+          "url": "https://liberalarts.oregonstate.edu/wlf/what-irony",
+          "locator": "Transcript, lines 33–35 and 49–51",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn746view0",
+          "supported": true,
+          "reasoning": "The passage explicitly presents literary uses; the target meaning matches.",
+          "target_meaning_verified": true,
+          "target_label": "Literature",
+          "target_meaning_locator": "baseline-index.json#/concepts/Q8242",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "Q14088448",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "verified",
+      "word_count": 20,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-omt-cadence",
+          "url": "https://openmusictheory.github.io/cadenceTypes.html",
+          "locator": "Classical cadence types, opening definition, lines 4–12",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn746view1",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "local:authored:000214",
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "research-batch-009-culture::culture-omt-cadence"
+          ],
+          "url": "https://openmusictheory.github.io/cadenceTypes.html",
+          "locator": "Classical cadence types, opening definition, lines 4–12",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn746view1",
+          "supported": true,
+          "reasoning": "The substantive theory lesson treats cadence as a formal musical event.",
+          "target_meaning_verified": true,
+          "target_label": "Music theory",
+          "target_meaning_locator": "baseline-index.json#/concepts/local:authored:000214",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "Q189849",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "verified",
+      "word_count": 16,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-unesco-plitvice",
+          "url": "https://whc.unesco.org/en/list/98",
+          "locator": "Outstanding Universal Value / Brief synthesis and criteria vii–viii, lines 49–58",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn753view2",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [],
+      "findings": []
+    },
+    {
+      "id": "Q10283",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "needs_repair",
+      "word_count": 20,
+      "claims": [
+        {
+          "claim_group": "pilgrims_sites_bathing_teaching",
+          "source_id": "research-batch-009-culture::culture-pib-kumbh",
+          "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc2024115429601.pdf",
+          "locator": "PDF page 1 (index 0), lines 6–15; page 2 (index 1), lines 17–38",
+          "inspection_mode": "web_open_pdf_text",
+          "tool_ref": "turn753view3",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        },
+        {
+          "claim_group": "exchange_between_spiritual_traditions",
+          "source_id": "research-batch-009-culture::culture-pib-kumbh",
+          "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc2024115429601.pdf",
+          "locator": "PDF pages 1–2 (indices 0–1), lines 6–15 and 17–38; page 3 (index 2), lines 63–71",
+          "inspection_mode": "web_open_pdf_text",
+          "tool_ref": "turn753view3",
+          "supported": false,
+          "reasoning": "Neither cited section establishes exchange between traditions."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": false,
+        "scope_appropriate_wording": true,
+        "note": "The added exchange clause exceeds the inspected support."
+      },
+      "relations": [
+        {
+          "target_id": "Q9089",
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "research-batch-009-culture::culture-pib-kumbh"
+          ],
+          "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc2024115429601.pdf",
+          "locator": "PDF pages 1–2 (indices 0–1), lines 6–15 and 17–38; page 3 (index 2), lines 63–71",
+          "inspection_mode": "web_open_pdf_text",
+          "tool_ref": "turn753view3",
+          "supported": true,
+          "reasoning": "The passage explicitly identifies Hindu participants; the target meaning matches.",
+          "target_meaning_verified": true,
+          "target_label": "Hinduism",
+          "target_meaning_locator": "baseline-index.json#/concepts/Q9089",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": [
+        {
+          "severity": "material",
+          "field": "card",
+          "problem": "Inter-tradition exchange is unsupported by the attached source.",
+          "evidence": "Discourses and co-presence do not establish reciprocal exchange.",
+          "proposed_repair": "Delete the exchange clause or attach direct evidence.",
+          "source_id": "research-batch-009-culture::culture-pib-kumbh",
+          "tool_ref": "turn753view3"
+        }
+      ]
+    },
+    {
+      "id": "Q204330",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "word_count": 21,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-met-gouache",
+          "url": "https://www.metmuseum.org/perspectives/materials-and-techniques-drawing-watercolor",
+          "locator": "Watercolor, lines 7–23 and 42–47",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn749view0",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q11629",
+          "type": "facet_of",
+          "assertion": "editorial",
+          "source_ids": [
+            "research-batch-009-culture::culture-met-gouache"
+          ],
+          "url": "https://www.metmuseum.org/perspectives/materials-and-techniques-drawing-watercolor",
+          "locator": "Watercolor, lines 7–23 and 42–47",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn749view0",
+          "supported": true,
+          "reasoning": "Inspected painting practice supports this editorial facet; no source taxonomy claimed.",
+          "target_meaning_verified": true,
+          "target_label": "Painting",
+          "target_meaning_locator": "baseline-index.json#/concepts/Q11629",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "Q164204",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "word_count": 19,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-ams-musicology",
+          "url": "https://www.amsmusicology.org/what-is-musicology/",
+          "locator": "Opening explanation and Topic Areas, lines 158–175",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn749view1",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q638",
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "research-batch-009-culture::culture-ams-musicology"
+          ],
+          "url": "https://www.amsmusicology.org/what-is-musicology/",
+          "locator": "Opening explanation and Topic Areas, lines 158–175",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn749view1",
+          "supported": true,
+          "reasoning": "The passage explicitly defines the study by its music subject matter.",
+          "target_meaning_verified": true,
+          "target_label": "Music",
+          "target_meaning_locator": "baseline-index.json#/concepts/Q638",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "Q113558",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "word_count": 16,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-omt-dynamics",
+          "url": "https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/",
+          "locator": "Other Aspects of Notation / Dynamics, lines 1040–1057 and 1077",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn758view1",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "local:authored:000214",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "research-batch-009-culture::culture-omt-dynamics"
+          ],
+          "url": "https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/",
+          "locator": "Other Aspects of Notation / Dynamics, lines 1040–1057 and 1077",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn758view1",
+          "supported": true,
+          "reasoning": "The theory chapter expressly includes dynamics among the musical elements examined.",
+          "target_meaning_verified": true,
+          "target_label": "Music theory",
+          "target_meaning_locator": "baseline-index.json#/concepts/local:authored:000214",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "Q1758354",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "word_count": 17,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-os-plot",
+          "url": "https://liberalarts.oregonstate.edu/wlf/what-plot-definition-and-examples",
+          "locator": "Transcript, lines 31–38",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn758view2",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q1318295",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "research-batch-009-culture::culture-os-plot"
+          ],
+          "url": "https://liberalarts.oregonstate.edu/wlf/what-plot-definition-and-examples",
+          "locator": "Transcript, lines 31–38",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn758view2",
+          "supported": true,
+          "reasoning": "The passage explicitly treats plot as a component of story and narrative.",
+          "target_meaning_verified": true,
+          "target_label": "Narrative",
+          "target_meaning_locator": "baseline-index.json#/concepts/Q1318295",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": []
+    },
+    {
+      "id": "Q217450",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "word_count": 22,
+      "claims": [
+        {
+          "claim_group": "whole_card",
+          "source_id": "research-batch-009-culture::culture-nara-paris",
+          "url": "https://www.archives.gov/milestone-documents/treaty-of-paris",
+          "locator": "Introduction, lines 31–38; transcript Articles 1–2, lines 56–61",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn759view0",
+          "supported": true,
+          "reasoning": "All grouped clauses supported at the inspected locations."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q309",
+          "type": "broader_topic",
+          "assertion": "editorial",
+          "source_ids": [
+            "research-batch-009-culture::culture-nara-paris"
+          ],
+          "url": "https://www.archives.gov/milestone-documents/treaty-of-paris",
+          "locator": "Introduction, lines 31–38; transcript Articles 1–2, lines 56–61",
+          "inspection_mode": "web_open_text",
+          "tool_ref": "turn759view0",
+          "supported": true,
+          "reasoning": "Inspected historical document supports editorial topical grouping; no source taxonomy claimed.",
+          "target_meaning_verified": true,
+          "target_label": "History",
+          "target_meaning_locator": "baseline-index.json#/concepts/Q309",
+          "target_inspection_tool_ref": "exec_command:ed4923"
+        }
+      ],
+      "findings": []
+    }
+  ],
+  "source_access_failures": [
+    {
+      "url": "https://ich.unesco.org/en/RL/kumbh-mela-01258",
+      "locator": "Challenge page, lines 0–5",
+      "inspection_mode": "web_open_text",
+      "tool_ref": "turn761view0",
+      "card_ids": [
+        "Q10283"
+      ],
+      "role": "supplementary_evidence_check",
+      "failure": "JavaScript/human-verification challenge; substantive content unavailable.",
+      "attempts": 1,
+      "resolution": "Stopped this host after two challenge responses; inspected an official alternative."
+    },
+    {
+      "url": "https://ich.unesco.org/en/decisions/12.COM/11.B.12",
+      "locator": "Challenge page, lines 0–5",
+      "inspection_mode": "web_open_text",
+      "tool_ref": "turn762view0",
+      "card_ids": [
+        "Q10283"
+      ],
+      "role": "supplementary_evidence_check",
+      "failure": "JavaScript/human-verification challenge; substantive content unavailable.",
+      "attempts": 1,
+      "resolution": "Stopped this host after two challenge responses; inspected an official alternative."
+    }
+  ],
+  "followups": [
+    {
+      "trigger_id": "Q12602483",
+      "candidate_ids": [
+        "Q1323789"
+      ],
+      "kind": "same_source_and_relation_formulation",
+      "reason": "Recheck the shared source and identical disciplinary-parent formulation.",
+      "source_id": "research-batch-009-culture::culture-uscourts-juries"
+    },
+    {
+      "trigger_id": "Q1697305",
+      "candidate_ids": [
+        "Q1164982",
+        "Q133067",
+        "Q1473346",
+        "Q170571",
+        "Q221686",
+        "Q3344470",
+        "Q693"
+      ],
+      "kind": "qualification_formulation_screen",
+      "reason": "Takeaway can disappears from body; inspect necessity before judging.",
+      "source_id": "research-batch-009-culture::culture-os-motif",
+      "screen_method": "Programmatic wording comparison only; no unsampled failure asserted.",
+      "tool_ref": "exec_command:ed4923"
+    },
+    {
+      "trigger_id": "Q10283",
+      "candidate_ids": [],
+      "kind": "source_shared_scan",
+      "reason": "No other culture card shares this source or exchange wording.",
+      "source_id": "research-batch-009-culture::culture-pib-kumbh"
+    }
+  ],
+  "limits": [
+    "Fixed 13-card culture assignment: seven random and six risk cards from the frozen 200-card population.",
+    "Every assigned card body and all 12 attached edges inspected; baseline target meanings checked programmatically.",
+    "Author support flags and search snippets were not accepted as evidence.",
+    "Two supplementary UNESCO pages were blocked; all 13 attached source pages were accessible.",
+    "Findings concern evidence, qualification and relation semantics; unsampled follow-ups remain unjudged.",
+    "No human-interest evaluation, operational import or population acceptance conclusion."
+  ]
+}

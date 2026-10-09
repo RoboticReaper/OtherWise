@@ -1,0 +1,33 @@
+{
+  "batch_id": "research-batch-003",
+  "created_at": "2026-10-08T20:01:40.475992+00:00",
+  "status": "recommendations_for_central_manifest",
+  "original_proposals_preserved": true,
+  "records": [
+    {
+      "proposal_id": "local:catalog:isle-royale",
+      "type": "identity_scope",
+      "finding": "Submitted label Isle Royale and alias Isle Royale National Park mix an island with a larger designated park. They should not automatically be treated as exact synonyms.",
+      "proposed_correction": "For the centrally approved manifest, choose the explicitly studied named subject Isle Royale predator–prey study (or choose the national park and drop the island equivalence). Preserve this original row in the proposal history.",
+      "evidence": "bio-isle; Why is Isle Royale a Unique Research Location? and Predator-Prey Relationships; continuous study since 1958 at lines 33 and 99."
+    },
+    {
+      "proposal_id": "local:catalog:competitive-exclusion-principle",
+      "type": "alias_support",
+      "finding": "Gause’s principle is a conventional synonym but was not confirmed in the exact inspected OpenStax passage.",
+      "proposed_correction": "Remove this optional alias unless separately verified before central freeze. The primary label and exclusion mechanism remain supported."
+    },
+    {
+      "proposal_id": "local:catalog:horizontal-gene-transfer",
+      "type": "alias_support",
+      "finding": "Lateral gene transfer is a conventional synonym but was not located in the recorded selected passage.",
+      "proposed_correction": "Remove the optional lateral-gene-transfer alias unless separately verified; retain Horizontal gene transfer and HGT."
+    },
+    {
+      "proposal_id": "local:catalog:understitching",
+      "type": "metadata_typo",
+      "finding": "Support note contained a spelling typo in an earlier builder line.",
+      "proposed_correction": "Read understitiches as understitches; no change to the supported claim."
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "concept_changes": {
+    "local:authored:000520": {
+      "ordinal": 21,
+      "reason": "Make the replicated-state-machine determinism condition explicit.",
+      "fields": {
+        "card": "Distributed systems spread computation across machines that communicate over a network. Keeping their work coordinated becomes difficult when messages are delayed or machines fail. Replicated state machines offer one approach: replicas agree on commands and execute them deterministically in the same order to maintain matching results.",
+        "evidence": [
+          {
+            "source_id": "raft",
+            "locator": "§2, replicated state machines",
+            "note": "The paper, Section 2, requires deterministic state machines as well as an agreed command order for matching states and outputs. This is one distributed-systems pattern, not a condition met by all distributed programs."
+          }
+        ]
+      }
+    },
+    "local:catalog:atomic-commit": {
+      "ordinal": 25,
+      "reason": "Bound SQLite crash/power-loss atomicity to its documented storage assumptions.",
+      "fields": {
+        "card": "Atomic commit makes a transaction's changes appear all-or-nothing, even though storage writes occur sequentially. SQLite uses recovery mechanisms to preserve that appearance across crashes or power failures under documented storage assumptions. The guarantee concerns which changes take effect, rather than requiring hardware to write everything simultaneously.",
+        "evidence": [
+          {
+            "source_id": "atomiccommit",
+            "locator": "Section 1 Introduction; Section 2 Hardware Assumptions; Section 3.5 Creating A Rollback Journal File",
+            "note": "The all-or-nothing appearance is described in Section 1; Section 2 explicitly states storage/OS assumptions behind crash recovery, including correct flush behavior and uncorrupted stored content. Section 3.5 supplies rollback-journal preservation as the related mechanism."
+          },
+          {
+            "source_id": "sqliteisolation",
+            "locator": "Isolation And Concurrency, rollback mode",
+            "note": "Supplementary inspected premise for the card or its comparison: SQLite's atomic-commit documentation explains rollback journals as the recovery mechanism used for atomic commit in rollback mode."
+          }
+        ]
+      }
+    },
+    "local:catalog:rollback-journal": {
+      "ordinal": 26,
+      "reason": "Audit 005-K01: distinguish SQLite WAL behavior from generic write-ahead logging.",
+      "fields": {
+        "card": "A rollback journal saves original database content before a transaction overwrites it. If the transaction must be undone, the saved content can restore the earlier state. This differs from SQLite's write-ahead-log mode, which preserves the main database while appending new changes elsewhere.",
+        "evidence": [
+          {
+            "source_id": "sqliteisolation",
+            "locator": "Isolation And Concurrency, rollback mode",
+            "note": "Checked old-versus-new content distinction and restoration purpose; not described as a permanent historical audit log."
+          },
+          {
+            "source_id": "wal",
+            "locator": "§2 How WAL Works; §2.1 Checkpointing",
+            "note": "SQLite WAL section 2 contrasts saved original pages in rollback mode with appended changed pages in SQLite's WAL file; section 2.1 describes later checkpoint transfer. This is an implementation-specific comparison, not a generic claim about every WAL design."
+          },
+          {
+            "source_id": "atomiccommit",
+            "locator": "Section 1 Introduction",
+            "note": "Supplementary inspected premise for the card or its comparison: The saved-original-content mechanism is a concrete way SQLite realizes atomic commit in rollback mode; WAL provides a contrasting mechanism."
+          }
+        ]
+      }
+    },
+    "local:catalog:write-ahead-logging": {
+      "ordinal": 27,
+      "reason": "Keep the append/commit/readers/checkpoint sequence inside the inspected SQLite implementation.",
+      "fields": {
+        "card": "In SQLite's write-ahead-log mode, changes are appended to a separate log instead of immediately overwriting the main database file. A commit record marks completion, and readers can continue using an earlier view. Later checkpointing moves committed changes back into the database.",
+        "learning_takeaway": "See how SQLite's WAL mode appends changes separately before checkpointing them into the main database, allowing concurrent readers.",
+        "evidence": [
+          {
+            "source_id": "wal",
+            "locator": "§2 How WAL Works",
+            "note": "Checked SQLite's implementation: append changed pages, commit marker, concurrent readers and later checkpoint transfer. The card does not define every other database's WAL file layout or checkpoint semantics."
+          }
+        ]
+      }
+    },
+    "local:catalog:wal-checkpointing": {
+      "ordinal": 29,
+      "reason": "Bound checkpoint transfer semantics to SQLite.",
+      "fields": {
+        "card": "In SQLite, a WAL checkpoint transfers committed changes from the write-ahead log into the main database file. It is separate from reading, writing, or committing a transaction. SQLite can schedule checkpoints automatically or let applications control when they run to manage the accumulated log.",
+        "learning_takeaway": "In SQLite, move committed log content into the database as a separate operation from reading, writing, and committing.",
+        "evidence": [
+          {
+            "source_id": "wal",
+            "locator": "§2.1 Checkpointing",
+            "note": "Section 2.1 defines SQLite's checkpoint transfer and automatic/application-controlled timing. No claim is made that all database checkpoints transfer pages from a log or run on each commit."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:write-ahead-logging",
+            "type": "facet_of",
+            "source_ids": [
+              "wal"
+            ],
+            "assertion": "source_asserted",
+            "note": "SQLite's WAL documentation names checkpointing as a distinct operation within its write-ahead-log mode; the facet link concerns that documented implementation."
+          }
+        ]
+      }
+    },
+    "local:catalog:distributed-consensus": {
+      "ordinal": 32,
+      "reason": "Name the family of protocols supporting the majority-based availability example.",
+      "fields": {
+        "card": "Replicated-log consensus lets machines agree on an ordered command history despite crash failures and unreliable communication. Raft-style protocols preserve safety under delays and partitions, but remain available only while a suitable majority can communicate. Agreement here concerns replicated commands, not every form of collective decision-making.",
+        "evidence": [
+          {
+            "source_id": "raft",
+            "locator": "§2; §5",
+            "note": "Sections 2 and 5 distinguish safety under non-Byzantine communication failures from availability requiring an operational communicating majority. The card gives a Raft-style example, not a theorem about every consensus protocol."
+          }
+        ]
+      }
+    },
+    "local:catalog:manchester-baby": {
+      "ordinal": 58,
+      "reason": "Audit 005-R01: distinguish the explanatory replica-object page from the original historical subject.",
+      "fields": {
+        "evidence": [
+          {
+            "source_id": "baby",
+            "locator": "Historical description paragraphs 1–6 (original Baby, 1948); paragraph 8 and object details (1998 replica, YS23/1998)",
+            "note": "This collection record identifies a 1998 working replica; the historical description at paragraphs 1–6 supplies the facts about the original 1948 Manchester Baby. The URL remains an explanatory subject link, not a canonical assertion that the original and replica are the same physical object."
+          },
+          {
+            "source_id": "eniac",
+            "locator": "ENIAC being set up; ENIAC tube change",
+            "note": "Supplementary inspected premise for the card or its comparison: The museum's stored-program explanation and ENIAC's documented cable-and-switch setup support a historical comparison of how programs were configured."
+          }
+        ]
+      }
+    },
+    "Q169399": {
+      "ordinal": 59,
+      "reason": "Carry the Baby source-context correction into the ENIAC relationship premise.",
+      "fields": {
+        "evidence": [
+          {
+            "source_id": "eniac",
+            "locator": "ENIAC being set up; ENIAC tube change",
+            "note": "Checked electronic operation, setup time, approximate tube count, and maintenance learning; no unsupported total-calculations superlative is repeated."
+          },
+          {
+            "source_id": "baby",
+            "locator": "Historical description paragraphs 1–6 (original Baby, 1948); paragraph 8 and object details (1998 replica, YS23/1998)",
+            "note": "This collection record identifies a 1998 working replica; the historical description at paragraphs 1–6 supplies the facts about the original 1948 Manchester Baby. The editorial comparison concerns the original Baby stored program and the documented early ENIAC wiring/switch setup."
+          }
+        ]
+      }
+    },
+    "local:catalog:minimal-pair": {
+      "ordinal": 64,
+      "reason": "Make the spoken-language boundary explicit while retaining the general minimal-pair identity.",
+      "fields": {
+        "card": "In spoken language, a minimal pair consists of words differing in one sound position. English pill versus kill provides evidence that the contrasting sounds belong to different phonemes, since the words have different meanings. Failing to find such a pair does not establish equivalence.",
+        "learning_takeaway": "Use a spoken-language word pair differing in one sound as evidence of contrastive phonemes, without treating failure to find a pair as proof of equivalence.",
+        "evidence": [
+          {
+            "source_id": "minimalpair",
+            "locator": "§4.3, Comparing distributions with minimal pairs",
+            "note": "The chapter first notes signed-language parameter contrasts, then adapts minimal pairs to spoken-language sounds using pill/kill. The card now explicitly describes the spoken case and does not exclude signed minimal pairs from the broader identity."
+          },
+          {
+            "source_id": "phonemes",
+            "locator": "§4.1, The essence of phonology",
+            "note": "Supplementary inspected premise for the card or its comparison: The phonology chapter explicitly presents minimal pairs as evidence for contrastive distribution and phoneme analysis."
+          }
+        ]
+      }
+    },
+    "local:catalog:delayed-judgments-of-learning": {
+      "ordinal": 100,
+      "reason": "Audit 005-K02: label the selected cue-only procedure precisely without creating a broader alias.",
+      "fields": {
+        "label": "Cue-only delayed judgments of learning",
+        "card": "A cue-only delayed judgment of learning asks someone to estimate future recall after time away from the material, using a cue without the answer visible. The delay reduces reliance on immediate familiarity. The cited guide treats this as promising for allocating study, while noting limited classroom evidence.",
+        "evidence": [
+          {
+            "source_id": "ies",
+            "locator": "Recommendation 6a, printed pp. 23–24",
+            "note": "Recommendation 6a, printed pp. 23–24, describes the cue-only delayed judgment procedure: delay after study, target answer absent and prospective recall judgment. The guide rates classroom evidence as limited; the narrower label retains the same selected facet and reserved ID."
+          },
+          {
+            "source_id": "formative",
+            "locator": "Formative assessment; final paragraph",
+            "note": "Supplementary inspected premise for the card or its comparison: Both approaches use information to guide subsequent learning, but a learner's delayed recall estimate is distinct from the broader formative use of assessment evidence."
+          }
+        ]
+      }
+    },
+    "local:catalog:south-sea-bubble": {
+      "ordinal": 154,
+      "reason": "Keep the historical stock/trading contrast without treating the crash as proof of intrinsic value.",
+      "fields": {
+        "card": "The South Sea Bubble linked speculation in company shares with British government debt. The Bank of England's history describes limited trading but a dramatic stock-price rise after the company received part of the national debt in 1720. The episode contrasts share prices with actual trading activity.",
+        "evidence": [
+          {
+            "source_id": "boehistory",
+            "locator": "1720 South Sea Bubble entry",
+            "note": "The 1720 entry reports limited trading, involvement in national debt, a dramatic share-price rise and a crash. The card's closing comparison does not establish intrinsic value or assign the crash a single cause."
+          }
+        ]
+      }
+    },
+    "local:catalog:international-cooperative-alliance": {
+      "ordinal": 156,
+      "reason": "Audit 005-K03: locate cooperative autonomy and international coordination in the principles that state them.",
+      "fields": {
+        "evidence": [
+          {
+            "source_id": "coopHistory",
+            "locator": "Opening 1895 foundation paragraph",
+            "note": "Checked founding aims and cooperative membership; no claim about current membership counts or authority over every cooperative."
+          },
+          {
+            "source_id": "cooperativeidentity",
+            "locator": "Principle 4, Autonomy and Independence; Principle 6, Cooperation among Cooperatives",
+            "note": "Principle 4 states member control and cooperative autonomy when entering agreements; Principle 6 describes cooperation through local, national, regional and international structures. Together they support the independence/coordination premise. The 1895 founding aims are separately supported by the history source."
+          }
+        ]
+      }
+    },
+    "local:catalog:conversational-turn-taking": {
+      "ordinal": 188,
+      "reason": "Separate laboratory anticipation findings from claims about every natural conversational transition.",
+      "fields": {
+        "card": "Conversational turn-taking coordinates who speaks and when. Experiments with conversation fragments show that listeners can anticipate turn endings, supporting accounts that involve preparation before silence arrives. Such laboratory tasks isolate useful cues, but do not establish how every transition is managed in natural conversation.",
+        "evidence": [
+          {
+            "source_id": "turnanticipation",
+            "locator": "Introduction; Abstract and experiment summary",
+            "note": "The abstract and experiments report button-press anticipation with conversation fragments; the introduction distinguishes anticipation ability from proof of use in every natural exchange. The card now states the observed ability and the limited inference, while retaining the turn-completion framework."
+          }
+        ]
+      }
+    },
+    "local:catalog:other-initiated-conversational-repair": {
+      "ordinal": 191,
+      "reason": "Do not generalize average repair-sequence brevity or successful resolution to every initiation.",
+      "fields": {
+        "card": "Other-initiated repair occurs when a listener signals trouble with someone else's message and the original speaker helps resolve it. The response may repeat words, clarify a missing detail, or confirm an interpretation. This creates a collaborative detour aimed at restoring understanding so the conversation can proceed.",
+        "evidence": [
+          {
+            "source_id": "repair",
+            "locator": "Introduction; Materials and Methods, repair-sequence definition",
+            "note": "The paper defines trouble source, repair initiator and repair solution. Repair may require more than one attempt; reported brief durations are averages in the sampled corpus. The card describes the collaborative aim without guaranteeing a brief or immediately successful outcome."
+          },
+          {
+            "source_id": "grounding",
+            "locator": "Opening; Grounding in Conversation; contribution model",
+            "note": "Supplementary inspected premise for the card or its comparison: Repair makes a breakdown explicit, while grounding also includes routine evidence of understanding; the two sources support their connection without making them equivalent."
+          }
+        ]
+      }
+    },
+    "local:catalog:grounding-in-communication": {
+      "ordinal": 195,
+      "reason": "Express the source-defined mutual-belief criterion instead of implying externally verified comprehension.",
+      "fields": {
+        "card": "Grounding in communication is collaborative work toward mutual belief that a message has been understood well enough for the current purpose. Responses and acknowledgments provide evidence for that belief. What counts as sufficient understanding can change with the task and communication medium.",
+        "evidence": [
+          {
+            "source_id": "grounding",
+            "locator": "Opening; Grounding in Conversation; contribution model",
+            "note": "The chapter defines the grounding criterion as participants mutually believing understanding is sufficient for current purposes. Responses supply evidence for this belief; neither perfect comprehension nor truth agreement is guaranteed. Grounding remains the process, distinct from common ground as the shared state."
+          }
+        ]
+      }
+    }
+  },
+  "source_changes": {
+    "atomiccommit": {
+      "id": "atomiccommit",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Section 1 Introduction; Section 2 Hardware Assumptions; Section 3.5 Creating A Rollback Journal File",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:05:18.806213Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-028.json",
+      "source_result_sha256": "a7345c5717be270655da585d533bea0119dd9cd23f07c6b91d0ed62e2743e39d",
+      "title": "Atomic Commit In SQLite",
+      "url": "https://www.sqlite.org/atomiccommit.html"
+    },
+    "baby": {
+      "id": "baby",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Historical description paragraphs 1–6 about the original 1948 Baby; paragraph 8 and object details identifying the 1998 working replica, YS23/1998",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:26.255079Z",
+      "revision": "Collection YS23/1998",
+      "source_result_file": "source-texts/web-010.json",
+      "source_result_sha256": "51d3dcc8549372d99f17a0944bf191a0a84f03372e341b0029e5c85c10361bcd",
+      "title": "Replica of the Baby or SSEM computer",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+      "source_context": "This collection record identifies a 1998 working replica; the historical description at paragraphs 1–6 supplies the facts about the original 1948 Manchester Baby."
+    },
+    "cooperativeidentity": {
+      "id": "cooperativeidentity",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Principle 3, Member Economic Participation; Principle 4, Autonomy and Independence; Principle 6, Cooperation among Cooperatives",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:19:03.572980Z",
+      "revision": "1995 Statement on the Cooperative Identity",
+      "source_result_file": "source-texts/web-105.json",
+      "source_result_sha256": "f1552b30b1d4e17f866b359b18c237867a72b9f2c8ea96901c307fcbac3ba97a",
+      "title": "Cooperative identity, values and principles",
+      "url": "https://ica.coop/en/cooperatives/cooperative-identity"
+    }
+  }
+}

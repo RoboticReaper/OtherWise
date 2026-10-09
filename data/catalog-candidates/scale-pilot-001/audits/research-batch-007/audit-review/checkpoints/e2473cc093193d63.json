@@ -1,0 +1,60 @@
+{
+  "id": "local:catalog:bach-s-invention-in-c-major-bwv-772",
+  "label": "Bach's Invention in C major, BWV 772",
+  "sample_kind": "risk_selected",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T21:59:09.675654+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "topic",
+    "entity_kind": "named_subject",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q1061398",
+        "label": "Invention (musical composition)",
+        "original_description": "short musical composition with two-part counterpoint",
+        "prior_card_takeaways": []
+      },
+      {
+        "id": "local:catalog:melodic-inversion",
+        "label": "Melodic inversion",
+        "original_description": null,
+        "prior_card_takeaways": [
+          "Distinguish reversing melodic interval direction from changing note order."
+        ]
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:melodic-inversion",
+        "label": "Melodic inversion"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Named BWV 772 example inverts first seven notes and augments fragment a; card does not claim whole-theme augmentation everywhere. Inversion application is explicitly labeled.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s018"
+      ],
+      "locator": "11.2.1 and 11.2.3, Figures 11.2.1–2 and 11.2.5; web-09 lines 738–806"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:melodic-inversion",
+      "type": "application_of",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

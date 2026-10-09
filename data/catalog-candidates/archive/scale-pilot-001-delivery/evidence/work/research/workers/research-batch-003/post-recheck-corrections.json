@@ -1,0 +1,135 @@
+{
+  "batch_id": "research-batch-003",
+  "completed_at": "2026-10-08T22:19:13.620650+00:00",
+  "prior_revision": 2,
+  "revised_revision": 3,
+  "prior_candidate_sha256": "e9dafbba2dfeb6d382a48cc261ac675f3da0fbae505ba36f288afaa55fa972ab",
+  "revised_candidate_sha256": "e2062d3bf8244df18bb9c2cfec27c170c6e9413038b20af3a60431cc8da6a242",
+  "audit_recheck_sha256": "a6bf2d5f49125f0bc95a2dbd846999d128f031519226702e041a7d768ccfac3b",
+  "changes": [
+    {
+      "id": "local:catalog:systolic-blood-pressure-intervention-trial",
+      "field": "relations",
+      "before": [
+        {
+          "target_id": "local:catalog:randomized-controlled-trial",
+          "type": "related_to",
+          "note": "SPRINT is a named randomized target-comparison trial with eligibility criteria and benefit–harm outcomes.",
+          "source_ids": [
+            "health-sprint",
+            "health-rct"
+          ],
+          "assertion": "editorial"
+        }
+      ],
+      "after": [],
+      "old_card_version": 2,
+      "new_card_version": 3,
+      "reason": "The attached NHLBI passage establishes the target comparison but not random allocation; the generic RCT definition does not establish SPRINT’s particular design. After the auditor exhausted three primary-report alternatives, the unsupported editorial edge is removed. This is an evidence-verification gap, not a finding that SPRINT was nonrandomized.",
+      "source_evidence": [
+        {
+          "source_id": "health-sprint",
+          "locator": "How was the SPRINT study conducted?, lines 163–170"
+        },
+        {
+          "source_id": "health-rct",
+          "locator": "Randomized placebo-controlled trial definition, line 16"
+        }
+      ],
+      "prior_card_record_sha256": "73c06dc9772e8295e5e37c3dae2489cea19ebcd56374dcb28afd275e02deea0e",
+      "revised_card_record_sha256": "482236882f98ca74c0d8591912cd0e992360f05f34fb9caaf7a04c4b277a0fa3",
+      "before_referenced_source_bundle": {
+        "source_ids": [
+          "health-rct",
+          "health-sprint"
+        ],
+        "sources": [
+          {
+            "displayed_update_date": null,
+            "id": "health-rct",
+            "inspection_artifact": "source-responses/031-health-inspections.json",
+            "inspection_status": "passage_inspected",
+            "locator": "Opening explanation of randomized placebo-controlled trials",
+            "retrieval_date": "2026-10-08",
+            "retrieved_at": "2026-10-08T19:13:34.546776+00:00",
+            "revision": null,
+            "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+            "title": "NCCIH: Placebo Effect",
+            "url": "https://www.nccih.nih.gov/health/placebo-effect"
+          },
+          {
+            "displayed_update_date": null,
+            "id": "health-sprint",
+            "inspection_artifact": "source-responses/026-diagnostics-inspections.json",
+            "inspection_status": "passage_inspected",
+            "locator": "Why was SPRINT important?; Key findings; Side effects",
+            "retrieval_date": "2026-10-08",
+            "retrieved_at": "2026-10-08T19:11:31.983959+00:00",
+            "revision": null,
+            "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+            "title": "NHLBI: Systolic Blood Pressure Intervention Trial",
+            "url": "https://www.nhlbi.nih.gov/science/systolic-blood-pressure-intervention-trial-sprint-study"
+          }
+        ]
+      },
+      "after_referenced_source_bundle": {
+        "source_ids": [
+          "health-sprint"
+        ],
+        "sources": [
+          {
+            "displayed_update_date": null,
+            "id": "health-sprint",
+            "inspection_artifact": "source-responses/026-diagnostics-inspections.json",
+            "inspection_status": "passage_inspected",
+            "locator": "Why was SPRINT important?; Key findings; Side effects",
+            "retrieval_date": "2026-10-08",
+            "retrieved_at": "2026-10-08T19:11:31.983959+00:00",
+            "revision": null,
+            "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+            "title": "NHLBI: Systolic Blood Pressure Intervention Trial",
+            "url": "https://www.nhlbi.nih.gov/science/systolic-blood-pressure-intervention-trial-sprint-study"
+          }
+        ]
+      },
+      "before_source_bundle_sha256": "cc08fb8930c4515feef9842a75ed991151c61a42087d0d594e896ed3232786f3",
+      "after_source_bundle_sha256": "f27f60a9d5433b2e9160ca043d22877aea2d0ab3de9f7065d47f1d1c42828b7a",
+      "before_all_source_records_sha256": "54dcc8581eaa80584c8114b5d4eac4de679200329eae31847430bed3d8c5489e",
+      "after_all_source_records_sha256": "54dcc8581eaa80584c8114b5d4eac4de679200329eae31847430bed3d8c5489e"
+    }
+  ],
+  "hash_encoding": "Canonical JSON: UTF-8, ensure_ascii=False, sorted keys, compact separators. Candidate artifact hashes use exact file bytes.",
+  "missing_defensible_links": [
+    {
+      "id": "003-post-recheck-missing-SPRINT-RCT-link",
+      "concept_id": "local:catalog:systolic-blood-pressure-intervention-trial",
+      "status": "documented_missing_defensible_relationship",
+      "target_id": "local:catalog:randomized-controlled-trial",
+      "reason": "The attached NHLBI passage establishes the target comparison but not random allocation; the generic RCT definition does not establish SPRINT’s particular design. After the auditor exhausted three primary-report alternatives, the unsupported editorial edge is removed. This is an evidence-verification gap, not a finding that SPRINT was nonrandomized.",
+      "source_ids": [
+        "health-sprint",
+        "health-rct"
+      ],
+      "source_locators": [
+        {
+          "source_id": "health-sprint",
+          "locator": "How was the SPRINT study conducted?, lines 163–170"
+        },
+        {
+          "source_id": "health-rct",
+          "locator": "Randomized placebo-controlled trial definition, line 16"
+        }
+      ],
+      "audit_finding_id": "003-recheck-SPRINT-randomization-evidence-01",
+      "audit_path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-003/audit-review/audit.recheck.json",
+      "audit_sha256": "a6bf2d5f49125f0bc95a2dbd846999d128f031519226702e041a7d768ccfac3b",
+      "alternate_source_attempt_bound_exhausted": true,
+      "new_source_attempts": 0,
+      "replacement_relationship": null
+    }
+  ],
+  "source_record_changes": [],
+  "new_source_attempts": 0,
+  "new_identities": [],
+  "excluded_identities": []
+}

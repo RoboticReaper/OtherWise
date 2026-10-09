@@ -1,0 +1,2432 @@
+{
+  "schema_version": 1,
+  "batch": {
+    "id": "research-batch-007",
+    "revision": 1,
+    "target_count": 200,
+    "completion_status": "partial_authoring_checkpoint",
+    "language": "en",
+    "started_at": "2026-10-08T20:40:48Z",
+    "checkpoint_at": "2026-10-08T20:51:04.975957Z",
+    "agent": {
+      "execution": "native_cloud",
+      "model_requirement": "GPT-6 Astra/max",
+      "role": "author"
+    },
+    "input_provenance": {
+      "approved_selection_path": "data/catalog-candidates/scale-pilot-001/selections/approved/research-batch-007.json",
+      "approved_selection_sha256": "4923b7f75786c5ed28551eda9e53f0cbb358ab291e8957f55580e417cb2756a5",
+      "global_selection_manifest_sha256": "c52580c18d45b19ededc91e1c4e15682e3f27c2feab6f5d70f215174c1ffb125",
+      "baseline_manifest": {
+        "active_candidate_revisions": [
+          {
+            "batch_id": "research-batch-001",
+            "concepts": 200,
+            "path": "../inputs/unpacked/data/catalog-candidates/research-batch-001.json",
+            "revision": 1,
+            "sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+            "sources": 242
+          },
+          {
+            "batch_id": "research-batch-002",
+            "concepts": 200,
+            "path": "../inputs/unpacked/data/catalog-candidates/research-batch-002.json",
+            "revision": 2,
+            "sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+            "sources": 188
+          }
+        ],
+        "archived_copies_counted": false,
+        "archived_provenance_path": "../inputs/unpacked/data/catalog-candidates/archive/research-batch-002",
+        "baseline_identity_count_by_id": 7224,
+        "baseline_index_sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9",
+        "baseline_inventory_fingerprint": "7f771750100bfe65c63a4e12fa067f1236bbe7d8a78657459076d7f5ce3709ad",
+        "frozen_at": "2026-10-08T18:46:05.812727+00:00",
+        "inputs": [
+          {
+            "actual_sha256": "1378e2cb37b2c3b648c2319c6303dbbf6380f20d2f0ff10fe8db8a2f62bd2f44",
+            "matches_preparation": true,
+            "path": "data/topics.json",
+            "sha256": "1378e2cb37b2c3b648c2319c6303dbbf6380f20d2f0ff10fe8db8a2f62bd2f44",
+            "size_bytes": 1519825
+          },
+          {
+            "actual_sha256": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309",
+            "matches_preparation": true,
+            "path": "data/discovery_graph.json",
+            "sha256": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309",
+            "size_bytes": 4491718
+          },
+          {
+            "actual_sha256": "e9968d8e3d1f317b3bcd42c42efd9a1e44305d210464be7427416576a64bf67b",
+            "matches_preparation": true,
+            "path": "data/recommendation-identities.json",
+            "sha256": "e9968d8e3d1f317b3bcd42c42efd9a1e44305d210464be7427416576a64bf67b",
+            "size_bytes": 33658
+          },
+          {
+            "actual_sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+            "matches_preparation": true,
+            "path": "data/catalog-candidates/research-batch-001.json",
+            "sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+            "size_bytes": 829754
+          },
+          {
+            "actual_sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+            "matches_preparation": true,
+            "path": "data/catalog-candidates/research-batch-002.json",
+            "sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+            "size_bytes": 2424562
+          }
+        ],
+        "inventory_identity_count": 7033,
+        "pilot_id": "scale-pilot-001",
+        "schema_version": 1,
+        "selection_inputs": "Public reference material and pinned identity baseline only; no private ratings or held-out judgments.",
+        "status": "frozen",
+        "supplemental_source_snapshot": {
+          "created_at": "2026-10-08T19:00:26.767021+00:00",
+          "path": "data/catalog-candidates/scale-pilot-001/baseline-imported-records.json",
+          "purpose": "Full original source rows for provenance preservation. No identity, meaning, alias, input revision or count changed.",
+          "sha256": "732cd46ba879c8f090998ad0f3e436fdf1d157aec91e4ea01bef6d4f0f2387ba"
+        }
+      },
+      "baseline_imported_records_sha256": "732cd46ba879c8f090998ad0f3e436fdf1d157aec91e4ea01bef6d4f0f2387ba"
+    },
+    "selection_manifest": [
+      {
+        "id": "local:authored:000254",
+        "provisional_id": "proposal:research-batch-007:001",
+        "label": "Chess",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Games, traditions and sporting history",
+        "inventory_status": "existing",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "The intended Chess meaning matches registered local:authored:000254; retain this control's registered identity and prior provenance, not a new local ID."
+      },
+      {
+        "id": "Q11413",
+        "provisional_id": "proposal:research-batch-007:002",
+        "label": "Go",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Games, traditions and sporting history",
+        "inventory_status": "existing",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "The intended Go meaning matches registered Q11413; retain this control's registered identity and prior provenance, not a new local ID."
+      },
+      {
+        "id": "local:authored:000256",
+        "provisional_id": "proposal:research-batch-007:003",
+        "label": "Shogi",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Games, traditions and sporting history",
+        "inventory_status": "existing",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "authoring_constraints": [
+          "Re-inspect an appropriate rule passage for the broad-game overview; do not reuse the perpetual-check takeaway. Any extra source work remains within the original source-attempt bounds."
+        ],
+        "duplicate_review_decision": "The intended Shogi meaning matches registered local:authored:000256; retain this control's registered identity and prior provenance, not a new local ID."
+      },
+      {
+        "id": "local:authored:000257",
+        "provisional_id": "proposal:research-batch-007:004",
+        "label": "Backgammon",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Games, traditions and sporting history",
+        "inventory_status": "existing",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "The intended Backgammon meaning matches registered local:authored:000257; retain this control's registered identity and prior provenance, not a new local ID."
+      },
+      {
+        "id": "local:catalog:othello",
+        "provisional_id": "proposal:research-batch-007:005",
+        "label": "Othello",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Games, traditions and sporting history",
+        "inventory_status": "new",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Outflanking and disc conversion identify a particular game, not the generic board-games field. Reversi was included in the synonym search; no pinned equivalent was found."
+      },
+      {
+        "id": "local:authored:000258",
+        "provisional_id": "proposal:research-batch-007:006",
+        "label": "Contract bridge",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Games, traditions and sporting history",
+        "inventory_status": "existing",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "The intended Contract bridge meaning matches registered local:authored:000258; retain this control's registered identity and prior provenance, not a new local ID."
+      },
+      {
+        "id": "local:catalog:senet",
+        "provisional_id": "proposal:research-batch-007:007",
+        "label": "Senet",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Games, traditions and sporting history",
+        "inventory_status": "new",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "The thirty-square Egyptian game and its funerary role delimit Senet independently from board games in general."
+      },
+      {
+        "id": "local:catalog:twenty-squares",
+        "provisional_id": "proposal:research-batch-007:008",
+        "label": "Twenty Squares",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Games, traditions and sporting history",
+        "inventory_status": "new",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "The twenty-square Near Eastern-derived game is distinct from Senet and its Egyptian visual adaptation is a subject-specific takeaway."
+      },
+      {
+        "id": "local:catalog:dick-fosbury",
+        "provisional_id": "proposal:research-batch-007:009",
+        "label": "Dick Fosbury",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Games, traditions and sporting history",
+        "inventory_status": "new",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "A named athlete and the adoption of his jumping technique are distinct from sports psychology. Basketball and Fosbury synonyms were checked."
+      },
+      {
+        "id": "local:catalog:james-naismith",
+        "provisional_id": "proposal:research-batch-007:010",
+        "label": "James Naismith",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Games, traditions and sporting history",
+        "inventory_status": "new",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "A named inventor and a documented design brief differ from basketball as a sport; the original constraints supply a learning takeaway."
+      },
+      {
+        "id": "Q205730",
+        "provisional_id": "proposal:research-batch-007:011",
+        "label": "En passant",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "existing",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "The intended En passant meaning matches registered Q205730; retain this control's registered identity and prior provenance, not a new local ID."
+      },
+      {
+        "id": "local:catalog:castling",
+        "provisional_id": "proposal:research-batch-007:012",
+        "label": "Castling",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Ordinary castling rights and blocking conditions are distinct from the pinned Chess960 starting-square adaptation."
+      },
+      {
+        "id": "local:catalog:stalemate",
+        "provisional_id": "proposal:research-batch-007:013",
+        "label": "Stalemate",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "No legal moves while not in check defines stalemate; this is not checkmate or generic chess."
+      },
+      {
+        "id": "local:catalog:dead-position-in-chess",
+        "provisional_id": "proposal:research-batch-007:014",
+        "label": "Dead position in chess",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Impossibility of any future legal mate differs from stalemate's present legal-move test and from move-count draws."
+      },
+      {
+        "id": "local:catalog:touch-move-rule",
+        "provisional_id": "proposal:research-batch-007:015",
+        "label": "Touch-move rule",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "A player's deliberate touch imposes a conduct constraint, separate from piece movement or legal-position rules."
+      },
+      {
+        "id": "local:catalog:threefold-repetition",
+        "provisional_id": "proposal:research-batch-007:016",
+        "label": "Threefold repetition",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [
+          "Make claimability and correct timing the learning takeaway; the position-identity explanation alone repeats the pinned fivefold card."
+        ],
+        "duplicate_review_decision": "The claimable three-occurrence procedure is a separate FIDE rule from automatic fivefold repetition. Revise the takeaway to emphasize claiming and timing: the current identical-position wording repeats the pinned fivefold card's central explanation."
+      },
+      {
+        "id": "local:catalog:underpromotion",
+        "provisional_id": "proposal:research-batch-007:017",
+        "label": "Underpromotion",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Choosing a nonqueen promotion is a well-delimited strategic rule option, not a renamed promotion example."
+      },
+      {
+        "id": "local:catalog:liberties-in-go",
+        "provisional_id": "proposal:research-batch-007:018",
+        "label": "Liberties in Go",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Liberties are the game's adjacent-empty-point mechanism, narrower than the broad named Go identity even though its earlier card uses liberties."
+      },
+      {
+        "id": "local:catalog:eyes-in-go",
+        "provisional_id": "proposal:research-batch-007:019",
+        "label": "Eyes in Go",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Two-eye survival is a distinct local life mechanism, contrasted with seki's shared-liberty survival."
+      },
+      {
+        "id": "local:catalog:ko-rule",
+        "provisional_id": "proposal:research-batch-007:020",
+        "label": "Ko rule",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Immediate recapture prohibition is narrower than whole-game situational superko; keep the rule variant explicit."
+      },
+      {
+        "id": "local:catalog:seki",
+        "provisional_id": "proposal:research-batch-007:021",
+        "label": "Seki",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Mutual survival by shared liberties differs from an independently alive two-eyed group."
+      },
+      {
+        "id": "local:catalog:komi",
+        "provisional_id": "proposal:research-batch-007:022",
+        "label": "Komi",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "First-move compensation is a separate scoring parameter; the BGA amount must remain jurisdiction/ruleset-specific."
+      },
+      {
+        "id": "local:catalog:situational-superko",
+        "provisional_id": "proposal:research-batch-007:023",
+        "label": "Situational superko",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Whole-game player-relative repetition prohibition differs from the immediate ko rule; the captured BGA passage explicitly states the player condition."
+      },
+      {
+        "id": "local:catalog:area-and-territory-scoring-in-go",
+        "provisional_id": "proposal:research-batch-007:024",
+        "label": "Area and territory scoring in Go",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Area versus territory scoring changes how occupied points and prisoners enter a result; a specific rule comparison, not another broad Go card."
+      },
+      {
+        "id": "local:catalog:doubling-cube",
+        "provisional_id": "proposal:research-batch-007:025",
+        "label": "Doubling cube",
+        "owner": "research-batch-007",
+        "primary_domain": "Games & sports",
+        "primary_subfield": "Rules and strategic mechanisms",
+        "inventory_status": "new",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "authoring_constraints": [],
+        "duplicate_review_decision": "Transferable ownership of the redoubling option differs from basic backgammon movement and race conditions."
+      }
+    ],
+    "approved_full_selection_path": "data/catalog-candidates/scale-pilot-001/selections/approved/research-batch-007.json",
+    "prior_versions": [
+      {
+        "id": "local:authored:000254",
+        "selected_card_version": 2,
+        "previous_card_version": 1,
+        "previous_batch": "research-batch-001",
+        "previous_batch_revision": 1,
+        "previous_artifact_path": "../inputs/unpacked/data/catalog-candidates/research-batch-001.json",
+        "previous_artifact_sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+        "previous_record": {
+          "aliases": [],
+          "card": "Chess is a two-player game played on an eight-by-eight board, with pieces that move in different ways. Its objective is checkmate: attacking the opposing king so there is no legal escape. Comparing a rook’s straight moves with a bishop’s diagonals reveals how pieces control different squares.",
+          "card_version": 1,
+          "domains": [
+            "Games & sports"
+          ],
+          "entity_kind": "named_subject",
+          "evidence": [
+            {
+              "locator": "Articles 1–3, particularly 1.4, 2.1, 3.2–3.3 and 3.7.3.1–3.7.3.2",
+              "note": "Articles 1–3 establish alternating players, board, checkmate, rook and bishop moves.",
+              "source_id": "creative-s016"
+            }
+          ],
+          "id": "local:authored:000254",
+          "identity_urls": [],
+          "imported_records": [
+            {
+              "description": "Exploring strategic play, tactics and positional thinking in chess.",
+              "domain": "Games & sports",
+              "index": 254,
+              "inventory_kind": "broad",
+              "source": "ProductSpace",
+              "subsection": "Games & interactive worlds",
+              "topic": "Chess"
+            }
+          ],
+          "label": "Chess",
+          "learning_takeaway": "Connect different piece movements with attack, legal moves and checkmate.",
+          "original_description": "Exploring strategic play, tactics and positional thinking in chess.",
+          "relations": [],
+          "scope": "topic"
+        },
+        "previous_sources": [
+          {
+            "id": "creative-s016",
+            "title": "FIDE Laws of Chess taking effect from 1 January 2023",
+            "url": "https://handbook.fide.com/chapter/e012023",
+            "locator": "Articles 1–3, particularly 1.4, 2.1, 3.2–3.3 and 3.7.3.1–3.7.3.2",
+            "retrieval_date": "2026-10-08",
+            "revision": "Applied from 2023-01-01; approved 2022-08-07"
+          }
+        ],
+        "decision": "Use this explicitly revised card and inspected reference bundle; retain prior record and sources as provenance."
+      },
+      {
+        "id": "Q11413",
+        "selected_card_version": 2,
+        "previous_card_version": 1,
+        "previous_batch": "research-batch-001",
+        "previous_batch_revision": 1,
+        "previous_artifact_path": "../inputs/unpacked/data/catalog-candidates/research-batch-001.json",
+        "previous_artifact_sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+        "previous_record": {
+          "aliases": [
+            "Go",
+            "Go (game)"
+          ],
+          "card": "Go is a two-player board game in which black and white stones are placed on grid intersections to surround territory. Examining liberties, the empty points horizontally or vertically beside connected stones, reveals how surrounding a group can capture it and change the shape of territory.",
+          "card_version": 1,
+          "domains": [
+            "Games & sports"
+          ],
+          "entity_kind": "named_subject",
+          "evidence": [
+            {
+              "locator": "The rules; Capturing stones and counting liberties; Strings",
+              "note": "The rules and liberties sections support two players, placement, territory and capture of connected strings.",
+              "source_id": "creative-s015"
+            }
+          ],
+          "id": "Q11413",
+          "identity_evidence": [
+            {
+              "locator": "English identity description and statements",
+              "note": "Two-player board-game identity rather than programming language.",
+              "source_id": "central-identity-005"
+            }
+          ],
+          "identity_urls": [
+            "https://www.wikidata.org/wiki/Q11413"
+          ],
+          "imported_records": [
+            {
+              "description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+              "domain": "Games & sports",
+              "index": 255,
+              "inventory_kind": "broad",
+              "source": "ProductSpace",
+              "subsection": "Games & interactive worlds",
+              "topic": "Go"
+            },
+            {
+              "description": "board game for two players that originated in China more than 2,500 years ago",
+              "domain": "Games & sports",
+              "guide_title": "Go (game)",
+              "index": 1632,
+              "inventory_kind": "broad",
+              "list_revision": 30260496,
+              "list_section": "Arts",
+              "source": "Wikidata",
+              "source_revision": 2547428744,
+              "source_url": "https://www.wikidata.org/wiki/Q11413",
+              "subsection": "Arts and recreation / Recreation: games and sports",
+              "topic": "Go (game)",
+              "wikidata_id": "Q11413"
+            }
+          ],
+          "label": "Go (board game)",
+          "learning_takeaway": "Understand how liberties connect local capture rules with surrounding territory.",
+          "original_description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+          "relations": [
+            {
+              "assertion": "editorial",
+              "note": "Editorial navigation: A Go board’s orthogonal connections offer an editorial bridge to graph representation.",
+              "source_ids": [],
+              "target_id": "local:authored:000604",
+              "type": "related_to"
+            }
+          ],
+          "scope": "topic"
+        },
+        "previous_sources": [
+          {
+            "id": "creative-s015",
+            "title": "British Go Association: How to Play",
+            "url": "https://www.britgo.org/intro/intro2.html",
+            "locator": "The rules; Capturing stones and counting liberties; Strings",
+            "retrieval_date": "2026-10-08",
+            "revision": "Last updated 2017-10-26"
+          }
+        ],
+        "decision": "Use this explicitly revised card and inspected reference bundle; retain prior record and sources as provenance."
+      },
+      {
+        "id": "local:authored:000257",
+        "selected_card_version": 2,
+        "previous_card_version": 1,
+        "previous_batch": "research-batch-001",
+        "previous_batch_revision": 1,
+        "previous_artifact_path": "../inputs/unpacked/data/catalog-candidates/research-batch-001.json",
+        "previous_artifact_sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+        "previous_record": {
+          "aliases": [],
+          "card": "Backgammon is a two-player game in which dice determine how fifteen checkers move toward removal from the board. A lone checker can be hit and sent to the bar. Exploring when a checker must re-enter shows how contact can interrupt the race to finish.",
+          "card_version": 1,
+          "domains": [
+            "Games & sports"
+          ],
+          "entity_kind": "named_subject",
+          "evidence": [
+            {
+              "locator": "Setup; Object of the Game; Movement; Hitting and Entering",
+              "note": "Setup, movement, objective and hitting sections support fifteen checkers per player, dice-based movement, the bar and required re-entry.",
+              "source_id": "creative-s020"
+            }
+          ],
+          "id": "local:authored:000257",
+          "identity_urls": [],
+          "imported_records": [
+            {
+              "description": "Exploring strategic play involving movement, probability and dice.",
+              "domain": "Games & sports",
+              "index": 257,
+              "inventory_kind": "broad",
+              "source": "ProductSpace",
+              "subsection": "Games & interactive worlds",
+              "topic": "Backgammon"
+            }
+          ],
+          "label": "Backgammon",
+          "learning_takeaway": "Understand how hitting and re-entry complicate the race to bear off checkers.",
+          "original_description": "Exploring strategic play involving movement, probability and dice.",
+          "relations": [],
+          "scope": "topic"
+        },
+        "previous_sources": [
+          {
+            "id": "creative-s020",
+            "title": "Backgammon Galore: Rules of Backgammon",
+            "url": "https://www.bkgm.com/rules.html",
+            "locator": "Setup; Object of the Game; Movement; Hitting and Entering",
+            "retrieval_date": "2026-10-08",
+            "revision": null
+          }
+        ],
+        "decision": "Use this explicitly revised card and inspected reference bundle; retain prior record and sources as provenance."
+      },
+      {
+        "id": "Q205730",
+        "selected_card_version": 3,
+        "previous_card_version": 2,
+        "previous_batch": "research-batch-002",
+        "previous_batch_revision": 2,
+        "previous_artifact_path": "../inputs/unpacked/data/catalog-candidates/research-batch-002.json",
+        "previous_artifact_sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+        "previous_record": {
+          "aliases": [
+            "e.p."
+          ],
+          "card": "En passant lets a chess pawn capture an opposing pawn immediately after that pawn advances two squares from its starting square. The capturing pawn must be beside it on the same rank and takes it as though it advanced only one square. Waiting loses the opportunity.",
+          "card_version": 2,
+          "domains": [
+            "Games & sports"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Articles 3.7.3.1–2; PDF p.20",
+              "note": "The rule states adjacent-file/same-rank geometry, initial two-square advance, as-if-one-square capture, and immediate timing.",
+              "source_id": "society-s037"
+            }
+          ],
+          "id": "Q205730",
+          "identity_urls": [
+            "https://www.wikidata.org/wiki/Q205730"
+          ],
+          "imported_records": [],
+          "label": "En passant",
+          "learning_takeaway": "Understand the immediate timing and board conditions of this exceptional pawn capture.",
+          "original_description": null,
+          "previous_card_version": 1,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "FIDE places this exception within the pawn-movement rules: the opposing pawn is captured on the square passed over.",
+              "source_ids": [
+                "society-s037"
+              ],
+              "target_id": "local:authored:000254",
+              "type": "facet_of"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "previous_sources": [
+          {
+            "id": "society-s037",
+            "title": "FIDE Arbiters’ Manual, September 2024: Laws of Chess applied from 1 January 2023",
+            "url": "https://arbiters.fide.com/wp-content/uploads/Publications/Manual/Arbiters_Manual_2024.pdf",
+            "locator": "Articles 3.7.3.1–2, 9.2–9.6; Guidelines II.3; PDF pp.20,39–40,57–58",
+            "retrieval_date": "2026-10-08",
+            "retrieved_at": "2026-10-08",
+            "revision": "September 2024 manual; Laws effective 2023-01-01"
+          }
+        ],
+        "decision": "Use this explicitly revised card and inspected reference bundle; retain prior record and sources as provenance."
+      }
+    ],
+    "source_id_scope": "batch_local",
+    "missing_parent_or_application_links": [
+      {
+        "id": "local:authored:000254",
+        "label": "Chess",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The laws distinguish checkmate from stalemate through whether the immobile side's king is attacked."
+      },
+      {
+        "id": "Q11413",
+        "label": "Go",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The teaching guide explains Go capture through the shared liberties of connected stones."
+      },
+      {
+        "id": "local:authored:000256",
+        "label": "Shogi",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The guide explicitly compares shogi with European chess and identifies returning captured pieces as a difference."
+      },
+      {
+        "id": "local:authored:000257",
+        "label": "Backgammon",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The rules make re-entry of hit checkers a compulsory interruption of normal checker movement."
+      },
+      {
+        "id": "local:catalog:othello",
+        "label": "Othello",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: A lack of outflanking moves determines both forced passes and the eventual end of the game."
+      },
+      {
+        "id": "local:authored:000258",
+        "label": "Contract bridge",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: ACBL's play explanation assigns the exposed partnership hand to declarer's decisions after the auction."
+      },
+      {
+        "id": "local:catalog:senet",
+        "label": "Senet",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The museum documents double-sided game boxes carrying senet on one side and Twenty Squares on the other."
+      },
+      {
+        "id": "local:catalog:twenty-squares",
+        "label": "Twenty Squares",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The museum describes Egyptian boxes accommodating both games, making their material comparison explicit."
+      },
+      {
+        "id": "local:catalog:james-naismith",
+        "label": "James Naismith",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The college's historical account identifies Naismith as basketball's inventor and explains the game's design constraints."
+      },
+      {
+        "id": "local:catalog:dead-position-in-chess",
+        "label": "Dead position in chess",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: Both end the game as a draw, but stalemate concerns present legal moves while dead position concerns impossibility of future mate."
+      },
+      {
+        "id": "local:catalog:threefold-repetition",
+        "label": "Threefold repetition",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The rules distinguish a player's threefold claim from the automatic fivefold repetition draw."
+      },
+      {
+        "id": "local:catalog:eyes-in-go",
+        "label": "Eyes in Go",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The guide explains eye-based survival through internal liberties and the prohibition on noncapturing self-capture."
+      },
+      {
+        "id": "local:catalog:ko-rule",
+        "label": "Ko rule",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: Immediate ko and situational superko both limit repetition, but the latter also addresses longer cycles such as triple ko."
+      },
+      {
+        "id": "local:catalog:seki",
+        "label": "Seki",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The guide introduces seki as an exception to the simple expectation that a group lacking two eyes will die."
+      },
+      {
+        "id": "local:catalog:situational-superko",
+        "label": "Situational superko",
+        "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: BGA describes its superko restriction as preventing triple ko and other repeated positions beyond the basic local cycle."
+      }
+    ],
+    "author_review_path": "research/workers/research-batch-007/author-review.json",
+    "source_inspections_path": "research/workers/research-batch-007/source-inspections.json",
+    "usage": {
+      "tokens": null,
+      "cost": null,
+      "reason": "Platform usage not exposed"
+    },
+    "elapsed_seconds": 616.98
+  },
+  "sources": [
+    {
+      "access": "public",
+      "acquisition_history": [
+        {
+          "displayed_update": null,
+          "method": "open",
+          "raw_file": "source-raw/games-fide.json",
+          "raw_sha256": "ca4ea7bf5a42f97374fff4094c9510bb1a7e39c732faf527002e9ed2ba392005",
+          "redirect_url": null,
+          "requested_ref": "https://handbook.fide.com/chapter/E012023",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:18:48.347Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+          "url": "https://handbook.fide.com/chapter/E012023"
+        },
+        {
+          "displayed_update": null,
+          "method": "open",
+          "raw_file": "source-raw/games-fide-first.json",
+          "raw_sha256": "3546b102e6aa9f5cda344afa39188124e9735a47302e20e8d8c732de484e4c8c",
+          "redirect_url": null,
+          "requested_ref": "https://handbook.fide.com/chapter/E012023",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:19:28.806Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+          "url": "https://handbook.fide.com/chapter/E012023"
+        }
+      ],
+      "displayed_update": null,
+      "id": "b007-s001",
+      "inspection_artifacts": [
+        "source-raw/games-fide-first.json",
+        "source-raw/games-fide.json"
+      ],
+      "inspection_status": "supporting_passages_inspected",
+      "locator": "Articles 1.4–1.5; Articles 3.7.3.1–3.7.3.2; Article 3.8.2; Article 5.2.1; Article 5.2.2; Articles 4.2–4.5; Articles 9.2–9.2.3; Articles 3.7.3.3–3.7.3.5; Articles 1.4 and 5.2.1; Articles 5.2.1–5.2.2; Articles 9.2 and 9.6.1",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:19:28.806Z",
+      "revision": null,
+      "title": "FIDE Handbook FIDE Laws of Chess taking effect from 1 January 2023",
+      "url": "https://handbook.fide.com/chapter/E012023"
+    },
+    {
+      "access": "public",
+      "acquisition_history": [
+        {
+          "displayed_update": "Last updated Thu Oct 26 2017.",
+          "method": "open",
+          "raw_file": "source-raw/games-go-intro.json",
+          "raw_sha256": "fe27a080fc80c3fecd6914cade57fba517158adca13c2a138fb485e2da3d0b7c",
+          "redirect_url": null,
+          "requested_ref": "https://britgo.org/intro/intro2.html",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:21.375Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "How to Play | British Go Association",
+          "url": "https://britgo.org/intro/intro2.html"
+        }
+      ],
+      "displayed_update": "Last updated Thu Oct 26 2017.",
+      "id": "b007-s002",
+      "inspection_artifacts": [
+        "source-raw/games-go-intro.json"
+      ],
+      "inspection_status": "supporting_passages_inspected",
+      "locator": "Introduction and Capturing stones; Capturing stones and counting liberties; Life and death and the concept of eyes; The ko rule; Seki: a kind of local stalemate; Komi; Introduction; Capturing stones and counting liberties; Self-capture examples; Life and death and the concept of eyes; BGA How to Play, The ko rule; BGA Default Rules, Triple Ko; Default Rules, Komi; How to Play, Komi",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:16:21.375Z",
+      "revision": null,
+      "title": "How to Play | British Go Association",
+      "url": "https://britgo.org/intro/intro2.html"
+    },
+    {
+      "access": "public",
+      "acquisition_history": [
+        {
+          "displayed_update": null,
+          "method": "open",
+          "raw_file": "source-raw/games-backgammon.json",
+          "raw_sha256": "fb3ead2730fd5ba44268518c4e5d268ceada4008151aca7963cd1575c4e8ace1",
+          "redirect_url": null,
+          "requested_ref": "https://usbgf.org/backgammon-basics-how-to-play/",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:50.216Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "Backgammon Basics: How To Play | U.S. Backgammon Federation",
+          "url": "https://usbgf.org/backgammon-basics-how-to-play/"
+        }
+      ],
+      "displayed_update": null,
+      "id": "b007-s004",
+      "inspection_artifacts": [
+        "source-raw/games-backgammon.json"
+      ],
+      "inspection_status": "supporting_passages_inspected",
+      "locator": "Object of the Game and Movement; Doubling; Hitting and Entering",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:16:50.216Z",
+      "revision": null,
+      "title": "Backgammon Basics: How To Play | U.S. Backgammon Federation",
+      "url": "https://usbgf.org/backgammon-basics-how-to-play/"
+    },
+    {
+      "access": "public",
+      "acquisition_history": [
+        {
+          "displayed_update": null,
+          "method": "open",
+          "raw_file": "source-raw/games-othello.json",
+          "raw_sha256": "d00c95eef582c24c81f9f0122fda6236d1bdeaf8cbcab9df15e765a0144decb8",
+          "redirect_url": null,
+          "requested_ref": "https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:27.299Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "English | World Othello Federation",
+          "url": "https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english"
+        }
+      ],
+      "displayed_update": null,
+      "id": "b007-s005",
+      "inspection_artifacts": [
+        "source-raw/games-othello.json"
+      ],
+      "inspection_status": "supporting_passages_inspected",
+      "locator": "Object; outflanking explanation; Rules 2 and 8",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:16:27.299Z",
+      "revision": null,
+      "title": "English | World Othello Federation",
+      "url": "https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english"
+    },
+    {
+      "access": "public",
+      "acquisition_history": [
+        {
+          "displayed_update": null,
+          "method": "open",
+          "raw_file": "source-raw/games-bridge.json",
+          "raw_sha256": "2464ad599ab5784785f5098d48ada35ab9f2185523c931cbe90afd0d06b6c2f3",
+          "redirect_url": null,
+          "requested_ref": "https://acbl.org/learn/",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:17:50.750Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "Learn • American Contract Bridge League",
+          "url": "https://acbl.org/learn/"
+        },
+        {
+          "displayed_update": null,
+          "method": "open",
+          "raw_file": "source-raw/games-bridge-passages.json",
+          "raw_sha256": "4d1f5b677032bd1bfbb71d16ad91bcce524daf26068b7c2b358a7feee378542c",
+          "redirect_url": null,
+          "requested_ref": "https://acbl.org/learn/",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:18:28.658Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "Learn • American Contract Bridge League",
+          "url": "https://acbl.org/learn/"
+        }
+      ],
+      "displayed_update": null,
+      "id": "b007-s006",
+      "inspection_artifacts": [
+        "source-raw/games-bridge-passages.json",
+        "source-raw/games-bridge.json"
+      ],
+      "inspection_status": "supporting_passages_inspected",
+      "locator": "The Basics: auction and play; Play: declaring side, declarer and dummy",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:18:28.658Z",
+      "revision": null,
+      "title": "Learn • American Contract Bridge League",
+      "url": "https://acbl.org/learn/"
+    },
+    {
+      "access": "public",
+      "acquisition_history": [
+        {
+          "displayed_update": null,
+          "method": "click",
+          "raw_file": "source-raw/games-senet.json",
+          "raw_sha256": "8a2e933624f7543e3b1df137d60366faf4e79d1989773a1bb5ab28cf423f6d8d",
+          "redirect_url": "https://www.metmuseum.org/perspectives/ancient-egypt-board-games",
+          "requested_ref": "turn650view1",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:19:30.201Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "Senet and Twenty Squares: Two Board Games Played by Ancient Egyptians - The Metropolitan Museum of Art",
+          "url": "https://www.metmuseum.org/blogs/metkids/2017/ancient-egypt-board-games"
+        }
+      ],
+      "displayed_update": null,
+      "id": "b007-s007",
+      "inspection_artifacts": [
+        "source-raw/games-senet.json"
+      ],
+      "inspection_status": "supporting_passages_inspected",
+      "locator": "Senet; Why is this game important?; Twenty Squares; Opening paragraph and the two game sections; Opening paragraph; Twenty Squares, Why is this game important?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:19:30.201Z",
+      "revision": null,
+      "title": "Senet and Twenty Squares: Two Board Games Played by Ancient Egyptians - The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/perspectives/ancient-egypt-board-games"
+    },
+    {
+      "access": "public",
+      "acquisition_history": [
+        {
+          "displayed_update": null,
+          "method": "open",
+          "raw_file": "source-raw/games-fosbury-alt.json",
+          "raw_sha256": "392af2bd4e0cd4f1b689fba5c5256cbe9da3b699773021930c210220c0e8f583",
+          "redirect_url": null,
+          "requested_ref": "https://www.olympedia.org/athletes/78407",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:18:53.695Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "Olympedia – Dick Fosbury",
+          "url": "https://www.olympedia.org/athletes/78407"
+        }
+      ],
+      "displayed_update": null,
+      "id": "b007-s008",
+      "inspection_artifacts": [
+        "source-raw/games-fosbury-alt.json"
+      ],
+      "inspection_status": "supporting_passages_inspected",
+      "locator": "Biographical paragraph and 1968 results; Biographical paragraph and Olympic results",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:18:53.695Z",
+      "revision": null,
+      "title": "Olympedia – Dick Fosbury",
+      "url": "https://www.olympedia.org/athletes/78407"
+    },
+    {
+      "access": "public",
+      "acquisition_history": [
+        {
+          "displayed_update": null,
+          "method": "open",
+          "raw_file": "source-raw/games-naismith.json",
+          "raw_sha256": "b03b98d3536bfd53e04f7310800a449723d2db6516d3bb4223483a3eef41e85b",
+          "redirect_url": "https://springfield.edu/about/birthplace-of-basketball",
+          "requested_ref": "https://springfield.edu/where-basketball-was-invented-the-birthplace-of-basketball",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:17:55.680Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "springfield.edu",
+          "url": "https://springfield.edu/where-basketball-was-invented-the-birthplace-of-basketball"
+        }
+      ],
+      "displayed_update": null,
+      "id": "b007-s009",
+      "inspection_artifacts": [
+        "source-raw/games-naismith.json"
+      ],
+      "inspection_status": "supporting_passages_inspected",
+      "locator": "A New Game; The Birth of Basketball",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:17:55.680Z",
+      "revision": null,
+      "title": "springfield.edu",
+      "url": "https://springfield.edu/about/birthplace-of-basketball"
+    },
+    {
+      "access": "public",
+      "acquisition_history": [
+        {
+          "displayed_update": "Last updated Fri Mar 08 2019.",
+          "method": "open",
+          "raw_file": "source-raw/games-go-rules.json",
+          "raw_sha256": "fb7fddde33ca244e17bfcaf5c92a44a4f17f26756e292591b55531c69353143f",
+          "redirect_url": null,
+          "requested_ref": "https://www.britgo.org/rules/approved",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:22.794Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "A. Default Rules | British Go Association",
+          "url": "https://www.britgo.org/rules/approved"
+        }
+      ],
+      "displayed_update": "Last updated Fri Mar 08 2019.",
+      "id": "b007-s010",
+      "inspection_artifacts": [
+        "source-raw/games-go-rules.json"
+      ],
+      "inspection_status": "supporting_passages_inspected",
+      "locator": "Triple Ko; Komi; BGA How to Play, The ko rule; BGA Default Rules, Triple Ko; Default Rules, Komi; How to Play, Komi; Default Rules, Triple Ko",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:16:22.794Z",
+      "revision": null,
+      "title": "A. Default Rules | British Go Association",
+      "url": "https://www.britgo.org/rules/approved"
+    },
+    {
+      "access": "public",
+      "acquisition_history": [
+        {
+          "displayed_update": "Last updated Mon Dec 04 2017.",
+          "method": "open",
+          "raw_file": "source-raw/games-go-compare.json",
+          "raw_sha256": "f55bcf45ec086e76eee112a6c81c06bac91b3901e2350f9b8b0aaab0254b2c6e",
+          "redirect_url": null,
+          "requested_ref": "https://www.britgo.org/rules/compare.html",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:16:25.938Z",
+          "revision": null,
+          "status": "retrieved",
+          "timestamp_basis": "tool-call completion timestamp",
+          "title": "Comparison of Some Go Rules | British Go Association",
+          "url": "https://www.britgo.org/rules/compare.html"
+        }
+      ],
+      "displayed_update": "Last updated Mon Dec 04 2017.",
+      "id": "b007-s011",
+      "inspection_artifacts": [
+        "source-raw/games-go-compare.json"
+      ],
+      "inspection_status": "supporting_passages_inspected",
+      "locator": "Scoring; defensive moves; Scoring; Does it cost me a point to make a defensive move inside my territory?",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T19:16:25.938Z",
+      "revision": null,
+      "title": "Comparison of Some Go Rules | British Go Association",
+      "url": "https://www.britgo.org/rules/compare.html"
+    },
+    {
+      "id": "b007-s086",
+      "title": "Shogi: An English Player’s Guide — Arkoden (2016), hosted by Tabletopia",
+      "url": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+      "locator": "PDF pages 1, 3 and 12, Comparisons and Placing Captured Pieces; PDF page 3, Comparisons and Unique features of Shogi",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T20:43:32.203Z",
+      "revision": null,
+      "displayed_update": "Written and uploaded by Arkoden, 2016",
+      "access": "public",
+      "inspection_status": "supporting_passages_inspected",
+      "inspection_artifacts": [
+        "source-raw/stage-b-shogi-overview.json"
+      ],
+      "source_quality_note": "Community-authored game guide hosted by Tabletopia. Only independently coherent overview and captured-piece reuse passages are used; overbroad placement/promotion statements elsewhere are excluded."
+    }
+  ],
+  "concepts": [
+    {
+      "id": "local:authored:000254",
+      "label": "Chess",
+      "aliases": [
+        "Chess"
+      ],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Understand why checkmate ends play without capturing the king.",
+      "card": "Chess ends in checkmate when the opposing king is attacked and no legal move can remove the threat. The king is never actually captured. A different ending, stalemate, occurs when a player has no legal move but their king is not attacked.",
+      "original_description": "Exploring strategic play, tactics and positional thinking in chess.",
+      "identity_urls": [
+        "https://handbook.fide.com/chapter/E012023"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s001",
+          "locator": "Articles 1.4–1.5",
+          "note": "Articles 1.4 and 5.2.1 support the objective, prohibition of king capture and contrasting stalemate condition; no claim that every immobile king is stalemated."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:stalemate",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "The laws distinguish checkmate from stalemate through whether the immobile side's king is attacked.",
+          "source_ids": [
+            "b007-s001"
+          ]
+        }
+      ],
+      "card_version": 2,
+      "imported_records": [
+        {
+          "description": "Exploring strategic play, tactics and positional thinking in chess.",
+          "domain": "Games & sports",
+          "index": 254,
+          "inventory_kind": "broad",
+          "source": "ProductSpace",
+          "subsection": "Games & interactive worlds",
+          "topic": "Chess"
+        }
+      ]
+    },
+    {
+      "id": "Q11413",
+      "label": "Go",
+      "aliases": [
+        "Go",
+        "Go (board game)",
+        "Go (game)"
+      ],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Connect surrounding space with the capture of groups that lose every liberty.",
+      "card": "Go players place stones on grid intersections to surround space. Connected stones share liberties: empty neighboring intersections along the grid lines. When an opponent occupies every liberty, the whole connected string is captured, linking local fights over stones with the larger struggle for territory.",
+      "original_description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+      "identity_urls": [
+        "https://www.wikidata.org/wiki/Q11413"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s002",
+          "locator": "Introduction and Capturing stones",
+          "note": "BGA introduction and capture paragraphs support intersections, orthogonal liberties and capture of a connected string; diagonal contact is not treated as connection."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:liberties-in-go",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "The teaching guide explains Go capture through the shared liberties of connected stones.",
+          "source_ids": [
+            "b007-s002"
+          ]
+        }
+      ],
+      "card_version": 2,
+      "imported_records": [
+        {
+          "description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+          "domain": "Games & sports",
+          "index": 255,
+          "inventory_kind": "broad",
+          "source": "ProductSpace",
+          "subsection": "Games & interactive worlds",
+          "topic": "Go"
+        },
+        {
+          "description": "board game for two players that originated in China more than 2,500 years ago",
+          "domain": "Games & sports",
+          "guide_title": "Go (game)",
+          "index": 1632,
+          "inventory_kind": "broad",
+          "list_revision": 30260496,
+          "list_section": "Arts",
+          "source": "Wikidata",
+          "source_revision": 2547428744,
+          "source_url": "https://www.wikidata.org/wiki/Q11413",
+          "subsection": "Arts and recreation / Recreation: games and sports",
+          "topic": "Go (game)",
+          "wikidata_id": "Q11413"
+        }
+      ]
+    },
+    {
+      "id": "local:authored:000256",
+      "label": "Shogi",
+      "aliases": [
+        "Shogi"
+      ],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Explain the piece-reuse feature of shogi through a directly supported broad-game overview, leaving the perpetual-check exception to its separate rule card.",
+      "card": "Shogi is Japanese chess with a distinctive form of piece reuse. Captured pieces become reserves for their captor. Instead of moving a piece already on the board, a player can spend a turn returning a captured piece to play on their own side.",
+      "original_description": "Exploring Japanese chess and its distinctive piece-reuse strategies.",
+      "identity_urls": [
+        "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s086",
+          "locator": "PDF pages 1, 3 and 12, Comparisons and Placing Captured Pieces",
+          "note": "Captured pieces become the captor’s reserves and may be returned to play instead of moving a board piece; no unrestricted-drop or automatic-promotion claim is used."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000254",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "The guide explicitly compares shogi with European chess and identifies returning captured pieces as a difference.",
+          "source_ids": [
+            "b007-s086"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": [
+        {
+          "topic": "Shogi",
+          "domain": "Games & sports",
+          "description": "Exploring Japanese chess and its distinctive piece-reuse strategies.",
+          "source": "ProductSpace",
+          "subsection": "Games & interactive worlds",
+          "inventory_kind": "broad",
+          "index": 256
+        }
+      ]
+    },
+    {
+      "id": "local:authored:000257",
+      "label": "Backgammon",
+      "aliases": [
+        "Backgammon"
+      ],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Connect dice-limited movement with the race to remove all fifteen checkers.",
+      "card": "Backgammon combines a race with obstacles. Each player moves fifteen checkers according to dice rolls, aiming to gather them in the home board and remove them. Landing on a lone opposing checker sends it to the bar, where it must re-enter before other checkers move.",
+      "original_description": "Exploring strategic play involving movement, probability and dice.",
+      "identity_urls": [
+        "https://usbgf.org/backgammon-basics-how-to-play/"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s004",
+          "locator": "Object of the Game and Movement",
+          "note": "USBGF Object, Movement and Hitting sections support fifteen checkers, dice movement, bearing-off objective and priority of bar entry; a hit requires landing on a lone checker."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:bar-entry-in-backgammon",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "The rules make re-entry of hit checkers a compulsory interruption of normal checker movement.",
+          "source_ids": [
+            "b007-s004"
+          ]
+        }
+      ],
+      "card_version": 2,
+      "imported_records": [
+        {
+          "description": "Exploring strategic play involving movement, probability and dice.",
+          "domain": "Games & sports",
+          "index": 257,
+          "inventory_kind": "broad",
+          "source": "ProductSpace",
+          "subsection": "Games & interactive worlds",
+          "topic": "Backgammon"
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:othello",
+      "label": "Othello",
+      "aliases": [],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Understand how a placement changes ownership of intervening discs.",
+      "card": "Othello changes the ownership of pieces already on the board. A player places a disc to bracket an uninterrupted line of opposing discs, then flips those discs to their color. The winner has more discs when neither player can make a legal move.",
+      "original_description": null,
+      "identity_urls": [
+        "https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s005",
+          "locator": "Object; outflanking explanation",
+          "note": "Official outflanking and ending rules support placement, flipping and the final majority; the game need not fill all sixty-four squares."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:forced-passing-in-othello",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "A lack of outflanking moves determines both forced passes and the eventual end of the game.",
+          "source_ids": [
+            "b007-s005"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:authored:000258",
+      "label": "Contract bridge",
+      "aliases": [
+        "Bridge (card game)",
+        "Bridge card game"
+      ],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "See how bidding fixes a partnership's trick-taking target before play.",
+      "card": "In contract bridge, four players form two partnerships. Bidding establishes a contract specifying a number of tricks and a trump suit, or no trumps. During play, one partner's cards are exposed as dummy, and the declarer chooses cards from both partnership hands.",
+      "original_description": "Exploring partnership bidding and trick-taking strategy.",
+      "identity_urls": [
+        "https://acbl.org/learn/"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s006",
+          "locator": "The Basics: auction and play",
+          "note": "ACBL Basics, Auction and Play support partnerships, contract denomination and dummy control; bidding numbers count tricks above the initial six, so the card avoids equating the printed bid with total tricks."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:dummy-in-bridge",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "ACBL's play explanation assigns the exposed partnership hand to declarer's decisions after the auction.",
+          "source_ids": [
+            "b007-s006"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": [
+        {
+          "topic": "Bridge card game",
+          "domain": "Games & sports",
+          "description": "Exploring partnership bidding and trick-taking strategy.",
+          "source": "ProductSpace",
+          "subsection": "Games & interactive worlds",
+          "inventory_kind": "broad",
+          "index": 258
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:senet",
+      "label": "Senet",
+      "aliases": [],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Games & sports",
+        "History & culture"
+      ],
+      "learning_takeaway": "Connect an Egyptian board race with New Kingdom beliefs about the afterlife.",
+      "card": "Senet used a thirty-square board in ancient Egypt. Its imagery became more than decoration: during the New Kingdom, the game's passage through marked hazards was associated with the deceased person's journey toward the afterlife. Surviving game boxes connect recreation with funerary belief.",
+      "original_description": null,
+      "identity_urls": [
+        "https://www.metmuseum.org/perspectives/ancient-egypt-board-games"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s007",
+          "locator": "Senet; Why is this game important?",
+          "note": "The Met's Senet and importance sections support thirty squares, New Kingdom association and funerary objects; avoid presenting reconstructed detailed rules as certain."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:twenty-squares",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "The museum documents double-sided game boxes carrying senet on one side and Twenty Squares on the other.",
+          "source_ids": [
+            "b007-s007"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:twenty-squares",
+      "label": "Twenty Squares",
+      "aliases": [
+        "Game of Twenty Squares"
+      ],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Games & sports",
+        "History & culture"
+      ],
+      "learning_takeaway": "Explore how an imported ancient game acquired Egyptian markings and visual conventions.",
+      "card": "Twenty Squares spread across the ancient Near East and was later imported into Egypt. Surviving boards reveal adaptation rather than simple copying: special squares on Near Eastern examples display rosettes, while Egyptian examples use hieroglyphs. A shared game could acquire a different visual language.",
+      "original_description": null,
+      "identity_urls": [
+        "https://www.metmuseum.org/perspectives/ancient-egypt-board-games"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s007",
+          "locator": "Twenty Squares",
+          "note": "The Met explicitly reports geographic spread, import into Egypt and contrasting markings; no claim that all surviving boards preserve markings or identical rules."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:senet",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "The museum describes Egyptian boxes accommodating both games, making their material comparison explicit.",
+          "source_ids": [
+            "b007-s007"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:dick-fosbury",
+      "label": "Dick Fosbury",
+      "aliases": [],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Games & sports",
+        "History & culture"
+      ],
+      "learning_takeaway": "Examine an athlete whose enduring influence came from a new jumping style.",
+      "card": "Dick Fosbury's lasting influence came from the high-jump technique bearing his name. He won Olympic gold in 1968, but his legacy extended beyond that result: the Fosbury Flop transformed how the event was approached. Olympedia distinguishes this technical influence from his relatively brief competitive prominence.",
+      "original_description": null,
+      "identity_urls": [
+        "https://www.olympedia.org/athletes/78407"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s008",
+          "locator": "Biographical paragraph and 1968 results",
+          "note": "Olympedia biography supports 1968 gold, technique and enduring influence; the card does not invent biomechanical details absent from this source."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q165704",
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "note": "The biography identifies Fosbury's innovation and Olympic result specifically with the high-jump event.",
+          "source_ids": [
+            "b007-s008"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:james-naismith",
+      "label": "James Naismith",
+      "aliases": [],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Games & sports",
+        "History & culture"
+      ],
+      "learning_takeaway": "See how indoor space and injury constraints shaped basketball's original design.",
+      "card": "James Naismith devised basketball at Springfield in 1891 to provide an engaging indoor winter activity. Avoiding the rough collisions of outdoor games shaped the design. Elevated peach baskets required players to toss the ball toward a goal rather than charge through it.",
+      "original_description": null,
+      "identity_urls": [
+        "https://springfield.edu/about/birthplace-of-basketball"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s009",
+          "locator": "A New Game; The Birth of Basketball",
+          "note": "Springfield's account supports the winter brief, concern about roughness, elevated baskets and tossing; it does not establish that every modern rule originated unchanged in 1891."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000286",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "The college's historical account identifies Naismith as basketball's inventor and explains the game's design constraints.",
+          "source_ids": [
+            "b007-s009"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "Q205730",
+      "label": "En passant",
+      "aliases": [
+        "En passant",
+        "e.p."
+      ],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Understand the pawn capture available only immediately after a neighboring two-square advance.",
+      "card": "An en passant capture answers a pawn's two-square first advance. An opposing pawn beside its destination may capture it as though it had moved only one square. The opportunity exists only on the immediately following move; waiting forfeits this particular capture.",
+      "original_description": null,
+      "identity_urls": [
+        "https://www.wikidata.org/wiki/Q205730"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s001",
+          "locator": "Articles 3.7.3.1–3.7.3.2",
+          "note": "FIDE 3.7.3.1–2 supports neighboring same-rank pawns, the two-square advance and immediate-next-move limit; no other capture window is implied."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000254",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "note": "FIDE defines en passant as a special pawn capture within the chess movement rules.",
+          "source_ids": [
+            "b007-s001"
+          ]
+        }
+      ],
+      "card_version": 3,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:castling",
+      "label": "Castling",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Distinguish permanent loss of castling rights from temporary obstacles.",
+      "card": "Castling moves a king and rook in one turn, but permission depends on more than empty squares. Moving the king or the relevant rook permanently loses that castling right. Pieces between them or attacks on the king's starting, crossing or destination square can temporarily prevent it.",
+      "original_description": null,
+      "identity_urls": [
+        "https://handbook.fide.com/chapter/E012023"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s001",
+          "locator": "Article 3.8.2",
+          "note": "FIDE 3.8.2 distinguishes forfeited rights from temporary obstruction; the attacked-square restriction concerns the king's route, not every square the rook crosses."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000254",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "note": "FIDE explicitly defines castling as a king-and-rook move within the chess movement rules.",
+          "source_ids": [
+            "b007-s001"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:stalemate",
+      "label": "Stalemate",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Distinguish having no legal move from being checkmated.",
+      "card": "Stalemate is a drawn chess position in which the player to move has no legal move and their king is not in check. The distinction from checkmate is crucial: immobilizing the opponent does not win if no attack on the king accompanies that immobilization.",
+      "original_description": null,
+      "identity_urls": [
+        "https://handbook.fide.com/chapter/E012023"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s001",
+          "locator": "Article 5.2.1",
+          "note": "FIDE 5.2.1 supports side-to-move, absence of any legal move, no check and immediate draw; immobility of one piece alone is insufficient."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000254",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "note": "The laws define stalemate as one of chess's game-ending draw conditions.",
+          "source_ids": [
+            "b007-s001"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:dead-position-in-chess",
+      "label": "Dead position in chess",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Recognize a draw where neither side can ever deliver legal checkmate.",
+      "card": "A dead position ends a chess game because neither player could checkmate through any possible sequence of legal moves. This is stronger than saying that checkmate seems unlikely or cannot be forced: even cooperative play by the opponent would not make mate possible.",
+      "original_description": null,
+      "identity_urls": [
+        "https://handbook.fide.com/chapter/E012023"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s001",
+          "locator": "Article 5.2.2",
+          "note": "FIDE 5.2.2 quantifies over any legal sequence; the cooperative-play explanation unpacks that condition rather than adding a material-count rule."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:stalemate",
+          "type": "related_to",
+          "assertion": "editorial",
+          "note": "Both end the game as a draw, but stalemate concerns present legal moves while dead position concerns impossibility of future mate.",
+          "source_ids": [
+            "b007-s001"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:touch-move-rule",
+      "label": "Touch-move rule",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Understand how deliberate touching commits a player when a legal move exists.",
+      "card": "In over-the-board chess, deliberately touching one of your pieces with the intention of moving it normally commits you to move that piece if a legal move exists. Adjusting a piece after announcing that intention is different. Accidental contact is not treated as deliberate selection.",
+      "original_description": null,
+      "identity_urls": [
+        "https://handbook.fide.com/chapter/E012023"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s001",
+          "locator": "Articles 4.2–4.5",
+          "note": "FIDE 4.2–4.5 support intentional contact, prior adjustment declaration and legal-move qualification; this describes own-piece handling rather than every multi-piece exception."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000254",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "note": "FIDE's Act of Moving the Pieces regulates how a player's physical selection becomes binding.",
+          "source_ids": [
+            "b007-s001"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:threefold-repetition",
+      "label": "Threefold repetition",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Explain the claimable three-occurrence draw procedure, including the timing of a claim before a qualifying intended move.",
+      "card": "Under the cited FIDE rules, threefold repetition creates a claimable draw rather than automatically stopping play. A player whose turn it is may claim when the position has just appeared for the third time, or first record an intended move that will produce that recurrence.",
+      "original_description": null,
+      "identity_urls": [
+        "https://handbook.fide.com/chapter/E012023"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s001",
+          "locator": "Articles 9.2–9.2.3",
+          "note": "FIDE 9.2.1–2 supports both current-position and intended-move claims by the player to move; the contrast with 9.6.1 avoids repeating only fivefold's position-identity lesson."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:fivefold-repetition-chess",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "The rules distinguish a player's threefold claim from the automatic fivefold repetition draw.",
+          "source_ids": [
+            "b007-s001"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:underpromotion",
+      "label": "Underpromotion",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Recognize that promotion may choose a rook, bishop or knight instead of queen.",
+      "card": "A pawn reaching its final rank need not become a queen. Underpromotion chooses a rook, bishop or knight instead. The new piece takes effect immediately, and the available choices do not depend on which pieces were captured earlier in the game.",
+      "original_description": null,
+      "identity_urls": [
+        "https://handbook.fide.com/chapter/E012023"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s001",
+          "locator": "Articles 3.7.3.3–3.7.3.5",
+          "note": "FIDE 3.7.3.3–5 support all alternatives, immediate effect and independence from captured pieces; no unsupported tactical claim explains why a particular choice wins."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000254",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "note": "FIDE's pawn-promotion rule explicitly permits the three non-queen choices described here.",
+          "source_ids": [
+            "b007-s001"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:liberties-in-go",
+      "label": "Liberties in Go",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Count shared adjacent empty points for an entire connected string.",
+      "card": "A liberty is an empty intersection directly beside a Go stone along a horizontal or vertical line. Connected stones share their liberties as one string. Surrounding every liberty captures the entire string, so adding a connection can change the survival prospects of several stones at once.",
+      "original_description": null,
+      "identity_urls": [
+        "https://britgo.org/intro/intro2.html"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s002",
+          "locator": "Capturing stones and counting liberties",
+          "note": "BGA capture section supports orthogonal adjacency and whole-string treatment; the connection consequence follows directly from sharing the resulting string's liberties."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q11413",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "note": "The Go guide uses liberties to define when individual stones and connected strings are captured.",
+          "source_ids": [
+            "b007-s002"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:eyes-in-go",
+      "label": "Eyes in Go",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Understand why two separate internal spaces protect a group from capture.",
+      "card": "An eye is an internal space in a connected Go group. Two genuine, separate eyes can keep a group safe: an opponent cannot fill both in one move, and occupying the first would be self-capture rather than capturing the surrounding stones.",
+      "original_description": null,
+      "identity_urls": [
+        "https://britgo.org/intro/intro2.html"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s002",
+          "locator": "Life and death and the concept of eyes",
+          "note": "BGA Life and death and self-capture examples support two-eye safety; genuine eyes prevents confusing superficial holes with the protected spaces in the rule explanation."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:liberties-in-go",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "The guide explains eye-based survival through internal liberties and the prohibition on noncapturing self-capture.",
+          "source_ids": [
+            "b007-s002"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:ko-rule",
+      "label": "Ko rule",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "See why immediate recapture must wait for a play elsewhere.",
+      "card": "A ko capture can create an opportunity for immediate recapture that would restore the previous position. The basic ko rule forbids that immediate reply. The player must first play elsewhere, giving the opponent an opportunity to respond or end the local cycle.",
+      "original_description": null,
+      "identity_urls": [
+        "https://britgo.org/intro/intro2.html"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s002",
+          "locator": "The ko rule",
+          "note": "BGA ko diagrams and explanatory paragraph support immediate-recapture restriction and intervening play; this does not claim that a single intervening move overrides every superko rule."
+        },
+        {
+          "source_id": "b007-s010",
+          "locator": "Triple Ko",
+          "note": "Superko forbids longer repeating positions; the comparison is editorial."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:situational-superko",
+          "type": "related_to",
+          "assertion": "editorial",
+          "note": "Immediate ko and situational superko both limit repetition, but the latter also addresses longer cycles such as triple ko.",
+          "source_ids": [
+            "b007-s002",
+            "b007-s010"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:seki",
+      "label": "Seki",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Recognize mutual survival when either attack would allow the opponent to capture.",
+      "card": "Seki is mutual survival in Go without each group having two independent eyes. Neighboring groups share a shortage of liberties, and either player's attempt to capture can allow the opponent to capture first. Leaving the position alone therefore preserves both sides' stones.",
+      "original_description": null,
+      "identity_urls": [
+        "https://britgo.org/intro/intro2.html"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s002",
+          "locator": "Seki: a kind of local stalemate",
+          "note": "BGA's seki examples support mutual stand-off and shortage of liberties; no universal territory-scoring rule is added because rulesets differ."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:eyes-in-go",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "The guide introduces seki as an exception to the simple expectation that a group lacking two eyes will die.",
+          "source_ids": [
+            "b007-s002"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:komi",
+      "label": "Komi",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Understand points compensating White for playing second.",
+      "card": "Komi compensates the player using White stones for Black's first move in Go. It adds points to White's final score rather than adding stones to the board. The British Go Association's cited default uses seven-and-a-half points; other rules or agreements can use different values.",
+      "original_description": null,
+      "identity_urls": [
+        "https://www.britgo.org/rules/approved"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s010",
+          "locator": "Komi",
+          "note": "BGA Default Rules gives 7½ and contrasts traditional Japanese values; How to Play explains compensation rather than placement of stones."
+        },
+        {
+          "source_id": "b007-s002",
+          "locator": "Komi",
+          "note": "The guide explains compensation to White for Black moving first."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q11413",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "note": "The tournament rules identify komi as a score adjustment within Go, separately from handicap-stone placement.",
+          "source_ids": [
+            "b007-s010",
+            "b007-s002"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:situational-superko",
+      "label": "Situational superko",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Compare a whole-game repetition ban with the immediate ko restriction.",
+      "card": "Under the British Go Association's AGA-style rule, a player cannot make a play that recreates a board position previously created by that player. This reaches beyond immediate ko recapture, preventing longer repeating cycles such as triple ko from continuing indefinitely.",
+      "original_description": null,
+      "identity_urls": [
+        "https://www.britgo.org/rules/approved"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s010",
+          "locator": "Triple Ko",
+          "note": "The precise BGA same-player formulation and triple-ko motivation are retained; this is not asserted to describe every international superko variant."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:ko-rule",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "note": "BGA describes its superko restriction as preventing triple ko and other repeated positions beyond the basic local cycle.",
+          "source_ids": [
+            "b007-s010"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:area-and-territory-scoring-in-go",
+      "label": "Area and territory scoring in Go",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "Compare counting occupied points with counting territory plus prisoners.",
+      "card": "Territory scoring counts enclosed empty points and captured stones; area scoring counts enclosed points and stones still occupying the board. That difference changes whether filling your own territory costs a point. AGA rules use pass stones to permit territory-style counting within an area-scoring framework.",
+      "original_description": null,
+      "identity_urls": [
+        "https://www.britgo.org/rules/compare.html"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s011",
+          "locator": "Scoring; defensive moves",
+          "note": "BGA comparison explicitly supports both definitions, defensive-fill consequence and pass-stone accommodation; the card avoids claiming universal exact equality of final counts."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q11413",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "note": "The comparison identifies these as alternative Go scoring systems and explains their practical counting differences.",
+          "source_ids": [
+            "b007-s011"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:doubling-cube",
+      "label": "Doubling cube",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Games & sports"
+      ],
+      "learning_takeaway": "See how accepting a double transfers the right to offer the next redouble.",
+      "card": "Backgammon's doubling cube lets a player offer to raise the game's value before rolling. The opponent can decline and concede at the old value, or accept. Acceptance transfers ownership of the cube, so only that player may offer the next redouble.",
+      "original_description": null,
+      "identity_urls": [
+        "https://usbgf.org/backgammon-basics-how-to-play/"
+      ],
+      "evidence": [
+        {
+          "source_id": "b007-s004",
+          "locator": "Doubling",
+          "note": "USBGF Doubling supports timing, decline cost and ownership transfer; describe points rather than instructing anyone to gamble or implying tournament exceptions do not exist."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000257",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "note": "The federation presents the cube as the game's mechanism for offering and accepting increased stakes.",
+          "source_ids": [
+            "b007-s004"
+          ]
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    }
+  ],
+  "issues": [
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://www.britishmuseum.org/blog/top-10-historical-board-games"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://www.britishmuseum.org/collection/object/W_1928-1009-378"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://www.usgo.org/aga-rules-of-go"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://worldathletics.org/news/news/dick-fosbury-flop"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://www.shogi.or.jp/knowledge/rules/"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://www.shogi.or.jp/event/english-pamphlet.pdf"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://www.wikidata.org/wiki/Q7565103"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://www.law.cornell.edu/wex/exhaustion_of_remedies"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://www.law.cornell.edu/wex/mootness"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://www.law.cornell.edu/wex/ripeness"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://musictheory.pugetsound.edu/mt21c/NeapolitanSixthChords.html"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://musictheory.pugetsound.edu/mt21c/IntroductionToNonChordTones.html"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://musictheory.pugetsound.edu/mt21c/TheNeapolitanChord.html"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://openstax.org/books/introduction-philosophy/pages/7-1-what-is-knowledge"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://plato.stanford.edu/entries/epistemic-injustice/"
+    },
+    {
+      "reason": "Public retrieval failed; retained in access log. No claim is supported solely by this failed response.",
+      "status": "excluded_or_alternative_used",
+      "type": "source_access",
+      "url": "https://www.justice.gov.za/trc/legal/justice.htm"
+    },
+    {
+      "label": "Epistemic luck",
+      "provisional_id": "proposal:research-batch-007:203",
+      "reason": "Check whether the proposed finer subject adds a distinct takeaway beyond the related baseline record.",
+      "status": "unresolved_distinctness_excluded_from_recommended",
+      "type": "identity_review"
+    },
+    {
+      "label": "Overjustification effect",
+      "provisional_id": "proposal:research-batch-007:111",
+      "reason": "Check whether the proposed finer subject adds a distinct takeaway beyond the related baseline record.",
+      "status": "unresolved_distinctness_excluded_from_recommended",
+      "type": "identity_review"
+    },
+    {
+      "label": "Resultant moral luck",
+      "provisional_id": "proposal:research-batch-007:136",
+      "reason": "Check whether the proposed finer subject adds a distinct takeaway beyond the related baseline record.",
+      "status": "unresolved_distinctness_excluded_from_recommended",
+      "type": "identity_review"
+    },
+    {
+      "ids": [
+        "Q431498",
+        "local:authored:000049"
+      ],
+      "reason": "Same supported confirmation-bias meaning. Only authored control is selected; no baseline migration or double-counting.",
+      "status": "historical_proposal_retained",
+      "type": "baseline_equivalence"
+    },
+    {
+      "labels": [
+        "Pitch (music)",
+        "Pitch (material, batch 004)"
+      ],
+      "reason": "Perceptual high/low sound dimension versus material. Coordinator owns cross-batch grouping.",
+      "status": "proposed_distinct_senses",
+      "type": "ambiguity"
+    },
+    {
+      "baseline_id": "Q7755",
+      "labels": [
+        "Material constitution",
+        "Constitution (politics)"
+      ],
+      "reason": "Ontological material composition versus institutional fundamental rules.",
+      "shared_alias": "Constitution",
+      "status": "proposed_distinct_senses",
+      "type": "ambiguity"
+    },
+    {
+      "baseline_id": "Q1842346",
+      "labels": [
+        "Presentism",
+        "Presentism (historical analysis)"
+      ],
+      "reason": "Present-only temporal ontology versus retrospective historical interpretation through current standards.",
+      "status": "proposed_distinct_senses",
+      "type": "ambiguity"
+    },
+    {
+      "reason": "Source-led distribution within domains favors 26 game rules, 9 sporting phenomena and 10 historical/named subjects; no per-subfield upper quota exists. All 15 assigned subfields exceed the five-subject minimum.",
+      "status": "documented_expansion",
+      "type": "coverage"
+    },
+    {
+      "reason": "No discovery cards, author card review, independent audit or global selection freeze has been completed by this worker.",
+      "status": "stage_a_only",
+      "type": "scope_limit"
+    },
+    {
+      "reason": "Lexical and bounded semantic baseline review cannot prove exhaustive absence of every synonym; central review still pending.",
+      "status": "bounded",
+      "type": "retrieval_limit"
+    },
+    {
+      "reason": "Many philosophy sources describe disputed positions, not settled facts; psychological findings and sporting models retain their experimental or modeling qualifications. Legal content is educational and jurisdiction-specific.",
+      "status": "qualified",
+      "type": "source_quality"
+    },
+    {
+      "reason": "A few earliest raw acquisitions lack tool-recorded timestamps; their acquisition metadata uses filesystem capture time. Most records carry tool-call completion timestamps. A click-only intermediate batch exceeded shell argument length and was immediately re-opened in smaller passage captures; those successful captures are preserved.",
+      "status": "disclosed",
+      "type": "documentation_limit"
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:authored:000254",
+      "label": "Chess",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The laws distinguish checkmate from stalemate through whether the immobile side's king is attacked."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "Q11413",
+      "label": "Go",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The teaching guide explains Go capture through the shared liberties of connected stones."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:authored:000256",
+      "label": "Shogi",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The guide explicitly compares shogi with European chess and identifies returning captured pieces as a difference."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:authored:000257",
+      "label": "Backgammon",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The rules make re-entry of hit checkers a compulsory interruption of normal checker movement."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:catalog:othello",
+      "label": "Othello",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: A lack of outflanking moves determines both forced passes and the eventual end of the game."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:authored:000258",
+      "label": "Contract bridge",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: ACBL's play explanation assigns the exposed partnership hand to declarer's decisions after the auction."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:catalog:senet",
+      "label": "Senet",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The museum documents double-sided game boxes carrying senet on one side and Twenty Squares on the other."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:catalog:twenty-squares",
+      "label": "Twenty Squares",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The museum describes Egyptian boxes accommodating both games, making their material comparison explicit."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:catalog:james-naismith",
+      "label": "James Naismith",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The college's historical account identifies Naismith as basketball's inventor and explains the game's design constraints."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:catalog:dead-position-in-chess",
+      "label": "Dead position in chess",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: Both end the game as a draw, but stalemate concerns present legal moves while dead position concerns impossibility of future mate."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:catalog:threefold-repetition",
+      "label": "Threefold repetition",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The rules distinguish a player's threefold claim from the automatic fivefold repetition draw."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:catalog:eyes-in-go",
+      "label": "Eyes in Go",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The guide explains eye-based survival through internal liberties and the prohibition on noncapturing self-capture."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:catalog:ko-rule",
+      "label": "Ko rule",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: Immediate ko and situational superko both limit repetition, but the latter also addresses longer cycles such as triple ko."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:catalog:seki",
+      "label": "Seki",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: The guide introduces seki as an exception to the simple expectation that a group lacking two eyes will die."
+    },
+    {
+      "type": "missing_parent_or_application",
+      "id": "local:catalog:situational-superko",
+      "label": "Situational superko",
+      "reason": "No hierarchical edge asserted. The inspected material supports this specific comparison or connection: BGA describes its superko restriction as preventing triple ko and other repeated positions beyond the basic local cycle."
+    },
+    {
+      "type": "source_limitation",
+      "id": "local:authored:000256",
+      "reason": "Shogi overview uses a community-authored Tabletopia-hosted rules guide after the bounded official-source attempts; only verified captured-piece reuse passages are used."
+    },
+    {
+      "type": "audit_status",
+      "reason": "All authored cards receive author review; independent frozen audit has not yet occurred."
+    }
+  ],
+  "validation": {
+    "status": "structural_checks_pending",
+    "author_review_count": 25,
+    "independent_audit_completed": false
+  }
+}

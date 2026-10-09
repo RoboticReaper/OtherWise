@@ -1,0 +1,2229 @@
+{
+  "schema_version": 1,
+  "assignment": "systems",
+  "auditor_task_identity": "/root/batch008_audit_systems",
+  "independence_statement": "I did not author these cards. I audited the assigned frozen snapshots and independently read the actual cited primary/official/educational passages. Author acquisition claims were not substituted for inspection.",
+  "completed_at": "2026-10-09T03:13:19.361725+00:00",
+  "sample_manifest_sha256": "5b22b4cd61f691075015997f6c240b3365786131ebe2252f10de6a8e23b15f69",
+  "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "assignment_sha256": "d2ecea5444ce38cf2ab91046387e7705aaed99302b79b7f16bbde9010b7d91dd",
+  "initial_integrity_verification": {
+    "sample_file_matches_assignment": true,
+    "candidate_file_matches_assignment": true,
+    "baseline_file_matches_assignment": true,
+    "all_13_card_and_source_bundle_hashes_recomputed": true,
+    "all_13_snapshots_equal_frozen_catalog": true
+  },
+  "scope": {
+    "fixed_sample": 13,
+    "random_new": 8,
+    "targeted": 5,
+    "supplementary_shared_source_cards": 3,
+    "whole_batch_audited": false,
+    "private_pilot_ratings_considered": false,
+    "human_study_run": false
+  },
+  "source_access_and_usage_limits": {
+    "failure_limit_per_url": 2,
+    "alternative_limit_after_failure": 3,
+    "failures": [
+      {
+        "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+        "operation": "web.run PDF screenshot",
+        "attempts": 2,
+        "result": "Cache miss for pageno 3 and pageno 7",
+        "substantive_text_access": "Successful actual PDF text inspection before the failed visual attempts",
+        "further_visual_attempts": 0,
+        "alternatives_used": 0
+      }
+    ],
+    "other_access_notes": [
+      "Cached primary paper and official FAA PDF were independently read; no claim of a fresh remote fetch for either.",
+      "Some web.run screenshot requests returned image references without model-visible pixels. These are not counted as visual inspection.",
+      "Search/find no-match navigation responses were not treated as inaccessible source passages."
+    ],
+    "inaccessible_substantive_passages": [],
+    "source_quote_policy": "No verbatim primary-source excerpts; brief audit assessments plus exact locators. Each source summary budget is 200 words across fixed and supplementary records.",
+    "actual_token_usage": null,
+    "actual_cost": null
+  },
+  "source_record_locator_repairs": {
+    "research-batch-008-systems::systems-source-016": "II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp.732-733 / PDF pp.5-6, rounds 1-k and strategy-proofness discussion",
+    "research-batch-008-systems::systems-source-018": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; relative-performance evaluation in the Introduction, printed p.325 / PDF p.3",
+    "research-batch-008-systems::systems-source-026": "Rule 22 The Let During a Service, printed p.9 / PDF p.12, lines 342-350; Rules of Wheelchair Tennis a. The Two Bounce Rule, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, printed pp.10-11 / PDF pp.13-14",
+    "research-batch-008-systems::systems-source-009": "2.1 model, PDF p.3, lines 32-46; 2.2 deferred acceptance, PDF p.4, lines 48-66; section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159; Introduction, PDF p.1, lines 6-17"
+  },
+  "records": {
+    "local:catalog:duration-neglect": {
+      "id": "local:catalog:duration-neglect",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "fce218abfc75ebeaa5e6a587ba575aaab248a43fcc29f6e1c57609baf5f298ce",
+      "initial_source_bundle_sha256": "ccc970e4a945a1c0011b2d67aad77482a4c716d907567094a57c20e7fe04691a",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Duration neglect",
+      "initial_body_word_count": 42,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-042",
+          "title": "Fredrickson and Kahneman (1993), Duration Neglect in Retrospective Evaluations of Affective Episodes",
+          "original_url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fredr-kahneman-jpsp1993.pdf",
+          "locator": "General Discussion, printed p.54 / PDF p.10, extracted lines 1029-1033 and 1057-1070; definition, printed p.46 / PDF p.2, lines 100-107",
+          "inspection_mode": "web.run actual extracted primary-paper PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:05:25+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Known duration receives little evaluative weight",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-042",
+              "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fredr-kahneman-jpsp1993.pdf",
+              "locator": "PDF p.10, lines 1057-1067"
+            }
+          ],
+          "assessment": "Awareness of elapsed length does not require substantial evaluative weight."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Brief affective episodes and remembered evaluations",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-042",
+              "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fredr-kahneman-jpsp1993.pdf",
+              "locator": "PDF pp.1-2 and 10, lines 6-14, 147-148, 1029-1033"
+            }
+          ],
+          "assessment": "Film-clip evaluations show limited independent duration effects."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "No automatic extension to months",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-042",
+              "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fredr-kahneman-jpsp1993.pdf",
+              "locator": "PDF p.10, lines 1068-1070"
+            }
+          ],
+          "assessment": "The authors explicitly caution about longer time scales."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "Retrospective affective evaluation, not inability to remember duration. Brief-episode scope and extrapolation caution are explicit.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "editorial",
+            "note": "The study’s remembered-experience evaluations establish the factual memory connection; memory is an editorial parent.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-042"
+            ],
+            "target_id": "Q492",
+            "type": "broader_topic"
+          },
+          "resolved_target_definition": {
+            "id": "Q492",
+            "label": "memory",
+            "original_description": "mental faculties and processes involved in storing and retrieving information",
+            "aliases": [
+              "Memory",
+              "memory"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/Q492"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "The target is mental memory. Retrospective evaluation fits that navigation parent; the relation is honestly editorial.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-042",
+              "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fredr-kahneman-jpsp1993.pdf",
+              "locator": "General Discussion, printed p.54 / PDF p.10, extracted lines 1029-1033 and 1057-1070; definition, printed p.46 / PDF p.2, lines 100-107"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "local:catalog:boston-immediate-acceptance-mechanism": {
+      "id": "local:catalog:boston-immediate-acceptance-mechanism",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "e0aab67e26626ea69cf97e3f01507f38101895e7519eebd8952158420feb37ec",
+      "initial_source_bundle_sha256": "56a0cf951bb260dbccbcd38816d2c383955aabb10e86f0183bfd204be0b8fefb",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Boston immediate acceptance mechanism",
+      "initial_body_word_count": 42,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-016",
+          "title": "Abdulkadiroglu and Sonmez (2003), School Choice: A Mechanism Design Approach",
+          "original_url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+          "locator": "I.A, printed pp.732-733 / PDF pp.5-6, extracted lines 362-432; II.B steps and propositions, printed pp.736-737 / PDF pp.9-10, lines 628-710",
+          "inspection_mode": "web.run actual extracted primary-paper PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:13:19.361725+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Permanent first-choice then later-choice admissions",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "I.A, PDF pp.5-6, lines 362-416"
+            }
+          ],
+          "assessment": "Only remaining students and seats proceed to later rounds."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Higher later priority cannot displace an admission",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "I.A, PDF p.6, lines 417-423"
+            }
+          ],
+          "assessment": "Ranking the school later can forfeit priority."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Truthful reporting is not generally dominant",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "I.A, PDF p.6, lines 417-432"
+            }
+          ],
+          "assessment": "The mechanism is not strategy-proof."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "Historical school-choice immediate acceptance, explicitly the 2003 description; no claim about current Boston policy.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "editorial",
+            "note": "The source analyzes the strategy incentives of this allocation mechanism; game theory is an editorial navigation parent.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-016"
+            ],
+            "target_id": "local:authored:000608",
+            "type": "broader_topic"
+          },
+          "resolved_target_definition": {
+            "id": "local:authored:000608",
+            "label": "Game theory",
+            "original_description": "Studying strategic interactions among decision-makers.",
+            "aliases": [
+              "Game theory"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/local:authored:000608"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "The target covers strategic interaction; source incentive analysis fits the openly editorial game-theory parent.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "I.A, printed pp.732-733 / PDF pp.5-6, extracted lines 362-432; II.B steps and propositions, printed pp.736-737 / PDF pp.9-10, lines 628-710"
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says printed pp.732-733 / PDF pp.4-5; the inspected document requires I.A, printed pp.732-733 / PDF pp.5-6, lines 362-432.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "PDF pp.5-6"
+            }
+          ],
+          "proposed_repair": "Use I.A, printed pp.732-733 / PDF pp.5-6, lines 362-432 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "outcome": "needs_repair",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "local:catalog:moral-hazard-in-teams": {
+      "id": "local:catalog:moral-hazard-in-teams",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "89a34e4ee6a2f3146bf0c541ade1511638b042e129c6a402fd5df7fcf518509e",
+      "initial_source_bundle_sha256": "a27de094327ed88f478ecfe22793fe247f208e5ebe1daadf64d3b617267dddc1",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Moral hazard in teams",
+      "initial_body_word_count": 40,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-018",
+          "title": "Holmstrom (1982), Moral Hazard in Teams",
+          "original_url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+          "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; PDF p.1 is a JSTOR cover",
+          "inspection_mode": "Independent visual reading of frozen paper image and auditor-rendered cached PDF pages 1-3; pypdf found no extractable text",
+          "post_inspection_recorded_at": "2026-10-09T03:03:10+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0,
+          "pages_inspected_1based": [
+            1,
+            2,
+            3
+          ],
+          "cached_sha256": "f46c4b7821e5016f1dca5c24263d52bdaac0f0b7621264c316d69239535a242b",
+          "cached_file": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/frozen-initial/research/systems/teams-source.pdf",
+          "cache_hash_matches_frozen_manifest": true
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Hidden actions with observable joint output",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "printed pp.324-325 / PDF pp.2-3, Introduction"
+            }
+          ],
+          "assessment": "Joint output alone can leave individual inputs unidentified."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Balanced sharing can induce free riding",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "printed p.325 / PDF p.3, Introduction paragraphs 2-3"
+            }
+          ],
+          "assessment": "Fully sharing output sustains inefficient noncooperative incentives."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Team setting changes contract design",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "printed pp.324-325 / PDF pp.2-3, Abstract and Introduction"
+            }
+          ],
+          "assessment": "The principal can enforce nonbalanced incentive schemes."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "Multiagent hidden-action incentive problem in Holmström’s model. The balanced-budget claim is model-qualified.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "The introduction explicitly defines the paper’s setting as a multiagent extension of the moral-hazard problem.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-018"
+            ],
+            "target_id": "local:catalog:moral-hazard",
+            "type": "facet_of"
+          },
+          "resolved_target_definition": {
+            "id": "local:catalog:moral-hazard",
+            "label": "Moral hazard",
+            "original_description": null,
+            "aliases": [
+              "Moral hazard"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/local:catalog:moral-hazard",
+            "candidate_definitions": [
+              "Moral hazard arises when protection from a loss changes incentives to avoid it. An insured business might invest less in theft prevention because an insurer bears part of the cost. Deductibles leave some losses with the policyholder, potentially preserving incentives for care.",
+              "Moral hazard describes how protection from consequences can change behavior after an agreement. Insurance may reduce the incentive to prevent a loss when another party pays much of the cost. Insurers use monitoring and cost sharing to address this problem, although they cannot observe every risky action."
+            ]
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "The baseline moral-hazard cards use insurance examples, not another homonymous concept. The paper explicitly identifies its multiagent case as moral hazard.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; PDF p.1 is a JSTOR cover"
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says printed p.324 / PDF p.1; the inspected document requires Abstract and Introduction, printed pp.324-325 / PDF pp.2-3.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "Cached PDF pp.1-3: cover, printed 324, printed 325"
+            }
+          ],
+          "proposed_repair": "Use Abstract and Introduction, printed pp.324-325 / PDF pp.2-3 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "outcome": "needs_repair",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "local:catalog:merkle-inclusion-proof": {
+      "id": "local:catalog:merkle-inclusion-proof",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "c9ff203c5c6a2619613786f5725fbc5d730a6ba2859f2110203ec1805630457b",
+      "initial_source_bundle_sha256": "8f51fdb5f9f854404a5fa51363049026192aae46e9ddcd273951d3ef2e3b9abe",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Merkle inclusion proof",
+      "initial_body_word_count": 40,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-008",
+          "title": "RFC 9162: Certificate Transparency Version 2.0",
+          "original_url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+          "locator": "RFC 9162 sections 2.1.1 (domain separation), 2.1.3, 2.1.3.2 and 2.1.4; extracted lines 256-287 and 302-344",
+          "inspection_mode": "web.run actual official HTML passages",
+          "post_inspection_recorded_at": "2026-10-09T03:03:10+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Sibling hashes reconstruct the root from a leaf",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-008",
+              "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+              "locator": "RFC 9162 section 2.1.3"
+            }
+          ],
+          "assessment": "The path supplies missing nodes along the route to the root."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Root match establishes membership under assumptions",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-008",
+              "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+              "locator": "sections 2.1.1 and 2.1.3.2"
+            }
+          ],
+          "assessment": "Verification uses the designated tree size, leaf index and root; domain separation protects the hash construction."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Inclusion does not establish entire earlier-tree preservation",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-008",
+              "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+              "locator": "section 2.1.4"
+            }
+          ],
+          "assessment": "Append-only preservation is the separate consistency-proof task."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "One-leaf cryptographic membership proof. Authenticated-root and hash-assumption qualifications distinguish it from unconditional proof or append-only consistency.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "editorial",
+            "note": "One-leaf membership differs from append-only consistency; cryptography is the broad parent.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-008"
+            ],
+            "target_id": "local:authored:000527",
+            "type": "broader_topic"
+          },
+          "resolved_target_definition": {
+            "id": "local:authored:000527",
+            "label": "Cryptography",
+            "original_description": "Protecting information through mathematical encoding and verification techniques.",
+            "aliases": [
+              "Cryptography"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/local:authored:000527"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "The pinned cryptography target includes mathematical verification. An editorial parent is suitable; the source does not assert the catalog hierarchy.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-008",
+              "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+              "locator": "RFC 9162 sections 2.1.1 (domain separation), 2.1.3, 2.1.3.2 and 2.1.4; extracted lines 256-287 and 302-344"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "local:catalog:http-structured-field-dictionary": {
+      "id": "local:catalog:http-structured-field-dictionary",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "59ffa021c7fcb8c29b48e3ff03d59797103d6730105923ac5ce44ee435f558be",
+      "initial_source_bundle_sha256": "3b05980876d83f57629541a4091085b885a7cf4e40d5379588e1857a59656d23",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "HTTP structured field dictionary",
+      "initial_body_word_count": 38,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-048",
+          "title": "RFC 9651: Structured Field Values for HTTP",
+          "original_url": "https://www.rfc-editor.org/rfc/rfc9651.html",
+          "locator": "RFC 9651 sections 1, 2, 2.4, 3, 3.1.1 and 3.2; extracted lines 158-199, 243-259, 291 and 330-336",
+          "inspection_mode": "web.run actual official HTML passages",
+          "post_inspection_recorded_at": "2026-10-09T03:03:10+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Ordered, unique textual keys and typed values",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-048",
+              "url": "https://www.rfc-editor.org/rfc/rfc9651.html",
+              "locator": "RFC 9651 section 3.2"
+            }
+          ],
+          "assessment": "Keys are unique within an ordered map; values have specified types."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Items or Inner Lists as values",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-048",
+              "url": "https://www.rfc-editor.org/rfc/rfc9651.html",
+              "locator": "sections 3 and 3.1.1"
+            }
+          ],
+          "assessment": "Containers admit Items and parameterizable Inner Lists."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Field semantics with common representation parser",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-048",
+              "url": "https://www.rfc-editor.org/rfc/rfc9651.html",
+              "locator": "sections 1, 2 and 3.2"
+            }
+          ],
+          "assessment": "Common syntax is parsed generically; field definitions assign semantics."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "RFC 9651 HTTP Structured Fields Dictionary. Shared representation parsing is distinct from field-specific semantics; this is not an arbitrary JSON dictionary.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "The specification explicitly defines Dictionaries as a top-level representation for HTTP fields.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-048"
+            ],
+            "target_id": "Q8777",
+            "type": "facet_of"
+          },
+          "resolved_target_definition": {
+            "id": "Q8777",
+            "label": "Hypertext Transfer Protocol",
+            "original_description": "application-layer protocol for transferring web resources",
+            "aliases": [
+              "Hypertext Transfer Protocol"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/Q8777"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "Q8777 is HTTP, the protocol named by the normative specification. Dictionaries are expressly a representation for its fields; source_asserted facet_of fits.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-048",
+              "url": "https://www.rfc-editor.org/rfc/rfc9651.html",
+              "locator": "RFC 9651 sections 1, 2, 2.4, 3, 3.1.1 and 3.2; extracted lines 158-199, 243-259, 291 and 330-336"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "local:catalog:tennis-service-let": {
+      "id": "local:catalog:tennis-service-let",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "02a9dd767d44d67c90ac56821df154df8238d5dbc1288886ea94201c36772d04",
+      "initial_source_bundle_sha256": "568ff39753a79a8dde58f0cb0ba27d832f143f05954f1319d0685399745b04e8",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Tennis service let",
+      "initial_body_word_count": 43,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-026",
+          "title": "ITF Rules of Tennis 2026",
+          "original_url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "locator": "Rule 22, printed p.9 / PDF p.12, lines 342-350; Appendix VI No-Let alternative, printed p.27 / PDF p.30, lines 998-1004; Wheelchair Tennis a, printed p.16 / PDF p.19, lines 565-571; ordinary boundary rules 24(c)-25, printed pp.10-11 / PDF pp.13-14, lines 363-364 and 414-430; mixed-player exception g, printed p.17 / PDF p.20, lines 634-639",
+          "inspection_mode": "web.run actual official 2026 rulebook PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:13:19.361725+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Otherwise valid net-touching serve is a standard service let",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "Rule 22(a), printed p.9 / PDF p.12"
+            }
+          ],
+          "assessment": "Net-touching otherwise-good service is a listed let case."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Only that service is repeated",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "Rule 22, PDF p.12, lines 348-349"
+            }
+          ],
+          "assessment": "The particular service does not count."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Previous first-service fault survives a second-service let",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "Rules 22-23, PDF p.12, lines 348-353"
+            }
+          ],
+          "assessment": "A previous fault remains; the second-service exception prevents restarting the point."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "A positive rule-22 case, not an exhaustive definition of all service lets. Standard-rules scope excludes the approved Appendix VI no-let alternative.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "Rule 22 defines the service let as part of the tennis rules.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-026"
+            ],
+            "target_id": "Q847",
+            "type": "facet_of"
+          },
+          "resolved_target_definition": {
+            "id": "Q847",
+            "label": "Tennis",
+            "original_description": "Developing racket skills and strategies in tennis.",
+            "aliases": [
+              "Tennis"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/Q847"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "The baseline target is tennis. Rule 22 explicitly defines this rule within that sport, supporting source_asserted facet_of.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "Rule 22, printed p.9 / PDF p.12, lines 342-350; Appendix VI No-Let alternative, printed p.27 / PDF p.30, lines 998-1004; Wheelchair Tennis a, printed p.16 / PDF p.19, lines 565-571; ordinary boundary rules 24(c)-25, printed pp.10-11 / PDF pp.13-14, lines 363-364 and 414-430; mixed-player exception g, printed p.17 / PDF p.20, lines 634-639"
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says printed p.9 / PDF p.11; the inspected document requires Rule 22, printed p.9 / PDF p.12, lines 342-350.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "Rule 22 on P11 (zero-based) = PDF p.12"
+            }
+          ],
+          "proposed_repair": "Use Rule 22, printed p.9 / PDF p.12, lines 342-350 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "outcome": "needs_repair",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "local:catalog:duckworth-lewis-stern-method": {
+      "id": "local:catalog:duckworth-lewis-stern-method",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "e63af437381765254aed45acb7d1f6d0b3d9900f47b70bc6db23ba8cb4946998",
+      "initial_source_bundle_sha256": "e322851cd0f25887b6f64cabe68e943f9cf1289dc62a675a63058b7c246a4827",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Duckworth–Lewis–Stern method",
+      "initial_body_word_count": 36,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-028",
+          "title": "ICC: Duckworth Lewis Stern",
+          "original_url": "https://www.icc-cricket.com/about/cricket/rules-and-regulations/duckworth-lewis-stern?appview=true",
+          "locator": "Duckworth Lewis Stern introduction, extracted lines 9-16",
+          "inspection_mode": "web.run actual official ICC HTML passage",
+          "post_inspection_recorded_at": "2026-10-09T03:03:10+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        },
+        {
+          "source_id": "research-batch-008-systems::systems-source-049",
+          "title": "ICC: Duckworth-Lewis-Stern method; Standard Edition fallback methodology",
+          "original_url": "https://images.icc-cricket.com/image/upload/prd/orlbya4cqyhqaceje3b2.pdf",
+          "locator": "Opening status statement and section 1, printed p.6.1 / PDF p.1, extracted lines 1-20",
+          "inspection_mode": "web.run actual official ICC PDF passage",
+          "post_inspection_recorded_at": "2026-10-09T03:03:10+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Adjusts interrupted limited-overs targets",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-049",
+              "url": "https://images.icc-cricket.com/image/upload/prd/orlbya4cqyhqaceje3b2.pdf",
+              "locator": "PDF p.1, lines 1-20"
+            }
+          ],
+          "assessment": "The methodology sets revised targets after reduced available overs."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Stern calculator versus Standard fallback and resources",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-049",
+              "url": "https://images.icc-cricket.com/image/upload/prd/orlbya4cqyhqaceje3b2.pdf",
+              "locator": "PDF p.1, lines 1-20"
+            }
+          ],
+          "assessment": "Calculator use and fallback status are explicit; resources depend on remaining overs and lost wickets."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Edition affects interpretation",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-049",
+              "url": "https://images.icc-cricket.com/image/upload/prd/orlbya4cqyhqaceje3b2.pdf",
+              "locator": "PDF p.1, lines 9-13"
+            }
+          ],
+          "assessment": "The printed regulations chiefly describe the Standard Edition, with specified shared clauses."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "Interrupted limited-overs target adjustment, with the current linked ICC document’s Stern calculator separated from its published D-L Standard fallback.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "ICC explicitly describes its adopted DLS method for interrupted cricket matches.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-028"
+            ],
+            "target_id": "local:authored:000291",
+            "type": "facet_of"
+          },
+          "resolved_target_definition": {
+            "id": "local:authored:000291",
+            "label": "Cricket",
+            "original_description": "Exploring batting, bowling and fielding within cricket formats.",
+            "aliases": [
+              "Cricket"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/local:authored:000291"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "The target is the sport cricket, not a mathematical namesake. ICC expressly situates adopted DLS in interrupted cricket matches; facet_of is supported.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-028",
+              "url": "https://www.icc-cricket.com/about/cricket/rules-and-regulations/duckworth-lewis-stern?appview=true",
+              "locator": "Duckworth Lewis Stern introduction, extracted lines 9-16"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "local:catalog:generation-effect": {
+      "id": "local:catalog:generation-effect",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "d86c201535919e51b8ce1d422841bd28c551606ecfa244b92945c3c75a4653b8",
+      "initial_source_bundle_sha256": "ca46e9d1db78a9d0ce84bbea212c9d684e98acf1a021b18861cc7501b998ba4f",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Generation effect",
+      "initial_body_word_count": 40,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-033",
+          "title": "Norman J. Slamecka (1992), Delineation of the Generation Effect—Citation Classic",
+          "original_url": "https://garfield.library.upenn.edu/classics1992/A1992HN61400001.pdf",
+          "locator": "Single PDF page, abstract lines 3-8; author retrospective lines 26-43, 67-79 and 80-94 (cue procedure and limiting conditions)",
+          "inspection_mode": "web.run actual extracted PDF of original investigator commentary; OCR irregularities present but the relevant statements readable",
+          "post_inspection_recorded_at": "2026-10-09T03:05:25+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Cue-based generation can improve word memory",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-033",
+              "url": "https://garfield.library.upenn.edu/classics1992/A1992HN61400001.pdf",
+              "locator": "single PDF p.1, lines 67-79"
+            }
+          ],
+          "assessment": "Cues and a relation rule constrained generation of comparable words."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Experiments show recognition and recall advantages",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-033",
+              "url": "https://garfield.library.upenn.edu/classics1992/A1992HN61400001.pdf",
+              "locator": "single PDF p.1, abstract lines 3-8"
+            }
+          ],
+          "assessment": "The reported comparisons include both recognition and recall."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Occurrence and size depend on conditions",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-033",
+              "url": "https://garfield.library.upenn.edu/classics1992/A1992HN61400001.pdf",
+              "locator": "single PDF p.1, lines 80-94"
+            }
+          ],
+          "assessment": "The investigator describes limiting conditions and sensitivity to experimental design."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "Memory for generated versus read words in experimental encoding conditions. The body uses can and states limitations, without promising a universal study technique.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "The author describes the original experiments as comparisons of memory for generated and read words.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-033"
+            ],
+            "target_id": "Q492",
+            "type": "broader_topic"
+          },
+          "resolved_target_definition": {
+            "id": "Q492",
+            "label": "memory",
+            "original_description": "mental faculties and processes involved in storing and retrieving information",
+            "aliases": [
+              "Memory",
+              "memory"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/Q492"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "The source directly concerns remembering words; Q492 denotes mental storage and retrieval. The memory parent is semantically appropriate and source-grounded.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-033",
+              "url": "https://garfield.library.upenn.edu/classics1992/A1992HN61400001.pdf",
+              "locator": "Single PDF page, abstract lines 3-8; author retrospective lines 26-43, 67-79 and 80-94 (cue procedure and limiting conditions)"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      },
+      "nonblocking_citation_note": "The cited page is correct. Adding lines 67-94 to the evidence locator would make cue and limitation support more precise."
+    },
+    "Q11413": {
+      "id": "Q11413",
+      "stratum": "targeted",
+      "initial_card_version": 3,
+      "initial_card_sha256": "3562713e07f3ceb5930db755bdf71f06816d295fe4de1d70d310b50e7cd7bd6d",
+      "initial_source_bundle_sha256": "d6c5b44ff9a8d7783a583fdc8c36fb859d5377409afc922be0c0b41cdbb766b8",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Go (board game)",
+      "initial_body_word_count": 41,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-029",
+          "title": "British Go Association: How to Play",
+          "original_url": "https://britgo.org/intro/intro2.html",
+          "locator": "British Go Association How to Play: The rules lines 11-17; Capturing stones and counting liberties line 25; Strings lines 40-41; Capturing strings lines 49-54",
+          "inspection_mode": "web.run actual authoritative association HTML passages",
+          "post_inspection_recorded_at": "2026-10-09T03:05:25+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Two-player stones share liberties when connected",
+          "status": "supported_with_qualification_gap",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-029",
+              "url": "https://britgo.org/intro/intro2.html",
+              "locator": "The rules lines 11-12; liberties line 25; Strings line 40"
+            }
+          ],
+          "assessment": "The sense is correct, but solid connections and liberties are horizontal or vertical only."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "No-liberty connected string is captured",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-029",
+              "url": "https://britgo.org/intro/intro2.html",
+              "locator": "Capturing strings lines 49-54"
+            }
+          ],
+          "assessment": "A solidly connected string is the capture unit."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Guide’s territory score uses enclosed space and prisoners",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-029",
+              "url": "https://britgo.org/intro/intro2.html",
+              "locator": "The rules line 17"
+            }
+          ],
+          "assessment": "This guide counts vacant territory and captured stones; scope is properly limited."
+        }
+      ],
+      "meaning_check": {
+        "status": "needs_repair",
+        "assessment": "The board-game sense matches the pinned baseline and approved identity; programming-language Go is excluded. Orthogonal adjacency is missing from the body.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "status": "not_applicable",
+          "assessment": "No attached relationships in the frozen card."
+        }
+      ],
+      "findings": [
+        {
+          "field": "card, sentence 1",
+          "significance": "moderate_meaning",
+          "issue": "Unqualified adjacency can include diagonals, which do not join strings or supply shared liberties in the cited rules.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-029",
+              "url": "https://britgo.org/intro/intro2.html",
+              "locator": "Capturing stones line 25; Strings line 40"
+            }
+          ],
+          "proposed_repair": "Replace the first sentence with: Go is a two-player board game in which stones of one color connected horizontally or vertically share liberties: empty neighboring intersections along grid lines. Keep the qualified scoring sentence.",
+          "proposed_body": "Go is a two-player board game in which stones of one color connected horizontally or vertically share liberties: empty neighboring intersections along grid lines. Filling all liberties captures the string. Under this guide’s territory-scoring rules, enclosed empty points and prisoners contribute to the score.",
+          "proposed_body_word_count": 44
+        }
+      ],
+      "outcome": "needs_repair",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "Q65123731": {
+      "id": "Q65123731",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "8dd45469c297c1bbbcf011dffb304d5f60c824b990bd4c9bc5b85f84b3d39bf4",
+      "initial_source_bundle_sha256": "f2720b46c609cb37260efb0800e0417ed417d35b8cbc7476ef40d4aae4b87a6e",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Gale–Shapley deferred acceptance algorithm",
+      "initial_body_word_count": 36,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-009",
+          "title": "Dan Quint, Econ 690 Lecture 14: Matching",
+          "original_url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+          "locator": "2.1 Environment, PDF p.3, lines 32-46; 2.2 Deferred Acceptance, PDF p.4, lines 48-66; section 3 responsive multiple-position model, PDF p.7, lines 117-141; section 4 theorem, PDF p.8, lines 143-159",
+          "inspection_mode": "web.run actual university educational PDF text; page labels are converted from zero-based P indices to one-based PDF pages",
+          "post_inspection_recorded_at": "2026-10-09T03:05:25+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0,
+          "limitations": "Two PDF screenshot attempts (pages 4 and 8) returned Cache miss. Text passages were accessible and inspected; no visual inspection of these pages is claimed."
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Each proposer approaches best remaining choice",
+          "status": "supported_with_qualification_gap",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "section 2.2, PDF p.4, lines 50-55"
+            }
+          ],
+          "assessment": "Later-round proposals come only from rejected, presently unmatched proposers."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Recipient provisionally retains preferred offer",
+          "status": "supported_with_qualification_gap",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "section 2.2, PDF p.4, lines 52-57"
+            }
+          ],
+          "assessment": "New acceptable offers are compared with any previously held offer."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Strict one-to-one rankings yield stability",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "section 2.1, PDF p.3; section 2.2, PDF p.4, lines 60-66"
+            }
+          ],
+          "assessment": "The qualified algorithm terminates with no blocking pair."
+        }
+      ],
+      "meaning_check": {
+        "status": "needs_repair",
+        "assessment": "Standard one-to-one deferred acceptance. Strict preferences are present, but proposal eligibility and comparison with held offers should be explicit.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "Deferred acceptance solves the stable matching problem.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-009"
+            ],
+            "target_id": "Q620702",
+            "type": "broader_topic"
+          },
+          "resolved_target_definition": {
+            "id": "Q620702",
+            "label": "Stable matching problem",
+            "original_description": "mathematical problem of finding a stable matching between two equally sized sets of elements given an ordering of preferences for each element",
+            "aliases": [
+              "Stable matching problem"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/Q620702"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "Q620702 is the pinned one-to-one stable matching problem. This algorithm solves that model, so the source_asserted parent is semantically supported.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "2.1 Environment, PDF p.3, lines 32-46; 2.2 Deferred Acceptance, PDF p.4, lines 48-66; section 3 responsive multiple-position model, PDF p.7, lines 117-141; section 4 theorem, PDF p.8, lines 143-159"
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "field": "card, sentences 1-2",
+          "significance": "moderate_mechanism",
+          "issue": "Without unmatched/rejected and already-held qualifiers, the rounds can be read as letting held proposers continue or recipients compare only fresh offers.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "section 2.2, PDF p.4, lines 50-57"
+            }
+          ],
+          "proposed_repair": "Change each proposer to each unmatched proposer; say recipients retain their best acceptable offer received so far, including an offer held from a previous round.",
+          "proposed_body": "Gale–Shapley deferred acceptance starts with each unmatched proposer approaching their best remaining acceptable choice. Recipients hold the best acceptable offer received so far and reject others. With fixed strict rankings in the standard one-to-one model, these rounds produce a stable matching.",
+          "proposed_body_word_count": 41
+        },
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says section 2.2 / PDF p.3; the inspected document requires section 2.2 / PDF p.4, lines 48-66; model section 2.1 / PDF p.3, lines 32-46.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "P3 (zero-based) = PDF p.4"
+            }
+          ],
+          "proposed_repair": "Use section 2.2 / PDF p.4, lines 48-66; model section 2.1 / PDF p.3, lines 32-46 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "outcome": "needs_repair",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "local:catalog:complex-contagion": {
+      "id": "local:catalog:complex-contagion",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "82415c442cf0ed6e29833278268b0e8ea45c4f9c24c91300b35054a59f7ea4a1",
+      "initial_source_bundle_sha256": "2de59e8411981932e9366af83645fb097806b085d3907ef2e26c1ffa42e90ce5",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Complex contagion",
+      "initial_body_word_count": 38,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-045",
+          "title": "Centola and Macy (2007), Complex Contagions and the Weakness of Long Ties",
+          "original_url": "https://ndg.asc.upenn.edu/wp-content/uploads/2016/04/Centola-Macy-2007-AJS.pdf",
+          "locator": "Abstract and Introduction, printed pp.702-703 / PDF pp.1-2, lines 9-19 and 45-59; distinct-source definition, printed p.707 / PDF p.6, lines 187-212",
+          "inspection_mode": "web.run actual extracted primary-paper PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:05:25+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Multiple contacts reinforce adoption",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-045",
+              "url": "https://ndg.asc.upenn.edu/wp-content/uploads/2016/04/Centola-Macy-2007-AJS.pdf",
+              "locator": "PDF pp.1-2, lines 12-19 and 45-59; PDF p.6, lines 187-212"
+            }
+          ],
+          "assessment": "The threshold concerns distinct sources of activation."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "An isolated long tie may inform without enough reinforcement",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-045",
+              "url": "https://ndg.asc.upenn.edu/wp-content/uploads/2016/04/Centola-Macy-2007-AJS.pdf",
+              "locator": "Abstract and Introduction, PDF pp.1-2"
+            }
+          ],
+          "assessment": "A shortcut’s informational reach alone need not meet adoption thresholds."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Multiple connected contacts can affect network spread",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-045",
+              "url": "https://ndg.asc.upenn.edu/wp-content/uploads/2016/04/Centola-Macy-2007-AJS.pdf",
+              "locator": "PDF pp.1-2, lines 15-19 and 53-59"
+            }
+          ],
+          "assessment": "Bridge width and reinforcement matter conditionally in formal models."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "Social transmission requiring multiple distinct sources, not repeated exposures to one source. Formal-model scope and conditional may/can language avoid a universal empirical claim.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "The authors explicitly distinguish simple and complex social contagions, with complex contagion requiring social affirmation from multiple carriers.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-045"
+            ],
+            "target_id": "Q106283193",
+            "type": "broader_topic"
+          },
+          "resolved_target_definition": {
+            "id": "Q106283193",
+            "label": "Social contagion",
+            "original_description": "behavior, emotions, or conditions spreading spontaneously through a group or network",
+            "aliases": [
+              "Social contagion"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/Q106283193"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "The target definition concerns behaviors spreading through a network. The authors expressly classify complex contagion within social contagions, supporting the parent.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-045",
+              "url": "https://ndg.asc.upenn.edu/wp-content/uploads/2016/04/Centola-Macy-2007-AJS.pdf",
+              "locator": "Abstract and Introduction, printed pp.702-703 / PDF pp.1-2, lines 9-19 and 45-59; distinct-source definition, printed p.707 / PDF p.6, lines 187-212"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "local:catalog:dutch-roll": {
+      "id": "local:catalog:dutch-roll",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "09d8822af8de422c98da29b208d7c4f8be750f3dec1bdafe3f1126a0488de05c",
+      "initial_source_bundle_sha256": "fbe3fb8ab5f4bc164809ee78439b6a8f2211ffd31b3f15c2cd8a16d1fecf9630",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Dutch roll",
+      "initial_body_word_count": 38,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-020",
+          "title": "FAA Pilot’s Handbook of Aeronautical Knowledge, Chapter 5: Aerodynamics of Flight",
+          "original_url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+          "locator": "Chapter 5 introduction, printed p.5-1 / PDF p.1; Free Directional Oscillations (Dutch Roll), printed p.5-20 / PDF p.20",
+          "inspection_mode": "Independent pypdf text extraction from frozen official FAA PDF; auditor-rendered PDF p.20 visually read",
+          "post_inspection_recorded_at": "2026-10-09T03:13:19.361725+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0,
+          "pages_inspected_1based": [
+            1,
+            20
+          ],
+          "cached_sha256": "672c1a05653b628c20eef81cc42afaafbde98bf54c7e09f9c7ad1349292c1a37",
+          "cached_file": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/frozen-initial/research/systems/faa-aerodynamics.pdf",
+          "cache_hash_matches_frozen_manifest": true
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Coupled rolling and yawing oscillation",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-020",
+              "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+              "locator": "printed p.5-20 / PDF p.20, Dutch Roll paragraphs 1-2"
+            }
+          ],
+          "assessment": "The handbook describes two out-of-phase roll/yaw oscillations."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Damping can be weak depending on stability properties",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-020",
+              "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+              "locator": "printed p.5-20 / PDF p.20, paragraph 1"
+            }
+          ],
+          "assessment": "Weak or strong damping depends on the particular aircraft."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Some aircraft use yaw dampers",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-020",
+              "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+              "locator": "printed p.5-20 / PDF p.20, paragraph 3"
+            }
+          ],
+          "assessment": "Aircraft with continuing tendencies commonly carry yaw dampers."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "Coupled aircraft roll/yaw mode, with aircraft-dependent damping and some-aircraft yaw-damper use. It does not imply every aircraft requires a damper.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "This mode is explicitly taught within the handbook’s Aerodynamics of Flight chapter.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-020"
+            ],
+            "target_id": "Q8424",
+            "type": "broader_topic"
+          },
+          "resolved_target_definition": {
+            "id": "Q8424",
+            "label": "Aerodynamics",
+            "original_description": "branch of dynamics concerned with studying the motion of air",
+            "aliases": [
+              "Aerodynamics"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/Q8424"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "Q8424 denotes aerodynamics. The handbook explicitly teaches this mode in Aerodynamics of Flight, fitting the source_asserted parent.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-020",
+              "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+              "locator": "Chapter 5 introduction, printed p.5-1 / PDF p.1; Free Directional Oscillations (Dutch Roll), printed p.5-20 / PDF p.20"
+            }
+          ]
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    },
+    "local:catalog:rural-hospitals-theorem": {
+      "id": "local:catalog:rural-hospitals-theorem",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "efa14d7fc3aeade636a25b387065101cc86aeebd62afca01d79590d6a77be7ec",
+      "initial_source_bundle_sha256": "04cfe4d7d8d8ff1fca946736f9b422ba8bd8565c6d77b1323895ecec826a7ae4",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Rural hospitals theorem",
+      "initial_body_word_count": 38,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-009",
+          "title": "Dan Quint, Econ 690 Lecture 14: Matching",
+          "original_url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+          "locator": "2.1 Environment, PDF p.3, lines 32-46; 2.2 Deferred Acceptance, PDF p.4, lines 48-66; section 3 responsive multiple-position model, PDF p.7, lines 117-141; section 4 theorem, PDF p.8, lines 143-159",
+          "inspection_mode": "web.run actual university educational PDF text; page labels are converted from zero-based P indices to one-based PDF pages",
+          "post_inspection_recorded_at": "2026-10-09T03:05:25+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0,
+          "limitations": "Two PDF screenshot attempts (pages 4 and 8) returned Cache miss. Text passages were accessible and inspected; no visual inspection of these pages is claimed."
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Same filled count at each hospital under the qualified model",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "section 3, PDF p.7, lines 117-141; section 4, PDF p.8, lines 155-157"
+            }
+          ],
+          "assessment": "The responsive fixed-position model and invariant filled positions support the count claim."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Undersubscribed hospitals receive the same doctors",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "section 4, PDF p.8, lines 158-159"
+            }
+          ],
+          "assessment": "The theorem gives this stronger undersubscription invariant."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "Within a fixed many-to-one hospital–doctor market: fixed quotas, strict individual preferences and responsive rankings. The card states the key model limits.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "Invariance theorem about stable hospital-doctor matchings.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-009"
+            ],
+            "target_id": "Q620702",
+            "type": "facet_of"
+          },
+          "resolved_target_definition": {
+            "id": "Q620702",
+            "label": "Stable matching problem",
+            "original_description": "mathematical problem of finding a stable matching between two equally sized sets of elements given an ordering of preferences for each element",
+            "aliases": [
+              "Stable matching problem"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/Q620702"
+          },
+          "assertion_kind_check": "needs_editorial_downgrade",
+          "direction_and_meaning_check": "needs_repair",
+          "assessment": "The pinned Q620702 definition is equally-sized one-to-one matching. This theorem concerns its many-to-one extension; the existing source_asserted facet_of stretches that target.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "2.1 Environment, PDF p.3, lines 32-46; 2.2 Deferred Acceptance, PDF p.4, lines 48-66; section 3 responsive multiple-position model, PDF p.7, lines 117-141; section 4 theorem, PDF p.8, lines 143-159"
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "field": "relations[0]",
+          "significance": "moderate_relationship",
+          "issue": "The baseline target is the narrower one-to-one problem; the cited theorem belongs to a many-to-one extension, leaving a parent-coverage gap.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "section 3, PDF p.7; section 4, PDF p.8"
+            }
+          ],
+          "proposed_repair": "Retain Q620702 only as related_to with assertion editorial and a note identifying the many-to-one extension. Do not broaden the pinned baseline target."
+        },
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says section 4 / PDF p.7, lines 142-166; the inspected document requires section 3 assumptions / PDF p.7, lines 117-141; section 4 theorem / PDF p.8, lines 143-159.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "P6-P7 (zero-based) = PDF pp.7-8"
+            }
+          ],
+          "proposed_repair": "Use section 3 assumptions / PDF p.7, lines 117-141; section 4 theorem / PDF p.8, lines 143-159 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "outcome": "needs_repair",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      }
+    }
+  },
+  "supplementary_records": {
+    "local:catalog:top-trading-cycles": {
+      "id": "local:catalog:top-trading-cycles",
+      "stratum": "supplementary_shared_source",
+      "initial_card_version": 1,
+      "initial_card_sha256": "02abda6f7e7539270709d90c7f70b6f8fbb6a84bf7f32c9d7ba08f5bced9b7cb",
+      "initial_source_bundle_sha256": "b469518343f1b2cc1ae6ca2f04eb1d37d12f6adb8e8e1580ba9662ba01be031c",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Top trading cycles",
+      "initial_body_word_count": 39,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-016",
+          "title": "Abdulkadiroglu and Sonmez (2003), School Choice: A Mechanism Design Approach",
+          "original_url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+          "locator": "I.A, printed pp.732-733 / PDF pp.5-6, extracted lines 362-432; II.B steps and propositions, printed pp.736-737 / PDF pp.9-10, lines 628-710",
+          "inspection_mode": "web.run actual extracted primary-paper PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:13:19.361725+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Students and schools point by preference and priority",
+          "status": "supported_with_qualification_gap",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "II.B, PDF p.9, lines 628-650"
+            }
+          ],
+          "assessment": "Each student must point to her favorite remaining school."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Cycles assign seats, remove students and adjust capacities",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "II.B, PDF p.9, lines 641-655"
+            }
+          ],
+          "assessment": "Seat counters fall; zero-capacity schools also leave."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Repeating with strict rankings yields an allocation",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "I School Choice, PDF p.5, lines 309-313; II.B, PDF p.9, lines 656-660"
+            }
+          ],
+          "assessment": "The finite process ends with students assigned."
+        }
+      ],
+      "meaning_check": {
+        "status": "needs_repair",
+        "assessment": "The school-choice priority-and-capacity variant is expressly qualified. The favored remaining-school rule should be explicit, rather than arbitrary preferred schools.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "editorial",
+            "note": "Editorial parent in game theory: the source analyzes strategic reports and allocations in a mechanism-design model.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-016"
+            ],
+            "target_id": "local:authored:000608",
+            "type": "broader_topic"
+          },
+          "resolved_target_definition": {
+            "id": "local:authored:000608",
+            "label": "Game theory",
+            "original_description": "Studying strategic interactions among decision-makers.",
+            "aliases": [
+              "Game theory"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/local:authored:000608"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "Strategic reports and priority trades fit the pinned game-theory target; the relation is explicitly editorial.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "I.A, printed pp.732-733 / PDF pp.5-6, extracted lines 362-432; II.B steps and propositions, printed pp.736-737 / PDF pp.9-10, lines 628-710"
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "field": "card, sentence 1",
+          "significance": "moderate_mechanism",
+          "issue": "Preferred schools does not specify the mechanism’s highest-ranked remaining choice.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "II.B, PDF p.9, lines 628-650"
+            }
+          ],
+          "proposed_repair": "Say each remaining student points to their highest-ranked remaining school with an available seat; preserve the school-priority rule.",
+          "proposed_body": "In school-choice top trading cycles, each remaining student points to their highest-ranked school with available seats, and each school points to its highest-priority remaining student. Cycles assign seats; assigned students leave, capacities decrease, and full schools leave. Repeating these steps allocates the seats.",
+          "proposed_body_word_count": 43
+        },
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says II.B, printed pp.736-737 / PDF pp.8-9; the inspected document requires II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "P8-P9 (zero-based) = PDF pp.9-10"
+            }
+          ],
+          "proposed_repair": "Use II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "outcome": "needs_repair",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      },
+      "scope_note": "Coordinator-requested shared-source propagation review; outside the fixed 13-card sample."
+    },
+    "local:catalog:relative-performance-evaluation": {
+      "id": "local:catalog:relative-performance-evaluation",
+      "stratum": "supplementary_shared_source",
+      "initial_card_version": 1,
+      "initial_card_sha256": "2527b72e57c671e88d349a2a1037bd1ee48d129edef3c13fc3a63b0e9037787f",
+      "initial_source_bundle_sha256": "4ce51e6d14bb1766ce825fc5fa1527a94c7a902f5994dca668c234a28fd14882",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Relative performance evaluation",
+      "initial_body_word_count": 39,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-018",
+          "title": "Holmstrom (1982), Moral Hazard in Teams",
+          "original_url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+          "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; PDF p.1 is a JSTOR cover",
+          "inspection_mode": "Independent visual reading of frozen paper image and auditor-rendered cached PDF pages 1-3; pypdf found no extractable text",
+          "post_inspection_recorded_at": "2026-10-09T03:03:10+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0,
+          "pages_inspected_1based": [
+            1,
+            2,
+            3
+          ],
+          "cached_sha256": "f46c4b7821e5016f1dca5c24263d52bdaac0f0b7621264c316d69239535a242b",
+          "cached_file": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/frozen-initial/research/systems/teams-source.pdf",
+          "cache_hash_matches_frozen_manifest": true
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Contracts may combine peer and own outcomes",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "Introduction, printed p.325 / PDF p.3, relative-performance paragraph"
+            }
+          ],
+          "assessment": "Other-agent outcomes can inform the agent’s uncertainty."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "Comparison can aid incentive design",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3"
+            }
+          ],
+          "assessment": "Relative evaluation can improve informational use in compensation."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Competition’s value is informational in this model",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "printed p.325 / PDF p.3, relative-performance paragraph"
+            }
+          ],
+          "assessment": "The model assigns no intrinsic value to competition."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "Informational role of peers’ outcomes in incentive contracting, qualified to Holmström’s model; no unconditional praise of competition.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "The abstract explicitly investigates relative performance evaluation as a scheme to improve incentives using information about peer agents.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-018"
+            ],
+            "target_id": "Q1414816",
+            "type": "broader_topic"
+          },
+          "resolved_target_definition": {
+            "id": "Q1414816",
+            "label": "Incentive",
+            "original_description": "something that motivates an individual to perform an action",
+            "aliases": [
+              "Incentive"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/Q1414816"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "Q1414816 means something motivating action. Incentive contracting is the explicitly stated context, supporting the source-grounded broader topic.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; PDF p.1 is a JSTOR cover"
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says Abstract, printed p.324 / PDF p.1; the inspected document requires Abstract and Introduction, printed pp.324-325 / PDF pp.2-3.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "Cached PDF pp.1-3"
+            }
+          ],
+          "proposed_repair": "Use Abstract and Introduction, printed pp.324-325 / PDF pp.2-3 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "outcome": "needs_repair",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      },
+      "scope_note": "Coordinator-requested shared-source propagation review; outside the fixed 13-card sample."
+    },
+    "local:catalog:wheelchair-tennis-two-bounce-rule": {
+      "id": "local:catalog:wheelchair-tennis-two-bounce-rule",
+      "stratum": "supplementary_shared_source",
+      "initial_card_version": 1,
+      "initial_card_sha256": "c9357cfdd2f354e2501a494206ad380f7dc883a19cd5cd9125004890e60cf8aa",
+      "initial_source_bundle_sha256": "bf8bcd33ea8eaf8798d85729f8dffaa65f32093ccc5db87a8020b13b575b7dd7",
+      "snapshot_hashes_recomputed_and_match": true,
+      "initial_label": "Wheelchair tennis two-bounce rule",
+      "initial_body_word_count": 40,
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-systems::systems-source-026",
+          "title": "ITF Rules of Tennis 2026",
+          "original_url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "locator": "Rule 22, printed p.9 / PDF p.12, lines 342-350; Appendix VI No-Let alternative, printed p.27 / PDF p.30, lines 998-1004; Wheelchair Tennis a, printed p.16 / PDF p.19, lines 565-571; ordinary boundary rules 24(c)-25, printed pp.10-11 / PDF pp.13-14, lines 363-364 and 414-430; mixed-player exception g, printed p.17 / PDF p.20, lines 634-639",
+          "inspection_mode": "web.run actual official 2026 rulebook PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:13:19.361725+00:00",
+          "time_semantics": "Local timestamp after inspection, not an exact remote retrieval time.",
+          "passage_access": "accessible_and_inspected",
+          "summary_word_limit": 200,
+          "direct_quote_words": 0
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "field": "card",
+          "claim_index": 1,
+          "checked_claim": "Wheelchair player can return after the second bounce",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "Wheelchair Tennis a, printed p.16 / PDF p.19, lines 569-571"
+            }
+          ],
+          "assessment": "Return is permitted before the third bounce."
+        },
+        {
+          "field": "card",
+          "claim_index": 2,
+          "checked_claim": "First bounce keeps ordinary boundary rule; second may be outside",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "Wheelchair exceptions opening and a, PDF p.19; ordinary Rules 24(c)-25, PDF pp.13-14"
+            }
+          ],
+          "assessment": "Only the second bounce’s boundary is relaxed."
+        },
+        {
+          "field": "card",
+          "claim_index": 3,
+          "checked_claim": "Adaptation changes timing without first-bounce relaxation",
+          "status": "supported",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "Wheelchair Tennis opening and a, PDF p.19"
+            }
+          ],
+          "assessment": "The general tennis rules remain subject to listed exceptions."
+        }
+      ],
+      "meaning_check": {
+        "status": "verified",
+        "assessment": "The two-bounce allowance belongs to wheelchair players; the mixed-player rule still grants able-bodied players one bounce. The first-bounce boundary requirement survives.",
+        "qualifications_checked": [
+          "model or rule scope",
+          "sense and identity",
+          "date/edition where relevant"
+        ],
+        "identity_basis": "frozen-initial approved selection plus pinned baseline where the identity already exists"
+      },
+      "relationship_checks": [
+        {
+          "relation_index": 0,
+          "attached_relation": {
+            "assertion": "source_asserted",
+            "note": "The Rules of Wheelchair Tennis explicitly introduce exceptions to the ITF Rules of Tennis.",
+            "source_ids": [
+              "research-batch-008-systems::systems-source-026"
+            ],
+            "target_id": "Q847",
+            "type": "facet_of"
+          },
+          "resolved_target_definition": {
+            "id": "Q847",
+            "label": "Tennis",
+            "original_description": "Developing racket skills and strategies in tennis.",
+            "aliases": [
+              "Tennis"
+            ],
+            "definition_origin": "pinned baseline-index.json /concepts/Q847"
+          },
+          "assertion_kind_check": "honest_as_recorded",
+          "direction_and_meaning_check": "verified",
+          "assessment": "The source explicitly introduces wheelchair exceptions to the ITF tennis rules. The pinned tennis target is the same sport; facet_of is supported.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "Rule 22, printed p.9 / PDF p.12, lines 342-350; Appendix VI No-Let alternative, printed p.27 / PDF p.30, lines 998-1004; Wheelchair Tennis a, printed p.16 / PDF p.19, lines 565-571; ordinary boundary rules 24(c)-25, printed pp.10-11 / PDF pp.13-14, lines 363-364 and 414-430; mixed-player exception g, printed p.17 / PDF p.20, lines 634-639"
+            }
+          ]
+        }
+      ],
+      "findings": [
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says printed p.16 / PDF p.18; the inspected document requires Rules of Wheelchair Tennis a, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, PDF pp.13-14.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "P18 (zero-based) = PDF p.19"
+            }
+          ],
+          "proposed_repair": "Use Rules of Wheelchair Tennis a, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, PDF pp.13-14 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "outcome": "needs_repair",
+      "access_limits": {
+        "inaccessible_substantive_passages": [],
+        "unverified_author_assertions_used_as_evidence": false
+      },
+      "usage_limits": {
+        "source_summary_limit_words": 200,
+        "verbatim_source_quotation_words": 0,
+        "actual_token_usage": null,
+        "actual_cost": null
+      },
+      "scope_note": "Coordinator-requested shared-source propagation review; outside the fixed 13-card sample."
+    }
+  },
+  "summary": {
+    "fixed_sample_outcomes": {
+      "verified": 7,
+      "needs_repair": 6
+    },
+    "random_new_outcomes": {
+      "verified": 5,
+      "needs_repair": 3
+    },
+    "targeted_outcomes": {
+      "needs_repair": 3,
+      "verified": 2
+    },
+    "supplementary_outcomes": {
+      "needs_repair": 3
+    },
+    "sampled_substantive_claim_checks": 38,
+    "sampled_attached_relationships_checked": 12,
+    "supplementary_attached_relationships_checked": 3,
+    "source_inspection_records": 17,
+    "sampled_finding_count": 8,
+    "supplementary_finding_count": 4
+  }
+}

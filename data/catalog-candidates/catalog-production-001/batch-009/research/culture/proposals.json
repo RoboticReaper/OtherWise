@@ -1,0 +1,3939 @@
+{
+  "schema_version": 1,
+  "assignment": "culture",
+  "baseline_index_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+  "proposals": [
+    {
+      "id": "local:authored:000664",
+      "label": "Physical geography",
+      "aliases": [
+        "Physical geography"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Physical geography",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Interactions among water, air, land, and life shape the landscapes physical geographers study.",
+      "identity_reason": "Physical branch of geography.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-iowa-physical",
+          "url": "https://iastate.pressbooks.pub/isudp-2025-201/chapter/soil-geography/",
+          "locator": "Physical geography, paragraphs 1–2; lines 281–283",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn599view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1071",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-iowa-physical"
+        ],
+        "assertion": "source_asserted",
+        "note": "Physical geography is a branch of geography."
+      },
+      "limits": [
+        "Landscape interactions, not an exhaustive field survey."
+      ]
+    },
+    {
+      "id": "Q309372",
+      "label": "Mercator projection",
+      "aliases": [
+        "Mercator projection"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Cartography",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Mercator turns constant compass bearings into straight lines while enlarging areas toward the poles.",
+      "identity_reason": "Conformal cylindrical map projection.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-esri-mercator",
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/mercator.html",
+          "locator": "Projection properties—Distortion; lines 21–26",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn594view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q186386",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-esri-mercator"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly identified as a map projection."
+      },
+      "limits": [
+        "Rhumb lines need not be shortest routes."
+      ]
+    },
+    {
+      "id": "Q1753196",
+      "label": "Azimuthal equidistant projection",
+      "aliases": [
+        "Azimuthal equidistant projection"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Cartography",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Distances and directions are accurate from the map’s center, not between every pair of points.",
+      "identity_reason": "Center-based azimuthal map projection.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-esri-azimuthal",
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/azimuthal-equidistant.html",
+          "locator": "Description and distortion; lines 7, 26",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn594view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q186386",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-esri-azimuthal"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly identified as a map projection."
+      },
+      "limits": [
+        "Distance guarantee applies from the center."
+      ]
+    },
+    {
+      "id": "Q34027",
+      "label": "Latitude",
+      "aliases": [
+        "Latitude"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Geographic coordinates",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Latitude measures north–south angular position from the equator, with poles at ninety degrees.",
+      "identity_reason": "Angular north–south coordinate.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-esri-gcs",
+          "url": "https://desktop.arcgis.com/en/arcmap/latest/map/projections/about-geographic-coordinate-systems.htm",
+          "locator": "Main text, lines 35–50",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn687view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q22664",
+        "type": "facet_of",
+        "source_ids": [
+          "culture-esri-gcs"
+        ],
+        "assertion": "source_asserted",
+        "note": "Latitude specifies a geographic coordinate component."
+      },
+      "limits": [
+        "Geographic coordinate meaning."
+      ]
+    },
+    {
+      "id": "Q36477",
+      "label": "Longitude",
+      "aliases": [
+        "Longitude"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Geographic coordinates",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Longitude measures east–west position from a chosen prime meridian; equal degree steps cover less distance near the poles.",
+      "identity_reason": "Angular east–west coordinate.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-esri-gcs",
+          "url": "https://desktop.arcgis.com/en/arcmap/latest/map/projections/about-geographic-coordinate-systems.htm",
+          "locator": "Main text, lines 35–50",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn687view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q22664",
+        "type": "facet_of",
+        "source_ids": [
+          "culture-esri-gcs"
+        ],
+        "assertion": "source_asserted",
+        "note": "Longitude specifies a geographic coordinate component."
+      },
+      "limits": [
+        "Prime meridian must be specified."
+      ]
+    },
+    {
+      "id": "Q22664",
+      "label": "Geographic coordinate system",
+      "aliases": [
+        "Geographic coordinate system"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Geographic coordinates",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Coordinates need a reference model as well as latitude and longitude to specify Earth locations.",
+      "identity_reason": "Geographic coordinates, not projected coordinates.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-esri-gcs",
+          "url": "https://desktop.arcgis.com/en/arcmap/latest/map/projections/about-geographic-coordinate-systems.htm",
+          "locator": "Main text, lines 35–50",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn687view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000665",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-esri-gcs"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "A datum alone is insufficient."
+      ]
+    },
+    {
+      "id": "Q182139",
+      "label": "Isthmus of Panama",
+      "aliases": [
+        "Isthmus of Panama"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Physical geography",
+      "entity_kind": "named_subject",
+      "scope": "idea",
+      "learning_takeaway": "Panama’s land bridge joined the Americas while separating marine populations and changing ocean circulation.",
+      "identity_reason": "The Central American land bridge.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-smithsonian-panama",
+          "url": "https://ocean.si.edu/through-time/ocean-through-time",
+          "locator": "Cenozoic—Shifting Plates; lines 283–286",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn624view0"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "No disputed exact closure date asserted."
+      ]
+    },
+    {
+      "id": "Q189849",
+      "label": "Plitvice Lakes National Park",
+      "aliases": [
+        "Plitvice Lakes National Park"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Karst landscapes",
+      "entity_kind": "named_subject",
+      "scope": "idea",
+      "learning_takeaway": "Calcium carbonate deposits build natural barriers that continually reshape this Croatian lake system.",
+      "identity_reason": "The Croatian national park.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-unesco-plitvice",
+          "url": "https://whc.unesco.org/en/list/98",
+          "locator": "Outstanding Universal Value—Brief synthesis; lines 49–58",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn594view7"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Tufa-building process is the selected angle."
+      ]
+    },
+    {
+      "id": "Q112754",
+      "label": "Primary source",
+      "aliases": [
+        "Primary source"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Historical evidence",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Firsthand records connect us to past participants, but their perspectives and biases still require interpretation.",
+      "identity_reason": "Firsthand historical evidence.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-nara-primary",
+          "url": "https://www.archives.gov/education/research/history-in-the-raw.html",
+          "locator": "Main explanation, lines 29–38",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn657view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q309",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-nara-primary"
+        ],
+        "assertion": "source_asserted",
+        "note": "Firsthand records are materials of historical inquiry."
+      },
+      "limits": [
+        "Primary does not mean unbiased."
+      ]
+    },
+    {
+      "id": "local:authored:000073",
+      "label": "Public history",
+      "aliases": [
+        "Public history"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Public history",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Public historians work with communities to interpret the past in museums, archives, and other public settings.",
+      "identity_reason": "History practice with public audiences.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-ncph-public",
+          "url": "https://ncph.org/what-is-public-history/about-the-field/",
+          "locator": "Main text; lines 10–25",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn599view4"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q309",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-ncph-public"
+        ],
+        "assertion": "source_asserted",
+        "note": "Public history interprets the past with publics."
+      },
+      "limits": [
+        "Collaboration varies across settings."
+      ]
+    },
+    {
+      "id": "Q166118",
+      "label": "Archive",
+      "aliases": [
+        "Archive"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Archives",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Archives select records of lasting value, preserve them, and make documentary evidence available for future use.",
+      "identity_reason": "Archival organization, not one file.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-saa-archive",
+          "url": "https://www2.archivists.org/about-archives",
+          "locator": "Organization definition and Work of Archivists; lines 247–261",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn626view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q309",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-saa-archive"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Archive also names records and buildings."
+      ]
+    },
+    {
+      "id": "Q1506365",
+      "label": "Great Migration (African American)",
+      "aliases": [
+        "Great Migration (African American)"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "African American history",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Black migration out of the South combined flight from racial oppression with pursuit of work and education.",
+      "identity_reason": "African American migration, 1910–1970.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-nara-migration",
+          "url": "https://www.archives.gov/research/african-americans/migrations/great-migration",
+          "locator": "Introduction; lines 54–59",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn601view5"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q309",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-nara-migration"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Destination discrimination also persisted."
+      ]
+    },
+    {
+      "id": "Q868393",
+      "label": "Underground Railroad",
+      "aliases": [
+        "Underground Railroad"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Slavery and self-emancipation",
+      "entity_kind": "named_subject",
+      "scope": "idea",
+      "learning_takeaway": "Freedom seekers escaped slavery through many routes, sometimes unaided and sometimes assisted by organized or spontaneous help.",
+      "identity_reason": "Self-emancipation effort, not a literal railway.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-nps-railroad",
+          "url": "https://www.nps.gov/subjects/undergroundrailroad/what-is-the-underground-railroad.htm",
+          "locator": "Main text; lines 29–31, 42–43",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn645view4"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q309",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-nps-railroad"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "No single organization or uniform route."
+      ]
+    },
+    {
+      "id": "Q472802",
+      "label": "Treaty of Waitangi",
+      "aliases": [
+        "Treaty of Waitangi"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Colonial agreements",
+      "entity_kind": "named_subject",
+      "scope": "idea",
+      "learning_takeaway": "Differences between the Māori and English texts shaped disputes over governance and chiefly authority.",
+      "identity_reason": "The 1840 New Zealand agreement.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-nz-waitangi",
+          "url": "https://nzhistory.govt.nz/page/differences-between-texts",
+          "locator": "Opening and First/Second articles, lines 6, 20–27",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn654view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q309",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-nz-waitangi"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Translations conveyed different understandings of authority."
+      ]
+    },
+    {
+      "id": "Q180897",
+      "label": "Treaty of Tordesillas",
+      "aliases": [
+        "Treaty of Tordesillas"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Imperial diplomacy",
+      "entity_kind": "named_subject",
+      "scope": "idea",
+      "learning_takeaway": "Spain and Portugal drew an Atlantic dividing line for imperial claims, placing eastern Brazil in Portugal’s sphere.",
+      "identity_reason": "The 1494 Iberian treaty.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-unesco-tordesillas",
+          "url": "https://media.unesco.org/sites/default/files/webform/mow001/spain_portugal_treaty_tordesillas_fr_0.pdf",
+          "locator": "French nomination, PDF page 1 (index 0), summary lines 6–14; page 4 (index 3), lines 111–117",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_pdf_text",
+          "tool_ref": "turn642view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q309",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-unesco-tordesillas"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Imperial claims do not establish Indigenous consent."
+      ]
+    },
+    {
+      "id": "Q5086",
+      "label": "Berlin Wall",
+      "aliases": [
+        "Berlin Wall"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Cold War history",
+      "entity_kind": "named_subject",
+      "scope": "idea",
+      "learning_takeaway": "The wall enclosed West Berlin to stop flight from East Germany and grew into a layered border system.",
+      "identity_reason": "The 1961–1989 Berlin border system.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-berlin-wall",
+          "url": "https://www.stiftung-berliner-mauer.de/en/topics/berlin-wall",
+          "locator": "Index and Building the Wall in August 1961; lines 36–41",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn624view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q309",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-berlin-wall"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Not merely a single concrete wall."
+      ]
+    },
+    {
+      "id": "Q217450",
+      "label": "Treaty of Paris (1783)",
+      "aliases": [
+        "Treaty of Paris (1783)"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "American independence",
+      "entity_kind": "named_subject",
+      "scope": "idea",
+      "learning_takeaway": "Britain recognized US independence in the peace settlement, which also defined boundaries for the new country.",
+      "identity_reason": "The 1783 peace treaty.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-nara-paris",
+          "url": "https://www.archives.gov/milestone-documents/treaty-of-paris",
+          "locator": "Introduction, lines 36–38; transcript Articles 1–2, lines 56–61",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn658view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q309",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-nara-paris"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Distinct from other treaties of Paris."
+      ]
+    },
+    {
+      "id": "Q80056",
+      "label": "Sonnet",
+      "aliases": [
+        "Sonnet"
+      ],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic forms",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Traditional sonnets compress thought into fourteen lines, often using a turn to redirect the argument.",
+      "identity_reason": "The poetic form.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-poets-sonnet",
+          "url": "https://poets.org/glossary/sonnet",
+          "locator": "Definition and traditional forms, lines 28, 38–43",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn578view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-poets-sonnet"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly identified as a poetic form."
+      },
+      "limits": [
+        "Traditional pattern allows later variations."
+      ]
+    },
+    {
+      "id": "Q37707",
+      "label": "Haiku",
+      "aliases": [
+        "Haiku"
+      ],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic forms",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Haiku evokes a brief moment through concentrated images; modern adaptations need not follow a fixed syllable count.",
+      "identity_reason": "The Japanese-derived poetic form.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-poets-haiku",
+          "url": "https://poets.org/glossary/haiku",
+          "locator": "Definition and modern adaptations, lines 28, 38–39",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn684view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-poets-haiku"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly identified as a poetic form."
+      },
+      "limits": [
+        "Modern adaptations need not use fixed counts."
+      ]
+    },
+    {
+      "id": "Q131361",
+      "label": "Irony",
+      "aliases": [
+        "Irony"
+      ],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Literary devices",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Irony creates gaps between appearance and reality, such as a character’s ignorance of information readers already know.",
+      "identity_reason": "Literary and rhetorical irony.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-os-irony",
+          "url": "https://liberalarts.oregonstate.edu/wlf/what-irony",
+          "locator": "Transcript, lines 34–35, 50–51",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn683view2"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8242",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-os-irony"
+        ],
+        "assertion": "source_asserted",
+        "note": "Presented as a literary device."
+      },
+      "limits": [
+        "Dramatic irony is one example."
+      ]
+    },
+    {
+      "id": "Q1697305",
+      "label": "Motif (narrative)",
+      "aliases": [
+        "Motif (narrative)"
+      ],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Narrative patterns",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Repeated details can connect scenes and reinforce themes without being the theme themselves.",
+      "identity_reason": "Recurring narrative detail or pattern.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-os-motif",
+          "url": "https://liberalarts.oregonstate.edu/wlf/what-motif",
+          "locator": "Transcript, lines 34–38",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn627view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1318295",
+        "type": "facet_of",
+        "source_ids": [
+          "culture-os-motif"
+        ],
+        "assertion": "source_asserted",
+        "note": "Repeated patterns operate within narratives."
+      },
+      "limits": [
+        "A motif is not the theme."
+      ]
+    },
+    {
+      "id": "Q1758354",
+      "label": "Plot (narrative)",
+      "aliases": [
+        "Plot (narrative)"
+      ],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Narrative structure",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Plot orders actions and their consequences into a structure that makes events feel connected.",
+      "identity_reason": "Narrative events and their arrangement.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-os-plot",
+          "url": "https://liberalarts.oregonstate.edu/wlf/what-plot-definition-and-examples",
+          "locator": "Transcript; lines 32–38",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn638view5"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1318295",
+        "type": "facet_of",
+        "source_ids": [
+          "culture-os-plot"
+        ],
+        "assertion": "source_asserted",
+        "note": "Plot arranges a narrative’s events."
+      },
+      "limits": [
+        "One plotting formula is not universal."
+      ]
+    },
+    {
+      "id": "Q616622",
+      "label": "First-person narrative",
+      "aliases": [
+        "First-person narrative"
+      ],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Narrative viewpoint",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "First-person narrators reveal themselves through how they tell events, as well as through what happens.",
+      "identity_reason": "Narration by an involved “I”.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-os-firstperson",
+          "url": "https://liberalarts.oregonstate.edu/wlf/what-point-of-view",
+          "locator": "Transcript, first person and direct address; lines 54–65",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn642view4"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1318295",
+        "type": "facet_of",
+        "source_ids": [
+          "culture-os-firstperson"
+        ],
+        "assertion": "source_asserted",
+        "note": "Point of view shapes narrative telling."
+      },
+      "limits": [
+        "First-person voice; not exhaustive narrator taxonomy."
+      ]
+    },
+    {
+      "id": "Q693",
+      "label": "Fable",
+      "aliases": [
+        "Fable"
+      ],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Story forms",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Animal stories can dramatize human behavior, as the fox dismisses grapes he cannot reach.",
+      "identity_reason": "Moral story genre, illustrated by Aesop.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-loc-fable",
+          "url": "https://read.gov/aesop/005.html",
+          "locator": "Story and moral, lines 5–14",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn590view2"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8242",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-loc-fable"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "One primary story illustrates the genre."
+      ]
+    },
+    {
+      "id": "Q4026918",
+      "label": "Epic of Sundiata",
+      "aliases": [
+        "Epic of Sundiata"
+      ],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Oral epic",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Sundiata’s epic preserves Mali’s founding story through griots, whose performances connect listeners with ancestral memory.",
+      "identity_reason": "The West African oral epic.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-yale-sundiata",
+          "url": "https://teachers.yale.edu/download/units/09_01_07.pdf",
+          "locator": "Curriculum Unit 09.01.07, Sundiata discussion, PDF page 6 (index 5); lines 193–219",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_pdf_text",
+          "tool_ref": "turn624view3"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8242",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-yale-sundiata"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Multiple versions; Niane’s recording is one example."
+      ]
+    },
+    {
+      "id": "Q164204",
+      "label": "Musicology",
+      "aliases": [
+        "Musicology"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Musicology",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Musicology investigates how music is made, understood, and used across societies and historical periods.",
+      "identity_reason": "Scholarly study of music.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-ams-musicology",
+          "url": "https://www.amsmusicology.org/what-is-musicology/",
+          "locator": "Opening explanation and Topic Areas; lines 158–175",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn632view4"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q638",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-ams-musicology"
+        ],
+        "assertion": "source_asserted",
+        "note": "Musicology is scholarly study of music."
+      },
+      "limits": [
+        "Not restricted to European art music."
+      ]
+    },
+    {
+      "id": "Q113558",
+      "label": "Dynamics (music)",
+      "aliases": [
+        "Dynamics (music)"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Musical notation",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Dynamic markings guide loudness; a crescendo asks performers to grow louder.",
+      "identity_reason": "Musical loudness and its markings.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-omt-dynamics",
+          "url": "https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/",
+          "locator": "Dynamics, lines 1048–1057, 1077",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn683view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000214",
+        "type": "facet_of",
+        "source_ids": [
+          "culture-omt-dynamics"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicit Open Music Theory notation chapter."
+      },
+      "limits": [
+        "Examples from Western staff notation."
+      ]
+    },
+    {
+      "id": "Q14088448",
+      "label": "Cadence",
+      "aliases": [
+        "Cadence"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Musical form",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A cadence coordinates musical motion into a point of arrival that punctuates a phrase or larger unit.",
+      "identity_reason": "Musical phrase arrival.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-omt-cadence",
+          "url": "https://openmusictheory.github.io/cadenceTypes.html",
+          "locator": "Opening definition, line 6",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn639view3"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000214",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-omt-cadence"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicit Open Music Theory form lesson."
+      },
+      "limits": [
+        "Classical tonal context."
+      ]
+    },
+    {
+      "id": "Q176501",
+      "label": "Timbre",
+      "aliases": [
+        "Timbre"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Musical sound",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Different instruments can play the same pitch yet sound distinct because their sound waves have different shapes.",
+      "identity_reason": "Tone color, not pitch itself.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-duke-timbre",
+          "url": "https://sites.math.duke.edu/education/postcalc/music/music2_3.html",
+          "locator": "Opening paragraphs; lines 7–9",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn642view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000214",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-duke-timbre"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Wave shape is one explanatory angle."
+      ]
+    },
+    {
+      "id": "Q181014",
+      "label": "Fugue",
+      "aliases": [
+        "Fugue"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Counterpoint",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "A fugue introduces its main theme in successive independent voices, building an imitative texture.",
+      "identity_reason": "Contrapuntal musical procedure.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-omt-fugue",
+          "url": "https://viva.pressbooks.pub/openmusictheory/chapter/high-baroque-fugal-exposition/",
+          "locator": "Opening explanation and exposition, lines 1048–1059",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn639view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000214",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-omt-fugue"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicit Open Music Theory counterpoint chapter."
+      },
+      "limits": [
+        "High Baroque exposition; later forms vary."
+      ]
+    },
+    {
+      "id": "Q221686",
+      "label": "Twelve-tone technique",
+      "aliases": [
+        "Twelve-tone technique"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Composition techniques",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Twelve-tone composition organizes all twelve pitch classes into ordered rows that can be transformed.",
+      "identity_reason": "Ordered twelve-pitch-class method.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-omt-twelvetone",
+          "url": "https://openmusictheory.github.io/twelveToneBasics.html",
+          "locator": "Serialism/rows and transformations, lines 5–8, 15–16",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn665view2"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000214",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-omt-twelvetone"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicit Open Music Theory composition lesson."
+      },
+      "limits": [
+        "Serialism also includes other methods."
+      ]
+    },
+    {
+      "id": "Q3344470",
+      "label": "Nonchord tone",
+      "aliases": [
+        "Nonchord tone"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Harmony",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Notes outside the current chord can connect chord tones; passing tones move by step through the gap.",
+      "identity_reason": "Tone outside the sounding harmony.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-pugetsound-nonchord",
+          "url": "https://musictheory.pugetsound.edu/mt21c/NonChordTonesIntroduction.html",
+          "locator": "Definition and classification table, lines 733–755",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn653view3"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000214",
+        "type": "facet_of",
+        "source_ids": [
+          "culture-pugetsound-nonchord"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicit Music Theory harmony chapter."
+      },
+      "limits": [
+        "Passing tone is one type."
+      ]
+    },
+    {
+      "id": "Q623939",
+      "label": "Tritone",
+      "aliases": [
+        "Tritone"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Intervals",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "In equal temperament, a tritone spans six semitones and can be spelled as an augmented fourth or diminished fifth.",
+      "identity_reason": "Musical interval, not a three-note chord.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-omt-tritone",
+          "url": "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/",
+          "locator": "Diminished fifth and augmented fourth, lines 1147, 1236; semitone table, lines 1245–1258",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn673view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000214",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-omt-tritone"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicit Open Music Theory interval chapter."
+      },
+      "limits": [
+        "Equal-temperament measurement."
+      ]
+    },
+    {
+      "id": "Q44325",
+      "label": "ontology",
+      "aliases": [
+        "ontology"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Metaphysics",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Ontology asks what exists and how to settle disputed cases such as numbers or properties.",
+      "identity_reason": "Philosophical study of existence.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-sep-ontology",
+          "url": "https://plato.stanford.edu/entries/logic-ontology/",
+          "locator": "What exists and disputed cases, lines 116–119; conceptions of ontology, lines 129–139",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn585view5"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000431",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-sep-ontology"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Not a computing ontology."
+      ]
+    },
+    {
+      "id": "Q1570367",
+      "label": "Problem of induction",
+      "aliases": [
+        "Problem of induction"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Epistemology",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Past regularities support predictions, but justifying the jump to unobserved cases risks circular reasoning.",
+      "identity_reason": "Justification problem for inductive inference.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-sep-induction",
+          "url": "https://plato.stanford.edu/entries/induction-problem/",
+          "locator": "Opening explanation, lines 13–18",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn581view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000430",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-sep-induction"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Does not declare prediction useless."
+      ]
+    },
+    {
+      "id": "Q192600",
+      "label": "Fallibilism",
+      "aliases": [
+        "Fallibilism"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Epistemology",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A belief can be justified without its justification guaranteeing that it is true.",
+      "identity_reason": "Fallibility of epistemic justification.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-iep-fallibilism",
+          "url": "https://iep.utm.edu/fallibil/",
+          "locator": "Definition and epistemic justification, lines 37–44",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn585view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000430",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-iep-fallibilism"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Compatible with some accounts of knowledge."
+      ]
+    },
+    {
+      "id": "Q209681",
+      "label": "Categorical imperative",
+      "aliases": [
+        "Categorical imperative"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Moral philosophy",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Kant’s universal-law formulation tests whether your action’s guiding rule could be consistently willed for everyone.",
+      "identity_reason": "Kant’s unconditional moral principle.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-sep-kant",
+          "url": "https://plato.stanford.edu/entries/kant-moral/",
+          "locator": "Section 5, universal-law formulation, lines 132–134; lying-promise example, line 143",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn585view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000429",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-sep-kant"
+        ],
+        "assertion": "source_asserted",
+        "note": "A moral principle in Kant’s ethics."
+      },
+      "limits": [
+        "One formulation, not Kant’s whole ethics."
+      ]
+    },
+    {
+      "id": "Q3738092",
+      "label": "Act utilitarianism",
+      "aliases": [
+        "Act utilitarianism"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Consequentialist ethics",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Act utilitarianism evaluates each available action by the overall well-being it would produce.",
+      "identity_reason": "Direct evaluation of individual actions.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-iep-utilitarian",
+          "url": "https://iep.utm.edu/util-a-r/",
+          "locator": "Act/rule contrast, lines 90–93; rules and exceptions, lines 146, 159–162",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn585view2"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000440",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-iep-utilitarian"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly distinguished form of utilitarianism."
+      },
+      "limits": [
+        "Compare available actions."
+      ]
+    },
+    {
+      "id": "Q651440",
+      "label": "Rule utilitarianism",
+      "aliases": [
+        "Rule utilitarianism"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Consequentialist ethics",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Rule utilitarianism evaluates actions through rules whose general acceptance produces the most well-being.",
+      "identity_reason": "Evaluation through utility-maximizing rules.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-iep-utilitarian",
+          "url": "https://iep.utm.edu/util-a-r/",
+          "locator": "Act/rule contrast, lines 90–93; rules and exceptions, lines 146, 159–162",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn585view2"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000440",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-iep-utilitarian"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly distinguished form of utilitarianism."
+      },
+      "limits": [
+        "Rule codes can allow exceptions."
+      ]
+    },
+    {
+      "id": "Q33378",
+      "label": "Zeno's paradoxes",
+      "aliases": [
+        "Zeno's paradoxes"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Paradoxes of motion",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "One paradox challenges motion because reaching a goal seems to require completing infinitely many halfway steps.",
+      "identity_reason": "Zeno’s philosophical paradoxes.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-sep-zeno",
+          "url": "https://plato.stanford.edu/entries/paradox-zeno/",
+          "locator": "Dichotomy, lines 126–130",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn585view4"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q5891",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-sep-zeno"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Dichotomy is one paradox, not a proof motion fails."
+      ]
+    },
+    {
+      "id": "Q56003",
+      "label": "metaethics",
+      "aliases": [
+        "metaethics"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Moral philosophy",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Metaethics asks what moral judgments mean and whether or how they can be true.",
+      "identity_reason": "Foundations and status of moral judgment.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-sep-metaethics",
+          "url": "https://plato.stanford.edu/entries/metaethics/",
+          "locator": "Opening explanation, lines 13–15",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn665view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000429",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-sep-metaethics"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Not a list of practical moral rules."
+      ]
+    },
+    {
+      "id": "Q1068288",
+      "label": "Due process",
+      "aliases": [
+        "Due process"
+      ],
+      "primary_domain": "Politics & law",
+      "primary_subfield": "Constitutional safeguards",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "US due process requires fair procedures when government deprives people of protected life, liberty, or property.",
+      "identity_reason": "Procedural constitutional protection.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-cornell-due",
+          "url": "https://www.law.cornell.edu/wex/due_process",
+          "locator": "What is due process? and promise of fair procedure; lines 6–7, 21–22",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn631view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11206",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-cornell-due"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "US example; requirements depend on context."
+      ]
+    },
+    {
+      "id": "Q898871",
+      "label": "Judicial review",
+      "aliases": [
+        "Judicial review"
+      ],
+      "primary_domain": "Politics & law",
+      "primary_subfield": "Constitutional courts",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "US courts use judicial review to invalidate government actions that conflict with the Constitution.",
+      "identity_reason": "Constitutional review by courts.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-cornell-review",
+          "url": "https://www.law.cornell.edu/wex/judicial_review",
+          "locator": "Definition; lines 5–9",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn635view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11206",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-cornell-review"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "US example; institutional arrangements vary."
+      ]
+    },
+    {
+      "id": "Q79896",
+      "label": "Separation of powers",
+      "aliases": [
+        "Separation of powers"
+      ],
+      "primary_domain": "Politics & law",
+      "primary_subfield": "Constitutional structure",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Separating legislative, executive, and judicial functions lets institutions check one another’s power.",
+      "identity_reason": "Division of governmental functions.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-cornell-separation",
+          "url": "https://www.law.cornell.edu/wex/separation_of_powers",
+          "locator": "Definition and branch roles; lines 4–10",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn638view4"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11206",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-cornell-separation"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "US example; not every system has identical branches."
+      ]
+    },
+    {
+      "id": "Q204886",
+      "label": "Federalism",
+      "aliases": [
+        "Federalism"
+      ],
+      "primary_domain": "Politics & law",
+      "primary_subfield": "Government structure",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Federalism distributes governing authority between national and regional governments, with some powers shared.",
+      "identity_reason": "Multilevel constitutional government.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-cornell-federal",
+          "url": "https://www.law.cornell.edu/wex/federalism",
+          "locator": "Definition and US example; lines 5–11",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn638view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q36442",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-cornell-federal"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "US example; divisions vary."
+      ]
+    },
+    {
+      "id": "Q328293",
+      "label": "Ex post facto law",
+      "aliases": [
+        "Ex post facto law"
+      ],
+      "primary_domain": "Politics & law",
+      "primary_subfield": "Constitutional safeguards",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "In US law, ex post facto bans prevent retroactive criminal punishment or later increases in punishment.",
+      "identity_reason": "Retroactive penal legislation.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-cornell-retro",
+          "url": "https://www.law.cornell.edu/wex/ex_post_facto",
+          "locator": "Definition and What Constitutes Punishment; lines 6–14",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn635view3"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11206",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-cornell-retro"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "US constitutional ban, not every retroactive law."
+      ]
+    },
+    {
+      "id": "Q1323789",
+      "label": "Grand jury",
+      "aliases": [
+        "Grand jury"
+      ],
+      "primary_domain": "Politics & law",
+      "primary_subfield": "Jury functions",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "In US federal courts, grand juries decide whether evidence supports criminal charges, rather than deciding guilt.",
+      "identity_reason": "Charging jury.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-uscourts-juries",
+          "url": "https://www.uscourts.gov/court-programs/jury-service/types-juries",
+          "locator": "Trial jury, lines 571–577; grand jury, line 583",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn627view5"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q36442",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-uscourts-juries"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "US federal context."
+      ]
+    },
+    {
+      "id": "Q12602483",
+      "label": "Petit jury",
+      "aliases": [
+        "Petit jury"
+      ],
+      "primary_domain": "Politics & law",
+      "primary_subfield": "Jury functions",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "In US federal trials, petit juries decide verdicts, using different proof standards in criminal and civil cases.",
+      "identity_reason": "Trial jury.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-uscourts-juries",
+          "url": "https://www.uscourts.gov/court-programs/jury-service/types-juries",
+          "locator": "Trial jury, lines 571–577; grand jury, line 583",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn627view5"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q36442",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-uscourts-juries"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "US federal context."
+      ]
+    },
+    {
+      "id": "Q219447",
+      "label": "Bill of Rights 1689",
+      "aliases": [
+        "Bill of Rights 1689"
+      ],
+      "primary_domain": "Politics & law",
+      "primary_subfield": "Constitutional history",
+      "entity_kind": "named_subject",
+      "scope": "idea",
+      "learning_takeaway": "England’s 1689 settlement required Parliament’s agreement for taxation and protected speech within Parliament.",
+      "identity_reason": "English Bill of Rights, 1689.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-parliament-bill",
+          "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/collections1/collections-glorious-revolution/billofrights/",
+          "locator": "Object explanation; lines 154–155",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn629view4"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11206",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-parliament-bill"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "Parliamentary speech; not the US Bill of Rights."
+      ]
+    },
+    {
+      "id": "Q124058",
+      "label": "Zakat",
+      "aliases": [
+        "Zakat"
+      ],
+      "primary_domain": "Religion & spirituality",
+      "primary_subfield": "Islamic practices",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Zakat gives part of accumulated wealth to those in need and is understood as purification of the remaining wealth.",
+      "identity_reason": "Islamic wealth almsgiving.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-harvard-zakat",
+          "url": "https://pluralism.org/zakat",
+          "locator": "Glossary entry; line 56",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn638view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000457",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-harvard-zakat"
+        ],
+        "assertion": "source_asserted",
+        "note": "Identified as an Islamic practice."
+      },
+      "limits": [
+        "No universal threshold or rate asserted."
+      ]
+    },
+    {
+      "id": "Q41831",
+      "label": "Shahada",
+      "aliases": [
+        "Shahada"
+      ],
+      "primary_domain": "Religion & spirituality",
+      "primary_subfield": "Islamic practices",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "The Muslim profession of faith joins belief in God’s oneness with recognition of Muhammad as God’s messenger.",
+      "identity_reason": "Islamic declaration of faith.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-harvard-shahada",
+          "url": "https://pluralism.org/shahadah",
+          "locator": "Glossary definition, line 56",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn708view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000457",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-harvard-shahada"
+        ],
+        "assertion": "source_asserted",
+        "note": "Identified as an Islamic declaration."
+      },
+      "limits": [
+        "Two linked affirmations, not a full theology."
+      ]
+    },
+    {
+      "id": "Q35856",
+      "label": "Baptism",
+      "aliases": [
+        "Baptism"
+      ],
+      "primary_domain": "Religion & spirituality",
+      "primary_subfield": "Christian practices",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Baptism marks entry into a Christian community through water; traditions differ over age and method.",
+      "identity_reason": "Christian water initiation.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-harvard-baptism",
+          "url": "https://pluralism.org/baptism-by-water-and-spirit",
+          "locator": "Main text; lines 151–162",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn627view8"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000456",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-harvard-baptism"
+        ],
+        "assertion": "source_asserted",
+        "note": "Identified as Christian initiation."
+      },
+      "limits": [
+        "Some traditions do not practice outward baptism."
+      ]
+    },
+    {
+      "id": "Q66086",
+      "label": "Eucharist",
+      "aliases": [
+        "Eucharist"
+      ],
+      "primary_domain": "Religion & spirituality",
+      "primary_subfield": "Christian practices",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "The Eucharist gathers Christians around shared sacred bread and wine.",
+      "identity_reason": "Eucharistic rite, not church-family meaning of communion.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-harvard-communion",
+          "url": "https://pluralism.org/communion",
+          "locator": "Glossary entry; line 56",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn627view7"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000456",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-harvard-communion"
+        ],
+        "assertion": "source_asserted",
+        "note": "Identified as a Christian rite."
+      },
+      "limits": [
+        "No single denominational account asserted."
+      ]
+    },
+    {
+      "id": "Q191431",
+      "label": "Mandala",
+      "aliases": [
+        "Mandala"
+      ],
+      "primary_domain": "Religion & spirituality",
+      "primary_subfield": "Buddhist visualization",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "In Esoteric Buddhism, cosmic diagrams guide meditation alongside hand gestures and sacred formulas.",
+      "identity_reason": "Sacred diagram, not a decorative pattern alone.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-met-mandala",
+          "url": "https://www.metmuseum.org/exhibitions/listings/2009/japanese-mandalas",
+          "locator": "Exhibition explanation, lines 67–70",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn650view1"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000460",
+        "type": "related_to",
+        "source_ids": [
+          "culture-met-mandala"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicit Esoteric Buddhist use of mandalas."
+      },
+      "limits": [
+        "One Buddhist use; other traditions also use mandalas."
+      ]
+    },
+    {
+      "id": "Q183379",
+      "label": "Moksha",
+      "aliases": [
+        "Moksha"
+      ],
+      "primary_domain": "Religion & spirituality",
+      "primary_subfield": "Hindu liberation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Vedanta describes moksha as liberation from rebirth through insight, while its schools disagree about self and ultimate reality.",
+      "identity_reason": "Hindu liberation from rebirth.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-harvard-vedanta",
+          "url": "https://pluralism.org/vedanta",
+          "locator": "Glossary entry; lines 55–57",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn638view3"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q9089",
+        "type": "related_to",
+        "source_ids": [
+          "culture-harvard-vedanta"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicit Vedanta context for liberation."
+      },
+      "limits": [
+        "Vedanta example; Hindu accounts differ."
+      ]
+    },
+    {
+      "id": "Q42927",
+      "label": "nirvana",
+      "aliases": [
+        "nirvana"
+      ],
+      "primary_domain": "Religion & spirituality",
+      "primary_subfield": "Buddhist liberation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "In Buddhism, nirvana involves extinguishing greed, hatred, and delusion that fuel rebirth.",
+      "identity_reason": "Buddhist nirvana meaning.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-harvard-nirvana",
+          "url": "https://pluralism.org/nirvana",
+          "locator": "Glossary entry; lines 55–56",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn638view2"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000460",
+        "type": "related_to",
+        "source_ids": [
+          "culture-harvard-nirvana"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicit Buddhist meaning of nirvana."
+      },
+      "limits": [
+        "Buddhist usage selected; other senses unaddressed."
+      ]
+    },
+    {
+      "id": "Q10283",
+      "label": "Kumbh Mela",
+      "aliases": [
+        "Kumbh Mela"
+      ],
+      "primary_domain": "Religion & spirituality",
+      "primary_subfield": "Hindu pilgrimage",
+      "entity_kind": "named_subject",
+      "scope": "idea",
+      "learning_takeaway": "Pilgrims gather at rotating Indian river sites for sacred bathing and the transmission of religious traditions.",
+      "identity_reason": "The Kumbh Mela gathering tradition.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-pib-kumbh",
+          "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc2024115429601.pdf",
+          "locator": "PDF page 1 (index 0), lines 6–15; page 2 (index 1), lines 25–32",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_pdf_text",
+          "tool_ref": "turn657view2"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q9089",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-pib-kumbh"
+        ],
+        "assertion": "source_asserted",
+        "note": "Identified as Hindu pilgrimage gathering."
+      },
+      "limits": [
+        "Purification is a religious belief."
+      ]
+    },
+    {
+      "id": "Q1473346",
+      "label": "Stained glass",
+      "aliases": [
+        "Stained glass"
+      ],
+      "primary_domain": "Visual arts & design",
+      "primary_subfield": "Glass art",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Lead strips join colored glass pieces into window images, while painted details can supply outlines and shadows.",
+      "identity_reason": "Colored glass used for pictorial windows.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-met-stainedglass",
+          "url": "https://www.metmuseum.org/essays/stained-glass-in-medieval-europe",
+          "locator": "Colored glass, painted details, and lead assembly, lines 109–113",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn721view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q735",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-met-stainedglass"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly identified as stained-glass art."
+      },
+      "limits": [
+        "Medieval European construction example."
+      ]
+    },
+    {
+      "id": "Q133067",
+      "label": "Mosaic",
+      "aliases": [
+        "Mosaic"
+      ],
+      "primary_domain": "Visual arts & design",
+      "primary_subfield": "Mosaic techniques",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Small pieces of stone, ceramic, or glass can form durable images, as Roman floor mosaics demonstrate.",
+      "identity_reason": "Art made from assembled small pieces.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-getty-mosaic",
+          "url": "https://www.getty.edu/news/a-brief-introduction-to-roman-mosaics/",
+          "locator": "Floor durability and tesserae, lines 111–119; color materials, lines 131–132",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn708view2"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q735",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-getty-mosaic"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly discussed as an art form."
+      },
+      "limits": [
+        "Roman floors are one example."
+      ]
+    },
+    {
+      "id": "Q204330",
+      "label": "Gouache",
+      "aliases": [
+        "Gouache"
+      ],
+      "primary_domain": "Visual arts & design",
+      "primary_subfield": "Painting materials",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Gouache’s opaque, matte paint can supply bright highlights within otherwise transparent watercolor compositions.",
+      "identity_reason": "Opaque water-based paint.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-met-gouache",
+          "url": "https://www.metmuseum.org/perspectives/materials-and-techniques-drawing-watercolor",
+          "locator": "Transparent medium and white support, lines 7–23; opaque gouache and highlights, lines 42–47",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn687view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11629",
+        "type": "facet_of",
+        "source_ids": [
+          "culture-met-gouache"
+        ],
+        "assertion": "editorial",
+        "note": "Editorial grouping from the inspected subject."
+      },
+      "limits": [
+        "One use within watercolor compositions."
+      ]
+    },
+    {
+      "id": "Q1164982",
+      "label": "Color field",
+      "aliases": [
+        "Color field"
+      ],
+      "primary_domain": "Visual arts & design",
+      "primary_subfield": "Abstract painting",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Large color areas can contain subtle shades; Rothko achieved this through layers of thinned paint.",
+      "identity_reason": "Color Field painting, not a literal field.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-moma-colorfield",
+          "url": "https://www.moma.org/audio/playlist/354/4963",
+          "locator": "Transcript: blocks and shades, lines 9–10; layered thin paint, lines 12–14",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn709view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11629",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-moma-colorfield"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly identified as Color Field paintings."
+      },
+      "limits": [
+        "Rothko’s process illustrates one approach."
+      ]
+    },
+    {
+      "id": "Q170571",
+      "label": "Still life",
+      "aliases": [
+        "Still life"
+      ],
+      "primary_domain": "Visual arts & design",
+      "primary_subfield": "Pictorial genres",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Arrangements of ordinary objects can suggest mortality or wealth, as Dutch still lifes show through skulls, watches, and luxuries.",
+      "identity_reason": "Art genre depicting inanimate objects.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-met-stilllife",
+          "url": "https://www.metmuseum.org/essays/still-life-painting-in-northern-europe-1600-1800",
+          "locator": "Objects, mortality symbolism, and luxury, lines 132–144",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn676view0"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11629",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-met-stilllife"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly identified as a painting genre."
+      },
+      "limits": [
+        "Northern European examples; meanings are not universal."
+      ]
+    },
+    {
+      "id": "Q200034",
+      "label": "Pointillism",
+      "aliases": [
+        "Pointillism"
+      ],
+      "primary_domain": "Visual arts & design",
+      "primary_subfield": "Painting techniques",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Small dots of separate colors can blend visually at a distance, as in Seurat’s mature technique.",
+      "identity_reason": "Painting with discrete colored dots.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-met-pointillism",
+          "url": "https://www.metmuseum.org/art/collection/search/437658",
+          "locator": "Object explanation, lines 10–11; audio transcript, lines 68–71",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn590view7"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11629",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-met-pointillism"
+        ],
+        "assertion": "source_asserted",
+        "note": "Painting technique illustrated through Seurat."
+      },
+      "limits": [
+        "Final painting, not the study’s broader patches."
+      ]
+    },
+    {
+      "id": "Q185905",
+      "label": "Ukiyo-e",
+      "aliases": [
+        "Ukiyo-e"
+      ],
+      "primary_domain": "Visual arts & design",
+      "primary_subfield": "Japanese art",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Commercial ukiyo-e prints depended on coordinated work by designers, carvers, printers, and publishers.",
+      "identity_reason": "Japanese floating-world art tradition.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-met-ukiyoe",
+          "url": "https://www.metmuseum.org/essays/woodblock-prints-in-the-ukiyo-e-style",
+          "locator": "Commercial production and four specialists, lines 100–104",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn601view9"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000351",
+        "type": "related_to",
+        "source_ids": [
+          "culture-met-ukiyoe"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicit ukiyo-e woodblock print production."
+      },
+      "limits": [
+        "Print production is one facet; paintings also exist."
+      ]
+    },
+    {
+      "id": "Q214127",
+      "label": "Genre painting",
+      "aliases": [
+        "Genre painting"
+      ],
+      "primary_domain": "Visual arts & design",
+      "primary_subfield": "Pictorial genres",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Scenes of ordinary life can carry social commentary, even when their subjects appear familiar.",
+      "identity_reason": "Depictions of everyday life.",
+      "discovery_evidence": [
+        {
+          "source_id": "culture-met-genre",
+          "url": "https://www.metmuseum.org/essays/genre-painting-in-northern-europe",
+          "locator": "Everyday subjects and moral/social commentary, lines 209, 215–216, 231",
+          "support_note": "Supports the selected explanatory takeaway.",
+          "inspection_mode": "web_text_open_find",
+          "tool_ref": "turn601view10"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11629",
+        "type": "broader_topic",
+        "source_ids": [
+          "culture-met-genre"
+        ],
+        "assertion": "source_asserted",
+        "note": "Explicitly identified as a painting genre."
+      },
+      "limits": [
+        "Northern European examples; not all scenes moralize."
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "culture-equivalence-generalization",
+      "status": "excluded_unresolved_equivalence",
+      "candidate_id": "Q1501867",
+      "existing_card_id": "local:catalog:cartographic-generalization",
+      "replacement_id": "Q36477",
+      "reason": "Matching subject and alias already have a batch-002 local card; the frozen baseline lacks an equivalence redirect. Preserve both identities and the prior card.",
+      "source_ids": [
+        "culture-esri-generalization"
+      ]
+    },
+    {
+      "id": "culture-equivalence-woodcut",
+      "status": "excluded_unresolved_equivalence",
+      "candidate_id": "Q173242",
+      "existing_card_id": "local:catalog:woodcut",
+      "replacement_id": "Q204330",
+      "reason": "Matching subject and alias already have a batch-002 local card; the frozen baseline lacks an equivalence redirect. Preserve both identities and the prior card.",
+      "source_ids": [
+        "culture-nga-printmaking"
+      ]
+    },
+    {
+      "id": "culture-perspective-access",
+      "status": "excluded_source_unresolved",
+      "candidate_id": "Q1900281",
+      "replacement_id": "Q170571",
+      "reason": "Original source and three bounded alternatives produced no inspectable substantive passage. Do not draft the perspective identity."
+    },
+    {
+      "id": "culture-equivalence-fresco",
+      "status": "excluded_unresolved_equivalence",
+      "candidate_id": "Q134194",
+      "existing_card_id": "local:catalog:buon-fresco",
+      "replacement_id": "Q1473346",
+      "reason": "The intended wet-plaster explanation describes the existing local buon-fresco card. Preserve original identities and card; no broader rewording is counted as a new first card.",
+      "source_ids": [
+        "culture-met-fresco"
+      ]
+    },
+    {
+      "id": "culture-equivalence-engraving",
+      "status": "excluded_unresolved_equivalence",
+      "candidate_id": "Q139106",
+      "existing_card_id": "local:catalog:engraving-printmaking",
+      "replacement_id": "Q133067",
+      "reason": "The intended burin-and-metal-plate explanation duplicates the existing local printmaking engraving card. Preserve the broader QID and local card separately.",
+      "source_ids": [
+        "culture-met-engraving"
+      ]
+    },
+    {
+      "id": "culture-equivalence-etching",
+      "status": "excluded_unresolved_equivalence",
+      "candidate_id": "Q186986",
+      "existing_card_id": "local:catalog:etching-printmaking",
+      "replacement_id": "Q1164982",
+      "reason": "The intended acid-ground printmaking explanation duplicates the existing local etching card. Preserve both identities without counting a second first card.",
+      "source_ids": [
+        "culture-met-etching"
+      ]
+    },
+    {
+      "id": "culture-equivalence-puja",
+      "status": "excluded_unresolved_equivalence",
+      "candidate_id": "Q10937578",
+      "existing_card_id": "local:catalog:puja",
+      "replacement_id": "Q41831",
+      "reason": "The existing local Puja card already explains Hindu deity worship and offerings. Parenthesized label differences do not create a distinct subject.",
+      "source_ids": [
+        "culture-harvard-puja"
+      ]
+    },
+    {
+      "id": "culture-equivalence-trompe-alternative",
+      "status": "excluded_unresolved_equivalence",
+      "candidate_id": "Q468930",
+      "existing_card_id": "local:catalog:trompe-loeil",
+      "replacement_id": null,
+      "reason": "Discarded during alternative screening: spelling, apostrophe and ligature differences conceal the existing local subject."
+    },
+    {
+      "id": "culture-equivalence-watercolor-alternative",
+      "status": "excluded_unresolved_equivalence",
+      "candidate_id": "local:authored:000365",
+      "other_inventory_id": "Q50030",
+      "replacement_id": null,
+      "reason": "Discarded alternative: the same watercolor-painting subject has a separate unassigned QID in the baseline. Neither has a prior card; leave identity reconciliation to the coordinator.",
+      "source_ids": [
+        "culture-met-gouache"
+      ]
+    },
+    {
+      "id": "culture-parent-gaps",
+      "status": "reported",
+      "candidate_ids": [
+        "Q182139",
+        "Q189849"
+      ],
+      "reason": "The inspected place-specific explanations do not establish a close conceptual parent. Leave parent null."
+    },
+    {
+      "id": "culture-source-timestamps",
+      "status": "reported",
+      "reason": "Source inspection was recorded with session clock observations, not individual network timestamps. retrieved_at is explicitly a session checkpoint."
+    },
+    {
+      "id": "culture-selection-stage",
+      "status": "awaiting_coordinator_reservations",
+      "reason": "Selection only: no discovery card text, author acceptance, or operational import is claimed."
+    }
+  ],
+  "sources_inspected": [
+    {
+      "id": "culture-iowa-physical",
+      "title": "Geography – Introduction to Soil Science, Second Edition",
+      "url": "https://iastate.pressbooks.pub/isudp-2025-201/chapter/soil-geography/",
+      "locator": "Physical geography, paragraphs 1–2; lines 281–283",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn599view0",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "local:authored:000664"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-esri-gcs",
+      "title": "What are geographic coordinate systems?",
+      "url": "https://desktop.arcgis.com/en/arcmap/latest/map/projections/about-geographic-coordinate-systems.htm",
+      "locator": "Main text, lines 35–50",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn687view1",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q34027",
+        "Q36477",
+        "Q22664"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-esri-mercator",
+      "title": "Mercator | ArcGIS Pro",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/mercator.html",
+      "locator": "Projection properties—Distortion; lines 21–26",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn594view0",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q309372"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-esri-azimuthal",
+      "title": "Azimuthal equidistant | ArcGIS Pro",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/azimuthal-equidistant.html",
+      "locator": "Description and distortion; lines 7, 26",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn594view1",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q1753196"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-esri-generalization",
+      "title": "An overview of the Generalization toolset",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/cartography/an-overview-of-the-generalization-toolset.html",
+      "locator": "Introduction and tools; lines 5–23",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn594view3",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [],
+      "issue_ids": [
+        "culture-equivalence-generalization"
+      ],
+      "status": "substantive_passage_inspected_for_excluded_candidate"
+    },
+    {
+      "id": "culture-unesco-plitvice",
+      "title": "Plitvice Lakes National Park",
+      "url": "https://whc.unesco.org/en/list/98",
+      "locator": "Outstanding Universal Value—Brief synthesis; lines 49–58",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn594view7",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q189849"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-smithsonian-panama",
+      "title": "Ocean Through Time",
+      "url": "https://ocean.si.edu/through-time/ocean-through-time",
+      "locator": "Cenozoic—Shifting Plates; lines 283–286",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn624view0",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q182139"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-ncph-public",
+      "title": "About the Field",
+      "url": "https://ncph.org/what-is-public-history/about-the-field/",
+      "locator": "Main text; lines 10–25",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn599view4",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "local:authored:000073"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-nara-migration",
+      "title": "The Great Migration (1910–1970)",
+      "url": "https://www.archives.gov/research/african-americans/migrations/great-migration",
+      "locator": "Introduction; lines 54–59",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn601view5",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q1506365"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-nps-railroad",
+      "title": "What is the Underground Railroad?",
+      "url": "https://www.nps.gov/subjects/undergroundrailroad/what-is-the-underground-railroad.htm",
+      "locator": "Main text; lines 29–31, 42–43",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn645view4",
+      "revision": "2025-04-07",
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "page_last_reviewed_or_updated",
+        "precision": "day"
+      },
+      "proposed_card_ids": [
+        "Q868393"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-saa-archive",
+      "title": "What Are Archives?",
+      "url": "https://www2.archivists.org/about-archives",
+      "locator": "Organization definition and Work of Archivists; lines 247–261",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn626view0",
+      "revision": "2016-09-12",
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "page_last_reviewed_or_updated",
+        "precision": "day"
+      },
+      "proposed_card_ids": [
+        "Q166118"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-berlin-wall",
+      "title": "The Berlin Wall",
+      "url": "https://www.stiftung-berliner-mauer.de/en/topics/berlin-wall",
+      "locator": "Index and Building the Wall in August 1961; lines 36–41",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn624view1",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q5086"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-yale-sundiata",
+      "title": "A Study of Oral Tradition: Storytelling in Ireland, West Africa and Japan",
+      "url": "https://teachers.yale.edu/download/units/09_01_07.pdf",
+      "locator": "Curriculum Unit 09.01.07, Sundiata discussion, PDF page 6 (index 5); lines 193–219",
+      "inspection_mode": "web_pdf_text",
+      "tool_ref": "turn624view3",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "publication_date": "2009-09",
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q4026918"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-duke-timbre",
+      "title": "Fourier Approximations and Music, Part 2.3 Pure tones",
+      "url": "https://sites.math.duke.edu/education/postcalc/music/music2_3.html",
+      "locator": "Opening paragraphs; lines 7–9",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn642view0",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q176501"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-ams-musicology",
+      "title": "What is Musicology",
+      "url": "https://www.amsmusicology.org/what-is-musicology/",
+      "locator": "Opening explanation and Topic Areas; lines 158–175",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn632view4",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q164204"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-harvard-puja",
+      "title": "puja",
+      "url": "https://pluralism.org/puja",
+      "locator": "Glossary entry, Hindu meaning; line 55",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn627view6",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [],
+      "issue_ids": [
+        "culture-equivalence-puja"
+      ],
+      "status": "substantive_passage_inspected_for_excluded_candidate"
+    },
+    {
+      "id": "culture-harvard-communion",
+      "title": "communion",
+      "url": "https://pluralism.org/communion",
+      "locator": "Glossary entry; line 56",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn627view7",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q66086"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-harvard-baptism",
+      "title": "Baptism by Water and Spirit",
+      "url": "https://pluralism.org/baptism-by-water-and-spirit",
+      "locator": "Main text; lines 151–162",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn627view8",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q35856"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-harvard-zakat",
+      "title": "zakat",
+      "url": "https://pluralism.org/zakat",
+      "locator": "Glossary entry; line 56",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn638view1",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q124058"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-harvard-nirvana",
+      "title": "Nirvana",
+      "url": "https://pluralism.org/nirvana",
+      "locator": "Glossary entry; lines 55–56",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn638view2",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q42927"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-harvard-vedanta",
+      "title": "Vedanta",
+      "url": "https://pluralism.org/vedanta",
+      "locator": "Glossary entry; lines 55–57",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn638view3",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q183379"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-cornell-due",
+      "title": "due process",
+      "url": "https://www.law.cornell.edu/wex/due_process",
+      "locator": "What is due process? and promise of fair procedure; lines 6–7, 21–22",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn631view0",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q1068288"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-cornell-review",
+      "title": "judicial review",
+      "url": "https://www.law.cornell.edu/wex/judicial_review",
+      "locator": "Definition; lines 5–9",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn635view0",
+      "revision": "2023-06",
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "page_last_reviewed_or_updated",
+        "precision": "month"
+      },
+      "proposed_card_ids": [
+        "Q898871"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-cornell-separation",
+      "title": "separation of powers",
+      "url": "https://www.law.cornell.edu/wex/separation_of_powers",
+      "locator": "Definition and branch roles; lines 4–10",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn638view4",
+      "revision": "2024-09",
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "page_last_reviewed_or_updated",
+        "precision": "month"
+      },
+      "proposed_card_ids": [
+        "Q79896"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-cornell-federal",
+      "title": "federalism",
+      "url": "https://www.law.cornell.edu/wex/federalism",
+      "locator": "Definition and US example; lines 5–11",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn638view0",
+      "revision": "2026-08",
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "page_last_reviewed_or_updated",
+        "precision": "month"
+      },
+      "proposed_card_ids": [
+        "Q204886"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-cornell-retro",
+      "title": "ex post facto",
+      "url": "https://www.law.cornell.edu/wex/ex_post_facto",
+      "locator": "Definition and What Constitutes Punishment; lines 6–14",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn635view3",
+      "revision": "2025-10",
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "page_last_reviewed_or_updated",
+        "precision": "month"
+      },
+      "proposed_card_ids": [
+        "Q328293"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-parliament-bill",
+      "title": "Bill of Rights 1689",
+      "url": "https://www.parliament.uk/about/living-heritage/evolutionofparliament/parliamentaryauthority/revolution/collections1/collections-glorious-revolution/billofrights/",
+      "locator": "Object explanation; lines 154–155",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn629view4",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q219447"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-os-plot",
+      "title": "What is a Plot?",
+      "url": "https://liberalarts.oregonstate.edu/wlf/what-plot-definition-and-examples",
+      "locator": "Transcript; lines 32–38",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn638view5",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "publication_date": "2026-05-14",
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q1758354"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-os-firstperson",
+      "title": "What is Point of View?",
+      "url": "https://liberalarts.oregonstate.edu/wlf/what-point-of-view",
+      "locator": "Transcript, first person and direct address; lines 54–65",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn642view4",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "publication_date": "2020-08-12",
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q616622"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-os-irony",
+      "title": "What is Irony?",
+      "url": "https://liberalarts.oregonstate.edu/wlf/what-irony",
+      "locator": "Transcript, lines 34–35, 50–51",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn683view2",
+      "revision": null,
+      "word_limit": 200,
+      "acquisition_metadata": {
+        "time_basis": "Observed session UTC clock; exact individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:33:09Z"
+      },
+      "publication_date": "2019-11-05",
+      "retrieved_at": "2026-10-09T04:33:09Z",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q131361"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-nara-primary",
+      "title": "History in the Raw",
+      "url": "https://www.archives.gov/education/research/history-in-the-raw.html",
+      "locator": "Main explanation, lines 29–38",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn657view0",
+      "revision": "2016-08-15",
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "page_last_reviewed_or_updated",
+        "precision": "day"
+      },
+      "proposed_card_ids": [
+        "Q112754"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-nara-paris",
+      "title": "Treaty of Paris (1783)",
+      "url": "https://www.archives.gov/milestone-documents/treaty-of-paris",
+      "locator": "Introduction, lines 36–38; transcript Articles 1–2, lines 56–61",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn658view0",
+      "revision": "2025-03-06",
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "page_last_reviewed_or_updated",
+        "precision": "day"
+      },
+      "proposed_card_ids": [
+        "Q217450"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-nz-waitangi",
+      "title": "Differences between the texts",
+      "url": "https://nzhistory.govt.nz/page/differences-between-texts",
+      "locator": "Opening and First/Second articles, lines 6, 20–27",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn654view1",
+      "revision": "2026-03-12",
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "page_last_reviewed_or_updated",
+        "precision": "day"
+      },
+      "proposed_card_ids": [
+        "Q472802"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-unesco-tordesillas",
+      "title": "Registre de la Mémoire du monde: Traité de Tordesillas (Espagne et Portugal), Réf. 2006-43",
+      "url": "https://media.unesco.org/sites/default/files/webform/mow001/spain_portugal_treaty_tordesillas_fr_0.pdf",
+      "locator": "French nomination, PDF page 1 (index 0), summary lines 6–14; page 4 (index 3), lines 111–117",
+      "inspection_mode": "web_pdf_text",
+      "tool_ref": "turn642view1",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "document_submission_date": "2007-04-10",
+      "proposed_card_ids": [
+        "Q180897"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-poets-sonnet",
+      "title": "Sonnet",
+      "url": "https://poets.org/glossary/sonnet",
+      "locator": "Definition and traditional forms, lines 28, 38–43",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn578view0",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q80056"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-poets-haiku",
+      "title": "Haiku",
+      "url": "https://poets.org/glossary/haiku",
+      "locator": "Definition and modern adaptations, lines 28, 38–39",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn684view0",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q37707"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-os-motif",
+      "title": "What is a Motif?",
+      "url": "https://liberalarts.oregonstate.edu/wlf/what-motif",
+      "locator": "Transcript, lines 34–38",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn627view1",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "publication_date": "2021-10-26",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q1697305"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-loc-fable",
+      "title": "The Fox & the Grapes — The Aesop for Children",
+      "url": "https://read.gov/aesop/005.html",
+      "locator": "Story and moral, lines 5–14",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn590view2",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q693"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-omt-dynamics",
+      "title": "Other Aspects of Notation — Open Music Theory",
+      "url": "https://viva.pressbooks.pub/openmusictheory/chapter/other-aspects-of-notation/",
+      "locator": "Dynamics, lines 1048–1057, 1077",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn683view0",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q113558"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-omt-cadence",
+      "title": "Classical cadence types — Open Music Theory",
+      "url": "https://openmusictheory.github.io/cadenceTypes.html",
+      "locator": "Opening definition, line 6",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn639view3",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q14088448"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-omt-fugue",
+      "title": "High Baroque Fugal Exposition — Open Music Theory",
+      "url": "https://viva.pressbooks.pub/openmusictheory/chapter/high-baroque-fugal-exposition/",
+      "locator": "Opening explanation and exposition, lines 1048–1059",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn639view1",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q181014"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-omt-twelvetone",
+      "title": "Twelve-Tone Theory — Basics",
+      "url": "https://openmusictheory.github.io/twelveToneBasics.html",
+      "locator": "Serialism/rows and transformations, lines 5–8, 15–16",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn665view2",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q221686"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-pugetsound-nonchord",
+      "title": "Introduction to Non-Chord Tones — Music Theory for the 21st-Century Classroom",
+      "url": "https://musictheory.pugetsound.edu/mt21c/NonChordTonesIntroduction.html",
+      "locator": "Definition and classification table, lines 733–755",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn653view3",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q3344470"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-omt-tritone",
+      "title": "Intervals — Open Music Theory",
+      "url": "https://viva.pressbooks.pub/openmusictheory/chapter/intervals/",
+      "locator": "Diminished fifth and augmented fourth, lines 1147, 1236; semitone table, lines 1245–1258",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn673view0",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q623939"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-sep-induction",
+      "title": "The Problem of Induction",
+      "url": "https://plato.stanford.edu/entries/induction-problem/",
+      "locator": "Opening explanation, lines 13–18",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn581view0",
+      "revision": "2022-11-22",
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "publication_date": "2018-03-21",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "substantive_revision",
+        "precision": "day"
+      },
+      "proposed_card_ids": [
+        "Q1570367"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-iep-fallibilism",
+      "title": "Fallibilism",
+      "url": "https://iep.utm.edu/fallibil/",
+      "locator": "Definition and epistemic justification, lines 37–44",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn585view0",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q192600"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-sep-kant",
+      "title": "Kant’s Moral Philosophy",
+      "url": "https://plato.stanford.edu/entries/kant-moral/",
+      "locator": "Section 5, universal-law formulation, lines 132–134; lying-promise example, line 143",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn585view1",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q209681"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-iep-utilitarian",
+      "title": "Utilitarianism, Act and Rule",
+      "url": "https://iep.utm.edu/util-a-r/",
+      "locator": "Act/rule contrast, lines 90–93; rules and exceptions, lines 146, 159–162",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn585view2",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "additional_tool_refs": [
+        "turn585view3"
+      ],
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q3738092",
+        "Q651440"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-sep-zeno",
+      "title": "Zeno’s Paradoxes",
+      "url": "https://plato.stanford.edu/entries/paradox-zeno/",
+      "locator": "Dichotomy, lines 126–130",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn585view4",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q33378"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-sep-ontology",
+      "title": "Logic and Ontology",
+      "url": "https://plato.stanford.edu/entries/logic-ontology/",
+      "locator": "What exists and disputed cases, lines 116–119; conceptions of ontology, lines 129–139",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn585view5",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q44325"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-sep-metaethics",
+      "title": "Metaethics",
+      "url": "https://plato.stanford.edu/entries/metaethics/",
+      "locator": "Opening explanation, lines 13–15",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn665view0",
+      "revision": "2023-01-24",
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "publication_date": "2007-01-23",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "substantive_revision",
+        "precision": "day"
+      },
+      "proposed_card_ids": [
+        "Q56003"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-uscourts-juries",
+      "title": "Types of Juries",
+      "url": "https://www.uscourts.gov/court-programs/jury-service/types-juries",
+      "locator": "Trial jury, lines 571–577; grand jury, line 583",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn627view5",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q1323789",
+        "Q12602483"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-met-mandala",
+      "title": "Japanese Mandalas: Emanations and Avatars",
+      "url": "https://www.metmuseum.org/exhibitions/listings/2009/japanese-mandalas",
+      "locator": "Exhibition explanation, lines 67–70",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn650view1",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "exhibition_dates": "2009-06-18/2009-11-29",
+      "proposed_card_ids": [
+        "Q191431"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-pib-kumbh",
+      "title": "The Maha Kumbh Mela 2025: Embracing Unity in the Sacred Waters of Prayagraj",
+      "url": "https://static.pib.gov.in/WriteReadData/specificdocs/documents/2024/nov/doc2024115429601.pdf",
+      "locator": "PDF page 1 (index 0), lines 6–15; page 2 (index 1), lines 25–32",
+      "inspection_mode": "web_pdf_text",
+      "tool_ref": "turn657view2",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "publication_date": "2024-11-05",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q10283"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-met-fresco",
+      "title": "Italian Painting of the Later Middle Ages",
+      "url": "https://www.metmuseum.org/essays/italian-painting-of-the-later-middle-ages",
+      "locator": "Fresco technique, lines 152–155",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn601view8",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [],
+      "issue_ids": [
+        "culture-equivalence-fresco"
+      ],
+      "status": "substantive_passage_inspected_for_excluded_candidate"
+    },
+    {
+      "id": "culture-met-engraving",
+      "title": "Engraving",
+      "url": "https://www.metmuseum.org/perspectives/materials-and-techniques-printmaking-engraving",
+      "locator": "Intaglio and burin, lines 17, 21–24; printing, lines 33–43",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn590view5",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "publication_date": "2018-12-21",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [],
+      "issue_ids": [
+        "culture-equivalence-engraving"
+      ],
+      "status": "substantive_passage_inspected_for_excluded_candidate"
+    },
+    {
+      "id": "culture-met-etching",
+      "title": "Etching",
+      "url": "https://www.metmuseum.org/perspectives/materials-and-techniques-printmaking-etching",
+      "locator": "Ground and acid process, lines 23–36; reversed image, line 46",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn590view6",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "publication_date": "2018-12-21",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [],
+      "issue_ids": [
+        "culture-equivalence-etching"
+      ],
+      "status": "substantive_passage_inspected_for_excluded_candidate"
+    },
+    {
+      "id": "culture-met-gouache",
+      "title": "Watercolor",
+      "url": "https://www.metmuseum.org/perspectives/materials-and-techniques-drawing-watercolor",
+      "locator": "Transparent medium and white support, lines 7–23; opaque gouache and highlights, lines 42–47",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn687view0",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:43:15Z",
+      "acquisition_metadata": {
+        "time_basis": "Source inspection-session UTC checkpoint; individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:43:15Z"
+      },
+      "publication_date": "2020-05-01",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "additional_tool_refs": [
+        "turn703view1"
+      ],
+      "proposed_card_ids": [
+        "Q204330"
+      ],
+      "issue_ids": [
+        "culture-equivalence-watercolor-alternative"
+      ],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-met-stilllife",
+      "title": "Still-Life Painting in Northern Europe, 1600–1800",
+      "url": "https://www.metmuseum.org/essays/still-life-painting-in-northern-europe-1600-1800",
+      "locator": "Objects, mortality symbolism, and luxury, lines 132–144",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn676view0",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "publication_date": "2003-10-01",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q170571"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-met-pointillism",
+      "title": "Georges Seurat — Study for A Sunday on La Grande Jatte",
+      "url": "https://www.metmuseum.org/art/collection/search/437658",
+      "locator": "Object explanation, lines 10–11; audio transcript, lines 68–71",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn590view7",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q200034"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-met-ukiyoe",
+      "title": "Woodblock Prints in the Ukiyo-e Style",
+      "url": "https://www.metmuseum.org/essays/woodblock-prints-in-the-ukiyo-e-style",
+      "locator": "Commercial production and four specialists, lines 100–104",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn601view9",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "publication_date": "2003-10-01",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q185905"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-met-genre",
+      "title": "Genre Painting in Northern Europe",
+      "url": "https://www.metmuseum.org/essays/genre-painting-in-northern-europe",
+      "locator": "Everyday subjects and moral/social commentary, lines 209, 215–216, 231",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn601view10",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "publication_date": "2008-04",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q214127"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-met-stainedglass",
+      "title": "Stained Glass in Medieval Europe",
+      "url": "https://www.metmuseum.org/essays/stained-glass-in-medieval-europe",
+      "locator": "Colored glass, painted details, and lead assembly, lines 109–113",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn721view0",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:45:38Z",
+      "acquisition_metadata": {
+        "time_basis": "Source inspection-session UTC checkpoint; individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:45:38Z"
+      },
+      "publication_date": "2001-10-01",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q1473346"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-harvard-shahada",
+      "title": "shahadah",
+      "url": "https://pluralism.org/shahadah",
+      "locator": "Glossary definition, line 56",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn708view1",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:43:15Z",
+      "acquisition_metadata": {
+        "time_basis": "Source inspection-session UTC checkpoint; individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:43:15Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q41831"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-getty-mosaic",
+      "title": "Some of Ancient Rome’s Best-Preserved Art",
+      "url": "https://www.getty.edu/news/a-brief-introduction-to-roman-mosaics/",
+      "locator": "Floor durability and tesserae, lines 111–119; color materials, lines 131–132",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn708view2",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:43:15Z",
+      "acquisition_metadata": {
+        "time_basis": "Source inspection-session UTC checkpoint; individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:43:15Z"
+      },
+      "publication_date": "2016-04-04",
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q133067"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-moma-colorfield",
+      "title": "Mark Rothko’s Color Field Paintings",
+      "url": "https://www.moma.org/audio/playlist/354/4963",
+      "locator": "Transcript: blocks and shades, lines 9–10; layered thin paint, lines 12–14",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn709view0",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:43:15Z",
+      "acquisition_metadata": {
+        "time_basis": "Source inspection-session UTC checkpoint; individual request timestamps not captured",
+        "session_observed_at": "2026-10-09T04:43:15Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [
+        "Q1164982"
+      ],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_used"
+    },
+    {
+      "id": "culture-nga-printmaking",
+      "title": "Printmaking Basics",
+      "url": "https://www.nga.gov/educational-resources/printmaking-basics",
+      "locator": "Woodcut relief process, line 266",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn576view7",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [],
+      "issue_ids": [
+        "culture-equivalence-woodcut"
+      ],
+      "status": "substantive_passage_inspected_for_excluded_candidate"
+    },
+    {
+      "id": "culture-nz-waitangi-english",
+      "title": "Read the Treaty: English text",
+      "url": "https://nzhistory.govt.nz/politics/treaty/read-the-treaty/english-text",
+      "locator": "Introduction and articles, lines 13–18",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn645view3",
+      "revision": "2023-06-12",
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "revision_metadata": {
+        "kind": "page_last_reviewed_or_updated",
+        "precision": "day"
+      },
+      "budget_group": "culture-nz-waitangi",
+      "proposed_card_ids": [],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_unused"
+    },
+    {
+      "id": "culture-omt-embellishing",
+      "title": "Embellishing tones — Open Music Theory",
+      "url": "https://openmusictheory.github.io/embellishingTones.html",
+      "locator": "Passing-tone definition, line 8",
+      "inspection_mode": "web_text_open_find",
+      "tool_ref": "turn639view2",
+      "revision": null,
+      "word_limit": 200,
+      "retrieved_at": "2026-10-09T04:36:47Z",
+      "acquisition_metadata": {
+        "time_basis": "Inspection-session UTC checkpoint; individual request timestamps were not captured",
+        "session_first_observed_at": "2026-10-09T04:27:54Z",
+        "session_last_observed_at": "2026-10-09T04:36:47Z"
+      },
+      "word_limit_basis": "Retrieved web source allowance; one combined budget per page/companion source",
+      "proposed_card_ids": [],
+      "issue_ids": [],
+      "status": "substantive_passage_inspected_unused"
+    }
+  ]
+}

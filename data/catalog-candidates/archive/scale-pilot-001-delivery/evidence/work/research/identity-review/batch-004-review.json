@@ -1,0 +1,4059 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-004",
+  "review_type": "independent_stage_a_identity_admission_advisory",
+  "reviewed_at": "2026-10-08T19:49:07.415228+00:00",
+  "input": {
+    "path": "research/workers/research-batch-004/selection.proposed.json",
+    "sha256": "e9be6b4ae858d95c1a0d81666f1dc0ea270484f95b7d44d87934f7cc2e554ba3",
+    "proposals": 211,
+    "recommended": 200,
+    "reported_status_counts_recomputed": {
+      "existing_control": 39,
+      "new": 161
+    }
+  },
+  "baseline": {
+    "path": "data/catalog-candidates/scale-pilot-001/baseline-index.json",
+    "sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9",
+    "manifest_sha256": "5a14c4f6179be6f4340f52a4c9fef6d10264862216690b5da1a7e3ee325bd0f1",
+    "identity_count": 7224,
+    "unchanged": true
+  },
+  "checked": {
+    "all_proposal_labels_aliases_takeaways_scopes_types_and_ownership": true,
+    "all_registered_control_ids_resolve": true,
+    "new_unverified_qids": [],
+    "diagnostics": "Word/character TF–IDF retrieval over pinned labels, aliases, descriptions and prior candidate cards, used only to locate likely meaning comparisons. Top three independent diagnostic rows were inspected for new/unresolved proposals; registered controls were checked against their actual IDs/meanings. Author-recorded comparisons, targeted synonym scans and detailed near-case records informed semantic judgment. A lexical miss is not proof of novelty.",
+    "actual_source_passages_inspected": "Exact independent source inspections are enumerated in source-inspection-ledger.json with paths, hashes and locators. Other proposals received identity/meaning review against recorded discovery evidence and pinned meanings, not a full factual-source audit.",
+    "source_quality_scope": "No cards exist yet; this does not replace the independent frozen-card audit."
+  },
+  "recommendations": [
+    {
+      "proposal_id": "local:catalog:mechanical-stress",
+      "compared_ids": [
+        "Q13409892"
+      ],
+      "recommendation": "quarantine_central_decision",
+      "meaning_comparison": "The current force-per-area/loading-mode takeaway overlaps the stress state represented by the registered Cauchy stress tensor. Different stress measures can support a broader topic, but an introductory versus tensor presentation alone is not a sufficient new learning identity. Central coordinator instructed quarantine of this proposal and replacement from a separately supported reserve.",
+      "evidence": [
+        "source-cache/e02.json passages 6–8; baseline-index concepts/Q13409892",
+        "https://www.sandia.gov/files/sierra/SM_Theory_5_18/main/stress_measures.html §7.1 and §7.3"
+      ],
+      "authoring_conditions": [
+        "Do not relabel this introductory explanation as a novel fine subject. Preserve the proposal and the baseline ID."
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:three-point-bending-test",
+      "compared_ids": [
+        "Q7202074",
+        "local:catalog:research-batch-001:springback-in-sheet-metal-bending"
+      ],
+      "recommendation": "admit_replacement_central_decision",
+      "meaning_comparison": "The test uses a simply supported specimen and a central point load to infer elastic stiffness from deflection. Plastic bending concerns irreversible bending response; springback concerns recovery after unloading a forming process. The test configuration is a distinct application, also distinct from Young’s modulus or the neutral-axis concept alone.",
+      "evidence": [
+        "source-cache/e42.json passages 215–217, paragraphs 216–218"
+      ],
+      "authoring_conditions": [
+        "Use the ideal elastic, small-deflection beam-model conditions for the displayed stiffness relation."
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:goodman-fatigue-diagram",
+      "compared_ids": [
+        "Q507234",
+        "local:catalog:sn-curve",
+        "local:catalog:miners-rule"
+      ],
+      "recommendation": "admit_if_selected_reserve",
+      "meaning_comparison": "The mean-stress/alternating-stress design diagram differs from fatigue damage generally, an S–N stress-versus-lifetime curve, and Miner’s accumulation of lifetime fractions. Actual passage inspected.",
+      "evidence": [
+        "source-cache/e38.json passage 79, section_3"
+      ],
+      "authoring_conditions": [
+        "Describe the straight-line relation as an approximation; do not promise infinite-life performance for every material."
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:torque-induced-gyroscopic-precession",
+      "compared_ids": [
+        "Q104225"
+      ],
+      "recommendation": "admit_qualified_facet_central_decision",
+      "meaning_comparison": "General precession is axis-direction change. This source-supported subset is the torque-driven, fast-spinning gyroscope case in which torque perpendicular to angular momentum changes its direction. It is not a second unrestricted Precession identity.",
+      "evidence": [
+        "source-cache/p04.json passages 6, 7, 17"
+      ],
+      "authoring_conditions": [
+        "Explicitly retain torque-induced scope and fast-spin/slow-precession condition: precession angular velocity much less than the disk spin angular velocity. Do not imply gyroscopic precession is always torque-driven."
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:pitch-material",
+      "compared_ids": [
+        "Q167510",
+        "Q1103750"
+      ],
+      "recommendation": "admit_with_sense_boundary",
+      "meaning_comparison": "The UQ source identifies the selected pitch as a derivative of tar and demonstrates brittle short-time behavior and very slow flow. Baseline Asphalt is described as a petroleum material; Concert pitch is a musical reference frequency. The intended tar-derived material is distinct, but generic pitch terminology can overlap bitumen/asphalt, so the material sense must be explicit.",
+      "evidence": [
+        "source-cache/c19.json passages 4, 6, 8, 9, 11; baseline-index concepts/Q167510 and Q1103750"
+      ],
+      "authoring_conditions": [
+        "Add Asphalt Q167510 to the actual meaning comparisons and specify tar-derived pitch in the takeaway/card. Do not use the musical homonym alone as evidence of novelty."
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:graph-laplacian",
+      "compared_ids": [
+        "Q451881"
+      ],
+      "recommendation": "retain_quarantine",
+      "meaning_comparison": "A graph Laplacian is a standard discrete Laplace operator on a graph. A different label or a degree-minus-adjacency formula does not by itself establish an identity beyond the registered operator. This is outside the recommended 200.",
+      "evidence": [
+        "selection.proposed.json issue b004-i01; baseline-index concepts/Q451881"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:homeomorphism",
+      "compared_ids": [
+        "Q584521"
+      ],
+      "recommendation": "admit_distinct_scope",
+      "meaning_comparison": "General topological homeomorphism is a continuous bijection with a continuous inverse. The registered graph-theoretic relation is graph equivalence by subdivisions; this does not absorb the general mapping concept.",
+      "evidence": [
+        "selection.proposed.json proposal 66; baseline-index concepts/Q584521"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:eulers-polyhedron-formula",
+      "compared_ids": [
+        "Q852973",
+        "Q184871"
+      ],
+      "recommendation": "admit_qualified_facet",
+      "meaning_comparison": "Euler’s polyhedron formula is the sphere-like polyhedral case V−E+F=2 of the broader Euler-characteristic invariant, not the complex-exponential Euler formula. The significant nearest baseline is Q852973 as well as the homonymous Q184871.",
+      "evidence": [
+        "selection.proposed.json proposals 52 and 77; baseline-index concepts/Q852973 and Q184871"
+      ],
+      "authoring_conditions": [
+        "Keep the sphere-like/genus-zero condition and explain the special-case relation to Euler characteristic; do not present another unrestricted Euler-characteristic identity."
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:memoryless-property",
+      "compared_ids": [
+        "Q176645"
+      ],
+      "recommendation": "admit_distinct_property",
+      "meaning_comparison": "Waiting-time memorylessness is invariance of the residual-wait distribution after elapsed waiting; the Markov property conditions future evolution on current state. These are related but different claims and the new distributional scope is explicit.",
+      "evidence": [
+        "selection.proposed.json proposal 89; baseline-index concepts/Q176645"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:conditional-expectation",
+      "compared_ids": [
+        "Q200125"
+      ],
+      "recommendation": "admit_distinct_property",
+      "meaning_comparison": "Conditioning preserves specified information and produces an information-dependent random variable; an unconditional expected value averages over that uncertainty.",
+      "evidence": [
+        "selection.proposed.json proposal 92; baseline-index concepts/Q200125"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:critical-point-of-a-fluid",
+      "compared_ids": [
+        "local:catalog:supercritical-fluid"
+      ],
+      "recommendation": "admit_distinct_boundary",
+      "meaning_comparison": "The critical point is the endpoint of the liquid-vapor coexistence curve. A supercritical fluid is the region/state beyond the critical temperature and pressure. Boundary and region are separate supported learning subjects.",
+      "evidence": [
+        "selection.proposed.json proposal 32; baseline-index concepts/local:catalog:supercritical-fluid"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:quantum-tunneling",
+      "compared_ids": [
+        "Q285050"
+      ],
+      "recommendation": "admit_broader_phenomenon",
+      "meaning_comparison": "Barrier transmission includes non-ionization situations. Tunnel ionization is one narrower application, so general quantum tunneling is not a new name for the already registered ionization effect.",
+      "evidence": [
+        "selection.proposed.json proposal 128; baseline-index concepts/Q285050"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:paris-law-for-fatigue-crack-growth",
+      "compared_ids": [
+        "Q65046116"
+      ],
+      "recommendation": "admit_specific_law",
+      "meaning_comparison": "Crack growth equation is a class. The Paris law is one empirical power law, with a middle fatigue-growth validity regime and fitted constants, rather than the class under a new label.",
+      "evidence": [
+        "selection.proposed.json proposal 162; baseline-index concepts/Q65046116"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:coannular-exhaust-nozzle",
+      "compared_ids": [
+        "local:catalog:convergent-divergent-nozzle"
+      ],
+      "recommendation": "admit_distinct_geometry",
+      "meaning_comparison": "Concentric core/fan outlets concern the arrangement of two streams; converging-diverging area progression concerns acceleration along a stream. They can coexist and are not interchangeable geometries.",
+      "evidence": [
+        "selection.proposed.json proposal 181; baseline-index concepts/local:catalog:convergent-divergent-nozzle"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:variable-area-exhaust-nozzle",
+      "compared_ids": [
+        "local:catalog:convergent-divergent-nozzle"
+      ],
+      "recommendation": "admit_distinct_facet",
+      "meaning_comparison": "Adjustable geometry and its operating-range/weight tradeoff are separate from the fixed nozzle’s sonic throat and expansion mechanism.",
+      "evidence": [
+        "selection.proposed.json proposal 184; baseline-index concepts/local:catalog:convergent-divergent-nozzle"
+      ],
+      "authoring_conditions": []
+    }
+  ],
+  "proposal_records": [
+    {
+      "ordinal": 1,
+      "proposal_id": "local:authored:000624",
+      "label": "Chemistry",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000624"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000624",
+        "local:authored:000627",
+        "local:authored:000625"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 2,
+      "proposal_id": "Q189520",
+      "label": "Chemical equilibrium",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q189520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q189520",
+        "Q55607203",
+        "Q209082"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 3,
+      "proposal_id": "Q209082",
+      "label": "Chemical kinetics",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q209082"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q209082",
+        "Q36534",
+        "Q25109595"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 4,
+      "proposal_id": "Q82264",
+      "label": "Catalysis",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q82264"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q82264",
+        "Q193756",
+        "Q190549"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 5,
+      "proposal_id": "local:catalog:reaction-quotient",
+      "label": "Reaction quotient",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q189520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3394849",
+        "Q36534",
+        "Q373406"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 6,
+      "proposal_id": "local:catalog:heterogeneous-equilibrium",
+      "label": "Heterogeneous equilibrium",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q189520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q189520",
+        "Q19933904",
+        "Q113364864"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 7,
+      "proposal_id": "local:catalog:combining-equilibrium-constants",
+      "label": "Combining equilibrium constants",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q189520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q189520",
+        "Q1782658",
+        "Q5163671"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 8,
+      "proposal_id": "local:catalog:le-chateliers-principle",
+      "label": "Le Châtelier’s principle",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q189520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q211364",
+        "Q131560",
+        "Q1170107"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 9,
+      "proposal_id": "local:catalog:reaction-order",
+      "label": "Reaction order",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q209082"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3394849",
+        "Q36534",
+        "Q373406"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 10,
+      "proposal_id": "local:catalog:zero-order-reaction-kinetics",
+      "label": "Zero-order reaction kinetics",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q209082"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3394849",
+        "Q209082",
+        "Q36534"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 11,
+      "proposal_id": "local:catalog:first-order-reaction-half-life",
+      "label": "First-order reaction half-life",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q209082"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3394849",
+        "Q36534",
+        "Q373406"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 12,
+      "proposal_id": "local:catalog:second-order-reaction-half-life",
+      "label": "Second-order reaction half-life",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q209082"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3394849",
+        "Q36534",
+        "local:authored:000682"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 13,
+      "proposal_id": "local:catalog:activation-energy",
+      "label": "Activation energy",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q209082"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11379",
+        "Q423068",
+        "Q5376428"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 14,
+      "proposal_id": "local:catalog:arrhenius-equation",
+      "label": "Arrhenius equation",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q209082"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11345",
+        "Q904041",
+        "Q182527"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 15,
+      "proposal_id": "local:catalog:homogeneous-catalysis",
+      "label": "Homogeneous catalysis",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q82264"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q82264",
+        "Q7111384",
+        "Q19933904"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 16,
+      "proposal_id": "local:catalog:percy-lavon-julian",
+      "label": "Percy Lavon Julian",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000624"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q273499",
+        "Q126",
+        "Q160402"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 17,
+      "proposal_id": "local:catalog:mario-j-molina",
+      "label": "Mario J. Molina",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q82264"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q725668",
+        "local:authored:000655",
+        "Q181543"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 18,
+      "proposal_id": "Q44424",
+      "label": "Chemical bond",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q44424",
+        "Q10863671",
+        "Q2914535"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 19,
+      "proposal_id": "Q895901",
+      "label": "Crystal structure",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q895901"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q895901",
+        "Q43533",
+        "Q898786"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 20,
+      "proposal_id": "Q11469",
+      "label": "Glass",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q11469"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11469",
+        "local:authored:000356",
+        "Q129078492"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 21,
+      "proposal_id": "local:catalog:ionic-bonding",
+      "label": "Ionic bonding",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q6063682",
+        "Q191390",
+        "Q898579"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 22,
+      "proposal_id": "local:catalog:inert-pair-effect",
+      "label": "Inert pair effect",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q900190",
+        "Q804644",
+        "Q2457015"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 23,
+      "proposal_id": "Q191390",
+      "label": "Metallic bonding",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q191390"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q191390",
+        "Q570145",
+        "Q11426"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 24,
+      "proposal_id": "local:catalog:covalent-network-solid",
+      "label": "Covalent network solid",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q485360",
+        "Q5178887",
+        "Q11438"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 25,
+      "proposal_id": "local:catalog:molecular-solid",
+      "label": "Molecular solid",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11438",
+        "Q725417",
+        "Q1344441"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 26,
+      "proposal_id": "local:catalog:unit-cell",
+      "label": "Unit cell",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7868",
+        "Q196285",
+        "Q3312854"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 27,
+      "proposal_id": "local:catalog:body-centered-cubic-structure",
+      "label": "Body-centered cubic structure",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q895901",
+        "local:authored:000528",
+        "Q211606"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 28,
+      "proposal_id": "local:catalog:face-centered-cubic-structure",
+      "label": "Face-centered cubic structure",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q895901",
+        "Q6014254",
+        "Q211606"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 29,
+      "proposal_id": "local:catalog:hexagonal-close-packing",
+      "label": "Hexagonal close packing",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1435078",
+        "local:authored:000310",
+        "Q97368451"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 30,
+      "proposal_id": "local:catalog:crystal-vacancy",
+      "label": "Crystal vacancy",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q43533",
+        "Q898786",
+        "Q110639750"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 31,
+      "proposal_id": "local:catalog:triple-point",
+      "label": "Triple point",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1106393",
+        "Q126901424",
+        "Q178828"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 32,
+      "proposal_id": "local:catalog:critical-point-of-a-fluid",
+      "label": "Critical point of a fluid",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_boundary",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:supercritical-fluid",
+        "Q279454",
+        "Q5186613"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 33,
+      "proposal_id": "local:catalog:pitch-material",
+      "label": "Pitch (material)",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_with_sense_boundary",
+      "author_baseline_comparison_ids": [
+        "Q1103750"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1103750",
+        "Q507234",
+        "Q214609"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 34,
+      "proposal_id": "Q2346",
+      "label": "Analytical chemistry",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2346",
+        "local:authored:000627",
+        "local:authored:000625"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 35,
+      "proposal_id": "local:catalog:method-of-initial-rates",
+      "label": "Method of initial rates",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q6693044",
+        "Q6034134",
+        "Q8032308"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 36,
+      "proposal_id": "local:catalog:gravimetric-analysis",
+      "label": "Gravimetric analysis",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q193756",
+        "Q7754",
+        "local:authored:000612"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 37,
+      "proposal_id": "local:catalog:combustion-analysis",
+      "label": "Combustion analysis",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q133235",
+        "Q12757",
+        "Q193756"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 38,
+      "proposal_id": "local:catalog:acid-base-titration",
+      "label": "Acid-base titration",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q378751",
+        "Q11158",
+        "Q11193"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 39,
+      "proposal_id": "local:catalog:titration-end-point-and-equivalence-point",
+      "label": "Titration end point and equivalence point",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q130998",
+        "Q1779238",
+        "Q2041271"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 40,
+      "proposal_id": "local:catalog:acid-base-indicator",
+      "label": "Acid-base indicator",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q378751",
+        "Q11158",
+        "Q11193"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 41,
+      "proposal_id": "local:catalog:choosing-a-titration-indicator",
+      "label": "Choosing a titration indicator",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q40936",
+        "Q6024399",
+        "local:catalog:tissot-indicatrix"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 42,
+      "proposal_id": "local:catalog:buffer-solution",
+      "label": "Buffer solution",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5447188",
+        "Q378751",
+        "Q1063"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 43,
+      "proposal_id": "local:catalog:buffer-capacity",
+      "label": "Buffer capacity",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7269015",
+        "Q96374386",
+        "Q7705834"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 44,
+      "proposal_id": "local:catalog:hendersonhasselbalch-equation",
+      "label": "Henderson–Hasselbalch equation",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11345",
+        "Q904041",
+        "Q182527"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 45,
+      "proposal_id": "local:catalog:electrolysis",
+      "label": "Electrolysis",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q162908",
+        "Q103135",
+        "Q898673"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 46,
+      "proposal_id": "local:catalog:electroplating",
+      "label": "Electroplating",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q583040",
+        "local:authored:000534",
+        "Q185098"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 47,
+      "proposal_id": "local:catalog:chlor-alkali-process",
+      "label": "Chlor-alkali process",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q485742",
+        "Q284633",
+        "Q187073"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 48,
+      "proposal_id": "local:catalog:faradays-laws-of-electrolysis",
+      "label": "Faraday’s laws of electrolysis",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q6833880",
+        "Q11651",
+        "Q12725"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 49,
+      "proposal_id": "local:catalog:zone-refining",
+      "label": "Zone refining",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q12143",
+        "Q17051057",
+        "Q139964697"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 50,
+      "proposal_id": "local:catalog:silicon-passivation",
+      "label": "Silicon passivation",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q146439",
+        "Q11229871",
+        "Q138005939"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 51,
+      "proposal_id": "local:authored:000605",
+      "label": "Topology",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000605",
+        "Q621550",
+        "Q212803"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 52,
+      "proposal_id": "Q852973",
+      "label": "Euler characteristic",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q852973"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q852973",
+        "local:catalog:euler-trail",
+        "Q204819"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 53,
+      "proposal_id": "local:catalog:mobius-strip",
+      "label": "Möbius strip",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1303978",
+        "Q5168804",
+        "Q1770806"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 54,
+      "proposal_id": "local:catalog:torus",
+      "label": "Torus",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q84122",
+        "Q8074199",
+        "Q2182492"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 55,
+      "proposal_id": "local:catalog:orientable-surface",
+      "label": "Orientable surface",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q134409768",
+        "Q7645993",
+        "Q3505239"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 56,
+      "proposal_id": "local:catalog:stereographic-projection",
+      "label": "Stereographic projection",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q186386",
+        "Q20962748",
+        "Q66979468"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 57,
+      "proposal_id": "local:catalog:geodesic",
+      "label": "Geodesic",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q131089",
+        "Q1502887",
+        "Q7376933"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 58,
+      "proposal_id": "local:catalog:gaussian-curvature",
+      "label": "Gaussian curvature",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4894840",
+        "Q4183831",
+        "Q179161"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 59,
+      "proposal_id": "local:catalog:gaussbonnet-theorem",
+      "label": "Gauss–Bonnet theorem",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1477313",
+        "Q852973",
+        "Q184410"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 60,
+      "proposal_id": "local:catalog:surface-triangulation",
+      "label": "Surface triangulation",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q15031128",
+        "Q134409768",
+        "Q7645993"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 61,
+      "proposal_id": "local:catalog:hairy-ball-theorem",
+      "label": "Hairy ball theorem",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q18545",
+        "Q877517",
+        "Q1075398"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 62,
+      "proposal_id": "local:catalog:brouwer-fixed-point-theorem",
+      "label": "Brouwer fixed-point theorem",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1075398",
+        "Q184410",
+        "Q7902910"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 63,
+      "proposal_id": "local:catalog:borsukulam-theorem",
+      "label": "Borsuk–Ulam theorem",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q184410",
+        "Q7902910",
+        "Q34929"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 64,
+      "proposal_id": "local:catalog:jordan-curve-theorem",
+      "label": "Jordan curve theorem",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q96414431",
+        "Q108899013",
+        "Q184410"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 65,
+      "proposal_id": "local:catalog:genus-of-a-surface",
+      "label": "Genus of a surface",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q134409768",
+        "local:catalog:surface-tension",
+        "Q7645993"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 66,
+      "proposal_id": "local:catalog:homeomorphism",
+      "label": "Homeomorphism",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_scope",
+      "author_baseline_comparison_ids": [
+        "Q584521"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q584521",
+        "Q834981",
+        "Q380971"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 67,
+      "proposal_id": "local:catalog:deformation-retract",
+      "label": "Deformation retract",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000605"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q746083",
+        "local:authored:000605",
+        "Q11028"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 68,
+      "proposal_id": "Q1144780",
+      "label": "Homology",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q1144780"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1144780",
+        "Q212803",
+        "local:authored:000605"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 69,
+      "proposal_id": "local:authored:000604",
+      "label": "Graph theory",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000604"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000604",
+        "Q7293202",
+        "Q7168639"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 70,
+      "proposal_id": "local:catalog:spanning-tree",
+      "label": "Spanning tree",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:spanning-tree"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:spanning-tree",
+        "Q10884",
+        "Q267376"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 71,
+      "proposal_id": "local:catalog:bipartite-graph",
+      "label": "Bipartite graph",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000604"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q17005048",
+        "Q220997",
+        "Q17125113"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 72,
+      "proposal_id": "Q727035",
+      "label": "Adjacency matrix",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q727035"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q727035",
+        "Q1125095",
+        "Q105887311"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 73,
+      "proposal_id": "local:catalog:graph-laplacian",
+      "label": "Graph Laplacian",
+      "proposal_status": "unresolved",
+      "input_inventory_status": "unresolved",
+      "registered_id_exists": false,
+      "identity_recommendation": "retain_quarantine",
+      "author_baseline_comparison_ids": [
+        "Q451881"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5597087",
+        "Q727035",
+        "Q7858715"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 74,
+      "proposal_id": "local:catalog:matrix-tree-theorem",
+      "label": "Matrix-tree theorem",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000604"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q10884",
+        "Q1125095",
+        "Q727035"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 75,
+      "proposal_id": "local:catalog:planar-graph",
+      "label": "Planar graph",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000604"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2294516",
+        "local:authored:000604",
+        "Q85801675"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 76,
+      "proposal_id": "Q2294516",
+      "label": "Dual graph",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2294516"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2294516",
+        "local:authored:000604",
+        "Q85801675"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 77,
+      "proposal_id": "local:catalog:eulers-polyhedron-formula",
+      "label": "Euler’s polyhedron formula",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_qualified_facet",
+      "author_baseline_comparison_ids": [
+        "Q184871"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q184871",
+        "Q976981",
+        "Q1968"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 78,
+      "proposal_id": "local:catalog:chromatic-polynomial",
+      "label": "Chromatic polynomial",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000604"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q123879013",
+        "Q1333184",
+        "local:catalog:clique-bound-on-chromatic-number"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 79,
+      "proposal_id": "local:catalog:ramsey-number",
+      "label": "Ramsey number",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000604"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11563",
+        "local:authored:000602",
+        "Q160669"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 80,
+      "proposal_id": "local:catalog:catalan-numbers",
+      "label": "Catalan numbers",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q159943"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7026",
+        "Q2362415",
+        "Q207952"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 81,
+      "proposal_id": "local:catalog:stirling-numbers-of-the-second-kind",
+      "label": "Stirling numbers of the second kind",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q159943"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11563",
+        "Q207952",
+        "Q115767"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 82,
+      "proposal_id": "local:catalog:integer-partition-function",
+      "label": "Integer partition function",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q159943"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1148456",
+        "Q334269",
+        "Q1474530"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 83,
+      "proposal_id": "local:catalog:mobius-inversion-formula",
+      "label": "Möbius inversion formula",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q159943"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q976981",
+        "Q1968",
+        "local:catalog:melodic-inversion"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 84,
+      "proposal_id": "local:catalog:burnsides-lemma",
+      "label": "Burnside’s lemma",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q159943"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q170518",
+        "Q5176805",
+        "Q5700912"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 85,
+      "proposal_id": "local:catalog:quotient-group",
+      "label": "Quotient group",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q159943"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q874405",
+        "Q181296",
+        "Q874437"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 86,
+      "proposal_id": "local:authored:000600",
+      "label": "Probability",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000600"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000600",
+        "Q200726",
+        "Q207522"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 87,
+      "proposal_id": "Q176645",
+      "label": "Markov chain",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q176645"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q176645",
+        "Q1739959",
+        "Q3922074"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 88,
+      "proposal_id": "Q190391",
+      "label": "Central limit theorem",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q190391"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q190391",
+        "Q190663",
+        "Q5157271"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 89,
+      "proposal_id": "local:catalog:memoryless-property",
+      "label": "Memoryless property",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_property",
+      "author_baseline_comparison_ids": [
+        "Q176645"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q165474",
+        "Q187959",
+        "Q177251"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 90,
+      "proposal_id": "local:catalog:exponential-distribution",
+      "label": "Exponential distribution",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000600"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q205692",
+        "Q168698",
+        "Q243462"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 91,
+      "proposal_id": "local:catalog:geometric-distribution",
+      "label": "Geometric distribution",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000600"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q205692",
+        "Q17086162",
+        "Q200726"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 92,
+      "proposal_id": "local:catalog:conditional-expectation",
+      "label": "Conditional expectation",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_property",
+      "author_baseline_comparison_ids": [
+        "Q200125"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q6024399",
+        "Q200125",
+        "Q173725"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 93,
+      "proposal_id": "local:catalog:martingale",
+      "label": "Martingale",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000600"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q200125",
+        "Q11417",
+        "Q186531"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 94,
+      "proposal_id": "local:catalog:jensens-inequality",
+      "label": "Jensen’s inequality",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000600"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000578",
+        "Q7333121",
+        "Q2498665"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 95,
+      "proposal_id": "local:catalog:markovs-inequality",
+      "label": "Markov’s inequality",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000600"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000578",
+        "Q176645",
+        "Q7333121"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 96,
+      "proposal_id": "local:catalog:chebyshevs-inequality",
+      "label": "Chebyshev’s inequality",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000600"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000578",
+        "Q7333121",
+        "Q2498665"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 97,
+      "proposal_id": "local:catalog:borelcantelli-lemma",
+      "label": "Borel–Cantelli lemma",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000600"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000600",
+        "Q5700912",
+        "Q182505"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 98,
+      "proposal_id": "local:catalog:poisson-process",
+      "label": "Poisson process",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000600"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q205692",
+        "Q284633",
+        "Q187073"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 99,
+      "proposal_id": "local:catalog:random-walk",
+      "label": "Random walk",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000600"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q176623",
+        "Q5165436",
+        "Q17144486"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 100,
+      "proposal_id": "local:catalog:gamblers-ruin",
+      "label": "Gambler’s ruin",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q839726"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q839726",
+        "Q11416",
+        "Q96377929"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 101,
+      "proposal_id": "local:authored:000616",
+      "label": "Physics",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000616"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000616",
+        "Q26383",
+        "local:authored:000621"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 102,
+      "proposal_id": "Q11382",
+      "label": "Conservation of energy",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q11382"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11382",
+        "local:authored:000381",
+        "Q11379"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 103,
+      "proposal_id": "Q6497624",
+      "label": "Buoyancy",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q6497624"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q6497624",
+        "local:catalog:swim-bladder-buoyancy-regulation",
+        "Q177784"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 104,
+      "proposal_id": "local:catalog:angular-momentum",
+      "label": "Angular momentum",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7314235",
+        "Q834020",
+        "Q740898"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 105,
+      "proposal_id": "local:catalog:torque-induced-gyroscopic-precession",
+      "label": "Torque-induced gyroscopic precession",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_qualified_facet_central_decision",
+      "author_baseline_comparison_ids": [
+        "Q104225"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q104225",
+        "local:catalog:lift-induced-drag",
+        "local:catalog:retrieval-induced-forgetting"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 106,
+      "proposal_id": "Q172881",
+      "label": "Centripetal force",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q172881"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q172881",
+        "Q868425",
+        "Q190663"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 107,
+      "proposal_id": "local:catalog:coriolis-force",
+      "label": "Coriolis force",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q212126",
+        "Q11402",
+        "Q61883"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 108,
+      "proposal_id": "local:catalog:inertial-reference-frame",
+      "label": "Inertial reference frame",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3310692",
+        "Q6664509",
+        "Q74561"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 109,
+      "proposal_id": "local:catalog:escape-velocity",
+      "label": "Escape velocity",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1376323",
+        "Q17015069",
+        "local:authored:000266"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 110,
+      "proposal_id": "local:catalog:gravitational-potential-energy",
+      "label": "Gravitational potential energy",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4374744",
+        "Q2937676",
+        "Q194277"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 111,
+      "proposal_id": "local:catalog:tidal-force",
+      "label": "Tidal force",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11402",
+        "Q868425",
+        "Q61883"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 112,
+      "proposal_id": "local:catalog:damped-harmonic-motion",
+      "label": "Damped harmonic motion",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q576006",
+        "Q1971526",
+        "Q51290"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 113,
+      "proposal_id": "local:catalog:critical-damping",
+      "label": "Critical damping",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5186613",
+        "Q2590707",
+        "local:authored:000139"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 114,
+      "proposal_id": "Q3744733",
+      "label": "Mechanical resonance",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q3744733"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3744733",
+        "Q552311",
+        "Q10855394"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 115,
+      "proposal_id": "local:catalog:oscillator-quality-factor",
+      "label": "Oscillator quality factor",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1238887",
+        "Q55607203",
+        "Q7106417"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 116,
+      "proposal_id": "local:catalog:terminal-velocity",
+      "label": "Terminal velocity",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1376323",
+        "Q108102114",
+        "local:catalog:radial-velocity-exoplanet-detection"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 117,
+      "proposal_id": "local:catalog:tidal-locking",
+      "label": "Tidal locking",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000617"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q125504049",
+        "Q725417",
+        "Q53860"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 118,
+      "proposal_id": "local:authored:000620",
+      "label": "Optics",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000620"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000620",
+        "Q108428283",
+        "Q768575"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 119,
+      "proposal_id": "local:catalog:total-internal-reflection",
+      "label": "Total internal reflection",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000620"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2098331",
+        "Q93340282",
+        "Q12757"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 120,
+      "proposal_id": "local:catalog:brewsters-angle",
+      "label": "Brewster’s angle",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000620"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11352",
+        "Q191086",
+        "Q834020"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 121,
+      "proposal_id": "local:catalog:maluss-law",
+      "label": "Malus’s law",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000620"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7748",
+        "Q665141",
+        "Q170282"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 122,
+      "proposal_id": "local:catalog:rayleigh-criterion",
+      "label": "Rayleigh criterion",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000620"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q6722305",
+        "Q3486504",
+        "Q2310566"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 123,
+      "proposal_id": "local:catalog:diffraction-grating",
+      "label": "Diffraction grating",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000620"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2310566",
+        "Q137393195",
+        "Q527628"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 124,
+      "proposal_id": "local:catalog:thin-film-interference",
+      "label": "Thin-film interference",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000620"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11424",
+        "Q492264",
+        "Q24862"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 125,
+      "proposal_id": "Q83213",
+      "label": "Photoelectric effect",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q83213"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q83213",
+        "Q7705913",
+        "Q171516"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 126,
+      "proposal_id": "local:catalog:de-broglie-wavelength",
+      "label": "de Broglie wavelength",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000621"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q165848",
+        "Q863695",
+        "Q4674723"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 127,
+      "proposal_id": "local:catalog:heisenberg-uncertainty-principle",
+      "label": "Heisenberg uncertainty principle",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000621"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q899196",
+        "Q15514847",
+        "Q211364"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 128,
+      "proposal_id": "local:catalog:quantum-tunneling",
+      "label": "Quantum tunneling",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_broader_phenomenon",
+      "author_baseline_comparison_ids": [
+        "Q285050"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000621",
+        "Q30673259",
+        "Q54505"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 129,
+      "proposal_id": "local:catalog:scanning-tunneling-microscopy",
+      "label": "Scanning tunneling microscopy",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000621"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q10329629",
+        "Q196538",
+        "Q132560"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 130,
+      "proposal_id": "local:catalog:sterngerlach-experiment",
+      "label": "Stern–Gerlach experiment",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000621"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q6773300",
+        "Q578846",
+        "Q244774"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 131,
+      "proposal_id": "Q201805",
+      "label": "Zeeman effect",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q201805"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q201805",
+        "Q7705913",
+        "Q39086940"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 132,
+      "proposal_id": "local:catalog:electron-spin",
+      "label": "Electron spin",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000621"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q900190",
+        "Q116233307",
+        "Q132560"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 133,
+      "proposal_id": "Q227467",
+      "label": "Atomic clock",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q227467"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q227467",
+        "Q376",
+        "Q194173"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 134,
+      "proposal_id": "Q186447",
+      "label": "James Webb Space Telescope",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186447"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q186447",
+        "Q4213",
+        "Q216778"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 135,
+      "proposal_id": "Q725364",
+      "label": "Atacama Large Millimeter Array",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q725364"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q725364",
+        "Q47141",
+        "Q7577754"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 136,
+      "proposal_id": "Q209630",
+      "label": "Herschel Space Observatory",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q209630"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q209630",
+        "Q62832",
+        "local:catalog:landscape-evolution-observatory"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 137,
+      "proposal_id": "local:catalog:hubble-space-telescope",
+      "label": "Hubble Space Telescope",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186447"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4213",
+        "Q186447",
+        "Q216778"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 138,
+      "proposal_id": "local:catalog:chandra-x-ray-observatory",
+      "label": "Chandra X-ray Observatory",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186447"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q62832",
+        "Q209630",
+        "local:catalog:landscape-evolution-observatory"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 139,
+      "proposal_id": "local:catalog:spitzer-space-telescope",
+      "label": "Spitzer Space Telescope",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186447"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q186447",
+        "Q4213",
+        "Q216778"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 140,
+      "proposal_id": "local:catalog:compton-gamma-ray-observatory",
+      "label": "Compton Gamma-Ray Observatory",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186447"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q62832",
+        "Q171516",
+        "Q209630"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 141,
+      "proposal_id": "local:catalog:transiting-exoplanet-survey-satellite",
+      "label": "Transiting Exoplanet Survey Satellite",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186447"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:exoplanet-transit-photometry",
+        "Q209588",
+        "Q179435"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 142,
+      "proposal_id": "local:catalog:kepler-space-telescope",
+      "label": "Kepler Space Telescope",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186447"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4213",
+        "Q186447",
+        "Q216778"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 143,
+      "proposal_id": "local:catalog:gaia-mission",
+      "label": "Gaia mission",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186447"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q124693730",
+        "Q1322249",
+        "Q389772"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 144,
+      "proposal_id": "local:catalog:nustar",
+      "label": "NuSTAR",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186447"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q523",
+        "Q589",
+        "Q1654577"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 145,
+      "proposal_id": "local:catalog:xmm-newton",
+      "label": "XMM-Newton",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186447"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q136285176",
+        "Q6746648",
+        "Q2055641"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 146,
+      "proposal_id": "local:catalog:stellar-parallax",
+      "label": "Stellar parallax",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000108"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3235978",
+        "Q1062211",
+        "Q378090"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 147,
+      "proposal_id": "local:catalog:stellar-proper-motion",
+      "label": "Stellar proper motion",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:radial-velocity-exoplanet-detection"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4428967",
+        "Q105037988",
+        "Q178036"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 148,
+      "proposal_id": "local:catalog:adaptive-optics",
+      "label": "Adaptive optics",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000108"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000620",
+        "local:authored:000308",
+        "Q235781"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 149,
+      "proposal_id": "local:catalog:astronomical-seeing",
+      "label": "Astronomical seeing",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000108"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1811",
+        "Q6888",
+        "local:authored:000108"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 150,
+      "proposal_id": "local:catalog:astronomical-interferometry",
+      "label": "Astronomical interferometry",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000108"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1811",
+        "Q6888",
+        "Q740898"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 151,
+      "proposal_id": "Q11023",
+      "label": "Engineering",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q11023"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11023",
+        "Q4917288",
+        "local:authored:000531"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 152,
+      "proposal_id": "local:catalog:mechanical-stress",
+      "label": "Mechanical stress",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "quarantine_central_decision",
+      "author_baseline_comparison_ids": [
+        "Q13409892"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3744733",
+        "local:authored:000543",
+        "Q123414"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 153,
+      "proposal_id": "local:catalog:mechanical-strain",
+      "label": "Mechanical strain",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000543"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3744733",
+        "local:authored:000543",
+        "local:catalog:role-strain"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 154,
+      "proposal_id": "local:catalog:youngs-modulus",
+      "label": "Young’s modulus",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000543"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1930808",
+        "Q18390454",
+        "Q3699251"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 155,
+      "proposal_id": "local:catalog:elastic-limit",
+      "label": "Elastic limit",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000543"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5157271",
+        "Q3090317",
+        "Q190391"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 156,
+      "proposal_id": "local:catalog:creep-materials",
+      "label": "Creep (materials)",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000543"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7441881",
+        "Q30673259",
+        "local:authored:000119"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 157,
+      "proposal_id": "Q507234",
+      "label": "Fatigue (material)",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q507234"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q507234",
+        "Q6940317",
+        "Q5173034"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 158,
+      "proposal_id": "local:catalog:sn-curve",
+      "label": "S–N curve",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q507234"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q96414431",
+        "Q5130619",
+        "Q507234"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 159,
+      "proposal_id": "local:catalog:miners-rule",
+      "label": "Miner’s rule",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q507234"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q189573",
+        "Q44918",
+        "local:catalog:pie-rule"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 160,
+      "proposal_id": "local:catalog:stress-intensity-factor",
+      "label": "Stress intensity factor",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q507234"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q16862914",
+        "Q4996386",
+        "Q123414"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 161,
+      "proposal_id": "local:catalog:fracture-toughness",
+      "label": "Fracture toughness",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q507234"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q68833",
+        "Q5954459",
+        "Q65046116"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 162,
+      "proposal_id": "local:catalog:paris-law-for-fatigue-crack-growth",
+      "label": "Paris law for fatigue crack growth",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_specific_law",
+      "author_baseline_comparison_ids": [
+        "Q65046116"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q65046116",
+        "Q6940317",
+        "Q5173034"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 163,
+      "proposal_id": "local:catalog:neutral-axis-in-beam-bending",
+      "label": "Neutral axis in beam bending",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000543"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q644248",
+        "Q7202074",
+        "Q4830633"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 164,
+      "proposal_id": "Q835065",
+      "label": "Second moment of area",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q835065"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q835065",
+        "Q11500",
+        "Q1673454"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 165,
+      "proposal_id": "local:catalog:euler-column-buckling",
+      "label": "Euler column buckling",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000543"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4817",
+        "Q7170232",
+        "Q883815"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 166,
+      "proposal_id": "local:catalog:method-of-joints",
+      "label": "Method of joints",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000543"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q8032308",
+        "Q1627732",
+        "Q1272478"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 167,
+      "proposal_id": "local:catalog:zero-force-truss-member",
+      "label": "Zero-force truss member",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000543"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5157043",
+        "Q11402",
+        "Q190663"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 168,
+      "proposal_id": "Q4917288",
+      "label": "Control engineering",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q4917288"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4917288",
+        "Q11023",
+        "local:authored:000531"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 169,
+      "proposal_id": "Q178185",
+      "label": "Heat engine",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q178185"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q178185",
+        "Q44167",
+        "Q12760"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 170,
+      "proposal_id": "Q178777",
+      "label": "Jet engine",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q178777"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q178777",
+        "Q44167",
+        "Q178185"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 171,
+      "proposal_id": "local:catalog:pid-control",
+      "label": "PID control",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q4917288"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q959968",
+        "Q6501221",
+        "local:authored:000547"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 172,
+      "proposal_id": "local:catalog:integral-windup",
+      "label": "Integral windup",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q4917288"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q913764",
+        "Q5300045",
+        "Q753445"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 173,
+      "proposal_id": "local:catalog:back-calculation-anti-windup",
+      "label": "Back-calculation anti-windup",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q4917288"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5567092",
+        "Q76438",
+        "Q4774437"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 174,
+      "proposal_id": "local:catalog:bumpless-transfer",
+      "label": "Bumpless transfer",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q4917288"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q334269",
+        "Q6063682",
+        "Q28130292"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 175,
+      "proposal_id": "local:catalog:cascade-control",
+      "label": "Cascade control",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q4917288"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q959968",
+        "Q623971",
+        "Q6501221"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 176,
+      "proposal_id": "local:catalog:carnot-cycle",
+      "label": "Carnot cycle",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q178185"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q167751",
+        "Q5198175",
+        "Q893466"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 177,
+      "proposal_id": "local:catalog:otto-cycle",
+      "label": "Otto cycle",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q178185"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5198175",
+        "Q893466",
+        "Q167751"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 178,
+      "proposal_id": "local:catalog:specific-impulse",
+      "label": "Specific impulse",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q178185"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1139726",
+        "Q665617",
+        "Q903814"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 179,
+      "proposal_id": "local:catalog:ideal-rocket-equation",
+      "label": "Ideal rocket equation",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q178185"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11345",
+        "Q904041",
+        "Q3820420"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 180,
+      "proposal_id": "local:catalog:thrust-vectoring",
+      "label": "Thrust vectoring",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q178185"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7917820",
+        "Q107994",
+        "local:authored:000572"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 181,
+      "proposal_id": "local:catalog:coannular-exhaust-nozzle",
+      "label": "Coannular exhaust nozzle",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_geometry",
+      "author_baseline_comparison_ids": [
+        "local:catalog:convergent-divergent-nozzle"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:convergent-divergent-nozzle",
+        "Q683070",
+        "Q65043788"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 182,
+      "proposal_id": "local:catalog:pressure-thrust",
+      "label": "Pressure thrust",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q178185"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1068172",
+        "Q107174289",
+        "Q82642"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 183,
+      "proposal_id": "local:catalog:total-impulse",
+      "label": "Total impulse",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q178185"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1139726",
+        "Q665617",
+        "Q93340282"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 184,
+      "proposal_id": "local:catalog:variable-area-exhaust-nozzle",
+      "label": "Variable-area exhaust nozzle",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_facet",
+      "author_baseline_comparison_ids": [
+        "local:catalog:convergent-divergent-nozzle"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q176623",
+        "Q188593",
+        "local:catalog:convergent-divergent-nozzle"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 185,
+      "proposal_id": "local:catalog:hoover-dam",
+      "label": "Hoover Dam",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q12323",
+        "Q12514",
+        "Q22657"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 186,
+      "proposal_id": "local:catalog:brooklyn-bridge",
+      "label": "Brooklyn Bridge",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q12280",
+        "Q3408763",
+        "Q23802"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 187,
+      "proposal_id": "local:catalog:golden-gate-bridge",
+      "label": "Golden Gate Bridge",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q12280",
+        "Q3408763",
+        "Q23802"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 188,
+      "proposal_id": "Q7350",
+      "label": "Panama Canal",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q7350"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7350",
+        "Q12284",
+        "Q899"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 189,
+      "proposal_id": "Q459578",
+      "label": "Erie Canal",
+      "proposal_status": "recommended",
+      "input_inventory_status": "existing",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q459578"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q459578",
+        "Q12284",
+        "Q7350"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 190,
+      "proposal_id": "local:catalog:eiffel-tower",
+      "label": "Eiffel Tower",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q12518",
+        "Q213593",
+        "Q193886"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 191,
+      "proposal_id": "local:catalog:eads-bridge",
+      "label": "Eads Bridge",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q12280",
+        "Q3408763",
+        "Q23802"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 192,
+      "proposal_id": "local:catalog:forth-bridge",
+      "label": "Forth Bridge",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q12280",
+        "Q3408763",
+        "Q23802"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 193,
+      "proposal_id": "local:catalog:canal-lock",
+      "label": "Canal lock",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q12284",
+        "Q228039",
+        "Q459578"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 194,
+      "proposal_id": "local:catalog:miter-lock-gate",
+      "label": "Miter lock gate",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q6783512",
+        "Q228039",
+        "Q132041"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 195,
+      "proposal_id": "local:catalog:lock-water-saving-basin",
+      "label": "Lock water-saving basin",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q194173",
+        "Q228039",
+        "Q36669"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 196,
+      "proposal_id": "local:catalog:track-circuit",
+      "label": "Track circuit",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3245116",
+        "Q446087",
+        "Q5121595"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 197,
+      "proposal_id": "local:catalog:fail-safe-track-circuit-signalling",
+      "label": "Fail-safe track-circuit signalling",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3245116",
+        "Q5121595",
+        "Q446087"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 198,
+      "proposal_id": "local:catalog:ramp-metering",
+      "label": "Ramp metering",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2165620",
+        "Q10417228",
+        "local:authored:000262"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 199,
+      "proposal_id": "local:catalog:ramp-queue-spillback-management",
+      "label": "Ramp-queue spillback management",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2920921",
+        "local:authored:000556",
+        "local:authored:000564"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 200,
+      "proposal_id": "local:catalog:modern-roundabout",
+      "label": "Modern roundabout",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q12280"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q38166",
+        "Q850130",
+        "Q860746"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 201,
+      "proposal_id": "local:catalog:tetrahedral-interstitial-site",
+      "label": "Tetrahedral interstitial site",
+      "proposal_status": "reserve",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q17008332",
+        "Q2977",
+        "Q7205126"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 202,
+      "proposal_id": "local:catalog:octahedral-interstitial-site",
+      "label": "Octahedral interstitial site",
+      "proposal_status": "reserve",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q44424"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q23401",
+        "Q7205126",
+        "Q589"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 203,
+      "proposal_id": "local:catalog:braggs-law",
+      "label": "Bragg’s law",
+      "proposal_status": "reserve",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2346"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7748",
+        "Q146491",
+        "Q665141"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 204,
+      "proposal_id": "local:catalog:spin-orbit-coupling",
+      "label": "Spin-orbit coupling",
+      "proposal_status": "reserve",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000621"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2607202",
+        "Q55643081",
+        "Q253448"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 205,
+      "proposal_id": "local:catalog:hydrogen-21-centimeter-line",
+      "label": "Hydrogen 21-centimeter line",
+      "proposal_status": "reserve",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000620"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q556",
+        "Q169324",
+        "Q596395"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 206,
+      "proposal_id": "local:catalog:field-electron-emission",
+      "label": "Field electron emission",
+      "proposal_status": "reserve",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q285050"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q900190",
+        "Q132560",
+        "Q16251164"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 207,
+      "proposal_id": "local:catalog:goodman-fatigue-diagram",
+      "label": "Goodman fatigue diagram",
+      "proposal_status": "reserve",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_if_selected_reserve",
+      "author_baseline_comparison_ids": [
+        "Q507234"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q12884503",
+        "Q6940317",
+        "Q5173034"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 208,
+      "proposal_id": "local:catalog:three-point-bending-test",
+      "label": "Three-point bending test",
+      "proposal_status": "reserve",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_replacement_central_decision",
+      "author_baseline_comparison_ids": [
+        "local:authored:000543"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7202074",
+        "Q7808073",
+        "local:catalog:research-batch-001:springback-in-sheet-metal-bending"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 209,
+      "proposal_id": "local:catalog:panama-canal-lock-control-interlocks",
+      "label": "Panama Canal lock-control interlocks",
+      "proposal_status": "reserve",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q7350"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7350",
+        "Q12284",
+        "Q228039"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 210,
+      "proposal_id": "local:catalog:lagranges-group-theorem",
+      "label": "Lagrange’s group theorem",
+      "proposal_status": "recommended",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q159943"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:lagrange-points",
+        "Q874405",
+        "Q184410"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 211,
+      "proposal_id": "local:catalog:kuratowskis-theorem",
+      "label": "Kuratowski’s theorem",
+      "proposal_status": "reserve",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000604"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q184410",
+        "Q7902910",
+        "local:catalog:hall-marriage-theorem"
+      ],
+      "new_qid_without_baseline": false
+    }
+  ],
+  "limitations": [
+    "Bounded semantic review does not prove the absence of all duplicates in a 7,224-identity baseline.",
+    "The coordinator owns acceptance, reservation and count changes. Author files, baseline and shared manifests were not modified.",
+    "Cross-batch overlap review is separate and remains pending all final selections.",
+    "No control is reclassified or proposal invented to satisfy novelty quotas."
+  ],
+  "conditional_counts_after_central_changes": {
+    "recommended": 200,
+    "new": 161,
+    "existing_control": 39,
+    "new_fine": 144,
+    "note": "Replace new topic Mechanical stress with new fine Three-point bending test; preserve quarantined records. Subject to final cross-batch review."
+  },
+  "pre_card_constraints": [
+    {
+      "id": "local:catalog:hairy-ball-theorem",
+      "condition": "Qualify as the ordinary 2-sphere or an even-dimensional sphere, rather than any sphere."
+    },
+    {
+      "id": "local:catalog:maluss-law",
+      "condition": "Specify incident linearly polarized light and an ideal polarizer."
+    },
+    {
+      "id": "local:catalog:brewsters-angle",
+      "condition": "Retain the ideal dielectric/nonabsorbing-interface assumptions appropriate to full linear polarization."
+    }
+  ],
+  "source_inspection_ledger": "research/identity-review/source-inspection-ledger.json"
+}

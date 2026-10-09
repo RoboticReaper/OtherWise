@@ -1,0 +1,4350 @@
+{
+  "schema_version": 1,
+  "assignment": "systems",
+  "status": "selection_complete_awaiting_reservations",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "proposals": [
+    {
+      "id": "local:catalog:ephemeron",
+      "label": "Ephemeron",
+      "aliases": [
+        "Ephemerons"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Garbage collection",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Conditional retention by a separately reachable key avoids keeping key/value cycles alive.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q5521979",
+          "label": "Garbage (computer science)",
+          "reason": "Garbage (computer science) describes unusable objects; ephemeron is the specifically defined reachability construct."
+        }
+      ],
+      "identity_reason": "Garbage (computer science) describes unusable objects; ephemeron is the specifically defined reachability construct.",
+      "discovery_evidence": [
+        {
+          "url": "https://docs.racket-lang.org/reference/ephemerons.html",
+          "locator": "16.2, lines 42-48",
+          "note": "Conditional retention by a separately reachable key avoids keeping key/value cycles alive.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q21198",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://docs.racket-lang.org/reference/ephemerons.html",
+        "locator": "16.2, lines 42-48",
+        "note": "Editorial learning parent: Racket’s garbage-collection reachability construct belongs within computer science."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Ephemeron",
+          "normalized_key": "ephemeron",
+          "matched_ids": []
+        },
+        {
+          "query": "Ephemerons",
+          "normalized_key": "ephemerons",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:hazard-pointer",
+      "label": "Hazard pointer",
+      "aliases": [
+        "Hazard pointers"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Concurrent memory reclamation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Reclaim nodes removed from lock-free objects for safe later reuse.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q128392",
+          "label": "Concurrent computing",
+          "reason": "Concurrent computing is broader than this named memory-reclamation methodology."
+        }
+      ],
+      "identity_reason": "Concurrent computing is broader than this named memory-reclamation methodology.",
+      "discovery_evidence": [
+        {
+          "url": "https://research.ibm.com/publications/hazard-pointers-safe-memory-reclamation-for-lock-free-objects",
+          "locator": "Abstract, lines 10-13",
+          "note": "Reclaim nodes removed from lock-free objects for safe later reuse.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q128392",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://research.ibm.com/publications/hazard-pointers-safe-memory-reclamation-for-lock-free-objects",
+        "locator": "Abstract, lines 10-13",
+        "note": "Concurrent computing is broader than this named memory-reclamation methodology."
+      },
+      "limits": [
+        "Only primary abstract inspected so far; inspect detailed mechanism before drafting."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Hazard pointer",
+          "normalized_key": "hazard pointer",
+          "matched_ids": []
+        },
+        {
+          "query": "Hazard pointers",
+          "normalized_key": "hazard pointers",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:epoch-based-memory-reclamation",
+      "label": "Epoch-based memory reclamation",
+      "aliases": [
+        "Epoch-based reclamation",
+        "EBR"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Concurrent memory reclamation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Epochs and pinned readers delay destruction until no earlier reader can reference retired nodes.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q128392",
+          "label": "Concurrent computing",
+          "reason": "Epoch-and-pinning reclamation differs from general concurrency and individual hazard pointers."
+        }
+      ],
+      "identity_reason": "Epoch-and-pinning reclamation differs from general concurrency and individual hazard pointers.",
+      "discovery_evidence": [
+        {
+          "url": "https://docs.rs/crossbeam-epoch/latest/crossbeam_epoch/",
+          "locator": "Description; Pinning; Garbage, lines 29-42",
+          "note": "Epochs and pinned readers delay destruction until no earlier reader can reference retired nodes.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q128392",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://docs.rs/crossbeam-epoch/latest/crossbeam_epoch/",
+        "locator": "Description; Pinning; Garbage, lines 29-42",
+        "note": "Epoch-and-pinning reclamation differs from general concurrency and individual hazard pointers."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Epoch-based memory reclamation",
+          "normalized_key": "epoch based memory reclamation",
+          "matched_ids": []
+        },
+        {
+          "query": "Epoch-based reclamation",
+          "normalized_key": "epoch based reclamation",
+          "matched_ids": []
+        },
+        {
+          "query": "EBR",
+          "normalized_key": "ebr",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:qpack-field-compression",
+      "label": "QPACK field compression",
+      "aliases": [
+        "QPACK",
+        "QPACK header compression"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "HTTP protocols",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Separate instruction streams let HTTP/3 field compression trade table reuse against blocked decoding.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8777",
+          "label": "Hypertext Transfer Protocol",
+          "reason": "This separately specified HTTP/3 compression format is a facet of the broader protocol."
+        }
+      ],
+      "identity_reason": "This separately specified HTTP/3 compression format is a facet of the broader protocol.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9204.html",
+          "locator": "Sections 1, 2, 2.1.2",
+          "note": "Separate instruction streams let HTTP/3 field compression trade table reuse against blocked decoding.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8777",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.rfc-editor.org/rfc/rfc9204.html",
+        "locator": "Sections 1, 2, 2.1.2",
+        "note": "RFC 9204 defines QPACK for HTTP/3 field compression, a specific mechanism within HTTP."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "QPACK field compression",
+          "normalized_key": "qpack field compression",
+          "matched_ids": []
+        },
+        {
+          "query": "QPACK",
+          "normalized_key": "qpack",
+          "matched_ids": []
+        },
+        {
+          "query": "QPACK header compression",
+          "normalized_key": "qpack header compression",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:http-structured-field-dictionary",
+      "label": "HTTP structured field dictionary",
+      "aliases": [
+        "Structured Fields dictionary",
+        "Dictionary Structured Field"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "HTTP data representation",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "HTTP field dictionaries map unique textual keys to typed items or inner lists.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8777",
+          "label": "Hypertext Transfer Protocol",
+          "reason": "A defined HTTP data container, rather than HTTP itself or a generic dictionary data structure."
+        }
+      ],
+      "identity_reason": "A defined HTTP data container, rather than HTTP itself or a generic dictionary data structure.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9651.html",
+          "locator": "3 Structured Data Types, lines 252-259; 3.2 Dictionaries, lines 330-336; 2.4 compatibility, lines 243-246",
+          "note": "The current Structured Fields specification defines unique-key dictionaries with Items or Inner Lists; RFC 8941 remains historical evidence.",
+          "inspection_mode": "web.run actual official HTML passage"
+        },
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc8941.html",
+          "locator": "3.2 Dictionaries, lines 307-309",
+          "note": "HTTP field dictionaries map unique textual keys to typed items or inner lists.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8777",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.rfc-editor.org/rfc/rfc9651.html",
+        "locator": "3 Structured Data Types, lines 252-259; 3.2 Dictionaries, lines 330-336; 2.4 compatibility, lines 243-246",
+        "note": "The specification explicitly defines Dictionaries as a top-level representation for HTTP fields."
+      },
+      "limits": [
+        "Use RFC 9651 for the current specification; older field definitions can still reference RFC 8941."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "HTTP structured field dictionary",
+          "normalized_key": "http structured field dictionary",
+          "matched_ids": []
+        },
+        {
+          "query": "Structured Fields dictionary",
+          "normalized_key": "structured fields dictionary",
+          "matched_ids": []
+        },
+        {
+          "query": "Dictionary Structured Field",
+          "normalized_key": "dictionary structured field",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:http-message-signatures",
+      "label": "HTTP Message Signatures",
+      "aliases": [
+        "HTTP message signature",
+        "RFC 9421"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Message authentication",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A signature verifies the chosen covered HTTP components and associated signature metadata.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q220849",
+          "label": "Digital signature",
+          "reason": "This HTTP-specific canonicalization and field mechanism is distinct from digital signatures generally."
+        }
+      ],
+      "identity_reason": "This HTTP-specific canonicalization and field mechanism is distinct from digital signatures generally.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9421.html",
+          "locator": "Abstract; section 3, line 1399",
+          "note": "A signature verifies the chosen covered HTTP components and associated signature metadata.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q220849",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://www.rfc-editor.org/rfc/rfc9421.html",
+        "locator": "Abstract; section 3, line 1399",
+        "note": "This HTTP-specific canonicalization and field mechanism is distinct from digital signatures generally."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "HTTP Message Signatures",
+          "normalized_key": "http message signatures",
+          "matched_ids": []
+        },
+        {
+          "query": "HTTP message signature",
+          "normalized_key": "http message signature",
+          "matched_ids": []
+        },
+        {
+          "query": "RFC 9421",
+          "normalized_key": "rfc 9421",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:oblivious-http",
+      "label": "Oblivious HTTP",
+      "aliases": [
+        "OHTTP",
+        "RFC 9458"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Network privacy",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Separate relay and gateway split knowledge of client identity and request contents.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8777",
+          "label": "Hypertext Transfer Protocol",
+          "reason": "An explicitly specified encrypted relaying protocol, rather than a new explanation of HTTP."
+        }
+      ],
+      "identity_reason": "An explicitly specified encrypted relaying protocol, rather than a new explanation of HTTP.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9458.html",
+          "locator": "2.1 Applicability; section 6, lines 540-550",
+          "note": "Separate relay and gateway split knowledge of client identity and request contents.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8777",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.rfc-editor.org/rfc/rfc9458.html",
+        "locator": "2.1 Applicability; section 6, lines 540-550",
+        "note": "RFC 9458 defines an encrypted relaying mechanism for HTTP requests and responses, a distinct protocol facet."
+      },
+      "limits": [
+        "Requires separated relay/gateway ownership and explicit support; application state and traffic analysis can affect unlinkability."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Oblivious HTTP",
+          "normalized_key": "oblivious http",
+          "matched_ids": []
+        },
+        {
+          "query": "OHTTP",
+          "normalized_key": "ohttp",
+          "matched_ids": []
+        },
+        {
+          "query": "RFC 9458",
+          "normalized_key": "rfc 9458",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:merkle-inclusion-proof",
+      "label": "Merkle inclusion proof",
+      "aliases": [
+        "Merkle membership proof",
+        "Merkle audit path"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Cryptographic transparency",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "An authentication path recomputes a root to establish one leaf’s membership in a tree.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000527",
+          "label": "Cryptography",
+          "reason": "One-leaf membership differs from append-only consistency; cryptography is the broad parent."
+        }
+      ],
+      "identity_reason": "One-leaf membership differs from append-only consistency; cryptography is the broad parent.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+          "locator": "2.1.3 and 2.1.3.2, lines 325-341",
+          "note": "An authentication path recomputes a root to establish one leaf’s membership in a tree.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000527",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+        "locator": "2.1.3 and 2.1.3.2, lines 325-341",
+        "note": "One-leaf membership differs from append-only consistency; cryptography is the broad parent."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Merkle inclusion proof",
+          "normalized_key": "merkle inclusion proof",
+          "matched_ids": []
+        },
+        {
+          "query": "Merkle membership proof",
+          "normalized_key": "merkle membership proof",
+          "matched_ids": []
+        },
+        {
+          "query": "Merkle audit path",
+          "normalized_key": "merkle audit path",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:merkle-consistency-proof",
+      "label": "Merkle consistency proof",
+      "aliases": [
+        "Merkle append-only proof"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Cryptographic transparency",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Intermediate hashes establish that a larger tree preserves an earlier tree’s unchanged prefix.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000527",
+          "label": "Cryptography",
+          "reason": "Append-only prefix preservation differs from leaf membership and general cryptography."
+        }
+      ],
+      "identity_reason": "Append-only prefix preservation differs from leaf membership and general cryptography.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+          "locator": "2.1.4, lines 342-344",
+          "note": "Intermediate hashes establish that a larger tree preserves an earlier tree’s unchanged prefix.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000527",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+        "locator": "2.1.4, lines 342-344",
+        "note": "Append-only prefix preservation differs from leaf membership and general cryptography."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Merkle consistency proof",
+          "normalized_key": "merkle consistency proof",
+          "matched_ids": []
+        },
+        {
+          "query": "Merkle append-only proof",
+          "normalized_key": "merkle append only proof",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "Q65123731",
+      "label": "Gale–Shapley deferred acceptance algorithm",
+      "aliases": [
+        "Deferred acceptance algorithm",
+        "Gale-Shapley algorithm",
+        "DAA"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Matching market design",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Proposals and provisionally held best offers produce a stable allocation under the specified preference model.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q65123731",
+          "label": "Gale–Shapley algorithm",
+          "reason": "Same deferred-acceptance procedure, including the explicit source synonym."
+        },
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "Stable matching problem is the problem; deferred acceptance is a separately named solution procedure."
+        }
+      ],
+      "identity_reason": "Baseline Q65123731 describes the algorithm for solving the stable matching problem; the source explicitly equates deferred acceptance with Gale-Shapley. Reuse the existing ID for the same procedure.",
+      "discovery_evidence": [
+        {
+          "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+          "locator": "2.2, PDF page 3, lines 47-66",
+          "note": "Proposals and provisionally held best offers produce a stable allocation under the specified preference model.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q620702",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+        "locator": "2.2, PDF page 3, lines 47-66",
+        "note": "The lecture places this solution algorithm within the stable matching problem. Solving a problem does not mean applying that problem."
+      },
+      "limits": [
+        "Stability is under the lecture’s strict preference and matching model; proposers’ optimality is not universal welfare optimality."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Gale–Shapley deferred acceptance algorithm",
+          "normalized_key": "gale shapley deferred acceptance algorithm",
+          "matched_ids": []
+        },
+        {
+          "query": "Deferred acceptance algorithm",
+          "normalized_key": "deferred acceptance algorithm",
+          "matched_ids": []
+        },
+        {
+          "query": "Gale-Shapley algorithm",
+          "normalized_key": "gale shapley algorithm",
+          "matched_ids": [
+            "Q65123731"
+          ]
+        },
+        {
+          "query": "DAA",
+          "normalized_key": "daa",
+          "matched_ids": []
+        }
+      ],
+      "control_record_metadata": {
+        "original_description": "algorithm for solving the stable matching problem",
+        "maximum_prior_card_version": 0,
+        "next_card_version": 1,
+        "baseline_record_pointer": "data/catalog-candidates/research-batch-008-build/baseline-index.json#/concepts/Q65123731",
+        "imported_provenance": [
+          {
+            "description": "algorithm for solving the stable matching problem",
+            "index": 20448,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q65123731",
+            "source_revision": 2393810395,
+            "source_url": "https://www.wikidata.org/wiki/Q65123731",
+            "topic": "Gale–Shapley algorithm"
+          }
+        ],
+        "prior_bundles": []
+      }
+    },
+    {
+      "id": "local:catalog:rural-hospitals-theorem",
+      "label": "Rural hospitals theorem",
+      "aliases": [
+        "Rural hospital theorem"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Matching market design",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Stable matchings cannot change which doctors an undersubscribed hospital hires under strict responsive preferences.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "This invariance theorem differs from the broad stable matching problem and from an algorithm."
+        }
+      ],
+      "identity_reason": "This invariance theorem differs from the broad stable matching problem and from an algorithm.",
+      "discovery_evidence": [
+        {
+          "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+          "locator": "Section 4, PDF page 7, lines 142-166",
+          "note": "Stable matchings cannot change which doctors an undersubscribed hospital hires under strict responsive preferences.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q620702",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+        "locator": "Section 4, PDF page 7, lines 142-166",
+        "note": "Section 4 states an invariance theorem about stable hospital-doctor matchings within the stable matching problem."
+      },
+      "limits": [
+        "Fixed hospital quotas, strict preferences and responsive hospital rankings are required in the inspected formulation; do not transfer the result to arbitrary matching preferences."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Rural hospitals theorem",
+          "normalized_key": "rural hospitals theorem",
+          "matched_ids": []
+        },
+        {
+          "query": "Rural hospital theorem",
+          "normalized_key": "rural hospital theorem",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:runway-incursion",
+      "label": "Runway incursion",
+      "aliases": [],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Airport surface safety",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Incorrect presence on a runway protected area qualifies even without immediate collision consequences.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q184590",
+          "label": "Runway",
+          "reason": "Runway is infrastructure; an incursion is a separately defined safety occurrence."
+        }
+      ],
+      "identity_reason": "Runway is infrastructure; an incursion is a separately defined safety occurrence.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.faa.gov/airports/runway_safety/resources/runway_incursions",
+          "locator": "Definition and Category D, lines 115-125",
+          "note": "Incorrect presence on a runway protected area qualifies even without immediate collision consequences.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q765633",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.faa.gov/airports/runway_safety/resources/runway_incursions",
+        "locator": "Definition and Category D, lines 115-125",
+        "note": "Runway is infrastructure; an incursion is a separately defined safety occurrence."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Runway incursion",
+          "normalized_key": "runway incursion",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:saturation-flow-rate",
+      "label": "Saturation flow rate at a signalized intersection",
+      "aliases": [
+        "Saturation flow rate"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Traffic signal capacity",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Continuous-green discharge with no lost time is a reference rate, distinct from actual signal capacity.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8004",
+          "label": "Traffic light",
+          "reason": "Traffic light is a device; saturation flow is a defined discharge-rate quantity."
+        }
+      ],
+      "identity_reason": "Traffic light is a device; saturation flow is a defined discharge-rate quantity.",
+      "discovery_evidence": [
+        {
+          "url": "https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter3.htm",
+          "locator": "3.1, lines 75-77; 3.3.2",
+          "note": "Continuous-green discharge with no lost time is a reference rate, distinct from actual signal capacity.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8004",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter3.htm",
+        "locator": "3.1, lines 75-77; 3.3.2",
+        "note": "Traffic light is a device; saturation flow is a defined discharge-rate quantity."
+      },
+      "limits": [
+        "Archived manual; do not use historical numeric defaults as current guidance."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Saturation flow rate at a signalized intersection",
+          "normalized_key": "saturation flow rate at a signalized intersection",
+          "matched_ids": []
+        },
+        {
+          "query": "Saturation flow rate",
+          "normalized_key": "saturation flow rate",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:stableford-scoring",
+      "label": "Stableford scoring",
+      "aliases": [
+        "Stableford"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Golf scoring formats",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Hole-by-hole points relative to a fixed target determine the winning total.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7435308",
+          "label": "Score (sport)",
+          "reason": "Score (sport) is broad; Stableford is a distinct named points system."
+        }
+      ],
+      "identity_reason": "Score (sport) is broad; Stableford is a distinct named points system.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-21",
+          "locator": "21.1a-b, lines 83-99",
+          "note": "Hole-by-hole points relative to a fixed target determine the winning total.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q7435308",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-21",
+        "locator": "21.1a-b, lines 83-99",
+        "note": "Score (sport) is broad; Stableford is a distinct named points system."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Stableford scoring",
+          "normalized_key": "stableford scoring",
+          "matched_ids": []
+        },
+        {
+          "query": "Stableford",
+          "normalized_key": "stableford",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:maximum-score-golf",
+      "label": "Maximum Score golf",
+      "aliases": [
+        "Maximum Score format"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Golf scoring formats",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A committee-set cap limits each hole’s stroke score, including holes not finished.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7435308",
+          "label": "Score (sport)",
+          "reason": "Capped stroke totals differ from Stableford points and scoring in sport generally."
+        }
+      ],
+      "identity_reason": "Capped stroke totals differ from Stableford points and scoring in sport generally.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-21",
+          "locator": "21.2a-b, lines 136-151",
+          "note": "A committee-set cap limits each hole’s stroke score, including holes not finished.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q7435308",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-21",
+        "locator": "21.2a-b, lines 136-151",
+        "note": "Capped stroke totals differ from Stableford points and scoring in sport generally."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Maximum Score golf",
+          "normalized_key": "maximum score golf",
+          "matched_ids": []
+        },
+        {
+          "query": "Maximum Score format",
+          "normalized_key": "maximum score format",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:libero-volleyball",
+      "label": "Libero in volleyball",
+      "aliases": [
+        "Volleyball libero",
+        "Libero player"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Volleyball player roles",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A back-row specialist has distinct replacement rights and attacking, blocking and serving limits.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000287",
+          "label": "Volleyball",
+          "reason": "Volleyball is the game; libero is a defined player role with distinct permissions."
+        }
+      ],
+      "identity_reason": "Volleyball is the game; libero is a defined player role with distinct permissions.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.fivb.com/wp-content/uploads/2025/01/FIVB-Volleyball_Rules2025_2028-EN.pdf",
+          "locator": "19.3.1, printed p. 42 / PDF p. 44; 19.3.2.1-2, printed p. 43 / PDF p. 45",
+          "note": "A back-row specialist has distinct replacement rights and attacking, blocking and serving limits.",
+          "inspection_mode": "Official PDF extracted locally with pypdf and passage read; earlier web extraction also inspected"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000287",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.fivb.com/wp-content/uploads/2025/01/FIVB-Volleyball_Rules2025_2028-EN.pdf",
+        "locator": "19.3.1, printed p. 42 / PDF p. 44; 19.3.2.1-2, printed p. 43 / PDF p. 45",
+        "note": "FIVB Rule 19 defines the Libero’s role, playing actions and replacements within volleyball."
+      },
+      "limits": [
+        "Apply FIVB 2025-2028 rules; serving permissions differ in some other volleyball rule sets."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Libero in volleyball",
+          "normalized_key": "libero in volleyball",
+          "matched_ids": []
+        },
+        {
+          "query": "Volleyball libero",
+          "normalized_key": "volleyball libero",
+          "matched_ids": []
+        },
+        {
+          "query": "Libero player",
+          "normalized_key": "libero player",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:event-segmentation-theory",
+      "label": "Event Segmentation Theory",
+      "aliases": [
+        "EST"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Perception of continuous activity",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Transient prediction errors mark perceived event boundaries in the proposed account of ongoing activity.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q160402",
+          "label": "perception",
+          "reason": "A named account of event boundaries differs from perception generally."
+        }
+      ],
+      "identity_reason": "A named account of event boundaries differs from perception generally.",
+      "discovery_evidence": [
+        {
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852534/",
+          "locator": "Abstract; A Theory of Event Segmentation, lines 94-113",
+          "note": "Transient prediction errors mark perceived event boundaries in the proposed account of ongoing activity.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q160402",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852534/",
+        "locator": "Abstract; A Theory of Event Segmentation, lines 94-113",
+        "note": "The authors explicitly frame the theory as an account of perceptual boundaries in continuous activity."
+      },
+      "limits": [
+        "This is a proposed theory; its particular neural implementation is a hypothesis, rather than a settled identity definition."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Event Segmentation Theory",
+          "normalized_key": "event segmentation theory",
+          "matched_ids": []
+        },
+        {
+          "query": "EST",
+          "normalized_key": "est",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "Q21198",
+      "label": "Computer science",
+      "aliases": [
+        "Computer science"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Computational problem solving",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Algorithms and representations turn inputs into problem-solving outputs.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q21198",
+          "label": "Computer science",
+          "reason": "Same broad field as the imported study-of-computation identity; a teaching perspective reuses the ID."
+        }
+      ],
+      "identity_reason": "Same broad field as the imported study-of-computation identity; a teaching perspective reuses the ID.",
+      "discovery_evidence": [
+        {
+          "url": "https://cs50.harvard.edu/x/notes/0/",
+          "locator": "Computer Science and Problem Solving; Algorithms; Summing Up, lines 199-209, 327-331, 624-633",
+          "note": "Algorithms and representations turn inputs into problem-solving outputs.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [],
+      "selection_role": "primary",
+      "control_record_metadata": {
+        "original_description": "study of computation",
+        "maximum_prior_card_version": 0,
+        "next_card_version": 1,
+        "baseline_record_pointer": "data/catalog-candidates/research-batch-008-build/baseline-index.json#/concepts/Q21198",
+        "imported_provenance": [
+          {
+            "description": "study of computation",
+            "index": 1061,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q21198",
+            "source_revision": 2551194443,
+            "source_url": "https://www.wikidata.org/wiki/Q21198",
+            "topic": "Computer science"
+          }
+        ],
+        "prior_bundles": []
+      },
+      "alias_checks": [
+        {
+          "query": "Computer science",
+          "normalized_key": "computer science",
+          "matched_ids": [
+            "Q21198"
+          ]
+        },
+        {
+          "query": "Computer science",
+          "normalized_key": "computer science",
+          "matched_ids": [
+            "Q21198"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:top-trading-cycles",
+      "label": "Top trading cycles",
+      "aliases": [
+        "TTC",
+        "Top trading cycles mechanism"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Matching market design",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Directed preference-and-priority cycles assign seats simultaneously and remove completed trades.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "The cycle-trading algorithm is distinct from the deferred-acceptance procedure and from the stable-matching problem; its school-choice variant can trade efficiency against justified envy."
+        },
+        {
+          "id": "Q65123731",
+          "label": "Gale–Shapley algorithm",
+          "reason": "The cycle-trading algorithm is distinct from the deferred-acceptance procedure and from the stable-matching problem; its school-choice variant can trade efficiency against justified envy."
+        }
+      ],
+      "identity_reason": "The cycle-trading algorithm is distinct from the deferred-acceptance procedure and from the stable-matching problem; its school-choice variant can trade efficiency against justified envy.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+          "locator": "II.B, printed pp. 736-737 / PDF pp. 8-9, steps 1-k and propositions 3-4",
+          "note": "Directed preference-and-priority cycles assign seats simultaneously and remove completed trades.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000608",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+        "locator": "II.B, printed pp. 736-737 / PDF pp. 8-9, steps 1-k and propositions 3-4",
+        "note": "Editorial parent in game theory: the source analyzes strategic reports and allocations in a mechanism-design model."
+      },
+      "limits": [
+        "Strict reported school rankings and exogenous priorities in the inspected school-choice formulation; do not transfer every property to all TTC variants."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Top trading cycles",
+          "normalized_key": "top trading cycles",
+          "matched_ids": []
+        },
+        {
+          "query": "TTC",
+          "normalized_key": "ttc",
+          "matched_ids": []
+        },
+        {
+          "query": "Top trading cycles mechanism",
+          "normalized_key": "top trading cycles mechanism",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:boston-immediate-acceptance-mechanism",
+      "label": "Boston immediate acceptance mechanism",
+      "aliases": [
+        "Boston mechanism",
+        "Boston student assignment mechanism",
+        "Immediate acceptance mechanism"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "School choice mechanisms",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Finalizing first-choice admissions before later rounds makes preference reporting strategically consequential.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q65123731",
+          "label": "Gale–Shapley algorithm",
+          "reason": "Immediate final assignments differ from deferred acceptance, which holds proposals tentatively; this is a separately described school-choice mechanism."
+        },
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "Immediate final assignments differ from deferred acceptance, which holds proposals tentatively; this is a separately described school-choice mechanism."
+        }
+      ],
+      "identity_reason": "Immediate final assignments differ from deferred acceptance, which holds proposals tentatively; this is a separately described school-choice mechanism.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+          "locator": "I.A Boston Student Assignment Mechanism, printed pp. 732-733 / PDF pp. 4-5, rounds 1-k and strategy-proofness discussion",
+          "note": "Finalizing first-choice admissions before later rounds makes preference reporting strategically consequential.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000608",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+        "locator": "I.A Boston Student Assignment Mechanism, printed pp. 732-733 / PDF pp. 4-5, rounds 1-k and strategy-proofness discussion",
+        "note": "The source analyzes the strategy incentives of this allocation mechanism; game theory is an editorial navigation parent."
+      },
+      "limits": [
+        "The Boston implementation is historical, as described in 2003; the card must not claim it is Boston’s current policy."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Boston immediate acceptance mechanism",
+          "normalized_key": "boston immediate acceptance mechanism",
+          "matched_ids": []
+        },
+        {
+          "query": "Boston mechanism",
+          "normalized_key": "boston mechanism",
+          "matched_ids": []
+        },
+        {
+          "query": "Boston student assignment mechanism",
+          "normalized_key": "boston student assignment mechanism",
+          "matched_ids": []
+        },
+        {
+          "query": "Immediate acceptance mechanism",
+          "normalized_key": "immediate acceptance mechanism",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:clarke-pivot-rule",
+      "label": "Clarke pivot rule",
+      "aliases": [
+        "Clarke tax",
+        "Pivotal mechanism"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Mechanism payments",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A VCG payment measures the welfare effect a participant imposes on the other participants.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:second-price-sealed-bid-auction",
+          "label": "Second-price sealed-bid auction",
+          "reason": "The externality payment rule applies to multi-outcome allocation problems; a single-item second-price auction is one special case, not the same general subject."
+        },
+        {
+          "id": "Q7731670",
+          "label": "Incentive compatibility",
+          "reason": "The externality payment rule applies to multi-outcome allocation problems; a single-item second-price auction is one special case, not the same general subject."
+        }
+      ],
+      "identity_reason": "The externality payment rule applies to multi-outcome allocation problems; a single-item second-price auction is one special case, not the same general subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://people.csail.mit.edu/costis/6896sp10/Lecture21.pdf",
+          "locator": "VCG (with Clarke Pivot Rule), PDF page 7; path-auction example, pages 8-9",
+          "note": "A VCG payment measures the welfare effect a participant imposes on the other participants.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q7731670",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://people.csail.mit.edu/costis/6896sp10/Lecture21.pdf",
+        "locator": "VCG (with Clarke Pivot Rule), PDF page 7; path-auction example, pages 8-9",
+        "note": "Editorial parent: the lecture places the rule in the VCG incentive-compatible mechanism framework."
+      },
+      "limits": [
+        "Quasilinear private-value mechanism setting; distinguish welfare effects and transfer sign conventions."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Clarke pivot rule",
+          "normalized_key": "clarke pivot rule",
+          "matched_ids": []
+        },
+        {
+          "query": "Clarke tax",
+          "normalized_key": "clarke tax",
+          "matched_ids": []
+        },
+        {
+          "query": "Pivotal mechanism",
+          "normalized_key": "pivotal mechanism",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:moral-hazard-in-teams",
+      "label": "Moral hazard in teams",
+      "aliases": [
+        "Team moral hazard"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Team incentive contracts",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Shared observable output with hidden individual actions creates a team-specific free-riding problem.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:moral-hazard",
+          "label": "Moral hazard",
+          "reason": "The source defines a distinct multiagent model with hidden individual actions, shared output and budget-balance constraints, extending the moral-hazard problem."
+        },
+        {
+          "id": "Q1053211",
+          "label": "Principal–agent problem",
+          "reason": "A separately modeled multi-agent application with shared-output and budget-balance constraints, rather than another example of generic hidden action."
+        }
+      ],
+      "identity_reason": "The source defines a distinct multiagent model with hidden individual actions, shared output and budget-balance constraints, extending the moral-hazard problem.",
+      "discovery_evidence": [
+        {
+          "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+          "locator": "Abstract and Introduction, printed p. 324 / PDF p. 1",
+          "note": "Shared observable output with hidden individual actions creates a team-specific free-riding problem.",
+          "inspection_mode": "Local rendered scanned PDF visually inspected (teams-page1.png)"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:catalog:moral-hazard",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+        "locator": "Abstract and Introduction, printed p. 324 / PDF p. 1",
+        "note": "The introduction explicitly defines the paper’s setting as a multiagent extension of the moral-hazard problem."
+      },
+      "limits": [
+        "Model conclusion about non-budget-balanced incentives is conditional; no claim that all real teams require an outside principal."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Moral hazard in teams",
+          "normalized_key": "moral hazard in teams",
+          "matched_ids": []
+        },
+        {
+          "query": "Team moral hazard",
+          "normalized_key": "team moral hazard",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:relative-performance-evaluation",
+      "label": "Relative performance evaluation",
+      "aliases": [
+        "RPE"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Informative incentive signals",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Peers’ outcomes can supply information useful for designing an individual’s incentive contract.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1414816",
+          "label": "Incentive",
+          "reason": "Using peer outcomes as an informative contractual signal is distinct from generic incentives, productivity, or team free-riding."
+        },
+        {
+          "id": "Q1053211",
+          "label": "Principal–agent problem",
+          "reason": "Using peer outcomes as an informative contractual signal is distinct from generic incentives, productivity, or team free-riding."
+        }
+      ],
+      "identity_reason": "Using peer outcomes as an informative contractual signal is distinct from generic incentives, productivity, or team free-riding.",
+      "discovery_evidence": [
+        {
+          "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+          "locator": "Abstract, printed p. 324 / PDF p. 1",
+          "note": "Peers’ outcomes can supply information useful for designing an individual’s incentive contract.",
+          "inspection_mode": "Local rendered scanned PDF visually inspected (teams-page1.png)"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1414816",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+        "locator": "Abstract, printed p. 324 / PDF p. 1",
+        "note": "The abstract explicitly investigates relative performance evaluation as a scheme to improve incentives using information about peer agents."
+      },
+      "limits": [
+        "Selection is supported by the primary abstract; detailed assumptions about signal correlation should be inspected before drafting a mechanism claim."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Relative performance evaluation",
+          "normalized_key": "relative performance evaluation",
+          "matched_ids": []
+        },
+        {
+          "query": "RPE",
+          "normalized_key": "rpe",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:multitask-incentive-problem",
+      "label": "Multitask incentive problem",
+      "aliases": [
+        "Multitask principal-agent problem",
+        "Multitask incentives"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Incentives and job design",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Rewarding measurable output can shift effort away from other valuable duties competing for attention.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1053211",
+          "label": "Principal–agent problem",
+          "reason": "The paper identifies a distinct multidimensional principal-agent model: allocation of attention across tasks, not merely hidden action or any unintended incentive."
+        },
+        {
+          "id": "Q1414816",
+          "label": "Incentive",
+          "reason": "The paper identifies a distinct multidimensional principal-agent model: allocation of attention across tasks, not merely hidden action or any unintended incentive."
+        },
+        {
+          "id": "Q2169419",
+          "label": "Perverse incentive",
+          "reason": "The paper identifies a distinct multidimensional principal-agent model: allocation of attention across tasks, not merely hidden action or any unintended incentive."
+        }
+      ],
+      "identity_reason": "The paper identifies a distinct multidimensional principal-agent model: allocation of attention across tasks, not merely hidden action or any unintended incentive.",
+      "discovery_evidence": [
+        {
+          "url": "https://web.stanford.edu/~milgrom/publishedarticles/Multitask%20Principal%20Agent.pdf",
+          "locator": "Introduction, printed pp. 24-26 / PDF pages 1-2, distinguishing mark and competing-attention paragraphs",
+          "note": "Rewarding measurable output can shift effort away from other valuable duties competing for attention.",
+          "inspection_mode": "Local scanned PDF rendered with pypdfium2 and visually inspected (multitask-page1.png and multitask-page2.png)"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1053211",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://web.stanford.edu/~milgrom/publishedarticles/Multitask%20Principal%20Agent.pdf",
+        "locator": "Introduction, printed pp. 24-26 / PDF pages 1-2, distinguishing mark and competing-attention paragraphs",
+        "note": "The introduction explicitly contrasts multidimensional principal-agent models with one-dimensional models."
+      },
+      "limits": [
+        "Effort substitution and measurement assumptions matter; this is not a general claim that incentive pay always lowers quality."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Multitask incentive problem",
+          "normalized_key": "multitask incentive problem",
+          "matched_ids": []
+        },
+        {
+          "query": "Multitask principal-agent problem",
+          "normalized_key": "multitask principal agent problem",
+          "matched_ids": []
+        },
+        {
+          "query": "Multitask incentives",
+          "normalized_key": "multitask incentives",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:market-unraveling",
+      "label": "Unraveling in matching markets",
+      "aliases": [
+        "Market unraveling",
+        "Matching-market unraveling",
+        "Early contracting in matching markets"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Matching market timing",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Competition to secure matches can push offers earlier, before useful information becomes available.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q620702",
+          "label": "Stable matching problem",
+          "reason": "This subject concerns earlier appointment dates in matching markets. It differs from stable-matching algorithms and adverse-selection explanations of market collapse."
+        },
+        {
+          "id": "Q65123731",
+          "label": "Gale–Shapley algorithm",
+          "reason": "This subject concerns earlier appointment dates in matching markets. It differs from stable-matching algorithms and adverse-selection explanations of market collapse."
+        },
+        {
+          "id": "local:catalog:adverse-selection",
+          "label": "Adverse selection",
+          "reason": "The existing insurance-selection meaning concerns changing risk composition; this proposed identity concerns transaction timing."
+        }
+      ],
+      "identity_reason": "This subject concerns earlier appointment dates in matching markets. It differs from stable-matching algorithms and adverse-selection explanations of market collapse.",
+      "discovery_evidence": [
+        {
+          "url": "https://stanford.edu/~alroth/jump.html",
+          "locator": "Introduction, lines 87-91 and 146-164; I. Unraveling in a prototypical market, lines 177-197",
+          "note": "Roth and Xing explicitly name appointment-date unraveling: participants transact earlier than competitors, with future qualifications still uncertain.",
+          "inspection_mode": "web.run actual author-hosted HTML passage"
+        },
+        {
+          "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+          "locator": "Introduction, PDF page 1, lines 6-17, internship hiring moving earlier",
+          "note": "Competition to secure matches can push offers earlier, before useful information becomes available.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q620702",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://stanford.edu/~alroth/jump.html",
+        "locator": "Introduction, lines 87-91 and 146-164; I. Unraveling in a prototypical market, lines 177-197",
+        "note": "Editorial bridge to stable matching: the authors distinguish appointment-date instability from blocking-pair instability and discuss centralized match procedures."
+      },
+      "limits": [
+        "The inspected author copy describes historical markets and an idealized four-stage pattern; it does not claim every matching market unravels.",
+        "Unraveling here means progressively earlier appointments, rather than adverse-selection market collapse."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Unraveling in matching markets",
+          "normalized_key": "unraveling in matching markets",
+          "matched_ids": []
+        },
+        {
+          "query": "Market unraveling",
+          "normalized_key": "market unraveling",
+          "matched_ids": []
+        },
+        {
+          "query": "Matching-market unraveling",
+          "normalized_key": "matching market unraveling",
+          "matched_ids": []
+        },
+        {
+          "query": "Early contracting in matching markets",
+          "normalized_key": "early contracting in matching markets",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:dutch-roll",
+      "label": "Dutch roll",
+      "aliases": [
+        "Dutch-roll oscillation"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Aircraft lateral and directional dynamics",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Coupled roll and yaw oscillations can have weak damping and may require yaw dampers.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8424",
+          "label": "Aerodynamics",
+          "reason": "A defined lateral-directional oscillation mode rather than aerodynamics generally or a generic aircraft turn."
+        },
+        {
+          "id": "Q765633",
+          "label": "Aviation",
+          "reason": "A defined lateral-directional oscillation mode rather than aerodynamics generally or a generic aircraft turn."
+        }
+      ],
+      "identity_reason": "A defined lateral-directional oscillation mode rather than aerodynamics generally or a generic aircraft turn.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+          "locator": "Chapter 5, Free Directional Oscillations (Dutch Roll), printed p. 5-20 / PDF p. 20",
+          "note": "Coupled roll and yaw oscillations can have weak damping and may require yaw dampers.",
+          "inspection_mode": "Local official PDF passage extracted with pypdf and read"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8424",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+        "locator": "Chapter 5, Free Directional Oscillations (Dutch Roll), printed p. 5-20 / PDF p. 20",
+        "note": "This mode is explicitly taught within the handbook’s Aerodynamics of Flight chapter."
+      },
+      "limits": [
+        "Damping varies by aircraft; the inspected text does not imply all aircraft have sustained oscillations."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Dutch roll",
+          "normalized_key": "dutch roll",
+          "matched_ids": []
+        },
+        {
+          "query": "Dutch-roll oscillation",
+          "normalized_key": "dutch roll oscillation",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:p-factor",
+      "label": "P-factor",
+      "aliases": [
+        "Asymmetric propeller loading",
+        "P-Factor"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Propeller aerodynamics",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "High angle of attack gives propeller blades unequal loading and shifts thrust away from the shaft center.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q205451",
+          "label": "Propeller",
+          "reason": "A named asymmetry in propeller loading, distinct from torque reaction, gyroscopic precession, or adverse yaw."
+        },
+        {
+          "id": "Q8424",
+          "label": "Aerodynamics",
+          "reason": "A named asymmetry in propeller loading, distinct from torque reaction, gyroscopic precession, or adverse yaw."
+        }
+      ],
+      "identity_reason": "A named asymmetry in propeller loading, distinct from torque reaction, gyroscopic precession, or adverse yaw.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+          "locator": "Chapter 5, Asymmetric Loading (P-Factor), printed p. 5-32 / PDF p. 32",
+          "note": "High angle of attack gives propeller blades unequal loading and shifts thrust away from the shaft center.",
+          "inspection_mode": "Local official PDF passage extracted with pypdf and read"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q205451",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+        "locator": "Chapter 5, Asymmetric Loading (P-Factor), printed p. 5-32 / PDF p. 32",
+        "note": "The passage explains the mechanism through the rotating propeller blades and displacement of the thrust center."
+      },
+      "limits": [
+        "Yaw direction depends on propeller rotation and viewpoint; preserve the high-angle-of-attack condition."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "P-factor",
+          "normalized_key": "p factor",
+          "matched_ids": []
+        },
+        {
+          "query": "Asymmetric propeller loading",
+          "normalized_key": "asymmetric propeller loading",
+          "matched_ids": []
+        },
+        {
+          "query": "P-Factor",
+          "normalized_key": "p factor",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:adverse-yaw",
+      "label": "Adverse yaw",
+      "aliases": [
+        "Aileron adverse yaw"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Aircraft control coupling",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Unequal drag during an aileron roll can yaw an aircraft opposite to the intended bank.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1705284",
+          "label": "Flight control surfaces",
+          "reason": "The differential-drag yaw accompanying aileron use is distinct from propeller P-factor and roll-yaw oscillation."
+        },
+        {
+          "id": "Q8424",
+          "label": "Aerodynamics",
+          "reason": "The differential-drag yaw accompanying aileron use is distinct from propeller P-factor and roll-yaw oscillation."
+        }
+      ],
+      "identity_reason": "The differential-drag yaw accompanying aileron use is distinct from propeller P-factor and roll-yaw oscillation.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.faa.gov/sites/faa.gov/files/08_phak_ch6.pdf",
+          "locator": "Chapter 6, Adverse Yaw, printed p. 6-3 / PDF p. 3",
+          "note": "Unequal drag during an aileron roll can yaw an aircraft opposite to the intended bank.",
+          "inspection_mode": "Local official PDF passage extracted with pypdf and read"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1705284",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.faa.gov/sites/faa.gov/files/08_phak_ch6.pdf",
+        "locator": "Chapter 6, Adverse Yaw, printed p. 6-3 / PDF p. 3",
+        "note": "The aileron section explicitly explains the yaw produced by deflecting these flight-control surfaces."
+      },
+      "limits": [
+        "This is the aileron-induced effect; avoid presenting it as every opposite-direction aircraft yaw."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Adverse yaw",
+          "normalized_key": "adverse yaw",
+          "matched_ids": []
+        },
+        {
+          "query": "Aileron adverse yaw",
+          "normalized_key": "aileron adverse yaw",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:etcs-braking-curve",
+      "label": "ETCS braking curve",
+      "aliases": [
+        "ETCS braking curves",
+        "European Train Control System braking curve"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Train speed supervision",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A train-and-track model predicts speed against distance so ETCS can supervise braking toward a limit.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q862562",
+          "label": "Railway signal",
+          "reason": "A specific ETCS supervision calculation differs from the brake hardware, general railway signaling, and braking itself."
+        },
+        {
+          "id": "Q4260703",
+          "label": "Railway engineering",
+          "reason": "A specific ETCS supervision calculation differs from the brake hardware, general railway signaling, and braking itself."
+        }
+      ],
+      "identity_reason": "A specific ETCS supervision calculation differs from the brake hardware, general railway signaling, and braking itself.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.era.europa.eu/domains/european-rail-traffic-management-system/braking-curves",
+          "locator": "Introduction and braking-curve prediction description, lines 15-21",
+          "note": "A train-and-track model predicts speed against distance so ETCS can supervise braking toward a limit.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q862562",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.era.europa.eu/domains/european-rail-traffic-management-system/braking-curves",
+        "locator": "Introduction and braking-curve prediction description, lines 15-21",
+        "note": "The source explicitly describes braking-curve computation as part of ETCS speed-and-position supervision."
+      },
+      "limits": [
+        "A prediction uses train braking and track data; it is not a claim of exact realized stopping distance."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "ETCS braking curve",
+          "normalized_key": "etcs braking curve",
+          "matched_ids": []
+        },
+        {
+          "query": "ETCS braking curves",
+          "normalized_key": "etcs braking curves",
+          "matched_ids": []
+        },
+        {
+          "query": "European Train Control System braking curve",
+          "normalized_key": "european train control system braking curve",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:airport-surface-hotspot",
+      "label": "Airport surface hotspot",
+      "aliases": [
+        "Runway safety hotspot",
+        "Airport hot spot"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Airport surface safety",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Published hotspot locations identify collision or incursion risk that deserves heightened attention.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q184590",
+          "label": "Runway",
+          "reason": "A risk-designated location differs from a runway incursion incident; either history or potential risk can qualify."
+        },
+        {
+          "id": "Q765633",
+          "label": "Aviation",
+          "reason": "A risk-designated location differs from a runway incursion incident; either history or potential risk can qualify."
+        }
+      ],
+      "identity_reason": "A risk-designated location differs from a runway incursion incident; either history or potential risk can qualify.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.faa.gov/airports/runway_safety/hotspots",
+          "locator": "Hot spot definition, lines 114-117",
+          "note": "Published hotspot locations identify collision or incursion risk that deserves heightened attention.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q765633",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.faa.gov/airports/runway_safety/hotspots",
+        "locator": "Hot spot definition, lines 114-117",
+        "note": "FAA defines this location on an aerodrome movement area as an aviation surface-safety subject."
+      },
+      "limits": [
+        "U.S. FAA source terminology; chart locations can change. The card should explain the designation rather than identify a current location."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Airport surface hotspot",
+          "normalized_key": "airport surface hotspot",
+          "matched_ids": []
+        },
+        {
+          "query": "Runway safety hotspot",
+          "normalized_key": "runway safety hotspot",
+          "matched_ids": []
+        },
+        {
+          "query": "Airport hot spot",
+          "normalized_key": "airport hot spot",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:start-up-lost-time",
+      "label": "Start-up lost time at a traffic signal",
+      "aliases": [
+        "Start-up lost time",
+        "Startup lost time"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Traffic signal capacity",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "The first queued vehicles need extra reaction and acceleration time before steady discharge begins.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8004",
+          "label": "Traffic light",
+          "reason": "The named initial lost-time quantity is different from saturation flow’s hypothetical hourly discharge and from intersection delay generally."
+        }
+      ],
+      "identity_reason": "The named initial lost-time quantity is different from saturation flow’s hypothetical hourly discharge and from intersection delay generally.",
+      "discovery_evidence": [
+        {
+          "url": "https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter3.htm",
+          "locator": "3.1 Queuing and Discharge Characteristics, start-up lost time paragraph, lines 68-77",
+          "note": "The first queued vehicles need extra reaction and acceleration time before steady discharge begins.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8004",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter3.htm",
+        "locator": "3.1 Queuing and Discharge Characteristics, start-up lost time paragraph, lines 68-77",
+        "note": "The source defines start-up lost time for a queue starting to discharge after the traffic signal turns green."
+      },
+      "limits": [
+        "The archived manual’s numerical defaults are not current universal values."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Start-up lost time at a traffic signal",
+          "normalized_key": "start up lost time at a traffic signal",
+          "matched_ids": []
+        },
+        {
+          "query": "Start-up lost time",
+          "normalized_key": "start up lost time",
+          "matched_ids": []
+        },
+        {
+          "query": "Startup lost time",
+          "normalized_key": "startup lost time",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:bus-queue-jump",
+      "label": "Bus queue jump",
+      "aliases": [
+        "Queue jump lane",
+        "Queue jumper"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Transit intersection priority",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A short bus lane and early green let a transit vehicle bypass waiting traffic at an intersection.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1740966",
+          "label": "Public transport bus service",
+          "reason": "The combined lane-and-signal treatment differs from generic bus service or signal priority alone."
+        },
+        {
+          "id": "Q8004",
+          "label": "Traffic light",
+          "reason": "The combined lane-and-signal treatment differs from generic bus service or signal priority alone."
+        }
+      ],
+      "identity_reason": "The combined lane-and-signal treatment differs from generic bus service or signal priority alone.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.transit.dot.gov/research-innovation/signal-priority",
+          "locator": "Queue Jumpers, lines 52-54",
+          "note": "A short bus lane and early green let a transit vehicle bypass waiting traffic at an intersection.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1740966",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.transit.dot.gov/research-innovation/signal-priority",
+        "locator": "Queue Jumpers, lines 52-54",
+        "note": "The official passage explicitly defines a short bus lane with signal priority to let buses pass a queue."
+      },
+      "limits": [
+        "Official educational page last updated 2015-12-06; this passage supports the design concept, not a current engineering recommendation or universal delay benefit."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Bus queue jump",
+          "normalized_key": "bus queue jump",
+          "matched_ids": []
+        },
+        {
+          "query": "Queue jump lane",
+          "normalized_key": "queue jump lane",
+          "matched_ids": []
+        },
+        {
+          "query": "Queue jumper",
+          "normalized_key": "queue jumper",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "Q11023",
+      "label": "Engineering",
+      "aliases": [
+        "Engineering"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Iterative design and testing",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Prototyping, testing, and revision connect a problem definition with a workable solution.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11023",
+          "label": "Engineering",
+          "reason": "The same broad engineering identity already has card version 1; this new source perspective requires ID reuse."
+        }
+      ],
+      "identity_reason": "The same broad engineering identity already has card version 1; this new source perspective requires ID reuse.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/robotics-making-a-self-driving-rover/",
+          "locator": "Introduce the Challenge, lines 139-142; Criteria for Success and Engineering Constraints, lines 150-165",
+          "note": "Prototyping, testing, and revision connect a problem definition with a workable solution.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [],
+      "selection_role": "primary",
+      "control_record_metadata": {
+        "original_description": "type of applied science",
+        "maximum_prior_card_version": 1,
+        "next_card_version": 2,
+        "baseline_record_pointer": "data/catalog-candidates/research-batch-008-build/baseline-index.json#/concepts/Q11023",
+        "imported_provenance": [
+          {
+            "description": "type of applied science",
+            "index": 1396,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q11023",
+            "source_revision": 2551650963,
+            "source_url": "https://www.wikidata.org/wiki/Q11023",
+            "topic": "Engineering"
+          }
+        ],
+        "prior_bundles": [
+          {
+            "batch_id": "scale-pilot-001",
+            "batch_revision": "002",
+            "source_bundle_path": "data/catalog-candidates/scale-pilot-001/revision-002/catalog.json",
+            "source_bundle_sha256": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65"
+          }
+        ]
+      },
+      "alias_checks": [
+        {
+          "query": "Engineering",
+          "normalized_key": "engineering",
+          "matched_ids": [
+            "Q11023"
+          ]
+        },
+        {
+          "query": "Engineering",
+          "normalized_key": "engineering",
+          "matched_ids": [
+            "Q11023"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:volleyball-rotational-fault",
+      "label": "Volleyball rotational fault",
+      "aliases": [
+        "Rotational fault in volleyball",
+        "Serving out of rotation"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Volleyball service order",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Serving out of rotation is a service-order fault with a correction and specified scoring consequences.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000287",
+          "label": "Volleyball",
+          "reason": "Rule 7.7 names wrong service order, distinct from a positional fault involving players’ locations."
+        }
+      ],
+      "identity_reason": "Rule 7.7 names wrong service order, distinct from a positional fault involving players’ locations.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.fivb.com/wp-content/uploads/2025/01/FIVB-Volleyball_Rules2025_2028-EN.pdf",
+          "locator": "7.7 Rotational Fault, printed p. 26 / PDF p. 28",
+          "note": "Serving out of rotation is a service-order fault with a correction and specified scoring consequences.",
+          "inspection_mode": "Official PDF extracted locally with pypdf and passage read; earlier web extraction also inspected"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000287",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.fivb.com/wp-content/uploads/2025/01/FIVB-Volleyball_Rules2025_2028-EN.pdf",
+        "locator": "7.7 Rotational Fault, printed p. 26 / PDF p. 28",
+        "note": "The named fault is one of the official game rules for volleyball service order."
+      },
+      "limits": [
+        "Apply the FIVB 2025-2028 rule set; distinguish rotational fault from positional fault."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Volleyball rotational fault",
+          "normalized_key": "volleyball rotational fault",
+          "matched_ids": []
+        },
+        {
+          "query": "Rotational fault in volleyball",
+          "normalized_key": "rotational fault in volleyball",
+          "matched_ids": []
+        },
+        {
+          "query": "Serving out of rotation",
+          "normalized_key": "serving out of rotation",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:tennis-service-let",
+      "label": "Tennis service let",
+      "aliases": [
+        "Service let",
+        "Let on service"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Tennis service rules",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A qualifying service let repeats that serve while preserving an earlier service fault.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q847",
+          "label": "Tennis",
+          "reason": "A specifically defined nullified serve differs from a fault and from a general rally let."
+        }
+      ],
+      "identity_reason": "A specifically defined nullified serve differs from a fault and from a general rally let.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "locator": "Rule 22 The Let During a Service, printed p. 9 / PDF p. 11, lines 342-350",
+          "note": "A qualifying service let repeats that serve while preserving an earlier service fault.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q847",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+        "locator": "Rule 22 The Let During a Service, printed p. 9 / PDF p. 11, lines 342-350",
+        "note": "Rule 22 defines the service let as part of the tennis rules."
+      },
+      "limits": [
+        "The standard ITF rule is inspected; Appendix VI permits alternative no-let procedures."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Tennis service let",
+          "normalized_key": "tennis service let",
+          "matched_ids": []
+        },
+        {
+          "query": "Service let",
+          "normalized_key": "service let",
+          "matched_ids": []
+        },
+        {
+          "query": "Let on service",
+          "normalized_key": "let on service",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:wheelchair-tennis-two-bounce-rule",
+      "label": "Wheelchair tennis two-bounce rule",
+      "aliases": [
+        "Two-bounce rule in wheelchair tennis"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Wheelchair tennis adaptations",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A wheelchair player may return after two bounces, and the second bounce may fall outside the court.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q847",
+          "label": "Tennis",
+          "reason": "This named wheelchair-tennis rule is a separately specified adaptation rather than generic tennis or wheelchair use."
+        },
+        {
+          "id": "Q191931",
+          "label": "Wheelchair",
+          "reason": "This named wheelchair-tennis rule is a separately specified adaptation rather than generic tennis or wheelchair use."
+        }
+      ],
+      "identity_reason": "This named wheelchair-tennis rule is a separately specified adaptation rather than generic tennis or wheelchair use.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "locator": "Rules of Wheelchair Tennis, a. The Two Bounce Rule, printed p. 16 / PDF p. 18, lines 568-571",
+          "note": "A wheelchair player may return after two bounces, and the second bounce may fall outside the court.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q847",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+        "locator": "Rules of Wheelchair Tennis, a. The Two Bounce Rule, printed p. 16 / PDF p. 18, lines 568-571",
+        "note": "The Rules of Wheelchair Tennis explicitly introduce exceptions to the ITF Rules of Tennis."
+      },
+      "limits": [
+        "The first bounce still follows the ordinary court-boundary rule."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Wheelchair tennis two-bounce rule",
+          "normalized_key": "wheelchair tennis two bounce rule",
+          "matched_ids": []
+        },
+        {
+          "query": "Two-bounce rule in wheelchair tennis",
+          "normalized_key": "two bounce rule in wheelchair tennis",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:rugby-union-advantage",
+      "label": "Advantage in rugby union",
+      "aliases": [
+        "Rugby advantage",
+        "Advantage law in rugby"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Rugby refereeing",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Play can continue after infringement when the opponents gain clear tactical or territorial advantage.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q5849",
+          "label": "Rugby union",
+          "reason": "The separately named rugby Law 7 differs from advantage in other sports and from sports rules generally."
+        }
+      ],
+      "identity_reason": "The separately named rugby Law 7 differs from advantage in other sports and from sports rules generally.",
+      "discovery_evidence": [
+        {
+          "url": "https://passport.world.rugby/laws-of-the-game/laws-by-number/7-advantage/",
+          "locator": "Principle and 7.1-7.3, lines 38-59",
+          "note": "Play can continue after infringement when the opponents gain clear tactical or territorial advantage.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q5849",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://passport.world.rugby/laws-of-the-game/laws-by-number/7-advantage/",
+        "locator": "Principle and 7.1-7.3, lines 38-59",
+        "note": "World Rugby expressly makes advantage a law governing rugby play."
+      },
+      "limits": [
+        "Advantage must be clear and real, with stated Law 7 exceptions; continuation is not automatic for every infringement."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Advantage in rugby union",
+          "normalized_key": "advantage in rugby union",
+          "matched_ids": []
+        },
+        {
+          "query": "Rugby advantage",
+          "normalized_key": "rugby advantage",
+          "matched_ids": []
+        },
+        {
+          "query": "Advantage law in rugby",
+          "normalized_key": "advantage law in rugby",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:duckworth-lewis-stern-method",
+      "label": "Duckworth–Lewis–Stern method",
+      "aliases": [
+        "DLS method",
+        "Duckworth Lewis Stern"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Interrupted cricket matches",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "DLS revises targets when a limited-overs cricket match is interrupted; the historical Standard Edition models overs and wickets as scoring resources.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000291",
+          "label": "Cricket",
+          "reason": "A distinct target-adjustment methodology rather than cricket itself or simple proportional overs-based scoring."
+        },
+        {
+          "id": "Q7435308",
+          "label": "Score (sport)",
+          "reason": "A distinct target-adjustment methodology rather than cricket itself or simple proportional overs-based scoring."
+        }
+      ],
+      "identity_reason": "A distinct target-adjustment methodology rather than cricket itself or simple proportional overs-based scoring.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.icc-cricket.com/about/cricket/rules-and-regulations/duckworth-lewis-stern?appview=true",
+          "locator": "Duckworth Lewis Stern introduction, lines 9-14",
+          "note": "ICC explicitly names its adopted method for revising targets in interrupted limited-overs matches.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        },
+        {
+          "url": "https://images.icc-cricket.com/image/upload/prd/orlbya4cqyhqaceje3b2.pdf",
+          "locator": "Opening status statement and section 1, PDF p. 1, lines 1-20",
+          "note": "Stern Edition requires the ICC calculator; Standard Edition fallback uses overs and wickets jointly as resources.",
+          "inspection_mode": "web.run actual official PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000291",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.icc-cricket.com/about/cricket/rules-and-regulations/duckworth-lewis-stern?appview=true",
+        "locator": "Duckworth Lewis Stern introduction, lines 9-14",
+        "note": "ICC explicitly describes its adopted DLS method for interrupted cricket matches."
+      },
+      "limits": [
+        "The linked methodology describes D-L Standard Edition mechanics as fallback; do not claim its table or numerical formula is the current professional DLS calculator."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Duckworth–Lewis–Stern method",
+          "normalized_key": "duckworth lewis stern method",
+          "matched_ids": []
+        },
+        {
+          "query": "DLS method",
+          "normalized_key": "dls method",
+          "matched_ids": []
+        },
+        {
+          "query": "Duckworth Lewis Stern",
+          "normalized_key": "duckworth lewis stern",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "Q11413",
+      "label": "Go (board game)",
+      "aliases": [
+        "Go",
+        "Go (game)",
+        "Go (board game)"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Territory and capture games",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Stones share orthogonal liberties, tying local capture to the larger contest for territory.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11413",
+          "label": "Go",
+          "reason": "The existing board-game identity is reused; Q37227 is the unrelated Go programming-language sense of the same name."
+        },
+        {
+          "id": "Q37227",
+          "label": "Go (programming language)",
+          "reason": "The existing board-game identity is reused; Q37227 is the unrelated Go programming-language sense of the same name."
+        }
+      ],
+      "identity_reason": "The existing board-game identity is reused; Q37227 is the unrelated Go programming-language sense of the same name.",
+      "discovery_evidence": [
+        {
+          "url": "https://britgo.org/intro/intro2.html",
+          "locator": "The rules; Capturing stones and counting liberties; Strings, lines 11-25 and 38-40",
+          "note": "Stones share orthogonal liberties, tying local capture to the larger contest for territory.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "This guide uses territory plus prisoners scoring; do not imply all Go rule sets use identical scoring."
+      ],
+      "selection_role": "primary",
+      "control_record_metadata": {
+        "original_description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+        "maximum_prior_card_version": 2,
+        "next_card_version": 3,
+        "baseline_record_pointer": "data/catalog-candidates/research-batch-008-build/baseline-index.json#/concepts/Q11413",
+        "imported_provenance": [
+          {
+            "description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+            "equivalence_evidence": "https://www.wikidata.org/wiki/Q11413",
+            "index": 255,
+            "kind": "broad",
+            "source": "ProductSpace",
+            "source_id": "Q11413",
+            "source_revision": null,
+            "source_url": "data/topics.json#record-255",
+            "topic": "Go"
+          },
+          {
+            "description": "board game for two players that originated in China more than 2,500 years ago",
+            "index": 1632,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q11413",
+            "source_revision": 2547428744,
+            "source_url": "https://www.wikidata.org/wiki/Q11413",
+            "topic": "Go (game)"
+          }
+        ],
+        "prior_bundles": [
+          {
+            "batch_id": "research-batch-001",
+            "batch_revision": 1,
+            "source_bundle_path": null,
+            "source_bundle_sha256": null
+          },
+          {
+            "batch_id": "scale-pilot-001",
+            "batch_revision": "002",
+            "source_bundle_path": "data/catalog-candidates/scale-pilot-001/revision-002/catalog.json",
+            "source_bundle_sha256": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65"
+          }
+        ]
+      },
+      "alias_checks": [
+        {
+          "query": "Go (board game)",
+          "normalized_key": "go (board game)",
+          "matched_ids": [
+            "Q11413"
+          ]
+        },
+        {
+          "query": "Go",
+          "normalized_key": "go",
+          "matched_ids": [
+            "Q11413",
+            "Q37227"
+          ]
+        },
+        {
+          "query": "Go (game)",
+          "normalized_key": "go (game)",
+          "matched_ids": [
+            "Q11413"
+          ]
+        },
+        {
+          "query": "Go (board game)",
+          "normalized_key": "go (board game)",
+          "matched_ids": [
+            "Q11413"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:voice-onset-time",
+      "label": "Voice onset time",
+      "aliases": [
+        "VOT"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Acoustic phonetics",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Timing between stop release and vocal-fold vibration distinguishes speech sounds.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q35395",
+          "label": "Phonetics",
+          "reason": "A defined acoustic interval for stop consonants, distinct from phonetics broadly and from categorical perception of that interval."
+        },
+        {
+          "id": "Q8183",
+          "label": "Phoneme",
+          "reason": "A defined acoustic interval for stop consonants, distinct from phonetics broadly and from categorical perception of that interval."
+        }
+      ],
+      "identity_reason": "A defined acoustic interval for stop consonants, distinct from phonetics broadly and from categorical perception of that interval.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.haskinslaboratories.org/vot",
+          "locator": "Legacy: Abramson/Lisker VOT Stimuli, definition and synthesized continuum, lines 21-27",
+          "note": "Timing between stop release and vocal-fold vibration distinguishes speech sounds.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q35395",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.haskinslaboratories.org/vot",
+        "locator": "Legacy: Abramson/Lisker VOT Stimuli, definition and synthesized continuum, lines 21-27",
+        "note": "The laboratory explicitly presents VOT as an acoustic phonetic measure introduced to characterize stop-consonant voicing distinctions."
+      },
+      "limits": [
+        "Voicing may begin before release, so VOT can be negative; do not give a universal phoneme-boundary duration."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Voice onset time",
+          "normalized_key": "voice onset time",
+          "matched_ids": []
+        },
+        {
+          "query": "VOT",
+          "normalized_key": "vot",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:mcgurk-effect",
+      "label": "McGurk effect",
+      "aliases": [
+        "McGurk illusion"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Audiovisual speech perception",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Mismatched heard and seen syllables can produce a perceived syllable present in neither input.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8183",
+          "label": "Phoneme",
+          "reason": "A specifically studied audiovisual speech illusion, distinct from phoneme categorization generally and from lexical interpretation biases."
+        },
+        {
+          "id": "Q2459671",
+          "label": "Categorical perception",
+          "reason": "A specifically studied audiovisual speech illusion, distinct from phoneme categorization generally and from lexical interpretation biases."
+        },
+        {
+          "id": "Q160402",
+          "label": "perception",
+          "reason": "A specifically studied audiovisual speech illusion, distinct from phoneme categorization generally and from lexical interpretation biases."
+        }
+      ],
+      "identity_reason": "A specifically studied audiovisual speech illusion, distinct from phoneme categorization generally and from lexical interpretation biases.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.violetabrown.com/pdfs/Brown%20et%20al.%202018%20-%20What%20accounts%20for%20individual%20differences%20in%20susceptibility%20to%20the%20McGurk%20effect.pdf",
+          "locator": "Abstract and Introduction, PDF pp. 1-2, lines 8-28 and 63-80",
+          "note": "Mismatched heard and seen syllables can produce a perceived syllable present in neither input.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q160402",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.violetabrown.com/pdfs/Brown%20et%20al.%202018%20-%20What%20accounts%20for%20individual%20differences%20in%20susceptibility%20to%20the%20McGurk%20effect.pdf",
+        "locator": "Abstract and Introduction, PDF pp. 1-2, lines 8-28 and 63-80",
+        "note": "The paper characterizes a perceptual speech illusion; perception is a general editorial parent."
+      },
+      "limits": [
+        "Susceptibility varies across people and tasks; a fusion example does not predict every listener’s response or everyday speech ability."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "McGurk effect",
+          "normalized_key": "mcgurk effect",
+          "matched_ids": []
+        },
+        {
+          "query": "McGurk illusion",
+          "normalized_key": "mcgurk illusion",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:mutual-exclusivity-word-learning",
+      "label": "Mutual exclusivity in word learning",
+      "aliases": [
+        "Mutual exclusivity bias",
+        "Lexical mutual exclusivity"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Early word learning",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "An unfamiliar label can be assigned to an unnamed object or property instead of a familiar whole object.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q815859",
+          "label": "Language acquisition",
+          "reason": "The distinct word-learning bias restricts candidate referents; it is not logical mutual exclusion or the whole-object assumption."
+        }
+      ],
+      "identity_reason": "The distinct word-learning bias restricts candidate referents; it is not logical mutual exclusion or the whole-object assumption.",
+      "discovery_evidence": [
+        {
+          "url": "https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/7/1535/files/2019/11/WoodwardMarkman1991.pdf",
+          "locator": "Mutual Exclusivity, printed pp. 140-141 / PDF pp. 4-5; Constraints as Default Assumptions, pp. 142-145",
+          "note": "An unfamiliar label can be assigned to an unnamed object or property instead of a familiar whole object.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q815859",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/7/1535/files/2019/11/WoodwardMarkman1991.pdf",
+        "locator": "Mutual Exclusivity, printed pp. 140-141 / PDF pp. 4-5; Constraints as Default Assumptions, pp. 142-145",
+        "note": "The authors explicitly treat mutual exclusivity as a proposed constraint guiding children’s acquisition of word meanings."
+      },
+      "limits": [
+        "A probabilistic default that can be overridden, not a law that every object has one name; historical evidence and interpretation are debated."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Mutual exclusivity in word learning",
+          "normalized_key": "mutual exclusivity in word learning",
+          "matched_ids": []
+        },
+        {
+          "query": "Mutual exclusivity bias",
+          "normalized_key": "mutual exclusivity bias",
+          "matched_ids": []
+        },
+        {
+          "query": "Lexical mutual exclusivity",
+          "normalized_key": "lexical mutual exclusivity",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:whole-object-assumption",
+      "label": "Whole-object assumption in word learning",
+      "aliases": [
+        "Whole object assumption",
+        "Whole-object bias"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Early word learning",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A new object label is initially interpreted as naming the whole object rather than its parts or material.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q815859",
+          "label": "Language acquisition",
+          "reason": "The paper separately names this initial referent hypothesis and mutual exclusivity; one chooses whole-object scope, the other rejects an additional label."
+        }
+      ],
+      "identity_reason": "The paper separately names this initial referent hypothesis and mutual exclusivity; one chooses whole-object scope, the other rejects an additional label.",
+      "discovery_evidence": [
+        {
+          "url": "https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/7/1535/files/2019/11/WoodwardMarkman1991.pdf",
+          "locator": "The Taxonomic and Whole Object Assumptions, printed p. 139 / PDF p. 3, lines 79-85; default-bias qualification, p. 145 / PDF p. 9, lines 274-299",
+          "note": "A new object label is initially interpreted as naming the whole object rather than its parts or material.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q815859",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/7/1535/files/2019/11/WoodwardMarkman1991.pdf",
+        "locator": "The Taxonomic and Whole Object Assumptions, printed p. 139 / PDF p. 3, lines 79-85; default-bias qualification, p. 145 / PDF p. 9, lines 274-299",
+        "note": "The paper explicitly defines it as one of the biases used by children to constrain possible meanings during word learning."
+      },
+      "limits": [
+        "An overridable first hypothesis; object context, grammar, and other biases can change the interpretation."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Whole-object assumption in word learning",
+          "normalized_key": "whole object assumption in word learning",
+          "matched_ids": []
+        },
+        {
+          "query": "Whole object assumption",
+          "normalized_key": "whole object assumption",
+          "matched_ids": []
+        },
+        {
+          "query": "Whole-object bias",
+          "normalized_key": "whole object bias",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:generation-effect",
+      "label": "Generation effect",
+      "aliases": [
+        "Self-generation effect"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Memory during study",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Generating a word can improve later memory compared with reading the same word.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q492",
+          "label": "memory",
+          "reason": "The generate-versus-read encoding comparison is distinct from recalling already studied material in retrieval practice."
+        },
+        {
+          "id": "Q7705913",
+          "label": "Testing effect",
+          "reason": "The generate-versus-read encoding comparison is distinct from recalling already studied material in retrieval practice."
+        }
+      ],
+      "identity_reason": "The generate-versus-read encoding comparison is distinct from recalling already studied material in retrieval practice.",
+      "discovery_evidence": [
+        {
+          "url": "https://garfield.library.upenn.edu/classics1992/A1992HN61400001.pdf",
+          "locator": "Original abstract summary and author retrospective, single PDF page, lines 3-8 and 26-43",
+          "note": "Generating a word can improve later memory compared with reading the same word.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q492",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://garfield.library.upenn.edu/classics1992/A1992HN61400001.pdf",
+        "locator": "Original abstract summary and author retrospective, single PDF page, lines 3-8 and 26-43",
+        "note": "The author describes the original experiments as comparisons of memory for generated and read words."
+      },
+      "limits": [
+        "Author retrospective about the 1978 experiments; generation has documented boundaries and no single mechanism is asserted here."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Generation effect",
+          "normalized_key": "generation effect",
+          "matched_ids": []
+        },
+        {
+          "query": "Self-generation effect",
+          "normalized_key": "self generation effect",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:productive-failure",
+      "label": "Productive failure",
+      "aliases": [
+        "Productive failure in learning"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Problem solving before instruction",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Unsuccessful problem exploration can support later transfer when subsequent problems supply a useful contrast.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q133500",
+          "label": "Learning",
+          "reason": "The study names latent learning benefits from initially unsuccessful exploration; this is distinct from the worked-example effect or generic learning from mistakes."
+        },
+        {
+          "id": "local:catalog:worked-example",
+          "label": "Worked example",
+          "reason": "The study names latent learning benefits from initially unsuccessful exploration; this is distinct from the worked-example effect or generic learning from mistakes."
+        }
+      ],
+      "identity_reason": "The study names latent learning benefits from initially unsuccessful exploration; this is distinct from the worked-example effect or generic learning from mistakes.",
+      "discovery_evidence": [
+        {
+          "url": "https://escholarship.org/content/qt5f26n97z/qt5f26n97z_noSplash_3e0168f3bef8cfb49b0193c6593738b6.pdf",
+          "locator": "Abstract, PDF p. 1, lines 4-22",
+          "note": "Unsuccessful problem exploration can support later transfer when subsequent problems supply a useful contrast.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q133500",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://escholarship.org/content/qt5f26n97z/qt5f26n97z_noSplash_3e0168f3bef8cfb49b0193c6593738b6.pdf",
+        "locator": "Abstract, PDF p. 1, lines 4-22",
+        "note": "The experiment explicitly analyzes meaningful learning and transfer after contrasting problem-solving conditions."
+      },
+      "limits": [
+        "Bounded to the inspected study’s collaborative tasks and contrasting-case design; struggling or failing alone is not guaranteed to improve learning."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Productive failure",
+          "normalized_key": "productive failure",
+          "matched_ids": []
+        },
+        {
+          "query": "Productive failure in learning",
+          "normalized_key": "productive failure in learning",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:desirable-difficulties",
+      "label": "Desirable difficulties",
+      "aliases": [
+        "Desirable difficulty"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Retention versus practice performance",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Some practice conditions slow immediate performance while improving later retention or transfer.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1095859",
+          "label": "Spacing effect",
+          "reason": "An umbrella learning-performance distinction includes spacing and testing but is broader than either individual effect; not all difficulty is desirable."
+        },
+        {
+          "id": "Q7705913",
+          "label": "Testing effect",
+          "reason": "An umbrella learning-performance distinction includes spacing and testing but is broader than either individual effect; not all difficulty is desirable."
+        },
+        {
+          "id": "Q133500",
+          "label": "Learning",
+          "reason": "An umbrella learning-performance distinction includes spacing and testing but is broader than either individual effect; not all difficulty is desirable."
+        },
+        {
+          "id": "Q57660658",
+          "label": "Sans forgetica",
+          "reason": "Sans forgetica is a particular typeface whose imported description invokes desirable difficulty. It is distinct from the general learning principle, and its efficacy is not assumed here."
+        }
+      ],
+      "identity_reason": "An umbrella learning-performance distinction includes spacing and testing but is broader than either individual effect; not all difficulty is desirable.",
+      "discovery_evidence": [
+        {
+          "url": "https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/07/RBjork_inpress.pdf",
+          "locator": "Opening definition, PDF p. 1, lines 1-11; Why Desirable Difficulties Are Desirable, PDF pp. 3-4, lines 60-71",
+          "note": "Some practice conditions slow immediate performance while improving later retention or transfer.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q133500",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/07/RBjork_inpress.pdf",
+        "locator": "Opening definition, PDF p. 1, lines 1-11; Why Desirable Difficulties Are Desirable, PDF pp. 3-4, lines 60-71",
+        "note": "The author explicitly frames desirable difficulties as learning conditions affecting retention and transfer."
+      },
+      "limits": [
+        "A learner must have enough prior knowledge and cues to overcome the difficulty; the hosted manuscript’s exact publication revision is unavailable."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Desirable difficulties",
+          "normalized_key": "desirable difficulties",
+          "matched_ids": []
+        },
+        {
+          "query": "Desirable difficulty",
+          "normalized_key": "desirable difficulty",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "Q7705913",
+      "label": "Testing effect",
+      "aliases": [
+        "Practice testing",
+        "Retrieval practice",
+        "Testing effect"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Retrieval-based learning",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "An initial memory test can strengthen retention on a later test beyond additional study.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7705913",
+          "label": "Testing effect",
+          "reason": "The imported testing-effect identity and its retrieval-practice aliases are the same subject; primary-author evidence updates the reference bundle."
+        }
+      ],
+      "identity_reason": "The imported testing-effect identity and its retrieval-practice aliases are the same subject; primary-author evidence updates the reference bundle.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.psychologicalscience.org/observer/test-enhanced-learning-2",
+          "locator": "Testing-effect explanation and prose-study example, lines 17-23",
+          "note": "An initial memory test can strengthen retention on a later test beyond additional study.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q133500",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.psychologicalscience.org/observer/test-enhanced-learning-2",
+        "locator": "Testing-effect explanation and prose-study example, lines 17-23",
+        "note": "The authors expressly describe the memory-test intervention as an aid to learning."
+      },
+      "limits": [
+        "Initial recall and feedback conditions affect benefits; this claim does not concern the merits of high-stakes standardized testing."
+      ],
+      "selection_role": "primary",
+      "control_record_metadata": {
+        "original_description": "memory effect in educational psychology",
+        "maximum_prior_card_version": 1,
+        "next_card_version": 2,
+        "baseline_record_pointer": "data/catalog-candidates/research-batch-008-build/baseline-index.json#/concepts/Q7705913",
+        "imported_provenance": [
+          {
+            "description": "memory effect in educational psychology",
+            "index": 2805,
+            "kind": "specific",
+            "source": "Wikidata",
+            "source_id": "Q7705913",
+            "source_revision": 2511679550,
+            "source_url": "https://www.wikidata.org/wiki/Q7705913",
+            "topic": "Testing effect"
+          }
+        ],
+        "prior_bundles": [
+          {
+            "batch_id": "scale-pilot-001",
+            "batch_revision": "002",
+            "source_bundle_path": "data/catalog-candidates/scale-pilot-001/revision-002/catalog.json",
+            "source_bundle_sha256": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65"
+          }
+        ]
+      },
+      "alias_checks": [
+        {
+          "query": "Testing effect",
+          "normalized_key": "testing effect",
+          "matched_ids": [
+            "Q7705913"
+          ]
+        },
+        {
+          "query": "Practice testing",
+          "normalized_key": "practice testing",
+          "matched_ids": [
+            "Q7705913"
+          ]
+        },
+        {
+          "query": "Retrieval practice",
+          "normalized_key": "retrieval practice",
+          "matched_ids": [
+            "Q7705913"
+          ]
+        },
+        {
+          "query": "Testing effect",
+          "normalized_key": "testing effect",
+          "matched_ids": [
+            "Q7705913"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:change-blindness",
+      "label": "Change blindness",
+      "aliases": [
+        "Visual change blindness"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Visual change detection",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "An interruption can make a substantial scene change go unnoticed across successive views.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:inattentional-blindness",
+          "label": "Inattentional blindness",
+          "reason": "Failure to compare successive scene states differs from missing an unexpected object during another task and from rapid-sequence attentional blink."
+        },
+        {
+          "id": "local:catalog:attentional-blink",
+          "label": "Attentional blink",
+          "reason": "Failure to compare successive scene states differs from missing an unexpected object during another task and from rapid-sequence attentional blink."
+        },
+        {
+          "id": "Q160402",
+          "label": "perception",
+          "reason": "Failure to compare successive scene states differs from missing an unexpected object during another task and from rapid-sequence attentional blink."
+        }
+      ],
+      "identity_reason": "Failure to compare successive scene states differs from missing an unexpected object during another task and from rapid-sequence attentional blink.",
+      "discovery_evidence": [
+        {
+          "url": "https://www2.psych.ubc.ca/~rensink/publications/download/Vis_Cog_02_Rensink.pdf",
+          "locator": "Opening summary and change-blindness discussion, PDF pp. 1-2, lines 8-18 and 39-45",
+          "note": "An interruption can make a substantial scene change go unnoticed across successive views.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q160402",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www2.psych.ubc.ca/~rensink/publications/download/Vis_Cog_02_Rensink.pdf",
+        "locator": "Opening summary and change-blindness discussion, PDF pp. 1-2, lines 8-18 and 39-45",
+        "note": "The author expressly discusses this visual-perception phenomenon as evidence about scene representation."
+      },
+      "limits": [
+        "Hosted author manuscript is marked in press and requests no direct quotation; use original paraphrase and separate the demonstrated phenomenon from the proposed representation theory."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Change blindness",
+          "normalized_key": "change blindness",
+          "matched_ids": []
+        },
+        {
+          "query": "Visual change blindness",
+          "normalized_key": "visual change blindness",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:choice-blindness",
+      "label": "Choice blindness",
+      "aliases": [
+        "Choice-outcome blindness"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Choice and introspection",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "People can miss a covertly swapped choice outcome and give reasons for the outcome they did not select.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q210501",
+          "label": "Introspection",
+          "reason": "The named intention-versus-presented-outcome mismatch differs from visual change detection or simply overlooking an unexpected object."
+        },
+        {
+          "id": "local:catalog:inattentional-blindness",
+          "label": "Inattentional blindness",
+          "reason": "The named intention-versus-presented-outcome mismatch differs from visual change detection or simply overlooking an unexpected object."
+        }
+      ],
+      "identity_reason": "The named intention-versus-presented-outcome mismatch differs from visual change detection or simply overlooking an unexpected object.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.lucs.lu.se/fileadmin/user_upload/lucs/2011/01/Johansson-et-al.-2006-How-Something-Can-Be-Said-About-Telling-More-Than-We-Can-Know.pdf",
+          "locator": "Abstract, PDF pp. 1-2; section 2, PDF p. 4, lines 104-120",
+          "note": "People can miss a covertly swapped choice outcome and give reasons for the outcome they did not select.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q210501",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.lucs.lu.se/fileadmin/user_upload/lucs/2011/01/Johansson-et-al.-2006-How-Something-Can-Be-Said-About-Telling-More-Than-We-Can-Know.pdf",
+        "locator": "Abstract, PDF pp. 1-2; section 2, PDF p. 4, lines 104-120",
+        "note": "The paper explicitly studies introspectively derived reports of reasons within the choice-blindness paradigm."
+      },
+      "limits": [
+        "The inspected manipulation is a face-choice task; do not generalize its detection rate to every choice or infer fixed private preferences."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Choice blindness",
+          "normalized_key": "choice blindness",
+          "matched_ids": []
+        },
+        {
+          "query": "Choice-outcome blindness",
+          "normalized_key": "choice outcome blindness",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:illusion-of-explanatory-depth",
+      "label": "Illusion of explanatory depth",
+      "aliases": [
+        "IOED"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Metacognitive calibration",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Trying to explain a mechanism can reveal gaps hidden by an initial feeling of understanding.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1126970",
+          "label": "Metacognition",
+          "reason": "The paper explicitly distinguishes overestimating explanatory understanding from general confidence about facts, procedures, or narratives."
+        },
+        {
+          "id": "Q210501",
+          "label": "Introspection",
+          "reason": "The paper explicitly distinguishes overestimating explanatory understanding from general confidence about facts, procedures, or narratives."
+        }
+      ],
+      "identity_reason": "The paper explicitly distinguishes overestimating explanatory understanding from general confidence about facts, procedures, or narratives.",
+      "discovery_evidence": [
+        {
+          "url": "https://cogdevlab.yale.edu/sites/default/files/files/rozenblit%20%26%20keil%20%202002.pdf",
+          "locator": "Abstract and Introduction, PDF pp. 1-2, lines 8-17 and 54-65; discussion of recalibration after explanation, PDF p. 15, lines 482-487",
+          "note": "Trying to explain a mechanism can reveal gaps hidden by an initial feeling of understanding.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1126970",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://cogdevlab.yale.edu/sites/default/files/files/rozenblit%20%26%20keil%20%202002.pdf",
+        "locator": "Abstract and Introduction, PDF pp. 1-2, lines 8-17 and 54-65; discussion of recalibration after explanation, PDF p. 15, lines 482-487",
+        "note": "The authors identify the explanatory-knowledge illusion as a metacognitive problem and test changes in self-ratings of understanding."
+      },
+      "limits": [
+        "Effects vary by knowledge type; this is not a blanket claim that everyone misunderstands every mechanism."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Illusion of explanatory depth",
+          "normalized_key": "illusion of explanatory depth",
+          "matched_ids": []
+        },
+        {
+          "query": "IOED",
+          "normalized_key": "ioed",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:stop-signal-reaction-time",
+      "label": "Stop-signal reaction time",
+      "aliases": [
+        "SSRT"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Response inhibition measurement",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A race model estimates the hidden latency of stopping from go responses and stop-signal delays.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q783092",
+          "label": "Executive functions",
+          "reason": "The estimated covert stopping latency is distinct from overt go reaction time, signal delay, and executive functioning generally."
+        },
+        {
+          "id": "Q500096",
+          "label": "Psychophysics",
+          "reason": "The estimated covert stopping latency is distinct from overt go reaction time, signal delay, and executive functioning generally."
+        }
+      ],
+      "identity_reason": "The estimated covert stopping latency is distinct from overt go reaction time, signal delay, and executive functioning generally.",
+      "discovery_evidence": [
+        {
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0210065",
+          "locator": "Introduction, lines 174-181; discussion of independence and slowing, lines 477-484",
+          "note": "A race model estimates the hidden latency of stopping from go responses and stop-signal delays.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q783092",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0210065",
+        "locator": "Introduction, lines 174-181; discussion of independence and slowing, lines 477-484",
+        "note": "The introduction explicitly places stopping and response-inhibition measurement among executive functions."
+      },
+      "limits": [
+        "It is an estimate conditional on task/model assumptions; strategic go-response slowing can affect estimates. Avoid diagnostic conclusions."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Stop-signal reaction time",
+          "normalized_key": "stop signal reaction time",
+          "matched_ids": []
+        },
+        {
+          "query": "SSRT",
+          "normalized_key": "ssrt",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:simon-effect",
+      "label": "Simon effect",
+      "aliases": [
+        "Spatial Simon effect"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Spatial response compatibility",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "An irrelevant stimulus location can interfere with a response selected by color or shape.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q384176",
+          "label": "Stroop effect",
+          "reason": "Spatial stimulus-response correspondence defines the Simon task; the Stroop effect instead uses an irrelevant word dimension and is not the same subject."
+        },
+        {
+          "id": "Q6501338",
+          "label": "attention",
+          "reason": "Spatial stimulus-response correspondence defines the Simon task; the Stroop effect instead uses an irrelevant word dimension and is not the same subject."
+        }
+      ],
+      "identity_reason": "Spatial stimulus-response correspondence defines the Simon task; the Stroop effect instead uses an irrelevant word dimension and is not the same subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090954",
+          "locator": "Instruction, lines 139-146",
+          "note": "An irrelevant stimulus location can interfere with a response selected by color or shape.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000048",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090954",
+        "locator": "Instruction, lines 139-146",
+        "note": "The paper’s experimental response-selection results provide an editorial navigation parent in cognitive psychology."
+      },
+      "limits": [
+        "The compatible-response benefit depends on task conditions; the paper compares theories rather than establishing one universal mechanism."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Simon effect",
+          "normalized_key": "simon effect",
+          "matched_ids": []
+        },
+        {
+          "query": "Spatial Simon effect",
+          "normalized_key": "spatial simon effect",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:duration-neglect",
+      "label": "Duration neglect",
+      "aliases": [
+        "Duration neglect in remembered experience"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Retrospective experience evaluation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Remembered evaluations of brief experiences can give duration little weight even when duration is known.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q492",
+          "label": "memory",
+          "reason": "Underweighting episode length is a specifically tested evaluation phenomenon, distinct from forgetting duration or memory broadly."
+        },
+        {
+          "id": "Q1126970",
+          "label": "Metacognition",
+          "reason": "Underweighting episode length is a specifically tested evaluation phenomenon, distinct from forgetting duration or memory broadly."
+        }
+      ],
+      "identity_reason": "Underweighting episode length is a specifically tested evaluation phenomenon, distinct from forgetting duration or memory broadly.",
+      "discovery_evidence": [
+        {
+          "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fredr-kahneman-jpsp1993.pdf",
+          "locator": "General Discussion, PDF p. 10, lines 1029-1033, 1057-1070",
+          "note": "Remembered evaluations of brief experiences can give duration little weight even when duration is known.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q492",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fredr-kahneman-jpsp1993.pdf",
+        "locator": "General Discussion, PDF p. 10, lines 1029-1033, 1057-1070",
+        "note": "The study’s remembered-experience evaluations establish the factual memory connection; memory is an editorial parent."
+      },
+      "limits": [
+        "The authors caution about extrapolating seconds/minutes-long episodes to days or months; duration neglect is not failure to know duration."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Duration neglect",
+          "normalized_key": "duration neglect",
+          "matched_ids": []
+        },
+        {
+          "query": "Duration neglect in remembered experience",
+          "normalized_key": "duration neglect in remembered experience",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:inattentional-blindness",
+      "label": "Inattentional blindness",
+      "aliases": [
+        "Inattentional blindness"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Attention and conscious perception",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Attention to a monitoring task can leave a visible unexpected event unnoticed.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:inattentional-blindness",
+          "label": "Inattentional blindness",
+          "reason": "The same existing phenomenon and counting-task demonstration are retained; a new original-paper bundle does not create a new identity."
+        }
+      ],
+      "identity_reason": "The same existing phenomenon and counting-task demonstration are retained; a new original-paper bundle does not create a new identity.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.chabris.com/Simons1999.pdf",
+          "locator": "Abstract and Introduction, PDF pp. 1-2, lines 32-56; Procedures and Results, PDF pp. 8-11",
+          "note": "Attention to a monitoring task can leave a visible unexpected event unnoticed.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q160402",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.chabris.com/Simons1999.pdf",
+        "locator": "Abstract and Introduction, PDF pp. 1-2, lines 32-56; Procedures and Results, PDF pp. 8-11",
+        "note": "The original authors explicitly study inattentional blindness as a form of visual perception without focused attention."
+      },
+      "limits": [
+        "Unexpected-event detection differs by display, attended object, and task; no universal missed-event rate."
+      ],
+      "selection_role": "primary",
+      "control_record_metadata": {
+        "original_description": null,
+        "maximum_prior_card_version": 1,
+        "next_card_version": 2,
+        "baseline_record_pointer": "data/catalog-candidates/research-batch-008-build/baseline-index.json#/concepts/local:catalog:inattentional-blindness",
+        "imported_provenance": [],
+        "prior_bundles": [
+          {
+            "batch_id": "scale-pilot-001",
+            "batch_revision": "002",
+            "source_bundle_path": "data/catalog-candidates/scale-pilot-001/revision-002/catalog.json",
+            "source_bundle_sha256": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65"
+          }
+        ]
+      },
+      "alias_checks": [
+        {
+          "query": "Inattentional blindness",
+          "normalized_key": "inattentional blindness",
+          "matched_ids": [
+            "local:catalog:inattentional-blindness"
+          ]
+        },
+        {
+          "query": "Inattentional blindness",
+          "normalized_key": "inattentional blindness",
+          "matched_ids": [
+            "local:catalog:inattentional-blindness"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:homophily",
+      "label": "Homophily",
+      "aliases": [
+        "Social homophily"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Similarity in social ties",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Social links tend to connect people who share characteristics, producing nonrandom friendship patterns.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q17029202",
+          "label": "Heterophily",
+          "reason": "Similarity among connected people is distinct from heterophily, its opposite tendency, and from closing a triangle between friends of friends."
+        },
+        {
+          "id": "Q2715623",
+          "label": "Social network",
+          "reason": "Similarity among connected people is distinct from heterophily, its opposite tendency, and from closing a triangle between friends of friends."
+        },
+        {
+          "id": "local:catalog:triadic-closure",
+          "label": "Triadic closure",
+          "reason": "Similarity among connected people is distinct from heterophily, its opposite tendency, and from closing a triangle between friends of friends."
+        }
+      ],
+      "identity_reason": "Similarity among connected people is distinct from heterophily, its opposite tendency, and from closing a triangle between friends of friends.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf",
+          "locator": "4.1 Homophily, PDF pp. 2-3, lines 23-45 and 64-78",
+          "note": "Social links tend to connect people who share characteristics, producing nonrandom friendship patterns.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q2715623",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf",
+        "locator": "4.1 Homophily, PDF pp. 2-3, lines 23-45 and 64-78",
+        "note": "The chapter explicitly defines homophily as a principle affecting the structure and formation of social-network links."
+      },
+      "limits": [
+        "An aggregate tendency, not a rule for every friendship; multiple selection and influence mechanisms can produce similarity."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Homophily",
+          "normalized_key": "homophily",
+          "matched_ids": []
+        },
+        {
+          "query": "Social homophily",
+          "normalized_key": "social homophily",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:focal-closure",
+      "label": "Focal closure",
+      "aliases": [
+        "Shared-focus closure"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Activity-mediated tie formation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Two people can form a social tie because they participate in the same activity or organization.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:triadic-closure",
+          "label": "Triadic closure",
+          "reason": "The shared neighbor is an activity focus and the new edge is person-to-person; baseline triadic closure uses a shared person."
+        },
+        {
+          "id": "Q2715623",
+          "label": "Social network",
+          "reason": "The shared neighbor is an activity focus and the new edge is person-to-person; baseline triadic closure uses a shared person."
+        }
+      ],
+      "identity_reason": "The shared neighbor is an activity focus and the new edge is person-to-person; baseline triadic closure uses a shared person.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf",
+          "locator": "4.3, Co-Evolution of Social and Affiliation Networks, PDF p. 12, lines 370-374",
+          "note": "Two people can form a social tie because they participate in the same activity or organization.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q2715623",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf",
+        "locator": "4.3, Co-Evolution of Social and Affiliation Networks, PDF p. 12, lines 370-374",
+        "note": "The source identifies focal closure as one mechanism of social-link formation within social-affiliation networks."
+      },
+      "limits": [
+        "A proposed tendency, not proof that a particular friendship arose from shared membership."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Focal closure",
+          "normalized_key": "focal closure",
+          "matched_ids": []
+        },
+        {
+          "query": "Shared-focus closure",
+          "normalized_key": "shared focus closure",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:membership-closure",
+      "label": "Membership closure",
+      "aliases": [
+        "Friend-mediated affiliation"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Social recruitment into activities",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A person may join an activity that a friend already participates in.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:triadic-closure",
+          "label": "Triadic closure",
+          "reason": "The new edge links a person to a focus, distinct from focal closure’s new friendship and triadic closure’s person-person link."
+        },
+        {
+          "id": "Q2715623",
+          "label": "Social network",
+          "reason": "The new edge links a person to a focus, distinct from focal closure’s new friendship and triadic closure’s person-person link."
+        }
+      ],
+      "identity_reason": "The new edge links a person to a focus, distinct from focal closure’s new friendship and triadic closure’s person-person link.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf",
+          "locator": "4.3, Co-Evolution of Social and Affiliation Networks, PDF pp. 12-13, lines 375-402",
+          "note": "A person may join an activity that a friend already participates in.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q2715623",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf",
+        "locator": "4.3, Co-Evolution of Social and Affiliation Networks, PDF pp. 12-13, lines 375-402",
+        "note": "The source explicitly presents membership closure as a social-influence mechanism in social-affiliation networks."
+      },
+      "limits": [
+        "A modeled mechanism; actual affiliation may have several causes."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Membership closure",
+          "normalized_key": "membership closure",
+          "matched_ids": []
+        },
+        {
+          "query": "Friend-mediated affiliation",
+          "normalized_key": "friend mediated affiliation",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:complex-contagion",
+      "label": "Complex contagion",
+      "aliases": [
+        "Complex social contagion"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Social reinforcement and diffusion",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Some behaviors require reinforcement from multiple contacts, changing how network bridges support their spread.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q106283193",
+          "label": "Social contagion",
+          "reason": "The named multi-contact adoption process is distinct from generic social contagion or diffusion of information through one contact."
+        },
+        {
+          "id": "local:catalog:weak-ties",
+          "label": "Weak ties",
+          "reason": "The named multi-contact adoption process is distinct from generic social contagion or diffusion of information through one contact."
+        },
+        {
+          "id": "local:catalog:local-bridge-in-a-network",
+          "label": "Local bridge in a network",
+          "reason": "The named multi-contact adoption process is distinct from generic social contagion or diffusion of information through one contact."
+        }
+      ],
+      "identity_reason": "The named multi-contact adoption process is distinct from generic social contagion or diffusion of information through one contact.",
+      "discovery_evidence": [
+        {
+          "url": "https://ndg.asc.upenn.edu/wp-content/uploads/2016/04/Centola-Macy-2007-AJS.pdf",
+          "locator": "Abstract and Introduction, printed pp. 702-703 / PDF pp. 1-2, lines 9-19 and 45-59",
+          "note": "Some behaviors require reinforcement from multiple contacts, changing how network bridges support their spread.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q106283193",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://ndg.asc.upenn.edu/wp-content/uploads/2016/04/Centola-Macy-2007-AJS.pdf",
+        "locator": "Abstract and Introduction, printed pp. 702-703 / PDF pp. 1-2, lines 9-19 and 45-59",
+        "note": "The authors explicitly distinguish simple and complex social contagions, with complex contagion requiring social affirmation from multiple carriers."
+      },
+      "limits": [
+        "The source studies formal diffusion models; weak ties do not universally impede reinforced behavior."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Complex contagion",
+          "normalized_key": "complex contagion",
+          "matched_ids": []
+        },
+        {
+          "query": "Complex social contagion",
+          "normalized_key": "complex social contagion",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:friendship-paradox",
+      "label": "Friendship paradox",
+      "aliases": [
+        "Friends-have-more-friends paradox"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Sampling bias in social networks",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Sampling people through friendship links overrepresents people who have many friends.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q2715623",
+          "label": "Social network",
+          "reason": "A degree-weighted sampling phenomenon differs from homophily, friendship quality, or social-network analysis generally."
+        },
+        {
+          "id": "Q7551269",
+          "label": "Social network analysis",
+          "reason": "A degree-weighted sampling phenomenon differs from homophily, friendship quality, or social-network analysis generally."
+        }
+      ],
+      "identity_reason": "A degree-weighted sampling phenomenon differs from homophily, friendship quality, or social-network analysis generally.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/229693?mobileUi=0",
+          "locator": "Abstract, lines 46-48",
+          "note": "Sampling people through friendship links overrepresents people who have many friends.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q2715623",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/229693?mobileUi=0",
+        "locator": "Abstract, lines 46-48",
+        "note": "The original abstract explicitly explains comparisons of friend counts in a social network through disproportionate exposure to highly connected friends."
+      },
+      "limits": [
+        "A statement about averages and sampling, not that every individual has fewer friends than every friend; strict inequality has regular-network exceptions."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Friendship paradox",
+          "normalized_key": "friendship paradox",
+          "matched_ids": []
+        },
+        {
+          "query": "Friends-have-more-friends paradox",
+          "normalized_key": "friends have more friends paradox",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:preferential-attachment",
+      "label": "Preferential attachment",
+      "aliases": [
+        "Degree-preferential attachment"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Network growth mechanisms",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A node’s existing links can increase its chance of receiving new links, amplifying early differences.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000046",
+          "label": "Network science",
+          "reason": "A specific degree-dependent link-formation rule differs from generic popularity and from the unrelated psychological attachment theory."
+        },
+        {
+          "id": "Q909609",
+          "label": "Attachment theory",
+          "reason": "A specific degree-dependent link-formation rule differs from generic popularity and from the unrelated psychological attachment theory."
+        }
+      ],
+      "identity_reason": "A specific degree-dependent link-formation rule differs from generic popularity and from the unrelated psychological attachment theory.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch18.pdf",
+          "locator": "18.3 Rich-Get-Richer Models, PDF pp. 5-6, lines 122-156 and 168-171",
+          "note": "A node’s existing links can increase its chance of receiving new links, amplifying early differences.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000046",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch18.pdf",
+        "locator": "18.3 Rich-Get-Richer Models, PDF pp. 5-6, lines 122-156 and 168-171",
+        "note": "The source provides a network-growth model of link creation; network science is an editorial parent."
+      },
+      "limits": [
+        "The textbook’s simplified copying/link model is illustrative, not a complete empirical account of popularity in every network."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Preferential attachment",
+          "normalized_key": "preferential attachment",
+          "matched_ids": []
+        },
+        {
+          "query": "Degree-preferential attachment",
+          "normalized_key": "degree preferential attachment",
+          "matched_ids": []
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:schelling-segregation-model",
+      "label": "Schelling segregation model",
+      "aliases": [
+        "Schelling model of segregation",
+        "Spatial segregation model"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Local preferences and spatial patterns",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Local neighbor preferences in a simplified movement model can create large segregated regions.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q59816",
+          "label": "Racial segregation",
+          "reason": "The specifically named agent-on-grid mechanism differs from segregation as a social outcome and from homophily as an aggregate tie tendency."
+        },
+        {
+          "id": "Q17029202",
+          "label": "Heterophily",
+          "reason": "The specifically named agent-on-grid mechanism differs from segregation as a social outcome and from homophily as an aggregate tie tendency."
+        }
+      ],
+      "identity_reason": "The specifically named agent-on-grid mechanism differs from segregation as a social outcome and from homophily as an aggregate tie tendency.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf",
+          "locator": "4.5 A Spatial Model of Segregation, PDF pp. 24-25, lines 727-779; model qualification and outcome, PDF p. 31, lines 934-969",
+          "note": "Local neighbor preferences in a simplified movement model can create large segregated regions.",
+          "inspection_mode": "web.run actual extracted HTML/PDF passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q59816",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf",
+        "locator": "4.5 A Spatial Model of Segregation, PDF pp. 24-25, lines 727-779; model qualification and outcome, PDF p. 31, lines 934-969",
+        "note": "The source explicitly uses Schelling’s model to explain how spatial segregation can arise from local similarity preferences, including race."
+      },
+      "limits": [
+        "A stylized two-type grid model; it does not claim real segregation has one cause or that modeled preferences are direct measurements of people."
+      ],
+      "selection_role": "primary",
+      "alias_checks": [
+        {
+          "query": "Schelling segregation model",
+          "normalized_key": "schelling segregation model",
+          "matched_ids": []
+        },
+        {
+          "query": "Schelling model of segregation",
+          "normalized_key": "schelling model of segregation",
+          "matched_ids": []
+        },
+        {
+          "query": "Spatial segregation model",
+          "normalized_key": "spatial segregation model",
+          "matched_ids": []
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "type": "measured_named_subject_shortfall",
+      "status": "reported",
+      "note": "This mechanism-focused shard has 1 named subject, the existing Go board game, and 0 new named subjects. Eponymous algorithms, theories and scoring methods remain ideas; the global named-subject goal is a soft measured goal."
+    },
+    {
+      "type": "bounded_source_access",
+      "status": "resolved_with_inspected_alternatives",
+      "note": "Some preferred NACTO, Pressbooks, eLife/PMC and Nobel pages returned access errors or client challenges. Inspected FTA, Haskins/author papers, PLOS and Roth-Xing author HTML provide the selected support. Search snippets and the saved stop-signal client-challenge page are excluded as explanatory evidence."
+    },
+    {
+      "type": "selection_evidence_depth",
+      "status": "bounded_for_reservation",
+      "note": "Hazard pointers and friendship paradox use inspected primary abstracts; relative performance evaluation uses the inspected primary abstract. Detailed mechanisms will need additional passage inspection before drafting claims beyond these selection takeaways. Historical D-L Standard Edition mechanics are distinguished from current professional DLS calculation."
+    }
+  ],
+  "sources_inspected": [
+    {
+      "id": "systems-source-001",
+      "title": "The Racket Reference, 16.2 Ephemerons",
+      "url": "https://docs.racket-lang.org/reference/ephemerons.html",
+      "locator": "16.2, lines 42-48",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-002",
+      "title": "Maged M. Michael, Hazard pointers: Safe memory reclamation for lock-free objects",
+      "url": "https://research.ibm.com/publications/hazard-pointers-safe-memory-reclamation-for-lock-free-objects",
+      "locator": "Abstract, lines 10-13",
+      "revision": "2004 primary-paper abstract on IBM Research",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-003",
+      "title": "crossbeam_epoch crate documentation",
+      "url": "https://docs.rs/crossbeam-epoch/latest/crossbeam_epoch/",
+      "locator": "Description; Pinning; Garbage, lines 29-42",
+      "revision": "0.9.21 inspected crate documentation",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-004",
+      "title": "RFC 9204: QPACK: Field Compression for HTTP/3",
+      "url": "https://www.rfc-editor.org/rfc/rfc9204.html",
+      "locator": "Sections 1, 2, 2.1.2",
+      "revision": "RFC 9204",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-005",
+      "title": "RFC 8941: Structured Field Values for HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc8941.html",
+      "locator": "3.2 Dictionaries, lines 307-309",
+      "revision": "RFC 8941; obsoleted by RFC 9651",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-006",
+      "title": "RFC 9421: HTTP Message Signatures",
+      "url": "https://www.rfc-editor.org/rfc/rfc9421.html",
+      "locator": "Abstract; section 3, line 1399",
+      "revision": "RFC 9421",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-007",
+      "title": "RFC 9458: Oblivious HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc9458.html",
+      "locator": "2.1 Applicability; section 6, lines 540-550",
+      "revision": "RFC 9458",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-008",
+      "title": "RFC 9162: Certificate Transparency Version 2.0",
+      "url": "https://www.rfc-editor.org/rfc/rfc9162.html",
+      "locator": "2.1.3 and 2.1.3.2, lines 325-341; 2.1.4, lines 342-344",
+      "revision": "RFC 9162",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-009",
+      "title": "Dan Quint, Econ 690 Lecture 14: Matching",
+      "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+      "locator": "2.2, PDF page 3, lines 47-66; Section 4, PDF page 7, lines 142-166; Introduction, PDF page 1, lines 6-17, internship hiring moving earlier",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-010",
+      "title": "FAA: Runway Incursions",
+      "url": "https://www.faa.gov/airports/runway_safety/resources/runway_incursions",
+      "locator": "Definition and Category D, lines 115-125",
+      "revision": "Page last updated 2026-08-31",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-011",
+      "title": "FHWA Traffic Signal Timing Manual, Chapter 3: Basic Signal Timing",
+      "url": "https://ops.fhwa.dot.gov/publications/fhwahop08024/chapter3.htm",
+      "locator": "3.1, lines 75-77; 3.3.2; 3.1 Queuing and Discharge Characteristics, start-up lost time paragraph, lines 68-77",
+      "revision": "FHWA-HOP-08-024, 2008",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-012",
+      "title": "R&A Rules of Golf, Rule 21: Other Forms of Individual Stroke Play and Match Play",
+      "url": "https://www.randa.org/en/rog/the-rules-of-golf/rule-21",
+      "locator": "21.1a-b, lines 83-99; 21.2a-b, lines 136-151",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-013",
+      "title": "FIVB Official Volleyball Rules 2025-2028",
+      "url": "https://www.fivb.com/wp-content/uploads/2025/01/FIVB-Volleyball_Rules2025_2028-EN.pdf",
+      "locator": "19.3.1, printed p. 42 / PDF p. 44; 19.3.2.1-2, printed p. 43 / PDF p. 45; 7.7 Rotational Fault, printed p. 26 / PDF p. 28",
+      "revision": "2025-2028 edition",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "Official PDF passages extracted locally with pypdf and read; earlier web extraction also inspected"
+    },
+    {
+      "id": "systems-source-014",
+      "title": "Zacks, Speer, Swallow, Braver and Reynolds, Event Perception: A Mind/Brain Perspective",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852534/",
+      "locator": "Abstract; A Theory of Event Segmentation, lines 94-113",
+      "revision": "Psychological Bulletin 133(2), March 2007, pp. 273-293; hosted author manuscript",
+      "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-015",
+      "title": "CS50x 2026 Lecture 0",
+      "url": "https://cs50.harvard.edu/x/notes/0/",
+      "locator": "Computer Science and Problem Solving; Algorithms; Summing Up, lines 199-209, 327-331, 624-633",
+      "revision": "2026 course notes",
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-016",
+      "title": "Abdulkadiroglu and Sonmez (2003), School Choice: A Mechanism Design Approach",
+      "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+      "locator": "II.B, printed pp. 736-737 / PDF pp. 8-9, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp. 732-733 / PDF pp. 4-5, rounds 1-k and strategy-proofness discussion",
+      "revision": "AER 93(3), June 2003, pp. 729-747",
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-017",
+      "title": "MIT 6.896 Spring 2010, Lecture 21",
+      "url": "https://people.csail.mit.edu/costis/6896sp10/Lecture21.pdf",
+      "locator": "VCG (with Clarke Pivot Rule), PDF page 7; path-auction example, pages 8-9",
+      "revision": "Spring 2010",
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-018",
+      "title": "Holmstrom (1982), Moral Hazard in Teams",
+      "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+      "locator": "Abstract and Introduction, printed p. 324 / PDF p. 1; Abstract, printed p. 324 / PDF p. 1",
+      "revision": "Bell Journal of Economics 13(2), 1982, pp. 324-340",
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "Local rendered scanned PDF visually inspected (teams-page1.png)"
+    },
+    {
+      "id": "systems-source-019",
+      "title": "Holmstrom and Milgrom (1991), Multitask Principal-Agent Analyses: Incentive Contracts, Asset Ownership, and Job Design",
+      "url": "https://web.stanford.edu/~milgrom/publishedarticles/Multitask%20Principal%20Agent.pdf",
+      "locator": "Introduction, printed pp. 24-26 / PDF pages 1-2, distinguishing mark and competing-attention paragraphs",
+      "revision": "JLEO 7, Special Issue 1991, pp. 24-52",
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "Local scanned PDF rendered with pypdfium2 and visually inspected (multitask-page1.png and multitask-page2.png)"
+    },
+    {
+      "id": "systems-source-020",
+      "title": "FAA Pilot’s Handbook of Aeronautical Knowledge, Chapter 5: Aerodynamics of Flight",
+      "url": "https://www.faa.gov/sites/faa.gov/files/07_phak_ch5_0.pdf",
+      "locator": "Chapter 5, Free Directional Oscillations (Dutch Roll), printed p. 5-20 / PDF p. 20; Chapter 5, Asymmetric Loading (P-Factor), printed p. 5-32 / PDF p. 32",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "Local official PDF passage extracted with pypdf and read"
+    },
+    {
+      "id": "systems-source-021",
+      "title": "FAA Pilot’s Handbook of Aeronautical Knowledge, Chapter 6: Flight Controls",
+      "url": "https://www.faa.gov/sites/faa.gov/files/08_phak_ch6.pdf",
+      "locator": "Chapter 6, Adverse Yaw, printed p. 6-3 / PDF p. 3",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "Local official PDF passage extracted with pypdf and read"
+    },
+    {
+      "id": "systems-source-022",
+      "title": "European Union Agency for Railways: Braking curves",
+      "url": "https://www.era.europa.eu/domains/european-rail-traffic-management-system/braking-curves",
+      "locator": "Introduction and braking-curve prediction description, lines 15-21",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-023",
+      "title": "FAA: Hot Spots",
+      "url": "https://www.faa.gov/airports/runway_safety/hotspots",
+      "locator": "Hot spot definition, lines 114-117",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-024",
+      "title": "Federal Transit Administration: Signal Priority",
+      "url": "https://www.transit.dot.gov/research-innovation/signal-priority",
+      "locator": "Queue Jumpers, lines 52-54",
+      "revision": "Last updated 2015-12-06",
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-025",
+      "title": "NASA JPL: Robotics—Making a Self-Driving Rover",
+      "url": "https://www.jpl.nasa.gov/edu/resources/lesson-plan/robotics-making-a-self-driving-rover/",
+      "locator": "Introduce the Challenge, lines 139-142; Criteria for Success and Engineering Constraints, lines 150-165",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-026",
+      "title": "ITF Rules of Tennis 2026",
+      "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+      "locator": "Rule 22 The Let During a Service, printed p. 9 / PDF p. 11, lines 342-350; Rules of Wheelchair Tennis, a. The Two Bounce Rule, printed p. 16 / PDF p. 18, lines 568-571",
+      "revision": "2026 edition",
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-027",
+      "title": "World Rugby Laws: 7 Advantage",
+      "url": "https://passport.world.rugby/laws-of-the-game/laws-by-number/7-advantage/",
+      "locator": "Principle and 7.1-7.3, lines 38-59",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-028",
+      "title": "ICC: Duckworth Lewis Stern",
+      "url": "https://www.icc-cricket.com/about/cricket/rules-and-regulations/duckworth-lewis-stern?appview=true",
+      "locator": "Duckworth Lewis Stern introduction, lines 9-14",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-029",
+      "title": "British Go Association: How to Play",
+      "url": "https://britgo.org/intro/intro2.html",
+      "locator": "The rules; Capturing stones and counting liberties; Strings, lines 11-25 and 38-40",
+      "revision": null,
+      "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-030",
+      "title": "Haskins Laboratories: Legacy—Abramson/Lisker VOT Stimuli",
+      "url": "https://www.haskinslaboratories.org/vot",
+      "locator": "Legacy: Abramson/Lisker VOT Stimuli, definition and synthesized continuum, lines 21-27",
+      "revision": null,
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-031",
+      "title": "Brown et al. (2018), What accounts for individual differences in susceptibility to the McGurk effect?",
+      "url": "https://www.violetabrown.com/pdfs/Brown%20et%20al.%202018%20-%20What%20accounts%20for%20individual%20differences%20in%20susceptibility%20to%20the%20McGurk%20effect.pdf",
+      "locator": "Abstract and Introduction, PDF pp. 1-2, lines 8-28 and 63-80",
+      "revision": "PLOS ONE 13(11): e0207160, 2018-11-12",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-032",
+      "title": "Woodward and Markman (1991), Constraints on Learning as Default Assumptions",
+      "url": "https://cpb-us-w2.wpmucdn.com/voices.uchicago.edu/dist/7/1535/files/2019/11/WoodwardMarkman1991.pdf",
+      "locator": "Mutual Exclusivity, printed pp. 140-141 / PDF pp. 4-5; Constraints as Default Assumptions, pp. 142-145; The Taxonomic and Whole Object Assumptions, printed p. 139 / PDF p. 3, lines 79-85; default-bias qualification, p. 145 / PDF p. 9, lines 274-299",
+      "revision": "Developmental Review 11, 1991, pp. 137-163",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-033",
+      "title": "Norman J. Slamecka (1992), Delineation of the Generation Effect—Citation Classic",
+      "url": "https://garfield.library.upenn.edu/classics1992/A1992HN61400001.pdf",
+      "locator": "Original abstract summary and author retrospective, single PDF page, lines 3-8 and 26-43",
+      "revision": "Author commentary received 1992-03-24; original study 1978",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-034",
+      "title": "Manu Kapur, Productive Failure: A Hidden Efficacy of Seemingly Unproductive Production",
+      "url": "https://escholarship.org/content/qt5f26n97z/qt5f26n97z_noSplash_3e0168f3bef8cfb49b0193c6593738b6.pdf",
+      "locator": "Abstract, PDF p. 1, lines 4-22",
+      "revision": "Proceedings of the 28th Annual Conference of the Cognitive Science Society, 2006, pp. 1587-1592",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-035",
+      "title": "Robert A. Bjork, Desirable Difficulties Perspective on Learning",
+      "url": "https://bjorklab.psych.ucla.edu/wp-content/uploads/sites/13/2016/07/RBjork_inpress.pdf",
+      "locator": "Opening definition, PDF p. 1, lines 1-11; Why Desirable Difficulties Are Desirable, PDF pp. 3-4, lines 60-71",
+      "revision": null,
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-036",
+      "title": "Roediger, McDaniel and McDermott (2006), Test Enhanced Learning",
+      "url": "https://www.psychologicalscience.org/observer/test-enhanced-learning-2",
+      "locator": "Testing-effect explanation and prose-study example, lines 17-23",
+      "revision": "APS Observer, 2006-03-01",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-037",
+      "title": "Ronald A. Rensink, The Dynamic Representation of Scenes",
+      "url": "https://www2.psych.ubc.ca/~rensink/publications/download/Vis_Cog_02_Rensink.pdf",
+      "locator": "Opening summary and change-blindness discussion, PDF pp. 1-2, lines 8-18 and 39-45",
+      "revision": "Author manuscript marked in press, expected late 1999",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-038",
+      "title": "Johansson et al. (2006), How something can be said about telling more than we can know",
+      "url": "https://www.lucs.lu.se/fileadmin/user_upload/lucs/2011/01/Johansson-et-al.-2006-How-Something-Can-Be-Said-About-Telling-More-Than-We-Can-Know.pdf",
+      "locator": "Abstract, PDF pp. 1-2; section 2, PDF p. 4, lines 104-120",
+      "revision": "Consciousness and Cognition 15, 2006, pp. 673-692",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-039",
+      "title": "Rozenblit and Keil (2002), The misunderstood limits of folk science: an illusion of explanatory depth",
+      "url": "https://cogdevlab.yale.edu/sites/default/files/files/rozenblit%20%26%20keil%20%202002.pdf",
+      "locator": "Abstract and Introduction, PDF pp. 1-2, lines 8-17 and 54-65; discussion of recalibration after explanation, PDF p. 15, lines 482-487",
+      "revision": "Cognitive Science 26, 2002, pp. 521-562",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-040",
+      "title": "A reaction-time adjusted PSI method for estimating performance in the stop-signal task",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0210065",
+      "locator": "Introduction, lines 174-181; discussion of independence and slowing, lines 477-484",
+      "revision": "PLOS ONE 14, 2019, e0210065",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-041",
+      "title": "Tang, Zhao and Chen (2014), The Task-Relevant Attribute Representation Can Mediate the Simon Effect",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090954",
+      "locator": "Instruction, lines 139-146",
+      "revision": "PLOS ONE 9(3): e90954, 2014-03-11",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-042",
+      "title": "Fredrickson and Kahneman (1993), Duration Neglect in Retrospective Evaluations of Affective Episodes",
+      "url": "https://bear.warrington.ufl.edu/brenner/mar7588/Papers/fredr-kahneman-jpsp1993.pdf",
+      "locator": "General Discussion, PDF p. 10, lines 1029-1033, 1057-1070",
+      "revision": "Journal of Personality and Social Psychology 65(1), 1993, pp. 45-55",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-043",
+      "title": "Simons and Chabris (1999), Gorillas in our midst: sustained inattentional blindness for dynamic events",
+      "url": "https://www.chabris.com/Simons1999.pdf",
+      "locator": "Abstract and Introduction, PDF pp. 1-2, lines 32-56; Procedures and Results, PDF pp. 8-11",
+      "revision": "Perception 28, 1999, pp. 1059-1074",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-044",
+      "title": "Easley and Kleinberg (2010), Networks, Crowds, and Markets, Chapter 4",
+      "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf",
+      "locator": "4.1 Homophily, PDF pp. 2-3, lines 23-45 and 64-78; 4.3, Co-Evolution of Social and Affiliation Networks, PDF p. 12, lines 370-374; 4.3, Co-Evolution of Social and Affiliation Networks, PDF pp. 12-13, lines 375-402; 4.5 A Spatial Model of Segregation, PDF pp. 24-25, lines 727-779; model qualification and outcome, PDF p. 31, lines 934-969",
+      "revision": "Author preprint draft 2010-06-10",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-045",
+      "title": "Centola and Macy (2007), Complex Contagions and the Weakness of Long Ties",
+      "url": "https://ndg.asc.upenn.edu/wp-content/uploads/2016/04/Centola-Macy-2007-AJS.pdf",
+      "locator": "Abstract and Introduction, printed pp. 702-703 / PDF pp. 1-2, lines 9-19 and 45-59",
+      "revision": "American Journal of Sociology 113(3), November 2007, pp. 702-734",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-046",
+      "title": "Scott L. Feld (1991), Why Your Friends Have More Friends Than You Do",
+      "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/229693?mobileUi=0",
+      "locator": "Abstract, lines 46-48",
+      "revision": "AJS 96(6), 1991-05-01, pp. 1464-1477",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted HTML passage"
+    },
+    {
+      "id": "systems-source-047",
+      "title": "Easley and Kleinberg (2010), Networks, Crowds, and Markets, Chapter 18",
+      "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch18.pdf",
+      "locator": "18.3 Rich-Get-Richer Models, PDF pp. 5-6, lines 122-156 and 168-171",
+      "revision": "Author preprint draft 2010-06-10",
+      "acquired_at": "2026-10-09T02:03:16.469494+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual extracted PDF passage"
+    },
+    {
+      "id": "systems-source-048",
+      "title": "RFC 9651: Structured Field Values for HTTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc9651.html",
+      "locator": "3 Structured Data Types, lines 252-259; 3.2 Dictionaries, lines 330-336; 2.4 compatibility, lines 243-246",
+      "revision": "RFC 9651, September 2024",
+      "acquired_at": "2026-10-09T02:16:41.435198+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual official HTML passage"
+    },
+    {
+      "id": "systems-source-049",
+      "title": "ICC: Duckworth-Lewis-Stern method; Standard Edition fallback methodology",
+      "url": "https://images.icc-cricket.com/image/upload/prd/orlbya4cqyhqaceje3b2.pdf",
+      "locator": "Opening status statement and section 1, PDF p. 1, lines 1-20",
+      "revision": null,
+      "acquired_at": "2026-10-09T02:16:41.435198+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual official PDF passage"
+    },
+    {
+      "id": "systems-source-050",
+      "title": "Roth and Xing, Jumping the Gun: Imperfections and Institutions Related to the Timing of Market Transactions",
+      "url": "https://stanford.edu/~alroth/jump.html",
+      "locator": "Introduction, lines 87-91 and 146-164; I. Unraveling in a prototypical market, lines 177-197",
+      "revision": "AER 84, September 1994, pp. 992-1044; author HTML copy says revised August 1993 and contains the descriptive portion",
+      "acquired_at": "2026-10-09T02:16:41.435198+00:00",
+      "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+      "inspection_mode": "web.run actual author-hosted HTML passage"
+    }
+  ],
+  "checkpoint_counts": {
+    "total": 61,
+    "primary_domains": {
+      "Computing & information": 10,
+      "Economics & organizations": 9,
+      "Engineering & transport": 10,
+      "Games & sports": 9,
+      "Mind & behavior": 8,
+      "Learning & language": 8,
+      "Society & relationships": 7
+    }
+  },
+  "final_selection_counts": {
+    "primary": 61,
+    "alternatives": 0,
+    "inventory_status": {
+      "proposed_new": 55,
+      "existing": 6
+    },
+    "scopes": {
+      "idea": 50,
+      "facet_or_application": 8,
+      "broad_field": 2,
+      "topic": 1
+    },
+    "entity_kinds": {
+      "idea": 60,
+      "named_subject": 1
+    },
+    "new_fine_scope": 55,
+    "fine_scope": 58,
+    "fine_with_parent": 58,
+    "fine_with_source_asserted_parent": 45,
+    "distinct_inspected_source_urls": 50
+  }
+}

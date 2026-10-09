@@ -1,0 +1,3701 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-005",
+  "audit_status": "initial_review_complete_correction_and_recheck_pending",
+  "auditor_independence": "Checker did not author this batch; author notes used only as locating aids.",
+  "started_at": "2026-10-08T21:22:11.802466+00:00",
+  "freeze_verification": {
+    "candidate_hash_matches": true,
+    "candidate_size_matches": true,
+    "baseline_hash_matches": true,
+    "selection_hash_matches": true,
+    "accepted_ids_match": true,
+    "new_frame_matches": true,
+    "new_frame_hash_matches": true,
+    "random_reproduced": true,
+    "random_risk_disjoint": true,
+    "full_snapshots_match": true,
+    "source_snapshot_matches": true,
+    "sample_order_matches": true
+  },
+  "frozen_hashes": {
+    "sample-cards.frozen.json": "559c1b461f54a07143ee9ee96e49d7974842f6320e700fc0d03513a32a3ed333",
+    "candidate.before-audit.json": "0b55dce5e0f107113ff5e2c1f036055a786ef8fdc5b0781aa78fdb45a4644571",
+    "sample.frozen.json": "e34a2fb3e7441f18cea67447797c573fae394e8238702a9efe6fa0c774b6c63a"
+  },
+  "random_sampling": {
+    "seed": "OtherWise-scale-pilot-001:research-batch-005:source-audit",
+    "rule": "Sort new IDs by SHA256(UTF8(seed + newline + ID)); take the first 20.",
+    "frame_count": 160,
+    "reproduced_ids": [
+      "local:catalog:manchester-baby",
+      "local:catalog:complementary-distribution",
+      "local:catalog:grapheme-cluster",
+      "local:catalog:unicode-normalization",
+      "local:catalog:interleaved-practice",
+      "local:catalog:atlas-linguistique-de-la-france",
+      "local:catalog:betweenness-centrality",
+      "local:catalog:grace-hopper",
+      "local:catalog:sql",
+      "local:catalog:covering-index",
+      "local:catalog:dyad-social-group",
+      "local:catalog:divisional-organizational-structure",
+      "local:catalog:social-norms",
+      "local:catalog:atomic-commit",
+      "local:catalog:edge-embeddedness",
+      "local:catalog:password-salting",
+      "local:catalog:insurance-deductible",
+      "local:catalog:community-led-language-reclamation",
+      "local:catalog:efficiency-wage",
+      "local:catalog:common-value-auction"
+    ]
+  },
+  "sampling_counts": {
+    "random_new": 20,
+    "risk": 20
+  },
+  "counts_must_remain_separate": true,
+  "access_policy": {
+    "maximum_attempts_per_failing_url": 2,
+    "maximum_alternatives_per_unresolved_candidate": 3,
+    "prior_access_log": "research/workers/research-batch-005/access-log-traceability.json",
+    "prior_exhausted_url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf"
+  },
+  "source_reads": [
+    {
+      "source_id": "baby",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+      "locator": "Description lines 195–202; object details 213–214",
+      "independent_read_note": "CRT binary storage and the original 1948 run are documented; the catalogued object is a 1998 replica.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:22:49.813Z",
+      "source_revision_observed": "Collection YS23/1998; page revision unavailable",
+      "author_revision": "Collection YS23/1998",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-001.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:22:49.813Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "eniac",
+      "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78",
+      "locator": "ENIAC; ENIAC being set up; ENIAC tube change, lines 11–22",
+      "independent_read_note": "Electronic operation, days of configuration and tube-maintenance experience are explicit.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:22:49.813Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-001.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:22:49.813Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "hopper",
+      "url": "https://computerhistory.org/profile/grace-murray-hopper/",
+      "locator": "Fellow citation and biography, lines 53–60",
+      "independent_read_note": "Compiler contributions and participation in COBOL definition are explicit.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:22:49.813Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-001.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:22:49.813Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "queryplanner",
+      "url": "https://www.sqlite.org/queryplanner.html",
+      "locator": "Overview lines 58–63; §1.1 lines 67–84; §1.6 lines 155–181; §1.7 lines 182–198",
+      "independent_read_note": "Declarative queries, compound-key ordering and query-specific coverage are directly explained.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:22:58.306Z",
+      "source_revision_observed": "Last updated 2026-03-22T10:09:38Z",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-001.json",
+        "live-002.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:22:49.813Z",
+        "2026-10-08T21:22:58.306Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "sqliteabout",
+      "url": "https://www.sqlite.org/about.html",
+      "locator": "About SQLite, lines 38–44",
+      "independent_read_note": "Identifies a SQL database engine with database files, tables and indexes.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:22:58.306Z",
+      "source_revision_observed": "Last updated 2025-11-13T07:12:58Z",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-002.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:22:58.306Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "segmentation",
+      "url": "https://www.unicode.org/reports/tr29/",
+      "locator": "Header lines 7–20; §3 lines 142–150",
+      "independent_read_note": "Code-point clusters approximate perceived characters; accents, arrow movement and tailoring illustrate the limits.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:23:07.094Z",
+      "source_revision_observed": "UAX 29 rev. 49; Unicode 18.0.0; 2026-09-01",
+      "author_revision": "UAX 29 revision 49, Unicode 18.0.0",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-003.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:23:07.094Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "utf8",
+      "url": "https://www.rfc-editor.org/rfc/rfc3629",
+      "locator": "RFC 3629 §1 lines 152–155; §3 lines 222–248",
+      "independent_read_note": "Numeric code points are distinguished from their byte encoding.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:23:07.094Z",
+      "source_revision_observed": "RFC 3629, November 2003",
+      "author_revision": "RFC 3629",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-003.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:23:07.094Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "normalization",
+      "url": "https://www.unicode.org/reports/tr15/",
+      "locator": "Header lines 7–20; §1.2 lines 104–120, 150–164",
+      "independent_read_note": "Equivalence determines normalization; the two form families preserve different distinctions.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:55.973Z",
+      "source_revision_observed": "UAX 15 rev. 58; Unicode 18.0.0; 2026-08-12",
+      "author_revision": "UAX 15 revision 58, Unicode 18.0.0",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-003.json",
+        "live-014.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:23:07.094Z",
+        "2026-10-08T21:27:55.973Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "atomiccommit",
+      "url": "https://www.sqlite.org/atomiccommit.html",
+      "locator": "§1 lines 116–122; §2 lines 123–138; §3.5 lines 174–191",
+      "independent_read_note": "All-or-nothing appearance differs from serial writes; storage assumptions and rollback-mode scope are explicit.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:30:47.663Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-004.json",
+        "live-018.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:23:19.348Z",
+        "2026-10-08T21:30:47.663Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "sqliteisolation",
+      "url": "https://www.sqlite.org/isolation.html",
+      "locator": "Isolation And Concurrency, lines 32–39",
+      "independent_read_note": "Rollback restoration and append/checkpoint behavior are described as SQLite journal modes.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:23:19.348Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-004.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:23:19.348Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "wal",
+      "url": "https://www.sqlite.org/wal.html",
+      "locator": "§1 lines 63–79; §2 lines 82–89",
+      "independent_read_note": "Saved original pages in rollback mode contrast with SQLite WAL pages and later checkpoint.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:23:19.348Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-004.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:23:19.348Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "ties",
+      "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch03.pdf",
+      "locator": "Title/date p. 47; §3.5 pp. 65–66; §3.6 pp. 73–75, lines 828–866, 918–923",
+      "independent_read_note": "Common-neighbor embeddedness, zero-embeddedness bridges and divided shortest-path flow are directly defined.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:33:24.239Z",
+      "source_revision_observed": "Draft version 2010-06-10; Easley and Kleinberg, 2010",
+      "author_revision": "2010 pre-publication chapter 3",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-005.json",
+        "live-017.json",
+        "live-020.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:23:34.295Z",
+        "2026-10-08T21:28:51.862Z",
+        "2026-10-08T21:33:24.239Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "nist",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+      "locator": "Page header; §3.1.1.2 Password Verifiers, lines 273–279",
+      "independent_read_note": "Salt input, collision minimization and costly password hashing support distinct defenses against offline guessing.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:33:24.239Z",
+      "source_revision_observed": "NIST 800-63-4 publication route; page timestamp 2025-08-26T08:51:12-05:00",
+      "author_revision": "NIST SP 800-63B-4",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-005.json",
+        "live-014.json",
+        "live-017.json",
+        "live-020.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:23:34.295Z",
+        "2026-10-08T21:27:55.973Z",
+        "2026-10-08T21:28:51.862Z",
+        "2026-10-08T21:33:24.239Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "tls",
+      "url": "https://www.rfc-editor.org/rfc/rfc8446",
+      "locator": "RFC 8446 §1 lines 322–358",
+      "independent_read_note": "The protocol combines authenticated key establishment and protected records, with distinct confidentiality and integrity goals.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:55.973Z",
+      "source_revision_observed": "RFC 8446, August 2018",
+      "author_revision": "RFC 8446",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-014.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:55.973Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "saltzer",
+      "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html",
+      "locator": "Section I.A, open design, lines 69–70",
+      "independent_read_note": "Security is separated from secrecy of the mechanism, with keys/passwords kept protected.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:23:34.295Z",
+      "source_revision_observed": "1975 paper, Section I",
+      "author_revision": "1975 paper, Section I",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-005.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:23:34.295Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "morris",
+      "url": "https://www.fbi.gov/history/famous-cases/morris-worm",
+      "locator": "Main account lines 49–53, 62",
+      "independent_read_note": "The dated propagation, operational disruption without destroyed files and emergency-response consequence are explicit.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:28:51.862Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-014.json",
+        "live-016.json",
+        "live-017.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:55.973Z",
+        "2026-10-08T21:28:24.830Z",
+        "2026-10-08T21:28:51.862Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "saltzerintro",
+      "url": "https://web.mit.edu/Saltzer/www/publications/protection/",
+      "locator": "Abstract lines 7–9; glossary Security and Protection lines 64–72",
+      "independent_read_note": "Computer protection concerns control over use and alteration of systems and information.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:28:24.830Z",
+      "source_revision_observed": "1975 paper",
+      "author_revision": "1975 paper",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-014.json",
+        "live-016.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:55.973Z",
+        "2026-10-08T21:28:24.830Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "complementary",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.04%3A_Complementary_distribution",
+      "locator": "§4.4, Phones without contrastive distribution and Phonetic similarity, lines 195–211",
+      "independent_read_note": "The h/ŋ counterexample and similarity criterion directly prevent equating nonoverlap with a shared phoneme.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:24:05.605Z",
+      "source_revision_observed": "Page 192604, last modified 2024-03-18T04:34:04Z",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-006.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:05.605Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "phonemes",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+      "locator": "§4.1 lines 194–224, including the explicit allophone definition at 216–219",
+      "independent_read_note": "Patterns of sound combination and allophonic distinctions supply the target meanings.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:30:47.663Z",
+      "source_revision_observed": "Last modified 2024-03-18T04:34:04Z",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-007.json",
+        "live-006.json",
+        "live-018.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:22.212Z",
+        "2026-10-08T21:24:05.605Z",
+        "2026-10-08T21:30:47.663Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "variationmethods",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.05%3A_Variationist_methods_and_concepts",
+      "locator": "§10.5 Dialectology: Then and now, lines 194–197; Sociolinguistic interviews and corpora, lines 215–225",
+      "independent_read_note": "The French atlas and Fangyan cases are described alongside the representative-interview corpus approach.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:24:22.212Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-007.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:22.212Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "languagechange",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.03%3A_Language_changes",
+      "locator": "§10.3 Analyzing language change, lines 185–189",
+      "independent_read_note": "Earlier and later language-use data enable real-time historical comparison.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:26:34.963Z",
+      "source_revision_observed": "Last modified 2024-03-18T04:34:00Z",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-010.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:26:34.963Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "socialstatus",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-7-sociolinguistic-correlations-social-status/",
+      "locator": "§10.7 Lower East Side case and Figure 10.4, lines 400–408",
+      "independent_read_note": "Occupation, education and income define Labov’s strata; both casual speech and reading are compared.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:24:22.212Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-007.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:22.212Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "variationist",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.01%3A_What_is_variationist_sociolinguistics",
+      "locator": "§10.1 opening explanation, lines 190–192",
+      "independent_read_note": "Variationist analysis combines linguistic and social context in language as used.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:55.973Z",
+      "source_revision_observed": "Last modified 2024-03-18T04:34:00Z",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-014.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:55.973Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "ipa",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/3-6-the-international-phonetic-alphabet/",
+      "locator": "§3.6 Transcription; The International Phonetic Alphabet; Using the IPA, lines 399–420",
+      "independent_read_note": "Cross-language notation, spelling inconsistencies and broad/narrow detail are explicit.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:24:30.763Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-008.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:30.763Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "michif",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/9-7-reclaiming-michif/",
+      "locator": "§9.7 interview, lines 396–418",
+      "independent_read_note": "Cenerini describes distinct local language histories, community goals and story documentation with family value.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:55.973Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-009.json",
+        "live-010.json",
+        "live-014.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:52.833Z",
+        "2026-10-08T21:26:34.963Z",
+        "2026-10-08T21:27:55.973Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "reduplication",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.03%3A_Morphology_beyond_affixes",
+      "locator": "§5.3 opening line 196; Reduplication lines 209–216",
+      "independent_read_note": "Repetition is placed among morphological processes; Halq’eméylem disposition and English prototypicality are explicit.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:47.101Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-010.json",
+        "live-013.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:26:34.963Z",
+        "2026-10-08T21:27:47.101Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "morphology",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.01%3A_What_is_morphology",
+      "locator": "§5.1 lines 217–223",
+      "independent_read_note": "Morphemes pair form with meaning/function; linguistic morphology concerns word structure.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:24:52.833Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-009.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:52.833Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "ambiguity",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/06%3A_Syntax/6.17%3A_Trees-_Structural_ambiguity",
+      "locator": "§6.17 telescope example, lines 192–204",
+      "independent_read_note": "Two phrase attachments produce the two interpretations without a lexical-sense change.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:24:52.833Z",
+      "source_revision_observed": "Last modified 2024-03-18T04:34:16Z",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-009.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:52.833Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "composition",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/07%3A_Semantics/7.02%3A_Compositionality-_Why_not_just_syntax",
+      "locator": "§7.2 compositionality definition and complex-word example, lines 195–200",
+      "independent_read_note": "Expression meaning depends on component meanings and their combination.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:26:34.963Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-010.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:26:34.963Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "interleavestudy",
+      "url": "https://ies.ed.gov/use-work/awards/efficacy-study-interleaved-mathematics-practice",
+      "locator": "Purpose lines 29–34; Intervention and Control Condition lines 44–51",
+      "independent_read_note": "Mixed problem types require strategy choice; the intervention manipulates order of the same mathematics problems.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:26:34.963Z",
+      "source_revision_observed": "IES award R305A160263; 2016 award, closed",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-009.json",
+        "live-010.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:52.833Z",
+        "2026-10-08T21:26:34.963Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "ies",
+      "url": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072004.pdf",
+      "locator": "Cover/publication pages; Recommendation 1 pp. 5–8; Recommendation 6a pp. 23–24",
+      "independent_read_note": "Spacing separates encounters; cue-only delayed judgments combine delay, absent answers and prospective recall estimates. Classroom evidence is explicitly limited.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:33:24.239Z",
+      "source_revision_observed": "NCER 2007-2004; September 2007",
+      "author_revision": "NCER 2007-2004",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-009.json",
+        "live-013.json",
+        "live-014.json",
+        "live-020.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:52.833Z",
+        "2026-10-08T21:27:47.101Z",
+        "2026-10-08T21:27:55.973Z",
+        "2026-10-08T21:33:24.239Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "formative",
+      "url": "https://www.cmu.edu/teaching/assessment/basics/formative-summative.html",
+      "locator": "Formative assessment, lines 11–21",
+      "independent_read_note": "Feedback informs later teaching and studying, supporting the comparison with learner calibration.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:24:52.833Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-009.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:24:52.833Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "groupsize",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/6-2-group-size-and-structure",
+      "locator": "§6.2 Dyads, Triads, and Large Groups, lines 31–34",
+      "independent_read_note": "Two-member dependence and three-member coalition/withdrawal differences are explicitly contrasted.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:28:02.798Z",
+      "source_revision_observed": "Introduction to Sociology 3e, 2021 edition; no section revision ID",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-015.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:28:02.798Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "norms",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/3-2-elements-of-culture",
+      "locator": "§3.2 Values and Beliefs lines 38–40; Norms lines 44–51",
+      "independent_read_note": "Formal and informal expectations operate through observed reactions and anticipated sanctions.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:28:02.798Z",
+      "source_revision_observed": "Introduction to Sociology 3e, 2021 edition; no section revision ID",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-015.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:28:02.798Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "socialreality",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/4-3-social-constructions-of-reality",
+      "locator": "§4.3 institutionalization example line 34; Roles and Status lines 47–48",
+      "independent_read_note": "The norm-to-institution connection and cross-role work/parent conflict are direct examples.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:28:24.830Z",
+      "source_revision_observed": "Introduction to Sociology 3e, 2021 edition; no section revision ID",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-016.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:28:24.830Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "sociology",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/1-1-what-is-sociology",
+      "locator": "§1.1 What Are Society and Culture? and Studying Patterns, lines 33–42",
+      "independent_read_note": "Micro/macro study and connections between personal experience, historical context and social structure are described.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:28:51.862Z",
+      "source_revision_observed": "Introduction to Sociology 3e, 2021 edition; no section revision ID",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-016.json",
+        "live-017.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:28:24.830Z",
+        "2026-10-08T21:28:51.862Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "collective",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/21-1-collective-behavior",
+      "locator": "§21.1 Emergent-Norm Perspective, lines 48–57",
+      "independent_read_note": "New situation-specific guidelines explain conduct; the account explicitly leaves acceptance and diffusion questions open.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:28:24.830Z",
+      "source_revision_observed": "Introduction to Sociology 3e, 2021 edition; no section revision ID",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-016.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:28:24.830Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "repair",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/1557948/1/Dingemanse_universal_principles_in_the_repair_of_communication.PDF",
+      "locator": "Introduction p. 2; Materials and Methods p. 3, lines 60–64, 105–111; Results pp. 4–5",
+      "independent_read_note": "Listener initiation and speaker repetition, clarification or confirmation form a side sequence.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:28:24.830Z",
+      "source_revision_observed": "Dingemanse et al., 2015-09-16; doi:10.1371/journal.pone.0136100",
+      "author_revision": "doi:10.1371/journal.pone.0136100",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-016.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:28:24.830Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "grounding",
+      "url": "https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf",
+      "locator": "Grounding in Conversation, printed p. 128, lines 74–91; Evidence in Grounding, printed pp. 130–132, lines 165–170",
+      "independent_read_note": "Mutual understanding is sufficient for current purposes; routine acknowledgments also supply evidence.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:28:24.830Z",
+      "source_revision_observed": "Clark and Brennan, 1991 chapter",
+      "author_revision": "1991 chapter",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-016.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:28:24.830Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "insurance",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/16-2-insurance-and-imperfect-information",
+      "locator": "§16.2 The Moral Hazard Problem, lines 74–80",
+      "independent_read_note": "Defines deductible cost sharing and presents an incentive explanation.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:26:44.400Z",
+      "source_revision_observed": "Principles of Economics 3e; no section revision ID",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-011.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:26:44.400Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "firm",
+      "url": "https://books.core-econ.org/the-economy-v1/book/text/06.html",
+      "locator": "§6.4 Employment rents, lines 325–328; §6.7 efficiency wages and model summary, lines 797–807",
+      "independent_read_note": "Employment rent supports retention and effort; the wage decision is explicitly a labor-discipline model.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:35.912Z",
+      "source_revision_observed": "The Economy 1.0, Unit 6",
+      "author_revision": "The Economy 1.0, Unit 6",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-012.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:35.912Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "auction",
+      "url": "https://oyc.yale.edu/economics/econ-159/lecture-24",
+      "locator": "Lecture 24 Chapter 1 lines 47–57; Chapter 2 lines 59–60, 74, 118–119",
+      "independent_read_note": "The common-value model, coin jar and conditioning on winning are explicitly connected.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:35.912Z",
+      "source_revision_observed": "ECON 159 Lecture 24, 2007",
+      "author_revision": "ECON 159 Lecture 24, 2007",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-012.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:35.912Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "orgstructures",
+      "url": "https://openstax.org/books/principles-management/pages/4-3-organizational-designs-and-structures",
+      "locator": "§4.3 functional/divisional comparison lines 48–59; networked teams lines 78–86",
+      "independent_read_note": "Functions repeat within divisions; flexible, initially assigned teams are described as organizational designs.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:35.912Z",
+      "source_revision_observed": "Principles of Management; no section revision ID",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-012.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:35.912Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "orgdesign",
+      "url": "https://openstax.org/books/principles-management/pages/10-1-organizational-structures-and-design",
+      "locator": "§10.1 opening definitions, lines 25–38",
+      "independent_read_note": "Structures coordinate activities; organizational design creates those structures and responsibilities.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:28:51.862Z",
+      "source_revision_observed": "Principles of Management; no section revision ID",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-012.json",
+        "live-017.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:35.912Z",
+        "2026-10-08T21:28:51.862Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "economics",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important",
+      "locator": "§1.1 scarcity line 30; specialization lines 58–76; Trade and Markets lines 77–81",
+      "independent_read_note": "Scarcity motivates choices; specialization raises output and depends on exchange.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:30:47.663Z",
+      "source_revision_observed": "Principles of Economics 3e; no section revision ID",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-012.json",
+        "live-017.json",
+        "live-018.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:35.912Z",
+        "2026-10-08T21:28:51.862Z",
+        "2026-10-08T21:30:47.663Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "asymmetric",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/16-1-the-problem-of-imperfect-information-and-asymmetric-information",
+      "locator": "§16.1 opening explanation, lines 34–43",
+      "independent_read_note": "Unequal information complicates exchange and motivates remedies.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:35.912Z",
+      "source_revision_observed": "Principles of Economics 3e; no section revision ID",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-012.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:35.912Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "boehistory",
+      "url": "https://www.bankofengland.co.uk/about/history",
+      "locator": "1694 foundation lines 341–361; 1720 entry lines 334–340; 1946 entry lines 127–133",
+      "independent_read_note": "Private founding, public deposits, debt-finance competition and subsequent nationalization are documented.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:47.101Z",
+      "source_revision_observed": "Page last updated 2024-12-09",
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-013.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:47.101Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "coopHistory",
+      "url": "https://ica.coop/en/whats-co-op/history-co-operative-movement",
+      "locator": "Our history opening, line 89",
+      "independent_read_note": "International cooperative delegates established the 1895 organization and its information, principles and trade aims.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:47.101Z",
+      "source_revision_observed": null,
+      "author_revision": null,
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-013.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:47.101Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "cooperativeidentity",
+      "url": "https://ica.coop/en/cooperatives/cooperative-identity",
+      "locator": "Principles 4 and 6, lines 115–123; Principle 3 lines 110–114",
+      "independent_read_note": "Autonomy and cooperation through international structures support federation without merger; member capital participation is a different principle.",
+      "access_mode": "fresh_public_web_tool_response",
+      "accessed_at": "2026-10-08T21:27:47.101Z",
+      "source_revision_observed": "1995 Statement on the Cooperative Identity",
+      "author_revision": "1995 Statement on the Cooperative Identity",
+      "access_limitation": "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch.",
+      "access_receipt_files": [
+        "live-013.json"
+      ],
+      "access_request_timestamps": [
+        "2026-10-08T21:27:47.101Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    }
+  ],
+  "cards": [
+    {
+      "id": "local:catalog:manchester-baby",
+      "label": "Manchester Baby",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 45,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "baby",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+          "locator": "Description lines 195–202; object details 213–214",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-001.json"
+          ]
+        },
+        {
+          "source_id": "eniac",
+          "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78",
+          "locator": "ENIAC; ENIAC being set up; ENIAC tube change, lines 11–22",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-001.json"
+          ]
+        }
+      ],
+      "claim_assessment": "CRT dots, stored programming and 1948 demonstration are supported.",
+      "scope_and_wording_assessment": "The card concerns the original experimental machine without performance superlatives.",
+      "identity_assessment": "The card unambiguously concerns the original 1948 Baby, distinct from general computers and ENIAC. Its explanatory source is a replica-object page with a reliable historical description; clarify that context in metadata.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "The specific stored-program test machine differs from computers generally and from later commercial designs.",
+          "id": "Q68",
+          "label": "Computer",
+          "original_description": "general-purpose device for performing arithmetic or logical operations"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q169399",
+          "target_label": "ENIAC",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "First electronic general-purpose computer",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "Both premises support the editorial comparison of programming methods.",
+          "source_ids": [
+            "baby",
+            "eniac"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [
+        {
+          "finding_id": "005-R01",
+          "category": "source_link_context_precision",
+          "severity": "minor",
+          "substantive": false,
+          "finding": "The identity URL identifies object YS23/1998, a 1998 replica, while the card concerns the original 1948 Baby. It remains good factual evidence.",
+          "suggested_correction": "Keep the URL. Add to its evidence note: This collection record identifies a 1998 working replica; the historical description at paragraphs 1–6 supplies the facts about the original 1948 Manchester Baby.",
+          "initial_suggested_correction": "Keep the replica page as evidence; use an official original-Baby identity page or leave identity_urls empty for this local identity.",
+          "clarification": "Coordinator clarified that explanatory URLs do not assert canonical external identity. The historical description supports the original machine; this is a minor ambiguity, not a wrong canonical identity."
+        }
+      ],
+      "initial_status": "supported_with_minor_note",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": [
+        "Keep the URL. Add to its evidence note: This collection record identifies a 1998 working replica; the historical description at paragraphs 1–6 supplies the facts about the original 1948 Manchester Baby."
+      ]
+    },
+    {
+      "id": "local:catalog:complementary-distribution",
+      "label": "Complementary distribution",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 45,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "complementary",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.04%3A_Complementary_distribution",
+          "locator": "§4.4, Phones without contrastive distribution and Phonetic similarity, lines 195–211",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-006.json"
+          ]
+        },
+        {
+          "source_id": "phonemes",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+          "locator": "§4.1 lines 194–224, including the explicit allophone definition at 216–219",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-007.json",
+            "live-006.json",
+            "live-018.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Nonoverlap, h/ŋ counterexample and extra phonetic evidence match the passage.",
+      "scope_and_wording_assessment": "The many-speakers qualifier and lack of automatic allophony are retained.",
+      "identity_assessment": "A distributional relation, not a new name for the existing Allophone concept.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Distinguish noncontrastive pronunciations of one phoneme from meaning-changing sound contrasts."
+          ],
+          "comparison": "A distributional relation provides evidence about allophones but does not itself identify a single phoneme.",
+          "id": "local:catalog:allophone",
+          "label": "Allophone",
+          "original_description": null
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:allophone",
+          "target_label": "Allophone",
+          "target_registry": "frozen_baseline",
+          "target_meaning": null,
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The actual passage contrasts cases that do and do not group as allophones, supporting related_to.",
+          "source_ids": [
+            "complementary",
+            "phonemes"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:grapheme-cluster",
+      "label": "Grapheme cluster",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 47,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "segmentation",
+          "url": "https://www.unicode.org/reports/tr29/",
+          "locator": "Header lines 7–20; §3 lines 142–150",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-003.json"
+          ]
+        },
+        {
+          "source_id": "utf8",
+          "url": "https://www.rfc-editor.org/rfc/rfc3629",
+          "locator": "RFC 3629 §1 lines 152–155; §3 lines 222–248",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-003.json"
+          ]
+        }
+      ],
+      "claim_assessment": "The grouping, combining accent, cursor unit and tailoring claims match §3.",
+      "scope_and_wording_assessment": "The approximation caveat is retained; no glyph equivalence is asserted.",
+      "identity_assessment": "Segmentation identity differs from graphetics and code points.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "Graphetics studies written forms; grapheme clusters are an implementable Unicode segmentation unit.",
+          "id": "Q5597119",
+          "label": "Graphetics",
+          "original_description": "study of written graphs independent of language"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:unicode-code-point",
+          "target_label": "Unicode code point",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Distinguish the integer assigned to a character from the bytes used by an encoding.",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial link correctly contrasts code-point and editing-unit granularity.",
+          "source_ids": [
+            "segmentation",
+            "utf8"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:unicode-normalization",
+      "label": "Unicode normalization",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 44,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "normalization",
+          "url": "https://www.unicode.org/reports/tr15/",
+          "locator": "Header lines 7–20; §1.2 lines 104–120, 150–164",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-003.json",
+            "live-014.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Decomposition, ordering, recomposition and equivalence families are supported.",
+      "scope_and_wording_assessment": "Compatibility distinctions are preserved in the explanation.",
+      "identity_assessment": "Specific normalization process, not generic data or equivalence alone.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "Data is the broad representation category; normalization is a specified equivalence-preserving text transformation.",
+          "id": "Q494756",
+          "label": "Data (computing)",
+          "original_description": "quantities, characters, or symbols on which operations are performed by a computer"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:canonical-equivalence-in-unicode",
+          "target_label": "Canonical equivalence in Unicode",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Recognize a precomposed accented character and its decomposed sequence as the same abstract character.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "UAX 15 directly uses canonical equivalence in defining normalization forms.",
+          "source_ids": [
+            "normalization"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:interleaved-practice",
+      "label": "Interleaved practice",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 49,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "interleavestudy",
+          "url": "https://ies.ed.gov/use-work/awards/efficacy-study-interleaved-mathematics-practice",
+          "locator": "Purpose lines 29–34; Intervention and Control Condition lines 44–51",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-009.json",
+            "live-010.json"
+          ]
+        },
+        {
+          "source_id": "ies",
+          "url": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072004.pdf",
+          "locator": "Cover/publication pages; Recommendation 1 pp. 5–8; Recommendation 6a pp. 23–24",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-009.json",
+            "live-013.json",
+            "live-014.json",
+            "live-020.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Mixed problem types and strategy selection match the mathematics intervention.",
+      "scope_and_wording_assessment": "The explicit intervention context avoids universal effectiveness claims.",
+      "identity_assessment": "Task-type mixing differs from temporal spacing and alternating worked examples.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "Mixing task types is distinct from temporal spacing and from alternating worked examples with unsolved problems.",
+          "id": "Q133500",
+          "label": "Learning",
+          "original_description": "process of acquiring new knowledge"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q1095859",
+          "target_label": "Spacing effect",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "psychological effect that people learn more by spreading studying out in time",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial link compares ordering with delayed re-exposure, using independent premises.",
+          "source_ids": [
+            "interleavestudy",
+            "ies"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:atlas-linguistique-de-la-france",
+      "label": "Atlas linguistique de la France",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 49,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "variationmethods",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.05%3A_Variationist_methods_and_concepts",
+          "locator": "§10.5 Dialectology: Then and now, lines 194–197; Sociolinguistic interviews and corpora, lines 215–225",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-007.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Period, hundreds of sites, fine transcriptions and geographic mapping are supported.",
+      "scope_and_wording_assessment": "Avoids the source’s fieldworker-name typo and does not claim modern audio collection.",
+      "identity_assessment": "A particular atlas differs from historical linguistics and modern corpora.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "The particular survey atlas is a named research work, not historical linguistics generally.",
+          "id": "Q190375",
+          "label": "Historical linguistics",
+          "original_description": "study of language change over time"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:sociolinguistic-corpus",
+          "target_label": "Sociolinguistic corpus",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Combine recordings across a relevant speaker sample so community patterns can be distinguished from individual habits.",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial comparison connects systematic geographically organized observations with modern sampled corpora.",
+          "source_ids": [
+            "variationmethods"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:betweenness-centrality",
+      "label": "Betweenness centrality",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 50,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "ties",
+          "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch03.pdf",
+          "locator": "Title/date p. 47; §3.5 pp. 65–66; §3.6 pp. 73–75, lines 828–866, 918–923",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-005.json",
+            "live-017.json",
+            "live-020.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Shortest-path splitting and the node/edge versions are supported.",
+      "scope_and_wording_assessment": "The route-model caveat prevents interpreting centrality as observed traffic.",
+      "identity_assessment": "A particular measure, distinct from general centrality and influential-neighbor measures in the baseline.",
+      "identity_comparisons": [
+        {
+          "id": "Q5062194",
+          "label": "Centrality",
+          "meaning_comparison": "Betweenness counts shortest-path mediation, whereas eigenvector centrality weights influential neighbors and Centrality is the measure class. One cross-domain owner is needed; the mathematical mechanism must not be counted again in batch 004.",
+          "reviewer_decision": "admit_distinct_measure"
+        },
+        {
+          "id": "Q28401090",
+          "label": "Eigenvector centrality",
+          "meaning_comparison": "Betweenness counts shortest-path mediation, whereas eigenvector centrality weights influential neighbors and Centrality is the measure class. One cross-domain owner is needed; the mathematical mechanism must not be counted again in batch 004.",
+          "reviewer_decision": "admit_distinct_measure"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q2715623",
+          "target_label": "Social network",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "theoretical concept in sociology",
+          "type": "facet_of",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "A defensible editorial facet of social-network analysis; the source discusses this use explicitly.",
+          "source_ids": [
+            "ties"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:grace-hopper",
+      "label": "Grace Hopper",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "hopper",
+          "url": "https://computerhistory.org/profile/grace-murray-hopper/",
+          "locator": "Fellow citation and biography, lines 53–60",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-001.json"
+          ]
+        },
+        {
+          "source_id": "queryplanner",
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "Overview lines 58–63; §1.1 lines 67–84; §1.6 lines 155–181; §1.7 lines 182–198",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-001.json",
+            "live-002.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Compiler work and the COBOL role are supported.",
+      "scope_and_wording_assessment": "No sole-inventor claim; technical contribution supplies a learning takeaway.",
+      "identity_assessment": "The person is distinct from SQL and computing as a field.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "A particular computing pioneer differs from the scientific field; the source supports technical contributions rather than biography alone.",
+          "id": "Q21198",
+          "label": "Computer science",
+          "original_description": "study of computation"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:sql",
+          "target_label": "SQL",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Describe desired query results declaratively while a database planner chooses how to find them.",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The higher-level-expression bridge is supported and explicitly editorial, without claiming SQL authorship.",
+          "source_ids": [
+            "hopper",
+            "queryplanner"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:sql",
+      "label": "SQL",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 44,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "queryplanner",
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "Overview lines 58–63; §1.1 lines 67–84; §1.6 lines 155–181; §1.7 lines 182–198",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-001.json",
+            "live-002.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Declarative requests, planner choices and alternative algorithms are supported.",
+      "scope_and_wording_assessment": "The text concerns queries rather than all SQL operations.",
+      "identity_assessment": "Query language differs from a database collection.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "SQL is a query language; a database is the collection it operates on.",
+          "id": "Q8513",
+          "label": "Database",
+          "original_description": "organized collection of data in computing"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q8513",
+          "target_label": "Database",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "organized collection of data in computing",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The source explicitly relates SQL to the database engine’s retrieval choices.",
+          "source_ids": [
+            "queryplanner"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:covering-index",
+      "label": "Covering index",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 45,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "queryplanner",
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "Overview lines 58–63; §1.1 lines 67–84; §1.6 lines 155–181; §1.7 lines 182–198",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-001.json",
+            "live-002.json"
+          ]
+        },
+        {
+          "source_id": "sqliteabout",
+          "url": "https://www.sqlite.org/about.html",
+          "locator": "About SQLite, lines 38–44",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-002.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Required-column coverage and avoiding table lookup are supported.",
+      "scope_and_wording_assessment": "Coverage is properly query-dependent.",
+      "identity_assessment": "Distinct from composite ordering and databases generally.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "Distinct from a database generally and from indexes that still require table lookups.",
+          "id": "Q8513",
+          "label": "Database",
+          "original_description": "organized collection of data in computing"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q8513",
+          "target_label": "Database",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "organized collection of data in computing",
+          "type": "facet_of",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "Database-facet classification is justified as an editorial access-structure link.",
+          "source_ids": [
+            "queryplanner",
+            "sqliteabout"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:dyad-social-group",
+      "label": "Dyad (social group)",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 42,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "groupsize",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/6-2-group-size-and-structure",
+          "locator": "§6.2 Dyads, Triads, and Large Groups, lines 31–34",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-015.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Two members and dependence on both participants are supported.",
+      "scope_and_wording_assessment": "Concerns group membership, not erasure of obligations or social consequences.",
+      "identity_assessment": "Disambiguated social-group sense; distinct from triad and general social networks.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Represent relationships to explore patterns that individual descriptions alone miss."
+          ],
+          "comparison": "A two-member interaction structure is a specific social group form, not a general network.",
+          "id": "Q2715623",
+          "label": "Social network",
+          "original_description": "theoretical concept in sociology"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:triad-social-group",
+          "target_label": "Triad (social group)",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "See how adding a third member permits coalitions and lets the group persist after one member leaves.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The source expressly compares dyad and triad withdrawal outcomes.",
+          "source_ids": [
+            "groupsize"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:divisional-organizational-structure",
+      "label": "Divisional organizational structure",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "orgstructures",
+          "url": "https://openstax.org/books/principles-management/pages/4-3-organizational-designs-and-structures",
+          "locator": "§4.3 functional/divisional comparison lines 48–59; networked teams lines 78–86",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-012.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Multi-function divisions, local accountability and coordination tradeoffs are supported.",
+      "scope_and_wording_assessment": "Uses “can” and “may”; duplicated functions follow from each division having its own functional teams.",
+      "identity_assessment": "Different grouping basis from functional structure, rather than a synonym for organization.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "Grouping multiple functions around an output or market differs from a purely functional structure.",
+          "id": "Q43229",
+          "label": "Organization",
+          "original_description": "social entity established to meet needs or pursue goals"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:functional-organizational-structure",
+          "target_label": "Functional organizational structure",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Group specialists by expertise while recognizing the risk that departmental boundaries hinder coordination.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The passage directly describes divisions as grouped functional departments and compares their coordination.",
+          "source_ids": [
+            "orgstructures"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:social-norms",
+      "label": "Social norms",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 44,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "norms",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/3-2-elements-of-culture",
+          "locator": "§3.2 Values and Beliefs lines 38–40; Norms lines 44–51",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-015.json"
+          ]
+        },
+        {
+          "source_id": "socialreality",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/4-3-social-constructions-of-reality",
+          "locator": "§4.3 institutionalization example line 34; Roles and Status lines 47–48",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-016.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Written/unwritten expectations, observation and informal consequences are supported.",
+      "scope_and_wording_assessment": "Does not claim universal compliance or equate norms with ideals.",
+      "identity_assessment": "A behavioral expectation mechanism, distinct from sociology or institutionalization.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Connect everyday interactions with the larger social patterns that shape them.",
+            "Connect interaction-level observations to wider social patterns."
+          ],
+          "comparison": "A behavioral expectation is a specific social mechanism rather than the field of sociology.",
+          "id": "Q21201",
+          "label": "Sociology",
+          "original_description": "social science that studies human society and its development"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:institutionalization",
+          "target_label": "Institutionalization",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Understand how shared conventions become established social institutions that outlast the original participants.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The source explicitly defines institutionalization through embedding norms, supporting the actual relationship.",
+          "source_ids": [
+            "norms",
+            "socialreality"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:atomic-commit",
+      "label": "Atomic commit",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 44,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "atomiccommit",
+          "url": "https://www.sqlite.org/atomiccommit.html",
+          "locator": "§1 lines 116–122; §2 lines 123–138; §3.5 lines 174–191",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-004.json",
+            "live-018.json"
+          ]
+        },
+        {
+          "source_id": "sqliteisolation",
+          "url": "https://www.sqlite.org/isolation.html",
+          "locator": "Isolation And Concurrency, lines 32–39",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-004.json"
+          ]
+        }
+      ],
+      "claim_assessment": "All-or-nothing behavior despite sequential writes is supported.",
+      "scope_and_wording_assessment": "Crash recovery is an intended property under documented hardware assumptions; the card does not claim simultaneous physical writing.",
+      "identity_assessment": "Completion atomicity differs from isolation and recovery mechanisms.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "A transaction completion guarantee is narrower than a database and distinct from concurrent-read isolation.",
+          "id": "Q8513",
+          "label": "Database",
+          "original_description": "organized collection of data in computing"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:rollback-journal",
+          "target_label": "Rollback journal",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Preserve old database content before overwrite so an uncompleted transaction can be undone.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "Rollback journaling is directly connected to atomic commit in SQLite’s documentation.",
+          "source_ids": [
+            "atomiccommit",
+            "sqliteisolation"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:edge-embeddedness",
+      "label": "Edge embeddedness",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 42,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "ties",
+          "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch03.pdf",
+          "locator": "Title/date p. 47; §3.5 pp. 65–66; §3.6 pp. 73–75, lines 828–866, 918–923",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-005.json",
+            "live-017.json",
+            "live-020.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Shared-neighbor count, local-bridge zero case and possible reputational consequences are supported.",
+      "scope_and_wording_assessment": "“May” correctly qualifies social consequences rather than promising trust.",
+      "identity_assessment": "Local overlap differs from structural holes and from the bridge predicate.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Identify brokerage opportunities where otherwise disconnected groups hold different information."
+          ],
+          "comparison": "A quantitative local-overlap measure differs from the gap and brokerage opportunity represented by structural holes.",
+          "id": "local:catalog:structural-holes",
+          "label": "Structural holes",
+          "original_description": null
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:local-bridge-in-a-network",
+          "target_label": "Local bridge in a network",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Identify a tie whose endpoints have no mutual neighbor and whose removal makes their shortest connecting path longer.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The text expressly identifies local bridges with zero embeddedness, supporting source_asserted related_to.",
+          "source_ids": [
+            "ties"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:password-salting",
+      "label": "Password salting",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "nist",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+          "locator": "Page header; §3.1.1.2 Password Verifiers, lines 273–279",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-005.json",
+            "live-014.json",
+            "live-017.json",
+            "live-020.json"
+          ]
+        },
+        {
+          "source_id": "tls",
+          "url": "https://www.rfc-editor.org/rfc/rfc8446",
+          "locator": "RFC 8446 §1 lines 322–358",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-014.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Salt differentiation and costly hashing address separate guessing costs as described.",
+      "scope_and_wording_assessment": "No claim that salts are secret or sufficient to protect weak passwords.",
+      "identity_assessment": "A password-storage application rather than a password identity or reversible encryption.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "A password is the secret; salting is a storage-defense transformation of it.",
+          "id": "Q161157",
+          "label": "Password",
+          "original_description": "short, shared secret used for user authentication to prove identity or access approval"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:authored:000527",
+          "target_label": "Cryptography",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "Protecting information through mathematical encoding and verification techniques.",
+          "type": "application_of",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial cryptography application is justified by hashing; TLS supplies wider cryptographic context.",
+          "source_ids": [
+            "nist",
+            "tls"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:insurance-deductible",
+      "label": "Insurance deductible",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 47,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "insurance",
+          "url": "https://openstax.org/books/principles-economics-3e/pages/16-2-insurance-and-imperfect-information",
+          "locator": "§16.2 The Moral Hazard Problem, lines 74–80",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-011.json"
+          ]
+        }
+      ],
+      "claim_assessment": "The out-of-pocket threshold and retained-loss incentive account are supported.",
+      "scope_and_wording_assessment": "“Specified coverage” and “in the textbook’s incentive account” preserve policy/model limits; no personal insurance advice.",
+      "identity_assessment": "A threshold cost-sharing mechanism, distinct from coinsurance percentages.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "A threshold cost-sharing clause is distinct from percentage coinsurance and insurance generally.",
+          "id": "Q43183",
+          "label": "Insurance",
+          "original_description": "equitable transfer of the risk of a loss, from one entity to another in exchange for payment"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:moral-hazard",
+          "target_label": "Moral hazard",
+          "target_registry": "frozen_baseline",
+          "target_meaning": null,
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The section explicitly connects deductibles to moral-hazard incentives.",
+          "source_ids": [
+            "insurance"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:community-led-language-reclamation",
+      "label": "Community-led language reclamation",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "michif",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/9-7-reclaiming-michif/",
+          "locator": "§9.7 interview, lines 396–418",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-009.json",
+            "live-010.json",
+            "live-014.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Local linguistic histories, lack of one nationwide language and community priorities are supported.",
+      "scope_and_wording_assessment": "The attributed case preserves local diversity without prescribing one program for all communities.",
+      "identity_assessment": "Retains the admitted governance/locality facet distinct from baseline language revitalization.",
+      "identity_comparisons": [
+        {
+          "id": "local:authored:000133",
+          "label": "Language revitalization",
+          "meaning_comparison": "Baseline revitalization concerns sustaining use and transmission. The inspected Cenerini interview supplies a specific local-governance distinction: Métis/Michif communities do not all share one language, so work must follow each community’s own linguistic history and priorities. That is more specific than merely renaming revitalization.",
+          "reviewer_decision": "admit_qualified_governance_facet"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:language-documentation",
+          "target_label": "Language documentation",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Create records of language use and community knowledge that can serve both research and family legacies.",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The documentation link is editorial and specific to locally choosing purposes and activities.",
+          "source_ids": [
+            "michif"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:efficiency-wage",
+      "label": "Efficiency wage",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "firm",
+          "url": "https://books.core-econ.org/the-economy-v1/book/text/06.html",
+          "locator": "§6.4 Employment rents, lines 325–328; §6.7 efficiency wages and model summary, lines 797–807",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-012.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Above-reservation pay, retention, effort and wage/efficiency tradeoff are supported.",
+      "scope_and_wording_assessment": "The labor-discipline model is named and no universal wage law is asserted.",
+      "identity_assessment": "An incentive wage choice differs from statutory minimum wage and employment rent itself.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "An incentive-driven wage choice differs from a legally imposed minimum wage.",
+          "id": "Q186228",
+          "label": "Minimum wage",
+          "original_description": "wage regulation system that sets a statutory floor on wages to prevent low pay, while increases may create upward pressure on prices through higher labor costs"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:employment-rent",
+          "target_label": "Employment rent",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Measure the value of holding a job above the worker's next-best alternative, making job loss consequential.",
+          "type": "application_of",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial application uses the value lost on termination to explain effort-inducing wage choice.",
+          "source_ids": [
+            "firm"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:common-value-auction",
+      "label": "Common-value auction",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "word_count": 47,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "auction",
+          "url": "https://oyc.yale.edu/economics/econ-159/lecture-24",
+          "locator": "Lecture 24 Chapter 1 lines 47–57; Chapter 2 lines 59–60, 74, 118–119",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-012.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Shared value, differing estimates, coin-jar example and information in winning are supported.",
+      "scope_and_wording_assessment": "Framed as a valuation model rather than every real auction; avoids guaranteed overpayment.",
+      "identity_assessment": "Distinct from private-value auction and the broader market mechanism.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "This auction valuation model is more specific than the general market mechanism.",
+          "id": "Q37654",
+          "label": "Market",
+          "original_description": "mechanisms whereby supply and demand confront each other and deals are made, involving places, processes and institutions in which exchanges occur (for physical venues, use Q132510 or Q330284)"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:winner-s-curse",
+          "target_label": "Winner's curse",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Condition an estimate on winning because the highest bid may reveal an unusually optimistic initial estimate.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The lecture directly develops the winner’s curse from its common-value auction.",
+          "source_ids": [
+            "auction"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:william-labov",
+      "label": "William Labov",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 44,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "socialstatus",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-7-sociolinguistic-correlations-social-status/",
+          "locator": "§10.7 Lower East Side case and Figure 10.4, lines 400–408",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-007.json"
+          ]
+        },
+        {
+          "source_id": "variationist",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.01%3A_What_is_variationist_sociolinguistics",
+          "locator": "§10.1 opening explanation, lines 190–192",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-014.json"
+          ]
+        }
+      ],
+      "claim_assessment": "The three status variables and speaking contexts are explicit in the case and figure.",
+      "scope_and_wording_assessment": "Historical study, not a causal class-pronunciation claim.",
+      "identity_assessment": "Named researcher case differs from the general linguistic field and analysis method.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "See how ordinary language can be investigated systematically through structure, comparison and social context.",
+            "Distinguish observing language patterns from prescribing preferred usage."
+          ],
+          "comparison": "The researcher and documented study design are a named learning subject, not the broad field.",
+          "id": "local:authored:000132",
+          "label": "Linguistics",
+          "original_description": "Studying the structures, meanings and uses of human language."
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:variationist-sociolinguistics",
+          "target_label": "Variationist sociolinguistics",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Analyze how linguistic and social conditions alter the probability of variants in language as actually used.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The chapter itself places this quantitative case in variationist sociolinguistics; source_asserted related_to is supported.",
+          "source_ids": [
+            "socialstatus",
+            "variationist"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:multi-column-index",
+      "label": "Multi-column index",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 44,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "queryplanner",
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "Overview lines 58–63; §1.1 lines 67–84; §1.6 lines 155–181; §1.7 lines 182–198",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-001.json",
+            "live-002.json"
+          ]
+        },
+        {
+          "source_id": "sqliteabout",
+          "url": "https://www.sqlite.org/about.html",
+          "locator": "About SQLite, lines 38–44",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-002.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Combined ordering and California-oranges lookup match §1.6.",
+      "scope_and_wording_assessment": "SQLite example preserves implementation context without universal speed guarantees.",
+      "identity_assessment": "Composite ordering differs from covering-index status.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "Composite key ordering is an indexing technique, not a paraphrase of a database or covering-index property.",
+          "id": "Q8513",
+          "label": "Database",
+          "original_description": "organized collection of data in computing"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q8513",
+          "target_label": "Database",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "organized collection of data in computing",
+          "type": "facet_of",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The database-facet editorial relation is supported by the retrieval mechanism.",
+          "source_ids": [
+            "queryplanner",
+            "sqliteabout"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:triad-social-group",
+      "label": "Triad (social group)",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "groupsize",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/6-2-group-size-and-structure",
+          "locator": "§6.2 Dyads, Triads, and Large Groups, lines 31–34",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-015.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Three members, two-against-one alignment and continuing pair after withdrawal are supported.",
+      "scope_and_wording_assessment": "The surviving pair is not called a three-person triad.",
+      "identity_assessment": "Social-group sense is distinct from musical and geometric senses.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Represent relationships to explore patterns that individual descriptions alone miss."
+          ],
+          "comparison": "A three-person social group differs from a musical chord, abstract triangle, and two-member dyad.",
+          "id": "Q2715623",
+          "label": "Social network",
+          "original_description": "theoretical concept in sociology"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:dyad-social-group",
+          "target_label": "Dyad (social group)",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "See why a two-person group depends on both members' continued participation and cannot outlast either member's departure.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The source explicitly contrasts coalition and withdrawal possibilities with a dyad.",
+          "source_ids": [
+            "groupsize"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "Q8134",
+      "label": "Economics",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 3,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "economics",
+          "url": "https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important",
+          "locator": "§1.1 scarcity line 30; specialization lines 58–76; Trade and Markets lines 77–81",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-012.json",
+            "live-017.json",
+            "live-018.json"
+          ]
+        },
+        {
+          "source_id": "asymmetric",
+          "url": "https://openstax.org/books/principles-economics-3e/pages/16-1-the-problem-of-imperfect-information-and-asymmetric-information",
+          "locator": "§16.1 opening explanation, lines 34–43",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-012.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Scarcity, specialization, exchange and information-related coordination concerns are supported.",
+      "scope_and_wording_assessment": "Broad accessible account; no monetary measure of all human aims or contemporary policy conclusion.",
+      "identity_assessment": "Same economics field as baseline controls.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Link scarcity and choice with specialization and exchange.",
+            "Connect scarce resources with specialization and exchange."
+          ],
+          "comparison": "Same registered field and scarcity-and-exchange meaning as prior controls.",
+          "id": "Q8134",
+          "label": "Economics",
+          "original_description": "social science that studies the production, distribution, and consumption of goods and services"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:information-asymmetry",
+          "target_label": "Information asymmetry",
+          "target_registry": "frozen_baseline",
+          "target_meaning": null,
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "Editorial bridge from gains through exchange to information obstacles is specifically justified.",
+          "source_ids": [
+            "economics",
+            "asymmetric"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:rollback-journal",
+      "label": "Rollback journal",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 43,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "sqliteisolation",
+          "url": "https://www.sqlite.org/isolation.html",
+          "locator": "Isolation And Concurrency, lines 32–39",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-004.json"
+          ]
+        },
+        {
+          "source_id": "wal",
+          "url": "https://www.sqlite.org/wal.html",
+          "locator": "§1 lines 63–79; §2 lines 82–89",
+          "assessment": "Supports SQLite-specific WAL behavior, not the frozen sentence’s generic scope.",
+          "access_receipt_files": [
+            "live-004.json"
+          ]
+        },
+        {
+          "source_id": "atomiccommit",
+          "url": "https://www.sqlite.org/atomiccommit.html",
+          "locator": "§1 lines 116–122; §2 lines 123–138; §3.5 lines 174–191",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-004.json",
+            "live-018.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Original-content restoration is supported; the WAL contrast exceeds the implementation scope of the evidence.",
+      "scope_and_wording_assessment": "Qualify the final comparison as SQLite WAL mode.",
+      "identity_assessment": "Recovery journal remains distinct from append logging and historical audit trails.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "The recovery mechanism stores prior pages, whereas write-ahead logging appends new changes.",
+          "id": "Q8513",
+          "label": "Database",
+          "original_description": "organized collection of data in computing"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:atomic-commit",
+          "target_label": "Atomic commit",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Make a transaction appear all-or-nothing even though storage writes happen sequentially and can be interrupted.",
+          "type": "application_of",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial application_of atomic commit is justified.",
+          "source_ids": [
+            "sqliteisolation",
+            "wal",
+            "atomiccommit"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [
+        {
+          "finding_id": "005-K01",
+          "category": "implementation_specific_scope",
+          "severity": "moderate",
+          "substantive": true,
+          "finding": "The final sentence treats main-database preservation while appending as a generic WAL definition, although the evidence describes SQLite’s WAL mode.",
+          "suggested_correction": "Replace “a write-ahead log” with “SQLite’s write-ahead-log mode”; retain checkpoint context in the support note."
+        }
+      ],
+      "initial_status": "needs_correction",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": [
+        "Replace “a write-ahead log” with “SQLite’s write-ahead-log mode”; retain checkpoint context in the support note."
+      ],
+      "additional_reference_attempts": [
+        {
+          "url": "https://www.postgresql.org/docs/current/wal-intro.html",
+          "purpose": "Seek a primary comparison for generic WAL scope.",
+          "requests": 2,
+          "observed_failed_fetches": 1,
+          "outcome": "First request returned only metadata; contextual passage request failed with UnexpectedStatusCode. No passage was used as evidence; no further retry.",
+          "access_receipt_files": [
+            "live-018.json",
+            "live-019.json"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:international-cooperative-alliance",
+      "label": "International Cooperative Alliance",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "coopHistory",
+          "url": "https://ica.coop/en/whats-co-op/history-co-operative-movement",
+          "locator": "Our history opening, line 89",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-013.json"
+          ]
+        },
+        {
+          "source_id": "cooperativeidentity",
+          "url": "https://ica.coop/en/cooperatives/cooperative-identity",
+          "locator": "Principles 4 and 6, lines 115–123; Principle 3 lines 110–114",
+          "assessment": "Supports the premise at Principles 4 and 6; frozen card locator to Principle 3 should be broadened.",
+          "access_receipt_files": [
+            "live-013.json"
+          ]
+        }
+      ],
+      "claim_assessment": "1895 foundation and initial aims are supported; cooperative autonomy supports the federation comparison.",
+      "scope_and_wording_assessment": "No current membership count or authority over every cooperative is claimed.",
+      "identity_assessment": "Named international institution differs from the generic Cooperative baseline.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "A specific federation is distinct from each member cooperative and from the generic cooperative identity.",
+          "id": "Q4539",
+          "label": "Cooperative",
+          "original_description": "autonomous association of persons or organizations"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q4539",
+          "target_label": "Cooperative",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "autonomous association of persons or organizations",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "Founding delegates from cooperatives establish the actual source-asserted connection.",
+          "source_ids": [
+            "coopHistory",
+            "cooperativeidentity"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [
+        {
+          "finding_id": "005-K03",
+          "category": "evidence_locator_precision",
+          "severity": "minor",
+          "substantive": false,
+          "finding": "The attached cooperativeidentity locator names Principle 3, while the independence/international-coordination premise is located more directly in Principles 4 and 6.",
+          "suggested_correction": "Add Principles 4 (Autonomy and Independence) and 6 (Cooperation among Cooperatives) to this card’s evidence locator and note."
+        }
+      ],
+      "initial_status": "supported_with_minor_note",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": [
+        "Add Principles 4 (Autonomy and Independence) and 6 (Cooperation among Cooperatives) to this card’s evidence locator and note."
+      ]
+    },
+    {
+      "id": "local:catalog:networked-team-structure",
+      "label": "Networked team structure",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "orgstructures",
+          "url": "https://openstax.org/books/principles-management/pages/4-3-organizational-designs-and-structures",
+          "locator": "§4.3 functional/divisional comparison lines 48–59; networked teams lines 78–86",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-012.json"
+          ]
+        },
+        {
+          "source_id": "orgdesign",
+          "url": "https://openstax.org/books/principles-management/pages/10-1-organizational-structures-and-design",
+          "locator": "§10.1 opening definitions, lines 25–38",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-012.json",
+            "live-017.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Initially assigned teams and flexible task-driven links match the passage.",
+      "scope_and_wording_assessment": "Preserves the task arrangement, without claiming all reporting responsibilities disappear.",
+      "identity_assessment": "The admitted facet remains distinct from informal ties, organic orientation and virtual organization.",
+      "identity_comparisons": [
+        {
+          "id": "Q646293",
+          "label": "Informal organization",
+          "meaning_comparison": "The inspected source describes initially assigned teams that form flexible task-driven networks. Informal organization is emergent relationships generally, organic structure is a wider decentralized design orientation, and virtual organization adds a boundaryless geographically dispersed structure. Keep the task-team arrangement explicit.",
+          "reviewer_decision": "admit_qualified_facet"
+        },
+        {
+          "id": "local:catalog:organic-organizational-structure",
+          "label": "local:catalog:organic-organizational-structure",
+          "meaning_comparison": "The inspected source describes initially assigned teams that form flexible task-driven networks. Informal organization is emergent relationships generally, organic structure is a wider decentralized design orientation, and virtual organization adds a boundaryless geographically dispersed structure. Keep the task-team arrangement explicit.",
+          "reviewer_decision": "admit_qualified_facet"
+        },
+        {
+          "id": "local:catalog:virtual-organization",
+          "label": "local:catalog:virtual-organization",
+          "meaning_comparison": "The inspected source describes initially assigned teams that form flexible task-driven networks. Informal organization is emergent relationships generally, organic structure is a wider decentralized design orientation, and virtual organization adds a boundaryless geographically dispersed structure. Keep the task-team arrangement explicit.",
+          "reviewer_decision": "admit_qualified_facet"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q3318170",
+          "target_label": "Organizational architecture",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "management of roles, processes, and formal reporting relationships in an organization",
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The source explicitly includes networked teams among organizational designs; the baseline architecture meaning is compatible.",
+          "source_ids": [
+            "orgstructures",
+            "orgdesign"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:morris-worm",
+      "label": "Morris worm",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "morris",
+          "url": "https://www.fbi.gov/history/famous-cases/morris-worm",
+          "locator": "Main account lines 49–53, 62",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-014.json",
+            "live-016.json",
+            "live-017.json"
+          ]
+        },
+        {
+          "source_id": "saltzerintro",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/",
+          "locator": "Abstract lines 7–9; glossary Security and Protection lines 64–72",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-014.json",
+            "live-016.json"
+          ]
+        }
+      ],
+      "claim_assessment": "The 1988 spread, service disruption, intact files and response-team consequence are supported.",
+      "scope_and_wording_assessment": "Historical case is bounded; no damage total or current threat prevalence is claimed.",
+      "identity_assessment": "The named 1988 program/incident differs from worms generally.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "A specific documented security incident and program differs from the general field and other worm senses.",
+          "id": "Q3510521",
+          "label": "Computer security",
+          "original_description": "protection of computer systems and networks from theft, damage, misuse or data leak"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q3510521",
+          "target_label": "Computer security",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "protection of computer systems and networks from theft, damage, misuse or data leak",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The incident supports an editorial availability example within computer protection.",
+          "source_ids": [
+            "morris",
+            "saltzerintro"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:fangyan",
+      "label": "Fangyan",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 47,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "variationmethods",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.05%3A_Variationist_methods_and_concepts",
+          "locator": "§10.5 Dialectology: Then and now, lines 194–197; Sociolinguistic interviews and corpora, lines 215–225",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-007.json"
+          ]
+        },
+        {
+          "source_id": "languagechange",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.03%3A_Language_changes",
+          "locator": "§10.3 Analyzing language change, lines 185–189",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-010.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Regional forms, Han-era attribution and later historical inference are supported.",
+      "scope_and_wording_assessment": "No exact dating or exhaustive dialect classification is asserted.",
+      "identity_assessment": "The named vocabulary work is separated from “regional speech” as a general meaning.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "The specific regional-vocabulary work is distinct from the general history-of-language field.",
+          "id": "Q190375",
+          "label": "Historical linguistics",
+          "original_description": "study of language change over time"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q190375",
+          "target_label": "Historical linguistics",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "study of language change over time",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "Editorial bridge to historical linguistics follows from using the work as older language evidence.",
+          "source_ids": [
+            "variationmethods",
+            "languagechange"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "Q21204",
+      "label": "International Phonetic Alphabet",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "ipa",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/3-6-the-international-phonetic-alphabet/",
+          "locator": "§3.6 Transcription; The International Phonetic Alphabet; Using the IPA, lines 399–420",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-008.json"
+          ]
+        },
+        {
+          "source_id": "phonemes",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+          "locator": "§4.1 lines 194–224, including the explicit allophone definition at 216–219",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-007.json",
+            "live-006.json",
+            "live-018.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Cross-language symbols, irregular spelling and variable transcription detail are supported.",
+      "scope_and_wording_assessment": "Notation is not confused with a language’s ordinary orthography.",
+      "identity_assessment": "Same established IPA notation-system identity; distinct from its creating association.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "Same named standardized notation system in the inventory; retain canonical ID.",
+          "id": "Q21204",
+          "label": "International Phonetic Alphabet",
+          "original_description": "alphabetic system of phonetic notation"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q40998",
+          "target_label": "Phonology",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "branch of linguistics concerned with the systematic organization of sounds in languages",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial bridge connects notation of sounds to analysis of sound patterns without conflating them.",
+          "source_ids": [
+            "ipa",
+            "phonemes"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:delayed-judgments-of-learning",
+      "label": "Delayed judgments of learning",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "ies",
+          "url": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072004.pdf",
+          "locator": "Cover/publication pages; Recommendation 1 pp. 5–8; Recommendation 6a pp. 23–24",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-009.json",
+            "live-013.json",
+            "live-014.json",
+            "live-020.json"
+          ]
+        },
+        {
+          "source_id": "formative",
+          "url": "https://www.cmu.edu/teaching/assessment/basics/formative-summative.html",
+          "locator": "Formative assessment, lines 11–21",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-009.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Delay, cue-only access, future recall estimates and low classroom-evidence rating are supported.",
+      "scope_and_wording_assessment": "Describes the guide’s cue-only procedure and qualifies the evidence. The label could be more precise.",
+      "identity_assessment": "Specific calibration procedure differs from broad self-assessment and formative assessment.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "A specific cue-only calibration procedure is narrower than general self-assessment; the guide notes classroom-evidence limits.",
+          "id": "Q1602656",
+          "label": "Self-assessment",
+          "original_description": "the process of looking at oneself in order to assess aspects that are important to one's identity"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:formative-assessment",
+          "target_label": "Formative assessment",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Use evidence during learning to adjust teaching and study, with purpose mattering more than a test's format.",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial comparison is justified by the use of information to guide subsequent learning.",
+          "source_ids": [
+            "ies",
+            "formative"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [
+        {
+          "finding_id": "005-K02",
+          "category": "label_scope_precision",
+          "severity": "minor",
+          "substantive": false,
+          "finding": "The supported, selected facet is specifically cue-only delayed judgment, while the display label could also encompass other delayed-judgment procedures.",
+          "suggested_correction": "Prefer “Cue-only delayed judgments of learning” as the label, retaining the current local ID and the broader wording as an alias if useful."
+        }
+      ],
+      "initial_status": "supported_with_minor_note",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": [
+        "Prefer “Cue-only delayed judgments of learning” as the label, retaining the current local ID and the broader wording as an alias if useful."
+      ]
+    },
+    {
+      "id": "local:catalog:reduplication",
+      "label": "Reduplication",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "reduplication",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.03%3A_Morphology_beyond_affixes",
+          "locator": "§5.3 opening line 196; Reduplication lines 209–216",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-010.json",
+            "live-013.json"
+          ]
+        },
+        {
+          "source_id": "morphology",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.01%3A_What_is_morphology",
+          "locator": "§5.1 lines 217–223",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-009.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Repeated forms, disposition example and prototypical English example are supported.",
+      "scope_and_wording_assessment": "Languages and constructions are kept distinct; no single universal reduplication meaning is claimed.",
+      "identity_assessment": "A morphological process within linguistic Morphology, not biological morphology.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Analyze a complex word into a root and meaningful grammatical or word-building elements."
+          ],
+          "comparison": "A specific word-formation mechanism differs from the general morphology field.",
+          "id": "Q38311",
+          "label": "Morphology",
+          "original_description": "identification, analysis and description of the structure of a given language's morphemes and other linguistic units"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "Q38311",
+          "target_label": "Morphology",
+          "target_registry": "frozen_baseline",
+          "target_meaning": "identification, analysis and description of the structure of a given language's morphemes and other linguistic units",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The source explicitly includes the process among morphology beyond affixation, supporting facet_of.",
+          "source_ids": [
+            "reduplication",
+            "morphology"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:emergent-norm-theory",
+      "label": "Emergent norm theory",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 48,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "collective",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/21-1-collective-behavior",
+          "locator": "§21.1 Emergent-Norm Perspective, lines 48–57",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-016.json"
+          ]
+        },
+        {
+          "source_id": "norms",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/3-2-elements-of-culture",
+          "locator": "§3.2 Values and Beliefs lines 38–40; Norms lines 44–51",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-015.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Changing guidelines, participant expectations and unresolved diffusion questions are supported.",
+      "scope_and_wording_assessment": "Presented as a theory; does not assert all crowd conduct follows this mechanism.",
+      "identity_assessment": "A particular explanatory theory, distinct from norms and collective behavior generally.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Connect everyday interactions with the larger social patterns that shape them.",
+            "Connect interaction-level observations to wider social patterns."
+          ],
+          "comparison": "This theory focuses on norm development; it differs from merely naming collective behavior.",
+          "id": "Q21201",
+          "label": "Sociology",
+          "original_description": "social science that studies human society and its development"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:social-norms",
+          "target_label": "Social norms",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Recognize shared expectations for conduct, including unwritten rules learned by observing others and their consequences.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "Changing social norms are explicitly central to the account, supporting source_asserted related_to.",
+          "source_ids": [
+            "collective",
+            "norms"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:other-initiated-conversational-repair",
+      "label": "Other-initiated conversational repair",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 45,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "repair",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/1557948/1/Dingemanse_universal_principles_in_the_repair_of_communication.PDF",
+          "locator": "Introduction p. 2; Materials and Methods p. 3, lines 60–64, 105–111; Results pp. 4–5",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-016.json"
+          ]
+        },
+        {
+          "source_id": "grounding",
+          "url": "https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf",
+          "locator": "Grounding in Conversation, printed p. 128, lines 74–91; Evidence in Grounding, printed pp. 130–132, lines 165–170",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-016.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Listener trouble signal, original-speaker solution and brief side sequence match the paper.",
+      "scope_and_wording_assessment": "Describes the mechanism without extending the study’s frequency claims to all languages.",
+      "identity_assessment": "Specific conversational repair, distinct from communication generally and routine grounding.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "A collaborative breakdown-repair mechanism differs from communication generally and from repairing physical objects.",
+          "id": "Q11024",
+          "label": "Communication",
+          "original_description": "act of conveying intended meaning"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:grounding-in-communication",
+          "target_label": "Grounding in communication",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Establish mutual evidence that a message is understood well enough for the participants' current purpose.",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "Editorial link is supported: explicit trouble repair complements ordinary evidence of understanding.",
+          "source_ids": [
+            "repair",
+            "grounding"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:structural-ambiguity",
+      "label": "Structural ambiguity",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 2,
+      "word_count": 47,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "ambiguity",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/06%3A_Syntax/6.17%3A_Trees-_Structural_ambiguity",
+          "locator": "§6.17 telescope example, lines 192–204",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-009.json"
+          ]
+        },
+        {
+          "source_id": "composition",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/07%3A_Semantics/7.02%3A_Compositionality-_Why_not_just_syntax",
+          "locator": "§7.2 compositionality definition and complex-word example, lines 195–200",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-010.json"
+          ]
+        }
+      ],
+      "claim_assessment": "The two telescope readings and their phrase-attachment explanation match the source.",
+      "scope_and_wording_assessment": "No need to change a word’s sense; no universal two-parse claim.",
+      "identity_assessment": "Same existing syntax-attachment identity as the baseline control.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Identify alternative phrase attachments that change meaning without changing word senses."
+          ],
+          "comparison": "Same syntactic-attachment distinction already represented in the baseline.",
+          "id": "local:catalog:structural-ambiguity",
+          "label": "Structural ambiguity",
+          "original_description": null
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:semantic-compositionality",
+          "target_label": "Semantic compositionality",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Explain how a novel expression's meaning depends on its parts and how those parts are combined.",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "Editorial compositionality relation correctly connects alternative grouping with interpretation.",
+          "source_ids": [
+            "ambiguity",
+            "composition"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:authored:000527",
+      "label": "Cryptography",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 2,
+      "word_count": 47,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "tls",
+          "url": "https://www.rfc-editor.org/rfc/rfc8446",
+          "locator": "RFC 8446 §1 lines 322–358",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-014.json"
+          ]
+        },
+        {
+          "source_id": "saltzer",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html",
+          "locator": "Section I.A, open design, lines 69–70",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-005.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Confidentiality, authentication and integrity are supported by the TLS introduction and open-design principle.",
+      "scope_and_wording_assessment": "Uses a concrete protocol example without claiming encryption alone provides all goals.",
+      "identity_assessment": "Same mathematical protection/verification field as the baseline control.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Distinguish confidentiality, integrity and source authentication as cryptographic goals."
+          ],
+          "comparison": "Same field and cryptographic goals as the earlier card; retain registered ID.",
+          "id": "local:authored:000527",
+          "label": "Cryptography",
+          "original_description": "Protecting information through mathematical encoding and verification techniques."
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:tls-1-3",
+          "target_label": "TLS 1.3",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Negotiate authenticated encrypted channels using a redesigned handshake that removes static public-key key exchange.",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial relation is an appropriate concrete protocol illustration of combined cryptographic tools.",
+          "source_ids": [
+            "tls",
+            "saltzer"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "Q21201",
+      "label": "Sociology",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 3,
+      "word_count": 45,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "sociology",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/1-1-what-is-sociology",
+          "locator": "§1.1 What Are Society and Culture? and Studying Patterns, lines 33–42",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-016.json",
+            "live-017.json"
+          ]
+        },
+        {
+          "source_id": "socialreality",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/4-3-social-constructions-of-reality",
+          "locator": "§4.3 institutionalization example line 34; Roles and Status lines 47–48",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-016.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Interaction patterns, institutional/historical context and work/family role conflict are supported.",
+      "scope_and_wording_assessment": "Does not claim social structure completely determines individual behavior.",
+      "identity_assessment": "Same sociology field as the baseline.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Connect everyday interactions with the larger social patterns that shape them.",
+            "Connect interaction-level observations to wider social patterns."
+          ],
+          "comparison": "Same systematic study of society and interaction as the baseline control.",
+          "id": "Q21201",
+          "label": "Sociology",
+          "original_description": "social science that studies human society and its development"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:role-conflict",
+          "target_label": "Role conflict",
+          "target_registry": "frozen_baseline",
+          "target_meaning": null,
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial role-conflict example concretely links personal experience to competing patterned expectations.",
+          "source_ids": [
+            "sociology",
+            "socialreality"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "Q169399",
+      "label": "ENIAC",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 46,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "eniac",
+          "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78",
+          "locator": "ENIAC; ENIAC being set up; ENIAC tube change, lines 11–22",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-001.json"
+          ]
+        },
+        {
+          "source_id": "baby",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+          "locator": "Description lines 195–202; object details 213–214",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-001.json"
+          ]
+        }
+      ],
+      "claim_assessment": "Electronic operation, setup days, approximate tube count and maintenance learning are supported.",
+      "scope_and_wording_assessment": "“Could take days” avoids an all-versions claim.",
+      "identity_assessment": "Same baseline ENIAC, distinct from Baby.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "Same historical machine; preserve canonical ID and qualify early configuration practice.",
+          "id": "Q169399",
+          "label": "ENIAC",
+          "original_description": "First electronic general-purpose computer"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:manchester-baby",
+          "target_label": "Manchester Baby",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "See how cathode-ray-tube storage let an experimental 1948 machine hold and run its own program.",
+          "type": "related_to",
+          "assertion": "editorial",
+          "assessment": "supported",
+          "note": "The editorial comparison correctly concerns initial wiring versus stored-program experimentation.",
+          "source_ids": [
+            "eniac",
+            "baby"
+          ],
+          "actual_relationship_passage_checked": false
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:bank-of-england",
+      "label": "Bank of England",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 48,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "boehistory",
+          "url": "https://www.bankofengland.co.uk/about/history",
+          "locator": "1694 foundation lines 341–361; 1720 entry lines 334–340; 1946 entry lines 127–133",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-013.json"
+          ]
+        }
+      ],
+      "claim_assessment": "1694 private government-banker founding, public deposits and later nationalization are supported.",
+      "scope_and_wording_assessment": "A historical case, with no claim about current officeholders or powers.",
+      "identity_assessment": "Named institution differs from banking generally and from the South Sea event.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [],
+          "comparison": "This named institution has a specific ownership and public-finance history distinct from banking generally.",
+          "id": "Q22687",
+          "label": "Bank",
+          "original_description": "financial institution that accepts deposits"
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:south-sea-bubble",
+          "target_label": "South Sea Bubble",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Examine how national-debt conversion and expectations drove a company's stock boom despite limited trading activity.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "The official history directly relates the bank’s government-finance role to the South Sea Company and 1720 crisis.",
+          "source_ids": [
+            "boehistory"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    },
+    {
+      "id": "local:catalog:chantale-cenerini",
+      "label": "Chantale Cenerini",
+      "sample_kind": "risk_selected",
+      "frozen_card_version": 1,
+      "word_count": 44,
+      "full_card_read": true,
+      "source_checks": [
+        {
+          "source_id": "michif",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/9-7-reclaiming-michif/",
+          "locator": "§9.7 interview, lines 396–418",
+          "assessment": "supports reviewed claim or relationship premise",
+          "access_receipt_files": [
+            "live-009.json",
+            "live-010.json",
+            "live-014.json"
+          ]
+        }
+      ],
+      "claim_assessment": "The named speaker’s documentation, family-history and local-context account is supported.",
+      "scope_and_wording_assessment": "Attribution and community differences prevent universalizing her case.",
+      "identity_assessment": "Person with a practice-based takeaway, distinct from documentation and revitalization activities.",
+      "identity_comparisons": [
+        {
+          "candidate_takeaways": [
+            "Distinguish documenting a language from expanding opportunities to learn and use it.",
+            "See how everyday immersion creates opportunities to use and transmit a community’s language."
+          ],
+          "comparison": "A particular scholar's community-grounded practice differs from the general revitalization activity.",
+          "id": "local:authored:000133",
+          "label": "Language revitalization",
+          "original_description": "Supporting the continued use and transmission of threatened languages."
+        }
+      ],
+      "all_relationships_checked": true,
+      "relations": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:language-documentation",
+          "target_label": "Language documentation",
+          "target_registry": "frozen_selection_manifest",
+          "target_meaning": "Create records of language use and community knowledge that can serve both research and family legacies.",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "assessment": "supported",
+          "note": "Her own account explicitly describes language documentation work, supporting source_asserted related_to.",
+          "source_ids": [
+            "michif"
+          ],
+          "actual_relationship_passage_checked": true
+        }
+      ],
+      "initial_failures": [],
+      "initial_status": "supported",
+      "access_limits": [
+        "Public web tool may return a crawled/cache representation; this verifies displayed passages, not author browsing history or a guaranteed origin-server network fetch."
+      ],
+      "suggested_corrections_or_exclusions": []
+    }
+  ],
+  "updated_at": "2026-10-08T21:32:04.844867+00:00",
+  "progress": {
+    "reviewed_random_new": 20,
+    "reviewed_risk_selected": 20
+  },
+  "completed_at": "2026-10-08T21:34:55.243137+00:00",
+  "elapsed_seconds": 763.440671,
+  "platform_usage": {
+    "requested_model": "GPT-6 Astra/max",
+    "actual_model_verification": "Not exposed through tools to this audit worker",
+    "tokens": null,
+    "cost": null,
+    "unavailable_reason": "Platform token/cost telemetry is not exposed."
+  },
+  "summary_by_sample_kind": {
+    "random_new": {
+      "sampled": 20,
+      "reviewed": 20,
+      "cards_with_substantive_initial_findings": 0,
+      "cards_with_minor_initial_notes": 1,
+      "substantive_finding_ids": [],
+      "minor_note_ids": [
+        "005-R01"
+      ],
+      "relationship_counts": {
+        "editorial": 10,
+        "source_asserted": 10
+      },
+      "relationship_failures": 0
+    },
+    "risk_selected": {
+      "sampled": 20,
+      "reviewed": 20,
+      "cards_with_substantive_initial_findings": 1,
+      "cards_with_minor_initial_notes": 2,
+      "substantive_finding_ids": [
+        "005-K01"
+      ],
+      "minor_note_ids": [
+        "005-K03",
+        "005-K02"
+      ],
+      "relationship_counts": {
+        "source_asserted": 8,
+        "editorial": 12
+      },
+      "relationship_failures": 0
+    }
+  },
+  "overall_audit_counts": {
+    "sampled_cards": 40,
+    "attached_relationships_checked": 40,
+    "source_asserted_relationships_checked": 18,
+    "editorial_relationships_checked": 22,
+    "unique_attached_sources_read": 49,
+    "substantive_findings": 1,
+    "minor_precision_notes": 3,
+    "exclusions_recommended": 0,
+    "resampling": false,
+    "pooled_defect_rate": null
+  },
+  "findings_status": "All initial findings are retained. No candidate was modified by the checker. Coordinator corrections and checker rechecks remain pending.",
+  "source_access_summary": {
+    "attached_sources_with_fresh_public_tool_passages": 49,
+    "author_cached_source_files_read": 0,
+    "author_support_notes_as_independent_evidence": false,
+    "additional_reference_urls_attempted": 1,
+    "additional_reference_failed_fetches": 1,
+    "additional_reference_used_as_evidence": false,
+    "prior_exhausted_urls_retried": false,
+    "new_access_denials": 0,
+    "copyright_handling": "Original concise assessment notes and request receipts retained; lengthy source text is not reproduced."
+  },
+  "limitations": [
+    "Twenty new IDs were deterministically sampled and twenty additional IDs were selected for risk. Their findings are reported separately and must not be pooled as an unbiased defect estimate.",
+    "Displayed current public passages support sampled claims but do not establish the author’s original browsing history, and web-tool results may be crawled/cache representations.",
+    "Unsampled cards are not certified by this audit. Identity checks are against the frozen baseline/selection context and relevant meanings, not an exhaustive external ontology reconciliation.",
+    "The one substantive scope finding requires correction and recheck before source-quality admission. Minor refinements are separately classified."
+  ],
+  "verification": {
+    "frozen_artifacts_unchanged": true,
+    "sample_reproduced_at_completion": true,
+    "sample_order_and_all_cards_present": true,
+    "all_evidence_and_relationship_source_ids_covered": true,
+    "all_relationship_targets_resolve_with_verified_meaning": true,
+    "word_count_range": [
+      42,
+      50
+    ]
+  }
+}

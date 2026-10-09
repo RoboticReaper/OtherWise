@@ -1,0 +1,52 @@
+{
+  "id": "local:catalog:fake-barn-case",
+  "label": "Fake-barn case",
+  "sample_kind": "random_new",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T22:03:34.467828+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "facet_or_application",
+    "entity_kind": "idea",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q9081",
+        "label": "knowledge",
+        "original_description": "awareness of facts, familiarity with individuals and situations, or practical skill; encompasses descriptive, procedural, and acquaintance knowledge, typically characterized as justified true belief distinct from opinion or guesswork",
+        "prior_card_takeaways": []
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:no-false-lemmas-condition",
+        "label": "No-false-lemmas condition"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Henry’s real barn amid facades, justified true but luckily correct belief, and lack of false inference match Barn County. The evaluation is kept as a challenge, not a settled definition. Source directly connects it to the attempted repair.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s052"
+      ],
+      "locator": "4. No False Lemmas: Barn County; web-18 lines 172–175"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:no-false-lemmas-condition",
+      "type": "related_to",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

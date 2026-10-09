@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "count": 8,
+  "records": [
+    {
+      "source_id": "c12",
+      "changed_fields": [
+        "locator"
+      ],
+      "change_kind": "modified",
+      "independent_result": "supported",
+      "independent_note": "The shared locator now includes p40 in the triple-point evidence bundle; p12/p25 support triple coexistence and p40 critical behavior. Corrected editorial comparison is appropriate.",
+      "affected_ids": [
+        "local:catalog:triple-point",
+        "local:catalog:critical-point-of-a-fluid"
+      ],
+      "source_inspection_file": "source-inspections.json"
+    },
+    {
+      "source_id": "c14",
+      "changed_fields": [
+        "locator"
+      ],
+      "change_kind": "modified",
+      "independent_result": "supported",
+      "independent_note": "The buffer-solution locator now includes finite-capacity p38; p7/p8 support acid/base action and p49-p51 retain equation qualifications.",
+      "affected_ids": [
+        "local:catalog:buffer-solution",
+        "local:catalog:buffer-capacity",
+        "local:catalog:hendersonhasselbalch-equation"
+      ],
+      "source_inspection_file": "source-inspections.json"
+    },
+    {
+      "source_id": "p08",
+      "changed_fields": [
+        "locator"
+      ],
+      "change_kind": "modified",
+      "independent_result": "supported",
+      "independent_note": "The shared locator adds p9 uses for conservation-of-energy and quality-factor cards. The passage explicitly describes damping energy transferred to thermal energy; existing critical/weak-damping passages remain unchanged.",
+      "affected_ids": [
+        "Q11382",
+        "local:catalog:damped-harmonic-motion",
+        "local:catalog:critical-damping",
+        "local:catalog:oscillator-quality-factor"
+      ],
+      "source_inspection_file": "source-inspections.json"
+    },
+    {
+      "source_id": "p18",
+      "changed_fields": [
+        "locator",
+        "passages_used"
+      ],
+      "change_kind": "modified",
+      "independent_result": "supported",
+      "independent_note": "Added p21-p23/p25 photon-energy and one-photon transfer passages substantiate the single-photon scope and intensity/energy distinction.",
+      "affected_ids": [
+        "Q83213"
+      ],
+      "source_inspection_file": "source-inspections.json"
+    },
+    {
+      "source_id": "p35",
+      "changed_fields": [
+        "locator",
+        "passages_used"
+      ],
+      "change_kind": "modified",
+      "independent_result": "supported",
+      "independent_note": "Added p10/p13 passages support water tracing and cold-dust/star-forming observations. Cooling is correctly attributed to detectors; Herschel/Spitzer editorial comparison remains grounded.",
+      "affected_ids": [
+        "Q209630",
+        "local:catalog:spitzer-space-telescope"
+      ],
+      "source_inspection_file": "source-inspections.json"
+    },
+    {
+      "source_id": "p25",
+      "changed_fields": [
+        "acquisition_sha256",
+        "displayed_date_metadata",
+        "id",
+        "locator",
+        "passages_used",
+        "retrieval_date",
+        "retrieved_at",
+        "source_snapshot",
+        "title",
+        "url"
+      ],
+      "change_kind": "added",
+      "independent_result": "supported",
+      "independent_note": "New NASA Chandra source is an existing captured public original, independently re-opened. Its exotic-environment imaging passage supports the final card clause. Unrelated Great Observatories wording is not adopted.",
+      "affected_ids": [
+        "local:catalog:chandra-x-ray-observatory"
+      ],
+      "source_inspection_file": "source-inspections.json"
+    },
+    {
+      "source_id": "e39",
+      "changed_fields": [
+        "locator"
+      ],
+      "change_kind": "modified",
+      "independent_result": "supported",
+      "independent_note": "The shared locator adds the three-point-card use of p68/p72, supporting slender-beam/small-rotation premises. Existing neutral-axis facts are unchanged.",
+      "affected_ids": [
+        "local:catalog:neutral-axis-in-beam-bending",
+        "local:catalog:three-point-bending-test"
+      ],
+      "source_inspection_file": "source-inspections.json"
+    },
+    {
+      "source_id": "e42",
+      "changed_fields": [
+        "locator",
+        "passages_used"
+      ],
+      "change_kind": "modified",
+      "independent_result": "supported",
+      "independent_note": "Added p191/p197/p199/p201 provide small-angle, flexural rigidity and constant-EI context for the ideal three-point formula. Existing pinned-column and second-moment references are retained.",
+      "affected_ids": [
+        "Q835065",
+        "local:catalog:euler-column-buckling",
+        "local:catalog:three-point-bending-test"
+      ],
+      "source_inspection_file": "source-inspections.json"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "suites": [
+    {
+      "suite": "reconciliation",
+      "command": [
+        "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "data/catalog-candidates/scale-pilot-001/revision-002/tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "status": "passed"
+    },
+    {
+      "suite": "combiner-and-runner",
+      "command": [
+        "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "status": "passed"
+    }
+  ],
+  "unit_tests": {
+    "reconciliation": 9,
+    "combiner_and_runner": 31
+  },
+  "byte_identical_rebuild": true,
+  "rebuild_sha256": {
+    "research-batch-003.json": "62e84a58709b2823f51f6be36be38d9ad1941ce949d9c6b566916f34e319722d",
+    "research-batch-004.json": "a633431fa0ba117d9e617d193ee7a1ce21b55c10b4744c0ae66ee3cb1a173d9b",
+    "research-batch-005.json": "a747e6626d2783363cd9b413cb5466bac26c3c035ad69c86fb176249f8e10765",
+    "research-batch-006.json": "43bf7cb9ced5d61277e777c9de52c0a41f185abcbe78a8db427145a4e94a5435",
+    "research-batch-007.json": "bd973e57914e48a7c8c6ae9f7038ba3ce05100a38ffa0c03596043c5377520bf",
+    "catalog.json": "b4d6e30c4ca4f1d48af427a611a4edb41d4d33057796b3741c95f10242c99a65",
+    "identity-decisions.json": "31e9c2135a632068b67484075adaf3c24445b4c54575c5954f1c2feddb135113",
+    "revision-lineage.json": "8af797951db0d1d76526d99af63a83898eb1329818054cc54e302e44315e82ff"
+  }
+}

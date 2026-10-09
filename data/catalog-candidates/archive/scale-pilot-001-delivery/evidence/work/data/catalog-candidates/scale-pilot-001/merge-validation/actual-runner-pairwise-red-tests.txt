@@ -1,0 +1,29 @@
+test_all_regressions_run_isolated_and_leave_canonical_files_unchanged (__main__.ActualRegressionRunnerTests.test_all_regressions_run_isolated_and_leave_canonical_files_unchanged) ... ok
+test_existing_run_directory_is_never_overwritten (__main__.ActualRegressionRunnerTests.test_existing_run_directory_is_never_overwritten) ... ok
+test_missing_actual_ambiguity_is_disclosed_not_synthetically_claimed (__main__.ActualRegressionRunnerTests.test_missing_actual_ambiguity_is_disclosed_not_synthetically_claimed) ... ok
+test_missing_final_authorization_is_refused (__main__.ActualRegressionRunnerTests.test_missing_final_authorization_is_refused) ... ok
+test_stale_hashes_refuse_to_run_without_writing_artifacts (__main__.ActualRegressionRunnerTests.test_stale_hashes_refuse_to_run_without_writing_artifacts) ... ok
+test_three_actual_meanings_allow_complete_pairwise_distinctness_reviews (__main__.ActualRegressionRunnerTests.test_three_actual_meanings_allow_complete_pairwise_distinctness_reviews) ... FAIL
+
+======================================================================
+FAIL: test_three_actual_meanings_allow_complete_pairwise_distinctness_reviews (__main__.ActualRegressionRunnerTests.test_three_actual_meanings_allow_complete_pairwise_distinctness_reviews)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_actual_regressions.py", line 93, in test_three_actual_meanings_allow_complete_pairwise_distinctness_reviews
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 1 != 0 : {
+  "status": "failed",
+  "fixture_only": true,
+  "passed": 11,
+  "failed": [
+    "actual_shared_name_aliases"
+  ],
+  "unrun": [],
+  "report": "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/runs/tmp6m66a0iz/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/fixture/regression-results.json"
+}
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.227s
+
+FAILED (failures=1)

@@ -1,0 +1,2766 @@
+{
+  "input_sha256": "32e303ce4a0664c86c0e3fc8b034ae7c5faa7fc9aacf121989755d75e253a6f3",
+  "baseline_sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9",
+  "records": [
+    {
+      "proposal_id": "local:authored:000634",
+      "label": "Genetics",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "Same registered Genetics meaning as local:authored:000634; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:dna-methylation",
+      "label": "DNA methylation",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7430",
+          "label": "DNA",
+          "meaning_comparison": "DNA is the molecule; adding methyl marks alters its use without changing its sequence. This is also distinct from transmitting epigenetic states across generations. Compared with pinned Q7430 (DNA): molecule that encodes the genetic instructions used in the development and functioning of all known living organisms and many viruses.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q7834236",
+          "label": "Transgenerational epigenetic inheritance",
+          "meaning_comparison": "DNA is the molecule; adding methyl marks alters its use without changing its sequence. This is also distinct from transmitting epigenetic states across generations. Meaningful pinned comparator Q7834236 (Transgenerational epigenetic inheritance): Epigenetic transmission without DNA primary structure alteration.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:histone-modification",
+      "label": "Histone modification",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "Chemical marks on DNA-packaging histones differ from marks directly on DNA and from transgenerational inheritance of epigenetic states. Compared with pinned local:authored:000634 (Genetics): Studying inheritance and variation in living organisms..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q7834236",
+          "label": "Transgenerational epigenetic inheritance",
+          "meaning_comparison": "Chemical marks on DNA-packaging histones differ from marks directly on DNA and from transgenerational inheritance of epigenetic states. Meaningful pinned comparator Q7834236 (Transgenerational epigenetic inheritance): Epigenetic transmission without DNA primary structure alteration.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:genomic-imprinting",
+      "label": "Genomic imprinting",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "Parent-of-origin selective gene expression is distinct from general inheritance and from all transgenerational epigenetic effects. Compared with pinned local:authored:000634 (Genetics): Studying inheritance and variation in living organisms..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q7834236",
+          "label": "Transgenerational epigenetic inheritance",
+          "meaning_comparison": "Parent-of-origin selective gene expression is distinct from general inheritance and from all transgenerational epigenetic effects. Meaningful pinned comparator Q7834236 (Transgenerational epigenetic inheritance): Epigenetic transmission without DNA primary structure alteration.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:mosaicism",
+      "label": "Mosaicism",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "Genomically distinct cell populations descended from one zygote define mosaicism; artistic mosaic is a different sense. Compared with pinned local:authored:000634 (Genetics): Studying inheritance and variation in living organisms..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q133067",
+          "label": "Mosaic",
+          "meaning_comparison": "Genomically distinct cell populations descended from one zygote define mosaicism; artistic mosaic is a different sense. Meaningful pinned comparator Q133067 (Mosaic): image or writing made from an assemblage of small pieces of colored glass, stone, or other materials.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:chimerism",
+      "label": "Chimerism",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "Cells originating in different zygotes define chimerism, unlike same-zygote mosaicism or the mythological Chimera. Compared with pinned local:authored:000634 (Genetics): Studying inheritance and variation in living organisms..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q182790",
+          "label": "Chimera (mythology)",
+          "meaning_comparison": "Cells originating in different zygotes define chimerism, unlike same-zygote mosaicism or the mythological Chimera. Meaningful pinned comparator Q182790 (Chimera (mythology)): mythical or fictional animal with parts taken from various animals.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:alternative-splicing",
+      "label": "Alternative splicing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "Alternative exon assembly creates transcript variants; this is a particular gene-expression mechanism, not genetic inheritance generally. Compared with pinned local:authored:000634 (Genetics): Studying inheritance and variation in living organisms..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:genetic-linkage",
+      "label": "Genetic linkage",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q767511",
+          "label": "Genetic marker",
+          "meaning_comparison": "Chromosomal co-inheritance is a relationship between loci, whereas a genetic marker is an identifiable locus or sequence. Compared with pinned Q767511 (Genetic marker): gene or DNA sequence with a known location on a chromosome that can be used to identify individuals or species.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q284100",
+      "label": "Centimorgan",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q284100",
+          "label": "Centimorgan",
+          "meaning_comparison": "Same registered Centimorgan meaning as Q284100; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:genetic-mapping",
+      "label": "Genetic mapping",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q140419439",
+          "label": "Fine-mapping",
+          "meaning_comparison": "Linkage-based ordering of markers differs from fine-mapping an association to causal variants. Prefer the explicit label Genetic linkage mapping, or qualify the intended method in the card. Compared with pinned Q140419439 (Fine-mapping): Set of methods in genetics.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:reduced-penetrance",
+      "label": "Reduced penetrance",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "Whether a carrier develops a condition differs from the severity or form of manifestations among affected carriers. Compared with pinned local:authored:000634 (Genetics): Studying inheritance and variation in living organisms..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:variable-expressivity",
+      "label": "Variable expressivity",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "Variation in manifestations among affected individuals differs from penetrance's affected/not-affected proportion. Compared with pinned local:authored:000634 (Genetics): Studying inheritance and variation in living organisms..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:international-hapmap-project",
+      "label": "International HapMap Project",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "HapMap is a specific research project mapping co-inherited variation, not genetics as a field or a marker itself. Compared with pinned local:authored:000634 (Genetics): Studying inheritance and variation in living organisms..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:encode",
+      "label": "ENCODE",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "ENCODE is a named project identifying functional genomic elements, distinct from obtaining an individual sequence or mapping variant inheritance. Compared with pinned local:authored:000634 (Genetics): Studying inheritance and variation in living organisms..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:genetic-anticipation",
+      "label": "Genetic anticipation",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000634",
+          "label": "Genetics",
+          "meaning_comparison": "Intergenerational earlier onset/severity in some repeat-expansion disorders is a defined inheritance phenomenon, not a general prediction about descendants. Compared with pinned local:authored:000634 (Genetics): Studying inheritance and variation in living organisms..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:authored:000638",
+      "label": "Ecology",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Same registered Ecology meaning as local:authored:000638; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:karner-blue-butterfly",
+      "label": "Karner blue butterfly",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "The named Karner blue butterfly provides a particular ant-larva exchange case; it is not another identity for the general ecological interaction. Compared with pinned local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:mutualism",
+      "label": "Mutualism",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Mutual benefit between species defines mutualism; Ecology is the meaningful broader comparator, not Genetics. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:competitive-exclusion-principle",
+      "label": "Competitive exclusion principle",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "The conditional inability of complete niche competitors to coexist differs from Competition as rivalry in general. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q476300",
+          "label": "Competition",
+          "meaning_comparison": "The conditional inability of complete niche competitors to coexist differs from Competition as rivalry in general. Compared with pinned Q476300 (Competition): rivalry where multiple parties strive for a goal which cannot be shared.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:resource-partitioning",
+      "label": "Resource partitioning",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Temporal, spatial or resource-use separation is a particular coexistence mechanism within ecology, not genetic inheritance. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:foundation-species",
+      "label": "Foundation species",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Habitat structure created by organisms defines the foundation-species role, distinct from disproportionate removal effects defining keystones. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:keystone-species",
+      "label": "Keystone species",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Disproportionate ecological effects differ from Q55647734's cultural significance of a species; the sea-star case supports the ecological sense. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q55647734",
+          "label": "Cultural keystone species",
+          "meaning_comparison": "Disproportionate ecological effects differ from Q55647734's cultural significance of a species; the sea-star case supports the ecological sense. Compared with pinned Q55647734 (Cultural keystone species): concept in ecology.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:pisaster-ochraceus",
+      "label": "Pisaster ochraceus",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Pisaster ochraceus is a particular sea-star species whose mussel predation exemplifies the separately selected keystone mechanism. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q188230",
+      "label": "Ecological succession",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q188230",
+          "label": "Ecological succession",
+          "meaning_comparison": "Same registered Ecological succession meaning as Q188230; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:isle-royale",
+      "label": "Isle Royale",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "The named island's multi-driver wolf-moose study is a distinct place/research case, not Ecology or Genetics as fields. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:ecosystem-engineering",
+      "label": "Ecosystem engineering",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Organism-driven physical habitat alteration is an ecological mechanism; beaver dams exemplify it, distinct from genetics and from human engineering fields. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:coral-bleaching",
+      "label": "Coral bleaching",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Stress-associated loss of symbiotic algae is a particular coral process, distinct from immediate mortality or ecology generally. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:environmental-dna",
+      "label": "Environmental DNA",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "DNA sampled from shed environmental traces is a detection substrate/approach, distinct from the DNA molecule and from capturing whole organisms. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:dna-metabarcoding",
+      "label": "DNA metabarcoding",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Multi-taxon identification in a pooled sample differs from individual-identifying DNA profiling and from eDNA as the sample origin. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q476697",
+          "label": "DNA profiling",
+          "meaning_comparison": "Multi-taxon identification in a pooled sample differs from individual-identifying DNA profiling and from eDNA as the sample origin. Compared with pinned Q476697 (DNA profiling): technique used to identify an individual on the basis of their DNA characteristics.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:pcr-inhibition-in-edna-samples",
+      "label": "PCR inhibition in eDNA samples",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Assay inhibition can yield an apparent absence despite target DNA; this is a bounded measurement failure distinct from the environmental sampling method. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q486420",
+      "label": "Genetic drift",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q486420",
+          "label": "Genetic drift",
+          "meaning_comparison": "Same registered Genetic drift meaning as Q486420; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:population-bottleneck",
+      "label": "Population bottleneck",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "A severe population contraction creates a particular drift circumstance; population recovery does not automatically restore lost alleles. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q486420",
+          "label": "Genetic drift",
+          "meaning_comparison": "A severe population contraction creates a particular drift circumstance; population recovery does not automatically restore lost alleles. Compared with pinned Q486420 (Genetic drift): variation in the relative frequency of different genotypes in a small population.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:founder-effect",
+      "label": "Founder effect",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "A small colonizing sample can found atypical allele frequencies; this is distinct from a contraction of an existing population. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q486420",
+          "label": "Genetic drift",
+          "meaning_comparison": "A small colonizing sample can found atypical allele frequencies; this is distinct from a contraction of an existing population. Compared with pinned Q486420 (Genetic drift): variation in the relative frequency of different genotypes in a small population.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:sexual-selection",
+      "label": "Sexual selection",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "Differences in mating/fertilization success form a distinct component of natural selection, even when traits reduce survival. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q43478",
+          "label": "Natural selection",
+          "meaning_comparison": "Differences in mating/fertilization success form a distinct component of natural selection, even when traits reduce survival. Compared with pinned Q43478 (Natural selection): differential survival and reproduction of individuals in nature due to differences in phenotype; a key mechanism of evolution.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q208841",
+      "label": "Coevolution",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q208841",
+          "label": "Coevolution",
+          "meaning_comparison": "Same registered Coevolution meaning as Q208841; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:homology-biology",
+      "label": "Homology (biology)",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "Common-ancestry correspondence of traits is biological homology. Q1144780 is algebraic/mathematical homology, so the shared label must retain distinct meanings. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q1144780",
+          "label": "Homology",
+          "meaning_comparison": "Common-ancestry correspondence of traits is biological homology. Q1144780 is algebraic/mathematical homology, so the shared label must retain distinct meanings. Compared with pinned Q1144780 (Homology): general way of associating a sequence of algebraic objects to other mathematical objects.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:convergent-evolution",
+      "label": "Convergent evolution",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "Independently acquired similar functions differ from homologous inheritance. Bird and bat wings versus forelimbs demonstrate why the comparison level matters. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:neutral-theory-of-molecular-evolution",
+      "label": "Neutral theory of molecular evolution",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "A claim about neutral variation's role in molecular evolution differs from drift as a mechanism; it does not assert all evolution is neutral. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q486420",
+          "label": "Genetic drift",
+          "meaning_comparison": "A claim about neutral variation's role in molecular evolution differs from drift as a mechanism; it does not assert all evolution is neutral. Compared with pinned Q486420 (Genetic drift): variation in the relative frequency of different genotypes in a small population.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q746284",
+      "label": "Gene duplication",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q746284",
+          "label": "Gene duplication",
+          "meaning_comparison": "Same registered Gene duplication meaning as Q746284; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:maydianne-andrade",
+      "label": "Maydianne Andrade",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "The named scientist's hypothesis-testing work on redback mating is a specific scientific case, distinct from evolution broadly or the behavioral mechanism alone. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:sexual-cannibalism-in-redback-spiders",
+      "label": "Sexual cannibalism in redback spiders",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "The bounded redback mating/paternity case is a species-specific sexual-selection application, not general cannibalism or all mating success. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q44595",
+          "label": "Cannibalism",
+          "meaning_comparison": "The bounded redback mating/paternity case is a species-specific sexual-selection application, not general cannibalism or all mating success. Meaningful pinned comparator Q44595 (Cannibalism): consuming another individual of the same species as food.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q43478",
+          "label": "Natural selection",
+          "meaning_comparison": "The bounded redback mating/paternity case is a species-specific sexual-selection application, not general cannibalism or all mating success. Meaningful pinned comparator Q43478 (Natural selection): differential survival and reproduction of individuals in nature due to differences in phenotype; a key mechanism of evolution.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:exaptation",
+      "label": "Exaptation",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "A current use co-opted from a different origin differs from adaptation through selection for that use. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q483921",
+          "label": "Adaptation",
+          "meaning_comparison": "A current use co-opted from a different origin differs from adaptation through selection for that use. Compared with pinned Q483921 (Adaptation): evolutionary biological process that fits organisms to their environment, adaptive trait, or state reached by an evolving population.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:endosymbiotic-theory",
+      "label": "Endosymbiotic theory",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "Organelle ancestry from once-independent cells is an evolutionary theory supported by several features, not merely gene transmission. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:horizontal-gene-transfer",
+      "label": "Horizontal gene transfer",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "DNA exchange outside parent-offspring descent is a distinct inheritance route, not genetic engineering or vertical inheritance. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:e-coli-long-term-evolution-experiment",
+      "label": "E. coli Long-Term Evolution Experiment",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000113",
+          "label": "Evolutionary biology",
+          "meaning_comparison": "The named long-running experiment uses revived archived populations to test historical contingency; it is not evolution generally. Meaningful pinned comparator local:authored:000113 (Evolutionary biology): Exploring how living populations change and diversify across generations..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q103191",
+      "label": "Homeostasis",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q103191",
+          "label": "Homeostasis",
+          "meaning_comparison": "Same registered Homeostasis meaning as Q103191; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:baroreflex",
+      "label": "Baroreflex",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q5038741",
+          "label": "Cardiovascular physiology",
+          "meaning_comparison": "Stretch-sensing neural feedback is a specific pressure-regulation mechanism, distinct from Blood pressure as a measured property or cardiovascular physiology as a field. Compared with pinned Q5038741 (Cardiovascular physiology): study of the circulatory system, specifically addressing the physiology of the heart (\"cardio\") and blood vessels (\"vascular\").",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q82642",
+          "label": "Blood pressure",
+          "meaning_comparison": "Stretch-sensing neural feedback is a specific pressure-regulation mechanism, distinct from Blood pressure as a measured property or cardiovascular physiology as a field. Meaningful pinned comparator Q82642 (Blood pressure): pressure exerted by circulating blood upon the walls of blood vessels.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:renin-angiotensin-aldosterone-system",
+      "label": "Renin–angiotensin–aldosterone system",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q103191",
+          "label": "Homeostasis",
+          "meaning_comparison": "The renin-angiotensin-aldosterone hormone cascade is a specific regulatory pathway, distinct from rapid neural baroreflexes or Homeostasis broadly. Compared with pinned Q103191 (Homeostasis): the state of steady internal conditions maintained by living things.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:atrial-natriuretic-peptide",
+      "label": "Atrial natriuretic peptide",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q103191",
+          "label": "Homeostasis",
+          "meaning_comparison": "Stretch-induced cardiac hormone signaling promotes salt/water excretion; a specific antagonist of volume-retaining regulation, not the whole homeostasis concept. Compared with pinned Q103191 (Homeostasis): the state of steady internal conditions maintained by living things.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:renal-myogenic-autoregulation",
+      "label": "Renal myogenic autoregulation",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:tubuloglomerular-feedback",
+          "label": "Tubuloglomerular feedback",
+          "meaning_comparison": "Direct smooth-muscle response to stretch differs from salt-delivery sensing in tubuloglomerular feedback. Compared with pinned local:catalog:tubuloglomerular-feedback (Tubuloglomerular feedback): Trace macula densa sensing to local afferent-arteriole adjustment that opposes changes in kidney filtration..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:tubuloglomerular-feedback",
+      "label": "Tubuloglomerular feedback",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:tubuloglomerular-feedback",
+          "label": "Tubuloglomerular feedback",
+          "meaning_comparison": "Same registered Tubuloglomerular feedback meaning as local:catalog:tubuloglomerular-feedback; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:adh-dependent-aquaporin-trafficking",
+      "label": "ADH-dependent aquaporin trafficking",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:adh-dependent-aquaporin-trafficking",
+          "label": "ADH-dependent aquaporin trafficking",
+          "meaning_comparison": "Same registered ADH-dependent aquaporin trafficking meaning as local:catalog:adh-dependent-aquaporin-trafficking; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:renal-countercurrent-multiplication",
+      "label": "Renal countercurrent multiplication",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:countercurrent-gas-exchange-in-fish-gills",
+          "label": "Countercurrent gas exchange in fish gills",
+          "meaning_comparison": "Opposite flows, active solute transport and unequal permeability build a renal osmotic gradient; this differs from gill countercurrent exchange preserving a gas gradient. Compared with pinned local:catalog:countercurrent-gas-exchange-in-fish-gills (Countercurrent gas exchange in fish gills): Explain why opposite blood and water flows maintain an oxygen-transfer gradient along gills..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:respiratory-compensation-for-metabolic-acidosis",
+      "label": "Respiratory compensation for metabolic acidosis",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q103191",
+          "label": "Homeostasis",
+          "meaning_comparison": "Ventilation changing carbon dioxide provides a specific compensatory acid-base mechanism, not all homeostatic feedback. No treatment instruction is implied. Compared with pinned Q103191 (Homeostasis): the state of steady internal conditions maintained by living things.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:bohr-effect",
+      "label": "Bohr effect",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q472287",
+          "label": "Respiration (physiology)",
+          "meaning_comparison": "pH-dependent change in hemoglobin's oxygen affinity differs from respiration generally and from oxygenation-dependent CO2 carriage. Compared with pinned Q472287 (Respiration (physiology)): movement of oxygen from the outside air to the cells within tissues, and the transport of carbon dioxide in the opposite direction.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:haldane-effect",
+      "label": "Haldane effect",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q472287",
+          "label": "Respiration (physiology)",
+          "meaning_comparison": "Oxygenation-dependent CO2 carriage differs from the Bohr effect's pH-dependent oxygen affinity. Compared with pinned Q472287 (Respiration (physiology)): movement of oxygen from the outside air to the cells within tissues, and the transport of carbon dioxide in the opposite direction.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:hypothalamic-pituitary-thyroid-feedback",
+      "label": "Hypothalamic–pituitary–thyroid feedback",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q103191",
+          "label": "Homeostasis",
+          "meaning_comparison": "TRH/TSH stimulation plus thyroid-hormone feedback is a specified endocrine control loop within homeostasis. Compared with pinned Q103191 (Homeostasis): the state of steady internal conditions maintained by living things.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:insulin-glucagon-regulation-of-blood-glucose",
+      "label": "Insulin–glucagon regulation of blood glucose",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q103191",
+          "label": "Homeostasis",
+          "meaning_comparison": "Opposing insulin/glucagon actions on glucose storage and mobilization define a particular regulatory interaction, not all internal stability. Compared with pinned Q103191 (Homeostasis): the state of steady internal conditions maintained by living things.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:evaporative-cooling-by-sweating",
+      "label": "Evaporative cooling by sweating",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q103191",
+          "label": "Homeostasis",
+          "meaning_comparison": "Evaporation of secreted sweat removes heat; this is a particular thermoregulatory application rather than Homeostasis as a whole. Compared with pinned Q103191 (Homeostasis): the state of steady internal conditions maintained by living things.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:pulmonary-surfactant",
+      "label": "Pulmonary surfactant",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:pulmonary-surfactant",
+          "label": "Pulmonary surfactant",
+          "meaning_comparison": "Same registered Pulmonary surfactant meaning as local:catalog:pulmonary-surfactant; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:spirometry",
+      "label": "Spirometry",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Exhaled volume/flow measurement is a diagnostic procedure, distinct from the underlying respiratory process. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q472287",
+          "label": "Respiration (physiology)",
+          "meaning_comparison": "Exhaled volume/flow measurement is a diagnostic procedure, distinct from the underlying respiratory process. Compared with pinned Q472287 (Respiration (physiology)): movement of oxygen from the outside air to the cells within tissues, and the transport of carbon dioxide in the opposite direction.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:body-plethysmography",
+      "label": "Body plethysmography",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Measuring total and residual lung volumes differs from measuring only forcefully exhaled air in spirometry. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q472287",
+          "label": "Respiration (physiology)",
+          "meaning_comparison": "Measuring total and residual lung volumes differs from measuring only forcefully exhaled air in spirometry. Compared with pinned Q472287 (Respiration (physiology)): movement of oxygen from the outside air to the cells within tissues, and the transport of carbon dioxide in the opposite direction.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:pulse-oximetry",
+      "label": "Pulse oximetry",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "The optical oxygen-saturation method is broader than the pinned skin-pigmentation error facet; the method and that limitation are distinct. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:catalog:skin-pigmentation-and-pulse-oximetry",
+          "label": "Skin pigmentation and pulse oximetry",
+          "meaning_comparison": "The optical oxygen-saturation method is broader than the pinned skin-pigmentation error facet; the method and that limitation are distinct. Compared with pinned local:catalog:skin-pigmentation-and-pulse-oximetry (Skin pigmentation and pulse oximetry): Explain why an optical oxygen estimate can have skin-pigmentation-dependent error and cannot be treated as an infallible reading..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:arterial-blood-gas-testing",
+      "label": "Arterial blood gas testing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Arterial sample analysis measures oxygen, carbon dioxide and pH; this differs from optical oxygen saturation alone. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:catalog:skin-pigmentation-and-pulse-oximetry",
+          "label": "Skin pigmentation and pulse oximetry",
+          "meaning_comparison": "Arterial sample analysis measures oxygen, carbon dioxide and pH; this differs from optical oxygen saturation alone. Compared with pinned local:catalog:skin-pigmentation-and-pulse-oximetry (Skin pigmentation and pulse oximetry): Explain why an optical oxygen estimate can have skin-pigmentation-dependent error and cannot be treated as an infallible reading..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:tympanometry",
+      "label": "Tympanometry",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Pressure-dependent middle-ear/eardrum movement differs from tiny cochlear sound emissions. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:catalog:otoacoustic-emissions",
+          "label": "Otoacoustic emissions",
+          "meaning_comparison": "Pressure-dependent middle-ear/eardrum movement differs from tiny cochlear sound emissions. Compared with pinned local:catalog:otoacoustic-emissions (Otoacoustic emissions): Understand how sounds generated by outer hair cells can test one part of hearing without proving the entire pathway is normal..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:otoacoustic-emissions",
+      "label": "Otoacoustic emissions",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:otoacoustic-emissions",
+          "label": "Otoacoustic emissions",
+          "meaning_comparison": "Same registered Otoacoustic emissions meaning as local:catalog:otoacoustic-emissions; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:pure-tone-audiometry",
+      "label": "Pure-tone audiometry",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Frequency-specific behavioral tone thresholds are the general procedure; conditioned play is one specialized response implementation. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q115841338",
+          "label": "Conditioned play audiometry",
+          "meaning_comparison": "Frequency-specific behavioral tone thresholds are the general procedure; conditioned play is one specialized response implementation. Compared with pinned Q115841338 (Conditioned play audiometry): pediatric hearing test where conditioned responses to auditory stimuli are used to assess a child's hearing ability, often through games or activities.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:hemoglobin-a1c-testing",
+      "label": "Hemoglobin A1c testing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Glycated hemoglobin as a longer-term exposure indicator is a specific measurement method, not glucose homeostasis itself. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:laboratory-reference-intervals",
+      "label": "Laboratory reference intervals",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "A reference-population interval is an interpretation tool, not a diagnostic disease threshold or Public health broadly. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:diagnostic-sensitivity",
+      "label": "Diagnostic sensitivity",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Conditioning on having disease defines sensitivity, unlike predictive value conditioning on a positive result. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:diagnostic-specificity",
+      "label": "Diagnostic specificity",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Conditioning on not having disease defines specificity, distinct from sensitivity and from predictive values. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:positive-predictive-value",
+      "label": "Positive predictive value",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Disease probability after a positive result is a diagnostic conditional probability, not Bayesian updating in general. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q812535",
+          "label": "Bayesian inference",
+          "meaning_comparison": "Disease probability after a positive result is a diagnostic conditional probability, not Bayesian updating in general. Compared with pinned Q812535 (Bayesian inference): method of statistical inference in which Bayes' theorem is used to update the probability for a hypothesis as more evidence or information becomes available.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:ambulatory-blood-pressure-monitoring",
+      "label": "Ambulatory blood pressure monitoring",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Repeated ordinary-activity pressure measurements form a monitoring method, distinct from Blood pressure itself or one clinic reading. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q5038741",
+          "label": "Cardiovascular physiology",
+          "meaning_comparison": "Repeated ordinary-activity pressure measurements form a monitoring method, distinct from Blood pressure itself or one clinic reading. Compared with pinned Q5038741 (Cardiovascular physiology): study of the circulatory system, specifically addressing the physiology of the heart (\"cardio\") and blood vessels (\"vascular\").",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q82642",
+          "label": "Blood pressure",
+          "meaning_comparison": "Repeated ordinary-activity pressure measurements form a monitoring method, distinct from Blood pressure itself or one clinic reading. Meaningful pinned comparator Q82642 (Blood pressure): pressure exerted by circulating blood upon the walls of blood vessels.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:skin-pigmentation-and-pulse-oximetry",
+      "label": "Skin pigmentation and pulse oximetry",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:skin-pigmentation-and-pulse-oximetry",
+          "label": "Skin pigmentation and pulse oximetry",
+          "meaning_comparison": "Same registered Skin pigmentation and pulse oximetry meaning as local:catalog:skin-pigmentation-and-pulse-oximetry; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:authored:000120",
+      "label": "Public health",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000120",
+          "label": "Public health",
+          "meaning_comparison": "Same registered Public health meaning as local:authored:000120; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:randomized-controlled-trial",
+      "label": "Randomized controlled trial",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Chance assignment plus a comparison group defines a study design, distinct from population health as a field or blinding as a separate safeguard. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:allocation-concealment",
+      "label": "Allocation concealment",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Hiding the next assignment before recruitment prevents selection bias; this differs from batch 007's concealment after assignment from participants/investigators. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:intention-to-treat-analysis",
+      "label": "Intention-to-treat analysis",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Retaining assigned groups estimates assignment effects despite nonadherence; this differs from allocation concealment or blinding. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:n-of-1-trial",
+      "label": "N-of-1 trial",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Repeated within-person randomized crossovers are a particular trial design, not a generic randomized between-group comparison. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:washout-periods-in-crossover-trials",
+      "label": "Washout periods in crossover trials",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Allowing residual treatment effects to diminish between periods is a specific crossover safeguard, not the whole N-of-1 design. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:surrogate-endpoint",
+      "label": "Surrogate endpoint",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "A proxy biological outcome differs from direct patient benefit and may fail to stand in for it reliably. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:lead-time-bias",
+      "label": "Lead-time bias",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Earlier diagnostic starting time can increase measured survival without extending life; this differs from healthier people selecting screening. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:healthy-volunteer-bias-in-screening-studies",
+      "label": "Healthy-volunteer bias in screening studies",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Pre-existing differences in volunteers can confound screening comparisons; this differs from lead-time arithmetic or overdiagnosis. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:overdiagnosis",
+      "label": "Overdiagnosis",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "A correctly detected condition that would not cause harm differs from a false-positive test or mere earlier detection. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:framingham-heart-study",
+      "label": "Framingham Heart Study",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Framingham is a particular multigenerational cohort program, not the general cohort-study design. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q1778788",
+          "label": "Cohort study",
+          "meaning_comparison": "Framingham is a particular multigenerational cohort program, not the general cohort-study design. Compared with pinned Q1778788 (Cohort study): form of longitudinal study.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:systolic-blood-pressure-intervention-trial",
+      "label": "Systolic Blood Pressure Intervention Trial",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "SPRINT is a named randomized target-comparison study with specific eligibility and tradeoffs, not general blood-pressure management. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q82642",
+          "label": "Blood pressure",
+          "meaning_comparison": "SPRINT is a named randomized target-comparison study with specific eligibility and tradeoffs, not general blood-pressure management. Meaningful pinned comparator Q82642 (Blood pressure): pressure exerted by circulating blood upon the walls of blood vessels.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:james-lind",
+      "label": "James Lind",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "The named historical investigator's controlled citrus comparison is distinct from the study-design abstraction or public health broadly. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:virginia-apgar",
+      "label": "Virginia Apgar",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:virginia-apgar",
+          "label": "Virginia Apgar",
+          "meaning_comparison": "Same registered Virginia Apgar meaning as local:catalog:virginia-apgar; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:florence-nightingale",
+      "label": "Florence Nightingale",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "The named reformer's mortality analysis and visual communication supply an individual historical learning case. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:skin-grafting",
+      "label": "Skin grafting",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "meaning_comparison": "Detached skin acquiring a new blood supply defines a medical graft procedure, distinct from plant scion/rootstock union and its cambial alignment. Meaningful pinned comparator Q11190 (Medicine): field of study for diagnosing, treating and preventing disease.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:catalog:cambial-alignment-in-grafting",
+          "label": "Cambial alignment in grafting",
+          "meaning_comparison": "Detached skin acquiring a new blood supply defines a medical graft procedure, distinct from plant scion/rootstock union and its cambial alignment. Compared with pinned local:catalog:cambial-alignment-in-grafting (Cambial alignment in grafting): Explain why matching growth layers rather than outside stem edges is crucial to a graft union..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:authored:000629",
+      "label": "Geology",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "meaning_comparison": "Same registered Geology meaning as local:authored:000629; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q176318",
+      "label": "Subduction",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q176318",
+          "label": "Subduction",
+          "meaning_comparison": "Same registered Subduction meaning as Q176318; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:elastic-rebound-theory",
+      "label": "Elastic rebound theory",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "meaning_comparison": "Accumulated elastic strain followed by sudden release defines an earthquake theory, not geological study generally. Compared with pinned local:authored:000629 (Geology): Investigating Earth's materials, structures and history..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:soil-liquefaction",
+      "label": "Soil liquefaction",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "meaning_comparison": "Shaking-induced loss of strength in saturated loose sediment is distinct from rock fracture or tectonic slip. Compared with pinned local:authored:000629 (Geology): Investigating Earth's materials, structures and history..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:slow-slip-events",
+      "label": "Slow-slip events",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "meaning_comparison": "Transient fault motion over longer timescales differs from rapid earthquake rupture; retain observation/model qualifications. Compared with pinned local:authored:000629 (Geology): Investigating Earth's materials, structures and history..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:seismic-tomography",
+      "label": "Seismic tomography",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q3042540",
+          "label": "X-ray microtomography",
+          "meaning_comparison": "Seismic inverse modeling of Earth structure differs in signal, scale and target from X-ray microtomography of small samples. Compared with pinned Q3042540 (X-ray microtomography): X-ray imaging method.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:volcano-ground-deformation-monitoring",
+      "label": "Volcano ground-deformation monitoring",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "meaning_comparison": "Surface movement constraining subsurface magma pressure/volume is a specific monitoring method, not volcanic deformation as a guaranteed eruption forecast. Compared with pinned local:authored:000629 (Geology): Investigating Earth's materials, structures and history..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:lahar",
+      "label": "Lahar",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:lahar",
+          "label": "Lahar",
+          "meaning_comparison": "Same registered Lahar meaning as local:catalog:lahar; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:columnar-jointing",
+      "label": "Columnar jointing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "meaning_comparison": "Cooling-contraction polygonal fractures are a particular igneous structure, distinct from tectonic faults or geology broadly. Compared with pinned local:authored:000629 (Geology): Investigating Earth's materials, structures and history..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:pillow-lava",
+      "label": "Pillow lava",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "meaning_comparison": "Rapid chilling of lava in water creates a characteristic form; a different process from cooling-contraction columns. Compared with pinned local:authored:000629 (Geology): Investigating Earth's materials, structures and history..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q159954",
+      "label": "Caldera",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q159954",
+          "label": "Caldera",
+          "meaning_comparison": "Same registered Caldera meaning as Q159954; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:lava-tube",
+      "label": "Lava tube",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "meaning_comparison": "A crusted lava flow draining beneath its roof creates a conduit cave, distinct from dissolution-based karst drainage. Compared with pinned local:authored:000629 (Geology): Investigating Earth's materials, structures and history..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:k-lauea",
+      "label": "Kīlauea",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "meaning_comparison": "The particular volcano's linked 2018 flank eruption and summit collapse is a named case, not the generic caldera process. Compared with pinned local:authored:000629 (Geology): Investigating Earth's materials, structures and history..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:cascadia-subduction-zone",
+      "label": "Cascadia Subduction Zone",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q176318",
+          "label": "Subduction",
+          "meaning_comparison": "Cascadia is a particular plate boundary and connected landscape, distinct from subduction as a universal process. Compared with pinned Q176318 (Subduction): geological process at tectonic plate boundaries.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:karst-drainage",
+      "label": "Karst drainage",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "meaning_comparison": "Water movement through dissolution-enlarged openings is a drainage mechanism, distinct from all caves or all geology. Compared with pinned local:authored:000629 (Geology): Investigating Earth's materials, structures and history..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q35509",
+          "label": "Cave",
+          "meaning_comparison": "Water movement through dissolution-enlarged openings is a drainage mechanism, distinct from all caves or all geology. Meaningful pinned comparator Q35509 (Cave): natural void under the Earth's surface.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "Water movement through dissolution-enlarged openings is a drainage mechanism, distinct from all caves or all geology. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:authored:000631",
+      "label": "Oceanography",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000631",
+          "label": "Oceanography",
+          "meaning_comparison": "Same registered Oceanography meaning as local:authored:000631; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:rain-shadow",
+      "label": "Rain shadow",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:rain-shadow",
+          "label": "Rain shadow",
+          "meaning_comparison": "Same registered Rain shadow meaning as local:catalog:rain-shadow; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:ekman-spiral",
+      "label": "Ekman spiral",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000631",
+          "label": "Oceanography",
+          "meaning_comparison": "Depth-dependent turning and weakening of wind-driven flow is a particular ocean-current structure, not Oceanography broadly. Compared with pinned local:authored:000631 (Oceanography): Investigating the physical, chemical and biological properties of oceans..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:coastal-upwelling",
+      "label": "Coastal upwelling",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000631",
+          "label": "Oceanography",
+          "meaning_comparison": "Offshore surface-water removal drawing up deeper water is a specific vertical transport mechanism, distinct from the Ekman spiral's depth pattern. Meaningful pinned comparator local:authored:000631 (Oceanography): Investigating the physical, chemical and biological properties of oceans..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:thermohaline-circulation",
+      "label": "Thermohaline circulation",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000631",
+          "label": "Oceanography",
+          "meaning_comparison": "Density differences due to seawater temperature/salinity differ from hot water-rock hydrothermal circulation. Meaningful pinned comparator local:authored:000631 (Oceanography): Investigating the physical, chemical and biological properties of oceans..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q1036221",
+          "label": "Hydrothermal circulation",
+          "meaning_comparison": "Density differences due to seawater temperature/salinity differ from hot water-rock hydrothermal circulation. Compared with pinned Q1036221 (Hydrothermal circulation): circulation of hot water driven by heat exchange and accompanied by water-rock interactions and alterations.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q7939",
+      "label": "El Niño–Southern Oscillation",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7939",
+          "label": "El Niño–Southern Oscillation",
+          "meaning_comparison": "Same registered El Niño–Southern Oscillation meaning as Q7939; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:marine-heatwave",
+      "label": "Marine heatwave",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000631",
+          "label": "Oceanography",
+          "meaning_comparison": "A sustained local-seasonal temperature anomaly defines a marine heatwave; Sea surface temperature is the measured variable rather than the anomaly criterion. Meaningful pinned comparator local:authored:000631 (Oceanography): Investigating the physical, chemical and biological properties of oceans..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q1507383",
+          "label": "Sea surface temperature",
+          "meaning_comparison": "A sustained local-seasonal temperature anomaly defines a marine heatwave; Sea surface temperature is the measured variable rather than the anomaly criterion. Meaningful pinned comparator Q1507383 (Sea surface temperature): water temperature close to the ocean's surface.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:ocean-acidification",
+      "label": "Ocean acidification",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000631",
+          "label": "Oceanography",
+          "meaning_comparison": "General CO2-driven seawater chemical change is broader than the pinned Arctic and Great Barrier Reef regional acidification subjects. Meaningful pinned comparator local:authored:000631 (Oceanography): Investigating the physical, chemical and biological properties of oceans..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q60791727",
+          "label": "Ocean acidification in the Arctic Ocean",
+          "meaning_comparison": "General CO2-driven seawater chemical change is broader than the pinned Arctic and Great Barrier Reef regional acidification subjects. Compared with pinned Q60791727 (Ocean acidification in the Arctic Ocean): Aspect of climate change.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q28130508",
+          "label": "Ocean acidification in the Great Barrier Reef",
+          "meaning_comparison": "General CO2-driven seawater chemical change is broader than the pinned Arctic and Great Barrier Reef regional acidification subjects. Meaningful pinned comparator Q28130508 (Ocean acidification in the Great Barrier Reef): threat to the reef which reduces the viability and strength of reef-building corals.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:thermocline",
+      "label": "Thermocline",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000631",
+          "label": "Oceanography",
+          "meaning_comparison": "A zone of rapid vertical temperature change is a water-column structure, distinct from a marine heatwave anomaly or whole oceanography. Meaningful pinned comparator local:authored:000631 (Oceanography): Investigating the physical, chemical and biological properties of oceans..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:atmospheric-river",
+      "label": "Atmospheric river",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000630",
+          "label": "Meteorology",
+          "meaning_comparison": "A corridor of concentrated vapor transport is a meteorological pattern, not a river watercourse or Geology broadly. Meaningful pinned comparator local:authored:000630 (Meteorology): Studying the atmosphere and weather processes..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:temperature-inversion",
+      "label": "Temperature inversion",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000630",
+          "label": "Meteorology",
+          "meaning_comparison": "Temperature increasing with height stabilizes air and can limit mixing; Meteorology is the meaningful broader comparison, not Geology. Meaningful pinned comparator local:authored:000630 (Meteorology): Studying the atmosphere and weather processes..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:lake-effect-snow",
+      "label": "Lake-effect snow",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000630",
+          "label": "Meteorology",
+          "meaning_comparison": "Cold air obtaining heat/moisture over open lake water produces localized snow bands; a separate meteorological mechanism. Meaningful pinned comparator local:authored:000630 (Meteorology): Studying the atmosphere and weather processes..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:argo",
+      "label": "Argo",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000631",
+          "label": "Oceanography",
+          "meaning_comparison": "Argo is a named observing program using cycling profiling floats, distinct from oceanography as a discipline. Meaningful pinned comparator local:authored:000631 (Oceanography): Investigating the physical, chemical and biological properties of oceans..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:mauna-loa-observatory",
+      "label": "Mauna Loa Observatory",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000630",
+          "label": "Meteorology",
+          "meaning_comparison": "Mauna Loa is a particular atmospheric observing/calibration site; Observatory is the encompassing facility class. Meaningful pinned comparator local:authored:000630 (Meteorology): Studying the atmosphere and weather processes..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q62832",
+          "label": "Observatory",
+          "meaning_comparison": "Mauna Loa is a particular atmospheric observing/calibration site; Observatory is the encompassing facility class. Compared with pinned Q62832 (Observatory): location used for observing terrestrial or celestial events.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:marine-stratus",
+      "label": "Marine stratus",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000630",
+          "label": "Meteorology",
+          "meaning_comparison": "Low coastal cloud sheets and their advection/dissipation are a particular meteorological phenomenon, not geology. Meaningful pinned comparator local:authored:000630 (Meteorology): Studying the atmosphere and weather processes..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:dissolved-oxygen-in-water",
+      "label": "Dissolved oxygen in water",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "Dissolved oxygen concentration is the measured aquatic property; apparent oxygen utilisation is a derived difference from solubility. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q4780928",
+          "label": "Apparent oxygen utilisation",
+          "meaning_comparison": "Dissolved oxygen concentration is the measured aquatic property; apparent oxygen utilisation is a derived difference from solubility. Compared with pinned Q4780928 (Apparent oxygen utilisation): difference between oxygen solubility and measured oxygen concentration in water, used to infer oxygen consumption by biological processes.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:biochemical-oxygen-demand",
+      "label": "Biochemical oxygen demand",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "Oxygen consumed during controlled decomposition/incubation differs from an instantaneous saturation deficit. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q4780928",
+          "label": "Apparent oxygen utilisation",
+          "meaning_comparison": "Oxygen consumed during controlled decomposition/incubation differs from an instantaneous saturation deficit. Compared with pinned Q4780928 (Apparent oxygen utilisation): difference between oxygen solubility and measured oxygen concentration in water, used to infer oxygen consumption by biological processes.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:turbidity",
+      "label": "Turbidity",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "Optical cloudiness from particles is a water property, distinct from dissolved oxygen or a measurement instrument. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:secchi-disk",
+      "label": "Secchi disk",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "A visual disk providing a disappearance/clarity measure is an instrument/procedure, distinct from the property of turbidity itself. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:benthic-macroinvertebrate-bioassessment",
+      "label": "Benthic macroinvertebrate bioassessment",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000638",
+          "label": "Ecology",
+          "meaning_comparison": "Community composition of relatively immobile aquatic animals integrates stress over time; this is a specific ecological assessment, not geology. Meaningful pinned comparator local:authored:000638 (Ecology): Studying relationships between organisms and their environments..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:riparian-forest-buffer",
+      "label": "Riparian forest buffer",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "Managed streamside forest filtering and shading is a particular practice within riparian restoration, not all restoration activities. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q7335562",
+          "label": "Riparian-zone restoration",
+          "meaning_comparison": "Managed streamside forest filtering and shading is a particular practice within riparian restoration, not all restoration activities. Compared with pinned Q7335562 (Riparian-zone restoration): restoration of riparian areas.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:constructed-treatment-wetland",
+      "label": "Constructed treatment wetland",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "An engineered wastewater-treatment wetland is a designed application of the ecosystem type, not all wetlands. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q170321",
+          "label": "Wetland",
+          "meaning_comparison": "An engineered wastewater-treatment wetland is a designed application of the ecosystem type, not all wetlands. Compared with pinned Q170321 (Wetland): land area that is permanently or seasonally saturated with water.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:living-shoreline",
+      "label": "Living shoreline",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "Vegetation/natural-material coastal stabilization is a specific management method, not all coastal management. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q1316027",
+          "label": "Coastal management",
+          "meaning_comparison": "Vegetation/natural-material coastal stabilization is a specific management method, not all coastal management. Compared with pinned Q1316027 (Coastal management): defense against flooding and erosion.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:landsat",
+      "label": "Landsat",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "Landsat is a specific calibrated Earth-observation program/archive; it is not geology or remote observation generically. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:authored:000111",
+          "label": "Remote sensing",
+          "meaning_comparison": "Landsat is a specific calibrated Earth-observation program/archive; it is not geology or remote observation generically. Meaningful pinned comparator local:authored:000111 (Remote sensing): Observing environments using measurements collected from a distance..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:elwha-river-restoration",
+      "label": "Elwha River restoration",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "The named Elwha dam-removal/restoration project reconnects migration and sediment flow; a particular case distinct from general river systems. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:authored:000675",
+          "label": "River systems",
+          "meaning_comparison": "The named Elwha dam-removal/restoration project reconnects migration and sediment flow; a particular case distinct from general river systems. Meaningful pinned comparator local:authored:000675 (River systems): Studying rivers and their connected landscapes and communities..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:sand-hollow-reservoir",
+      "label": "Sand Hollow Reservoir",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "A named reservoir's monitored recharge performance supplies a bounded case, distinct from managed recharge as a general intervention. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:managed-aquifer-recharge",
+      "label": "Managed aquifer recharge",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q42250",
+          "label": "Hydrology",
+          "meaning_comparison": "Deliberate aquifer replenishment is a management intervention, unlike artesian confinement/pressure as a natural geological condition. Meaningful pinned comparator Q42250 (Hydrology): science that deals with the water above, on and below the land surface of the earth.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:catalog:artesian-aquifer",
+          "label": "Artesian aquifer",
+          "meaning_comparison": "Deliberate aquifer replenishment is a management intervention, unlike artesian confinement/pressure as a natural geological condition. Compared with pinned local:catalog:artesian-aquifer (Artesian aquifer): Explain why confined groundwater rises in a well but only sometimes flows out at ground level..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:artesian-aquifer",
+      "label": "Artesian aquifer",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:artesian-aquifer",
+          "label": "Artesian aquifer",
+          "meaning_comparison": "Same registered Artesian aquifer meaning as local:catalog:artesian-aquifer; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:thermokarst",
+      "label": "Thermokarst",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:thermokarst",
+          "label": "Thermokarst",
+          "meaning_comparison": "Same registered Thermokarst meaning as local:catalog:thermokarst; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:authored:000028",
+      "label": "Urban heat islands",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000028",
+          "label": "Urban heat islands",
+          "meaning_comparison": "Same registered Urban heat islands meaning as local:authored:000028; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        },
+        {
+          "id": "Q215712",
+          "label": "Urban heat island",
+          "meaning_comparison": "The same supported urban-heat-island meaning appears under this second baseline ID. Retain historical equivalence as a proposal; only the authored control is selected.",
+          "reviewer_decision": "historical_equivalence_proposal_only"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:authored:000000",
+      "label": "Gardening",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000000",
+          "label": "Gardening",
+          "meaning_comparison": "Same registered Gardening meaning as local:authored:000000; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:crop-rotation",
+      "label": "Crop rotation",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "meaning_comparison": "Changing successive crops interrupts crop-specific pest cycles; a specific agricultural practice rather than Gardening broadly. Meaningful pinned comparator Q11451 (Agriculture): practice of cultivating plants and raising animals to produce food, fiber, fuel, and other products; one of humanity's oldest and most widespread activities, forming the foundation of most human civilizations.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:cover-crops",
+      "label": "Cover crops",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "meaning_comparison": "Vegetation grown primarily for cover/soil functions differs from a crop primarily grown for harvested products. Meaningful pinned comparator Q11451 (Agriculture): practice of cultivating plants and raising animals to produce food, fiber, fuel, and other products; one of humanity's oldest and most widespread activities, forming the foundation of most human civilizations.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:no-till-farming",
+      "label": "No-till farming",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "meaning_comparison": "Planting without full-width disturbance is a defined management alternative to Q878333 Tillage, not all gardening. Meaningful pinned comparator Q11451 (Agriculture): practice of cultivating plants and raising animals to produce food, fiber, fuel, and other products; one of humanity's oldest and most widespread activities, forming the foundation of most human civilizations.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q878333",
+          "label": "Tillage",
+          "meaning_comparison": "Planting without full-width disturbance is a defined management alternative to Q878333 Tillage, not all gardening. Meaningful pinned comparator Q878333 (Tillage): preparation of soil by mechanical agitation.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:mulching",
+      "label": "Mulching",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000000",
+          "label": "Gardening",
+          "meaning_comparison": "A surface cover modifies moisture, light and temperature; a specific intervention rather than the Gardening control's whole craft. Compared with pinned local:authored:000000 (Gardening): Growing and caring for plants in gardens and small outdoor spaces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q525309",
+      "label": "Integrated pest management",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q525309",
+          "label": "Integrated pest management",
+          "meaning_comparison": "Same registered Integrated pest management meaning as Q525309; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:ipm-action-thresholds",
+      "label": "IPM action thresholds",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q525309",
+          "label": "Integrated pest management",
+          "meaning_comparison": "An intervention trigger based on pest level/conditions is one IPM decision rule, distinct from the whole management framework. Compared with pinned Q525309 (Integrated pest management): approach for economic control of pests.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:trap-cropping",
+      "label": "Trap cropping",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "meaning_comparison": "A more attractive planting diverts pests; this is a defined, context-dependent IPM technique rather than generic prevention. Meaningful pinned comparator Q11451 (Agriculture): practice of cultivating plants and raising animals to produce food, fiber, fuel, and other products; one of humanity's oldest and most widespread activities, forming the foundation of most human civilizations.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q525309",
+          "label": "Integrated pest management",
+          "meaning_comparison": "A more attractive planting diverts pests; this is a defined, context-dependent IPM technique rather than generic prevention. Compared with pinned Q525309 (Integrated pest management): approach for economic control of pests.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:horticultural-grafting",
+      "label": "Horticultural grafting",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:cambial-alignment-in-grafting",
+          "label": "Cambial alignment in grafting",
+          "meaning_comparison": "Plant scion/rootstock union is a propagation method. Cambial alignment is one requirement; skin grafting is a different medical sense. Compared with pinned local:catalog:cambial-alignment-in-grafting (Cambial alignment in grafting): Explain why matching growth layers rather than outside stem edges is crucial to a graft union..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:rootstock-dwarfing",
+      "label": "Rootstock dwarfing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:cambial-alignment-in-grafting",
+          "label": "Cambial alignment in grafting",
+          "meaning_comparison": "Rootstock-mediated tree-size control differs from forming the graft union or matching cambial tissue. Compared with pinned local:catalog:cambial-alignment-in-grafting (Cambial alignment in grafting): Explain why matching growth layers rather than outside stem edges is crucial to a graft union..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:apical-dominance",
+      "label": "Apical dominance",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000000",
+          "label": "Gardening",
+          "meaning_comparison": "Shoot-tip suppression of lateral buds is a hormonal growth mechanism, not the pruning craft or gardening as a whole. Compared with pinned local:authored:000000 (Gardening): Growing and caring for plants in gardens and small outdoor spaces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:photoperiodism",
+      "label": "Photoperiodism",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000000",
+          "label": "Gardening",
+          "meaning_comparison": "Responses to light/dark duration are a distinct seasonal cue mechanism, not temperature response generally. Compared with pinned local:authored:000000 (Gardening): Growing and caring for plants in gardens and small outdoor spaces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:bolting",
+      "label": "Bolting",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000000",
+          "label": "Gardening",
+          "meaning_comparison": "A crop's premature flowering shift is a developmental outcome, distinct from photoperiodism as one possible cue. Compared with pinned local:authored:000000 (Gardening): Growing and caring for plants in gardens and small outdoor spaces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:parthenocarpy",
+      "label": "Parthenocarpy",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000000",
+          "label": "Gardening",
+          "meaning_comparison": "Fruit formation without fertilization is the underlying parthenocarpy subject; the cited greenhouse-cucumber case additionally permits fruit without pollination. Do not universalize the case to every parthenocarpic plant. Compared with pinned local:authored:000000 (Gardening): Growing and caring for plants in gardens and small outdoor spaces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:self-incompatibility-in-fruit-crops",
+      "label": "Self-incompatibility in fruit crops",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000000",
+          "label": "Gardening",
+          "meaning_comparison": "Failure of self pollen and need for a compatible variety are a particular reproductive compatibility mechanism, not absence of pollinators or parthenocarpy. Compared with pinned local:authored:000000 (Gardening): Growing and caring for plants in gardens and small outdoor spaces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:authored:000009",
+      "label": "Fermentation",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000009",
+          "label": "Fermentation",
+          "meaning_comparison": "Same registered Fermentation meaning as local:authored:000009; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        },
+        {
+          "id": "Q41760",
+          "label": "Fermentation",
+          "meaning_comparison": "Metabolic fermentation is the energy-pathway sense, distinct from the selected authored culinary production/preservation practice.",
+          "reviewer_decision": "distinct_sense"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:authored:000149",
+      "label": "Bread baking",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000149",
+          "label": "Bread baking",
+          "meaning_comparison": "Same registered Bread baking meaning as local:authored:000149; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:starch-gelatinization",
+      "label": "Starch gelatinization",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q38695",
+          "label": "Cooking",
+          "meaning_comparison": "Heat-and-water swelling/disorganization of starch granules is a food-material transformation, not Gardening. Meaningful pinned comparator Q38695 (Cooking): preparing food for consumption by the application of heat.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:starch-retrogradation",
+      "label": "Starch retrogradation",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q38695",
+          "label": "Cooking",
+          "meaning_comparison": "Post-gelatinization molecular reassociation differs from the initial heated swelling; both are chemical/material mechanisms within cooking. Meaningful pinned comparator Q38695 (Cooking): preparing food for consumption by the application of heat.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:gluten-formation",
+      "label": "Gluten formation",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q38695",
+          "label": "Cooking",
+          "meaning_comparison": "Hydrated wheat proteins forming a gas-holding network is a particular mechanism within and beyond bread baking. Meaningful pinned comparator Q38695 (Cooking): preparing food for consumption by the application of heat.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:authored:000149",
+          "label": "Bread baking",
+          "meaning_comparison": "Hydrated wheat proteins forming a gas-holding network is a particular mechanism within and beyond bread baking. Compared with pinned local:authored:000149 (Bread baking): Making bread through mixing, fermentation, shaping and baking..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:egg-protein-coagulation",
+      "label": "Egg protein coagulation",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q38695",
+          "label": "Cooking",
+          "meaning_comparison": "Heat-induced protein unfolding/network formation differs from mechanically separating egg white and yolk. Meaningful pinned comparator Q38695 (Cooking): preparing food for consumption by the application of heat.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q17116077",
+          "label": "Egg separation",
+          "meaning_comparison": "Heat-induced protein unfolding/network formation differs from mechanically separating egg white and yolk. Compared with pinned Q17116077 (Egg separation): process, generally used in cooking, in which the egg yolk is removed from the egg white.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:enzymatic-browning",
+      "label": "Enzymatic browning",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q38695",
+          "label": "Cooking",
+          "meaning_comparison": "Enzymatic oxidation after cutting differs from nonenzymatic browning and from gardening or food growth. Meaningful pinned comparator Q38695 (Cooking): preparing food for consumption by the application of heat.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:pectin-gelation",
+      "label": "Pectin gelation",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q38695",
+          "label": "Cooking",
+          "meaning_comparison": "Pectin-network setting is a particular gel process with formulation-dependent requirements, not all fruit preservation or cooking. Meaningful pinned comparator Q38695 (Cooking): preparing food for consumption by the application of heat.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:syneresis",
+      "label": "Syneresis",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q38695",
+          "label": "Cooking",
+          "meaning_comparison": "Liquid expelled by a contracting gel is physical syneresis, distinct from phonological Synaeresis Q1783292. Meaningful pinned comparator Q38695 (Cooking): preparing food for consumption by the application of heat.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q1783292",
+          "label": "Synaeresis",
+          "meaning_comparison": "Liquid expelled by a contracting gel is physical syneresis, distinct from phonological Synaeresis Q1783292. Compared with pinned Q1783292 (Synaeresis): phonological process of sound change.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:chocolate-tempering",
+      "label": "Chocolate tempering",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q38695",
+          "label": "Cooking",
+          "meaning_comparison": "Controlled cocoa-butter crystallization is one distinct chocolate-making operation, not all chocolate production. Meaningful pinned comparator Q38695 (Cooking): preparing food for consumption by the application of heat.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:authored:000153",
+          "label": "Chocolate making",
+          "meaning_comparison": "Controlled cocoa-butter crystallization is one distinct chocolate-making operation, not all chocolate production. Compared with pinned local:authored:000153 (Chocolate making): Working with cacao, chocolate tempering and confectionery..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q227780",
+      "label": "Chocolate bloom",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q227780",
+          "label": "Chocolate bloom",
+          "meaning_comparison": "Same registered Chocolate bloom meaning as Q227780; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:hollandaise-emulsification",
+      "label": "Hollandaise emulsification",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q38695",
+          "label": "Cooking",
+          "meaning_comparison": "Egg-yolk stabilization of dispersed fat droplets is a particular culinary emulsion application, not Emulsion in general. Meaningful pinned comparator Q38695 (Cooking): preparing food for consumption by the application of heat.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q187634",
+          "label": "Emulsion",
+          "meaning_comparison": "Egg-yolk stabilization of dispersed fat droplets is a particular culinary emulsion application, not Emulsion in general. Compared with pinned Q187634 (Emulsion): mixture of two or more liquids that are normally immiscible.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q791576",
+      "label": "Water activity",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q791576",
+          "label": "Water activity",
+          "meaning_comparison": "Same registered Water activity meaning as Q791576; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:blanching-vegetables-before-freezing",
+      "label": "Blanching vegetables before freezing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q38695",
+          "label": "Cooking",
+          "meaning_comparison": "Brief pre-freezing heat treatment targets enzyme-driven quality loss; this is a specific preservation method, not all gardening. Meaningful pinned comparator Q38695 (Cooking): preparing food for consumption by the application of heat.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:drip-irrigation",
+      "label": "Drip irrigation",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11453",
+          "label": "Irrigation",
+          "meaning_comparison": "Localized emitters define a particular delivery method within irrigation; the hydroponic example should not restrict it to soilless systems. Compared with pinned Q11453 (Irrigation): artificial application of water to cultivated land.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:soil-tensiometer",
+      "label": "Soil tensiometer",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11453",
+          "label": "Irrigation",
+          "meaning_comparison": "A porous-tip tension instrument measures water potential-related availability, unlike Irrigation as applying water or measuring simple moisture fraction. Compared with pinned Q11453 (Irrigation): artificial application of water to cultivated land.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:hydroponics",
+      "label": "Hydroponics",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000000",
+          "label": "Gardening",
+          "meaning_comparison": "Nutrient-solution cultivation is a defined growing system, distinct from gardening in general and from any single hydroponic layout. Compared with pinned local:authored:000000 (Gardening): Growing and caring for plants in gardens and small outdoor spaces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:nutrient-film-technique",
+      "label": "Nutrient-film technique",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000000",
+          "label": "Gardening",
+          "meaning_comparison": "A recirculating shallow nutrient film is a specific hydroponic configuration, not all soilless cultivation or drip delivery. Compared with pinned local:authored:000000 (Gardening): Growing and caring for plants in gardens and small outdoor spaces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:variable-rate-irrigation",
+      "label": "Variable-rate irrigation",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "meaning_comparison": "Spatial prescription-controlled water delivery is a defined irrigation application, distinct from uniform irrigation. Meaningful pinned comparator Q11451 (Agriculture): practice of cultivating plants and raising animals to produce food, fiber, fuel, and other products; one of humanity's oldest and most widespread activities, forming the foundation of most human civilizations.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q11453",
+          "label": "Irrigation",
+          "meaning_comparison": "Spatial prescription-controlled water delivery is a defined irrigation application, distinct from uniform irrigation. Compared with pinned Q11453 (Irrigation): artificial application of water to cultivated land.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:marker-assisted-selection",
+      "label": "Marker-assisted selection",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "meaning_comparison": "Using marker-trait associations to select breeding material is an application, not the Genetic marker itself. Meaningful pinned comparator Q11451 (Agriculture): practice of cultivating plants and raising animals to produce food, fiber, fuel, and other products; one of humanity's oldest and most widespread activities, forming the foundation of most human civilizations.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q767511",
+          "label": "Genetic marker",
+          "meaning_comparison": "Using marker-trait associations to select breeding material is an application, not the Genetic marker itself. Compared with pinned Q767511 (Genetic marker): gene or DNA sequence with a known location on a chromosome that can be used to identify individuals or species.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q2293576",
+      "label": "F1 hybrid",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q2293576",
+          "label": "F1 hybrid",
+          "meaning_comparison": "Same registered F1 hybrid meaning as Q2293576; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:ir8",
+      "label": "IR8",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "meaning_comparison": "IR8 is a particular selected rice variety and breeding history, not the Rice crop identity. Meaningful pinned comparator Q11451 (Agriculture): practice of cultivating plants and raising animals to produce food, fiber, fuel, and other products; one of humanity's oldest and most widespread activities, forming the foundation of most human civilizations.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q5090",
+          "label": "Rice",
+          "meaning_comparison": "IR8 is a particular selected rice variety and breeding history, not the Rice crop identity. Compared with pinned Q5090 (Rice): cereal grain and staple food.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:swarna-sub1",
+      "label": "Swarna-Sub1",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "meaning_comparison": "Swarna-Sub1 is a particular temporarily submergence-tolerant rice variety, distinct from IR8 or rice generally. Meaningful pinned comparator Q11451 (Agriculture): practice of cultivating plants and raising animals to produce food, fiber, fuel, and other products; one of humanity's oldest and most widespread activities, forming the foundation of most human civilizations.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q5090",
+          "label": "Rice",
+          "meaning_comparison": "Swarna-Sub1 is a particular temporarily submergence-tolerant rice variety, distinct from IR8 or rice generally. Compared with pinned Q5090 (Rice): cereal grain and staple food.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:broadbalk-wheat-experiment",
+      "label": "Broadbalk Wheat Experiment",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:broadbalk-wheat-experiment",
+          "label": "Broadbalk Wheat Experiment",
+          "meaning_comparison": "Same registered Broadbalk Wheat Experiment meaning as local:catalog:broadbalk-wheat-experiment; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:park-grass-experiment",
+      "label": "Park Grass Experiment",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "meaning_comparison": "Park Grass is a separate permanent-grassland fertilizer/liming experiment, unlike Broadbalk's wheat experiment. Meaningful pinned comparator Q11451 (Agriculture): practice of cultivating plants and raising animals to produce food, fiber, fuel, and other products; one of humanity's oldest and most widespread activities, forming the foundation of most human civilizations.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:catalog:broadbalk-wheat-experiment",
+          "label": "Broadbalk Wheat Experiment",
+          "meaning_comparison": "Park Grass is a separate permanent-grassland fertilizer/liming experiment, unlike Broadbalk's wheat experiment. Compared with pinned local:catalog:broadbalk-wheat-experiment (Broadbalk Wheat Experiment): See how repeated fertilizer and manure treatments plus an untreated strip enable long-term agricultural comparisons..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:authored:000334",
+      "label": "Woodworking",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000334",
+          "label": "Woodworking",
+          "meaning_comparison": "Same registered Woodworking meaning as local:authored:000334; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:equilibrium-moisture-content-of-wood",
+      "label": "Equilibrium moisture content of wood",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:fiber-saturation-point-in-wood",
+          "label": "Fiber saturation point in wood",
+          "meaning_comparison": "Air-conditioned moisture equilibrium differs from cell-wall saturation capacity and from directional drying shrinkage. Compared with pinned local:catalog:fiber-saturation-point-in-wood (Fiber saturation point in wood): Distinguish water bound in cell walls from free cavity water and locate the practical onset of moisture-sensitive wood properties..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "local:catalog:anisotropic-shrinkage-of-wood",
+          "label": "Anisotropic shrinkage of wood",
+          "meaning_comparison": "Air-conditioned moisture equilibrium differs from cell-wall saturation capacity and from directional drying shrinkage. Meaningful pinned comparator local:catalog:anisotropic-shrinkage-of-wood (Anisotropic shrinkage of wood): Explain why a board changes shape as drying shrinkage differs around growth rings, across rings, and along the grain..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:wood-sorption-hysteresis",
+      "label": "Wood sorption hysteresis",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:drying-stress-reversal-in-lumber",
+          "label": "Drying stress reversal in lumber",
+          "meaning_comparison": "Path-dependent equilibrium moisture uptake differs from changing mechanical shell/core stress during lumber drying. Compared with pinned local:catalog:drying-stress-reversal-in-lumber (Drying stress reversal in lumber): Trace how a drying board shifts from outer-shell tension to inner-core tension and can develop hidden cracks..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:end-grain-gluing",
+      "label": "End-grain gluing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1540333",
+          "label": "Dovetail joint",
+          "meaning_comparison": "Adhesive overpenetration at porous end grain is a material bonding problem, not the geometry of a dovetail joint. Compared with pinned Q1540333 (Dovetail joint): Compare dovetail interlocking geometry with choices about visible and concealed joinery..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:steam-bending",
+      "label": "Steam bending",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:research-batch-001:springback-in-sheet-metal-bending",
+          "label": "Springback in sheet-metal bending",
+          "meaning_comparison": "Heat/moisture plasticization of wood differs from elastic recovery after bending sheet metal; source-specific restraint and drying matter. Compared with pinned local:catalog:research-batch-001:springback-in-sheet-metal-bending (Springback in sheet-metal bending): Distinguish elastic recovery during unloading from the permanent bend..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        },
+        {
+          "id": "Q7202074",
+          "label": "Plastic bending",
+          "meaning_comparison": "Heat/moisture plasticization of wood differs from elastic recovery after bending sheet metal; source-specific restraint and drying matter. Meaningful pinned comparator Q7202074 (Plastic bending): Behavior of some ductile materials.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:paper-grain-direction-in-bookbinding",
+      "label": "Paper grain direction in bookbinding",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000347",
+          "label": "Bookbinding",
+          "meaning_comparison": "Directional fiber alignment changes folding and wet expansion; this is a material-behavior application within bookbinding, not the whole craft. Compared with pinned local:authored:000347 (Bookbinding): Assembling pages and covers into durable books..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:clay-drying-shrinkage",
+      "label": "Clay drying shrinkage",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000338",
+          "label": "Pottery",
+          "meaning_comparison": "Particle packing as water leaves clay is a pre-firing shrinkage mechanism, distinct from pottery's firing transformation. Compared with pinned local:authored:000338 (Pottery): Forming and firing clay into vessels and other objects..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:leather-temper",
+      "label": "Leather temper",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q286",
+          "label": "Leather",
+          "meaning_comparison": "Finished leather's pliability is distinct from the leather material and from hide thickness; it is also not a musical temperament or heat-treatment process. Compared with pinned Q286 (Leather): durable and flexible material created by the tanning of animal rawhide and skin.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:mortise-and-tenon-joint",
+      "label": "Mortise-and-tenon joint",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1540333",
+          "label": "Dovetail joint",
+          "meaning_comparison": "A projection fitting a recess and shoulders differs from a dovetail's tapered interlocking pins/tails. Compared with pinned Q1540333 (Dovetail joint): Compare dovetail interlocking geometry with choices about visible and concealed joinery..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "Q1540333",
+      "label": "Dovetail joint",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1540333",
+          "label": "Dovetail joint",
+          "meaning_comparison": "Same registered Dovetail joint meaning as Q1540333; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:drawboring",
+      "label": "Drawboring",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1540333",
+          "label": "Dovetail joint",
+          "meaning_comparison": "Offset peg holes draw a mortise-and-tenon tight; this assembly mechanism differs from the joint geometry itself or dovetail locking. Compared with pinned Q1540333 (Dovetail joint): Compare dovetail interlocking geometry with choices about visible and concealed joinery..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:kerf-bending",
+      "label": "Kerf bending",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:research-batch-001:springback-in-sheet-metal-bending",
+          "label": "Springback in sheet-metal bending",
+          "meaning_comparison": "Relief cuts leaving a web permit bending by material removal, distinct from steam softening or metal springback. Compared with pinned local:catalog:research-batch-001:springback-in-sheet-metal-bending (Springback in sheet-metal bending): Distinguish elastic recovery during unloading from the permanent bend..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:french-cleat",
+      "label": "French cleat",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1540333",
+          "label": "Dovetail joint",
+          "meaning_comparison": "Removable fixture support by paired wall bevels differs from a dovetail joining board ends. Compared with pinned Q1540333 (Dovetail joint): Compare dovetail interlocking geometry with choices about visible and concealed joinery..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:story-stick",
+      "label": "Story stick",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000334",
+          "label": "Woodworking",
+          "meaning_comparison": "A full-scale physical dimension reference differs from general measuring numbers or woodworking as a craft. Compared with pinned local:authored:000334 (Woodworking): Shaping and joining wood to create practical or decorative objects..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:scribing-to-fit",
+      "label": "Scribing to fit",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000334",
+          "label": "Woodworking",
+          "meaning_comparison": "Copying an existing contour to fit a component is a specific fitting operation, distinct from decorative scribing or generic straight measurement. Compared with pinned local:authored:000334 (Woodworking): Shaping and joining wood to create practical or decorative objects..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:sharpening-burr",
+      "label": "Sharpening burr",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q237105",
+          "label": "Sharpening",
+          "meaning_comparison": "The fragile wire edge is a temporary result of sharpening and target of honing, not the entire sharpening process. Compared with pinned Q237105 (Sharpening): process of creating or refining a sharp edge of appropriate shape on a tool or implement designed for cutting.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:authored:000340",
+      "label": "Weaving",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000340",
+          "label": "Weaving",
+          "meaning_comparison": "Same registered Weaving meaning as local:authored:000340; preserve the registered control, aliases and prior provenance. A changed example does not create a new learning identity.",
+          "reviewer_decision": "equivalent_control"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:warp-tension",
+      "label": "Warp tension",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1391023",
+          "label": "Shed (weaving)",
+          "meaning_comparison": "Managed yarn tension is a force condition enabling shed formation; it is not the shed opening itself. Compared with pinned Q1391023 (Shed (weaving)): temporary separation between upper and lower warp yarns through which the weft is woven.",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:bias-facings",
+      "label": "Bias facings",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "meaning_comparison": "A bias-oriented strip provides a conformable curved-edge facing; distinct from an entire bias-cut garment or generic sewing. Compared with pinned local:authored:000345 (Sewing): Constructing and altering items through stitched fabric pieces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:staystitching",
+      "label": "Staystitching",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "meaning_comparison": "Pre-assembly single-layer stabilization differs from a joining seam and from securing a facing after assembly. Compared with pinned local:authored:000345 (Sewing): Constructing and altering items through stitched fabric pieces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:understitching",
+      "label": "Understitching",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "meaning_comparison": "Securing seam allowance to a facing controls its roll; distinct from pre-assembly staystitching. Compared with pinned local:authored:000345 (Sewing): Constructing and altering items through stitched fabric pieces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:french-seam",
+      "label": "French seam",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "meaning_comparison": "A two-pass seam encloses the first seam's raw edges; distinct from a flat-felled seam secured flat. Compared with pinned local:authored:000345 (Sewing): Constructing and altering items through stitched fabric pieces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:flat-felled-seam",
+      "label": "Flat-felled seam",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "meaning_comparison": "An enclosed seam folded and stitched flat has a distinct construction from a French seam. Compared with pinned local:authored:000345 (Sewing): Constructing and altering items through stitched fabric pieces..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:knitting-gauge",
+      "label": "Knitting gauge",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000341",
+          "label": "Knitting",
+          "meaning_comparison": "Stitch/row density determines knitted dimensions; distinct from loop formation or knitting as a whole. Compared with pinned local:authored:000341 (Knitting): Creating textiles from interlocking loops of yarn..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:blocking-knitted-fabric",
+      "label": "Blocking knitted fabric",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000341",
+          "label": "Knitting",
+          "meaning_comparison": "Post-knitting shaping/finishing changes dimensions without forming new loops; distinct from gauge as a measured density. Compared with pinned local:authored:000341 (Knitting): Creating textiles from interlocking loops of yarn..",
+          "reviewer_decision": "distinct_or_nonselected_baseline_comparator"
+        }
+      ]
+    }
+  ]
+}

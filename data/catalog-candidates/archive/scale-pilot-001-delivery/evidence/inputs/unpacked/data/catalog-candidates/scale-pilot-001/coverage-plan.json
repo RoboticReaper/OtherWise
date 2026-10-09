@@ -1,0 +1,337 @@
+{
+  "schema_version": 1,
+  "pilot_id": "scale-pilot-001",
+  "preparation_status": "prepared",
+  "research_status": "not_started",
+  "merge_validation_status": "not_run",
+  "workflow": "workspace-enabled agent research; local tools for indexing, validation and candidate assembly",
+  "target_accepted_cards": 1000,
+  "target_new_learning_identities": 800,
+  "target_new_fine_subjects": 600,
+  "target_named_subjects": 100,
+  "minimum_new_ambiguous_name_groups": 3,
+  "batch_count": 5,
+  "baseline_identity_count_by_id": 7224,
+  "baseline_inventory_fingerprint": "7f771750100bfe65c63a4e12fa067f1236bbe7d8a78657459076d7f5ce3709ad",
+  "baseline_inputs": [
+    {
+      "path": "data/topics.json",
+      "sha256": "1378e2cb37b2c3b648c2319c6303dbbf6380f20d2f0ff10fe8db8a2f62bd2f44"
+    },
+    {
+      "path": "data/discovery_graph.json",
+      "sha256": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309"
+    },
+    {
+      "path": "data/recommendation-identities.json",
+      "sha256": "e9968d8e3d1f317b3bcd42c42efd9a1e44305d210464be7427416576a64bf67b"
+    },
+    {
+      "path": "data/catalog-candidates/research-batch-001.json",
+      "sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131"
+    },
+    {
+      "path": "data/catalog-candidates/research-batch-002.json",
+      "sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e"
+    }
+  ],
+  "targets_are": "Pilot coverage and yield goals; evidence-based admission takes priority and documented shortfalls are allowed. They are not universal catalog quotas.",
+  "scope_policy": {
+    "allowed": [
+      "broad_field",
+      "topic",
+      "idea",
+      "facet_or_application"
+    ],
+    "each_batch_represents_all_scopes": true,
+    "fixed_scope_quotas": false,
+    "scope_is_difficulty": false
+  },
+  "assignment_policy": "One owner per primary domain and reserved concept ID. Secondary domains may cross assignments; central reconciliation precedes drafting.",
+  "minimum_accepted_per_starting_subfield": 5,
+  "subfield_policy": "Starting research assignments and reporting units, not an asserted ontology. Expand or revise them with a documented source-based reason. Count each accepted concept in one primary subfield.",
+  "per_batch_targets": {
+    "accepted_cards": 200,
+    "new_learning_identities_at_least": 160,
+    "new_fine_subjects_at_least": 120,
+    "existing_controls_range": [
+      20,
+      40
+    ]
+  },
+  "audit": {
+    "per_batch_random_new": 20,
+    "per_batch_risk_selected": 20,
+    "freeze_before_checking": true,
+    "seed_template": "OtherWise-scale-pilot-001:{batch_id}:source-audit",
+    "sampling_rule": "Sort new IDs by the hexadecimal SHA-256 of UTF-8 seed + newline + concept ID; take the first 20. Freeze the full frame, seed, selected IDs and pre-audit candidate hash.",
+    "risk_sampling_rule": "Choose 20 additional IDs with no overlap, covering sources, scopes, assumptions, meanings and relation assertions.",
+    "pool_random_and_risk_as_error_rate": false
+  },
+  "stop_rules": {
+    "maximum_proposed_candidates_per_batch": 300,
+    "maximum_accepted_cards_per_batch": 200,
+    "attempts_per_failing_url": 2,
+    "alternative_sources_per_unresolved_candidate": 3,
+    "reported_shortfall": "Return a valid partial batch and explicit reasons when the bounds are exhausted.",
+    "repeat_failure": "Pause further batches when the same substantive identity/source/relationship failure recurs across two batches; record corrective action before proceeding."
+  },
+  "outputs": {
+    "combined_catalog": "data/catalog-candidates/scale-pilot-001/catalog.json",
+    "selection_manifest": "data/catalog-candidates/scale-pilot-001/selection-manifest.json",
+    "identity_decisions": "data/catalog-candidates/scale-pilot-001/identity-decisions.json",
+    "baseline_index": "data/catalog-candidates/scale-pilot-001/baseline-index.json",
+    "readiness_report": "docs/catalog-scale-pilot-001-results.md",
+    "reproducible_audit_artifacts": "data/catalog-candidates/scale-pilot-001/audits/",
+    "merge_validation_evidence": "data/catalog-candidates/scale-pilot-001/merge-validation/"
+  },
+  "batches": [
+    {
+      "id": "research-batch-003",
+      "title": "Life, environment and everyday practice",
+      "output": "data/catalog-candidates/research-batch-003.json",
+      "target_accepted_cards": 200,
+      "primary_domains": [
+        {
+          "domain": "Biology & nature",
+          "target_cards": 45,
+          "starting_subfields": [
+            "Genetics and development",
+            "Ecology and species interactions",
+            "Evolution and biological mechanisms"
+          ]
+        },
+        {
+          "domain": "Health & medicine",
+          "target_cards": 45,
+          "starting_subfields": [
+            "Physiological regulation",
+            "Measurement and diagnostic methods",
+            "Medical history and evidence"
+          ]
+        },
+        {
+          "domain": "Earth & environment",
+          "target_cards": 45,
+          "starting_subfields": [
+            "Geological processes",
+            "Atmospheric and ocean processes",
+            "Environmental measurement and restoration"
+          ]
+        },
+        {
+          "domain": "Food & agriculture",
+          "target_cards": 40,
+          "starting_subfields": [
+            "Cultivation and crop systems",
+            "Food chemistry and preparation",
+            "Agricultural technologies and history"
+          ]
+        },
+        {
+          "domain": "Home & crafts",
+          "target_cards": 25,
+          "starting_subfields": [
+            "Material behavior in making",
+            "Construction and repair methods",
+            "Textile and domestic craft techniques"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "research-batch-004",
+      "title": "Physical science, engineering and mathematics",
+      "output": "data/catalog-candidates/research-batch-004.json",
+      "target_accepted_cards": 200,
+      "primary_domains": [
+        {
+          "domain": "Chemistry & materials",
+          "target_cards": 50,
+          "starting_subfields": [
+            "Chemical reactions and equilibrium",
+            "Material structures and properties",
+            "Analytical and manufacturing methods"
+          ]
+        },
+        {
+          "domain": "Physics & astronomy",
+          "target_cards": 50,
+          "starting_subfields": [
+            "Mechanics and fields",
+            "Light, matter and measurement",
+            "Astronomical objects and observing methods"
+          ]
+        },
+        {
+          "domain": "Engineering & transport",
+          "target_cards": 50,
+          "starting_subfields": [
+            "Structures and mechanical design",
+            "Energy, propulsion and control",
+            "Transport systems and engineered case studies"
+          ]
+        },
+        {
+          "domain": "Mathematics",
+          "target_cards": 50,
+          "starting_subfields": [
+            "Geometry and topology",
+            "Discrete structures and algebra",
+            "Probability and mathematical modeling"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "research-batch-005",
+      "title": "Computing, learning, economics and social organization",
+      "output": "data/catalog-candidates/research-batch-005.json",
+      "target_accepted_cards": 200,
+      "primary_domains": [
+        {
+          "domain": "Computing & information",
+          "target_cards": 60,
+          "starting_subfields": [
+            "Algorithms and information representation",
+            "Programming and distributed systems",
+            "Security and computing history"
+          ]
+        },
+        {
+          "domain": "Learning & language",
+          "target_cards": 45,
+          "starting_subfields": [
+            "Language structure and meaning",
+            "Language change and communication",
+            "Learning mechanisms and instructional methods"
+          ]
+        },
+        {
+          "domain": "Economics & organizations",
+          "target_cards": 55,
+          "starting_subfields": [
+            "Market mechanisms and information",
+            "Organizational coordination and institutions",
+            "Economic history and documented business cases"
+          ]
+        },
+        {
+          "domain": "Society & relationships",
+          "target_cards": 40,
+          "starting_subfields": [
+            "Social interaction and networks",
+            "Social institutions and collective behavior",
+            "Communication and relationship mechanisms"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "research-batch-006",
+      "title": "History, places, religion and visual or literary culture",
+      "output": "data/catalog-candidates/research-batch-006.json",
+      "target_accepted_cards": 200,
+      "primary_domains": [
+        {
+          "domain": "History & culture",
+          "target_cards": 45,
+          "starting_subfields": [
+            "Historical methods and material evidence",
+            "Cultural exchange and everyday history",
+            "Institutions, events and historical change"
+          ]
+        },
+        {
+          "domain": "Geography & travel",
+          "target_cards": 35,
+          "starting_subfields": [
+            "Spatial analysis and mapping",
+            "Settlement, movement and regional landscapes",
+            "Place-based learning cases"
+          ]
+        },
+        {
+          "domain": "Religion & spirituality",
+          "target_cards": 35,
+          "starting_subfields": [
+            "Rituals and material practices",
+            "Texts and interpretive traditions",
+            "Religious history and institutions"
+          ]
+        },
+        {
+          "domain": "Literature & storytelling",
+          "target_cards": 45,
+          "starting_subfields": [
+            "Narrative form and perspective",
+            "Genre and literary techniques",
+            "Works, authors and literary history"
+          ]
+        },
+        {
+          "domain": "Visual arts & design",
+          "target_cards": 40,
+          "starting_subfields": [
+            "Image-making methods and materials",
+            "Design principles and perception",
+            "Works, movements and historical design cases"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "research-batch-007",
+      "title": "Games, music, mind, philosophy and public institutions",
+      "output": "data/catalog-candidates/research-batch-007.json",
+      "target_accepted_cards": 200,
+      "primary_domains": [
+        {
+          "domain": "Games & sports",
+          "target_cards": 45,
+          "starting_subfields": [
+            "Rules and strategic mechanisms",
+            "Movement and sporting phenomena",
+            "Games, traditions and sporting history"
+          ]
+        },
+        {
+          "domain": "Music & performance",
+          "target_cards": 40,
+          "starting_subfields": [
+            "Musical structure and transformation",
+            "Acoustics, instruments and performance",
+            "Works, traditions and musical history"
+          ]
+        },
+        {
+          "domain": "Mind & behavior",
+          "target_cards": 45,
+          "starting_subfields": [
+            "Attention, perception and memory",
+            "Judgment, motivation and behavior",
+            "Psychological methods and qualified findings"
+          ]
+        },
+        {
+          "domain": "Philosophy",
+          "target_cards": 35,
+          "starting_subfields": [
+            "Ethical arguments and thought experiments",
+            "Knowledge, inference and reasoning",
+            "Metaphysics and philosophical traditions"
+          ]
+        },
+        {
+          "domain": "Politics & law",
+          "target_cards": 35,
+          "starting_subfields": [
+            "Institutional design and political processes",
+            "Legal procedures and interpretive questions",
+            "Public-policy mechanisms and historical cases"
+          ]
+        }
+      ]
+    }
+  ]
+}

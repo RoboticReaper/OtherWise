@@ -1,0 +1,53 @@
+test_all_regressions_run_isolated_and_leave_canonical_files_unchanged (__main__.ActualRegressionRunnerTests.test_all_regressions_run_isolated_and_leave_canonical_files_unchanged) ... FAIL
+test_existing_run_directory_is_never_overwritten (__main__.ActualRegressionRunnerTests.test_existing_run_directory_is_never_overwritten) ... FAIL
+test_missing_actual_ambiguity_is_disclosed_not_synthetically_claimed (__main__.ActualRegressionRunnerTests.test_missing_actual_ambiguity_is_disclosed_not_synthetically_claimed) ... FAIL
+test_missing_final_authorization_is_refused (__main__.ActualRegressionRunnerTests.test_missing_final_authorization_is_refused) ... FAIL
+test_stale_hashes_refuse_to_run_without_writing_artifacts (__main__.ActualRegressionRunnerTests.test_stale_hashes_refuse_to_run_without_writing_artifacts) ... FAIL
+
+======================================================================
+FAIL: test_all_regressions_run_isolated_and_leave_canonical_files_unchanged (__main__.ActualRegressionRunnerTests.test_all_regressions_run_isolated_and_leave_canonical_files_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_actual_regressions.py", line 43, in test_all_regressions_run_isolated_and_leave_canonical_files_unchanged
+    p=self.invoke();self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/actual_regression_runner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_existing_run_directory_is_never_overwritten (__main__.ActualRegressionRunnerTests.test_existing_run_directory_is_never_overwritten)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_actual_regressions.py", line 72, in test_existing_run_directory_is_never_overwritten
+    self.assertIn('run_directory_exists',p.stdout+p.stderr)
+AssertionError: 'run_directory_exists' not found in "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/actual_regression_runner.py': [Errno 2] No such file or directory\n"
+
+======================================================================
+FAIL: test_missing_actual_ambiguity_is_disclosed_not_synthetically_claimed (__main__.ActualRegressionRunnerTests.test_missing_actual_ambiguity_is_disclosed_not_synthetically_claimed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_actual_regressions.py", line 83, in test_missing_actual_ambiguity_is_disclosed_not_synthetically_claimed
+    self.assertEqual(p.returncode,1,p.stdout+p.stderr)
+AssertionError: 2 != 1 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/actual_regression_runner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_missing_final_authorization_is_refused (__main__.ActualRegressionRunnerTests.test_missing_final_authorization_is_refused)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_actual_regressions.py", line 77, in test_missing_final_authorization_is_refused
+    self.assertIn('final_input_authorization_required',p.stdout+p.stderr)
+AssertionError: 'final_input_authorization_required' not found in "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/actual_regression_runner.py': [Errno 2] No such file or directory\n"
+
+======================================================================
+FAIL: test_stale_hashes_refuse_to_run_without_writing_artifacts (__main__.ActualRegressionRunnerTests.test_stale_hashes_refuse_to_run_without_writing_artifacts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_actual_regressions.py", line 66, in test_stale_hashes_refuse_to_run_without_writing_artifacts
+    self.assertIn('input_hash_mismatch',p.stdout+p.stderr)
+AssertionError: 'input_hash_mismatch' not found in "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/actual_regression_runner.py': [Errno 2] No such file or directory\n"
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.084s
+
+FAILED (failures=5)

@@ -1,0 +1,16 @@
+{
+  "errors": [
+    {
+      "code": "self_relation",
+      "reason": "fixture:a has a self-relation, possibly introduced by equivalence remapping; review or remove it explicitly."
+    }
+  ],
+  "input_artifacts": [
+    {
+      "input_text": "{\n  \"batch\": {\n    \"completion_status\": \"synthetic_fixture\",\n    \"fixture\": true,\n    \"id\": \"research-batch-003\",\n    \"revision\": 1,\n    \"selection_manifest\": []\n  },\n  \"concepts\": [\n    {\n      \"aliases\": [\n        \"Capillarity\"\n      ],\n      \"card\": \"This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.\",\n      \"card_version\": 1,\n      \"domains\": [\n        \"Mathematics\"\n      ],\n      \"entity_kind\": \"idea\",\n      \"evidence\": [\n        {\n          \"locator\": \"Fixture section 1\",\n          \"note\": \"Supports the synthetic explanatory claim.\",\n          \"source_id\": \"r1\"\n        }\n      ],\n      \"id\": \"fixture:a\",\n      \"identity_urls\": [\n        \"https://example.org/fixture/a\"\n      ],\n      \"imported_records\": [],\n      \"label\": \"Capillarity\",\n      \"learning_takeaway\": \"Understand this synthetic mechanism for the labeled fixture only.\",\n      \"original_description\": null,\n      \"relations\": [\n        {\n          \"assertion\": \"editorial\",\n          \"note\": \"This intentionally circular relation must be quarantined.\",\n          \"source_ids\": [\n            \"r1\"\n          ],\n          \"target_id\": \"fixture:a\",\n          \"type\": \"related_to\"\n        }\n      ],\n      \"scope\": \"idea\"\n    }\n  ],\n  \"issues\": [],\n  \"schema_version\": 1,\n  \"sources\": [\n    {\n      \"id\": \"r1\",\n      \"locator\": \"Fixture section 1\",\n      \"retrieved_at\": \"2024-04-03T12:34:56+00:00\",\n      \"revision\": null,\n      \"title\": \"Synthetic fixture reference\",\n      \"url\": \"https://example.org/fixture/a\"\n    }\n  ],\n  \"validation\": {}\n}\n",
+      "path": "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/fixtures/self-relation.json",
+      "sha256": "b29063fd2ff46e502366dc32489e1fed71cdabee2e74692a6f9e0e92e129deb0"
+    }
+  ],
+  "status": "quarantined"
+}

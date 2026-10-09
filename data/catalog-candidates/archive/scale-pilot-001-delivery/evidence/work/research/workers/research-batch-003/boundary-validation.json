@@ -1,0 +1,181 @@
+{
+  "batch_id": "research-batch-003",
+  "checked_at": "2026-10-08T22:08:34.848864+00:00",
+  "status": "passed",
+  "candidate_revision": 2,
+  "candidate_revised_sha256": "e9dafbba2dfeb6d382a48cc261ac675f3da0fbae505ba36f288afaa55fa972ab",
+  "prior_candidate_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+  "checks": [
+    {
+      "check": "original_authored_candidate_exact_hash",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "initial_independent_audit_exact_hash",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "every_original_author_and_frozen_audit_artifact_preserved",
+      "status": "passed",
+      "details": {
+        "files": 17
+      }
+    },
+    {
+      "check": "approved_selection_still_pinned",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "global_selection_still_pinned",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "baseline_still_pinned",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "imported_rows_still_pinned",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "all_200_reserved_ids_exactly_once",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "identity_order_and_memberships_unchanged",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "approved_labels_scopes_kinds_and_domains_retained",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "full_imported_rows_and_original_descriptions_preserved",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "all_200_substantive_boundary_records",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "all_relationships_covered_by_boundary_review",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "source_records_and_reference_ids_unchanged",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "all_reused_source_capture_files_present",
+      "status": "passed",
+      "details": {
+        "sources": 151,
+        "distinct_capture_files": 44
+      }
+    },
+    {
+      "check": "every_relation_target_and_source_resolves",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "relationship_targets_types_assertions_and_premise_bundles_unchanged",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "exact_field_diff_matches_correction_log",
+      "status": "passed",
+      "details": {
+        "actual_field_changes": 20,
+        "logged_field_changes": 20
+      }
+    },
+    {
+      "check": "changed_versions_advance_one_and_unchanged_versions_retained",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "per_record_versions_and_decisions_match",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "exact_prior_hash_and_versions_in_each_correction",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "current_batch_version_decisions_match_completed_cards",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "prior_version_decisions_retained",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "every_card_in_30_to_50_word_budget",
+      "status": "passed",
+      "details": {
+        "minimum": 39,
+        "maximum": 49
+      }
+    },
+    {
+      "check": "revised_batch_is_next_revision",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "LTEE_aerobic_boundary_repaired_and_relation_unchanged",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "no_identity_replacement_or_exclusion",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "no_new_access_attempts_or_alternate_sources",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "retained_records_are_completely_unchanged",
+      "status": "passed",
+      "details": null
+    }
+  ],
+  "counts": {
+    "reviewed_ids": 200,
+    "changed_ids": 11,
+    "unchanged_ids": 189,
+    "changed_card_texts": 11,
+    "changed_evidence_notes": 8,
+    "changed_relationship_notes": 1,
+    "changed_source_records": 0,
+    "new_sources": 0,
+    "total_sources": 151,
+    "total_relations": 200,
+    "excluded_ids": 0,
+    "new_identity_ids": 0
+  },
+  "scope": "Structural, exact-diff, version and preservation checks complement the substantive per-card review; they are not an independent factual audit."
+}

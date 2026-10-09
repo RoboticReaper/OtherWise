@@ -1,0 +1,4411 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-08T19:58:58.979082+00:00",
+  "status": "diagnostic_only_not_final_admission",
+  "inputs": [
+    {
+      "batch_id": "research-batch-003",
+      "path": "research/workers/research-batch-003/selection.proposed.json",
+      "sha256": "48a51ab73d0c35d05eb3f8360ffb328be65fcb3ebbc375d68b025edb0e7c2619",
+      "completed_at": null,
+      "proposals": 200
+    },
+    {
+      "batch_id": "research-batch-004",
+      "path": "research/workers/research-batch-004/selection.proposed.json",
+      "sha256": "e9be6b4ae858d95c1a0d81666f1dc0ea270484f95b7d44d87934f7cc2e554ba3",
+      "completed_at": "2026-10-08T19:36:35.282200+00:00",
+      "proposals": 211
+    },
+    {
+      "batch_id": "research-batch-005",
+      "path": "research/workers/research-batch-005/selection.proposed.json",
+      "sha256": "e21a304a3b2dd81314af01f7128eca6fa0cbaf60ba1ca8175930e05e1130b7fd",
+      "completed_at": "2026-10-08T19:33:51.417018Z",
+      "proposals": 200
+    },
+    {
+      "batch_id": "research-batch-006",
+      "path": "research/workers/research-batch-006/selection.proposed.json",
+      "sha256": "9e2f06336f9ca84a3a46b44244a28186ee98a33253b7901be5715f33e9a5997b",
+      "completed_at": "2026-10-08T19:50:29.285430+00:00",
+      "proposals": 202
+    },
+    {
+      "batch_id": "research-batch-007",
+      "path": "research/workers/research-batch-007/selection.proposed.json",
+      "sha256": "bad8da39b70c8421b410c2c26e7c3a5d2d3e0f2716a4bfd60cb925d94be68df1",
+      "completed_at": "2026-10-08T19:39:57.542918Z",
+      "proposals": 204
+    }
+  ],
+  "corrections_sha256": "f42a3ce33e286e73f8ad83b5a477adf5253f100bfb1371906b21d93d3ab1ceb9",
+  "selected_counts": {
+    "research-batch-003": 200,
+    "research-batch-004": 200,
+    "research-batch-005": 200,
+    "research-batch-006": 200,
+    "research-batch-007": 200
+  },
+  "same_id_cross_batch": {},
+  "shared_names_cross_batch": {
+    "homology": [
+      {
+        "batch": "research-batch-003",
+        "id": "local:catalog:homology-biology",
+        "label": "Homology (biology)",
+        "matched_phrase": "Homology"
+      },
+      {
+        "batch": "research-batch-004",
+        "id": "Q1144780",
+        "label": "Homology",
+        "matched_phrase": "Homology"
+      }
+    ],
+    "bond": [
+      {
+        "batch": "research-batch-004",
+        "id": "Q44424",
+        "label": "Chemical bond",
+        "matched_phrase": "bond"
+      },
+      {
+        "batch": "research-batch-005",
+        "id": "local:catalog:bond-finance",
+        "label": "Bond (finance)",
+        "matched_phrase": "Bond"
+      }
+    ],
+    "pitch": [
+      {
+        "batch": "research-batch-004",
+        "id": "local:catalog:pitch-material",
+        "label": "Pitch (material)",
+        "matched_phrase": "Pitch"
+      },
+      {
+        "batch": "research-batch-007",
+        "id": "local:catalog:pitch-music",
+        "label": "Pitch (music)",
+        "matched_phrase": "Pitch"
+      }
+    ]
+  },
+  "ranked_cross_batch_pairs": [
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 36,
+        "effective_id": "local:catalog:homology-biology",
+        "label": "Homology (biology)",
+        "learning_takeaway": "Identify similarity inherited from common ancestry, even when present-day functions differ."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 68,
+        "effective_id": "Q1144780",
+        "label": "Homology",
+        "learning_takeaway": "Algebraic groups distinguish cycles that bound regions from cycles detecting holes in a space."
+      },
+      "score": 0.3571,
+      "word_score": 0.1622,
+      "label_score": 0.7191
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 26,
+        "effective_id": "local:catalog:ecosystem-engineering",
+        "label": "Ecosystem engineering",
+        "learning_takeaway": "Explain how organisms change physical habitat for other species, using beaver dams."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 151,
+        "effective_id": "Q11023",
+        "label": "Engineering",
+        "learning_takeaway": "Turn problems into tested solutions through iterative design, prototyping, and evaluation."
+      },
+      "score": 0.3061,
+      "word_score": 0.0908,
+      "label_score": 0.7061
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 20,
+        "effective_id": "Q11469",
+        "label": "Glass",
+        "learning_takeaway": "Disordered atomic arrangements help explain why glass softens over a range of temperatures."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 82,
+        "effective_id": "local:catalog:glass-armonica",
+        "label": "Glass armonica",
+        "learning_takeaway": "Connect friction-driven glass vibration with Franklin's rotating-bowl instrument."
+      },
+      "score": 0.3036,
+      "word_score": 0.1366,
+      "label_score": 0.6136
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 72,
+        "effective_id": "Q727035",
+        "label": "Adjacency matrix",
+        "learning_takeaway": "Encode graph edges in a matrix while recognizing that vertex relabeling changes the matrix, not the graph."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 190,
+        "effective_id": "local:catalog:adjacency-pair",
+        "label": "Adjacency pair",
+        "learning_takeaway": "See how an initial conversational action makes a specific kind of response relevant, such as an answer after a question."
+      },
+      "score": 0.3023,
+      "word_score": 0.0902,
+      "label_score": 0.6961
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 70,
+        "effective_id": "local:catalog:diagnostic-sensitivity",
+        "label": "Diagnostic sensitivity",
+        "learning_takeaway": "Read sensitivity as the chance of a positive test among people who have the target condition."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 146,
+        "effective_id": "local:catalog:epistemic-sensitivity",
+        "label": "Epistemic sensitivity",
+        "learning_takeaway": "Ask whether someone would stop believing a claim if it were false."
+      },
+      "score": 0.291,
+      "word_score": 0.1602,
+      "label_score": 0.534
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 115,
+        "effective_id": "local:catalog:atmospheric-river",
+        "label": "Atmospheric river",
+        "learning_takeaway": "Connect a concentrated corridor of water-vapor transport with both useful precipitation and flood risk."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 181,
+        "effective_id": "local:catalog:atmospheric-perspective",
+        "label": "Atmospheric perspective",
+        "learning_takeaway": "Changing color and tone as a landscape recedes can represent the effect of atmosphere and create pictorial depth."
+      },
+      "score": 0.2775,
+      "word_score": 0.0755,
+      "label_score": 0.6527
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 197,
+        "effective_id": "local:catalog:fail-safe-track-circuit-signalling",
+        "label": "Fail-safe track-circuit signalling",
+        "learning_takeaway": "Many circuit failures are treated as occupied track, prioritizing safe train separation over uninterrupted service."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 44,
+        "effective_id": "local:catalog:fail-safe-defaults",
+        "label": "Fail-safe defaults",
+        "learning_takeaway": "Deny access unless a permission rule explicitly allows it so missing rules tend to fail closed."
+      },
+      "score": 0.2745,
+      "word_score": 0.2082,
+      "label_score": 0.3976
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 56,
+        "effective_id": "local:catalog:stereographic-projection",
+        "label": "Stereographic projection",
+        "learning_takeaway": "Project from a sphere’s pole onto a plane to translate spherical locations into planar coordinates."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 47,
+        "effective_id": "Q186386",
+        "label": "Map projection",
+        "learning_takeaway": "Flattening Earth trades off shape, area, distance and direction, so projection choice should follow a map’s purpose."
+      },
+      "score": 0.2571,
+      "word_score": 0.1064,
+      "label_score": 0.5372
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 171,
+        "effective_id": "local:catalog:pid-control",
+        "label": "PID control",
+        "learning_takeaway": "Combine present error, accumulated error, and error-rate feedback to regulate a system."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 136,
+        "effective_id": "local:catalog:span-of-control",
+        "label": "Span of control",
+        "learning_takeaway": "Choose how many people report directly to a manager, affecting oversight and the number of hierarchy layers."
+      },
+      "score": 0.2569,
+      "word_score": 0.0654,
+      "label_score": 0.6126
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 133,
+        "effective_id": "Q227467",
+        "label": "Atomic clock",
+        "learning_takeaway": "Tune an oscillator to an atomic resonance, then count its cycles to define elapsed time."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 25,
+        "effective_id": "local:catalog:atomic-commit",
+        "label": "Atomic commit",
+        "learning_takeaway": "Make a transaction appear all-or-nothing even though storage writes happen sequentially and can be interrupted."
+      },
+      "score": 0.2561,
+      "word_score": 0.1108,
+      "label_score": 0.5261
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 38,
+        "effective_id": "local:catalog:neutral-theory-of-molecular-evolution",
+        "label": "Neutral theory of molecular evolution",
+        "learning_takeaway": "Separate neutral genetic variation and drift from the claim that all evolution is nonadaptive."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 25,
+        "effective_id": "local:catalog:molecular-solid",
+        "label": "Molecular solid",
+        "learning_takeaway": "Neutral molecules form solids whose melting behavior depends on intermolecular attractions."
+      },
+      "score": 0.2529,
+      "word_score": 0.132,
+      "label_score": 0.4774
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 116,
+        "effective_id": "local:catalog:temperature-inversion",
+        "label": "Temperature inversion",
+        "learning_takeaway": "Explain how warmer air above cooler air can suppress mixing and trap near-surface pollution."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 49,
+        "effective_id": "local:catalog:melodic-inversion",
+        "label": "Melodic inversion",
+        "learning_takeaway": "Distinguish interval-preserving real inversion from key-preserving tonal inversion."
+      },
+      "score": 0.2503,
+      "word_score": 0.138,
+      "label_score": 0.4589
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 26,
+        "effective_id": "local:catalog:ecosystem-engineering",
+        "label": "Ecosystem engineering",
+        "learning_takeaway": "Explain how organisms change physical habitat for other species, using beaver dams."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 168,
+        "effective_id": "Q4917288",
+        "label": "Control engineering",
+        "learning_takeaway": "Use measured response and corrective action to make engineered systems follow desired behavior."
+      },
+      "score": 0.2488,
+      "word_score": 0.076,
+      "label_score": 0.5699
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 24,
+        "effective_id": "Q188230",
+        "label": "Ecological succession",
+        "learning_takeaway": "Trace community change after disturbance while allowing surviving organisms to shape recovery."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 125,
+        "effective_id": "local:catalog:ecological-validity",
+        "label": "Ecological validity",
+        "learning_takeaway": "Assess how closely a research setting represents real-world behavior."
+      },
+      "score": 0.247,
+      "word_score": 0.1204,
+      "label_score": 0.4822
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 112,
+        "effective_id": "local:catalog:damped-harmonic-motion",
+        "label": "Damped harmonic motion",
+        "learning_takeaway": "Dissipation removes oscillator energy so its amplitude declines rather than continuing indefinitely."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 61,
+        "effective_id": "Q576006",
+        "label": "String harmonic",
+        "learning_takeaway": "Compare lightly touching an open string with touching a separately stopped string."
+      },
+      "score": 0.2314,
+      "word_score": 0.0678,
+      "label_score": 0.5352
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 153,
+        "effective_id": "local:catalog:mechanical-strain",
+        "label": "Mechanical strain",
+        "learning_takeaway": "Describe deformation as a dimensionless change relative to original size or shape."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 181,
+        "effective_id": "local:catalog:role-strain",
+        "label": "Role strain",
+        "learning_takeaway": "Recognize competing or excessive demands within a single role even without a clash between separate roles."
+      },
+      "score": 0.2305,
+      "word_score": 0.1095,
+      "label_score": 0.4552
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 33,
+        "effective_id": "local:catalog:pitch-material",
+        "label": "Pitch (material)",
+        "learning_takeaway": "Pitch may shatter under a quick blow yet flow extremely slowly over years."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 58,
+        "effective_id": "local:catalog:pitch-music",
+        "label": "Pitch (music)",
+        "learning_takeaway": "Relate perceived high and low notes to their ordering on a keyboard."
+      },
+      "score": 0.2287,
+      "word_score": 0.1495,
+      "label_score": 0.3758
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 124,
+        "effective_id": "local:catalog:thin-film-interference",
+        "label": "Thin-film interference",
+        "learning_takeaway": "Reflections at two film surfaces combine according to optical path length and reflection phase shifts."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 91,
+        "effective_id": "local:catalog:proactive-interference",
+        "label": "Proactive interference",
+        "learning_takeaway": "Understand how an older memory can obstruct recall of newly learned information."
+      },
+      "score": 0.2278,
+      "word_score": 0.0865,
+      "label_score": 0.4903
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 82,
+        "effective_id": "local:catalog:style-shifting",
+        "label": "Style shifting",
+        "learning_takeaway": "Observe speakers changing variant frequencies with speaking context rather than assigning one fixed style to each class."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 55,
+        "effective_id": "local:catalog:musical-phase-shifting",
+        "label": "Musical phase shifting",
+        "learning_takeaway": "Compare gradual desynchronization with discrete shifts of a repeated pattern."
+      },
+      "score": 0.2277,
+      "word_score": 0.0898,
+      "label_score": 0.4839
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 185,
+        "effective_id": "local:catalog:assembling-perspective",
+        "label": "Assembling perspective",
+        "learning_takeaway": "Examine how gatherings form and act through observable component processes instead of treating a crowd as one mind."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 181,
+        "effective_id": "local:catalog:atmospheric-perspective",
+        "label": "Atmospheric perspective",
+        "learning_takeaway": "Changing color and tone as a landscape recedes can represent the effect of atmosphere and create pictorial depth."
+      },
+      "score": 0.2268,
+      "word_score": 0.0924,
+      "label_score": 0.4765
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 76,
+        "effective_id": "Q190375",
+        "label": "Historical linguistics",
+        "learning_takeaway": "Track changes through competing variants rather than treating a language as fixed across generations."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 15,
+        "effective_id": "local:catalog:historical-sourcing",
+        "label": "Historical sourcing",
+        "learning_takeaway": "A document’s author, purpose and production setting affect what it can count as evidence, even when its account differs from other documents."
+      },
+      "score": 0.2263,
+      "word_score": 0.075,
+      "label_score": 0.5074
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 93,
+        "effective_id": "local:catalog:elastic-rebound-theory",
+        "label": "Elastic rebound theory",
+        "learning_takeaway": "Explain earthquakes as sudden release of strain accumulated while rocks deform elastically."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 155,
+        "effective_id": "local:catalog:elastic-limit",
+        "label": "Elastic limit",
+        "learning_takeaway": "Distinguish recoverable deformation from permanent shape change when stress exceeds a material’s elastic limit."
+      },
+      "score": 0.2262,
+      "word_score": 0.1075,
+      "label_score": 0.4465
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 131,
+        "effective_id": "local:catalog:functional-organizational-structure",
+        "label": "Functional organizational structure",
+        "learning_takeaway": "Group specialists by expertise while recognizing the risk that departmental boundaries hinder coordination."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 105,
+        "effective_id": "local:catalog:functional-fixedness",
+        "label": "Functional fixedness",
+        "learning_takeaway": "See how an object's conventional use can hide an alternative solution."
+      },
+      "score": 0.2248,
+      "word_score": 0.1109,
+      "label_score": 0.4364
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 72,
+        "effective_id": "Q727035",
+        "label": "Adjacency matrix",
+        "learning_takeaway": "Encode graph edges in a matrix while recognizing that vertex relabeling changes the matrix, not the graph."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 133,
+        "effective_id": "local:catalog:matrix-organization",
+        "label": "Matrix organization",
+        "learning_takeaway": "Combine functional and project authority, gaining cross-functional coordination while creating potential dual-boss conflicts."
+      },
+      "score": 0.2245,
+      "word_score": 0.1315,
+      "label_score": 0.3972
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 164,
+        "effective_id": "local:catalog:triadic-closure",
+        "label": "Triadic closure",
+        "learning_takeaway": "Understand why two people sharing a friend are more likely to form a connection, without treating this as inevitable."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 148,
+        "effective_id": "local:catalog:epistemic-closure",
+        "label": "Epistemic closure",
+        "learning_takeaway": "Investigate whether competent deduction from known premises preserves knowledge."
+      },
+      "score": 0.2232,
+      "word_score": 0.0926,
+      "label_score": 0.4658
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 9,
+        "effective_id": "local:catalog:unicode-normalization",
+        "label": "Unicode normalization",
+        "learning_takeaway": "Transform equivalent character sequences into a common binary representation through decomposition, ordering, and optional recomposition."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 50,
+        "effective_id": "local:catalog:normalization-for-choropleth-maps",
+        "label": "Normalization for choropleth maps",
+        "learning_takeaway": "Dividing a count by a relevant denominator distinguishes prevalence or intensity from the size of a region’s population."
+      },
+      "score": 0.2226,
+      "word_score": 0.0901,
+      "label_score": 0.4687
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 87,
+        "effective_id": "local:catalog:james-lind",
+        "label": "James Lind",
+        "learning_takeaway": "Separate a useful controlled comparison from a correct explanation of why the treatment worked."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 10,
+        "effective_id": "local:catalog:james-naismith",
+        "label": "James Naismith",
+        "learning_takeaway": "See how indoor space and injury constraints shaped basketball's original design."
+      },
+      "score": 0.2223,
+      "word_score": 0.1029,
+      "label_score": 0.4442
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 177,
+        "effective_id": "local:catalog:equilibrium-moisture-content-of-wood",
+        "label": "Equilibrium moisture content of wood",
+        "learning_takeaway": "Relate a wood component’s stable moisture level to its surrounding air rather than one universally dry state."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 2,
+        "effective_id": "Q189520",
+        "label": "Chemical equilibrium",
+        "learning_takeaway": "At equilibrium forward and reverse reactions continue at equal rates; composition stays constant."
+      },
+      "score": 0.2204,
+      "word_score": 0.0692,
+      "label_score": 0.5012
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 124,
+        "effective_id": "local:catalog:thin-film-interference",
+        "label": "Thin-film interference",
+        "learning_takeaway": "Reflections at two film surfaces combine according to optical path length and reflection phase shifts."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 92,
+        "effective_id": "local:catalog:retroactive-interference",
+        "label": "Retroactive interference",
+        "learning_takeaway": "Understand how later learning can obstruct access to older information."
+      },
+      "score": 0.2201,
+      "word_score": 0.0917,
+      "label_score": 0.4586
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 83,
+        "effective_id": "local:catalog:mobius-inversion-formula",
+        "label": "Möbius inversion formula",
+        "learning_takeaway": "Recover an arithmetic function from sums over its divisors using Möbius-weighted cancellation."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 49,
+        "effective_id": "local:catalog:melodic-inversion",
+        "label": "Melodic inversion",
+        "learning_takeaway": "Distinguish interval-preserving real inversion from key-preserving tonal inversion."
+      },
+      "score": 0.2189,
+      "word_score": 0.1111,
+      "label_score": 0.4191
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 141,
+        "effective_id": "Q525309",
+        "label": "Integrated pest management",
+        "learning_takeaway": "Combine identification, prevention and selective interventions rather than treating every organism as a pest."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 200,
+        "effective_id": "local:catalog:impression-management",
+        "label": "Impression management",
+        "learning_takeaway": "Shape how others interpret a social performance through behavior, setting, and visible cues."
+      },
+      "score": 0.2185,
+      "word_score": 0.0941,
+      "label_score": 0.4495
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 114,
+        "effective_id": "Q3744733",
+        "label": "Mechanical resonance",
+        "learning_takeaway": "Repeated forcing near a natural frequency can accumulate a large oscillation from small pushes."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 62,
+        "effective_id": "Q7661371",
+        "label": "Sympathetic resonance",
+        "learning_takeaway": "Understand how shared harmonics transfer vibration through a guitar bridge."
+      },
+      "score": 0.2175,
+      "word_score": 0.1031,
+      "label_score": 0.4301
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 109,
+        "effective_id": "local:catalog:moral-hazard",
+        "label": "Moral hazard",
+        "learning_takeaway": "Trace how protection from losses can change behavior after insurance is in place."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 135,
+        "effective_id": "local:catalog:moral-luck",
+        "label": "Moral luck",
+        "learning_takeaway": "Investigate how moral assessment can depend on circumstances outside an agent's control."
+      },
+      "score": 0.2174,
+      "word_score": 0.1169,
+      "label_score": 0.4039
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 39,
+        "effective_id": "Q746284",
+        "label": "Gene duplication",
+        "learning_takeaway": "Explore how extra gene copies can alter dosage and contribute to genomic evolution."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 68,
+        "effective_id": "local:catalog:reduplication",
+        "label": "Reduplication",
+        "learning_takeaway": "Repeat all or part of a linguistic form to express a grammatical or meaning contrast."
+      },
+      "score": 0.2174,
+      "word_score": 0.0,
+      "label_score": 0.621
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 20,
+        "effective_id": "local:catalog:resource-partitioning",
+        "label": "Resource partitioning",
+        "learning_takeaway": "Explain how different food, places or feeding times can reduce direct competition."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 186,
+        "effective_id": "local:catalog:resource-mobilization-theory",
+        "label": "Resource mobilization theory",
+        "learning_takeaway": "Explain collective organizing partly through acquiring time, money, and people rather than grievances alone."
+      },
+      "score": 0.2172,
+      "word_score": 0.1106,
+      "label_score": 0.4151
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 108,
+        "effective_id": "local:catalog:inertial-reference-frame",
+        "label": "Inertial reference frame",
+        "learning_takeaway": "Distinguish physical interactions from extra inertial-force terms introduced by accelerated coordinates."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 174,
+        "effective_id": "local:catalog:reference-groups",
+        "label": "Reference groups",
+        "learning_takeaway": "Distinguish groups used as comparison standards from groups someone actually joins."
+      },
+      "score": 0.2162,
+      "word_score": 0.0901,
+      "label_score": 0.4505
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 69,
+        "effective_id": "local:catalog:laboratory-reference-intervals",
+        "label": "Laboratory reference intervals",
+        "learning_takeaway": "Explain why being outside a population reference range does not by itself establish disease."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 174,
+        "effective_id": "local:catalog:reference-groups",
+        "label": "Reference groups",
+        "learning_takeaway": "Distinguish groups used as comparison standards from groups someone actually joins."
+      },
+      "score": 0.2141,
+      "word_score": 0.111,
+      "label_score": 0.4057
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 180,
+        "effective_id": "local:catalog:steam-bending",
+        "label": "Steam bending",
+        "learning_takeaway": "Use heat and moisture to soften wood, then retain a curved shape while it cools and dries."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 163,
+        "effective_id": "local:catalog:neutral-axis-in-beam-bending",
+        "label": "Neutral axis in beam bending",
+        "learning_takeaway": "A bending beam has a zero-axial-stress line between tensile and compressive regions."
+      },
+      "score": 0.2116,
+      "word_score": 0.0873,
+      "label_score": 0.4423
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 171,
+        "effective_id": "local:catalog:pid-control",
+        "label": "PID control",
+        "learning_takeaway": "Combine present error, accumulated error, and error-rate feedback to regulate a system."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 50,
+        "effective_id": "local:catalog:access-control-list",
+        "label": "Access control list",
+        "learning_takeaway": "Associate an object with a list of principals authorized to access it."
+      },
+      "score": 0.2115,
+      "word_score": 0.0657,
+      "label_score": 0.4825
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 10,
+        "effective_id": "local:catalog:genetic-mapping",
+        "label": "Genetic mapping",
+        "learning_takeaway": "Infer marker order from joint inheritance rather than directly measuring physical DNA length."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 51,
+        "effective_id": "local:catalog:dasymetric-mapping",
+        "label": "Dasymetric mapping",
+        "learning_takeaway": "Ancillary information reallocates aggregate population away from uninhabited areas instead of assuming uniform density within census boundaries."
+      },
+      "score": 0.2113,
+      "word_score": 0.0926,
+      "label_score": 0.4318
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 192,
+        "effective_id": "local:catalog:forth-bridge",
+        "label": "Forth Bridge",
+        "learning_takeaway": "A double-cantilever design carried railway spans across the Forth after an earlier proposal was abandoned."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 6,
+        "effective_id": "local:authored:000258",
+        "label": "Contract bridge",
+        "learning_takeaway": "See how bidding fixes a partnership's trick-taking target before play."
+      },
+      "score": 0.211,
+      "word_score": 0.0816,
+      "label_score": 0.4513
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 191,
+        "effective_id": "local:catalog:eads-bridge",
+        "label": "Eads Bridge",
+        "learning_takeaway": "Pneumatic caissons established deep river foundations for a major rail crossing, with serious construction hazards."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 6,
+        "effective_id": "local:authored:000258",
+        "label": "Contract bridge",
+        "learning_takeaway": "See how bidding fixes a partnership's trick-taking target before play."
+      },
+      "score": 0.2098,
+      "word_score": 0.0741,
+      "label_score": 0.4618
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 10,
+        "effective_id": "local:catalog:genetic-mapping",
+        "label": "Genetic mapping",
+        "learning_takeaway": "Infer marker order from joint inheritance rather than directly measuring physical DNA length."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 49,
+        "effective_id": "local:catalog:choropleth-mapping",
+        "label": "Choropleth mapping",
+        "learning_takeaway": "Shading geographic areas by a rate or ratio reveals spatial comparisons while differing area sizes can influence visual attention."
+      },
+      "score": 0.2082,
+      "word_score": 0.0885,
+      "label_score": 0.4304
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 91,
+        "effective_id": "local:catalog:geometric-distribution",
+        "label": "Geometric distribution",
+        "learning_takeaway": "Model repeated independent trials until success, distinguishing conventions that count trials or preceding failures."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 66,
+        "effective_id": "local:catalog:complementary-distribution",
+        "label": "Complementary distribution",
+        "learning_takeaway": "Recognize nonoverlapping sound environments without assuming this alone proves that the sounds share one phoneme."
+      },
+      "score": 0.2081,
+      "word_score": 0.0659,
+      "label_score": 0.472
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 164,
+        "effective_id": "local:catalog:triadic-closure",
+        "label": "Triadic closure",
+        "learning_takeaway": "Understand why two people sharing a friend are more likely to form a connection, without treating this as inevitable."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 102,
+        "effective_id": "local:catalog:perceptual-closure",
+        "label": "Perceptual closure",
+        "learning_takeaway": "Explore how incomplete parts can be perceived as a complete object."
+      },
+      "score": 0.2079,
+      "word_score": 0.0978,
+      "label_score": 0.4122
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 159,
+        "effective_id": "local:catalog:miners-rule",
+        "label": "Miner’s rule",
+        "learning_takeaway": "Approximate cumulative fatigue damage by adding consumed lifetime fractions while recognizing nonlinear-damage limitations."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 20,
+        "effective_id": "local:catalog:ko-rule",
+        "label": "Ko rule",
+        "learning_takeaway": "See why immediate recapture must wait for a play elsewhere."
+      },
+      "score": 0.2061,
+      "word_score": 0.0773,
+      "label_score": 0.4452
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 34,
+        "effective_id": "local:catalog:sexual-selection",
+        "label": "Sexual selection",
+        "learning_takeaway": "Distinguish mating success from survival when explaining conspicuous or risky traits."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 108,
+        "effective_id": "local:catalog:adverse-selection",
+        "label": "Adverse selection",
+        "learning_takeaway": "See how privately known risk changes which people seek insurance and can push low-risk buyers out."
+      },
+      "score": 0.206,
+      "word_score": 0.0744,
+      "label_score": 0.4503
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 175,
+        "effective_id": "local:catalog:cascade-control",
+        "label": "Cascade control",
+        "learning_takeaway": "A fast inner loop rejects local disturbances while a slower outer loop commands its setpoint."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 136,
+        "effective_id": "local:catalog:span-of-control",
+        "label": "Span of control",
+        "learning_takeaway": "Choose how many people report directly to a manager, affecting oversight and the number of hierarchy layers."
+      },
+      "score": 0.2054,
+      "word_score": 0.055,
+      "label_score": 0.4849
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 119,
+        "effective_id": "local:catalog:mauna-loa-observatory",
+        "label": "Mauna Loa Observatory",
+        "learning_takeaway": "See how representative air sampling and repeated calibration support an atmospheric CO2 record."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 136,
+        "effective_id": "Q209630",
+        "label": "Herschel Space Observatory",
+        "learning_takeaway": "Cryogenically cooled detectors opened far-infrared and submillimeter views of cold star-forming material."
+      },
+      "score": 0.2048,
+      "word_score": 0.0611,
+      "label_score": 0.4717
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 192,
+        "effective_id": "local:catalog:forth-bridge",
+        "label": "Forth Bridge",
+        "learning_takeaway": "A double-cantilever design carried railway spans across the Forth after an earlier proposal was abandoned."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 35,
+        "effective_id": "local:catalog:dummy-in-bridge",
+        "label": "Dummy in bridge",
+        "learning_takeaway": "Understand why one partnership hand becomes visible and is played by declarer's instructions."
+      },
+      "score": 0.2046,
+      "word_score": 0.0753,
+      "label_score": 0.4447
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 76,
+        "effective_id": "local:catalog:randomized-controlled-trial",
+        "label": "Randomized controlled trial",
+        "learning_takeaway": "Use chance-based assignment and a comparison group to assess an intervention’s effects."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 33,
+        "effective_id": "local:catalog:randomized-election-timeouts",
+        "label": "Randomized election timeouts",
+        "learning_takeaway": "Spread election starts probabilistically so competing candidates are less likely to repeatedly split votes."
+      },
+      "score": 0.2044,
+      "word_score": 0.0677,
+      "label_score": 0.4582
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 119,
+        "effective_id": "local:catalog:mauna-loa-observatory",
+        "label": "Mauna Loa Observatory",
+        "learning_takeaway": "See how representative air sampling and repeated calibration support an atmospheric CO2 record."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 138,
+        "effective_id": "local:catalog:chandra-x-ray-observatory",
+        "label": "Chandra X-ray Observatory",
+        "learning_takeaway": "Special paired mirrors allow Chandra to image high-energy X-rays that ordinary optical designs cannot focus."
+      },
+      "score": 0.2043,
+      "word_score": 0.0574,
+      "label_score": 0.4773
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 165,
+        "effective_id": "local:catalog:drip-irrigation",
+        "label": "Drip irrigation",
+        "learning_takeaway": "Deliver water or nutrient solution near individual plants through controlled small outlets."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 77,
+        "effective_id": "local:catalog:aflaj-irrigation-landscapes-of-oman",
+        "label": "Aflaj irrigation landscapes of Oman",
+        "learning_takeaway": "Five protected systems display how water sources, channels, agriculture, defensive buildings and shared management shaped arid settlements."
+      },
+      "score": 0.2041,
+      "word_score": 0.0719,
+      "label_score": 0.4497
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 191,
+        "effective_id": "local:catalog:eads-bridge",
+        "label": "Eads Bridge",
+        "learning_takeaway": "Pneumatic caissons established deep river foundations for a major rail crossing, with serious construction hazards."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 35,
+        "effective_id": "local:catalog:dummy-in-bridge",
+        "label": "Dummy in bridge",
+        "learning_takeaway": "Understand why one partnership hand becomes visible and is played by declarer's instructions."
+      },
+      "score": 0.2037,
+      "word_score": 0.0684,
+      "label_score": 0.4551
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-006",
+        "ordinal": 146,
+        "effective_id": "local:catalog:their-eyes-were-watching-god",
+        "label": "Their Eyes Were Watching God",
+        "learning_takeaway": "Janie’s retrospective telling to Pheoby frames a search for voice within a novel shaped by folklore and Black vernacular speech."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 19,
+        "effective_id": "local:catalog:eyes-in-go",
+        "label": "Eyes in Go",
+        "learning_takeaway": "Understand why two separate internal spaces protect a group from capture."
+      },
+      "score": 0.2035,
+      "word_score": 0.1059,
+      "label_score": 0.3846
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 174,
+        "effective_id": "local:catalog:reference-groups",
+        "label": "Reference groups",
+        "learning_takeaway": "Distinguish groups used as comparison standards from groups someone actually joins."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 89,
+        "effective_id": "local:catalog:self-reference-effect",
+        "label": "Self-reference effect",
+        "learning_takeaway": "Investigate why relating information to oneself can improve later remembering."
+      },
+      "score": 0.2029,
+      "word_score": 0.0936,
+      "label_score": 0.406
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 81,
+        "effective_id": "local:catalog:sociolinguistic-corpus",
+        "label": "Sociolinguistic corpus",
+        "learning_takeaway": "Combine recordings across a relevant speaker sample so community patterns can be distinguished from individual habits."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 183,
+        "effective_id": "local:catalog:habeas-corpus",
+        "label": "Habeas corpus",
+        "learning_takeaway": "Distinguish judicial review of detention's lawfulness from an ordinary new criminal trial."
+      },
+      "score": 0.2017,
+      "word_score": 0.0999,
+      "label_score": 0.3906
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 21,
+        "effective_id": "local:catalog:foundation-species",
+        "label": "Foundation species",
+        "learning_takeaway": "Connect habitat structure supplied by organisms with the communities that depend on it."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 72,
+        "effective_id": "local:catalog:species-counterpoint",
+        "label": "Species counterpoint",
+        "learning_takeaway": "Learn how controlled note ratios organize practice in combining independent melodies."
+      },
+      "score": 0.2004,
+      "word_score": 0.0821,
+      "label_score": 0.4201
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 69,
+        "effective_id": "local:authored:000604",
+        "label": "Graph theory",
+        "learning_takeaway": "Represent connections by vertices and edges, then use structural constraints such as bipartite colorability."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 176,
+        "effective_id": "local:authored:000379",
+        "label": "Color theory",
+        "learning_takeaway": "Color relationships include changes caused by neighboring colors and by colors seen immediately beforehand."
+      },
+      "score": 0.2001,
+      "word_score": 0.0626,
+      "label_score": 0.4554
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 24,
+        "effective_id": "local:catalog:covalent-network-solid",
+        "label": "Covalent network solid",
+        "learning_takeaway": "A continuous covalent-bond network helps explain the hardness and high melting temperatures of diamond-like solids."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 162,
+        "effective_id": "Q2715623",
+        "label": "Social network",
+        "learning_takeaway": "Represent people and relationships to inspect how local connections shape access to wider social worlds."
+      },
+      "score": 0.1987,
+      "word_score": 0.0612,
+      "label_score": 0.4543
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 17,
+        "effective_id": "local:catalog:karner-blue-butterfly",
+        "label": "Karner blue butterfly",
+        "learning_takeaway": "Explore how ant attendance can protect butterfly larvae while the ants receive carbohydrate-rich secretions."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 165,
+        "effective_id": "local:catalog:zhuangzis-butterfly-dream",
+        "label": "Zhuangzi’s butterfly dream",
+        "learning_takeaway": "Examine whether feeling awake guarantees a final, privileged perspective on experience."
+      },
+      "score": 0.1986,
+      "word_score": 0.0834,
+      "label_score": 0.4126
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 117,
+        "effective_id": "local:catalog:tidal-locking",
+        "label": "Tidal locking",
+        "learning_takeaway": "Dissipative tidal deformation can synchronize an orbiting body’s spin with its orbital motion."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 60,
+        "effective_id": "local:catalog:mode-locking-in-bowed-strings",
+        "label": "Mode locking in bowed strings",
+        "learning_takeaway": "See how periodic bowing can enforce harmonic motion despite inharmonic string resonances."
+      },
+      "score": 0.1983,
+      "word_score": 0.0958,
+      "label_score": 0.3887
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 42,
+        "effective_id": "local:catalog:buffer-solution",
+        "label": "Buffer solution",
+        "learning_takeaway": "A weak conjugate acid-base pair consumes small additions of strong acid or base."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 54,
+        "effective_id": "local:catalog:geographic-buffer",
+        "label": "Geographic buffer",
+        "learning_takeaway": "A fixed-distance zone measures proximity around a feature but does not by itself model roads, barriers or travel time."
+      },
+      "score": 0.1975,
+      "word_score": 0.0836,
+      "label_score": 0.4091
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 90,
+        "effective_id": "local:catalog:exponential-distribution",
+        "label": "Exponential distribution",
+        "learning_takeaway": "Model waiting times between events of a constant-rate Poisson process with a continuous memoryless law."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 66,
+        "effective_id": "local:catalog:complementary-distribution",
+        "label": "Complementary distribution",
+        "learning_takeaway": "Recognize nonoverlapping sound environments without assuming this alone proves that the sounds share one phoneme."
+      },
+      "score": 0.1973,
+      "word_score": 0.067,
+      "label_score": 0.4393
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 192,
+        "effective_id": "local:catalog:forth-bridge",
+        "label": "Forth Bridge",
+        "learning_takeaway": "A double-cantilever design carried railway spans across the Forth after an earlier proposal was abandoned."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 33,
+        "effective_id": "local:catalog:duplicate-bridge",
+        "label": "Duplicate bridge",
+        "learning_takeaway": "Understand comparison against other players holding the same cards."
+      },
+      "score": 0.197,
+      "word_score": 0.0829,
+      "label_score": 0.409
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 191,
+        "effective_id": "local:catalog:eads-bridge",
+        "label": "Eads Bridge",
+        "learning_takeaway": "Pneumatic caissons established deep river foundations for a major rail crossing, with serious construction hazards."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 33,
+        "effective_id": "local:catalog:duplicate-bridge",
+        "label": "Duplicate bridge",
+        "learning_takeaway": "Understand comparison against other players holding the same cards."
+      },
+      "score": 0.1954,
+      "word_score": 0.0753,
+      "label_score": 0.4185
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 168,
+        "effective_id": "Q4917288",
+        "label": "Control engineering",
+        "learning_takeaway": "Use measured response and corrective action to make engineered systems follow desired behavior."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 136,
+        "effective_id": "local:catalog:span-of-control",
+        "label": "Span of control",
+        "learning_takeaway": "Choose how many people report directly to a manager, affecting oversight and the number of hierarchy layers."
+      },
+      "score": 0.1945,
+      "word_score": 0.0592,
+      "label_score": 0.4457
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 1,
+        "effective_id": "local:authored:000609",
+        "label": "Information theory",
+        "learning_takeaway": "Measure communication choices without treating message meaning as the engineering quantity."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 119,
+        "effective_id": "local:catalog:informational-social-influence",
+        "label": "Informational social influence",
+        "learning_takeaway": "Understand relying on others as information when a situation is ambiguous."
+      },
+      "score": 0.1936,
+      "word_score": 0.0351,
+      "label_score": 0.4879
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 1,
+        "effective_id": "local:authored:000609",
+        "label": "Information theory",
+        "learning_takeaway": "Measure communication choices without treating message meaning as the engineering quantity."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 94,
+        "effective_id": "local:catalog:misinformation-effect",
+        "label": "Misinformation effect",
+        "learning_takeaway": "Explore how misleading information after an event can alter later reports."
+      },
+      "score": 0.1926,
+      "word_score": 0.0361,
+      "label_score": 0.4832
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 83,
+        "effective_id": "local:catalog:healthy-volunteer-bias-in-screening-studies",
+        "label": "Healthy-volunteer bias in screening studies",
+        "learning_takeaway": "Explain why screened and unscreened groups can differ in outcomes for reasons unrelated to the screening."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 111,
+        "effective_id": "local:catalog:screening-in-economics",
+        "label": "Screening in economics",
+        "learning_takeaway": "Let a less-informed party investigate or set requirements to learn hidden characteristics before a transaction."
+      },
+      "score": 0.1926,
+      "word_score": 0.1115,
+      "label_score": 0.3433
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 55,
+        "effective_id": "local:catalog:bohr-effect",
+        "label": "Bohr effect",
+        "learning_takeaway": "Explain why lower pH promotes oxygen unloading from hemoglobin."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 92,
+        "effective_id": "Q7705913",
+        "label": "Testing effect",
+        "learning_takeaway": "Use effortful recall with corrective feedback as a learning activity rather than treating quizzes only as measurement."
+      },
+      "score": 0.1926,
+      "word_score": 0.0555,
+      "label_score": 0.4471
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 116,
+        "effective_id": "local:catalog:temperature-inversion",
+        "label": "Temperature inversion",
+        "learning_takeaway": "Explain how warmer air above cooler air can suppress mixing and trap near-surface pollution."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 83,
+        "effective_id": "local:catalog:mobius-inversion-formula",
+        "label": "Möbius inversion formula",
+        "learning_takeaway": "Recover an arithmetic function from sums over its divisors using Möbius-weighted cancellation."
+      },
+      "score": 0.1917,
+      "word_score": 0.0868,
+      "label_score": 0.3864
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 175,
+        "effective_id": "local:catalog:social-norms",
+        "label": "Social norms",
+        "learning_takeaway": "Recognize shared expectations for conduct, including unwritten rules learned by observing others and their consequences."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 118,
+        "effective_id": "local:catalog:normative-social-influence",
+        "label": "Normative social influence",
+        "learning_takeaway": "Distinguish joining a group to gain acceptance from believing its answer is correct."
+      },
+      "score": 0.1914,
+      "word_score": 0.0545,
+      "label_score": 0.4457
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 44,
+        "effective_id": "local:catalog:horizontal-gene-transfer",
+        "label": "Horizontal gene transfer",
+        "learning_takeaway": "Distinguish DNA exchange outside parent-to-offspring inheritance from ordinary reproduction."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 174,
+        "effective_id": "local:catalog:bumpless-transfer",
+        "label": "Bumpless transfer",
+        "learning_takeaway": "Track the active manual signal internally before switching to automatic control to avoid a sudden output jump."
+      },
+      "score": 0.1903,
+      "word_score": 0.0752,
+      "label_score": 0.404
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-006",
+        "ordinal": 33,
+        "effective_id": "local:authored:000661",
+        "label": "Material culture",
+        "learning_takeaway": "A trade token’s imagery and product list provide evidence of commercial life and how a coffee house represented itself."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 157,
+        "effective_id": "local:catalog:material-constitution",
+        "label": "Material constitution",
+        "learning_takeaway": "Distinguish a statue from the material constituting it through their possible persistence conditions."
+      },
+      "score": 0.1902,
+      "word_score": 0.0548,
+      "label_score": 0.4415
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 39,
+        "effective_id": "local:catalog:titration-end-point-and-equivalence-point",
+        "label": "Titration end point and equivalence point",
+        "learning_takeaway": "Distinguish an observed end-point signal from the exact stoichiometric equivalence condition."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 51,
+        "effective_id": "local:catalog:pedal-point",
+        "label": "Pedal point",
+        "learning_takeaway": "Hear a held note change harmonic status while surrounding chords move."
+      },
+      "score": 0.1901,
+      "word_score": 0.0833,
+      "label_score": 0.3884
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 12,
+        "effective_id": "local:catalog:normalization-across-string-concatenation",
+        "label": "Normalization across string concatenation",
+        "learning_takeaway": "Recheck normalization at concatenation boundaries because joining normalized strings can require reordering or composition."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 50,
+        "effective_id": "local:catalog:normalization-for-choropleth-maps",
+        "label": "Normalization for choropleth maps",
+        "learning_takeaway": "Dividing a count by a relevant denominator distinguishes prevalence or intensity from the size of a region’s population."
+      },
+      "score": 0.1899,
+      "word_score": 0.1034,
+      "label_score": 0.3505
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 39,
+        "effective_id": "Q746284",
+        "label": "Gene duplication",
+        "learning_takeaway": "Explore how extra gene copies can alter dosage and contribute to genomic evolution."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 33,
+        "effective_id": "local:catalog:duplicate-bridge",
+        "label": "Duplicate bridge",
+        "learning_takeaway": "Understand comparison against other players holding the same cards."
+      },
+      "score": 0.1898,
+      "word_score": 0.0,
+      "label_score": 0.5424
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 119,
+        "effective_id": "local:catalog:mauna-loa-observatory",
+        "label": "Mauna Loa Observatory",
+        "learning_takeaway": "See how representative air sampling and repeated calibration support an atmospheric CO2 record."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 140,
+        "effective_id": "local:catalog:compton-gamma-ray-observatory",
+        "label": "Compton Gamma-Ray Observatory",
+        "learning_takeaway": "Four complementary instruments surveyed gamma rays and mapped radioactive aluminum in the Milky Way."
+      },
+      "score": 0.1878,
+      "word_score": 0.0569,
+      "label_score": 0.4311
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 69,
+        "effective_id": "local:authored:000604",
+        "label": "Graph theory",
+        "learning_takeaway": "Represent connections by vertices and edges, then use structural constraints such as bipartite colorability."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 1,
+        "effective_id": "local:authored:000609",
+        "label": "Information theory",
+        "learning_takeaway": "Measure communication choices without treating message meaning as the engineering quantity."
+      },
+      "score": 0.1874,
+      "word_score": 0.0719,
+      "label_score": 0.4019
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 37,
+        "effective_id": "local:catalog:combustion-analysis",
+        "label": "Combustion analysis",
+        "learning_takeaway": "Infer elemental composition from measured carbon dioxide and water produced by complete combustion."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 142,
+        "effective_id": "local:catalog:justified-true-belief-analysis",
+        "label": "Justified true belief analysis",
+        "learning_takeaway": "Distinguish a belief's truth and justification in a traditional analysis of knowledge."
+      },
+      "score": 0.1872,
+      "word_score": 0.0943,
+      "label_score": 0.3598
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 187,
+        "effective_id": "local:catalog:kerf-bending",
+        "label": "Kerf bending",
+        "learning_takeaway": "Create a bend by cutting relief slots while retaining an outer web of material."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 208,
+        "effective_id": "local:catalog:three-point-bending-test",
+        "label": "Three-point bending test",
+        "learning_takeaway": "Load a simply supported beam at its center to relate deflection to material and cross-section stiffness."
+      },
+      "score": 0.1871,
+      "word_score": 0.0854,
+      "label_score": 0.376
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 187,
+        "effective_id": "local:catalog:kerf-bending",
+        "label": "Kerf bending",
+        "learning_takeaway": "Create a bend by cutting relief slots while retaining an outer web of material."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 163,
+        "effective_id": "local:catalog:neutral-axis-in-beam-bending",
+        "label": "Neutral axis in beam bending",
+        "learning_takeaway": "A bending beam has a zero-axial-stress line between tensile and compressive regions."
+      },
+      "score": 0.1868,
+      "word_score": 0.0823,
+      "label_score": 0.3808
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 43,
+        "effective_id": "local:catalog:buffer-capacity",
+        "label": "Buffer capacity",
+        "learning_takeaway": "Buffers with equal pH can resist different acid loads because their total concentrations differ."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 54,
+        "effective_id": "local:catalog:geographic-buffer",
+        "label": "Geographic buffer",
+        "learning_takeaway": "A fixed-distance zone measures proximity around a feature but does not by itself model roads, barriers or travel time."
+      },
+      "score": 0.1867,
+      "word_score": 0.0886,
+      "label_score": 0.369
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 175,
+        "effective_id": "local:catalog:park-grass-experiment",
+        "label": "Park Grass Experiment",
+        "learning_takeaway": "Interpret a long-term grassland experiment in light of treatment design and changes in measurement methods."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 130,
+        "effective_id": "local:catalog:sterngerlach-experiment",
+        "label": "Stern–Gerlach experiment",
+        "learning_takeaway": "A nonuniform magnetic field splits a silver-atom beam into two bands rather than a classical continuum."
+      },
+      "score": 0.1855,
+      "word_score": 0.0739,
+      "label_score": 0.3927
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 22,
+        "effective_id": "local:catalog:keystone-species",
+        "label": "Keystone species",
+        "learning_takeaway": "Explain how a predator can maintain community diversity by limiting a space-dominating competitor."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 72,
+        "effective_id": "local:catalog:species-counterpoint",
+        "label": "Species counterpoint",
+        "learning_takeaway": "Learn how controlled note ratios organize practice in combining independent melodies."
+      },
+      "score": 0.1853,
+      "word_score": 0.0742,
+      "label_score": 0.3915
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 55,
+        "effective_id": "local:catalog:bohr-effect",
+        "label": "Bohr effect",
+        "learning_takeaway": "Explain why lower pH promotes oxygen unloading from hemoglobin."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 22,
+        "effective_id": "local:catalog:inert-pair-effect",
+        "label": "Inert pair effect",
+        "learning_takeaway": "Heavy main-group elements can retain a low-energy valence s-electron pair and form lower oxidation states."
+      },
+      "score": 0.1841,
+      "word_score": 0.0737,
+      "label_score": 0.3893
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-006",
+        "ordinal": 114,
+        "effective_id": "local:catalog:rule-of-saint-benedict",
+        "label": "Rule of Saint Benedict",
+        "learning_takeaway": "A monastic rule organizes manual labor, reading and communal prayer into a repeated rhythm of shared life."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 20,
+        "effective_id": "local:catalog:ko-rule",
+        "label": "Ko rule",
+        "learning_takeaway": "See why immediate recapture must wait for a play elsewhere."
+      },
+      "score": 0.1838,
+      "word_score": 0.0999,
+      "label_score": 0.3397
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 177,
+        "effective_id": "local:catalog:equilibrium-moisture-content-of-wood",
+        "label": "Equilibrium moisture content of wood",
+        "learning_takeaway": "Relate a wood component’s stable moisture level to its surrounding air rather than one universally dry state."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 7,
+        "effective_id": "local:catalog:combining-equilibrium-constants",
+        "label": "Combining equilibrium constants",
+        "learning_takeaway": "Reverse, scale, or add reaction equations to derive the corresponding transformed equilibrium constants."
+      },
+      "score": 0.1832,
+      "word_score": 0.0624,
+      "label_score": 0.4075
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 8,
+        "effective_id": "local:catalog:le-chateliers-principle",
+        "label": "Le Châtelier’s principle",
+        "learning_takeaway": "Predict how concentration, volume, or temperature changes disturb and re-establish chemical equilibrium."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 43,
+        "effective_id": "local:catalog:principle-of-least-privilege",
+        "label": "Principle of least privilege",
+        "learning_takeaway": "Give each program and user only necessary permissions to limit accidents and the code requiring trust."
+      },
+      "score": 0.1826,
+      "word_score": 0.0738,
+      "label_score": 0.3847
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 18,
+        "effective_id": "Q44424",
+        "label": "Chemical bond",
+        "learning_takeaway": "Attractive interactions hold particles together; ionic solids demonstrate how charged ions produce material properties."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 118,
+        "effective_id": "local:catalog:bond-finance",
+        "label": "Bond (finance)",
+        "learning_takeaway": "Treat a bond as an issuer's debt promise to pay specified interest and principal, with default still possible."
+      },
+      "score": 0.1826,
+      "word_score": 0.1304,
+      "label_score": 0.2794
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 68,
+        "effective_id": "local:catalog:hemoglobin-a1c-testing",
+        "label": "Hemoglobin A1c testing",
+        "learning_takeaway": "Connect glycated hemoglobin with longer-term glucose exposure and recognize red-cell-related limitations."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 92,
+        "effective_id": "Q7705913",
+        "label": "Testing effect",
+        "learning_takeaway": "Use effortful recall with corrective feedback as a learning activity rather than treating quizzes only as measurement."
+      },
+      "score": 0.1825,
+      "word_score": 0.0842,
+      "label_score": 0.3649
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 55,
+        "effective_id": "local:catalog:bohr-effect",
+        "label": "Bohr effect",
+        "learning_takeaway": "Explain why lower pH promotes oxygen unloading from hemoglobin."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 93,
+        "effective_id": "Q1095859",
+        "label": "Spacing effect",
+        "learning_takeaway": "Separate encounters with course material over time while keeping total study time comparable."
+      },
+      "score": 0.1822,
+      "word_score": 0.056,
+      "label_score": 0.4166
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 55,
+        "effective_id": "local:catalog:bohr-effect",
+        "label": "Bohr effect",
+        "learning_takeaway": "Explain why lower pH promotes oxygen unloading from hemoglobin."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 131,
+        "effective_id": "Q201805",
+        "label": "Zeeman effect",
+        "learning_takeaway": "External magnetic fields split spectral lines, allowing astronomical field strengths to be inferred."
+      },
+      "score": 0.1818,
+      "word_score": 0.0596,
+      "label_score": 0.4086
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 13,
+        "effective_id": "local:catalog:international-hapmap-project",
+        "label": "International HapMap Project",
+        "learning_takeaway": "See how patterns of co-inherited DNA variants helped connect genomic variation with disease."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 156,
+        "effective_id": "local:catalog:international-cooperative-alliance",
+        "label": "International Cooperative Alliance",
+        "learning_takeaway": "Explore how an international federation coordinated information, common principles, and trade among otherwise separate cooperatives."
+      },
+      "score": 0.1805,
+      "word_score": 0.0901,
+      "label_score": 0.3484
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 64,
+        "effective_id": "local:catalog:arterial-blood-gas-testing",
+        "label": "Arterial blood gas testing",
+        "learning_takeaway": "Distinguish blood oxygenation, carbon-dioxide removal and acid-base measurements in one arterial sample."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 92,
+        "effective_id": "Q7705913",
+        "label": "Testing effect",
+        "learning_takeaway": "Use effortful recall with corrective feedback as a learning activity rather than treating quizzes only as measurement."
+      },
+      "score": 0.1803,
+      "word_score": 0.0703,
+      "label_score": 0.3846
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 165,
+        "effective_id": "local:catalog:local-bridge-in-a-network",
+        "label": "Local bridge in a network",
+        "learning_takeaway": "Identify a tie whose endpoints have no mutual neighbor and whose removal makes their shortest connecting path longer."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 35,
+        "effective_id": "local:catalog:dummy-in-bridge",
+        "label": "Dummy in bridge",
+        "learning_takeaway": "Understand why one partnership hand becomes visible and is played by declarer's instructions."
+      },
+      "score": 0.1797,
+      "word_score": 0.0755,
+      "label_score": 0.3734
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 39,
+        "effective_id": "local:catalog:titration-end-point-and-equivalence-point",
+        "label": "Titration end point and equivalence point",
+        "learning_takeaway": "Distinguish an observed end-point signal from the exact stoichiometric equivalence condition."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 10,
+        "effective_id": "local:catalog:canonical-equivalence-in-unicode",
+        "label": "Canonical equivalence in Unicode",
+        "learning_takeaway": "Recognize a precomposed accented character and its decomposed sequence as the same abstract character."
+      },
+      "score": 0.1789,
+      "word_score": 0.083,
+      "label_score": 0.3571
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 33,
+        "effective_id": "local:catalog:founder-effect",
+        "label": "Founder effect",
+        "learning_takeaway": "Explain how a few colonists can establish unrepresentative genetic frequencies."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 92,
+        "effective_id": "Q7705913",
+        "label": "Testing effect",
+        "learning_takeaway": "Use effortful recall with corrective feedback as a learning activity rather than treating quizzes only as measurement."
+      },
+      "score": 0.1788,
+      "word_score": 0.0583,
+      "label_score": 0.4027
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 186,
+        "effective_id": "local:catalog:brooklyn-bridge",
+        "label": "Brooklyn Bridge",
+        "learning_takeaway": "Steel suspension cables reduced dead load while trusses were designed to resist deck oscillations."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 6,
+        "effective_id": "local:authored:000258",
+        "label": "Contract bridge",
+        "learning_takeaway": "See how bidding fixes a partnership's trick-taking target before play."
+      },
+      "score": 0.1782,
+      "word_score": 0.0739,
+      "label_score": 0.3719
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 180,
+        "effective_id": "local:catalog:steam-bending",
+        "label": "Steam bending",
+        "learning_takeaway": "Use heat and moisture to soften wood, then retain a curved shape while it cools and dries."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 208,
+        "effective_id": "local:catalog:three-point-bending-test",
+        "label": "Three-point bending test",
+        "learning_takeaway": "Load a simply supported beam at its center to relate deflection to material and cross-section stiffness."
+      },
+      "score": 0.1775,
+      "word_score": 0.0745,
+      "label_score": 0.3688
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 78,
+        "effective_id": "local:catalog:intention-to-treat-analysis",
+        "label": "Intention-to-treat analysis",
+        "learning_takeaway": "Preserve original randomized groups when estimating the effect of treatment assignment."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 37,
+        "effective_id": "local:catalog:combustion-analysis",
+        "label": "Combustion analysis",
+        "learning_takeaway": "Infer elemental composition from measured carbon dioxide and water produced by complete combustion."
+      },
+      "score": 0.1775,
+      "word_score": 0.0945,
+      "label_score": 0.3316
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 138,
+        "effective_id": "local:catalog:principal-agent-problem",
+        "label": "Principal–agent problem",
+        "learning_takeaway": "Analyze conflicting interests when one party relies on another's behavior or attributes that contracts cannot fully guarantee."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 134,
+        "effective_id": "Q1753199",
+        "label": "Trolley problem",
+        "learning_takeaway": "Compare driver and bystander versions rather than assuming one explanation settles both."
+      },
+      "score": 0.177,
+      "word_score": 0.0867,
+      "label_score": 0.3447
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 199,
+        "effective_id": "local:catalog:ramp-queue-spillback-management",
+        "label": "Ramp-queue spillback management",
+        "learning_takeaway": "Balance freeway entry control with finite ramp storage so queued vehicles do not block adjacent streets."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 200,
+        "effective_id": "local:catalog:impression-management",
+        "label": "Impression management",
+        "learning_takeaway": "Shape how others interpret a social performance through behavior, setting, and visible cues."
+      },
+      "score": 0.1769,
+      "word_score": 0.0727,
+      "label_score": 0.3703
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 31,
+        "effective_id": "local:catalog:triple-point",
+        "label": "Triple point",
+        "learning_takeaway": "Three phases coexist at one pressure-temperature combination on a pure-substance phase diagram."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 51,
+        "effective_id": "local:catalog:pedal-point",
+        "label": "Pedal point",
+        "learning_takeaway": "Hear a held note change harmonic status while surrounding chords move."
+      },
+      "score": 0.1766,
+      "word_score": 0.0676,
+      "label_score": 0.3791
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 177,
+        "effective_id": "local:catalog:equilibrium-moisture-content-of-wood",
+        "label": "Equilibrium moisture content of wood",
+        "learning_takeaway": "Relate a wood component’s stable moisture level to its surrounding air rather than one universally dry state."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 6,
+        "effective_id": "local:catalog:heterogeneous-equilibrium",
+        "label": "Heterogeneous equilibrium",
+        "learning_takeaway": "Equilibria span multiple phases, while pure solids and liquids do not appear in simplified concentration expressions."
+      },
+      "score": 0.1765,
+      "word_score": 0.052,
+      "label_score": 0.4075
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 187,
+        "effective_id": "local:catalog:golden-gate-bridge",
+        "label": "Golden Gate Bridge",
+        "learning_takeaway": "A record-setting 4,200-foot main span crossed a channel considered difficult because of depth, wind, and tides."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 33,
+        "effective_id": "local:catalog:duplicate-bridge",
+        "label": "Duplicate bridge",
+        "learning_takeaway": "Understand comparison against other players holding the same cards."
+      },
+      "score": 0.1762,
+      "word_score": 0.066,
+      "label_score": 0.3808
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 192,
+        "effective_id": "local:catalog:forth-bridge",
+        "label": "Forth Bridge",
+        "learning_takeaway": "A double-cantilever design carried railway spans across the Forth after an earlier proposal was abandoned."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 165,
+        "effective_id": "local:catalog:local-bridge-in-a-network",
+        "label": "Local bridge in a network",
+        "learning_takeaway": "Identify a tie whose endpoints have no mutual neighbor and whose removal makes their shortest connecting path longer."
+      },
+      "score": 0.176,
+      "word_score": 0.0704,
+      "label_score": 0.3721
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 87,
+        "effective_id": "local:catalog:james-lind",
+        "label": "James Lind",
+        "learning_takeaway": "Separate a useful controlled comparison from a correct explanation of why the treatment worked."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 134,
+        "effective_id": "Q186447",
+        "label": "James Webb Space Telescope",
+        "learning_takeaway": "A multilayer sunshield limits incoming infrared radiation so the distant space observatory can study faint targets."
+      },
+      "score": 0.1756,
+      "word_score": 0.0746,
+      "label_score": 0.3632
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 39,
+        "effective_id": "local:catalog:titration-end-point-and-equivalence-point",
+        "label": "Titration end point and equivalence point",
+        "learning_takeaway": "Distinguish an observed end-point signal from the exact stoichiometric equivalence condition."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 15,
+        "effective_id": "local:catalog:unicode-code-point",
+        "label": "Unicode code point",
+        "learning_takeaway": "Distinguish the integer assigned to a character from the bytes used by an encoding."
+      },
+      "score": 0.1754,
+      "word_score": 0.1174,
+      "label_score": 0.2832
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 165,
+        "effective_id": "local:catalog:local-bridge-in-a-network",
+        "label": "Local bridge in a network",
+        "learning_takeaway": "Identify a tie whose endpoints have no mutual neighbor and whose removal makes their shortest connecting path longer."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 6,
+        "effective_id": "local:authored:000258",
+        "label": "Contract bridge",
+        "learning_takeaway": "See how bidding fixes a partnership's trick-taking target before play."
+      },
+      "score": 0.1751,
+      "word_score": 0.0818,
+      "label_score": 0.3484
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 191,
+        "effective_id": "local:catalog:eads-bridge",
+        "label": "Eads Bridge",
+        "learning_takeaway": "Pneumatic caissons established deep river foundations for a major rail crossing, with serious construction hazards."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 165,
+        "effective_id": "local:catalog:local-bridge-in-a-network",
+        "label": "Local bridge in a network",
+        "learning_takeaway": "Identify a tie whose endpoints have no mutual neighbor and whose removal makes their shortest connecting path longer."
+      },
+      "score": 0.1748,
+      "word_score": 0.0639,
+      "label_score": 0.3807
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 138,
+        "effective_id": "local:catalog:principal-agent-problem",
+        "label": "Principal–agent problem",
+        "learning_takeaway": "Analyze conflicting interests when one party relies on another's behavior or attributes that contracts cannot fully guarantee."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 143,
+        "effective_id": "local:catalog:gettier-problem",
+        "label": "Gettier problem",
+        "learning_takeaway": "See why a justified belief can be accidentally true yet fail to count as knowledge."
+      },
+      "score": 0.1742,
+      "word_score": 0.088,
+      "label_score": 0.3344
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 78,
+        "effective_id": "local:catalog:sociolinguistic-interview",
+        "label": "Sociolinguistic interview",
+        "learning_takeaway": "Compare speech across tasks that elicit different levels of self-monitoring, or collect natural conversation."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 12,
+        "effective_id": "local:catalog:oral-history-interview-lead-in",
+        "label": "Oral-history interview lead-in",
+        "learning_takeaway": "Recording participant names or pseudonyms, date, setting and proposed subject preserves the interview’s context for future users."
+      },
+      "score": 0.1741,
+      "word_score": 0.0807,
+      "label_score": 0.3475
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 168,
+        "effective_id": "local:catalog:nutrient-film-technique",
+        "label": "Nutrient-film technique",
+        "learning_takeaway": "Circulate a shallow nutrient stream past roots while retaining access to oxygen."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 116,
+        "effective_id": "local:catalog:foot-in-the-door-technique",
+        "label": "Foot-in-the-door technique",
+        "learning_takeaway": "Explore the qualified finding that a small request can precede increased agreement to a larger one."
+      },
+      "score": 0.1736,
+      "word_score": 0.079,
+      "label_score": 0.3493
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 55,
+        "effective_id": "local:catalog:bohr-effect",
+        "label": "Bohr effect",
+        "learning_takeaway": "Explain why lower pH promotes oxygen unloading from hemoglobin."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 106,
+        "effective_id": "Q557151",
+        "label": "Anchoring effect",
+        "learning_takeaway": "Investigate how an initial focal value can steer subsequent judgment."
+      },
+      "score": 0.1736,
+      "word_score": 0.0627,
+      "label_score": 0.3794
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 19,
+        "effective_id": "Q895901",
+        "label": "Crystal structure",
+        "learning_takeaway": "Describe a solid through a repeating unit cell and its spatial arrangement."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 134,
+        "effective_id": "local:catalog:networked-team-structure",
+        "label": "Networked team structure",
+        "learning_takeaway": "Coordinate task-focused teams through flexible relationship networks rather than relying primarily on fixed reporting lines."
+      },
+      "score": 0.1735,
+      "word_score": 0.0525,
+      "label_score": 0.398
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 89,
+        "effective_id": "local:catalog:memoryless-property",
+        "label": "Memoryless property",
+        "learning_takeaway": "Elapsed waiting does not alter the remaining-wait distribution; exponential and geometric laws provide continuous and discrete examples."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 168,
+        "effective_id": "local:catalog:strong-triadic-closure-property",
+        "label": "Strong triadic closure property",
+        "learning_takeaway": "Use an explicitly idealized rule that two strong neighbors must also have some tie to derive network consequences."
+      },
+      "score": 0.1732,
+      "word_score": 0.0753,
+      "label_score": 0.3549
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 186,
+        "effective_id": "local:catalog:brooklyn-bridge",
+        "label": "Brooklyn Bridge",
+        "learning_takeaway": "Steel suspension cables reduced dead load while trusses were designed to resist deck oscillations."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 35,
+        "effective_id": "local:catalog:dummy-in-bridge",
+        "label": "Dummy in bridge",
+        "learning_takeaway": "Understand why one partnership hand becomes visible and is played by declarer's instructions."
+      },
+      "score": 0.1726,
+      "word_score": 0.0682,
+      "label_score": 0.3665
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 76,
+        "effective_id": "Q190375",
+        "label": "Historical linguistics",
+        "learning_takeaway": "Track changes through competing variants rather than treating a language as fixed across generations."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 38,
+        "effective_id": "Q309",
+        "label": "History",
+        "learning_takeaway": "Accounts of the past depend on interpreting evidence in its setting; apparently conflicting documents can illuminate the same historical concern."
+      },
+      "score": 0.1724,
+      "word_score": 0.0427,
+      "label_score": 0.4133
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 1,
+        "effective_id": "local:authored:000609",
+        "label": "Information theory",
+        "learning_takeaway": "Measure communication choices without treating message meaning as the engineering quantity."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 176,
+        "effective_id": "local:authored:000379",
+        "label": "Color theory",
+        "learning_takeaway": "Color relationships include changes caused by neighboring colors and by colors seen immediately beforehand."
+      },
+      "score": 0.1724,
+      "word_score": 0.0665,
+      "label_score": 0.369
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 19,
+        "effective_id": "local:catalog:competitive-exclusion-principle",
+        "label": "Competitive exclusion principle",
+        "learning_takeaway": "Explain why competing for all the same limiting resources can prevent stable coexistence."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 43,
+        "effective_id": "local:catalog:principle-of-least-privilege",
+        "label": "Principle of least privilege",
+        "learning_takeaway": "Give each program and user only necessary permissions to limit accidents and the code requiring trust."
+      },
+      "score": 0.1715,
+      "word_score": 0.0813,
+      "label_score": 0.339
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 92,
+        "effective_id": "Q7705913",
+        "label": "Testing effect",
+        "learning_takeaway": "Use effortful recall with corrective feedback as a learning activity rather than treating quizzes only as measurement."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 106,
+        "effective_id": "Q557151",
+        "label": "Anchoring effect",
+        "learning_takeaway": "Investigate how an initial focal value can steer subsequent judgment."
+      },
+      "score": 0.1714,
+      "word_score": 0.0493,
+      "label_score": 0.3982
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 69,
+        "effective_id": "local:catalog:laboratory-reference-intervals",
+        "label": "Laboratory reference intervals",
+        "learning_takeaway": "Explain why being outside a population reference range does not by itself establish disease."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 108,
+        "effective_id": "local:catalog:inertial-reference-frame",
+        "label": "Inertial reference frame",
+        "learning_takeaway": "Distinguish physical interactions from extra inertial-force terms introduced by accelerated coordinates."
+      },
+      "score": 0.171,
+      "word_score": 0.0809,
+      "label_score": 0.3383
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 131,
+        "effective_id": "Q201805",
+        "label": "Zeeman effect",
+        "learning_takeaway": "External magnetic fields split spectral lines, allowing astronomical field strengths to be inferred."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 92,
+        "effective_id": "Q7705913",
+        "label": "Testing effect",
+        "learning_takeaway": "Use effortful recall with corrective feedback as a learning activity rather than treating quizzes only as measurement."
+      },
+      "score": 0.1704,
+      "word_score": 0.0469,
+      "label_score": 0.3999
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 187,
+        "effective_id": "local:catalog:golden-gate-bridge",
+        "label": "Golden Gate Bridge",
+        "learning_takeaway": "A record-setting 4,200-foot main span crossed a channel considered difficult because of depth, wind, and tides."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 6,
+        "effective_id": "local:authored:000258",
+        "label": "Contract bridge",
+        "learning_takeaway": "See how bidding fixes a partnership's trick-taking target before play."
+      },
+      "score": 0.1701,
+      "word_score": 0.065,
+      "label_score": 0.3653
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 19,
+        "effective_id": "local:catalog:competitive-exclusion-principle",
+        "label": "Competitive exclusion principle",
+        "learning_takeaway": "Explain why competing for all the same limiting resources can prevent stable coexistence."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 8,
+        "effective_id": "local:catalog:le-chateliers-principle",
+        "label": "Le Châtelier’s principle",
+        "learning_takeaway": "Predict how concentration, volume, or temperature changes disturb and re-establish chemical equilibrium."
+      },
+      "score": 0.1699,
+      "word_score": 0.0862,
+      "label_score": 0.3253
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 33,
+        "effective_id": "local:catalog:founder-effect",
+        "label": "Founder effect",
+        "learning_takeaway": "Explain how a few colonists can establish unrepresentative genetic frequencies."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 93,
+        "effective_id": "Q1095859",
+        "label": "Spacing effect",
+        "learning_takeaway": "Separate encounters with course material over time while keeping total study time comparable."
+      },
+      "score": 0.1695,
+      "word_score": 0.0588,
+      "label_score": 0.3752
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 175,
+        "effective_id": "local:catalog:cascade-control",
+        "label": "Cascade control",
+        "learning_takeaway": "A fast inner loop rejects local disturbances while a slower outer loop commands its setpoint."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 50,
+        "effective_id": "local:catalog:access-control-list",
+        "label": "Access control list",
+        "learning_takeaway": "Associate an object with a list of principals authorized to access it."
+      },
+      "score": 0.1695,
+      "word_score": 0.0551,
+      "label_score": 0.3819
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 33,
+        "effective_id": "local:catalog:founder-effect",
+        "label": "Founder effect",
+        "learning_takeaway": "Explain how a few colonists can establish unrepresentative genetic frequencies."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 131,
+        "effective_id": "Q201805",
+        "label": "Zeeman effect",
+        "learning_takeaway": "External magnetic fields split spectral lines, allowing astronomical field strengths to be inferred."
+      },
+      "score": 0.1695,
+      "word_score": 0.0626,
+      "label_score": 0.3681
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 192,
+        "effective_id": "local:catalog:forth-bridge",
+        "label": "Forth Bridge",
+        "learning_takeaway": "A double-cantilever design carried railway spans across the Forth after an earlier proposal was abandoned."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 34,
+        "effective_id": "local:catalog:vulnerability-in-bridge",
+        "label": "Vulnerability in bridge",
+        "learning_takeaway": "See how increased bonuses and penalties change a contract's stakes."
+      },
+      "score": 0.1691,
+      "word_score": 0.0779,
+      "label_score": 0.3385
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 126,
+        "effective_id": "local:catalog:riparian-forest-buffer",
+        "label": "Riparian forest buffer",
+        "learning_takeaway": "Connect streamside vegetation with filtering runoff, stabilizing banks and shading aquatic habitat."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 42,
+        "effective_id": "local:catalog:buffer-solution",
+        "label": "Buffer solution",
+        "learning_takeaway": "A weak conjugate acid-base pair consumes small additions of strong acid or base."
+      },
+      "score": 0.1691,
+      "word_score": 0.0673,
+      "label_score": 0.3581
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 138,
+        "effective_id": "local:catalog:principal-agent-problem",
+        "label": "Principal–agent problem",
+        "learning_takeaway": "Analyze conflicting interests when one party relies on another's behavior or attributes that contracts cannot fully guarantee."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 132,
+        "effective_id": "local:catalog:problem-of-closeness-in-double-effect",
+        "label": "Problem of closeness in double effect",
+        "learning_takeaway": "Examine when a harmful side effect seems inseparable from the agent's chosen means."
+      },
+      "score": 0.1689,
+      "word_score": 0.121,
+      "label_score": 0.2579
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 151,
+        "effective_id": "local:catalog:new-york-clearing-house",
+        "label": "New York Clearing House",
+        "learning_takeaway": "See how membership-based mutual liquidity support helped some banks while initially excluding distressed trust companies."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 34,
+        "effective_id": "local:catalog:the-new-coffee-house-trade-token",
+        "label": "The New Coffee House trade token",
+        "learning_takeaway": "A penny token from Exchange Alley advertised coffee, chocolate, tea and other goods while associating the shop with a Turkish ruler."
+      },
+      "score": 0.1685,
+      "word_score": 0.0811,
+      "label_score": 0.331
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 69,
+        "effective_id": "local:authored:000604",
+        "label": "Graph theory",
+        "learning_takeaway": "Represent connections by vertices and edges, then use structural constraints such as bipartite colorability."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 160,
+        "effective_id": "local:catalog:growing-block-theory",
+        "label": "Growing block theory",
+        "learning_takeaway": "Explore a temporal ontology in which the past and present exist but the future does not."
+      },
+      "score": 0.1684,
+      "word_score": 0.0624,
+      "label_score": 0.3654
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 191,
+        "effective_id": "local:catalog:eads-bridge",
+        "label": "Eads Bridge",
+        "learning_takeaway": "Pneumatic caissons established deep river foundations for a major rail crossing, with serious construction hazards."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 34,
+        "effective_id": "local:catalog:vulnerability-in-bridge",
+        "label": "Vulnerability in bridge",
+        "learning_takeaway": "See how increased bonuses and penalties change a contract's stakes."
+      },
+      "score": 0.1672,
+      "word_score": 0.0707,
+      "label_score": 0.3464
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 13,
+        "effective_id": "local:catalog:international-hapmap-project",
+        "label": "International HapMap Project",
+        "learning_takeaway": "See how patterns of co-inherited DNA variants helped connect genomic variation with disease."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 75,
+        "effective_id": "Q21204",
+        "label": "International Phonetic Alphabet",
+        "learning_takeaway": "Use a cross-language sound notation to avoid inconsistencies between ordinary spelling and pronunciation."
+      },
+      "score": 0.167,
+      "word_score": 0.0719,
+      "label_score": 0.3437
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 116,
+        "effective_id": "local:catalog:temperature-inversion",
+        "label": "Temperature inversion",
+        "learning_takeaway": "Explain how warmer air above cooler air can suppress mixing and trap near-surface pollution."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 170,
+        "effective_id": "Q175166",
+        "label": "Tempera",
+        "learning_takeaway": "Tempera binds pigment in a water-soluble medium; in modern art-historical usage the term commonly points to egg-yolk painting."
+      },
+      "score": 0.167,
+      "word_score": 0.0,
+      "label_score": 0.4771
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 78,
+        "effective_id": "local:catalog:intention-to-treat-analysis",
+        "label": "Intention-to-treat analysis",
+        "learning_takeaway": "Preserve original randomized groups when estimating the effect of treatment assignment."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 36,
+        "effective_id": "local:catalog:gravimetric-analysis",
+        "label": "Gravimetric analysis",
+        "learning_takeaway": "Separate an analyte or known product and use its measured mass plus stoichiometry to infer concentration."
+      },
+      "score": 0.167,
+      "word_score": 0.0926,
+      "label_score": 0.3049
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 169,
+        "effective_id": "local:catalog:variable-rate-irrigation",
+        "label": "Variable-rate irrigation",
+        "learning_takeaway": "Match irrigation amounts to different areas of a field instead of assuming every area needs the same water."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 77,
+        "effective_id": "local:catalog:aflaj-irrigation-landscapes-of-oman",
+        "label": "Aflaj irrigation landscapes of Oman",
+        "learning_takeaway": "Five protected systems display how water sources, channels, agriculture, defensive buildings and shared management shaped arid settlements."
+      },
+      "score": 0.1669,
+      "word_score": 0.0764,
+      "label_score": 0.335
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 56,
+        "effective_id": "local:catalog:haldane-effect",
+        "label": "Haldane effect",
+        "learning_takeaway": "Distinguish oxygenation-dependent carbon-dioxide carriage from pH-dependent oxygen affinity."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 131,
+        "effective_id": "local:catalog:doctrine-of-double-effect",
+        "label": "Doctrine of double effect",
+        "learning_takeaway": "Distinguish intending harm as a means from foreseeing it as a side effect."
+      },
+      "score": 0.1669,
+      "word_score": 0.1153,
+      "label_score": 0.2627
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 186,
+        "effective_id": "local:catalog:brooklyn-bridge",
+        "label": "Brooklyn Bridge",
+        "learning_takeaway": "Steel suspension cables reduced dead load while trusses were designed to resist deck oscillations."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 33,
+        "effective_id": "local:catalog:duplicate-bridge",
+        "label": "Duplicate bridge",
+        "learning_takeaway": "Understand comparison against other players holding the same cards."
+      },
+      "score": 0.1668,
+      "word_score": 0.0751,
+      "label_score": 0.337
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 166,
+        "effective_id": "local:catalog:method-of-joints",
+        "label": "Method of joints",
+        "learning_takeaway": "Resolve axial truss-member forces by applying equilibrium to one pin joint at a time."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 36,
+        "effective_id": "local:catalog:http-idempotency",
+        "label": "HTTP method idempotency",
+        "learning_takeaway": "Distinguish repeated intended effects from identical responses or the absence of incidental logging."
+      },
+      "score": 0.1663,
+      "word_score": 0.0687,
+      "label_score": 0.3475
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 24,
+        "effective_id": "local:catalog:covalent-network-solid",
+        "label": "Covalent network solid",
+        "learning_takeaway": "A continuous covalent-bond network helps explain the hardness and high melting temperatures of diamond-like solids."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 171,
+        "effective_id": "local:catalog:signed-social-network",
+        "label": "Signed social network",
+        "learning_takeaway": "Represent both friendly and antagonistic relations with edge signs instead of recording only whether a relationship exists."
+      },
+      "score": 0.1657,
+      "word_score": 0.0637,
+      "label_score": 0.3551
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 69,
+        "effective_id": "local:catalog:laboratory-reference-intervals",
+        "label": "Laboratory reference intervals",
+        "learning_takeaway": "Explain why being outside a population reference range does not by itself establish disease."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 89,
+        "effective_id": "local:catalog:self-reference-effect",
+        "label": "Self-reference effect",
+        "learning_takeaway": "Investigate why relating information to oneself can improve later remembering."
+      },
+      "score": 0.1655,
+      "word_score": 0.0928,
+      "label_score": 0.3005
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 39,
+        "effective_id": "local:catalog:titration-end-point-and-equivalence-point",
+        "label": "Titration end point and equivalence point",
+        "learning_takeaway": "Distinguish an observed end-point signal from the exact stoichiometric equivalence condition."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 11,
+        "effective_id": "local:catalog:compatibility-equivalence-in-unicode",
+        "label": "Compatibility equivalence in Unicode",
+        "learning_takeaway": "Treat certain stylistic or presentation variants as equivalent while recognizing potentially meaningful distinctions lost by folding."
+      },
+      "score": 0.1653,
+      "word_score": 0.0732,
+      "label_score": 0.3365
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 73,
+        "effective_id": "local:catalog:ambulatory-blood-pressure-monitoring",
+        "label": "Ambulatory blood pressure monitoring",
+        "learning_takeaway": "Distinguish repeated measurements during ordinary activity from one clinic reading."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 182,
+        "effective_id": "local:catalog:pressure-thrust",
+        "label": "Pressure thrust",
+        "learning_takeaway": "A nozzle’s exit-pressure mismatch contributes force in addition to exhaust momentum flux."
+      },
+      "score": 0.1653,
+      "word_score": 0.0697,
+      "label_score": 0.3428
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 13,
+        "effective_id": "local:catalog:international-hapmap-project",
+        "label": "International HapMap Project",
+        "learning_takeaway": "See how patterns of co-inherited DNA variants helped connect genomic variation with disease."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 47,
+        "effective_id": "Q186386",
+        "label": "Map projection",
+        "learning_takeaway": "Flattening Earth trades off shape, area, distance and direction, so projection choice should follow a map’s purpose."
+      },
+      "score": 0.1652,
+      "word_score": 0.0,
+      "label_score": 0.4721
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 36,
+        "effective_id": "local:catalog:gravimetric-analysis",
+        "label": "Gravimetric analysis",
+        "learning_takeaway": "Separate an analyte or known product and use its measured mass plus stoichiometry to infer concentration."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 142,
+        "effective_id": "local:catalog:justified-true-belief-analysis",
+        "label": "Justified true belief analysis",
+        "learning_takeaway": "Distinguish a belief's truth and justification in a traditional analysis of knowledge."
+      },
+      "score": 0.1652,
+      "word_score": 0.0925,
+      "label_score": 0.3003
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 187,
+        "effective_id": "local:catalog:golden-gate-bridge",
+        "label": "Golden Gate Bridge",
+        "learning_takeaway": "A record-setting 4,200-foot main span crossed a channel considered difficult because of depth, wind, and tides."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 35,
+        "effective_id": "local:catalog:dummy-in-bridge",
+        "label": "Dummy in bridge",
+        "learning_takeaway": "Understand why one partnership hand becomes visible and is played by declarer's instructions."
+      },
+      "score": 0.165,
+      "word_score": 0.06,
+      "label_score": 0.36
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 86,
+        "effective_id": "local:catalog:systolic-blood-pressure-intervention-trial",
+        "label": "Systolic Blood Pressure Intervention Trial",
+        "learning_takeaway": "Interpret a blood-pressure target comparison together with its enrollment limits and adverse effects."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 182,
+        "effective_id": "local:catalog:pressure-thrust",
+        "label": "Pressure thrust",
+        "learning_takeaway": "A nozzle’s exit-pressure mismatch contributes force in addition to exhaust momentum flux."
+      },
+      "score": 0.1646,
+      "word_score": 0.0745,
+      "label_score": 0.3319
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 55,
+        "effective_id": "local:catalog:bohr-effect",
+        "label": "Bohr effect",
+        "learning_takeaway": "Explain why lower pH promotes oxygen unloading from hemoglobin."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 94,
+        "effective_id": "local:catalog:misinformation-effect",
+        "label": "Misinformation effect",
+        "learning_takeaway": "Explore how misleading information after an event can alter later reports."
+      },
+      "score": 0.1645,
+      "word_score": 0.0715,
+      "label_score": 0.3371
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 42,
+        "effective_id": "local:authored:000527",
+        "label": "Cryptography",
+        "learning_takeaway": "Combine keyed encryption and authentication to protect message confidentiality, integrity, and peer identity."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 46,
+        "effective_id": "local:authored:000665",
+        "label": "Cartography",
+        "learning_takeaway": "Making a map requires selecting features and symbols to communicate spatial relationships for a particular use."
+      },
+      "score": 0.1644,
+      "word_score": 0.0,
+      "label_score": 0.4698
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 74,
+        "effective_id": "local:catalog:matrix-tree-theorem",
+        "label": "Matrix-tree theorem",
+        "learning_takeaway": "Count a graph’s spanning trees by evaluating a cofactor of its Laplacian."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 133,
+        "effective_id": "local:catalog:matrix-organization",
+        "label": "Matrix organization",
+        "learning_takeaway": "Combine functional and project authority, gaining cross-functional coordination while creating potential dual-boss conflicts."
+      },
+      "score": 0.1637,
+      "word_score": 0.1007,
+      "label_score": 0.2807
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 168,
+        "effective_id": "local:catalog:strong-triadic-closure-property",
+        "label": "Strong triadic closure property",
+        "learning_takeaway": "Use an explicitly idealized rule that two strong neighbors must also have some tie to derive network consequences."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 148,
+        "effective_id": "local:catalog:epistemic-closure",
+        "label": "Epistemic closure",
+        "learning_takeaway": "Investigate whether competent deduction from known premises preserves knowledge."
+      },
+      "score": 0.1632,
+      "word_score": 0.0752,
+      "label_score": 0.3266
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 19,
+        "effective_id": "Q895901",
+        "label": "Crystal structure",
+        "learning_takeaway": "Describe a solid through a repeating unit cell and its spatial arrangement."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 131,
+        "effective_id": "local:catalog:functional-organizational-structure",
+        "label": "Functional organizational structure",
+        "learning_takeaway": "Group specialists by expertise while recognizing the risk that departmental boundaries hinder coordination."
+      },
+      "score": 0.1627,
+      "word_score": 0.0682,
+      "label_score": 0.3381
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 169,
+        "effective_id": "local:catalog:variable-rate-irrigation",
+        "label": "Variable-rate irrigation",
+        "learning_takeaway": "Match irrigation amounts to different areas of a field instead of assuming every area needs the same water."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 184,
+        "effective_id": "local:catalog:variable-area-exhaust-nozzle",
+        "label": "Variable-area exhaust nozzle",
+        "learning_takeaway": "Adjustable nozzle geometry trades extra weight for efficient operation across a wider airflow range."
+      },
+      "score": 0.1625,
+      "word_score": 0.0813,
+      "label_score": 0.3133
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 92,
+        "effective_id": "local:catalog:conditional-expectation",
+        "label": "Conditional expectation",
+        "learning_takeaway": "Average a random quantity while retaining the information supplied by another variable or sigma-algebra."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 198,
+        "effective_id": "local:catalog:conditional-amnesty-in-south-africa-s-trc",
+        "label": "Conditional amnesty in South Africa's TRC",
+        "learning_takeaway": "See why political context alone did not guarantee amnesty without full disclosure."
+      },
+      "score": 0.1624,
+      "word_score": 0.0721,
+      "label_score": 0.3301
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 33,
+        "effective_id": "local:catalog:founder-effect",
+        "label": "Founder effect",
+        "learning_takeaway": "Explain how a few colonists can establish unrepresentative genetic frequencies."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 106,
+        "effective_id": "Q557151",
+        "label": "Anchoring effect",
+        "learning_takeaway": "Investigate how an initial focal value can steer subsequent judgment."
+      },
+      "score": 0.1624,
+      "word_score": 0.0658,
+      "label_score": 0.3417
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-006",
+        "ordinal": 170,
+        "effective_id": "Q175166",
+        "label": "Tempera",
+        "learning_takeaway": "Tempera binds pigment in a water-soluble medium; in modern art-historical usage the term commonly points to egg-yolk painting."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 78,
+        "effective_id": "local:catalog:meantone-temperament",
+        "label": "Meantone temperament",
+        "learning_takeaway": "See how slightly narrowed fifths improve thirds but constrain modulation."
+      },
+      "score": 0.1624,
+      "word_score": 0.0,
+      "label_score": 0.4639
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 93,
+        "effective_id": "Q1095859",
+        "label": "Spacing effect",
+        "learning_takeaway": "Separate encounters with course material over time while keeping total study time comparable."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 106,
+        "effective_id": "Q557151",
+        "label": "Anchoring effect",
+        "learning_takeaway": "Investigate how an initial focal value can steer subsequent judgment."
+      },
+      "score": 0.1622,
+      "word_score": 0.0497,
+      "label_score": 0.3711
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 91,
+        "effective_id": "local:authored:000629",
+        "label": "Geology",
+        "learning_takeaway": "Read Earth’s materials and landscapes as evidence of processes and planetary history."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 1,
+        "effective_id": "local:authored:000075",
+        "label": "Archaeology",
+        "learning_takeaway": "Study material traces alongside their find circumstances to reconstruct human activity rather than treating an object as an isolated collectible."
+      },
+      "score": 0.1621,
+      "word_score": 0.0,
+      "label_score": 0.4632
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 134,
+        "effective_id": "Q186447",
+        "label": "James Webb Space Telescope",
+        "learning_takeaway": "A multilayer sunshield limits incoming infrared radiation so the distant space observatory can study faint targets."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 10,
+        "effective_id": "local:catalog:james-naismith",
+        "label": "James Naismith",
+        "learning_takeaway": "See how indoor space and injury constraints shaped basketball's original design."
+      },
+      "score": 0.1616,
+      "word_score": 0.1048,
+      "label_score": 0.2669
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 97,
+        "effective_id": "local:catalog:volcano-ground-deformation-monitoring",
+        "label": "Volcano ground-deformation monitoring",
+        "learning_takeaway": "Infer subsurface magma changes from repeated measurements of surface movement."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 67,
+        "effective_id": "local:catalog:deformation-retract",
+        "label": "Deformation retract",
+        "learning_takeaway": "A continuous deformation moves a space onto a subspace, with a stronger version fixing that subspace throughout."
+      },
+      "score": 0.1615,
+      "word_score": 0.0844,
+      "label_score": 0.3046
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 168,
+        "effective_id": "Q4917288",
+        "label": "Control engineering",
+        "learning_takeaway": "Use measured response and corrective action to make engineered systems follow desired behavior."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 50,
+        "effective_id": "local:catalog:access-control-list",
+        "label": "Access control list",
+        "learning_takeaway": "Associate an object with a list of principals authorized to access it."
+      },
+      "score": 0.1615,
+      "word_score": 0.0594,
+      "label_score": 0.3511
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 56,
+        "effective_id": "local:catalog:haldane-effect",
+        "label": "Haldane effect",
+        "learning_takeaway": "Distinguish oxygenation-dependent carbon-dioxide carriage from pH-dependent oxygen affinity."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 92,
+        "effective_id": "Q7705913",
+        "label": "Testing effect",
+        "learning_takeaway": "Use effortful recall with corrective feedback as a learning activity rather than treating quizzes only as measurement."
+      },
+      "score": 0.1613,
+      "word_score": 0.0493,
+      "label_score": 0.3694
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 1,
+        "effective_id": "local:authored:000609",
+        "label": "Information theory",
+        "learning_takeaway": "Measure communication choices without treating message meaning as the engineering quantity."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 193,
+        "effective_id": "local:catalog:freedom-of-information-act-united-states",
+        "label": "Freedom of Information Act (United States)",
+        "learning_takeaway": "Understand access to existing federal agency records subject to specified exemptions."
+      },
+      "score": 0.1612,
+      "word_score": 0.0442,
+      "label_score": 0.3786
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 131,
+        "effective_id": "Q201805",
+        "label": "Zeeman effect",
+        "learning_takeaway": "External magnetic fields split spectral lines, allowing astronomical field strengths to be inferred."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 93,
+        "effective_id": "Q1095859",
+        "label": "Spacing effect",
+        "learning_takeaway": "Separate encounters with course material over time while keeping total study time comparable."
+      },
+      "score": 0.1611,
+      "word_score": 0.0473,
+      "label_score": 0.3726
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 108,
+        "effective_id": "local:catalog:inertial-reference-frame",
+        "label": "Inertial reference frame",
+        "learning_takeaway": "Distinguish physical interactions from extra inertial-force terms introduced by accelerated coordinates."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 89,
+        "effective_id": "local:catalog:self-reference-effect",
+        "label": "Self-reference effect",
+        "learning_takeaway": "Investigate why relating information to oneself can improve later remembering."
+      },
+      "score": 0.1611,
+      "word_score": 0.0682,
+      "label_score": 0.3337
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-006",
+        "ordinal": 107,
+        "effective_id": "local:authored:000460",
+        "label": "Buddhism",
+        "learning_takeaway": "Buddhist traditions share reference to Buddha, Dharma and Sangha while interpreting and practicing these commitments in diverse ways."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 164,
+        "effective_id": "local:catalog:two-truths-in-indian-buddhist-philosophy",
+        "label": "Two truths in Indian Buddhist philosophy",
+        "learning_takeaway": "Distinguish conventional and ultimate truth while recognizing that Buddhist schools interpret the distinction differently."
+      },
+      "score": 0.1608,
+      "word_score": 0.0487,
+      "label_score": 0.3689
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 19,
+        "effective_id": "Q895901",
+        "label": "Crystal structure",
+        "learning_takeaway": "Describe a solid through a repeating unit cell and its spatial arrangement."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 132,
+        "effective_id": "local:catalog:divisional-organizational-structure",
+        "label": "Divisional organizational structure",
+        "learning_takeaway": "Place several functions together within product, market, or regional divisions to concentrate accountability locally."
+      },
+      "score": 0.1604,
+      "word_score": 0.0667,
+      "label_score": 0.3345
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 22,
+        "effective_id": "local:catalog:inert-pair-effect",
+        "label": "Inert pair effect",
+        "learning_takeaway": "Heavy main-group elements can retain a low-energy valence s-electron pair and form lower oxidation states."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 92,
+        "effective_id": "Q7705913",
+        "label": "Testing effect",
+        "learning_takeaway": "Use effortful recall with corrective feedback as a learning activity rather than treating quizzes only as measurement."
+      },
+      "score": 0.1597,
+      "word_score": 0.0406,
+      "label_score": 0.3809
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 79,
+        "effective_id": "local:catalog:observer-s-paradox-in-sociolinguistics",
+        "label": "Observer's paradox in sociolinguistics",
+        "learning_takeaway": "Recognize that systematically recording everyday speech may change the very speech researchers want to observe."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 161,
+        "effective_id": "local:catalog:sorites-paradox",
+        "label": "Sorites paradox",
+        "learning_takeaway": "See how apparently harmless small changes can generate a contradiction about vague categories."
+      },
+      "score": 0.1596,
+      "word_score": 0.0824,
+      "label_score": 0.303
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 141,
+        "effective_id": "Q525309",
+        "label": "Integrated pest management",
+        "learning_takeaway": "Combine identification, prevention and selective interventions rather than treating every organism as a pest."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 199,
+        "effective_id": "local:catalog:ramp-queue-spillback-management",
+        "label": "Ramp-queue spillback management",
+        "learning_takeaway": "Balance freeway entry control with finite ramp storage so queued vehicles do not block adjacent streets."
+      },
+      "score": 0.1594,
+      "word_score": 0.0669,
+      "label_score": 0.3312
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 126,
+        "effective_id": "local:catalog:riparian-forest-buffer",
+        "label": "Riparian forest buffer",
+        "learning_takeaway": "Connect streamside vegetation with filtering runoff, stabilizing banks and shading aquatic habitat."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 43,
+        "effective_id": "local:catalog:buffer-capacity",
+        "label": "Buffer capacity",
+        "learning_takeaway": "Buffers with equal pH can resist different acid loads because their total concentrations differ."
+      },
+      "score": 0.1594,
+      "word_score": 0.0713,
+      "label_score": 0.3229
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 55,
+        "effective_id": "local:catalog:bohr-effect",
+        "label": "Bohr effect",
+        "learning_takeaway": "Explain why lower pH promotes oxygen unloading from hemoglobin."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 131,
+        "effective_id": "local:catalog:doctrine-of-double-effect",
+        "label": "Doctrine of double effect",
+        "learning_takeaway": "Distinguish intending harm as a means from foreseeing it as a side effect."
+      },
+      "score": 0.1591,
+      "word_score": 0.083,
+      "label_score": 0.3004
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 91,
+        "effective_id": "local:catalog:geometric-distribution",
+        "label": "Geometric distribution",
+        "learning_takeaway": "Model repeated independent trials until success, distinguishing conventions that count trials or preceding failures."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 143,
+        "effective_id": "local:catalog:patronage-based-surplus-distribution",
+        "label": "Patronage-based surplus distribution",
+        "learning_takeaway": "Allocate cooperative surplus in proportion to member transactions rather than only in proportion to invested capital."
+      },
+      "score": 0.1589,
+      "word_score": 0.0492,
+      "label_score": 0.3626
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 64,
+        "effective_id": "local:catalog:minimal-pair",
+        "label": "Minimal pair",
+        "learning_takeaway": "Use a one-position contrast between otherwise matching words as evidence that two sounds distinguish meanings."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 54,
+        "effective_id": "local:catalog:additive-minimalism",
+        "label": "Additive minimalism",
+        "learning_takeaway": "Track growth by gradually extending repeated musical patterns."
+      },
+      "score": 0.1589,
+      "word_score": 0.0,
+      "label_score": 0.4539
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 126,
+        "effective_id": "local:catalog:riparian-forest-buffer",
+        "label": "Riparian forest buffer",
+        "learning_takeaway": "Connect streamside vegetation with filtering runoff, stabilizing banks and shading aquatic habitat."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 54,
+        "effective_id": "local:catalog:geographic-buffer",
+        "label": "Geographic buffer",
+        "learning_takeaway": "A fixed-distance zone measures proximity around a feature but does not by itself model roads, barriers or travel time."
+      },
+      "score": 0.1587,
+      "word_score": 0.0776,
+      "label_score": 0.3092
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 107,
+        "effective_id": "local:catalog:information-asymmetry",
+        "label": "Information asymmetry",
+        "learning_takeaway": "Distinguish unequal knowledge between parties from uncertainty that both sides share."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 119,
+        "effective_id": "local:catalog:informational-social-influence",
+        "label": "Informational social influence",
+        "learning_takeaway": "Understand relying on others as information when a situation is ambiguous."
+      },
+      "score": 0.1586,
+      "word_score": 0.0401,
+      "label_score": 0.3788
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 174,
+        "effective_id": "local:catalog:broadbalk-wheat-experiment",
+        "label": "Broadbalk Wheat Experiment",
+        "learning_takeaway": "Use a persistent untreated comparison to interpret crop responses to fertilizer over many years."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 130,
+        "effective_id": "local:catalog:sterngerlach-experiment",
+        "label": "Stern–Gerlach experiment",
+        "learning_takeaway": "A nonuniform magnetic field splits a silver-atom beam into two bands rather than a classical continuum."
+      },
+      "score": 0.1581,
+      "word_score": 0.0722,
+      "label_score": 0.3177
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 107,
+        "effective_id": "local:catalog:information-asymmetry",
+        "label": "Information asymmetry",
+        "learning_takeaway": "Distinguish unequal knowledge between parties from uncertainty that both sides share."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 94,
+        "effective_id": "local:catalog:misinformation-effect",
+        "label": "Misinformation effect",
+        "learning_takeaway": "Explore how misleading information after an event can alter later reports."
+      },
+      "score": 0.1581,
+      "word_score": 0.0412,
+      "label_score": 0.3751
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 33,
+        "effective_id": "local:catalog:founder-effect",
+        "label": "Founder effect",
+        "learning_takeaway": "Explain how a few colonists can establish unrepresentative genetic frequencies."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 22,
+        "effective_id": "local:catalog:inert-pair-effect",
+        "label": "Inert pair effect",
+        "learning_takeaway": "Heavy main-group elements can retain a low-energy valence s-electron pair and form lower oxidation states."
+      },
+      "score": 0.158,
+      "word_score": 0.0542,
+      "label_score": 0.3506
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 165,
+        "effective_id": "local:catalog:euler-column-buckling",
+        "label": "Euler column buckling",
+        "learning_takeaway": "An ideal slender elastic column loses stability at a load controlled by stiffness, length, and end constraints."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 19,
+        "effective_id": "local:catalog:multi-column-index",
+        "label": "Multi-column index",
+        "learning_takeaway": "Order index entries by several columns so combined constraints avoid filtering unrelated intermediate matches."
+      },
+      "score": 0.1568,
+      "word_score": 0.1048,
+      "label_score": 0.2533
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 79,
+        "effective_id": "local:catalog:observer-s-paradox-in-sociolinguistics",
+        "label": "Observer's paradox in sociolinguistics",
+        "learning_takeaway": "Recognize that systematically recording everyday speech may change the very speech researchers want to observe."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 150,
+        "effective_id": "local:catalog:preface-paradox",
+        "label": "Preface paradox",
+        "learning_takeaway": "Examine believing each researched claim while reasonably expecting some mistake in the whole book."
+      },
+      "score": 0.1567,
+      "word_score": 0.0812,
+      "label_score": 0.297
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 78,
+        "effective_id": "local:catalog:intention-to-treat-analysis",
+        "label": "Intention-to-treat analysis",
+        "learning_takeaway": "Preserve original randomized groups when estimating the effect of treatment assignment."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 142,
+        "effective_id": "local:catalog:justified-true-belief-analysis",
+        "label": "Justified true belief analysis",
+        "learning_takeaway": "Distinguish a belief's truth and justification in a traditional analysis of knowledge."
+      },
+      "score": 0.1567,
+      "word_score": 0.1076,
+      "label_score": 0.2478
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 35,
+        "effective_id": "Q208841",
+        "label": "Coevolution",
+        "learning_takeaway": "Recognize reciprocal evolutionary effects rather than merely two species changing at the same time."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 32,
+        "effective_id": "local:catalog:haitian-revolution",
+        "label": "Haitian Revolution",
+        "learning_takeaway": "An uprising against plantation slavery developed into independence, while foreign governments’ recognition remained constrained by their own slaveholding interests."
+      },
+      "score": 0.1562,
+      "word_score": 0.0,
+      "label_score": 0.4463
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 168,
+        "effective_id": "local:catalog:strong-triadic-closure-property",
+        "label": "Strong triadic closure property",
+        "learning_takeaway": "Use an explicitly idealized rule that two strong neighbors must also have some tie to derive network consequences."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 102,
+        "effective_id": "local:catalog:perceptual-closure",
+        "label": "Perceptual closure",
+        "learning_takeaway": "Explore how incomplete parts can be perceived as a complete object."
+      },
+      "score": 0.156,
+      "word_score": 0.0794,
+      "label_score": 0.2984
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 24,
+        "effective_id": "local:catalog:covalent-network-solid",
+        "label": "Covalent network solid",
+        "learning_takeaway": "A continuous covalent-bond network helps explain the hardness and high melting temperatures of diamond-like solids."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 165,
+        "effective_id": "local:catalog:local-bridge-in-a-network",
+        "label": "Local bridge in a network",
+        "learning_takeaway": "Identify a tie whose endpoints have no mutual neighbor and whose removal makes their shortest connecting path longer."
+      },
+      "score": 0.1558,
+      "word_score": 0.0504,
+      "label_score": 0.3515
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 101,
+        "effective_id": "local:catalog:self-explanation",
+        "label": "Self-explanation",
+        "learning_takeaway": "Generate one's own causal or logical explanations during study rather than merely repeating the presented answer."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 113,
+        "effective_id": "local:catalog:self-efficacy",
+        "label": "Self-efficacy",
+        "learning_takeaway": "Distinguish believing one can complete a task from valuing its reward."
+      },
+      "score": 0.1558,
+      "word_score": 0.0792,
+      "label_score": 0.298
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 79,
+        "effective_id": "local:catalog:observer-s-paradox-in-sociolinguistics",
+        "label": "Observer's paradox in sociolinguistics",
+        "learning_takeaway": "Recognize that systematically recording everyday speech may change the very speech researchers want to observe."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 151,
+        "effective_id": "local:catalog:moore-s-paradox",
+        "label": "Moore's paradox",
+        "learning_takeaway": "Explain why asserting a fact while denying belief in it sounds self-defeating."
+      },
+      "score": 0.1557,
+      "word_score": 0.0822,
+      "label_score": 0.2921
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 38,
+        "effective_id": "local:catalog:neutral-theory-of-molecular-evolution",
+        "label": "Neutral theory of molecular evolution",
+        "learning_takeaway": "Separate neutral genetic variation and drift from the claim that all evolution is nonadaptive."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 163,
+        "effective_id": "local:catalog:neutral-axis-in-beam-bending",
+        "label": "Neutral axis in beam bending",
+        "learning_takeaway": "A bending beam has a zero-axial-stress line between tensile and compressive regions."
+      },
+      "score": 0.1554,
+      "word_score": 0.0811,
+      "label_score": 0.2934
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 126,
+        "effective_id": "Q3318170",
+        "label": "Organizational design",
+        "learning_takeaway": "Choose responsibilities and coordination structures that connect individual work to an organization's purposes."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 194,
+        "effective_id": "local:catalog:wandle-textile-design",
+        "label": "Wandle textile design",
+        "learning_takeaway": "Morris’s Wandle design uses a notably large pattern repeat, making the scale of repetition a defining feature of its textile composition."
+      },
+      "score": 0.1553,
+      "word_score": 0.0653,
+      "label_score": 0.3225
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 139,
+        "effective_id": "Q25304581",
+        "label": "Incomplete contracts",
+        "learning_takeaway": "Recognize that important behavior may be unmeasurable, unverifiable, unforeseen, or too costly to specify in an enforceable agreement."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 6,
+        "effective_id": "local:authored:000258",
+        "label": "Contract bridge",
+        "learning_takeaway": "See how bidding fixes a partnership's trick-taking target before play."
+      },
+      "score": 0.1553,
+      "word_score": 0.0387,
+      "label_score": 0.3718
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 33,
+        "effective_id": "local:catalog:founder-effect",
+        "label": "Founder effect",
+        "learning_takeaway": "Explain how a few colonists can establish unrepresentative genetic frequencies."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 94,
+        "effective_id": "local:catalog:misinformation-effect",
+        "label": "Misinformation effect",
+        "learning_takeaway": "Explore how misleading information after an event can alter later reports."
+      },
+      "score": 0.1551,
+      "word_score": 0.0751,
+      "label_score": 0.3036
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 159,
+        "effective_id": "local:catalog:miners-rule",
+        "label": "Miner’s rule",
+        "learning_takeaway": "Approximate cumulative fatigue damage by adding consumed lifetime fractions while recognizing nonlinear-damage limitations."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 29,
+        "effective_id": "local:catalog:jacoby-rule",
+        "label": "Jacoby rule",
+        "learning_takeaway": "See how an optional scoring rule encourages use of the doubling cube."
+      },
+      "score": 0.1544,
+      "word_score": 0.0819,
+      "label_score": 0.289
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 55,
+        "effective_id": "local:catalog:bohr-effect",
+        "label": "Bohr effect",
+        "learning_takeaway": "Explain why lower pH promotes oxygen unloading from hemoglobin."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 125,
+        "effective_id": "Q83213",
+        "label": "Photoelectric effect",
+        "learning_takeaway": "Light above a threshold frequency ejects electrons whose maximum energy is measured with a stopping potential."
+      },
+      "score": 0.1542,
+      "word_score": 0.0628,
+      "label_score": 0.3241
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 91,
+        "effective_id": "local:catalog:geometric-distribution",
+        "label": "Geometric distribution",
+        "learning_takeaway": "Model repeated independent trials until success, distinguishing conventions that count trials or preceding failures."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 21,
+        "effective_id": "local:authored:000520",
+        "label": "Distributed systems",
+        "learning_takeaway": "Coordinate machines through messages while preserving shared results despite some machine failures."
+      },
+      "score": 0.1539,
+      "word_score": 0.032,
+      "label_score": 0.3803
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 154,
+        "effective_id": "local:catalog:starch-retrogradation",
+        "label": "Starch retrogradation",
+        "learning_takeaway": "Distinguish molecular re-ordering during storage from the initial swelling of starch during cooking."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 48,
+        "effective_id": "local:catalog:melodic-retrograde",
+        "label": "Melodic retrograde",
+        "learning_takeaway": "Hear how reversing note order differs from inverting intervals."
+      },
+      "score": 0.1539,
+      "word_score": 0.0,
+      "label_score": 0.4398
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 19,
+        "effective_id": "Q895901",
+        "label": "Crystal structure",
+        "learning_takeaway": "Describe a solid through a repeating unit cell and its spatial arrangement."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 129,
+        "effective_id": "local:catalog:mechanistic-organizational-structure",
+        "label": "Mechanistic organizational structure",
+        "learning_takeaway": "Coordinate work through hierarchy, standardized procedures, and defined roles where consistency is important."
+      },
+      "score": 0.1537,
+      "word_score": 0.054,
+      "label_score": 0.3387
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-006",
+        "ordinal": 123,
+        "effective_id": "local:catalog:repetitive-narration",
+        "label": "Repetitive narration",
+        "learning_takeaway": "A single event can be recounted more than once, allowing repeated tellings rather than repeated occurrences to structure a narrative."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 16,
+        "effective_id": "local:catalog:threefold-repetition",
+        "label": "Threefold repetition",
+        "learning_takeaway": "See why matching piece locations alone does not establish repetition."
+      },
+      "score": 0.1536,
+      "word_score": 0.0,
+      "label_score": 0.4389
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 68,
+        "effective_id": "local:catalog:reduplication",
+        "label": "Reduplication",
+        "learning_takeaway": "Repeat all or part of a linguistic form to express a grammatical or meaning contrast."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 33,
+        "effective_id": "local:catalog:duplicate-bridge",
+        "label": "Duplicate bridge",
+        "learning_takeaway": "Understand comparison against other players holding the same cards."
+      },
+      "score": 0.1536,
+      "word_score": 0.0,
+      "label_score": 0.4387
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 135,
+        "effective_id": "local:authored:000028",
+        "label": "Urban heat islands",
+        "learning_takeaway": "Distinguish hot built surfaces from warmer urban air and identify their different measurements."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 169,
+        "effective_id": "Q178185",
+        "label": "Heat engine",
+        "learning_takeaway": "Extract work from heat flowing between reservoirs while rejecting part of the input energy."
+      },
+      "score": 0.1535,
+      "word_score": 0.0875,
+      "label_score": 0.2761
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 183,
+        "effective_id": "local:catalog:leather-temper",
+        "label": "Leather temper",
+        "learning_takeaway": "Distinguish a hide’s pliability from its thickness when choosing between draping and shape-holding uses."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 170,
+        "effective_id": "Q175166",
+        "label": "Tempera",
+        "learning_takeaway": "Tempera binds pigment in a water-soluble medium; in modern art-historical usage the term commonly points to egg-yolk painting."
+      },
+      "score": 0.1533,
+      "word_score": 0.0,
+      "label_score": 0.4381
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 137,
+        "effective_id": "local:catalog:organizational-formalization",
+        "label": "Organizational formalization",
+        "learning_takeaway": "Specify roles, responsibilities, and accountability to different degrees instead of leaving all coordination to emergent relationships."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 116,
+        "effective_id": "local:catalog:focalization",
+        "label": "Focalization",
+        "learning_takeaway": "The information a narrative reveals can be limited by a character’s knowledge without making that character the speaker."
+      },
+      "score": 0.1532,
+      "word_score": 0.0,
+      "label_score": 0.4377
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 43,
+        "effective_id": "local:catalog:endosymbiotic-theory",
+        "label": "Endosymbiotic theory",
+        "learning_takeaway": "Use organelle genomes, division and membranes as evidence of ancestry from once-independent cells."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 69,
+        "effective_id": "local:authored:000604",
+        "label": "Graph theory",
+        "learning_takeaway": "Represent connections by vertices and edges, then use structural constraints such as bipartite colorability."
+      },
+      "score": 0.1531,
+      "word_score": 0.0794,
+      "label_score": 0.29
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 176,
+        "effective_id": "local:catalog:institutionalization",
+        "label": "Institutionalization",
+        "learning_takeaway": "Understand how shared conventions become established social institutions that outlast the original participants."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 157,
+        "effective_id": "local:catalog:material-constitution",
+        "label": "Material constitution",
+        "learning_takeaway": "Distinguish a statue from the material constituting it through their possible persistence conditions."
+      },
+      "score": 0.1531,
+      "word_score": 0.0,
+      "label_score": 0.4373
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 69,
+        "effective_id": "local:authored:000604",
+        "label": "Graph theory",
+        "learning_takeaway": "Represent connections by vertices and edges, then use structural constraints such as bipartite colorability."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 100,
+        "effective_id": "local:catalog:signal-detection-theory",
+        "label": "Signal detection theory",
+        "learning_takeaway": "Explore detecting a target among noise when expectations and task goals influence reports."
+      },
+      "score": 0.1529,
+      "word_score": 0.061,
+      "label_score": 0.3236
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 118,
+        "effective_id": "local:authored:000620",
+        "label": "Optics",
+        "learning_takeaway": "Explain image formation and light guidance through refraction and related behavior at material boundaries."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 183,
+        "effective_id": "local:catalog:optical-mixing",
+        "label": "Optical mixing",
+        "learning_takeaway": "Neo-Impressionists separated colored strokes in the hope that their interaction in the viewer’s eye would produce more vibrant effects than physically mixed pigments."
+      },
+      "score": 0.1528,
+      "word_score": 0.0,
+      "label_score": 0.4367
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 56,
+        "effective_id": "local:catalog:haldane-effect",
+        "label": "Haldane effect",
+        "learning_takeaway": "Distinguish oxygenation-dependent carbon-dioxide carriage from pH-dependent oxygen affinity."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 93,
+        "effective_id": "Q1095859",
+        "label": "Spacing effect",
+        "learning_takeaway": "Separate encounters with course material over time while keeping total study time comparable."
+      },
+      "score": 0.1528,
+      "word_score": 0.0497,
+      "label_score": 0.3442
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 56,
+        "effective_id": "local:catalog:haldane-effect",
+        "label": "Haldane effect",
+        "learning_takeaway": "Distinguish oxygenation-dependent carbon-dioxide carriage from pH-dependent oxygen affinity."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 131,
+        "effective_id": "Q201805",
+        "label": "Zeeman effect",
+        "learning_takeaway": "External magnetic fields split spectral lines, allowing astronomical field strengths to be inferred."
+      },
+      "score": 0.1526,
+      "word_score": 0.0529,
+      "label_score": 0.3377
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 79,
+        "effective_id": "local:catalog:observer-s-paradox-in-sociolinguistics",
+        "label": "Observer's paradox in sociolinguistics",
+        "learning_takeaway": "Recognize that systematically recording everyday speech may change the very speech researchers want to observe."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 149,
+        "effective_id": "local:catalog:lottery-paradox",
+        "label": "Lottery paradox",
+        "learning_takeaway": "Compare rational acceptance of each likely loser with certainty that one ticket wins."
+      },
+      "score": 0.1521,
+      "word_score": 0.0812,
+      "label_score": 0.2839
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 177,
+        "effective_id": "local:catalog:ascribed-status",
+        "label": "Ascribed status",
+        "learning_takeaway": "Identify social positions assigned without personal choice and the expectations attached to them."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 36,
+        "effective_id": "local:catalog:tea-as-a-british-status-good",
+        "label": "Tea as a British status good",
+        "learning_takeaway": "Early expensive tea was guarded and consumed by elites; expanding imports helped transform it into a more widely accessible grocery."
+      },
+      "score": 0.1516,
+      "word_score": 0.0603,
+      "label_score": 0.3212
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 33,
+        "effective_id": "local:catalog:founder-effect",
+        "label": "Founder effect",
+        "learning_takeaway": "Explain how a few colonists can establish unrepresentative genetic frequencies."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 131,
+        "effective_id": "local:catalog:doctrine-of-double-effect",
+        "label": "Doctrine of double effect",
+        "learning_takeaway": "Distinguish intending harm as a means from foreseeing it as a side effect."
+      },
+      "score": 0.1513,
+      "word_score": 0.0871,
+      "label_score": 0.2706
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 179,
+        "effective_id": "local:catalog:role-set",
+        "label": "Role-set",
+        "learning_takeaway": "Recognize that one social status can carry several distinct role relationships and expectations."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 104,
+        "effective_id": "local:catalog:mental-set",
+        "label": "Mental set",
+        "learning_takeaway": "Recognize persistence with a formerly useful approach after circumstances change."
+      },
+      "score": 0.1513,
+      "word_score": 0.1585,
+      "label_score": 0.138
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 175,
+        "effective_id": "local:catalog:park-grass-experiment",
+        "label": "Park Grass Experiment",
+        "learning_takeaway": "Interpret a long-term grassland experiment in light of treatment design and changes in measurement methods."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 120,
+        "effective_id": "local:catalog:milgram-s-obedience-experiments",
+        "label": "Milgram's obedience experiments",
+        "learning_takeaway": "Compare obedience in the original setup with changes produced by proximity and setting."
+      },
+      "score": 0.1513,
+      "word_score": 0.0552,
+      "label_score": 0.3297
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 170,
+        "effective_id": "local:catalog:marker-assisted-selection",
+        "label": "Marker-assisted selection",
+        "learning_takeaway": "Select breeding candidates using genetic markers associated with a useful trait."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 108,
+        "effective_id": "local:catalog:adverse-selection",
+        "label": "Adverse selection",
+        "learning_takeaway": "See how privately known risk changes which people seek insurance and can push low-risk buyers out."
+      },
+      "score": 0.1512,
+      "word_score": 0.0629,
+      "label_score": 0.3153
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 22,
+        "effective_id": "local:catalog:inert-pair-effect",
+        "label": "Inert pair effect",
+        "learning_takeaway": "Heavy main-group elements can retain a low-energy valence s-electron pair and form lower oxidation states."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 64,
+        "effective_id": "local:catalog:minimal-pair",
+        "label": "Minimal pair",
+        "learning_takeaway": "Use a one-position contrast between otherwise matching words as evidence that two sounds distinguish meanings."
+      },
+      "score": 0.1512,
+      "word_score": 0.0829,
+      "label_score": 0.2779
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 55,
+        "effective_id": "local:catalog:bohr-effect",
+        "label": "Bohr effect",
+        "learning_takeaway": "Explain why lower pH promotes oxygen unloading from hemoglobin."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 89,
+        "effective_id": "local:catalog:self-reference-effect",
+        "label": "Self-reference effect",
+        "learning_takeaway": "Investigate why relating information to oneself can improve later remembering."
+      },
+      "score": 0.1511,
+      "word_score": 0.0647,
+      "label_score": 0.3116
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 69,
+        "effective_id": "local:authored:000604",
+        "label": "Graph theory",
+        "learning_takeaway": "Represent connections by vertices and edges, then use structural constraints such as bipartite colorability."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 183,
+        "effective_id": "local:catalog:emergent-norm-theory",
+        "label": "Emergent norm theory",
+        "learning_takeaway": "Explain crowd conduct through locally developing guidelines in unfamiliar situations rather than assuming all crowds act irrationally."
+      },
+      "score": 0.151,
+      "word_score": 0.0544,
+      "label_score": 0.3304
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 175,
+        "effective_id": "local:catalog:park-grass-experiment",
+        "label": "Park Grass Experiment",
+        "learning_takeaway": "Interpret a long-term grassland experiment in light of treatment design and changes in measurement methods."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 126,
+        "effective_id": "local:catalog:experimenter-expectancy-bias",
+        "label": "Experimenter expectancy bias",
+        "learning_takeaway": "Understand how a researcher's expectations can shape interpretation of ambiguous responses."
+      },
+      "score": 0.1507,
+      "word_score": 0.0,
+      "label_score": 0.4304
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 12,
+        "effective_id": "local:catalog:variable-expressivity",
+        "label": "Variable expressivity",
+        "learning_takeaway": "Distinguish variation in a condition’s manifestations from whether it appears at all."
+      },
+      "right": {
+        "batch_id": "research-batch-004",
+        "ordinal": 184,
+        "effective_id": "local:catalog:variable-area-exhaust-nozzle",
+        "label": "Variable-area exhaust nozzle",
+        "learning_takeaway": "Adjustable nozzle geometry trades extra weight for efficient operation across a wider airflow range."
+      },
+      "score": 0.1505,
+      "word_score": 0.0741,
+      "label_score": 0.2924
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 9,
+        "effective_id": "local:catalog:unicode-normalization",
+        "label": "Unicode normalization",
+        "learning_takeaway": "Transform equivalent character sequences into a common binary representation through decomposition, ordering, and optional recomposition."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 116,
+        "effective_id": "local:catalog:focalization",
+        "label": "Focalization",
+        "learning_takeaway": "The information a narrative reveals can be limited by a character’s knowledge without making that character the speaker."
+      },
+      "score": 0.1503,
+      "word_score": 0.0483,
+      "label_score": 0.3399
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-003",
+        "ordinal": 73,
+        "effective_id": "local:catalog:ambulatory-blood-pressure-monitoring",
+        "label": "Ambulatory blood pressure monitoring",
+        "learning_takeaway": "Distinguish repeated measurements during ordinary activity from one clinic reading."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 93,
+        "effective_id": "Q7565103",
+        "label": "Source-monitoring error",
+        "learning_takeaway": "Recognize a remembered detail whose origin has been confused."
+      },
+      "score": 0.1502,
+      "word_score": 0.0784,
+      "label_score": 0.2837
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 165,
+        "effective_id": "local:catalog:local-bridge-in-a-network",
+        "label": "Local bridge in a network",
+        "learning_takeaway": "Identify a tie whose endpoints have no mutual neighbor and whose removal makes their shortest connecting path longer."
+      },
+      "right": {
+        "batch_id": "research-batch-007",
+        "ordinal": 34,
+        "effective_id": "local:catalog:vulnerability-in-bridge",
+        "label": "Vulnerability in bridge",
+        "learning_takeaway": "See how increased bonuses and penalties change a contract's stakes."
+      },
+      "score": 0.1502,
+      "word_score": 0.0781,
+      "label_score": 0.2842
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-004",
+        "ordinal": 108,
+        "effective_id": "local:catalog:inertial-reference-frame",
+        "label": "Inertial reference frame",
+        "learning_takeaway": "Distinguish physical interactions from extra inertial-force terms introduced by accelerated coordinates."
+      },
+      "right": {
+        "batch_id": "research-batch-005",
+        "ordinal": 187,
+        "effective_id": "local:catalog:frame-alignment",
+        "label": "Frame alignment",
+        "learning_takeaway": "Connect a movement's interpretations and goals with prospective participants or allied groups to support coordinated action."
+      },
+      "score": 0.1501,
+      "word_score": 0.0801,
+      "label_score": 0.2803
+    },
+    {
+      "left": {
+        "batch_id": "research-batch-005",
+        "ordinal": 47,
+        "effective_id": "local:catalog:open-security-design",
+        "label": "Open security design",
+        "learning_takeaway": "Keep protection dependent on guarded keys rather than secrecy of the mechanism, enabling public review."
+      },
+      "right": {
+        "batch_id": "research-batch-006",
+        "ordinal": 194,
+        "effective_id": "local:catalog:wandle-textile-design",
+        "label": "Wandle textile design",
+        "learning_takeaway": "Morris’s Wandle design uses a notably large pattern repeat, making the scale of repetition a defining feature of its textile composition."
+      },
+      "score": 0.1501,
+      "word_score": 0.0662,
+      "label_score": 0.3059
+    }
+  ],
+  "limitations": "Only diagnostic retrieval, never automatic merging or proof of distinctness. Provisional batches may change."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "local:catalog:seki",
+  "label": "Seki",
+  "sample_kind": "random_new",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T21:59:09.674103+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "idea",
+    "entity_kind": "idea",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q11413",
+        "label": "Go",
+        "original_description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+        "prior_card_takeaways": [
+          "Understand how liberties connect local capture rules with surrounding territory."
+        ]
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:eyes-in-go",
+        "label": "Eyes in Go"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Mutual survival, missing independent eyes, liberty shortage and self-defeating capture attempts match the seki explanation. The same source directly contrasts two-eye life.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s002"
+      ],
+      "locator": "Seki; Life and death and the concept of eyes; web-07 lines 63–67 and 96–98"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:eyes-in-go",
+      "type": "related_to",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

@@ -1,0 +1,4106 @@
+{
+  "schema_version": 1,
+  "assignment": "science",
+  "status": "selection_complete_awaiting_coordinator_reservations",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "proposals": [
+    {
+      "id": "local:authored:000633",
+      "label": "Biology",
+      "aliases": [],
+      "primary_domain": "Biology & nature",
+      "primary_subfield": "Biological science",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "How the study of life connects cells, organisms and ecosystems.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000633",
+          "label": "Biology",
+          "reason": "Same broad field."
+        }
+      ],
+      "identity_reason": "A researched explanation of the already registered study of life; reuse canonical authored ID.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-bio-openstax",
+          "url": "https://openstax.org/books/biology-2e/pages/1-1-the-science-of-biology",
+          "locator": "What is biology?; Natural Sciences; lines 33-49",
+          "note": "Defines biology as studying life across cells, organisms and ecosystems.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:kleptoplasty",
+      "label": "Kleptoplasty",
+      "aliases": [
+        "Plastid retention"
+      ],
+      "primary_domain": "Biology & nature",
+      "primary_subfield": "Plastid symbiosis",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "An animal can retain algal chloroplasts without retaining a complete algal cell.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q121610",
+          "label": "Symbiosis",
+          "reason": "Broader relationship, not plastid-only retention."
+        },
+        {
+          "id": "Q47263",
+          "label": "Chloroplast",
+          "reason": "Organelle, not its acquisition and retention in a host."
+        }
+      ],
+      "identity_reason": "Source defines plastid-only retention, distinguishing it from general symbiosis and chloroplast identity.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-bio-kleptoplasty",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477",
+          "locator": "Abstract; Introduction; Figure 1; lines 143-173",
+          "note": "Study of plastid retention in the named sea slug and its named algal food; laboratory developmental qualifications.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q121610",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477",
+        "locator": "Abstract; Introduction; Figure 1; lines 143-173",
+        "note": "Introduction explicitly calls kleptoplasty a plastid symbiosis."
+      },
+      "limits": [
+        "Use developmental results as laboratory observations; do not claim plant-animal gene transfer."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:elysia-chlorotica",
+      "label": "Elysia chlorotica",
+      "aliases": [],
+      "primary_domain": "Biology & nature",
+      "primary_subfield": "Photosynthetic sea slugs",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "This sea slug stabilizes ingested plastids during an early developmental feeding period.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7440127",
+          "label": "Sea slug",
+          "reason": "Broad animal grouping, not this species."
+        }
+      ],
+      "identity_reason": "Species named as the experimental organism, with a distinct developmental result.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-bio-kleptoplasty",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477",
+          "locator": "Abstract; Introduction; Figure 1; lines 143-173",
+          "note": "Study of plastid retention in the named sea slug and its named algal food; laboratory developmental qualifications.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q7440127",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477",
+        "locator": "Abstract; Introduction; Figure 1; lines 143-173",
+        "note": "Source calls the host a sea slug."
+      },
+      "limits": [
+        "The observed seven-day stabilization threshold belongs to the described laboratory study."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:vaucheria-litorea",
+      "label": "Vaucheria litorea",
+      "aliases": [],
+      "primary_domain": "Biology & nature",
+      "primary_subfield": "Algal plastid donors",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "This algal prey supplies the chloroplasts retained by Elysia chlorotica.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q37868",
+          "label": "Algae",
+          "reason": "Broad grouping, not the named algal species."
+        }
+      ],
+      "identity_reason": "The paper names a distinct algal species as the plastid donor, rather than another name for the sea slug.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-bio-kleptoplasty",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477",
+          "locator": "Abstract; Introduction; Figure 1; lines 143-173",
+          "note": "Study of plastid retention in the named sea slug and its named algal food; laboratory developmental qualifications.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q37868",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477",
+        "locator": "Abstract; Introduction; Figure 1; lines 143-173",
+        "note": "Introduction identifies V. litorea as algal food."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:guard-cell",
+      "label": "Guard cell",
+      "aliases": [
+        "Guard cells"
+      ],
+      "primary_domain": "Biology & nature",
+      "primary_subfield": "Stomatal anatomy",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Paired guard cells control an opening used for leaf gas exchange.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q216635",
+          "label": "Stoma",
+          "reason": "Pore, rather than the surrounding cell pair."
+        }
+      ],
+      "identity_reason": "Passage distinguishes the cells from the stoma they form; a source-named anatomical subject.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-bio-umn-cells",
+          "url": "https://open.lib.umn.edu/horticulture/chapter/6-1-plant-cells-and-tissues/",
+          "locator": "Dermal tissue; lines 224-226",
+          "note": "Distinguishes guard cells around stomata from root-hair outgrowths.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q216635",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://open.lib.umn.edu/horticulture/chapter/6-1-plant-cells-and-tissues/",
+        "locator": "Dermal tissue; lines 224-226",
+        "note": "Passage locates pairs of guard cells around stomata."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:root-hair",
+      "label": "Root hair",
+      "aliases": [
+        "Root hairs"
+      ],
+      "primary_domain": "Biology & nature",
+      "primary_subfield": "Root absorption anatomy",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A fine epidermal-cell outgrowth provides an entry route for water and nutrients.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q41500",
+          "label": "Root",
+          "reason": "Whole organ, not an epidermal outgrowth."
+        }
+      ],
+      "identity_reason": "A defined cellular outgrowth differs from the root organ and from root epidermis as a tissue.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-bio-umn-cells",
+          "url": "https://open.lib.umn.edu/horticulture/chapter/6-1-plant-cells-and-tissues/",
+          "locator": "Dermal tissue; lines 224-226",
+          "note": "Distinguishes guard cells around stomata from root-hair outgrowths.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q41500",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://open.lib.umn.edu/horticulture/chapter/6-1-plant-cells-and-tissues/",
+        "locator": "Dermal tissue; lines 224-226",
+        "note": "Passage names hairs in root dermal tissue."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:casparian-strip",
+      "label": "Casparian strip",
+      "aliases": [],
+      "primary_domain": "Biology & nature",
+      "primary_subfield": "Root transport barriers",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A hydrophobic band interrupts movement through cell walls and forces membrane crossing.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q41500",
+          "label": "Root",
+          "reason": "Whole organ; barrier is a defined root structure."
+        },
+        {
+          "id": "Q185973",
+          "label": "Plant physiology",
+          "reason": "Broad function field."
+        }
+      ],
+      "identity_reason": "The source-named barrier is distinct from the root and the two transport compartments it separates.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-bio-briggs-roots",
+          "url": "https://bio.libretexts.org/Bookshelves/Botany/Inanimate_Life_(Briggs)/01:_Chapters/1.08:_Vascular_plant_anatomy-_primary_growth",
+          "locator": "The significance of the casparian strip; lines 234-242",
+          "note": "Defines the Casparian barrier, apoplast and connected cytosolic symplast; root-water routes.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q41500",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://bio.libretexts.org/Bookshelves/Botany/Inanimate_Life_(Briggs)/01:_Chapters/1.08:_Vascular_plant_anatomy-_primary_growth",
+        "locator": "The significance of the casparian strip; lines 234-242",
+        "note": "Root anatomy section identifies the band in the root endodermal wall."
+      },
+      "limits": [
+        "Avoid claiming one universal chemical composition from this introductory source."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:apoplast",
+      "label": "Apoplast",
+      "aliases": [
+        "Apoplastic pathway"
+      ],
+      "primary_domain": "Biology & nature",
+      "primary_subfield": "Plant transport compartments",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Water can travel through connected cell-wall and extracellular spaces.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1056194",
+          "label": "Plant cell",
+          "reason": "Individual cell, rather than a connected extracellular compartment."
+        },
+        {
+          "id": "Q185973",
+          "label": "Plant physiology",
+          "reason": "Broader functional field."
+        }
+      ],
+      "identity_reason": "The named extracellular compartment is separately defined from the symplast, and is not a synonym of plant water transport.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-bio-briggs-roots",
+          "url": "https://bio.libretexts.org/Bookshelves/Botany/Inanimate_Life_(Briggs)/01:_Chapters/1.08:_Vascular_plant_anatomy-_primary_growth",
+          "locator": "The significance of the casparian strip; lines 234-242",
+          "note": "Defines the Casparian barrier, apoplast and connected cytosolic symplast; root-water routes.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q185973",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://bio.libretexts.org/Bookshelves/Botany/Inanimate_Life_(Briggs)/01:_Chapters/1.08:_Vascular_plant_anatomy-_primary_growth",
+        "locator": "The significance of the casparian strip; lines 234-242",
+        "note": "Compartment and transport premises support placement under plant physiology."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:symplast",
+      "label": "Symplast",
+      "aliases": [
+        "Symplastic pathway"
+      ],
+      "primary_domain": "Biology & nature",
+      "primary_subfield": "Plant transport compartments",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Connected cytosols allow movement through cells joined by plasmodesmata.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1056194",
+          "label": "Plant cell",
+          "reason": "Individual cell, not the connected cytosolic system."
+        },
+        {
+          "id": "Q185973",
+          "label": "Plant physiology",
+          "reason": "Broader field."
+        }
+      ],
+      "identity_reason": "The source separately defines the cytosolic continuum, with a meaningful boundary at cell membranes.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-bio-briggs-roots",
+          "url": "https://bio.libretexts.org/Bookshelves/Botany/Inanimate_Life_(Briggs)/01:_Chapters/1.08:_Vascular_plant_anatomy-_primary_growth",
+          "locator": "The significance of the casparian strip; lines 234-242",
+          "note": "Defines the Casparian barrier, apoplast and connected cytosolic symplast; root-water routes.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q185973",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://bio.libretexts.org/Bookshelves/Botany/Inanimate_Life_(Briggs)/01:_Chapters/1.08:_Vascular_plant_anatomy-_primary_growth",
+        "locator": "The significance of the casparian strip; lines 234-242",
+        "note": "Named transport compartment supports a learning parent in plant physiology."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:glass-transition",
+      "label": "Glass transition",
+      "aliases": [],
+      "primary_domain": "Chemistry & materials",
+      "primary_subfield": "Polymer thermal behavior",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Amorphous polymer segment motion changes across a temperature range, separately from crystalline melting.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q185357",
+          "label": "Phase transition",
+          "reason": "Broad category; glass transition has specific kinetic qualifications."
+        },
+        {
+          "id": "Q81163",
+          "label": "Polymer",
+          "reason": "Material class."
+        },
+        {
+          "id": "Q11469",
+          "label": "Glass",
+          "reason": "Material whose existing description mentions this transition; distinct from the independently defined thermal phenomenon."
+        }
+      ],
+      "identity_reason": "The separate named thermal transition concerns changes of segmental motion, while baseline Glass is a material whose description mentions the transition as one property. A material and its independently defined physical transition are distinct subjects.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-chem-glass-pslc",
+          "url": "https://pslc.ws/macrog/tg.htm",
+          "locator": "Long-range segmental motion; Glass Transition vs. Melting; lines 25-26 and 51-56",
+          "note": "Polymer glass transition changes segmental movement; separates amorphous glass transition from crystalline melting.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q81163",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://pslc.ws/macrog/tg.htm",
+        "locator": "Long-range segmental motion; Glass Transition vs. Melting; lines 25-26 and 51-56",
+        "note": "Source explicitly explains the transition in polymers."
+      },
+      "limits": [
+        "Temperature depends on material and measurement conditions; avoid claiming a universal equilibrium phase transition."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:physical-aging-polymers",
+      "label": "Physical aging of polymers",
+      "aliases": [
+        "Polymer physical aging"
+      ],
+      "primary_domain": "Chemistry & materials",
+      "primary_subfield": "Glassy material relaxation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Structural recovery changes a polymer's viscoelastic properties over time.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q81163",
+          "label": "Polymer",
+          "reason": "Material class, not time-dependent structural recovery."
+        },
+        {
+          "id": "Q185357",
+          "label": "Phase transition",
+          "reason": "Temperature-driven changes differ from structural recovery."
+        }
+      ],
+      "identity_reason": "NIST separately names structural recovery as physical aging; it is not a fuller description of glass transition.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-chem-glass-nist",
+          "url": "https://www.nist.gov/publications/glass-transition-its-measurement-and-underlying-physics",
+          "locator": "Abstract; lines 125-127",
+          "note": "Separately names structural recovery of polymer properties as physical aging.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q81163",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.nist.gov/publications/glass-transition-its-measurement-and-underlying-physics",
+        "locator": "Abstract; lines 125-127",
+        "note": "Abstract explicitly associates physical aging with engineering and viscoelastic properties of polymers."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:spinodal-decomposition",
+      "label": "Spinodal decomposition",
+      "aliases": [],
+      "primary_domain": "Chemistry & materials",
+      "primary_subfield": "Phase separation mechanisms",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Small composition fluctuations can grow without the nucleation barrier of a metastable mixture.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q185357",
+          "label": "Phase transition",
+          "reason": "Broader transition category."
+        },
+        {
+          "id": "Q113796",
+          "label": "Precipitation (chemistry)",
+          "reason": "General formation of another phase is not this instability mechanism."
+        }
+      ],
+      "identity_reason": "Source defines a barrierless instability and explicitly contrasts it with nucleation.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-chem-spinodal",
+          "url": "https://pages.nist.gov/fipy/en/stable/generated/examples.cahnHilliard.mesh2D.html",
+          "locator": "Opening explanatory paragraphs; lines 0-5",
+          "note": "Defines barrierless phase separation and contrasts it with nucleation.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q185357",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://pages.nist.gov/fipy/en/stable/generated/examples.cahnHilliard.mesh2D.html",
+        "locator": "Opening explanatory paragraphs; lines 0-5",
+        "note": "Opening paragraph explicitly calls this a phase separation process."
+      },
+      "limits": [
+        "The instability requires suitable thermodynamic conditions."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:nafion",
+      "label": "Nafion",
+      "aliases": [
+        "Nafion membranes"
+      ],
+      "primary_domain": "Chemistry & materials",
+      "primary_subfield": "Ion-conducting membrane materials",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "A named fluorinated polymer membrane family conducts cations in electrochemical cells.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q81163",
+          "label": "Polymer",
+          "reason": "Broad chemical material class."
+        },
+        {
+          "id": "Q176088",
+          "label": "Membrane",
+          "reason": "Generic barrier, not the named polymer family."
+        }
+      ],
+      "identity_reason": "First-party passage identifies Nafion's PFSA/PTFE copolymer composition and electrochemical role.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-chem-nafion",
+          "url": "https://www.nafion.com/en/products/sulfonic-membranes",
+          "locator": "Membranes for a Wide Variety of Electrochemical Applications; lines 151-153; grades tables",
+          "note": "Manufacturer identifies the PFSA/PTFE copolymer membrane family and cation-conducting role.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q81163",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.nafion.com/en/products/sulfonic-membranes",
+        "locator": "Membranes for a Wide Variety of Electrochemical Applications; lines 151-153; grades tables",
+        "note": "Manufacturer explicitly identifies a copolymer basis."
+      },
+      "limits": [
+        "Manufacturer source supports composition and function, not comparative superiority claims."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:nist-srm-610",
+      "label": "NIST SRM 610",
+      "aliases": [
+        "SRM 610",
+        "Trace Elements in Glass SRM 610"
+      ],
+      "primary_domain": "Chemistry & materials",
+      "primary_subfield": "Analytical reference materials",
+      "entity_kind": "named_subject",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Characterized trace-element glass can calibrate elemental measurements on Mars.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11469",
+          "label": "Glass",
+          "reason": "Ordinary material is distinct from a numbered characterized reference material."
+        }
+      ],
+      "identity_reason": "Numbered NIST reference subject has its own trace-element characterization and measurement purpose.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-chem-srm610",
+          "url": "https://www.nist.gov/news-events/news/2021/07/spotlight-one-small-step-srm-610-aboard-mars-perseverance-rover",
+          "locator": "PIXL calibration discussion; lines 126-130",
+          "note": "Names SRM 610 trace-element glass and its calibration use on Perseverance.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q394",
+        "type": "application_of",
+        "assertion": "editorial",
+        "url": "https://www.nist.gov/news-events/news/2021/07/spotlight-one-small-step-srm-610-aboard-mars-perseverance-rover",
+        "locator": "PIXL calibration discussion; lines 126-130",
+        "note": "A certified reference artifact supports measurement calibration, a metrology application."
+      },
+      "limits": [
+        "Do not treat this news page as the current certificate or reproduce certificate values."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed",
+      "proposed_related_relations": [
+        {
+          "target_id": "Q11469",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "science-chem-srm610"
+          ],
+          "url": "https://www.nist.gov/news-events/news/2021/07/spotlight-one-small-step-srm-610-aboard-mars-perseverance-rover",
+          "locator": "PIXL calibration discussion; lines 126-130",
+          "note": "SRM 610 is a specified glass reference material used for calibration."
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:photobleaching",
+      "label": "Photobleaching",
+      "aliases": [
+        "Fluorophore photobleaching"
+      ],
+      "primary_domain": "Chemistry & materials",
+      "primary_subfield": "Fluorophore photochemistry",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Repeated illumination can irreversibly remove a molecule's fluorescence.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q191807",
+          "label": "Fluorescence",
+          "reason": "Emission phenomenon, not irreversible loss of emission capacity."
+        }
+      ],
+      "identity_reason": "Source separately distinguishes photobleaching from general fading and reversible quenching.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-chem-photobleach",
+          "url": "https://www.microscopyu.com/techniques/fluorescence/introduction-to-fluorescence-microscopy",
+          "locator": "Fading, Quenching, and Photobleaching; lines 88-95",
+          "note": "Distinguishes irreversible fluorophore decomposition from broader fading, and names recovery experiments.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q191807",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.microscopyu.com/techniques/fluorescence/introduction-to-fluorescence-microscopy",
+        "locator": "Fading, Quenching, and Photobleaching; lines 88-95",
+        "note": "Source explains photobleaching as a cause of fluorescence emission loss."
+      },
+      "limits": [
+        "Oxygen chemistry here is a documented mechanism, not a claim that every fluorophore has one identical pathway."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:surface-plasmon-resonance-microscopy",
+      "label": "Surface plasmon resonance microscopy",
+      "aliases": [],
+      "primary_domain": "Chemistry & materials",
+      "primary_subfield": "Interfacial optical sensing",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Interfacial refractive-index changes support label-free optical measurements.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q58392",
+          "label": "Plasmon",
+          "reason": "Collective excitation, rather than the named interfacial microscopy method."
+        },
+        {
+          "id": "Q174102",
+          "label": "Refractive index",
+          "reason": "Measured optical property."
+        }
+      ],
+      "identity_reason": "The inspected authors name a microscopy method using an interfacial optical response, a distinct application rather than a renaming of the physical resonance or collective plasmon excitation.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-chem-spr",
+          "url": "https://www.nist.gov/publications/surface-plasmon-resonance-microscopy-achieving-quantitative-optical-response",
+          "locator": "Abstract; lines 125-128",
+          "note": "Authors describe label-free interfacial refractive-index imaging and calibration limitations.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1074953",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://www.nist.gov/publications/surface-plasmon-resonance-microscopy-achieving-quantitative-optical-response",
+        "locator": "Abstract; lines 125-128",
+        "note": "Authors explicitly describe carrying SPR imaging out on a microscope."
+      },
+      "limits": [
+        "This inspected abstract supports SPR imaging; detailed resonance excitation claims need the full paper at drafting."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "Q395",
+      "label": "Mathematics",
+      "aliases": [
+        "Math",
+        "Maths"
+      ],
+      "primary_domain": "Mathematics",
+      "primary_subfield": "Mathematical science",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Abstract structures can become tools for quantitative practical problems.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q395",
+          "label": "Mathematics",
+          "reason": "Same field."
+        }
+      ],
+      "identity_reason": "Field definition is a researched existing control, reusing the canonical ID.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-math-mathematics",
+          "url": "https://mathworld.wolfram.com/Mathematics.html",
+          "locator": "Opening definition; line 13",
+          "note": "Field covers idealized objects and both abstract and practical tools.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:sperners-lemma",
+      "label": "Sperner's lemma",
+      "aliases": [
+        "Sperner’s lemma"
+      ],
+      "primary_domain": "Mathematics",
+      "primary_subfield": "Combinatorial topology",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Boundary-constrained vertex colors guarantee a fully labeled small triangle.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1144897",
+          "label": "Brouwer fixed-point theorem",
+          "reason": "Equivalent theorem does not make the distinct combinatorial lemma its alias."
+        }
+      ],
+      "identity_reason": "Source defines the labeling lemma and explicitly distinguishes it from Sperner's antichain theorem.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-math-sperner-lemma",
+          "url": "https://mathworld.wolfram.com/SpernersLemma.html",
+          "locator": "Opening statement and distinction; lines 13-18",
+          "note": "Boundary-restricted triangle labels force a fully labeled triangle; not the antichain theorem.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000605",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://mathworld.wolfram.com/SpernersLemma.html",
+        "locator": "Opening statement and distinction; lines 13-18",
+        "note": "Triangulation and fixed-point equivalence support topology placement."
+      },
+      "limits": [
+        "Card can use the source's two-dimensional formulation; do not state the antichain theorem."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:ham-sandwich-theorem",
+      "label": "Ham sandwich theorem",
+      "aliases": [],
+      "primary_domain": "Mathematics",
+      "primary_subfield": "Geometric bisection",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "One plane can simultaneously bisect three three-dimensional volumes.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:borsukulam-theorem",
+          "label": "Borsuk–Ulam theorem",
+          "reason": "Related topological result, not the volume-bisection statement."
+        }
+      ],
+      "identity_reason": "The independently named simultaneous-bisection theorem has its own measure and dimension conditions.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-math-ham",
+          "url": "https://mathworld.wolfram.com/HamSandwichTheorem.html",
+          "locator": "Theorem statement and three-dimensional argument; lines 13-20",
+          "note": "One hyperplane bisects n volumes in n dimensions.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000605",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://mathworld.wolfram.com/HamSandwichTheorem.html",
+        "locator": "Theorem statement and three-dimensional argument; lines 13-20",
+        "note": "Dimension and continuous-volume premises support a topology learning parent."
+      },
+      "limits": [
+        "Use finite volumes; distinguish a plane's geometric bisection from equal pieces by count."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:desargues-theorem",
+      "label": "Desargues' theorem",
+      "aliases": [
+        "Desargues’s theorem"
+      ],
+      "primary_domain": "Mathematics",
+      "primary_subfield": "Projective incidence geometry",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Triangles sharing a center of perspectivity produce collinear intersections of corresponding sides.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q177409",
+          "label": "Projective geometry",
+          "reason": "Broader incidence field."
+        }
+      ],
+      "identity_reason": "Source states a particular perspective-triangle incidence theorem, not a synonym for perspective.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-math-desargues",
+          "url": "https://mathworld.wolfram.com/DesarguesTheorem.html",
+          "locator": "Theorem statement; lines 16-19",
+          "note": "Perspective-from-a-point triangles are perspective from a line.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q177409",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://mathworld.wolfram.com/DesarguesTheorem.html",
+        "locator": "Theorem statement; lines 16-19",
+        "note": "Projective incidence statement supports the field placement."
+      },
+      "limits": [
+        "Use the inspected classical projective-geometry formulation; do not imply it holds in every abstract non-Desarguesian plane."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:van-der-waerdens-theorem",
+      "label": "van der Waerden's theorem",
+      "aliases": [
+        "Van der Waerden theorem"
+      ],
+      "primary_domain": "Mathematics",
+      "primary_subfield": "Ramsey theory",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Finite colorings of the positive integers force arbitrarily long monochromatic arithmetic progressions.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q170008",
+          "label": "Arithmetic progression",
+          "reason": "Sequence structure, not its guaranteed appearance under coloring."
+        }
+      ],
+      "identity_reason": "Coloring guarantee is distinct from the progression structure and from density-based theorems.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-math-waerden",
+          "url": "https://mathworld.wolfram.com/vanderWaerdensTheorem.html",
+          "locator": "Four equivalent formulations; lines 13-19",
+          "note": "Finite colorings force arbitrarily long single-color arithmetic progressions.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000603",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://mathworld.wolfram.com/vanderWaerdensTheorem.html",
+        "locator": "Four equivalent formulations; lines 13-19",
+        "note": "Finite colorings and combinatorial existence support combinatorics placement."
+      },
+      "limits": [
+        "Do not substitute Szemerédi's positive-density statement for this finite-color theorem."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:thue-morse-sequence",
+      "label": "Thue–Morse sequence",
+      "aliases": [
+        "Thue-Morse sequence"
+      ],
+      "primary_domain": "Mathematics",
+      "primary_subfield": "Automatic binary sequences",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Parity of binary digit sums generates a sequence by repeated complementary substitution.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q133250",
+          "label": "Sequence",
+          "reason": "Broader ordered mathematical object."
+        }
+      ],
+      "identity_reason": "Named binary sequence is separately defined by digit-sum parity; aliases resolve to one subject.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-math-thuemorse",
+          "url": "https://mathworld.wolfram.com/Thue-MorseSequence.html",
+          "locator": "Opening definition; substitution rules; lines 15-20 and 33-45",
+          "note": "Defines sequence by parity of binary digit sums and complementary substitution.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q133250",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://mathworld.wolfram.com/Thue-MorseSequence.html",
+        "locator": "Opening definition; substitution rules; lines 15-20 and 33-45",
+        "note": "Opening definition identifies this as a sequence of numbers."
+      },
+      "limits": [
+        "Use the version beginning with zero; the complementary version is another convention."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:sperners-theorem",
+      "label": "Sperner's theorem",
+      "aliases": [
+        "Sperner’s theorem"
+      ],
+      "primary_domain": "Mathematics",
+      "primary_subfield": "Extremal set theory",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "An inclusion-free family of subsets cannot exceed the middle binomial coefficient.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000610",
+          "label": "Set theory",
+          "reason": "Broader field, not an antichain bound."
+        },
+        {
+          "id": "Q431937",
+          "label": "Antichain",
+          "reason": "Inclusion-incomparable object family, rather than the named maximum-size theorem."
+        }
+      ],
+      "identity_reason": "Source expressly warns that the antichain theorem differs from the triangulation lemma, despite the shared name.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-math-sperner-theorem",
+          "url": "https://mathworld.wolfram.com/SpernersTheorem.html",
+          "locator": "Theorem statement; lines 13-21",
+          "note": "Antichain bound uses the middle binomial coefficient; distinct from triangulation lemma.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000610",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://mathworld.wolfram.com/SpernersTheorem.html",
+        "locator": "Theorem statement; lines 13-21",
+        "note": "Opening sentence names it as a result in extremal set theory."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:bayes-factor",
+      "label": "Bayes factor",
+      "aliases": [
+        "Bayes factors"
+      ],
+      "primary_domain": "Mathematics",
+      "primary_subfield": "Bayesian model comparison",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A marginal-likelihood ratio transforms prior model odds into posterior odds.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q182505",
+          "label": "Bayes' theorem",
+          "reason": "Updating identity, not the evidence ratio between models."
+        },
+        {
+          "id": "Q4874481",
+          "label": "Bayesian statistics",
+          "reason": "Broader field."
+        }
+      ],
+      "identity_reason": "The source separately defines a model-evidence ratio; it is not a renamed posterior probability.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-math-bayesfactor",
+          "url": "https://statproofbook.github.io/D/bf.html",
+          "locator": "Definition and odds identities; lines 7-17",
+          "note": "Ratio of marginal likelihoods updates prior model odds.",
+          "inspection_mode": "web.run opened article and inspected named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q4874481",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://statproofbook.github.io/D/bf.html",
+        "locator": "Definition and odds identities; lines 7-17",
+        "note": "Definition is explicitly indexed under Bayesian model selection."
+      },
+      "limits": [
+        "The ratio is relative to specified models and their parameter priors."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:authored:000624",
+      "label": "Chemistry",
+      "aliases": [],
+      "primary_domain": "Chemistry & materials",
+      "primary_subfield": "Chemical science",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "How composition and interactions of matter connect cooking, materials and medicine.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000624",
+          "label": "Chemistry",
+          "reason": "Same broad study of matter."
+        }
+      ],
+      "identity_reason": "The source explains the already registered field; a better discovery explanation reuses its authored identity.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-chem-control",
+          "url": "https://openstax.org/books/chemistry-2e/pages/1-1-chemistry-in-context",
+          "locator": "Chemistry: The Central Science; lines 44-54",
+          "note": "Defines composition, properties and interactions of matter; connects everyday changes to the field.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:critical-micelle-concentration",
+      "label": "Critical micelle concentration",
+      "aliases": [
+        "Critical micellar concentration",
+        "CMC"
+      ],
+      "primary_domain": "Chemistry & materials",
+      "primary_subfield": "Surfactant aggregation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A concentration threshold changes how added surfactant partitions into micelles.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q191154",
+          "label": "Surfactant",
+          "reason": "Molecular class, not its aggregation threshold."
+        }
+      ],
+      "identity_reason": "The inspected textbook names and defines this threshold; no baseline micelle or threshold formulation was found.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-chem-cmc",
+          "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Topics_in_Thermodynamics_of_Solutions_and_Liquid_Mixtures/01:_Modules/1.20:_Surfactants/1.20.2:_Surfactants_and_Micelles",
+          "locator": "Characteristic concentration and monomer/micelle partition; lines 196-206",
+          "note": "Names the concentration threshold for micelles at specified temperature and pressure.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q191154",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Topics_in_Thermodynamics_of_Solutions_and_Liquid_Mixtures/01:_Modules/1.20:_Surfactants/1.20.2:_Surfactants_and_Micelles",
+        "locator": "Characteristic concentration and monomer/micelle partition; lines 196-206",
+        "note": "The threshold is explicitly defined for a given surfactant in solution."
+      },
+      "limits": [
+        "Threshold depends on surfactant, solvent and thermodynamic conditions; it is not universal."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "Q11451",
+      "label": "Agriculture",
+      "aliases": [],
+      "primary_domain": "Food & agriculture",
+      "primary_subfield": "Agricultural production",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "How growing crops and raising animals supply food and materials.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "reason": "Same cultivation and production field."
+        }
+      ],
+      "identity_reason": "Field-level overview is a researched control using the existing ID.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-food-agriculture",
+          "url": "https://education.nationalgeographic.org/resource/the-art-and-science-of-agriculture/",
+          "locator": "Opening explanation; lines 39-40",
+          "note": "Cultivation and animal raising produce food, fibers and other useful products.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:nixtamalization",
+      "label": "Nixtamalization",
+      "aliases": [],
+      "primary_domain": "Food & agriculture",
+      "primary_subfield": "Maize processing",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Alkaline maize processing changes dough preparation and nutrient availability.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11575",
+          "label": "Maize",
+          "reason": "Grain organism, not the named processing method."
+        }
+      ],
+      "identity_reason": "CIMMYT separately names the alkaline maize process; this is a specific application with its own chemical and food consequences.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-food-nixt",
+          "url": "https://www.cimmyt.org/news/what-is-nixtamalization/",
+          "locator": "What is nixtamalization? and nutritional changes; lines 27-41",
+          "note": "Names alkaline cooking and soaking of maize before washing and dough making.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q627371",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.cimmyt.org/news/what-is-nixtamalization/",
+        "locator": "What is nixtamalization? and nutritional changes; lines 27-41",
+        "note": "Alkaline cooking, soaking and milling form a specific food-processing method."
+      },
+      "limits": [
+        "A cultural and food-science subject, not an individualized nutrition recommendation."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed",
+      "proposed_related_relations": [
+        {
+          "target_id": "Q11575",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "science-food-nixt"
+          ],
+          "url": "https://www.cimmyt.org/news/what-is-nixtamalization/",
+          "locator": "What is nixtamalization? and nutritional changes; lines 27-41",
+          "note": "Maize is the raw material treated by the process."
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:stale-seedbed",
+      "label": "Stale seedbed",
+      "aliases": [],
+      "primary_domain": "Food & agriculture",
+      "primary_subfield": "Weed management",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Germinate and remove shallow weeds before sowing the crop, while avoiding fresh seed exposure.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q11451",
+          "label": "Agriculture",
+          "reason": "Broader production field."
+        }
+      ],
+      "identity_reason": "The source names a distinct timing strategy; it is broader than a particular killing tool and is not synonymous with solarization.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-food-stale",
+          "url": "https://www.extension.umd.edu/resource/stale-seedbed-technique-relatively-underused-alternative-weed-management-tactic-vegetable-production",
+          "locator": "Precisely how does the stale seedbed work?; lines 57-62",
+          "note": "Shallow nondormant seeds germinate and seedlings are killed before crop planting, with minimal disturbance.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11451",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://www.extension.umd.edu/resource/stale-seedbed-technique-relatively-underused-alternative-weed-management-tactic-vegetable-production",
+        "locator": "Precisely how does the stale seedbed work?; lines 57-62",
+        "note": "The named method is explicitly used in organic and conventional vegetable crop production."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:soil-solarization",
+      "label": "Soil solarization",
+      "aliases": [],
+      "primary_domain": "Food & agriculture",
+      "primary_subfield": "Weed management",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Clear plastic traps solar heat to suppress weeds and some soil pests.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1759778",
+          "label": "Solarization (physics)",
+          "reason": "Physical effect on materials; distinct from heating covered garden soil."
+        },
+        {
+          "id": "Q1269685",
+          "label": "Soil steam sterilization",
+          "reason": "Steam treatment rather than sunlight under clear plastic."
+        },
+        {
+          "id": "local:authored:000000",
+          "label": "Gardening",
+          "reason": "Broader growing practice."
+        }
+      ],
+      "identity_reason": "The named soil heating method has a distinct energy source and cover mechanism; it is not an expansion of steam sterilization.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-food-tarps",
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/solarization-and-occultation",
+          "locator": "Clear versus opaque coverings; Quick facts and methods; lines 244-270, 287-299",
+          "note": "Distinguishes clear-plastic heating from opaque-cover weed suppression and qualifies performance by site and season.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000000",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/solarization-and-occultation",
+        "locator": "Clear versus opaque coverings; Quick facts and methods; lines 244-270, 287-299",
+        "note": "The guide explicitly uses the method to prepare garden beds."
+      },
+      "limits": [
+        "Heating and control vary with weather, moisture, depth and climate; Minnesota guidance is conditional."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:occultation-weed-control",
+      "label": "Occultation for weed control",
+      "aliases": [
+        "Garden occultation"
+      ],
+      "primary_domain": "Food & agriculture",
+      "primary_subfield": "Weed management",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Opaque covers block light while moisture and warmth exhaust newly sprouted weeds.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q202746",
+          "label": "Occultation",
+          "reason": "Astronomical hiding of one object by another; different meaning."
+        },
+        {
+          "id": "Q28456201",
+          "label": "Planetary transits and occultations",
+          "reason": "Astronomical events, not a garden technique."
+        }
+      ],
+      "identity_reason": "The source explicitly contrasts opaque-cover occultation with clear-cover solarization; astronomical aliases cannot absorb this horticultural sense.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-food-tarps",
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/solarization-and-occultation",
+          "locator": "Clear versus opaque coverings; Quick facts and methods; lines 244-270, 287-299",
+          "note": "Distinguishes clear-plastic heating from opaque-cover weed suppression and qualifies performance by site and season.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000000",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/solarization-and-occultation",
+        "locator": "Clear versus opaque coverings; Quick facts and methods; lines 244-270, 287-299",
+        "note": "The opaque-cover method is used for garden-bed weed control."
+      },
+      "limits": [
+        "Opaque covering is slower than solarization in the cited Minnesota context; avoid universal duration claims."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:dryeration",
+      "label": "Dryeration",
+      "aliases": [],
+      "primary_domain": "Food & agriculture",
+      "primary_subfield": "Grain drying",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Corn's retained heat supports extra drying after a resting period and slow cooling.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q278061",
+          "label": "Drying",
+          "reason": "General moisture-removal process."
+        },
+        {
+          "id": "Q11575",
+          "label": "Maize",
+          "reason": "The crop processed."
+        }
+      ],
+      "identity_reason": "The source names a staged grain-drying process; it is not a synonym for all drying or all in-storage cooling.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-food-dryeration",
+          "url": "https://extension.umn.edu/agriculture/crop-production/corn/dryeration-and-in-storage-cooling-for-corn-drying",
+          "locator": "Increased capacity and efficiency; Process; lines 263-290",
+          "note": "Hot corn is tempered before cooling, using retained heat to remove moisture.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q278061",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://extension.umn.edu/agriculture/crop-production/corn/dryeration-and-in-storage-cooling-for-corn-drying",
+        "locator": "Increased capacity and efficiency; Process; lines 263-290",
+        "note": "Title and process explicitly identify a corn-drying method."
+      },
+      "limits": [
+        "Cited setup concerns corn and designated cooling bins; rates depend on system and moisture."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:case-hardening-food-drying",
+      "label": "Case hardening in food drying",
+      "aliases": [],
+      "primary_domain": "Food & agriculture",
+      "primary_subfield": "Drying failures",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "An apparently dry surface can hide moisture retained inside a food piece.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q13427982",
+          "label": "Case hardening of rocks",
+          "reason": "Rock-surface weathering sense, not food dehydration."
+        },
+        {
+          "id": "Q278061",
+          "label": "Drying",
+          "reason": "General process, not the named surface-drying failure."
+        }
+      ],
+      "identity_reason": "The educational passage names a food-drying failure mode; preserve separate identity from geological case hardening.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-food-casehard",
+          "url": "https://extension.umn.edu/food/preparing/cooking-at-home/food-preservation/drying",
+          "locator": "Oven drying; lines 267-269",
+          "note": "Excessive heat hardens the outside before the inside dries.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q278061",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://extension.umn.edu/food/preparing/cooking-at-home/food-preservation/drying",
+        "locator": "Oven drying; lines 267-269",
+        "note": "The phenomenon is described as a failure during oven drying."
+      },
+      "limits": [
+        "Avoid food-preservation operating instructions or treating appearance as a safety test."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:degrees-brix",
+      "label": "Degrees Brix",
+      "aliases": [
+        "Brix",
+        "°Bx"
+      ],
+      "primary_domain": "Food & agriculture",
+      "primary_subfield": "Food composition measurement",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A sucrose-calibrated scale helps compare soluble solids in fruit juice.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q174102",
+          "label": "Refractive index",
+          "reason": "Underlying optical property rather than the concentration scale."
+        },
+        {
+          "id": "Q4027534",
+          "label": "Sucrose",
+          "reason": "Calibration substance rather than a measurement scale."
+        }
+      ],
+      "identity_reason": "The source explicitly defines the scale; no baseline Brix formulation was found. It is distinct from sugar identity and refractive index.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-food-brix",
+          "url": "https://extension.psu.edu/2025-pennsylvania-tree-fruit-maturity-report-october-13",
+          "locator": "Table 4, definitions of sample parameters; line 1242",
+          "note": "Defines degrees Brix via sucrose calibration and soluble solids measured in apple juice.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q174102",
+        "type": "application_of",
+        "assertion": "editorial",
+        "url": "https://extension.psu.edu/2025-pennsylvania-tree-fruit-maturity-report-october-13",
+        "locator": "Table 4, definitions of sample parameters; line 1242",
+        "note": "Use of a refractometer links the concentration scale to refractive-index measurement."
+      },
+      "limits": [
+        "In mixed food juices, soluble solids are not an exact assay of sucrose alone."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:leaf-area-index",
+      "label": "Leaf area index",
+      "aliases": [
+        "LAI"
+      ],
+      "primary_domain": "Food & agriculture",
+      "primary_subfield": "Canopy measurement",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Normalize leaf surface by ground area to describe canopy structure and model vegetation processes.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q185973",
+          "label": "Plant physiology",
+          "reason": "Broader functional field."
+        }
+      ],
+      "identity_reason": "The source distinguishes a canopy-area ratio from light-absorption fraction and from the broader physiology field; no ratio equivalent was found.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-food-lai",
+          "url": "https://modis-land.gsfc.nasa.gov/lai.html",
+          "locator": "Leaf Area Index definition and uses; lines 50-54",
+          "note": "Defines canopy leaf area normalized by ground area and identifies vegetation-process uses.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q185973",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://modis-land.gsfc.nasa.gov/lai.html",
+        "locator": "Leaf Area Index definition and uses; lines 50-54",
+        "note": "Canopy-area definition and photosynthesis/evapotranspiration uses support a plant-physiology placement."
+      },
+      "limits": [
+        "Broadleaf and conifer conventions differ; LAI is not the same as FPAR."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:authored:000345",
+      "label": "Sewing",
+      "aliases": [],
+      "primary_domain": "Home & crafts",
+      "primary_subfield": "Stitched construction",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "How seams and stitch choices turn fabric pieces into a usable object.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "reason": "Same craft of stitched construction."
+        }
+      ],
+      "identity_reason": "The inspected educational project illustrates the already registered practice; use the existing canonical ID.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-home-pillow",
+          "url": "https://extension.usu.edu/sewing/research/four-square-pillow",
+          "locator": "Pillow construction; basting; lines 114-130, 165-167",
+          "note": "Shows sewing by joining fabric pieces and defines temporary long basting stitches.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:selvage",
+      "label": "Selvage",
+      "aliases": [
+        "Selvedge"
+      ],
+      "primary_domain": "Home & crafts",
+      "primary_subfield": "Fabric construction",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A firmly woven fabric edge can behave differently from the cloth body in a seam.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000340",
+          "label": "Weaving",
+          "reason": "Broader fabric-making craft."
+        },
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "reason": "Broader construction practice."
+        }
+      ],
+      "identity_reason": "The source defines a named lengthwise edge feature rather than a generic finished seam; no equivalent edge subject appears in the baseline.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-home-skirt",
+          "url": "https://extension.usu.edu/sewing/research/youth-elastic-waist-skirt",
+          "locator": "Wearing versus design ease; fabric edges; lines 84, 154, 178",
+          "note": "Separately names comfort allowance, style allowance and firmly woven selvage edges.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000340",
+        "type": "facet_of",
+        "assertion": "editorial",
+        "url": "https://extension.usu.edu/sewing/research/youth-elastic-waist-skirt",
+        "locator": "Wearing versus design ease; fabric edges; lines 84, 154, 178",
+        "note": "A firmly woven edge is a structural feature of woven cloth."
+      },
+      "limits": [
+        "Selection concerns woven-fabric selvage; avoid generalizing every knit or specialty textile."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:grainline-woven-fabric",
+      "label": "Grainline in woven fabric",
+      "aliases": [
+        "Woven fabric grain"
+      ],
+      "primary_domain": "Home & crafts",
+      "primary_subfield": "Fabric orientation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Thread direction, rather than a printed stripe, determines whether fabric is on grain.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:bias-facings",
+          "label": "Bias facings",
+          "reason": "Specific curved-edge finish, not fabric thread orientation."
+        },
+        {
+          "id": "local:authored:000340",
+          "label": "Weaving",
+          "reason": "Broader interlacing practice."
+        }
+      ],
+      "identity_reason": "The source names grainline and distinguishes physical thread directions from surface design; it is an underlying orientation subject distinct from a bias-facing application.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-home-grain",
+          "url": "https://pubs.nmsu.edu/_g/G401/index.html",
+          "locator": "Checking fabric grain and printing; lines 69-73",
+          "note": "Distinguishes thread grain from printed motifs and explains off-grain alignment problems.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000345",
+        "type": "facet_of",
+        "assertion": "editorial",
+        "url": "https://pubs.nmsu.edu/_g/G401/index.html",
+        "locator": "Checking fabric grain and printing; lines 69-73",
+        "note": "Fabric alignment checks inform cutting and sewing home-furnishing pieces."
+      },
+      "limits": [
+        "The chosen sense is woven-fabric grain, not cereal grain or wood grain."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:basting-sewing",
+      "label": "Basting in sewing",
+      "aliases": [
+        "Basting stitch"
+      ],
+      "primary_domain": "Home & crafts",
+      "primary_subfield": "Temporary stitching",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Long temporary stitches hold fabric together before permanent construction.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q2425803",
+          "label": "Basting (cooking)",
+          "reason": "Moistening food during cooking; separate sense."
+        },
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "reason": "Broader construction craft."
+        }
+      ],
+      "identity_reason": "The source explicitly defines a temporary sewing stitch; the cooking basting identity cannot represent it.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-home-pillow",
+          "url": "https://extension.usu.edu/sewing/research/four-square-pillow",
+          "locator": "Pillow construction; basting; lines 114-130, 165-167",
+          "note": "Shows sewing by joining fabric pieces and defines temporary long basting stitches.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000345",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://extension.usu.edu/sewing/research/four-square-pillow",
+        "locator": "Pillow construction; basting; lines 114-130, 165-167",
+        "note": "The named stitch is explicitly used in sewing pillow pieces."
+      },
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:seam-allowance",
+      "label": "Seam allowance",
+      "aliases": [],
+      "primary_domain": "Home & crafts",
+      "primary_subfield": "Seam geometry",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "The fabric area between stitching and the raw edge is a separately planned construction allowance.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:french-seam",
+          "label": "French seam",
+          "reason": "Specific enclosed seam construction, not the allowance itself."
+        },
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "reason": "Broader stitching craft."
+        },
+        {
+          "id": "local:catalog:staystitching",
+          "label": "Staystitching",
+          "reason": "Stitching technique whose card mentions seam allowance; not the geometric fabric area."
+        },
+        {
+          "id": "local:catalog:understitching",
+          "label": "Understitching",
+          "reason": "Stitching technique using seam allowances; distinct from the allowance itself."
+        }
+      ],
+      "identity_reason": "The glossary separately names the area between stitching and raw edge. Existing staystitching and understitching cards mention it as a working location; those techniques and a French seam do not represent the separately defined geometric allowance.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-home-glossary",
+          "url": "https://extension.usu.edu/utah4h/files/fcs_sewing_clothing_book_2023.pdf",
+          "locator": "Seam Allowance; PDF page 10 (zero-based 9), lines 224-226",
+          "note": "Defines the fabric area between a stitch line and raw edge.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000345",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://extension.usu.edu/utah4h/files/fcs_sewing_clothing_book_2023.pdf",
+        "locator": "Seam Allowance; PDF page 10 (zero-based 9), lines 224-226",
+        "note": "The allowance is separately defined in an educational sewing glossary."
+      },
+      "limits": [
+        "Allowance width varies by project; do not imply one universal width."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:wearing-ease",
+      "label": "Wearing ease",
+      "aliases": [],
+      "primary_domain": "Home & crafts",
+      "primary_subfield": "Garment fit",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Comfort room built into a pattern differs from extra room chosen for style.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "reason": "Broader garment construction practice."
+        }
+      ],
+      "identity_reason": "The source separately names the comfort component and contrasts it with design ease; these are distinct fitting quantities, not fuller explanations of one type.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-home-skirt",
+          "url": "https://extension.usu.edu/sewing/research/youth-elastic-waist-skirt",
+          "locator": "Wearing versus design ease; fabric edges; lines 84, 154, 178",
+          "note": "Separately names comfort allowance, style allowance and firmly woven selvage edges.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000345",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://extension.usu.edu/sewing/research/youth-elastic-waist-skirt",
+        "locator": "Wearing versus design ease; fabric edges; lines 84, 154, 178",
+        "note": "The educational sewing guide defines this pattern component."
+      },
+      "limits": [
+        "Comfort allowance is garment-dependent; no numerical fit prescription is proposed."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:design-ease",
+      "label": "Design ease",
+      "aliases": [],
+      "primary_domain": "Home & crafts",
+      "primary_subfield": "Garment silhouette",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Extra room beyond wearing ease shapes a garment's outline and fullness.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "reason": "Broader garment construction practice."
+        }
+      ],
+      "identity_reason": "The inspected source explicitly defines design ease as additional to wearing ease; different function establishes a meaningful component boundary.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-home-skirt",
+          "url": "https://extension.usu.edu/sewing/research/youth-elastic-waist-skirt",
+          "locator": "Wearing versus design ease; fabric edges; lines 84, 154, 178",
+          "note": "Separately names comfort allowance, style allowance and firmly woven selvage edges.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000345",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://extension.usu.edu/sewing/research/youth-elastic-waist-skirt",
+        "locator": "Wearing versus design ease; fabric edges; lines 84, 154, 178",
+        "note": "The guide names this styling component of a sewing pattern."
+      },
+      "limits": [
+        "This is style allowance, not the minimum comfortable room."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:gathering-sewing",
+      "label": "Gathering in sewing",
+      "aliases": [
+        "Gathered fabric"
+      ],
+      "primary_domain": "Home & crafts",
+      "primary_subfield": "Fabric shaping",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Draw longer cloth into small folds so it fits a shorter attaching edge.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q207302",
+          "label": "Magic: The Gathering",
+          "reason": "Card-game title; no sewing meaning."
+        },
+        {
+          "id": "local:authored:000345",
+          "label": "Sewing",
+          "reason": "Broader construction practice."
+        }
+      ],
+      "identity_reason": "The guide names and demonstrates a cloth-shaping process; temporary basting is not the same as deliberately redistributing fabric length.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-home-gather",
+          "url": "https://extension.usu.edu/sewing/research/dropped-waist-skirt-with-ruffles",
+          "locator": "Gathering stitches and ruffle attachment; lines 317-336",
+          "note": "Long stitches and pulled bobbin threads gather longer fabric to fit a band.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000345",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://extension.usu.edu/sewing/research/dropped-waist-skirt-with-ruffles",
+        "locator": "Gathering stitches and ruffle attachment; lines 317-336",
+        "note": "The named gathering operation attaches ruffles in a sewing project."
+      },
+      "limits": [
+        "Inspected method uses machine stitches; gathering can use other methods."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "Q133805",
+      "label": "Epidemiology",
+      "aliases": [],
+      "primary_domain": "Health & medicine",
+      "primary_subfield": "Population health",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "How population patterns and causes of health events inform disease control.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q133805",
+          "label": "Epidemiology",
+          "reason": "Same population-health discipline."
+        }
+      ],
+      "identity_reason": "The CDC passage explains the existing field; reuse its canonical imported ID.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-health-epi",
+          "url": "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section1.html",
+          "locator": "Definition and distribution; lines 11-22, 41-46",
+          "note": "Explains population patterns and determinants linked to public-health action.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:length-time-bias",
+      "label": "Length-time bias in cancer screening",
+      "aliases": [
+        "Length bias in cancer screening"
+      ],
+      "primary_domain": "Health & medicine",
+      "primary_subfield": "Screening interpretation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Screening preferentially detects slower-growing cancers with longer preclinical windows.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:lead-time-bias",
+          "label": "Lead-time bias",
+          "reason": "Earlier diagnosis advances the survival clock; distinct timing mechanism."
+        },
+        {
+          "id": "local:catalog:healthy-volunteer-bias-in-screening-studies",
+          "label": "Healthy-volunteer bias in screening studies",
+          "reason": "Participant selection, rather than tumor growth-rate selection."
+        },
+        {
+          "id": "Q1163564",
+          "label": "Screening (medicine)",
+          "reason": "Broader detection practice."
+        }
+      ],
+      "identity_reason": "NCI separately names length bias and lead-time bias, grounding distinct mechanisms rather than a new example of the same bias.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-health-length",
+          "url": "https://www.cancer.gov/about-cancer/screening/research/what-screening-statistics-mean",
+          "locator": "Length bias and overdiagnosis; lines 34-38",
+          "note": "Slower-growing cancers have longer detectable windows and are overrepresented among screening detections.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1163564",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.cancer.gov/about-cancer/screening/research/what-screening-statistics-mean",
+        "locator": "Length bias and overdiagnosis; lines 34-38",
+        "note": "The named bias specifically arises in interpreting cancer screening."
+      },
+      "limits": [
+        "Distinguish enriched slow growth from proof of mortality benefit; overdiagnosis is a related extreme."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:sentinel-lymph-node-biopsy",
+      "label": "Sentinel lymph node biopsy",
+      "aliases": [
+        "SLNB"
+      ],
+      "primary_domain": "Health & medicine",
+      "primary_subfield": "Cancer staging",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Sampling the first draining lymph node helps investigate whether cancer has spread.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q179991",
+          "label": "Biopsy",
+          "reason": "Broader tissue-sampling procedure."
+        }
+      ],
+      "identity_reason": "NCI names a specific node-targeted biopsy procedure; no baseline procedure equivalent was found.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-health-sentinel",
+          "url": "https://www.cancer.gov/about-cancer/diagnosis-staging/staging/sentinel-node-biopsy-fact-sheet",
+          "locator": "What is a sentinel lymph node biopsy? and procedure; lines 27-40",
+          "note": "First draining node is identified, removed and examined to investigate cancer spread.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q179991",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://www.cancer.gov/about-cancer/diagnosis-staging/staging/sentinel-node-biopsy-fact-sheet",
+        "locator": "What is a sentinel lymph node biopsy? and procedure; lines 27-40",
+        "note": "The named procedure is explicitly a biopsy of selected lymph nodes."
+      },
+      "limits": [
+        "A negative result suggests absence of spread; it does not prove none exists."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:deprescribing",
+      "label": "Deprescribing",
+      "aliases": [],
+      "primary_domain": "Health & medicine",
+      "primary_subfield": "Medication review",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Supervised medication reduction requires reviewing benefit, risk and subsequent symptoms.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q128406",
+          "label": "Pharmacology",
+          "reason": "Broader study of medicines."
+        },
+        {
+          "id": "Q11190",
+          "label": "Medicine",
+          "reason": "Broader clinical field."
+        }
+      ],
+      "identity_reason": "The source separately names a structured clinical process, not medication nonadherence or simply taking fewer drugs.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-health-deprescribing",
+          "url": "https://psnet.ahrq.gov/primer/deprescribing-patient-safety-strategy",
+          "locator": "Definition and steps; lines 132-142; ongoing monitoring; line 169",
+          "note": "Supervised discontinuation or dose reduction uses shared decisions and monitoring.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11190",
+        "type": "application_of",
+        "assertion": "editorial",
+        "url": "https://psnet.ahrq.gov/primer/deprescribing-patient-safety-strategy",
+        "locator": "Definition and steps; lines 132-142; ongoing monitoring; line 169",
+        "note": "The described supervised patient-safety strategy is clinical medication management."
+      },
+      "limits": [
+        "No individual medication advice; withdrawal or recurrence can require adjustment or restarting."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:refeeding-syndrome",
+      "label": "Refeeding syndrome",
+      "aliases": [],
+      "primary_domain": "Health & medicine",
+      "primary_subfield": "Nutrition complications",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Restarting nutrition after malnutrition can produce dangerous electrolyte shifts.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q12167",
+          "label": "Malnutrition",
+          "reason": "Nutritional deficiency state, not a complication of refeeding."
+        },
+        {
+          "id": "Q2138622",
+          "label": "Nutrition",
+          "reason": "Broader nutrient subject."
+        }
+      ],
+      "identity_reason": "The medically reviewed explanation names a distinct metabolic complication of treatment for malnutrition.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-health-refeeding",
+          "url": "https://my.clevelandclinic.org/health/diseases/23228-refeeding-syndrome",
+          "locator": "Definition and cause; lines 53, 69-79",
+          "note": "Metabolic restart after malnutrition can shift scarce electrolytes from blood into cells.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q12167",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://my.clevelandclinic.org/health/diseases/23228-refeeding-syndrome",
+        "locator": "Definition and cause; lines 53, 69-79",
+        "note": "The source explicitly describes refeeding syndrome as a complication after malnutrition."
+      },
+      "limits": [
+        "Selection is explanatory; treatment requires monitoring rather than a do-it-yourself feeding rule."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:surgical-anastomosis",
+      "label": "Surgical anastomosis",
+      "aliases": [],
+      "primary_domain": "Health & medicine",
+      "primary_subfield": "Surgical connections",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Joining healthy tube ends can restore flow after removal or route around a blockage.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q619800",
+          "label": "Surgical suture",
+          "reason": "A joining device rather than the resulting connection/procedure."
+        },
+        {
+          "id": "Q105196",
+          "label": "Transplantation (medicine)",
+          "reason": "One application involving reconnection, not the connection itself."
+        }
+      ],
+      "identity_reason": "The source explicitly names surgical anastomosis and reconnection uses; choose the surgical sense rather than silently claiming all natural anatomical connections.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-health-anastomosis",
+          "url": "https://my.clevelandclinic.org/health/treatments/24035-anastomosis",
+          "locator": "What Is an Anastomosis?; surgical uses; lines 27, 55-82",
+          "note": "Surgical joining of tubes restores flow or creates a bypass; transplantation is a named use.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11190",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://my.clevelandclinic.org/health/treatments/24035-anastomosis",
+        "locator": "What Is an Anastomosis?; surgical uses; lines 27, 55-82",
+        "note": "Surgical reconnection is a clinical procedure within medicine."
+      },
+      "limits": [
+        "Anastomosis also has natural anatomical senses; this proposal reserves the surgical one."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed",
+      "proposed_related_relations": [
+        {
+          "target_id": "Q105196",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "science-health-anastomosis"
+          ],
+          "url": "https://my.clevelandclinic.org/health/treatments/24035-anastomosis",
+          "locator": "What Is an Anastomosis?; surgical uses; lines 27, 55-82",
+          "note": "Transplantation is one procedure in which reconnection is used; this does not make all anastomosis an application of transplantation."
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:nonunion",
+      "label": "Nonunion",
+      "aliases": [
+        "Fracture nonunion"
+      ],
+      "primary_domain": "Health & medicine",
+      "primary_subfield": "Bone repair failure",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A fracture that fails to heal differs from one that is merely healing slowly.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q68833",
+          "label": "Bone fracture",
+          "reason": "Injury rather than the named healing failure."
+        }
+      ],
+      "identity_reason": "AAOS explicitly distinguishes nonunion from delayed union, establishing a separate complication rather than a longer explanation of fracture.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-health-nonunion",
+          "url": "https://www.orthoinfo.org/diseases--conditions/nonunions/",
+          "locator": "Definition and bone healing; lines 118-123; diagnosis; lines 174-178",
+          "note": "Separates failed healing from delayed union and names stability and blood supply requirements.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q68833",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.orthoinfo.org/diseases--conditions/nonunions/",
+        "locator": "Definition and bone healing; lines 118-123; diagnosis; lines 174-178",
+        "note": "The definition is explicitly failure of a broken bone to heal."
+      },
+      "limits": [
+        "Diagnosis relies on clinical and imaging context; no universal time cutoff is proposed."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:negative-pressure-wound-therapy",
+      "label": "Negative pressure wound therapy",
+      "aliases": [
+        "Vacuum-assisted wound therapy",
+        "NPWT"
+      ],
+      "primary_domain": "Health & medicine",
+      "primary_subfield": "Wound-care methods",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Controlled suction removes wound fluid while a sealed dressing supports healing.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1509074",
+          "label": "Wound healing",
+          "reason": "Biological process rather than a device-assisted treatment."
+        },
+        {
+          "id": "Q184753",
+          "label": "Wound",
+          "reason": "Injury rather than its treatment."
+        }
+      ],
+      "identity_reason": "The source separately names the suction treatment, a distinct clinical application of wound healing.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-health-npwt",
+          "url": "https://my.clevelandclinic.org/health/treatments/17313-negative-pressure-wound-therapy",
+          "locator": "Definition and mechanism; lines 50-76",
+          "note": "A sealed dressing and pump apply suction, remove fluid and support the healing environment.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11190",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://my.clevelandclinic.org/health/treatments/17313-negative-pressure-wound-therapy",
+        "locator": "Definition and mechanism; lines 50-76",
+        "note": "The described provider-directed wound treatment is a clinical method within medicine."
+      },
+      "limits": [
+        "Not suitable for every wound; avoid suggesting unsupervised use."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed",
+      "proposed_related_relations": [
+        {
+          "target_id": "Q1509074",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "science-health-npwt"
+          ],
+          "url": "https://my.clevelandclinic.org/health/treatments/17313-negative-pressure-wound-therapy",
+          "locator": "Definition and mechanism; lines 50-76",
+          "note": "Treatment encourages wound healing; that outcome association is distinct from application of a biological process."
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:immortal-time-bias",
+      "label": "Immortal time bias",
+      "aliases": [],
+      "primary_domain": "Health & medicine",
+      "primary_subfield": "Observational study timing",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Survival needed to receive an exposure can create a misleading apparent treatment advantage.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1778788",
+          "label": "Cohort study",
+          "reason": "Study design subject, not the timing bias."
+        },
+        {
+          "id": "local:catalog:lead-time-bias",
+          "label": "Lead-time bias",
+          "reason": "Diagnosis clock shift, rather than survival required before exposure assignment."
+        }
+      ],
+      "identity_reason": "The primary study separately names immortal time and lead-time biases. Exposure-group assignment time creates a distinct source-supported mechanism absent from baseline.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-health-immortal",
+          "url": "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000721",
+          "locator": "Immortal time bias; lines 204-206",
+          "note": "Misalignment of cohort entry and treatment assignment favors patients alive at treatment time.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1778788",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000721",
+        "locator": "Immortal time bias; lines 204-206",
+        "note": "The inspected section defines the bias through cohort-entry and intervention timing."
+      },
+      "limits": [
+        "Illustration concerns observational treatment studies; do not claim every delay or every study necessarily creates this bias."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:authored:000616",
+      "label": "Physics",
+      "aliases": [],
+      "primary_domain": "Physics & astronomy",
+      "primary_subfield": "Physical science",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "How a few physical principles connect particles, everyday devices and motion.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000616",
+          "label": "Physics",
+          "reason": "Same broad physical field."
+        }
+      ],
+      "identity_reason": "The introductory passage provides a researched broad control for the existing authored identity.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-physics-control",
+          "url": "https://openstax.org/books/college-physics-2e/pages/1-1-physics-an-introduction",
+          "locator": "Science and the Realm of Physics; lines 37-40",
+          "note": "Field concerns energy, matter, space and time and underlying interactions.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:lageos",
+      "label": "LAGEOS",
+      "aliases": [
+        "Laser Geodynamics Satellites"
+      ],
+      "primary_domain": "Physics & astronomy",
+      "primary_subfield": "Satellite geodesy",
+      "entity_kind": "named_subject",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Passive reflecting satellites provide long-lived laser targets for measuring Earth's motion and shape.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q26540",
+          "label": "Satellite",
+          "reason": "Broad object class, rather than this named pair."
+        }
+      ],
+      "identity_reason": "NASA explicitly treats LAGEOS as Satellites 1 and 2; reserve the named two-satellite mission sense, not an uncertain external ID for only LAGEOS 1.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-physics-lageos",
+          "url": "https://science.nasa.gov/mission/lageos/",
+          "locator": "LAGEOS 1 & 2 overview; lines 235-258",
+          "note": "Passive reflecting satellites are precise laser targets used for geodesy.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q26540",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://science.nasa.gov/mission/lageos/",
+        "locator": "LAGEOS 1 & 2 overview; lines 235-258",
+        "note": "NASA explicitly calls these a pair of orbiting satellites."
+      },
+      "limits": [
+        "Label represents the LAGEOS pair; a later individual-satellite card would require a separate identity decision."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:hayabusa2",
+      "label": "Hayabusa2",
+      "aliases": [
+        "Hayabusa 2"
+      ],
+      "primary_domain": "Physics & astronomy",
+      "primary_subfield": "Asteroid sample return",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Returning physical asteroid samples lets laboratory analysis complement spacecraft observations.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q3863",
+          "label": "Asteroid",
+          "reason": "Target object class rather than named spacecraft."
+        },
+        {
+          "id": "Q26540",
+          "label": "Satellite",
+          "reason": "Broader orbital spacecraft class."
+        }
+      ],
+      "identity_reason": "The inspected mission passage identifies Hayabusa2 and its sample-return work; do not alias the different first Hayabusa mission.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-physics-hayabusa",
+          "url": "https://science.nasa.gov/mission/hayabusa-2/",
+          "locator": "Mission overview, sample return and craft design; lines 241, 264, 304-312",
+          "note": "Named Japanese spacecraft returned asteroid Ryugu samples to Earth.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q180046",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://science.nasa.gov/mission/hayabusa-2/",
+        "locator": "Mission overview, sample return and craft design; lines 241, 264, 304-312",
+        "note": "Asteroid sampling and return are specific activities within space exploration."
+      },
+      "limits": [
+        "Use completed Ryugu sample return; later extended-mission outcomes are outside the inspected evidence."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed",
+      "proposed_related_relations": [
+        {
+          "target_id": "Q3863",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "science-physics-hayabusa"
+          ],
+          "url": "https://science.nasa.gov/mission/hayabusa-2/",
+          "locator": "Mission overview, sample return and craft design; lines 241, 264, 304-312",
+          "note": "The spacecraft studies and samples an asteroid; study target is an association, not a taxonomic parent."
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:101955-bennu",
+      "label": "101955 Bennu",
+      "aliases": [
+        "Bennu"
+      ],
+      "primary_domain": "Physics & astronomy",
+      "primary_subfield": "Rubble-pile asteroids",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "An asteroid assembled from old rocky debris can be sampled to investigate Solar-System history.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q3863",
+          "label": "Asteroid",
+          "reason": "Broad object class."
+        }
+      ],
+      "identity_reason": "NASA verifies the named asteroid and documented sampling; reserve stable local identity without assuming an external item mapping.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-physics-bennu",
+          "url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+          "locator": "Rubble-pile structure and sample collection; lines 239-252",
+          "note": "Names asteroid Bennu as an assembled debris object sampled by OSIRIS-REx.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q3863",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+        "locator": "Rubble-pile structure and sample collection; lines 239-252",
+        "note": "The source explicitly identifies Bennu as an asteroid."
+      },
+      "limits": [
+        "Separate age of constituent rocks from age of the assembled object; avoid uninspected sample-composition findings."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:gn-z11",
+      "label": "GN-z11",
+      "aliases": [],
+      "primary_domain": "Physics & astronomy",
+      "primary_subfield": "Early galaxies",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Resolve host-galaxy light from a compact source to investigate an early galaxy's unusual brightness.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q318",
+          "label": "Galaxy",
+          "reason": "Broad system class."
+        },
+        {
+          "id": "Q589",
+          "label": "Black hole",
+          "reason": "Possible compact source, not the whole galaxy."
+        }
+      ],
+      "identity_reason": "The official study report names a specific early galaxy and distinct observational takeaway; no baseline GN-z11 synonym or prior card was found.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-physics-gnz11",
+          "url": "https://science.nasa.gov/missions/webb/webb-unlocks-secrets-of-one-of-the-most-distant-galaxies-ever-seen/",
+          "locator": "Host galaxy and compact source; lines 322-336",
+          "note": "GN-z11 combines an extended host component and a compact source consistent with accretion.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q318",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://science.nasa.gov/missions/webb/webb-unlocks-secrets-of-one-of-the-most-distant-galaxies-ever-seen/",
+        "locator": "Host galaxy and compact source; lines 322-336",
+        "note": "The source explicitly calls GN-z11 a galaxy with an extended host component."
+      },
+      "limits": [
+        "Compact-source colors are consistent with an accretion disk; avoid treating every interpretation or record-distance superlative as timeless certainty."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:dispersion-measure",
+      "label": "Dispersion measure",
+      "aliases": [
+        "Pulsar dispersion measure"
+      ],
+      "primary_domain": "Physics & astronomy",
+      "primary_subfield": "Interstellar radio propagation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Radio pulse delays encode an integrated column of electrons along the line of sight.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q4360",
+          "label": "Pulsar",
+          "reason": "Signal-producing object, not the electron-column quantity."
+        },
+        {
+          "id": "Q182893",
+          "label": "Dispersion (optics)",
+          "reason": "Optical spreading phenomenon, not the specified interstellar measure."
+        }
+      ],
+      "identity_reason": "The radio-astronomy textbook separately defines the integrated quantity; no baseline dispersion-measure formulation was found.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-physics-dm",
+          "url": "https://www.cv.nrao.edu/~sransom/web/Ch6.html",
+          "locator": "Interstellar dispersion and coherent dedispersion; lines 250-255",
+          "note": "Electron-column measure relates to frequency-dependent pulse delays; baseband correction uses deconvolution.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q4306",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.cv.nrao.edu/~sransom/web/Ch6.html",
+        "locator": "Interstellar dispersion and coherent dedispersion; lines 250-255",
+        "note": "Radio-frequency pulse propagation and interstellar electrons place this quantity in radio astronomy."
+      },
+      "limits": [
+        "Distance inference also needs an electron-density model; measured dispersion is not exact distance by itself."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed",
+      "proposed_related_relations": [
+        {
+          "target_id": "Q4360",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "science-physics-dm"
+          ],
+          "url": "https://www.cv.nrao.edu/~sransom/web/Ch6.html",
+          "locator": "Interstellar dispersion and coherent dedispersion; lines 250-255",
+          "note": "Pulsar signals are used to estimate electron column along the sightline; this is not an intrinsic pulsar facet."
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:coherent-dedispersion",
+      "label": "Coherent dedispersion",
+      "aliases": [],
+      "primary_domain": "Physics & astronomy",
+      "primary_subfield": "Pulsar signal correction",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Deconvolve dispersion from recorded voltage data to recover a smeared radio pulse.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q4360",
+          "label": "Pulsar",
+          "reason": "Object being timed, not the correction method."
+        }
+      ],
+      "identity_reason": "The inspected textbook explicitly names a signal-correction technique; it is distinct from the dispersion-measure quantity and from generic radio observation.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-physics-dm",
+          "url": "https://www.cv.nrao.edu/~sransom/web/Ch6.html",
+          "locator": "Interstellar dispersion and coherent dedispersion; lines 250-255",
+          "note": "Electron-column measure relates to frequency-dependent pulse delays; baseband correction uses deconvolution.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q4306",
+        "type": "application_of",
+        "assertion": "editorial",
+        "url": "https://www.cv.nrao.edu/~sransom/web/Ch6.html",
+        "locator": "Interstellar dispersion and coherent dedispersion; lines 250-255",
+        "note": "The technique applies radio-astronomy signal analysis to remove interstellar dispersion."
+      },
+      "limits": [
+        "Cited complete removal presumes known dispersion and suitably sampled baseband voltage data."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed",
+      "proposed_related_relations": [
+        {
+          "target_id": "Q4360",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "science-physics-dm"
+          ],
+          "url": "https://www.cv.nrao.edu/~sransom/web/Ch6.html",
+          "locator": "Interstellar dispersion and coherent dedispersion; lines 250-255",
+          "note": "The technique corrects recorded pulsar signals for high-precision timing."
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:muon-tomography",
+      "label": "Muon tomography",
+      "aliases": [
+        "Cosmic-ray muon tomography"
+      ],
+      "primary_domain": "Physics & astronomy",
+      "primary_subfield": "Particle imaging",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Natural muon scattering can reveal dense hidden structures without an added artificial radiation source.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q3151",
+          "label": "Muon",
+          "reason": "Particle rather than the named imaging application."
+        }
+      ],
+      "identity_reason": "The authors explicitly define the three-dimensional scattering technique; no baseline imaging application equivalent was found.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-physics-muon",
+          "url": "https://arxiv.org/abs/1306.0523",
+          "locator": "Abstract; lines 15-17",
+          "note": "Cosmic-ray Coulomb scattering enables 3D images while resolution and exposure time constrain use.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q3151",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://arxiv.org/abs/1306.0523",
+        "locator": "Abstract; lines 15-17",
+        "note": "Muon paths and Coulomb scattering provide the imaging information."
+      },
+      "limits": [
+        "This proposal reserves scattering tomography; transmission-only muography is a related method, not automatically an alias. Long exposures and resolution limits remain."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:authored:000629",
+      "label": "Geology",
+      "aliases": [],
+      "primary_domain": "Earth & environment",
+      "primary_subfield": "Earth science",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "How present rocks and landscapes preserve evidence of Earth's long history.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000629",
+          "label": "Geology",
+          "reason": "Same study of Earth materials and history."
+        }
+      ],
+      "identity_reason": "The educational passage explains the existing broad field; use the canonical authored identity.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-earth-geology",
+          "url": "https://opentextbc.ca/physicalgeology2ed/chapter/1-1-what-is-geology/",
+          "locator": "Opening definition and deep time; lines 338-340",
+          "note": "Explains Earth materials, water, processes and inference across geological time.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:frost-heave",
+      "label": "Frost heave",
+      "aliases": [
+        "Frost heaving"
+      ],
+      "primary_domain": "Earth & environment",
+      "primary_subfield": "Frozen-soil deformation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Growing ice in soil can raise the ground and deform a road surface.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q179918",
+          "label": "Permafrost",
+          "reason": "Persistent frozen ground, not upward deformation."
+        },
+        {
+          "id": "Q4590598",
+          "label": "Frost",
+          "reason": "Surface deposit from humid air, not ground movement."
+        },
+        {
+          "id": "local:catalog:permafrost-active-layer",
+          "label": "Active layer above permafrost",
+          "reason": "Seasonally thawed layer, not a heaving mechanism."
+        }
+      ],
+      "identity_reason": "NSIDC explicitly names ground deformation by ice as frost heave; it does not require equating the effect with permafrost or atmospheric frost.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-earth-frozen",
+          "url": "https://nsidc.org/learn/parts-cryosphere/frozen-ground-permafrost/science-frozen-ground",
+          "locator": "Density of frozen water and cryosuction; lines 89-94",
+          "note": "Ice growth can heave roads; attraction and freezing of additional water grows segregated ice.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1707766",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://nsidc.org/learn/parts-cryosphere/frozen-ground-permafrost/science-frozen-ground",
+        "locator": "Density of frozen water and cryosuction; lines 89-94",
+        "note": "The inspected movement, water migration and ice growth are specific physical processes within soil."
+      },
+      "limits": [
+        "Do not reduce all heaving to expansion of pre-existing pore water; the adjacent cryosuction mechanism draws in additional water."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:cryosuction",
+      "label": "Cryosuction",
+      "aliases": [],
+      "primary_domain": "Earth & environment",
+      "primary_subfield": "Frozen-ground water migration",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Growing ice draws in liquid water that freezes, allowing a segregated layer to enlarge.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q179918",
+          "label": "Permafrost",
+          "reason": "Frozen-ground state rather than the water-attraction process."
+        },
+        {
+          "id": "Q36133",
+          "label": "Soil",
+          "reason": "Host material, not the named migration process."
+        }
+      ],
+      "identity_reason": "The source separately names an attraction-and-freezing feedback. It is a mechanism that can contribute to heave, not a synonym for the deformation itself.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-earth-frozen",
+          "url": "https://nsidc.org/learn/parts-cryosphere/frozen-ground-permafrost/science-frozen-ground",
+          "locator": "Density of frozen water and cryosuction; lines 89-94",
+          "note": "Ice growth can heave roads; attraction and freezing of additional water grows segregated ice.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1707766",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://nsidc.org/learn/parts-cryosphere/frozen-ground-permafrost/science-frozen-ground",
+        "locator": "Density of frozen water and cryosuction; lines 89-94",
+        "note": "The inspected movement, water migration and ice growth are specific physical processes within soil."
+      },
+      "limits": [
+        "The inspected example concerns frozen ground; do not infer a universal percentage of expansion."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:pycnocline",
+      "label": "Pycnocline",
+      "aliases": [],
+      "primary_domain": "Earth & environment",
+      "primary_subfield": "Ocean density structure",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A steep increase of density with depth can limit mixing between ocean layers.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q849599",
+          "label": "Thermocline",
+          "reason": "Temperature gradient rather than density gradient."
+        },
+        {
+          "id": "Q122911643",
+          "label": "Ocean stratification",
+          "reason": "Broader layer separation."
+        }
+      ],
+      "identity_reason": "The source explicitly defines density structure separately from temperature and salinity; it is not an alias of every thermocline.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-earth-oceanlayers",
+          "url": "https://www.pmel.noaa.gov/people/cronin/encycl/ms0149.pdf",
+          "locator": "Main pycnocline and salinity layers; PDF page 2 (zero-based 1), lines 145-179",
+          "note": "Distinguishes density, salinity and temperature gradients and the barrier to turbulent mixing.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q122911643",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.pmel.noaa.gov/people/cronin/encycl/ms0149.pdf",
+        "locator": "Main pycnocline and salinity layers; PDF page 2 (zero-based 1), lines 145-179",
+        "note": "The named density-gradient region is a distinct stratified vertical zone in the ocean."
+      },
+      "limits": [
+        "Density can reflect temperature, salinity or both; stable permanent pycnoclines are not universal in polar regions."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:halocline",
+      "label": "Halocline",
+      "aliases": [],
+      "primary_domain": "Earth & environment",
+      "primary_subfield": "Ocean salinity structure",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A salinity gradient can separate fresher surface water from saltier deep water.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q849599",
+          "label": "Thermocline",
+          "reason": "Temperature gradient, not salinity gradient."
+        },
+        {
+          "id": "Q122911643",
+          "label": "Ocean stratification",
+          "reason": "Broader layer separation."
+        }
+      ],
+      "identity_reason": "The source explicitly names a salinity-gradient region and distinguishes it from density and temperature gradients.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-earth-oceanlayers",
+          "url": "https://www.pmel.noaa.gov/people/cronin/encycl/ms0149.pdf",
+          "locator": "Main pycnocline and salinity layers; PDF page 2 (zero-based 1), lines 145-179",
+          "note": "Distinguishes density, salinity and temperature gradients and the barrier to turbulent mixing.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q122911643",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.pmel.noaa.gov/people/cronin/encycl/ms0149.pdf",
+        "locator": "Main pycnocline and salinity layers; PDF page 2 (zero-based 1), lines 145-179",
+        "note": "The source describes a salinity-stratified zone and a seasonal fresh-over-saltier example."
+      },
+      "limits": [
+        "Salinity and temperature gradients need not coincide; the inspected freshwater example is seasonal and regional."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:stokes-drift",
+      "label": "Stokes drift",
+      "aliases": [
+        "Wave-induced Stokes drift"
+      ],
+      "primary_domain": "Earth & environment",
+      "primary_subfield": "Wave-driven transport",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Water parcels under a surface wave can drift even when their paths look nearly circular.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1229165",
+          "label": "Dispersion (water waves)",
+          "reason": "Wavelength-dependent wave speed rather than net parcel transport."
+        },
+        {
+          "id": "local:authored:000631",
+          "label": "Oceanography",
+          "reason": "Broader ocean study."
+        }
+      ],
+      "identity_reason": "The educational derivation explicitly names mean parcel drift and contrasts Lagrangian/Eulerian velocity; it is not generic wave dispersion.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-earth-stokes",
+          "url": "https://ocw.mit.edu/courses/res-12-001-topics-in-fluid-dynamics-fall-2024/mitres_12_001_f24_essay1_pt2.pdf",
+          "locator": "Overview and gravity-wave parcel trajectories; PDF pages 2 and 18-19; lines 26-31, 756-812",
+          "note": "Wave-driven parcel displacement leaves a mean drift differing from the fixed-position velocity average.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000631",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://ocw.mit.edu/courses/res-12-001-topics-in-fluid-dynamics-fall-2024/mitres_12_001_f24_essay1_pt2.pdf",
+        "locator": "Overview and gravity-wave parcel trajectories; PDF pages 2 and 18-19; lines 26-31, 756-812",
+        "note": "Surface gravity-wave transport in the inspected example is a physical-oceanography subject."
+      },
+      "limits": [
+        "Takeaway concerns the source's progressive surface-gravity-wave example; avoid claiming all waves transport matter identically."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:bankfull-discharge",
+      "label": "Bankfull discharge",
+      "aliases": [],
+      "primary_domain": "Earth & environment",
+      "primary_subfield": "River-channel flow",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Field channel indicators and hydraulic models can be combined to estimate flow at bankfull stage.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q8737769",
+          "label": "Discharge (hydrology)",
+          "reason": "General volume flow rate, not the named channel-stage discharge."
+        },
+        {
+          "id": "Q29425295",
+          "label": "Streamflow",
+          "reason": "Broad river flow, not this threshold measure."
+        }
+      ],
+      "identity_reason": "The primary article and official manual separately name natural bankfull-stage discharge as a distinct channel metric; no equivalent baseline formulation was found.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-earth-bankfull-usgs",
+          "url": "https://www.usgs.gov/publications/bankfull-discharge-example-its-statistical-relationships",
+          "locator": "Abstract; line 7",
+          "note": "Analyzes natural bankfull-stage flow despite artificial embanking and channel clearance.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        },
+        {
+          "source_id": "science-earth-bankfull-usfs",
+          "url": "https://www.fs.usda.gov/eng/pubs/pdf/StreamSimulation/lo_res/AppendixD.pdf",
+          "locator": "Bankfull field indicators and cross-section checks; PDF page 15 (zero-based 14), lines 414-433",
+          "note": "Compares field-identified bankfull water level with flow estimates; recurrence interval depends on region.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8737769",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.usgs.gov/publications/bankfull-discharge-example-its-statistical-relationships",
+        "locator": "Abstract; line 7",
+        "note": "The article explicitly describes discharge at a specified natural river stage."
+      },
+      "limits": [
+        "A 1–2-year recurrence interval is regional, not a definition or universal rule. Do not equate every embanked crest with natural bankfull level."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:blood-falls",
+      "label": "Blood Falls",
+      "aliases": [],
+      "primary_domain": "Earth & environment",
+      "primary_subfield": "Antarctic glacier hydrology",
+      "entity_kind": "named_subject",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Iron-rich brine can flow from within a cold glacier and turn red when exposed to air.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q35666",
+          "label": "Glacier",
+          "reason": "Broad ice-flow object class, not this named brine outflow."
+        }
+      ],
+      "identity_reason": "The researchers' university report verifies the named Antarctic outflow and its mapped brine pathway; no baseline Blood Falls subject was found.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-earth-blood",
+          "url": "https://www.uaf.edu/news/archives/news-archives-2010-2021/researchers-solve-the-100-year-old-mystery-of-blood-falls.php",
+          "locator": "Brine pathway and iron-rich outflow; lines 18-27",
+          "note": "Radar links an episodic iron-rich brine outflow to liquid within cold Taylor Glacier.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q35666",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://www.uaf.edu/news/archives/news-archives-2010-2021/researchers-solve-the-100-year-old-mystery-of-blood-falls.php",
+        "locator": "Brine pathway and iron-rich outflow; lines 18-27",
+        "note": "The inspected source locates the brine system within Taylor Glacier and its outflow."
+      },
+      "limits": [
+        "Subglacial storage age is qualified as may; avoid the older NASA wording that directly assigns the red color to microbes."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:ferrar-glacier",
+      "label": "Ferrar Glacier",
+      "aliases": [],
+      "primary_domain": "Earth & environment",
+      "primary_subfield": "Antarctic ice flow",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "A named glacier connects inland snow accumulation with an ice-flow route toward the sea.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q35666",
+          "label": "Glacier",
+          "reason": "Broader object class."
+        }
+      ],
+      "identity_reason": "NASA identifies the glacier and its distinct accumulation-to-outflow route; reserve a local identity rather than guessing an external geographic ID.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-earth-ferrar",
+          "url": "https://science.nasa.gov/earth/earth-observatory/ferrar-glacier-antarctica-81463/",
+          "locator": "Snow accumulation and ice route; lines 268-270",
+          "note": "Snow compresses at Taylor Dome and ice flows through Ferrar Glacier toward the Ross Sea.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q35666",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://science.nasa.gov/earth/earth-observatory/ferrar-glacier-antarctica-81463/",
+        "locator": "Snow accumulation and ice route; lines 268-270",
+        "note": "NASA explicitly describes Ferrar as a river of ice formed from accumulated snow."
+      },
+      "limits": [
+        "Use Ferrar Glacier rather than confusing it with neighboring Taylor Glacier or Taylor Dome."
+      ],
+      "selection_role": "primary",
+      "selection_status": "source_and_meaning_reviewed"
+    },
+    {
+      "id": "local:catalog:taylor-glacier",
+      "label": "Taylor Glacier",
+      "aliases": [],
+      "primary_domain": "Earth & environment",
+      "primary_subfield": "Cold-glacier liquid water",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Salt and heat released during freezing help liquid brine persist in an extremely cold glacier.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q35666",
+          "label": "Glacier",
+          "reason": "Broader object class."
+        }
+      ],
+      "identity_reason": "The researchers identify a specific glacier and its liquid-brine system; this learning case differs from Ferrar Glacier's snow-to-ice route.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-earth-blood",
+          "url": "https://www.uaf.edu/news/archives/news-archives-2010-2021/researchers-solve-the-100-year-old-mystery-of-blood-falls.php",
+          "locator": "Brine pathway and iron-rich outflow; lines 18-27",
+          "note": "Radar links an episodic iron-rich brine outflow to liquid within cold Taylor Glacier.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q35666",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.uaf.edu/news/archives/news-archives-2010-2021/researchers-solve-the-100-year-old-mystery-of-blood-falls.php",
+        "locator": "Brine pathway and iron-rich outflow; lines 18-27",
+        "note": "The researchers explicitly identify Taylor Glacier and its interior brine path."
+      },
+      "limits": [
+        "Alternative for Ferrar Glacier or another Earth slot; age and record-cold superlatives are excluded from the bounded takeaway."
+      ],
+      "selection_role": "alternative",
+      "selection_status": "source_and_meaning_reviewed",
+      "alternative_for": "local:catalog:ferrar-glacier"
+    },
+    {
+      "id": "local:catalog:bias-tape",
+      "label": "Bias tape",
+      "aliases": [],
+      "primary_domain": "Home & crafts",
+      "primary_subfield": "Edge-finishing materials",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A narrow strip cut diagonally to the grain is used as a sewing finish or decoration.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:bias-facings",
+          "label": "Bias facings",
+          "reason": "A specific sewn curved-edge construction rather than the strip material itself."
+        },
+        {
+          "id": "Q742736",
+          "label": "Bias",
+          "reason": "Partiality in judgment; separate meaning from fabric orientation."
+        }
+      ],
+      "identity_reason": "The educational glossary defines the bias-cut strip as a material with multiple uses. It is distinct from a completed bias facing; no baseline bias-tape equivalent was found.",
+      "discovery_evidence": [
+        {
+          "source_id": "science-home-biastape",
+          "url": "https://extension.usu.edu/utah4h/files/fcs_sewing_clothing_book_2023.pdf",
+          "locator": "Bias Tape; PDF page 11 (zero-based 10), lines 247-250",
+          "note": "Names a narrow diagonal-grain strip used to finish or decorate clothing.",
+          "inspection_mode": "web.run opened source and inspected substantive named passage"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000345",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://extension.usu.edu/utah4h/files/fcs_sewing_clothing_book_2023.pdf",
+        "locator": "Bias Tape; PDF page 11 (zero-based 10), lines 247-250",
+        "note": "The strip is defined as a material for clothing finishes and decoration."
+      },
+      "limits": [
+        "Alternative for Design ease; do not infer all bias tape must be used as a facing."
+      ],
+      "selection_role": "alternative",
+      "selection_status": "source_and_meaning_reviewed",
+      "alternative_for": "local:catalog:design-ease"
+    }
+  ],
+  "issues": [
+    {
+      "type": "selection_gate",
+      "note": "Selection is complete: 69 primary proposals plus 2 modest alternatives. No cards drafted; coordinator reservations and approval are required before drafting."
+    },
+    {
+      "type": "fine_scope_goal",
+      "note": "61 new primary subjects include 54 with idea/facet_or_application scope; seven new named cases retain topic scope. Counts reflect meanings rather than forcing a fine-scope label."
+    },
+    {
+      "type": "source_access",
+      "note": "Some IUPAC Gold Book, USGS full reports, BMJ articles, Penn State dehydration page and old limb-darkening pages were unavailable. Accepted subjects use actually inspected alternatives; limb darkening and ice-lens options were replaced by coherent dedispersion and cryosuction. Search snippets alone support no accepted row."
+    },
+    {
+      "type": "parent_semantics",
+      "note": "Study targets, raw materials, clinical use cases and healing outcomes are recorded separately as related_to. Field placements inferred from factual passages remain editorial; numeric goals did not justify application_of or facet_of for those associations."
+    }
+  ],
+  "sources_inspected": [
+    {
+      "id": "science-bio-openstax",
+      "title": "The Science of Biology",
+      "url": "https://openstax.org/books/biology-2e/pages/1-1-the-science-of-biology",
+      "locator": "What is biology?; Natural Sciences; lines 33-49",
+      "note": "Defines biology as studying life across cells, organisms and ecosystems.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-bio-umn-cells",
+      "title": "Plant Cells and Tissues",
+      "url": "https://open.lib.umn.edu/horticulture/chapter/6-1-plant-cells-and-tissues/",
+      "locator": "Dermal tissue; lines 224-226",
+      "note": "Distinguishes guard cells around stomata from root-hair outgrowths.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-bio-briggs-roots",
+      "title": "Vascular plant anatomy—primary growth",
+      "url": "https://bio.libretexts.org/Bookshelves/Botany/Inanimate_Life_(Briggs)/01:_Chapters/1.08:_Vascular_plant_anatomy-_primary_growth",
+      "locator": "The significance of the casparian strip; lines 234-242",
+      "note": "Defines the Casparian barrier, apoplast and connected cytosolic symplast; root-water routes.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-bio-kleptoplasty",
+      "title": "Lipid Accumulation during the Establishment of Kleptoplasty in Elysia chlorotica",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477",
+      "locator": "Abstract; Introduction; Figure 1; lines 143-173",
+      "note": "Study of plastid retention in the named sea slug and its named algal food; laboratory developmental qualifications.",
+      "revision": "Published 2014-05-14; DOI 10.1371/journal.pone.0097477",
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-chem-glass-pslc",
+      "title": "Glass Transition",
+      "url": "https://pslc.ws/macrog/tg.htm",
+      "locator": "Long-range segmental motion; Glass Transition vs. Melting; lines 25-26 and 51-56",
+      "note": "Polymer glass transition changes segmental movement; separates amorphous glass transition from crystalline melting.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-chem-glass-nist",
+      "title": "The Glass Transition: Its Measurement and Underlying Physics",
+      "url": "https://www.nist.gov/publications/glass-transition-its-measurement-and-underlying-physics",
+      "locator": "Abstract; lines 125-127",
+      "note": "Separately names structural recovery of polymer properties as physical aging.",
+      "revision": "Published 2008-10-16",
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-chem-spinodal",
+      "title": "FiPy examples.cahnHilliard.mesh2D",
+      "url": "https://pages.nist.gov/fipy/en/stable/generated/examples.cahnHilliard.mesh2D.html",
+      "locator": "Opening explanatory paragraphs; lines 0-5",
+      "note": "Defines barrierless phase separation and contrasts it with nucleation.",
+      "revision": "FiPy 4.0.3; page updated 2026-06-18",
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-chem-nafion",
+      "title": "Nafion Sulfonic Membranes",
+      "url": "https://www.nafion.com/en/products/sulfonic-membranes",
+      "locator": "Membranes for a Wide Variety of Electrochemical Applications; lines 151-153; grades tables",
+      "note": "Manufacturer identifies the PFSA/PTFE copolymer membrane family and cation-conducting role.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-chem-srm610",
+      "title": "Spotlight: One Small Step for SRM 610 Aboard the Mars Perseverance Rover",
+      "url": "https://www.nist.gov/news-events/news/2021/07/spotlight-one-small-step-srm-610-aboard-mars-perseverance-rover",
+      "locator": "PIXL calibration discussion; lines 126-130",
+      "note": "Names SRM 610 trace-element glass and its calibration use on Perseverance.",
+      "revision": "Published 2021-07-20; updated 2025-02-03",
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-chem-photobleach",
+      "title": "Introduction to Fluorescence Microscopy",
+      "url": "https://www.microscopyu.com/techniques/fluorescence/introduction-to-fluorescence-microscopy",
+      "locator": "Fading, Quenching, and Photobleaching; lines 88-95",
+      "note": "Distinguishes irreversible fluorophore decomposition from broader fading, and names recovery experiments.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-chem-spr",
+      "title": "Surface plasmon resonance microscopy: achieving a quantitative optical response",
+      "url": "https://www.nist.gov/publications/surface-plasmon-resonance-microscopy-achieving-quantitative-optical-response",
+      "locator": "Abstract; lines 125-128",
+      "note": "Authors describe label-free interfacial refractive-index imaging and calibration limitations.",
+      "revision": "Published 2016-09-07; DOI 10.1063/1.4962034",
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-math-mathematics",
+      "title": "Mathematics",
+      "url": "https://mathworld.wolfram.com/Mathematics.html",
+      "locator": "Opening definition; line 13",
+      "note": "Field covers idealized objects and both abstract and practical tools.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-math-sperner-lemma",
+      "title": "Sperner's Lemma",
+      "url": "https://mathworld.wolfram.com/SpernersLemma.html",
+      "locator": "Opening statement and distinction; lines 13-18",
+      "note": "Boundary-restricted triangle labels force a fully labeled triangle; not the antichain theorem.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-math-ham",
+      "title": "Ham Sandwich Theorem",
+      "url": "https://mathworld.wolfram.com/HamSandwichTheorem.html",
+      "locator": "Theorem statement and three-dimensional argument; lines 13-20",
+      "note": "One hyperplane bisects n volumes in n dimensions.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-math-desargues",
+      "title": "Desargues' Theorem",
+      "url": "https://mathworld.wolfram.com/DesarguesTheorem.html",
+      "locator": "Theorem statement; lines 16-19",
+      "note": "Perspective-from-a-point triangles are perspective from a line.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-math-waerden",
+      "title": "van der Waerden's Theorem",
+      "url": "https://mathworld.wolfram.com/vanderWaerdensTheorem.html",
+      "locator": "Four equivalent formulations; lines 13-19",
+      "note": "Finite colorings force arbitrarily long single-color arithmetic progressions.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-math-thuemorse",
+      "title": "Thue-Morse Sequence",
+      "url": "https://mathworld.wolfram.com/Thue-MorseSequence.html",
+      "locator": "Opening definition; substitution rules; lines 15-20 and 33-45",
+      "note": "Defines sequence by parity of binary digit sums and complementary substitution.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-math-sperner-theorem",
+      "title": "Sperner's Theorem",
+      "url": "https://mathworld.wolfram.com/SpernersTheorem.html",
+      "locator": "Theorem statement; lines 13-21",
+      "note": "Antichain bound uses the middle binomial coefficient; distinct from triangulation lemma.",
+      "revision": null,
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-math-bayesfactor",
+      "title": "Definition: Bayes factor",
+      "url": "https://statproofbook.github.io/D/bf.html",
+      "locator": "Definition and odds identities; lines 7-17",
+      "note": "Ratio of marginal likelihoods updates prior model odds.",
+      "revision": "Metadata D92; author tomfaulkenberry; 2020-08-26",
+      "inspection_mode": "web.run opened article and inspected named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:47:01Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-chem-control",
+      "title": "Chemistry in Context",
+      "url": "https://openstax.org/books/chemistry-2e/pages/1-1-chemistry-in-context",
+      "locator": "Chemistry: The Central Science; lines 44-54",
+      "note": "Defines composition, properties and interactions of matter; connects everyday changes to the field.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-chem-cmc",
+      "title": "Surfactants and Micelles",
+      "url": "https://chem.libretexts.org/Bookshelves/Physical_and_Theoretical_Chemistry_Textbook_Maps/Topics_in_Thermodynamics_of_Solutions_and_Liquid_Mixtures/01:_Modules/1.20:_Surfactants/1.20.2:_Surfactants_and_Micelles",
+      "locator": "Characteristic concentration and monomer/micelle partition; lines 196-206",
+      "note": "Names the concentration threshold for micelles at specified temperature and pressure.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-food-agriculture",
+      "title": "The Art and Science of Agriculture",
+      "url": "https://education.nationalgeographic.org/resource/the-art-and-science-of-agriculture/",
+      "locator": "Opening explanation; lines 39-40",
+      "note": "Cultivation and animal raising produce food, fibers and other useful products.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-food-nixt",
+      "title": "What is nixtamalization?",
+      "url": "https://www.cimmyt.org/news/what-is-nixtamalization/",
+      "locator": "What is nixtamalization? and nutritional changes; lines 27-41",
+      "note": "Names alkaline cooking and soaking of maize before washing and dough making.",
+      "revision": "Published 2021-03-23",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-food-stale",
+      "title": "The Stale Seedbed Technique",
+      "url": "https://www.extension.umd.edu/resource/stale-seedbed-technique-relatively-underused-alternative-weed-management-tactic-vegetable-production",
+      "locator": "Precisely how does the stale seedbed work?; lines 57-62",
+      "note": "Shallow nondormant seeds germinate and seedlings are killed before crop planting, with minimal disturbance.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-food-tarps",
+      "title": "Solarization and occultation",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/solarization-and-occultation",
+      "locator": "Clear versus opaque coverings; Quick facts and methods; lines 244-270, 287-299",
+      "note": "Distinguishes clear-plastic heating from opaque-cover weed suppression and qualifies performance by site and season.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-food-dryeration",
+      "title": "Dryeration and in-storage cooling for corn drying",
+      "url": "https://extension.umn.edu/agriculture/crop-production/corn/dryeration-and-in-storage-cooling-for-corn-drying",
+      "locator": "Increased capacity and efficiency; Process; lines 263-290",
+      "note": "Hot corn is tempered before cooling, using retained heat to remove moisture.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-food-casehard",
+      "title": "Preserving food at home: Drying",
+      "url": "https://extension.umn.edu/food/preparing/cooking-at-home/food-preservation/drying",
+      "locator": "Oven drying; lines 267-269",
+      "note": "Excessive heat hardens the outside before the inside dries.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-food-brix",
+      "title": "2025 Pennsylvania Tree Fruit Maturity Report - October 13",
+      "url": "https://extension.psu.edu/2025-pennsylvania-tree-fruit-maturity-report-october-13",
+      "locator": "Table 4, definitions of sample parameters; line 1242",
+      "note": "Defines degrees Brix via sucrose calibration and soluble solids measured in apple juice.",
+      "revision": "2025-10-13 report",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-food-lai",
+      "title": "MODIS Leaf Area Index",
+      "url": "https://modis-land.gsfc.nasa.gov/lai.html",
+      "locator": "Leaf Area Index definition and uses; lines 50-54",
+      "note": "Defines canopy leaf area normalized by ground area and identifies vegetation-process uses.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-home-skirt",
+      "title": "Youth Elastic Waist Skirt",
+      "url": "https://extension.usu.edu/sewing/research/youth-elastic-waist-skirt",
+      "locator": "Wearing versus design ease; fabric edges; lines 84, 154, 178",
+      "note": "Separately names comfort allowance, style allowance and firmly woven selvage edges.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-home-pillow",
+      "title": "Four Square Pillow",
+      "url": "https://extension.usu.edu/sewing/research/four-square-pillow",
+      "locator": "Pillow construction; basting; lines 114-130, 165-167",
+      "note": "Shows sewing by joining fabric pieces and defines temporary long basting stitches.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-home-grain",
+      "title": "Selecting Fabrics for Home Furnishings",
+      "url": "https://pubs.nmsu.edu/_g/G401/index.html",
+      "locator": "Checking fabric grain and printing; lines 69-73",
+      "note": "Distinguishes thread grain from printed motifs and explains off-grain alignment problems.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-home-glossary",
+      "title": "Utah 4-H FCS Sewing and Clothing Book",
+      "url": "https://extension.usu.edu/utah4h/files/fcs_sewing_clothing_book_2023.pdf",
+      "locator": "Seam Allowance; PDF page 10 (zero-based 9), lines 224-226",
+      "note": "Defines the fabric area between a stitch line and raw edge.",
+      "revision": "Filename identifies 2023 edition",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-home-gather",
+      "title": "Dropped Waist Skirt with Ruffles",
+      "url": "https://extension.usu.edu/sewing/research/dropped-waist-skirt-with-ruffles",
+      "locator": "Gathering stitches and ruffle attachment; lines 317-336",
+      "note": "Long stitches and pulled bobbin threads gather longer fabric to fit a band.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:55:14Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-health-epi",
+      "title": "Principles of Epidemiology: Definition of Epidemiology",
+      "url": "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson1/section1.html",
+      "locator": "Definition and distribution; lines 11-22, 41-46",
+      "note": "Explains population patterns and determinants linked to public-health action.",
+      "revision": "Archived CDC educational lesson",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-health-length",
+      "title": "What Cancer Screening Statistics Really Tell Us",
+      "url": "https://www.cancer.gov/about-cancer/screening/research/what-screening-statistics-mean",
+      "locator": "Length bias and overdiagnosis; lines 34-38",
+      "note": "Slower-growing cancers have longer detectable windows and are overrepresented among screening detections.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-health-sentinel",
+      "title": "Sentinel Lymph Node Biopsy",
+      "url": "https://www.cancer.gov/about-cancer/diagnosis-staging/staging/sentinel-node-biopsy-fact-sheet",
+      "locator": "What is a sentinel lymph node biopsy? and procedure; lines 27-40",
+      "note": "First draining node is identified, removed and examined to investigate cancer spread.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-health-deprescribing",
+      "title": "Deprescribing as a Patient Safety Strategy",
+      "url": "https://psnet.ahrq.gov/primer/deprescribing-patient-safety-strategy",
+      "locator": "Definition and steps; lines 132-142; ongoing monitoring; line 169",
+      "note": "Supervised discontinuation or dose reduction uses shared decisions and monitoring.",
+      "revision": "Published 2021-10-27",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-health-refeeding",
+      "title": "Refeeding Syndrome",
+      "url": "https://my.clevelandclinic.org/health/diseases/23228-refeeding-syndrome",
+      "locator": "Definition and cause; lines 53, 69-79",
+      "note": "Metabolic restart after malnutrition can shift scarce electrolytes from blood into cells.",
+      "revision": "Medically reviewed; updated 2022-06-06",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-health-anastomosis",
+      "title": "Anastomosis: What It Is, Types & Procedure",
+      "url": "https://my.clevelandclinic.org/health/treatments/24035-anastomosis",
+      "locator": "What Is an Anastomosis?; surgical uses; lines 27, 55-82",
+      "note": "Surgical joining of tubes restores flow or creates a bypass; transplantation is a named use.",
+      "revision": "Medically reviewed; updated 2026-02-05",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-health-nonunion",
+      "title": "Nonunions",
+      "url": "https://www.orthoinfo.org/diseases--conditions/nonunions/",
+      "locator": "Definition and bone healing; lines 118-123; diagnosis; lines 174-178",
+      "note": "Separates failed healing from delayed union and names stability and blood supply requirements.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-health-npwt",
+      "title": "Negative Pressure Wound Therapy",
+      "url": "https://my.clevelandclinic.org/health/treatments/17313-negative-pressure-wound-therapy",
+      "locator": "Definition and mechanism; lines 50-76",
+      "note": "A sealed dressing and pump apply suction, remove fluid and support the healing environment.",
+      "revision": "Medically reviewed; updated 2024-07-19",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-health-immortal",
+      "title": "Step-by-step causal analysis of EHRs to ground decision-making",
+      "url": "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000721",
+      "locator": "Immortal time bias; lines 204-206",
+      "note": "Misalignment of cohort entry and treatment assignment favors patients alive at treatment time.",
+      "revision": "Published 2025-02-27; DOI 10.1371/journal.pdig.0000721",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-physics-control",
+      "title": "Physics: An Introduction",
+      "url": "https://openstax.org/books/college-physics-2e/pages/1-1-physics-an-introduction",
+      "locator": "Science and the Realm of Physics; lines 37-40",
+      "note": "Field concerns energy, matter, space and time and underlying interactions.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-physics-lageos",
+      "title": "LAGEOS",
+      "url": "https://science.nasa.gov/mission/lageos/",
+      "locator": "LAGEOS 1 & 2 overview; lines 235-258",
+      "note": "Passive reflecting satellites are precise laser targets used for geodesy.",
+      "revision": "Page updated 2026-08-19",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-physics-hayabusa",
+      "title": "Hayabusa2",
+      "url": "https://science.nasa.gov/mission/hayabusa-2/",
+      "locator": "Mission overview, sample return and craft design; lines 241, 264, 304-312",
+      "note": "Named Japanese spacecraft returned asteroid Ryugu samples to Earth.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-physics-bennu",
+      "title": "101955 Bennu",
+      "url": "https://science.nasa.gov/solar-system/asteroids/101955-bennu/",
+      "locator": "Rubble-pile structure and sample collection; lines 239-252",
+      "note": "Names asteroid Bennu as an assembled debris object sampled by OSIRIS-REx.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-physics-gnz11",
+      "title": "Webb Unlocks Secrets of One of the Most Distant Galaxies Ever Seen",
+      "url": "https://science.nasa.gov/missions/webb/webb-unlocks-secrets-of-one-of-the-most-distant-galaxies-ever-seen/",
+      "locator": "Host galaxy and compact source; lines 322-336",
+      "note": "GN-z11 combines an extended host component and a compact source consistent with accretion.",
+      "revision": "Published 2024-03-04",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-physics-dm",
+      "title": "Essential Radio Astronomy, Chapter 6: Pulsars",
+      "url": "https://www.cv.nrao.edu/~sransom/web/Ch6.html",
+      "locator": "Interstellar dispersion and coherent dedispersion; lines 250-255",
+      "note": "Electron-column measure relates to frequency-dependent pulse delays; baseband correction uses deconvolution.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-physics-muon",
+      "title": "A new method for imaging nuclear threats using cosmic ray muons",
+      "url": "https://arxiv.org/abs/1306.0523",
+      "locator": "Abstract; lines 15-17",
+      "note": "Cosmic-ray Coulomb scattering enables 3D images while resolution and exposure time constrain use.",
+      "revision": "arXiv:1306.0523v2; revised 2013-06-04",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:57:51Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-earth-geology",
+      "title": "What is Geology? — Physical Geology, 2nd Edition",
+      "url": "https://opentextbc.ca/physicalgeology2ed/chapter/1-1-what-is-geology/",
+      "locator": "Opening definition and deep time; lines 338-340",
+      "note": "Explains Earth materials, water, processes and inference across geological time.",
+      "revision": "Second edition; Steven Earle",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:59:37Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-earth-frozen",
+      "title": "Science of Frozen Ground",
+      "url": "https://nsidc.org/learn/parts-cryosphere/frozen-ground-permafrost/science-frozen-ground",
+      "locator": "Density of frozen water and cryosuction; lines 89-94",
+      "note": "Ice growth can heave roads; attraction and freezing of additional water grows segregated ice.",
+      "revision": null,
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:59:37Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-earth-oceanlayers",
+      "title": "Upper Ocean Vertical Structure",
+      "url": "https://www.pmel.noaa.gov/people/cronin/encycl/ms0149.pdf",
+      "locator": "Main pycnocline and salinity layers; PDF page 2 (zero-based 1), lines 145-179",
+      "note": "Distinguishes density, salinity and temperature gradients and the barrier to turbulent mixing.",
+      "revision": "2001; J. Sprintall and M. F. Cronin; DOI 10.1006/rwos.2001.0149",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:59:37Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-earth-stokes",
+      "title": "Lagrangian and Eulerian Representations of Fluid Flow, Part 2",
+      "url": "https://ocw.mit.edu/courses/res-12-001-topics-in-fluid-dynamics-fall-2024/mitres_12_001_f24_essay1_pt2.pdf",
+      "locator": "Overview and gravity-wave parcel trajectories; PDF pages 2 and 18-19; lines 26-31, 756-812",
+      "note": "Wave-driven parcel displacement leaves a mean drift differing from the fixed-position velocity average.",
+      "revision": "MIT OpenCourseWare Fall 2024; author James F. Price",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:59:37Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-earth-bankfull-usgs",
+      "title": "Bankfull discharge: An example of its statistical relationships",
+      "url": "https://www.usgs.gov/publications/bankfull-discharge-example-its-statistical-relationships",
+      "locator": "Abstract; line 7",
+      "note": "Analyzes natural bankfull-stage flow despite artificial embanking and channel clearance.",
+      "revision": "1961-09-30; G. H. Dury; DOI 10.1080/02626666109493230",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:59:37Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-earth-bankfull-usfs",
+      "title": "Stream Simulation: Appendix D, Estimating Design Discharge",
+      "url": "https://www.fs.usda.gov/eng/pubs/pdf/StreamSimulation/lo_res/AppendixD.pdf",
+      "locator": "Bankfull field indicators and cross-section checks; PDF page 15 (zero-based 14), lines 414-433",
+      "note": "Compares field-identified bankfull water level with flow estimates; recurrence interval depends on region.",
+      "revision": "Stream Simulation, USDA Forest Service; 2008 manual",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:59:37Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-earth-blood",
+      "title": "Researchers solve the century-old mystery of Blood Falls",
+      "url": "https://www.uaf.edu/news/archives/news-archives-2010-2021/researchers-solve-the-100-year-old-mystery-of-blood-falls.php",
+      "locator": "Brine pathway and iron-rich outflow; lines 18-27",
+      "note": "Radar links an episodic iron-rich brine outflow to liquid within cold Taylor Glacier.",
+      "revision": "2017-04-24; report on author's Journal of Glaciology study",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:59:37Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-earth-ferrar",
+      "title": "Ferrar Glacier, Antarctica",
+      "url": "https://science.nasa.gov/earth/earth-observatory/ferrar-glacier-antarctica-81463/",
+      "locator": "Snow accumulation and ice route; lines 268-270",
+      "note": "Snow compresses at Taylor Dome and ice flows through Ferrar Glacier toward the Ross Sea.",
+      "revision": "2013-06-23 image article; image acquired 2013-02-07",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T01:59:37Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    },
+    {
+      "id": "science-home-biastape",
+      "title": "Utah 4-H FCS Sewing and Clothing Book",
+      "url": "https://extension.usu.edu/utah4h/files/fcs_sewing_clothing_book_2023.pdf",
+      "locator": "Bias Tape; PDF page 11 (zero-based 10), lines 247-250",
+      "note": "Names a narrow diagonal-grain strip used to finish or decorate clothing.",
+      "revision": "Filename identifies 2023 edition",
+      "inspection_mode": "web.run opened source and inspected substantive named passage",
+      "acquisition": {
+        "local_inspected_at": "2026-10-09T02:01:56Z",
+        "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+      },
+      "word_limit": 200
+    }
+  ],
+  "validation": {
+    "schema_version": 1,
+    "assignment": "science",
+    "status": "selection_complete_awaiting_coordinator_reservations",
+    "checked_at": "2026-10-09T02:04:28.114153+00:00",
+    "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+    "baseline_active_ids": 35743,
+    "primary_proposals": 69,
+    "alternative_proposals": 2,
+    "primary_inventory_status": {
+      "existing": 8,
+      "proposed_new": 61
+    },
+    "primary_domain_counts": {
+      "Biology & nature": 9,
+      "Chemistry & materials": 9,
+      "Mathematics": 8,
+      "Food & agriculture": 9,
+      "Home & crafts": 8,
+      "Health & medicine": 9,
+      "Physics & astronomy": 8,
+      "Earth & environment": 9
+    },
+    "primary_scope_counts": {
+      "broad_field": 7,
+      "idea": 32,
+      "topic": 8,
+      "facet_or_application": 22
+    },
+    "new_fine_scope": 54,
+    "named_primary": 10,
+    "fine_scope_parent_count": 54,
+    "fine_scope_source_asserted_parent_count": 33,
+    "inspected_source_records": 59,
+    "inspected_distinct_urls": 58,
+    "new_exact_alias_collisions": 0,
+    "unresolved_source_or_target_ids": 0,
+    "source_and_identity_review_status": "Actual passage notes and individual meaning decisions are recorded; no independent card audit has occurred.",
+    "card_drafting_status": "not_started",
+    "canonical_nearby_labels_corrected": []
+  }
+}

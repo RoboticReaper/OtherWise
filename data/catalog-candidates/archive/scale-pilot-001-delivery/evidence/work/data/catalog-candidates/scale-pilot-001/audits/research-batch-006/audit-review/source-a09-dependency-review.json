@@ -1,0 +1,73 @@
+{
+  "source_id": "a09",
+  "frozen_candidate_sha256": "edbbaea2948ad1a1c019cbc24e443873e693614dc752e854b56fce212450499a",
+  "source_url": "https://www.moma.org/collection/works/77356",
+  "frozen_source_title": "Ruth Asawa. Chair. c. 1963 — MoMA",
+  "verified_source_title": "Ruth Asawa. Chair (TAM.1558-II). 1965 | MoMA",
+  "verified_medium": "Lithograph",
+  "object_number": "1625.1967",
+  "source_fields_to_correct": [
+    "title"
+  ],
+  "fresh_reference": "turn1390view1",
+  "locator": "Header 61–68, gallery label 78–79, medium 88 and accession 98",
+  "author_cached_reference": "research/workers/research-batch-006/source-acquisition/open-037.json; turn1231view0",
+  "historical_capture_confirmation": "The author’s actual saved page already has the 1965 title and Lithograph medium, so this is not explained by a newly changed public page.",
+  "interpretation_limit": "Gallery label prose calls the related investigations drawings; the structured collection identity identifies the cited object itself as a lithograph. Use the work’s explicit medium or the neutral work rather than propagating the ambiguity.",
+  "dependent_concepts": [
+    {
+      "id": "local:catalog:negative-space",
+      "sample_kind": "random_new",
+      "frozen_card_version": 1,
+      "source_evidence_indexes": [
+        0
+      ],
+      "relationships_using_a09": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:chair-by-ruth-asawa",
+          "type": "related_to",
+          "source_ids": [
+            "a09"
+          ],
+          "assertion": "source_asserted",
+          "note": "The museum label explicitly identifies negative-space chairs within this drawing.",
+          "assessment": "Actual negative-space/work connection supported; revise drawing wording where present."
+        }
+      ],
+      "fields_to_correct": [
+        "learning_takeaway",
+        "relations[0].note"
+      ],
+      "evidence_locator_update": "Add object header 61–68 and medium 88 to retain precise work/medium identity alongside gallery label 78–79."
+    },
+    {
+      "id": "local:catalog:chair-by-ruth-asawa",
+      "sample_kind": "unsampled_dependency_only",
+      "frozen_card_version": 1,
+      "source_evidence_indexes": [
+        0
+      ],
+      "relationships_using_a09": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:negative-space",
+          "type": "related_to",
+          "source_ids": [
+            "a09"
+          ],
+          "assertion": "source_asserted",
+          "note": "The museum explicitly describes additional chairs outlined in negative space.",
+          "assessment": "Actual negative-space/work connection supported; revise drawing wording where present."
+        }
+      ],
+      "fields_to_correct": [
+        "learning_takeaway",
+        "card"
+      ],
+      "evidence_locator_update": "Add object header 61–68 and medium 88 to retain precise work/medium identity alongside gallery label 78–79."
+    }
+  ],
+  "dependency_count": 2,
+  "unsampled_scope_limit": "Chair received a targeted dependency/identity/relationship check only; it is not inserted into either original 20-card sample."
+}

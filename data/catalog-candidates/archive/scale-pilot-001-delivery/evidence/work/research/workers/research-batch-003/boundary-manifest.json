@@ -1,0 +1,68 @@
+{
+  "batch_id": "research-batch-003",
+  "revision": 2,
+  "status": "stable_revised_candidate_pending_independent_all_changes_recheck",
+  "completed_at": "2026-10-08T22:08:34.848864+00:00",
+  "candidate_sha256": "e9dafbba2dfeb6d382a48cc261ac675f3da0fbae505ba36f288afaa55fa972ab",
+  "prior_candidate_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+  "initial_audit_sha256": "7d80ccf3a2ad8319cdd9605d413eb3d34b3b9c9ec4c56d99c4e5f2ce7d5e910a",
+  "approved_selection_sha256": "a48e39b477d833c847e92df4da3024422ce998be57ae67d044adb693f63c1efe",
+  "global_selection_sha256": "d6f16948056fb6552b7eba52409ef879e40a6477c58008e1b01025a7a450acab",
+  "counts": {
+    "reviewed_ids": 200,
+    "changed_ids": 11,
+    "unchanged_ids": 189,
+    "changed_card_texts": 11,
+    "changed_evidence_notes": 8,
+    "changed_relationship_notes": 1,
+    "changed_source_records": 0,
+    "new_sources": 0,
+    "total_sources": 151,
+    "total_relations": 200,
+    "excluded_ids": 0,
+    "new_identity_ids": 0
+  },
+  "structural_checks_passed": 29,
+  "changed_ids": [
+    "local:catalog:neutral-theory-of-molecular-evolution",
+    "local:catalog:e-coli-long-term-evolution-experiment",
+    "local:catalog:pulse-oximetry",
+    "local:catalog:systolic-blood-pressure-intervention-trial",
+    "local:catalog:marine-heatwave",
+    "local:catalog:temperature-inversion",
+    "local:catalog:argo",
+    "local:catalog:artesian-aquifer",
+    "local:catalog:rootstock-dwarfing",
+    "local:catalog:variable-rate-irrigation",
+    "local:catalog:wood-sorption-hysteresis"
+  ],
+  "unsampled_changed_ids": [
+    "local:catalog:neutral-theory-of-molecular-evolution",
+    "local:catalog:pulse-oximetry",
+    "local:catalog:systolic-blood-pressure-intervention-trial",
+    "local:catalog:marine-heatwave",
+    "local:catalog:temperature-inversion",
+    "local:catalog:argo",
+    "local:catalog:artesian-aquifer",
+    "local:catalog:rootstock-dwarfing",
+    "local:catalog:wood-sorption-hysteresis"
+  ],
+  "files": {
+    "candidate.revised.json": "e9dafbba2dfeb6d382a48cc261ac675f3da0fbae505ba36f288afaa55fa972ab",
+    "boundary-recheck.json": "cb27d5cabbdf585d3e93b82c7095c65c886e5001f6736713c50101020d33f1be",
+    "boundary-corrections.json": "d6cde3525b5f3a3eb800474580976de65f35dd3c92776ccfc969bbc172f9145c",
+    "boundary-source-access.json": "a290c84be48465af9b6905fd50326eab035242636258c6167372c0499ac4749f",
+    "boundary-validation.json": "79b7ad32f5323617d6addbb95974df0ba70ca49de550d1d1e028ade7326a446c",
+    "boundary-preservation.before.json": "1741924e731a7d8a604de8a9af5b7970b0bb2a5f1d80d21660a7086f085fa038",
+    "boundary-preservation.after.json": "972039621400739e85154d8ce3170d86693fa74b9e758808879711212d1a9c6a"
+  },
+  "execution": {
+    "environment": "native_cloud",
+    "requested_model": "GPT-6 Astra",
+    "requested_reasoning": "max",
+    "platform_tokens": null,
+    "platform_cost": null,
+    "usage_note": "Not exposed by the platform; no estimates asserted."
+  },
+  "handoff": "Independently recheck all eleven changed cards, all twenty changed card/evidence/relationship fields, the unchanged LTEE relation, version increments and preserved original hashes. Do not replace the original sample denominator with this corrective pass."
+}

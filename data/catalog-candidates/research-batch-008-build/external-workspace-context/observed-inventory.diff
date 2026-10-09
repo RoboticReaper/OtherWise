@@ -1,0 +1,22 @@
+diff --git a/recommendation_lab/inventory.py b/recommendation_lab/inventory.py
+index 06931b3..58aea87 100644
+--- a/recommendation_lab/inventory.py
++++ b/recommendation_lab/inventory.py
+@@ -83,7 +83,7 @@ class Inventory:
+         concept = self.concepts[concept_id]
+         return {k: concept[k] for k in ('id', 'topic', 'description', 'source_url')}
+ 
+-    def resolve(self, interests, *, inventory_version=None):
++    def resolve(self, interests, *, inventory_version=None, allow_repeated=False):
+         if not isinstance(interests, list) or not 1 <= len(interests) <= 40:
+             raise ValueError('Provide 1–40 interest records.')
+         parsed = []
+@@ -107,7 +107,7 @@ class Inventory:
+                 raise ValueError('Selected meaning was not offered for this phrase.')
+             concept_id = selected or (next(iter(offered)) if len(offered) == 1 else None)
+             identity = concept_id or f'phrase:{_key(phrase)}'
+-            if identity in seen:
++            if identity in seen and not allow_repeated:
+                 raise ValueError('Duplicate interest identity.')
+             seen.add(identity)
+             if concept_id:

@@ -1,0 +1,74 @@
+test_actual_all_five_batch_requirement_cannot_be_mislabeled_complete (__main__.CombinerTests.test_actual_all_five_batch_requirement_cannot_be_mislabeled_complete) ... ok
+test_actual_output_verification_runs_repeat_reverse_and_resolution (__main__.CombinerTests.test_actual_output_verification_runs_repeat_reverse_and_resolution) ... ok
+test_ambiguous_alias_without_review_is_quarantined (__main__.CombinerTests.test_ambiguous_alias_without_review_is_quarantined) ... ok
+test_baseline_snapshot_count_does_not_mislabel_control_id (__main__.CombinerTests.test_baseline_snapshot_count_does_not_mislabel_control_id) ... FAIL
+test_batch_scoped_sources_rewrite_evidence_and_relation_links (__main__.CombinerTests.test_batch_scoped_sources_rewrite_evidence_and_relation_links) ... ok
+test_competing_batch_revisions_require_explicit_choice (__main__.CombinerTests.test_competing_batch_revisions_require_explicit_choice) ... ok
+test_conflicting_concept_quarantines_and_retains_last_valid_bytes (__main__.CombinerTests.test_conflicting_concept_quarantines_and_retains_last_valid_bytes) ... ok
+test_direct_self_relation_is_quarantined (__main__.CombinerTests.test_direct_self_relation_is_quarantined) ... FAIL
+test_equivalence_created_self_relation_is_quarantined (__main__.CombinerTests.test_equivalence_created_self_relation_is_quarantined) ... FAIL
+test_explicit_hash_bound_version_choice_works_in_both_orders (__main__.CombinerTests.test_explicit_hash_bound_version_choice_works_in_both_orders) ... ok
+test_historical_timestamp_without_date_preserved (__main__.CombinerTests.test_historical_timestamp_without_date_preserved) ... ok
+test_invalid_version_choice_cannot_match_a_different_artifact (__main__.CombinerTests.test_invalid_version_choice_cannot_match_a_different_artifact) ... ok
+test_local_source_id_conflict_is_not_silently_overwritten (__main__.CombinerTests.test_local_source_id_conflict_is_not_silently_overwritten) ... ok
+test_malformed_input_and_duplicate_json_keys_do_not_replace_output (__main__.CombinerTests.test_malformed_input_and_duplicate_json_keys_do_not_replace_output) ... ok
+test_original_snapshots_have_explicit_reference_namespaces (__main__.CombinerTests.test_original_snapshots_have_explicit_reference_namespaces) ... FAIL
+test_repeated_import_is_idempotent (__main__.CombinerTests.test_repeated_import_is_idempotent) ... ok
+test_reversed_input_order_same_content_and_decisions (__main__.CombinerTests.test_reversed_input_order_same_content_and_decisions) ... ok
+test_reviewed_equivalence_keeps_aliases_full_provenance_and_rewrites_targets (__main__.CombinerTests.test_reviewed_equivalence_keeps_aliases_full_provenance_and_rewrites_targets) ... ok
+test_same_name_distinct_meanings_retains_all_alias_matches (__main__.CombinerTests.test_same_name_distinct_meanings_retains_all_alias_matches) ... ok
+test_same_url_revisions_and_passages_preserved (__main__.CombinerTests.test_same_url_revisions_and_passages_preserved) ... ok
+test_similar_names_do_not_make_unreviewed_equivalence_accepted (__main__.CombinerTests.test_similar_names_do_not_make_unreviewed_equivalence_accepted) ... ok
+test_structural_constraints_fail_closed (__main__.CombinerTests.test_structural_constraints_fail_closed) ... ok
+test_unresolved_semantic_overlap_with_different_ids_quarantines (__main__.CombinerTests.test_unresolved_semantic_overlap_with_different_ids_quarantines) ... ok
+test_unresolved_target_quarantines_but_pinned_baseline_target_resolves (__main__.CombinerTests.test_unresolved_target_quarantines_but_pinned_baseline_target_resolves) ... ok
+test_verify_actual_detects_changed_existing_combined_artifact (__main__.CombinerTests.test_verify_actual_detects_changed_existing_combined_artifact) ... FAIL
+
+======================================================================
+FAIL: test_baseline_snapshot_count_does_not_mislabel_control_id (__main__.CombinerTests.test_baseline_snapshot_count_does_not_mislabel_control_id)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 151, in test_baseline_snapshot_count_does_not_mislabel_control_id
+    self.assertNotIn('baseline_concepts_emitted',x['validation'])
+AssertionError: 'baseline_concepts_emitted' unexpectedly found in {'baseline_concepts_emitted': 0, 'canonical_content_sha256': '93d850c6055169b79bc38a9d5fdd36d89c7c4eae9476ecea222cd90bedfe06dc', 'distinct_concept_count': 1, 'limit': 'Structural validation does not certify facts, source inspection, semantic distinctness, or independent audit completion.', 'reference_count': 1, 'relation_count': 0, 'structural_passed': True}
+
+======================================================================
+FAIL: test_direct_self_relation_is_quarantined (__main__.CombinerTests.test_direct_self_relation_is_quarantined)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 146, in test_direct_self_relation_is_quarantined
+    self.expect_quarantine(['self-relation'],'self_relation')
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 29, in expect_quarantine
+    self.assertNotEqual(p.returncode,0)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_equivalence_created_self_relation_is_quarantined (__main__.CombinerTests.test_equivalence_created_self_relation_is_quarantined)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 148, in test_equivalence_created_self_relation_is_quarantined
+    self.expect_quarantine(['a','equivalent-self'],'self_relation','equivalence-decisions')
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 29, in expect_quarantine
+    self.assertNotEqual(p.returncode,0)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_original_snapshots_have_explicit_reference_namespaces (__main__.CombinerTests.test_original_snapshots_have_explicit_reference_namespaces)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 123, in test_original_snapshots_have_explicit_reference_namespaces
+    self.assertIn('reference_namespace',item)
+AssertionError: 'reference_namespace' not found in {'batch_id': 'research-batch-003', 'candidate_snapshot': {'batch': {'completion_status': 'synthetic_fixture', 'fixture': True, 'id': 'research-batch-003', 'revision': 1, 'selection_manifest': []}, 'concepts': [{'aliases': ['Capillarity'], 'card': 'This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.', 'card_version': 1, 'domains': ['Mathematics'], 'entity_kind': 'idea', 'evidence': [{'locator': 'Fixture section 1', 'note': 'Supports the synthetic explanatory claim.', 'source_id': 'r1'}], 'id': 'fixture:a', 'identity_urls': ['https://example.org/fixture/a'], 'imported_records': [], 'label': 'Capillarity', 'learning_takeaway': 'Understand this synthetic mechanism for the labeled fixture only.', 'original_description': None, 'relations': [], 'scope': 'idea'}], 'issues': [], 'schema_version': 1, 'sources': [{'id': 'r1', 'locator': 'Fixture section 1', 'retrieved_at': '2024-04-03T12:34:56+00:00', 'revision': None, 'title': 'Synthetic fixture reference', 'url': 'https://example.org/fixture/a'}], 'validation': {}}, 'input_sha256': '12af23ca76ac901326cbd0852517fe6060974c085e23716da45f3fdad8874346', 'selected': True}
+
+======================================================================
+FAIL: test_verify_actual_detects_changed_existing_combined_artifact (__main__.CombinerTests.test_verify_actual_detects_changed_existing_combined_artifact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 136, in test_verify_actual_detects_changed_existing_combined_artifact
+    self.assertNotEqual(p.returncode,0)
+AssertionError: 0 == 0
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.738s
+
+FAILED (failures=5)

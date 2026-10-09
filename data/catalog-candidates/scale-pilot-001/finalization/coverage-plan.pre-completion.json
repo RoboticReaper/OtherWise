@@ -1,0 +1,339 @@
+{
+  "assignment_policy": "One owner per primary domain and reserved concept ID. Secondary domains may cross assignments; central reconciliation precedes drafting.",
+  "audit": {
+    "freeze_before_checking": true,
+    "per_batch_random_new": 20,
+    "per_batch_risk_selected": 20,
+    "pool_random_and_risk_as_error_rate": false,
+    "risk_sampling_rule": "Choose 20 additional IDs with no overlap, covering sources, scopes, assumptions, meanings and relation assertions.",
+    "sampling_rule": "Sort new IDs by the hexadecimal SHA-256 of UTF-8 seed + newline + concept ID; take the first 20. Freeze the full frame, seed, selected IDs and pre-audit candidate hash.",
+    "seed_template": "OtherWise-scale-pilot-001:{batch_id}:source-audit"
+  },
+  "baseline_identity_count_by_id": 7224,
+  "baseline_inputs": [
+    {
+      "path": "data/topics.json",
+      "sha256": "1378e2cb37b2c3b648c2319c6303dbbf6380f20d2f0ff10fe8db8a2f62bd2f44"
+    },
+    {
+      "path": "data/discovery_graph.json",
+      "sha256": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309"
+    },
+    {
+      "path": "data/recommendation-identities.json",
+      "sha256": "e9968d8e3d1f317b3bcd42c42efd9a1e44305d210464be7427416576a64bf67b"
+    },
+    {
+      "path": "data/catalog-candidates/research-batch-001.json",
+      "sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131"
+    },
+    {
+      "path": "data/catalog-candidates/research-batch-002.json",
+      "sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e"
+    }
+  ],
+  "baseline_inventory_fingerprint": "7f771750100bfe65c63a4e12fa067f1236bbe7d8a78657459076d7f5ce3709ad",
+  "baseline_status": "frozen",
+  "batch_count": 5,
+  "batches": [
+    {
+      "id": "research-batch-003",
+      "output": "data/catalog-candidates/research-batch-003.json",
+      "primary_domains": [
+        {
+          "domain": "Biology & nature",
+          "starting_subfields": [
+            "Genetics and development",
+            "Ecology and species interactions",
+            "Evolution and biological mechanisms"
+          ],
+          "target_cards": 45
+        },
+        {
+          "domain": "Health & medicine",
+          "starting_subfields": [
+            "Physiological regulation",
+            "Measurement and diagnostic methods",
+            "Medical history and evidence"
+          ],
+          "target_cards": 45
+        },
+        {
+          "domain": "Earth & environment",
+          "starting_subfields": [
+            "Geological processes",
+            "Atmospheric and ocean processes",
+            "Environmental measurement and restoration"
+          ],
+          "target_cards": 45
+        },
+        {
+          "domain": "Food & agriculture",
+          "starting_subfields": [
+            "Cultivation and crop systems",
+            "Food chemistry and preparation",
+            "Agricultural technologies and history"
+          ],
+          "target_cards": 40
+        },
+        {
+          "domain": "Home & crafts",
+          "starting_subfields": [
+            "Material behavior in making",
+            "Construction and repair methods",
+            "Textile and domestic craft techniques"
+          ],
+          "target_cards": 25
+        }
+      ],
+      "target_accepted_cards": 200,
+      "title": "Life, environment and everyday practice"
+    },
+    {
+      "id": "research-batch-004",
+      "output": "data/catalog-candidates/research-batch-004.json",
+      "primary_domains": [
+        {
+          "domain": "Chemistry & materials",
+          "starting_subfields": [
+            "Chemical reactions and equilibrium",
+            "Material structures and properties",
+            "Analytical and manufacturing methods"
+          ],
+          "target_cards": 50
+        },
+        {
+          "domain": "Physics & astronomy",
+          "starting_subfields": [
+            "Mechanics and fields",
+            "Light, matter and measurement",
+            "Astronomical objects and observing methods"
+          ],
+          "target_cards": 50
+        },
+        {
+          "domain": "Engineering & transport",
+          "starting_subfields": [
+            "Structures and mechanical design",
+            "Energy, propulsion and control",
+            "Transport systems and engineered case studies"
+          ],
+          "target_cards": 50
+        },
+        {
+          "domain": "Mathematics",
+          "starting_subfields": [
+            "Geometry and topology",
+            "Discrete structures and algebra",
+            "Probability and mathematical modeling"
+          ],
+          "target_cards": 50
+        }
+      ],
+      "target_accepted_cards": 200,
+      "title": "Physical science, engineering and mathematics"
+    },
+    {
+      "id": "research-batch-005",
+      "output": "data/catalog-candidates/research-batch-005.json",
+      "primary_domains": [
+        {
+          "domain": "Computing & information",
+          "starting_subfields": [
+            "Algorithms and information representation",
+            "Programming and distributed systems",
+            "Security and computing history"
+          ],
+          "target_cards": 60
+        },
+        {
+          "domain": "Learning & language",
+          "starting_subfields": [
+            "Language structure and meaning",
+            "Language change and communication",
+            "Learning mechanisms and instructional methods"
+          ],
+          "target_cards": 45
+        },
+        {
+          "domain": "Economics & organizations",
+          "starting_subfields": [
+            "Market mechanisms and information",
+            "Organizational coordination and institutions",
+            "Economic history and documented business cases"
+          ],
+          "target_cards": 55
+        },
+        {
+          "domain": "Society & relationships",
+          "starting_subfields": [
+            "Social interaction and networks",
+            "Social institutions and collective behavior",
+            "Communication and relationship mechanisms"
+          ],
+          "target_cards": 40
+        }
+      ],
+      "target_accepted_cards": 200,
+      "title": "Computing, learning, economics and social organization"
+    },
+    {
+      "id": "research-batch-006",
+      "output": "data/catalog-candidates/research-batch-006.json",
+      "primary_domains": [
+        {
+          "domain": "History & culture",
+          "starting_subfields": [
+            "Historical methods and material evidence",
+            "Cultural exchange and everyday history",
+            "Institutions, events and historical change"
+          ],
+          "target_cards": 45
+        },
+        {
+          "domain": "Geography & travel",
+          "starting_subfields": [
+            "Spatial analysis and mapping",
+            "Settlement, movement and regional landscapes",
+            "Place-based learning cases"
+          ],
+          "target_cards": 35
+        },
+        {
+          "domain": "Religion & spirituality",
+          "starting_subfields": [
+            "Rituals and material practices",
+            "Texts and interpretive traditions",
+            "Religious history and institutions"
+          ],
+          "target_cards": 35
+        },
+        {
+          "domain": "Literature & storytelling",
+          "starting_subfields": [
+            "Narrative form and perspective",
+            "Genre and literary techniques",
+            "Works, authors and literary history"
+          ],
+          "target_cards": 45
+        },
+        {
+          "domain": "Visual arts & design",
+          "starting_subfields": [
+            "Image-making methods and materials",
+            "Design principles and perception",
+            "Works, movements and historical design cases"
+          ],
+          "target_cards": 40
+        }
+      ],
+      "target_accepted_cards": 200,
+      "title": "History, places, religion and visual or literary culture"
+    },
+    {
+      "id": "research-batch-007",
+      "output": "data/catalog-candidates/research-batch-007.json",
+      "primary_domains": [
+        {
+          "domain": "Games & sports",
+          "starting_subfields": [
+            "Rules and strategic mechanisms",
+            "Movement and sporting phenomena",
+            "Games, traditions and sporting history"
+          ],
+          "target_cards": 45
+        },
+        {
+          "domain": "Music & performance",
+          "starting_subfields": [
+            "Musical structure and transformation",
+            "Acoustics, instruments and performance",
+            "Works, traditions and musical history"
+          ],
+          "target_cards": 40
+        },
+        {
+          "domain": "Mind & behavior",
+          "starting_subfields": [
+            "Attention, perception and memory",
+            "Judgment, motivation and behavior",
+            "Psychological methods and qualified findings"
+          ],
+          "target_cards": 45
+        },
+        {
+          "domain": "Philosophy",
+          "starting_subfields": [
+            "Ethical arguments and thought experiments",
+            "Knowledge, inference and reasoning",
+            "Metaphysics and philosophical traditions"
+          ],
+          "target_cards": 35
+        },
+        {
+          "domain": "Politics & law",
+          "starting_subfields": [
+            "Institutional design and political processes",
+            "Legal procedures and interpretive questions",
+            "Public-policy mechanisms and historical cases"
+          ],
+          "target_cards": 35
+        }
+      ],
+      "target_accepted_cards": 200,
+      "title": "Games, music, mind, philosophy and public institutions"
+    }
+  ],
+  "merge_validation_status": "passed",
+  "minimum_accepted_per_starting_subfield": 5,
+  "minimum_new_ambiguous_name_groups": 3,
+  "outputs": {
+    "baseline_index": "data/catalog-candidates/scale-pilot-001/baseline-index.json",
+    "combined_catalog": "data/catalog-candidates/scale-pilot-001/catalog.json",
+    "identity_decisions": "data/catalog-candidates/scale-pilot-001/identity-decisions.json",
+    "merge_validation_evidence": "data/catalog-candidates/scale-pilot-001/merge-validation/",
+    "readiness_report": "docs/catalog-scale-pilot-001-results.md",
+    "reproducible_audit_artifacts": "data/catalog-candidates/scale-pilot-001/audits/",
+    "selection_manifest": "data/catalog-candidates/scale-pilot-001/selection-manifest.json"
+  },
+  "per_batch_targets": {
+    "accepted_cards": 200,
+    "existing_controls_range": [
+      20,
+      40
+    ],
+    "new_fine_subjects_at_least": 120,
+    "new_learning_identities_at_least": 160
+  },
+  "pilot_id": "scale-pilot-001",
+  "preparation_status": "prepared",
+  "research_status": "card_authoring",
+  "schema_version": 1,
+  "scope_policy": {
+    "allowed": [
+      "broad_field",
+      "topic",
+      "idea",
+      "facet_or_application"
+    ],
+    "each_batch_represents_all_scopes": true,
+    "fixed_scope_quotas": false,
+    "scope_is_difficulty": false
+  },
+  "selection_status": "centrally_frozen",
+  "stop_rules": {
+    "alternative_sources_per_unresolved_candidate": 3,
+    "attempts_per_failing_url": 2,
+    "maximum_accepted_cards_per_batch": 200,
+    "maximum_proposed_candidates_per_batch": 300,
+    "repeat_failure": "Pause further batches when the same substantive identity/source/relationship failure recurs across two batches; record corrective action before proceeding.",
+    "reported_shortfall": "Return a valid partial batch and explicit reasons when the bounds are exhausted."
+  },
+  "subfield_policy": "Starting research assignments and reporting units, not an asserted ontology. Expand or revise them with a documented source-based reason. Count each accepted concept in one primary subfield.",
+  "target_accepted_cards": 1000,
+  "target_named_subjects": 100,
+  "target_new_fine_subjects": 600,
+  "target_new_learning_identities": 800,
+  "targets_are": "Pilot coverage and yield goals; evidence-based admission takes priority and documented shortfalls are allowed. They are not universal catalog quotas.",
+  "workflow": "workspace-enabled agent research; local tools for indexing, validation and candidate assembly"
+}

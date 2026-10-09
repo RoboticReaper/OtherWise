@@ -1,0 +1,2866 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-005",
+  "pre_audit_candidate_sha256": "0b55dce5e0f107113ff5e2c1f036055a786ef8fdc5b0781aa78fdb45a4644571",
+  "sample": [
+    {
+      "id": "local:catalog:manchester-baby",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:manchester-baby",
+        "label": "Manchester Baby",
+        "aliases": [
+          "SSEM",
+          "Small-Scale Experimental Machine"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "See how cathode-ray-tube storage let an experimental 1948 machine hold and run its own program.",
+        "card": "Manchester's experimental Baby computer tested a way to store data electronically in cathode-ray tubes. Patterns of dots represented binary information, including a program held in memory. Its successful run in 1948 demonstrated a stored-program approach that made changing a task different from rewiring a machine.",
+        "original_description": null,
+        "identity_urls": [
+          "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer"
+        ],
+        "evidence": [
+          {
+            "source_id": "baby",
+            "locator": "Collection description, CRT memory and first program paragraphs",
+            "note": "Checked CRT storage, program-in-memory purpose, and 1948 run; comparison concerns these documented configurations rather than every later version of ENIAC."
+          },
+          {
+            "source_id": "eniac",
+            "locator": "ENIAC being set up; ENIAC tube change",
+            "note": "Supplementary inspected premise for the card or its comparison: The museum's stored-program explanation and ENIAC's documented cable-and-switch setup support a historical comparison of how programs were configured."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q169399",
+            "type": "related_to",
+            "source_ids": [
+              "baby",
+              "eniac"
+            ],
+            "assertion": "editorial",
+            "note": "The museum's stored-program explanation and ENIAC's documented cable-and-switch setup support a historical comparison of how programs were configured."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:complementary-distribution",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:complementary-distribution",
+        "label": "Complementary distribution",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Learning & language"
+        ],
+        "learning_takeaway": "Recognize nonoverlapping sound environments without assuming this alone proves that the sounds share one phoneme.",
+        "card": "Two sounds have complementary distribution when they occur in nonoverlapping environments. That can help identify allophones, but it is not enough by itself: English /h/ and /ŋ/ also occupy different environments for many speakers. Phonetic similarity and broader patterns help determine whether sounds belong together.",
+        "original_description": null,
+        "identity_urls": [
+          "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.04%3A_Complementary_distribution"
+        ],
+        "evidence": [
+          {
+            "source_id": "complementary",
+            "locator": "§4.4, Phones without contrastive distribution; Phonetic similarity",
+            "note": "Checked h/ŋ counterexample and need for additional evidence; did not equate complementary distribution automatically with allophony."
+          },
+          {
+            "source_id": "phonemes",
+            "locator": "§4.1, The phonological units of spoken language",
+            "note": "Supplementary inspected premise for the card or its comparison: The source directly contrasts complementary distributions that do and do not justify grouping sounds as allophones of one phoneme."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:allophone",
+            "type": "related_to",
+            "source_ids": [
+              "complementary",
+              "phonemes"
+            ],
+            "assertion": "source_asserted",
+            "note": "The source directly contrasts complementary distributions that do and do not justify grouping sounds as allophones of one phoneme."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:grapheme-cluster",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:grapheme-cluster",
+        "label": "Grapheme cluster",
+        "aliases": [
+          "Extended grapheme cluster"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Computing & information",
+          "Learning & language"
+        ],
+        "learning_takeaway": "Group code points into a best-effort approximation of a user-perceived character for text editing.",
+        "card": "A grapheme cluster groups Unicode code points into an approximation of a user-perceived character. A letter and its combining accents may belong together, letting a cursor move over them as a unit. The default rules are useful but may require tailoring for particular scripts or editing tasks.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.unicode.org/reports/tr29/"
+        ],
+        "evidence": [
+          {
+            "source_id": "segmentation",
+            "locator": "§3, introductory discussion and Table 1a",
+            "note": "Checked approximation, combining-sequence example, and explicit tailoring caveat in UAX 29; not a universal one-cluster/one-glyph equation."
+          },
+          {
+            "source_id": "utf8",
+            "locator": "§3, encoding definition",
+            "note": "Supplementary inspected premise for the card or its comparison: The sources distinguish abstract code points from editing-oriented groups of them; this comparison explains why text length has several legitimate units."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:unicode-code-point",
+            "type": "related_to",
+            "source_ids": [
+              "segmentation",
+              "utf8"
+            ],
+            "assertion": "editorial",
+            "note": "The sources distinguish abstract code points from editing-oriented groups of them; this comparison explains why text length has several legitimate units."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:unicode-normalization",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:unicode-normalization",
+        "label": "Unicode normalization",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Computing & information",
+          "Learning & language"
+        ],
+        "learning_takeaway": "Transform equivalent character sequences into a common binary representation through decomposition, ordering, and optional recomposition.",
+        "card": "Unicode normalization gives equivalent text sequences a common representation. It decomposes characters, orders combining marks, and sometimes recomposes them. The chosen normalization form matters: canonical forms preserve distinctions that compatibility forms may remove, so normalization is more specific than simply making text look alike.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.unicode.org/reports/tr15/"
+        ],
+        "evidence": [
+          {
+            "source_id": "normalization",
+            "locator": "§1.2–§1.3",
+            "note": "Checked decomposition, ordering, recomposition, and canonical versus compatibility behavior; normalization is not a general visual-similarity matcher."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:canonical-equivalence-in-unicode",
+            "type": "related_to",
+            "source_ids": [
+              "normalization"
+            ],
+            "assertion": "source_asserted",
+            "note": "UAX 15 sections 1.1–1.3 explicitly use canonical equivalence to define normalization forms and their transformations."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:interleaved-practice",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:interleaved-practice",
+        "label": "Interleaved practice",
+        "aliases": [
+          "Interleaving"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Learning & language"
+        ],
+        "learning_takeaway": "Mix different mathematical problem types so learners must select a strategy instead of repeating one blocked routine.",
+        "card": "Interleaved practice mixes different kinds of problems rather than grouping one type into a long block. In the cited mathematics intervention, students had to choose a suitable strategy for each problem. The challenge is partly recognizing which method applies, not simply carrying out a method already signaled by repetition.",
+        "original_description": null,
+        "identity_urls": [
+          "https://ies.ed.gov/use-work/awards/efficacy-study-interleaved-mathematics-practice"
+        ],
+        "evidence": [
+          {
+            "source_id": "interleavestudy",
+            "locator": "Structured Abstract, Intervention and Control Condition",
+            "note": "Checked the mathematics intervention's ordering manipulation and strategy-selection rationale; not claimed effective for every subject or identical to spacing."
+          },
+          {
+            "source_id": "ies",
+            "locator": "Recommendation 1, printed pp. 5–8",
+            "note": "Supplementary inspected premise for the card or its comparison: Mixing problem types concerns strategy selection, whereas spacing concerns timing of repeated encounters; the sources provide distinct instructional dimensions to compare."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q1095859",
+            "type": "related_to",
+            "source_ids": [
+              "interleavestudy",
+              "ies"
+            ],
+            "assertion": "editorial",
+            "note": "Mixing problem types concerns strategy selection, whereas spacing concerns timing of repeated encounters; the sources provide distinct instructional dimensions to compare."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:atlas-linguistique-de-la-france",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:atlas-linguistique-de-la-france",
+        "label": "Atlas linguistique de la France",
+        "aliases": [
+          "Linguistic Atlas of France"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Learning & language"
+        ],
+        "learning_takeaway": "See how mapped transcriptions from many places make regional language variation inspectable.",
+        "card": "The Atlas linguistique de la France turned regional speech observations into maps. Around the turn of the twentieth century, fieldwork gathered detailed transcriptions from hundreds of French locations. The atlas shows how systematically placing comparable forms on maps can make geographical variation visible rather than merely listing local words.",
+        "original_description": null,
+        "identity_urls": [
+          "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.05%3A_Variationist_methods_and_concepts"
+        ],
+        "evidence": [
+          {
+            "source_id": "variationmethods",
+            "locator": "§10.5, Dialectology: Then and now",
+            "note": "Checked survey scale, transcription and mapping; omitted the source's apparent fieldworker-name typo rather than reproducing it."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:sociolinguistic-corpus",
+            "type": "related_to",
+            "source_ids": [
+              "variationmethods"
+            ],
+            "assertion": "editorial",
+            "note": "The atlas is a named collection of geographically organized language observations, providing a historical comparison with modern sociolinguistic corpora."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:betweenness-centrality",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:betweenness-centrality",
+        "label": "Betweenness centrality",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Society & relationships"
+        ],
+        "learning_takeaway": "Measure how much shortest-path traffic passes through a node or edge rather than simply counting its immediate contacts.",
+        "card": "Betweenness centrality measures a node's or edge's share of shortest paths between other points in a network. When several shortest paths exist, their contribution is divided. This highlights potential intermediary positions that simple neighbor counts miss, while remaining a model of routes rather than a measurement of actual message traffic.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch03.pdf"
+        ],
+        "evidence": [
+          {
+            "source_id": "ties",
+            "locator": "§3.6, betweenness measures",
+            "note": "Checked shortest-path splitting and node/edge definitions; hypothetical flow is not claimed to be the route all real information follows."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q2715623",
+            "type": "facet_of",
+            "source_ids": [
+              "ties"
+            ],
+            "assertion": "editorial",
+            "note": "Shortest-path mediation is a specific way to analyze positions in social-network representations, distinct from describing the network or counting direct ties."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:grace-hopper",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:grace-hopper",
+        "label": "Grace Hopper",
+        "aliases": [
+          "Grace Murray Hopper"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "Connect early compiler work and COBOL standardization to efforts to make programming accessible beyond machine instructions.",
+        "card": "Grace Hopper helped develop early compilers and compiler-based languages, then played an important role in defining COBOL. Her career shows a change in programming practice: building tools and shared language specifications that made computers easier to program, rather than treating every task only as machine-level calculation.",
+        "original_description": null,
+        "identity_urls": [
+          "https://computerhistory.org/profile/grace-murray-hopper/"
+        ],
+        "evidence": [
+          {
+            "source_id": "hopper",
+            "locator": "Biography, Harvard and Eckert-Mauchly paragraphs",
+            "note": "Checked early compiler work and the 1959 COBOL role; avoided claiming she alone invented the first compiler or authored SQL."
+          },
+          {
+            "source_id": "queryplanner",
+            "locator": "Overview; §1.1–§1.3",
+            "note": "Supplementary inspected premise for the card or its comparison: Hopper's work on easier programming languages and SQL's declarative query design provide distinct examples of tools that let programmers express intent at a higher level."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:sql",
+            "type": "related_to",
+            "source_ids": [
+              "hopper",
+              "queryplanner"
+            ],
+            "assertion": "editorial",
+            "note": "Hopper's work on easier programming languages and SQL's declarative query design provide distinct examples of tools that let programmers express intent at a higher level."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:sql",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:sql",
+        "label": "SQL",
+        "aliases": [
+          "Structured Query Language"
+        ],
+        "entity_kind": "idea",
+        "scope": "topic",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "Describe desired query results declaratively while a database planner chooses how to find them.",
+        "card": "SQL lets a program describe the data it wants rather than prescribe every retrieval step. The database's query planner chooses an execution strategy, such as scanning a table or using an index. The same requested result can therefore be produced through different underlying algorithms.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.sqlite.org/queryplanner.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "queryplanner",
+            "locator": "Overview; §1.1–§1.3",
+            "note": "Checked declarative query semantics and planner alternatives; the description is about querying, not every SQL operation or implementation."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q8513",
+            "type": "related_to",
+            "source_ids": [
+              "queryplanner"
+            ],
+            "assertion": "source_asserted",
+            "note": "SQLite's query-planner overview explicitly explains SQL's declarative role and the database engine's choice of retrieval algorithm."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:covering-index",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:covering-index",
+        "label": "Covering index",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "Include search and output columns in an index so a query need not consult the original table.",
+        "card": "A covering index contains every column a particular query needs, including its output columns. The database can answer that query from the index without looking up matching rows in the original table. Whether an index covers a query therefore depends on that query's requested information.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.sqlite.org/queryplanner.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "queryplanner",
+            "locator": "§1.7",
+            "note": "Checked search-plus-output coverage and eliminated table lookup; an index can cover one query without covering every query."
+          },
+          {
+            "source_id": "sqliteabout",
+            "locator": "About SQLite, main explanatory paragraphs",
+            "note": "Supplementary inspected premise for the card or its comparison: This index design changes how a database retrieves selected columns; it is an implementation facet rather than a synonym for the database itself."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q8513",
+            "type": "facet_of",
+            "source_ids": [
+              "queryplanner",
+              "sqliteabout"
+            ],
+            "assertion": "editorial",
+            "note": "This index design changes how a database retrieves selected columns; it is an implementation facet rather than a synonym for the database itself."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:dyad-social-group",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:dyad-social-group",
+        "label": "Dyad (social group)",
+        "aliases": [
+          "Dyad"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Society & relationships"
+        ],
+        "learning_takeaway": "See why a two-person group depends on both members' continued participation and cannot outlast either member's departure.",
+        "card": "A dyad is a two-person social group. Its existence depends directly on both participants: when one leaves, no two-person group remains. This gives the relationship a different structure from a larger group, where some members can continue interacting after another person withdraws.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/introduction-sociology-3e/pages/6-2-group-size-and-structure"
+        ],
+        "evidence": [
+          {
+            "source_id": "groupsize",
+            "locator": "§6.2, Dyads, Triads, and Large Groups",
+            "note": "Checked two-member dependence; not claimed that all social consequences or obligations disappear when a dyad ends."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:triad-social-group",
+            "type": "related_to",
+            "source_ids": [
+              "groupsize"
+            ],
+            "assertion": "source_asserted",
+            "note": "OpenStax explicitly contrasts Simmel's two-member and three-member groups by withdrawal and the continuing relationships available."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:divisional-organizational-structure",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:divisional-organizational-structure",
+        "label": "Divisional organizational structure",
+        "aliases": [
+          "Divisional structure"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Economics & organizations",
+          "Society & relationships"
+        ],
+        "learning_takeaway": "Place several functions together within product, market, or regional divisions to concentrate accountability locally.",
+        "card": "A divisional structure places several functions together around a product, market, service, or region. Each division can coordinate its own activities and take clearer responsibility for its segment. The tradeoff is that divisions may become isolated, with duplicated systems and weaker coordination across the whole organization.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/principles-management/pages/4-3-organizational-designs-and-structures"
+        ],
+        "evidence": [
+          {
+            "source_id": "orgstructures",
+            "locator": "§4.3, divisional structure discussion",
+            "note": "Checked grouping basis and divisional isolation; did not claim that geographic and product divisions must use identical arrangements."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:functional-organizational-structure",
+            "type": "related_to",
+            "source_ids": [
+              "orgstructures"
+            ],
+            "assertion": "source_asserted",
+            "note": "OpenStax explicitly describes divisions as groupings of functional departments and contrasts their local coordination with functional silos."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:social-norms",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:social-norms",
+        "label": "Social norms",
+        "aliases": [
+          "Social norm"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Society & relationships"
+        ],
+        "learning_takeaway": "Recognize shared expectations for conduct, including unwritten rules learned by observing others and their consequences.",
+        "card": "Social norms are shared expectations about conduct. Some are written and formally enforced, while others are learned through observation and everyday reactions. A person's behavior can follow a norm even without an official watching, because approval, disapproval, and anticipated consequences also help sustain expectations.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/introduction-sociology-3e/pages/3-2-elements-of-culture"
+        ],
+        "evidence": [
+          {
+            "source_id": "norms",
+            "locator": "§3.2, Norms",
+            "note": "Checked formal/informal expectations and social reactions; norms are distinguished from ideals and from a claim that everyone always complies."
+          },
+          {
+            "source_id": "socialreality",
+            "locator": "§4.3, school example",
+            "note": "Supplementary inspected premise for the card or its comparison: The social-reality chapter explicitly defines institutionalization through establishing conventions or norms within society."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:institutionalization",
+            "type": "related_to",
+            "source_ids": [
+              "norms",
+              "socialreality"
+            ],
+            "assertion": "source_asserted",
+            "note": "The social-reality chapter explicitly defines institutionalization through establishing conventions or norms within society."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:atomic-commit",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:atomic-commit",
+        "label": "Atomic commit",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "Make a transaction appear all-or-nothing even though storage writes happen sequentially and can be interrupted.",
+        "card": "Atomic commit makes a transaction's changes appear all-or-nothing, even though storage writes occur one after another. SQLite uses recovery mechanisms to preserve that appearance across crashes or power failures. The guarantee concerns which changes take effect, rather than requiring hardware to write everything simultaneously.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.sqlite.org/atomiccommit.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "atomiccommit",
+            "locator": "§1 Introduction",
+            "note": "Checked all-or-nothing meaning and sequential hardware writes; crash safety remains subject to the documented storage assumptions."
+          },
+          {
+            "source_id": "sqliteisolation",
+            "locator": "Isolation And Concurrency, rollback mode",
+            "note": "Supplementary inspected premise for the card or its comparison: SQLite's atomic-commit documentation explains rollback journals as the recovery mechanism used for atomic commit in rollback mode."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:rollback-journal",
+            "type": "related_to",
+            "source_ids": [
+              "atomiccommit",
+              "sqliteisolation"
+            ],
+            "assertion": "source_asserted",
+            "note": "SQLite's atomic-commit documentation explains rollback journals as the recovery mechanism used for atomic commit in rollback mode."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:edge-embeddedness",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:edge-embeddedness",
+        "label": "Edge embeddedness",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Society & relationships"
+        ],
+        "learning_takeaway": "Count the mutual neighbors of a connected pair to describe the social context surrounding their tie.",
+        "card": "Edge embeddedness counts how many common neighbors the two ends of a tie share. Mutual contacts create a social setting around the relationship and may make misconduct more visible. A local bridge has zero embeddedness, connecting people without that immediate shared-neighbor context.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch03.pdf"
+        ],
+        "evidence": [
+          {
+            "source_id": "ties",
+            "locator": "§3.5, Embeddedness",
+            "note": "Checked shared-neighbor count and zero case; mutual friends are not claimed to ensure trust or prevent all misconduct."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:local-bridge-in-a-network",
+            "type": "related_to",
+            "source_ids": [
+              "ties"
+            ],
+            "assertion": "source_asserted",
+            "note": "The chapter directly equates zero embeddedness with the local-bridge condition and discusses mutual neighbors' reputational role."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:password-salting",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:password-salting",
+        "label": "Password salting",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "Add per-password salt before costly hashing to prevent shared passwords from routinely producing identical stored hashes.",
+        "card": "Password salting adds a separate value when a password is hashed for storage. Different salts help prevent equal passwords from routinely producing equal stored hashes. A suitable password-hashing scheme also makes each guess costly; salting and computational expense address different parts of an offline guessing attack.",
+        "original_description": null,
+        "identity_urls": [
+          "https://pages.nist.gov/800-63-4/sp800-63b.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "nist",
+            "locator": "§3.1.1.2 Password Verifiers",
+            "note": "Checked salt collision minimization, stored salt/hash pair, and cost factor; no claim that salt alone makes weak passwords safe."
+          },
+          {
+            "source_id": "tls",
+            "locator": "§1; §2; Appendix E",
+            "note": "Supplementary inspected premise for the card or its comparison: NIST's salted password-hashing process applies cryptographic transformations to password storage rather than encrypting a message for later reading."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:authored:000527",
+            "type": "application_of",
+            "source_ids": [
+              "nist",
+              "tls"
+            ],
+            "assertion": "editorial",
+            "note": "NIST's salted password-hashing process applies cryptographic transformations to password storage rather than encrypting a message for later reading."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:insurance-deductible",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:insurance-deductible",
+        "label": "Insurance deductible",
+        "aliases": [
+          "Deductible"
+        ],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Economics & organizations"
+        ],
+        "learning_takeaway": "Require an initial out-of-pocket loss amount before the insurance coverage begins paying.",
+        "card": "An insurance deductible is an amount the policyholder pays before specified coverage starts paying. It leaves some loss with the insured party instead of transferring every cost to the insurer. In the textbook's incentive account, retaining that stake can discourage risk-taking that full coverage might otherwise encourage.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/principles-economics-3e/pages/16-2-insurance-and-imperfect-information"
+        ],
+        "evidence": [
+          {
+            "source_id": "insurance",
+            "locator": "§16.2, moral-hazard cost-sharing paragraph",
+            "note": "Checked threshold structure and qualified incentive rationale; not advice about an appropriate deductible for any person or policy."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:moral-hazard",
+            "type": "related_to",
+            "source_ids": [
+              "insurance"
+            ],
+            "assertion": "source_asserted",
+            "note": "The moral-hazard section explicitly identifies deductibles as a cost-sharing method intended to preserve incentives to avoid losses."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:community-led-language-reclamation",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:community-led-language-reclamation",
+        "label": "Community-led language reclamation",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Learning & language",
+          "Society & relationships"
+        ],
+        "learning_takeaway": "Let communities' own language histories and goals guide locally tailored reclamation work rather than assuming one shared language.",
+        "card": "Community-led language reclamation begins with a community's own history and goals. Cenerini's Michif case explains that Métis communities do not all share one language, so a uniform national approach can miss local identities. Learning what people speak and value shapes which reclamation work makes sense there.",
+        "original_description": null,
+        "identity_urls": [
+          "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/9-7-reclaiming-michif/"
+        ],
+        "evidence": [
+          {
+            "source_id": "michif",
+            "locator": "§9.7, community-specific histories and priorities",
+            "note": "Checked the approved local-history/goals condition and multilingual-community qualification; no generic replacement of the baseline revitalization identity."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:language-documentation",
+            "type": "related_to",
+            "source_ids": [
+              "michif"
+            ],
+            "assertion": "editorial",
+            "note": "Cenerini's local-history emphasis can guide the purposes of documentation; the link preserves the governance distinction instead of renaming generic revitalization."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:efficiency-wage",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:efficiency-wage",
+        "label": "Efficiency wage",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Economics & organizations",
+          "Society & relationships"
+        ],
+        "learning_takeaway": "Pay above the reservation wage when the induced effort and reduced turnover can justify the extra wage cost.",
+        "card": "An efficiency wage can exceed the worker's reservation wage because pay changes behavior as well as cost. In the labor-discipline model, a more valuable job encourages effort and makes departure less attractive. A firm weighs the wage bill against the amount of effective work it obtains.",
+        "original_description": null,
+        "identity_urls": [
+          "https://books.core-econ.org/the-economy-v1/book/text/06.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "firm",
+            "locator": "Section 6.7 Wages, effort, and profits in the labour discipline model, Figure 6.6 and efficiency wages definition; Section 6.4 Employment rents",
+            "note": "Checked explicitly as a model, not a universal wage law; distinct from a statutory minimum wage or a claim that raising any wage always pays for itself."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:employment-rent",
+            "type": "application_of",
+            "source_ids": [
+              "firm"
+            ],
+            "assertion": "editorial",
+            "note": "The model uses the value at risk from losing a job to connect wages with effort; this applies the employment-rent mechanism to wage setting."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:common-value-auction",
+      "sample_kind": "random_new",
+      "selection_reason": "Prescribed deterministic new-ID sample.",
+      "card": {
+        "id": "local:catalog:common-value-auction",
+        "label": "Common-value auction",
+        "aliases": [
+          "Common value auction"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Economics & organizations"
+        ],
+        "learning_takeaway": "Distinguish shared underlying value from bidders' differing information about that value.",
+        "card": "In a common-value auction, the object has the same underlying value to bidders, but they may estimate it differently. A jar of coins is a simple example. Winning can then reveal that one's estimate was unusually optimistic, so the information contained in winning matters for sensible bidding.",
+        "original_description": null,
+        "identity_urls": [
+          "https://oyc.yale.edu/economics/econ-159/lecture-24"
+        ],
+        "evidence": [
+          {
+            "source_id": "auction",
+            "locator": "Lecture 24, Chapter 1",
+            "note": "Checked shared value versus different estimates and winner information; real auctions can combine common and private components."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:winner-s-curse",
+            "type": "related_to",
+            "source_ids": [
+              "auction"
+            ],
+            "assertion": "source_asserted",
+            "note": "The Yale lecture introduces the winner's curse through its common-value coin-jar auction and explains conditioning on winning."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:william-labov",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:named_subject, risk:qualification_or_assumption, risk:source_asserted_relationship",
+      "card": {
+        "id": "local:catalog:william-labov",
+        "label": "William Labov",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Learning & language",
+          "Society & relationships"
+        ],
+        "learning_takeaway": "See how occupation, education, and income were used to compare linguistic variant frequencies across social strata.",
+        "card": "William Labov's study of New York speech compared linguistic variation with occupation, education, and income. It also examined differences between casual speech and reading. The case shows how social categories become research variables and why contextual variation must be considered alongside differences between groups.",
+        "original_description": null,
+        "identity_urls": [
+          "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-7-sociolinguistic-correlations-social-status/"
+        ],
+        "evidence": [
+          {
+            "source_id": "socialstatus",
+            "locator": "§10.7, 1966 Lower East Side study",
+            "note": "Checked the three social measures and two contexts; correlations are not described as proof that class causes a pronunciation."
+          },
+          {
+            "source_id": "variationist",
+            "locator": "§10.1, opening explanation",
+            "note": "Supplementary inspected premise for the card or its comparison: The textbook explicitly presents Labov's study as an example of quantitative sociolinguistic analysis of social status and speaking style."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:variationist-sociolinguistics",
+            "type": "related_to",
+            "source_ids": [
+              "socialstatus",
+              "variationist"
+            ],
+            "assertion": "source_asserted",
+            "note": "The textbook explicitly presents Labov's study as an example of quantitative sociolinguistic analysis of social status and speaking style."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:multi-column-index",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:fine_application_wording, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:multi-column-index",
+        "label": "Multi-column index",
+        "aliases": [
+          "Composite index"
+        ],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "Order index entries by several columns so combined constraints avoid filtering unrelated intermediate matches.",
+        "card": "A multi-column index orders records using several fields together. In SQLite's fruit example, indexing fruit and state lets the database locate California oranges directly instead of first finding all oranges and rejecting other states. Column order determines how that combined ordering can be used.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.sqlite.org/queryplanner.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "queryplanner",
+            "locator": "§1.6",
+            "note": "Checked combined conditions and ordered index columns; no blanket guarantee that any column order accelerates every query."
+          },
+          {
+            "source_id": "sqliteabout",
+            "locator": "About SQLite, main explanatory paragraphs",
+            "note": "Supplementary inspected premise for the card or its comparison: Composite ordering is a particular database access structure; the fruit-and-state example supports the concrete retrieval mechanism."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q8513",
+            "type": "facet_of",
+            "source_ids": [
+              "queryplanner",
+              "sqliteabout"
+            ],
+            "assertion": "editorial",
+            "note": "Composite ordering is a particular database access structure; the fruit-and-state example supports the concrete retrieval mechanism."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:triad-social-group",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:qualification_or_assumption, risk:sense_specific_label, risk:source_asserted_relationship",
+      "card": {
+        "id": "local:catalog:triad-social-group",
+        "label": "Triad (social group)",
+        "aliases": [
+          "Triad"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Society & relationships"
+        ],
+        "learning_takeaway": "See how adding a third member permits coalitions and lets the group persist after one member leaves.",
+        "card": "A triad is a three-person social group. Adding the third member creates possibilities unavailable in a dyad, including two-against-one coalitions and a majority view. If someone withdraws, the remaining pair can still interact, so the group's relationships are not all dependent on one uninterrupted two-person bond.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/introduction-sociology-3e/pages/6-2-group-size-and-structure"
+        ],
+        "evidence": [
+          {
+            "source_id": "groupsize",
+            "locator": "§6.2, Dyads, Triads, and Large Groups",
+            "note": "Checked coalition and withdrawal distinctions; a remaining pair is not inaccurately called a three-person triad."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:dyad-social-group",
+            "type": "related_to",
+            "source_ids": [
+              "groupsize"
+            ],
+            "assertion": "source_asserted",
+            "note": "The group-size chapter explicitly contrasts triads with dyads through coalition possibilities and survival of a remaining pair."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "Q8134",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "Q8134",
+        "label": "Economics",
+        "aliases": [
+          "Economics"
+        ],
+        "entity_kind": "idea",
+        "scope": "broad_field",
+        "domains": [
+          "Economics & organizations"
+        ],
+        "learning_takeaway": "Connect choices under scarce resources with the gains and coordination problems of specialization and exchange.",
+        "card": "Economics studies how people and societies make choices when resources are limited. Specialization can increase what people produce, but it also makes them depend on exchange and coordination. Studying those choices includes asking how information, incentives, and institutions affect whether the potential gains are actually realized.",
+        "original_description": "social science that studies the production, distribution, and consumption of goods and services",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q8134"
+        ],
+        "evidence": [
+          {
+            "source_id": "economics",
+            "locator": "§1.1, scarcity and specialization",
+            "note": "Checked scarcity and specialization from the introduction and information-related trade obstacles from section 16.1; no claim that monetary value measures every human goal."
+          },
+          {
+            "source_id": "asymmetric",
+            "locator": "§16.1, opening explanation",
+            "note": "Supplementary inspected premise for the card or its comparison: The introductory scarcity-and-exchange framework leads to the specific question of how unequal information can obstruct mutually beneficial transactions."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:information-asymmetry",
+            "type": "related_to",
+            "source_ids": [
+              "economics",
+              "asymmetric"
+            ],
+            "assertion": "editorial",
+            "note": "The introductory scarcity-and-exchange framework leads to the specific question of how unequal information can obstruct mutually beneficial transactions."
+          }
+        ],
+        "card_version": 3,
+        "imported_records": [
+          {
+            "description": "social science that studies the production, distribution, and consumption of goods and services",
+            "domain": "Economics & organizations",
+            "guide_title": "Economics",
+            "index": 1299,
+            "inventory_kind": "broad",
+            "list_revision": 31025438,
+            "list_section": "Society and social sciences",
+            "source": "Wikidata",
+            "source_revision": 2551855990,
+            "source_url": "https://www.wikidata.org/wiki/Q8134",
+            "subsection": "Society and social sciences / Business and economics",
+            "topic": "Economics",
+            "wikidata_id": "Q8134"
+          }
+        ],
+        "previous_card_version": 2
+      }
+    },
+    {
+      "id": "local:catalog:rollback-journal",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:rollback-journal",
+        "label": "Rollback journal",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "Preserve old database content before overwrite so an uncompleted transaction can be undone.",
+        "card": "A rollback journal saves original database content before a transaction overwrites it. If the transaction must be undone, the saved content can restore the earlier state. This differs from a write-ahead log, which preserves the main database while appending the new changes elsewhere.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.sqlite.org/isolation.html"
+        ],
+        "evidence": [
+          {
+            "source_id": "sqliteisolation",
+            "locator": "Isolation And Concurrency, rollback mode",
+            "note": "Checked old-versus-new content distinction and restoration purpose; not described as a permanent historical audit log."
+          },
+          {
+            "source_id": "wal",
+            "locator": "§2 How WAL Works; §2.1 Checkpointing",
+            "note": "Supplementary inspected premise for the card or its comparison: The saved-original-content mechanism is a concrete way SQLite realizes atomic commit in rollback mode; WAL provides a contrasting mechanism."
+          },
+          {
+            "source_id": "atomiccommit",
+            "locator": "Section 1 Introduction",
+            "note": "Supplementary inspected premise for the card or its comparison: The saved-original-content mechanism is a concrete way SQLite realizes atomic commit in rollback mode; WAL provides a contrasting mechanism."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:atomic-commit",
+            "type": "application_of",
+            "source_ids": [
+              "sqliteisolation",
+              "wal",
+              "atomiccommit"
+            ],
+            "assertion": "editorial",
+            "note": "The saved-original-content mechanism is a concrete way SQLite realizes atomic commit in rollback mode; WAL provides a contrasting mechanism."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:international-cooperative-alliance",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:named_subject, risk:qualification_or_assumption, risk:source_asserted_relationship",
+      "card": {
+        "id": "local:catalog:international-cooperative-alliance",
+        "label": "International Cooperative Alliance",
+        "aliases": [
+          "ICA"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Economics & organizations"
+        ],
+        "learning_takeaway": "Explore how an international federation coordinated information, common principles, and trade among otherwise separate cooperatives.",
+        "card": "The International Cooperative Alliance was founded in 1895 to connect cooperatives across countries. Its initial aims included sharing information, defending common principles, and developing international trade. It illustrates how independent member enterprises can coordinate through a federation without becoming a single ordinary business under one owner.",
+        "original_description": null,
+        "identity_urls": [
+          "https://ica.coop/en/whats-co-op/history-co-operative-movement"
+        ],
+        "evidence": [
+          {
+            "source_id": "coopHistory",
+            "locator": "Opening 1895 foundation paragraph",
+            "note": "Checked founding aims and cooperative membership; no claim about current membership counts or authority over every cooperative."
+          },
+          {
+            "source_id": "cooperativeidentity",
+            "locator": "Principle 3, Member Economic Participation",
+            "note": "Supplementary inspected premise for the card or its comparison: The Alliance's history expressly describes delegates from cooperatives establishing an international body to support their shared principles and trade."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q4539",
+            "type": "related_to",
+            "source_ids": [
+              "coopHistory",
+              "cooperativeidentity"
+            ],
+            "assertion": "source_asserted",
+            "note": "The Alliance's history expressly describes delegates from cooperatives establishing an international body to support their shared principles and trade."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:networked-team-structure",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:fine_application_wording, risk:qualification_or_assumption, risk:source_asserted_relationship",
+      "card": {
+        "id": "local:catalog:networked-team-structure",
+        "label": "Networked team structure",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Economics & organizations",
+          "Society & relationships"
+        ],
+        "learning_takeaway": "Coordinate task-focused teams through flexible relationship networks rather than relying primarily on fixed reporting lines.",
+        "card": "A networked team structure organizes work around flexible connections among task-focused teams. Teams may initially be assigned, then find additional collaborators and resources as the work develops. The distinctive feature is this evolving task arrangement, rather than treating every informal workplace friendship as an organizational design.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/principles-management/pages/4-3-organizational-designs-and-structures"
+        ],
+        "evidence": [
+          {
+            "source_id": "orgstructures",
+            "locator": "§4.3, networked team structures",
+            "note": "Checked the approved task-team distinction from informal organization and the wider organic orientation; no claim that reporting responsibilities vanish."
+          },
+          {
+            "source_id": "orgdesign",
+            "locator": "§10.1, opening definitions",
+            "note": "Supplementary inspected premise for the card or its comparison: The source explicitly lists networked team structure among organizational designs and describes teams forming useful links after initial assignment."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q3318170",
+            "type": "broader_topic",
+            "source_ids": [
+              "orgstructures",
+              "orgdesign"
+            ],
+            "assertion": "source_asserted",
+            "note": "The source explicitly lists networked team structure among organizational designs and describes teams forming useful links after initial assignment."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:morris-worm",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:morris-worm",
+        "label": "Morris worm",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "See how self-propagating code disrupted network services without destroying stored files in the 1988 incident.",
+        "card": "The Morris worm spread across the early Internet in 1988 and disrupted computers and services without destroying their files. Its impact illustrates that availability can fail even when stored data remains intact. The incident also prompted organized response efforts, including an early computer emergency response team.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.fbi.gov/history/famous-cases/morris-worm"
+        ],
+        "evidence": [
+          {
+            "source_id": "morris",
+            "locator": "Main history, propagation and operational impact paragraphs",
+            "note": "Checked year, self-propagation, absence of file destruction, service disruption and response-team consequence; no detailed exploit instructions or precise uncertain damage totals."
+          },
+          {
+            "source_id": "saltzerintro",
+            "locator": "Abstract; Glossary, Security and Protection",
+            "note": "Supplementary inspected premise for the card or its comparison: The FBI's account of disruption without file destruction provides a concrete case for considering service availability within computer protection."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q3510521",
+            "type": "related_to",
+            "source_ids": [
+              "morris",
+              "saltzerintro"
+            ],
+            "assertion": "editorial",
+            "note": "The FBI's account of disruption without file destruction provides a concrete case for considering service availability within computer protection."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:fangyan",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:fangyan",
+        "label": "Fangyan",
+        "aliases": [
+          "Fāngyán",
+          "方言"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Learning & language"
+        ],
+        "learning_takeaway": "Explore how a Han-era collection of regional words preserves evidence used to infer earlier dialect groupings.",
+        "card": "Fangyan is a Han-era collection of regional words associated with the scholar Yang Xiong. By recording different expressions and pronunciations across places, it preserved evidence about linguistic diversity. Later scholars used that material to infer earlier dialect groupings, showing how a vocabulary work can become historical evidence.",
+        "original_description": null,
+        "identity_urls": [
+          "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.05%3A_Variationist_methods_and_concepts"
+        ],
+        "evidence": [
+          {
+            "source_id": "variationmethods",
+            "locator": "§10.5, Dialectology: Then and now, Yang Xiong paragraph",
+            "note": "Checked regional vocabulary, Yang Xiong attribution, and later scholarly use; no unverified precise date or exhaustive dialect classification is asserted."
+          },
+          {
+            "source_id": "languagechange",
+            "locator": "§10.3, Language changes",
+            "note": "Supplementary inspected premise for the card or its comparison: The methods chapter describes later inferences about earlier dialect groups from Fangyan, linking the particular work to historical language study."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q190375",
+            "type": "related_to",
+            "source_ids": [
+              "variationmethods",
+              "languagechange"
+            ],
+            "assertion": "editorial",
+            "note": "The methods chapter describes later inferences about earlier dialect groups from Fangyan, linking the particular work to historical language study."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "Q21204",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject, risk:qualification_or_assumption",
+      "card": {
+        "id": "Q21204",
+        "label": "International Phonetic Alphabet",
+        "aliases": [
+          "International Phonetic Alphabet",
+          "IPA"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Learning & language"
+        ],
+        "learning_takeaway": "Use a cross-language sound notation to avoid inconsistencies between ordinary spelling and pronunciation.",
+        "card": "The International Phonetic Alphabet provides a shared notation for speech sounds across languages. It avoids relying on ordinary spelling, where one letter can represent different sounds and one sound can have several spellings. Transcriptions can be broad or include finer detail, depending on the analyst's purpose.",
+        "original_description": "alphabetic system of phonetic notation",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q21204"
+        ],
+        "evidence": [
+          {
+            "source_id": "ipa",
+            "locator": "§3.6, Transcription; The International Phonetic Alphabet",
+            "note": "Checked cross-language notation, spelling mismatch and broad/narrow transcription; the alphabet is not an ordinary writing system for one language."
+          },
+          {
+            "source_id": "phonemes",
+            "locator": "§4.1, The essence of phonology",
+            "note": "Supplementary inspected premise for the card or its comparison: The IPA records pronunciations that phonologists compare when analyzing sound patterns; notation and the organization of a language remain distinct subjects."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q40998",
+            "type": "related_to",
+            "source_ids": [
+              "ipa",
+              "phonemes"
+            ],
+            "assertion": "editorial",
+            "note": "The IPA records pronunciations that phonologists compare when analyzing sound patterns; notation and the organization of a language remain distinct subjects."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": [
+          {
+            "topic": "International Phonetic Alphabet",
+            "domain": "Learning & language",
+            "description": "alphabetic system of phonetic notation",
+            "source": "Wikidata",
+            "source_url": "https://www.wikidata.org/wiki/Q21204",
+            "guide_title": "International Phonetic Alphabet",
+            "wikidata_id": "Q21204",
+            "subsection": "Language and Literature / Language / Alphabets and writing systems",
+            "source_revision": 2549608248,
+            "list_revision": 30260496,
+            "list_section": "Arts",
+            "inventory_kind": "broad",
+            "index": 2259
+          }
+        ]
+      }
+    },
+    {
+      "id": "local:catalog:delayed-judgments-of-learning",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:fine_application_wording, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:delayed-judgments-of-learning",
+        "label": "Delayed judgments of learning",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "domains": [
+          "Learning & language"
+        ],
+        "learning_takeaway": "After a delay, use only a cue to judge future recall so immediate familiarity is less misleading.",
+        "card": "A delayed judgment of learning asks someone to estimate future recall after time away from the material, using a cue without the answer visible. The delay reduces reliance on immediate familiarity. The cited guide treats this as promising for allocating study, while noting limited classroom evidence.",
+        "original_description": null,
+        "identity_urls": [
+          "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072004.pdf"
+        ],
+        "evidence": [
+          {
+            "source_id": "ies",
+            "locator": "Recommendation 6a, printed pp. 23–24",
+            "note": "Checked delay, cue-only access, prospective judgment, and low classroom-evidence rating; not equated with an immediate confidence rating or actual test performance."
+          },
+          {
+            "source_id": "formative",
+            "locator": "Formative assessment; final paragraph",
+            "note": "Supplementary inspected premise for the card or its comparison: Both approaches use information to guide subsequent learning, but a learner's delayed recall estimate is distinct from the broader formative use of assessment evidence."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:formative-assessment",
+            "type": "related_to",
+            "source_ids": [
+              "ies",
+              "formative"
+            ],
+            "assertion": "editorial",
+            "note": "Both approaches use information to guide subsequent learning, but a learner's delayed recall estimate is distinct from the broader formative use of assessment evidence."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:reduplication",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:qualification_or_assumption, risk:source_asserted_relationship",
+      "card": {
+        "id": "local:catalog:reduplication",
+        "label": "Reduplication",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Learning & language"
+        ],
+        "learning_takeaway": "Repeat all or part of a linguistic form to express a grammatical or meaning contrast.",
+        "card": "Reduplication repeats part or all of a linguistic form to express a grammatical or meaning contrast. In Halq'eméylem, one pattern derives meanings such as being disposed to an action. English salad-salad provides a different example: repetition can emphasize a prototypical instance rather than simply pluralizing something.",
+        "original_description": null,
+        "identity_urls": [
+          "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.03%3A_Morphology_beyond_affixes"
+        ],
+        "evidence": [
+          {
+            "source_id": "reduplication",
+            "locator": "§5.3, Reduplication",
+            "note": "Checked repeated form, Halq'eméylem disposition example and English prototypicality; meanings of reduplication vary by construction and language."
+          },
+          {
+            "source_id": "morphology",
+            "locator": "§5.1, opening examples and morpheme definition",
+            "note": "Supplementary inspected premise for the card or its comparison: The source explicitly lists reduplication among morphological processes beyond affixation and supplies the two contrasting language examples."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q38311",
+            "type": "facet_of",
+            "source_ids": [
+              "reduplication",
+              "morphology"
+            ],
+            "assertion": "source_asserted",
+            "note": "The source explicitly lists reduplication among morphological processes beyond affixation and supplies the two contrasting language examples."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:emergent-norm-theory",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:qualification_or_assumption, risk:source_asserted_relationship",
+      "card": {
+        "id": "local:catalog:emergent-norm-theory",
+        "label": "Emergent norm theory",
+        "aliases": [],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Society & relationships"
+        ],
+        "learning_takeaway": "Explain crowd conduct through locally developing guidelines in unfamiliar situations rather than assuming all crowds act irrationally.",
+        "card": "Emergent norm theory explains crowd behavior through guidelines that participants develop in unfamiliar situations. People bring prior expectations, interact, and may accept new ways of acting as circumstances change. The theory treats crowds as more than irrational masses, while leaving questions about how norms spread and gain acceptance.",
+        "original_description": null,
+        "identity_urls": [
+          "https://openstax.org/books/introduction-sociology-3e/pages/21-1-collective-behavior"
+        ],
+        "evidence": [
+          {
+            "source_id": "collective",
+            "locator": "§21.1, Emergent-Norm Perspective",
+            "note": "Checked explanatory status and the source's unresolved acceptance/spread questions; the theory is not presented as a universally established causal law."
+          },
+          {
+            "source_id": "norms",
+            "locator": "§3.2, Norms",
+            "note": "Supplementary inspected premise for the card or its comparison: The source explicitly makes changing and newly established norms central to the emergent-norm account of crowds."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:social-norms",
+            "type": "related_to",
+            "source_ids": [
+              "collective",
+              "norms"
+            ],
+            "assertion": "source_asserted",
+            "note": "The source explicitly makes changing and newly established norms central to the emergent-norm account of crowds."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:other-initiated-conversational-repair",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:other-initiated-conversational-repair",
+        "label": "Other-initiated conversational repair",
+        "aliases": [
+          "Other-initiated repair"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Society & relationships",
+          "Learning & language"
+        ],
+        "learning_takeaway": "Signal trouble with another speaker's message so the original speaker can repeat, clarify, or confirm it.",
+        "card": "Other-initiated repair occurs when a listener signals trouble with someone else's message and the original speaker helps resolve it. The response may repeat words, clarify a missing detail, or confirm an interpretation. This creates a brief collaborative detour that repairs understanding before the conversation proceeds.",
+        "original_description": null,
+        "identity_urls": [
+          "https://discovery.ucl.ac.uk/id/eprint/1557948/1/Dingemanse_universal_principles_in_the_repair_of_communication.PDF"
+        ],
+        "evidence": [
+          {
+            "source_id": "repair",
+            "locator": "Introduction; Materials and Methods, repair-sequence definition",
+            "note": "Checked initiator/solution sequence and alternative repair operations; the observed mechanisms are not generalized into claims about every language without qualification."
+          },
+          {
+            "source_id": "grounding",
+            "locator": "Opening; Grounding in Conversation; contribution model",
+            "note": "Supplementary inspected premise for the card or its comparison: Repair makes a breakdown explicit, while grounding also includes routine evidence of understanding; the two sources support their connection without making them equivalent."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:grounding-in-communication",
+            "type": "related_to",
+            "source_ids": [
+              "repair",
+              "grounding"
+            ],
+            "assertion": "editorial",
+            "note": "Repair makes a breakdown explicit, while grounding also includes routine evidence of understanding; the two sources support their connection without making them equivalent."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:structural-ambiguity",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:catalog:structural-ambiguity",
+        "label": "Structural ambiguity",
+        "aliases": [
+          "Structural ambiguity",
+          "Syntactic ambiguity"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Learning & language"
+        ],
+        "learning_takeaway": "Derive different interpretations from alternative phrase attachments while keeping the words unchanged.",
+        "card": "Structural ambiguity occurs when the same words allow different internal groupings. In I saw someone with a telescope, the telescope may be the instrument used for seeing or something the other person possessed. The difference comes from phrase attachment, without requiring a word to acquire another meaning.",
+        "original_description": null,
+        "identity_urls": [
+          "https://pressbooks.pub/essentialsoflinguistics/chapter/9-2-ambiguity/"
+        ],
+        "evidence": [
+          {
+            "source_id": "ambiguity",
+            "locator": "§6.17, telescope example",
+            "note": "Checked both telescope attachments and distinction from lexical ambiguity; no claim that every ambiguous expression has exactly two parses."
+          },
+          {
+            "source_id": "composition",
+            "locator": "§7.2, definition and complex-word example",
+            "note": "Supplementary inspected premise for the card or its comparison: The telescope example illustrates why semantic composition depends on how parts are grouped, not only on the meanings of individual words."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:semantic-compositionality",
+            "type": "related_to",
+            "source_ids": [
+              "ambiguity",
+              "composition"
+            ],
+            "assertion": "editorial",
+            "note": "The telescope example illustrates why semantic composition depends on how parts are grouped, not only on the meanings of individual words."
+          }
+        ],
+        "card_version": 2,
+        "imported_records": [],
+        "previous_card_version": 1
+      }
+    },
+    {
+      "id": "local:authored:000527",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "local:authored:000527",
+        "label": "Cryptography",
+        "aliases": [
+          "Cryptography"
+        ],
+        "entity_kind": "idea",
+        "scope": "broad_field",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "Combine keyed encryption and authentication to protect message confidentiality, integrity, and peer identity.",
+        "card": "Cryptography uses keyed mathematical techniques to protect information and verify messages or participants. Encryption can hide content, while authentication and integrity mechanisms help detect impersonation or alteration. TLS illustrates how several cryptographic tools are combined into a communication protocol rather than relying on secrecy of the design.",
+        "original_description": "Protecting information through mathematical encoding and verification techniques.",
+        "identity_urls": [],
+        "evidence": [
+          {
+            "source_id": "tls",
+            "locator": "§1; §2; Appendix E",
+            "note": "Checked TLS security goals and key/design distinction; encryption alone is not claimed to provide every cryptographic property."
+          },
+          {
+            "source_id": "saltzer",
+            "locator": "Section I.A, design principle d (open design)",
+            "note": "Supplementary inspected premise for the card or its comparison: TLS provides a concrete protocol combining encryption, authentication and integrity goals; Saltzer's open-design principle clarifies the distinction between public mechanisms and secret keys."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:tls-1-3",
+            "type": "related_to",
+            "source_ids": [
+              "tls",
+              "saltzer"
+            ],
+            "assertion": "editorial",
+            "note": "TLS provides a concrete protocol combining encryption, authentication and integrity goals; Saltzer's open-design principle clarifies the distinction between public mechanisms and secret keys."
+          }
+        ],
+        "card_version": 2,
+        "imported_records": [
+          {
+            "description": "Protecting information through mathematical encoding and verification techniques.",
+            "domain": "Computing & information",
+            "index": 527,
+            "inventory_kind": "broad",
+            "source": "ProductSpace",
+            "subsection": "Computing & software practice",
+            "topic": "Cryptography"
+          }
+        ],
+        "previous_card_version": 1
+      }
+    },
+    {
+      "id": "Q21201",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:qualification_or_assumption",
+      "card": {
+        "id": "Q21201",
+        "label": "Sociology",
+        "aliases": [
+          "Sociology"
+        ],
+        "entity_kind": "idea",
+        "scope": "broad_field",
+        "domains": [
+          "Society & relationships"
+        ],
+        "learning_takeaway": "Connect everyday interactions with patterned relationships and institutions at larger social scales.",
+        "card": "Sociology studies patterns in how people interact, form groups, and organize societies. It connects small encounters with larger institutions and historical conditions. A conflict between work and family responsibilities, for example, can be examined as more than one person's private failure to manage time well.",
+        "original_description": "social science that studies human society and its development",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q21201"
+        ],
+        "evidence": [
+          {
+            "source_id": "sociology",
+            "locator": "§1.1, What Are Society and Culture?; Studying Patterns",
+            "note": "Checked micro/macro scope and role-conflict example; not claimed that personal decisions are entirely determined by social structure."
+          },
+          {
+            "source_id": "socialreality",
+            "locator": "§4.3, Roles and Status, parent-worker example",
+            "note": "Supplementary inspected premise for the card or its comparison: The introductory field definition and the role-conflict example connect individual experiences to patterned expectations across social roles."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:role-conflict",
+            "type": "related_to",
+            "source_ids": [
+              "sociology",
+              "socialreality"
+            ],
+            "assertion": "editorial",
+            "note": "The introductory field definition and the role-conflict example connect individual experiences to patterned expectations across social roles."
+          }
+        ],
+        "card_version": 3,
+        "imported_records": [
+          {
+            "description": "social science that studies human society and its development",
+            "domain": "Society & relationships",
+            "guide_title": "Sociology",
+            "index": 3332,
+            "inventory_kind": "broad",
+            "list_revision": 31025438,
+            "list_section": "Society and social sciences",
+            "source": "Wikidata",
+            "source_revision": 2535818705,
+            "source_url": "https://www.wikidata.org/wiki/Q21201",
+            "subsection": "Society and social sciences / Society / Sociology",
+            "topic": "Sociology",
+            "wikidata_id": "Q21201"
+          }
+        ],
+        "previous_card_version": 2
+      }
+    },
+    {
+      "id": "Q169399",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:editorial_relationship, risk:named_subject",
+      "card": {
+        "id": "Q169399",
+        "label": "ENIAC",
+        "aliases": [
+          "ENIAC"
+        ],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Computing & information"
+        ],
+        "learning_takeaway": "Explore why electronic calculation speed coexisted with days of wiring and switch-setting for a new problem.",
+        "card": "ENIAC performed calculations electronically, yet setting it up for a new problem could take days of connecting wires and adjusting switches. Its history separates calculation speed from programming effort. Maintaining nearly 18,000 vacuum tubes created another practical challenge that technicians gradually learned to handle more efficiently.",
+        "original_description": "First electronic general-purpose computer",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q169399"
+        ],
+        "evidence": [
+          {
+            "source_id": "eniac",
+            "locator": "ENIAC being set up; ENIAC tube change",
+            "note": "Checked electronic operation, setup time, approximate tube count, and maintenance learning; no unsupported total-calculations superlative is repeated."
+          },
+          {
+            "source_id": "baby",
+            "locator": "Collection description, CRT memory and first program paragraphs",
+            "note": "Supplementary inspected premise for the card or its comparison: ENIAC's initial physical configuration process contrasts with Baby's stored-program experiment; both illustrate that program representation matters as well as calculation speed."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:manchester-baby",
+            "type": "related_to",
+            "source_ids": [
+              "eniac",
+              "baby"
+            ],
+            "assertion": "editorial",
+            "note": "ENIAC's initial physical configuration process contrasts with Baby's stored-program experiment; both illustrate that program representation matters as well as calculation speed."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": [
+          {
+            "topic": "ENIAC",
+            "domain": "Computing & information",
+            "description": "First electronic general-purpose computer",
+            "source": "Wikidata",
+            "source_url": "https://www.wikidata.org/wiki/Q169399",
+            "guide_title": "ENIAC",
+            "wikidata_id": "Q169399",
+            "subsection": "Technology / Information technology / Computer hardware",
+            "source_revision": 2548172314,
+            "list_revision": 30916276,
+            "list_section": "Technology",
+            "inventory_kind": "broad",
+            "index": 1109
+          }
+        ]
+      }
+    },
+    {
+      "id": "local:catalog:bank-of-england",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:named_subject, risk:qualification_or_assumption, risk:source_asserted_relationship",
+      "card": {
+        "id": "local:catalog:bank-of-england",
+        "label": "Bank of England",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Economics & organizations"
+        ],
+        "learning_takeaway": "Trace the transition from a privately owned government banker to a nationalized central bank.",
+        "card": "The Bank of England began in 1694 as a privately owned bank helping finance the government. It also accepted public deposits, and much later was nationalized. Its history shows that a public financial role and private ownership can coexist, rather than central banking always beginning with government ownership.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.bankofengland.co.uk/about/history"
+        ],
+        "evidence": [
+          {
+            "source_id": "boehistory",
+            "locator": "1694 foundation; 1946 nationalization entries",
+            "note": "Checked foundation, financing role, deposits and 1946 nationalization; no assertion about current governors, policies or unused legal powers."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:south-sea-bubble",
+            "type": "related_to",
+            "source_ids": [
+              "boehistory"
+            ],
+            "assertion": "source_asserted",
+            "note": "The Bank's history explicitly connects its government-banking position with competition from the South Sea Company and the 1720 crisis."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    },
+    {
+      "id": "local:catalog:chantale-cenerini",
+      "sample_kind": "risk_selected",
+      "selection_reason": "Purposive coverage/risk selection: risk:named_subject, risk:qualification_or_assumption, risk:source_asserted_relationship",
+      "card": {
+        "id": "local:catalog:chantale-cenerini",
+        "label": "Chantale Cenerini",
+        "aliases": [],
+        "entity_kind": "named_subject",
+        "scope": "topic",
+        "domains": [
+          "Learning & language"
+        ],
+        "learning_takeaway": "Learn from her account of documenting community stories while respecting distinct local Michif and Métis language histories.",
+        "card": "Chantale Cenerini describes documenting stories with Michif and Métis communities as work that can preserve language, family histories, and locally valued knowledge. Her account emphasizes learning each community's linguistic history first. A shared national identity does not mean every community uses the same language.",
+        "original_description": null,
+        "identity_urls": [
+          "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/9-7-reclaiming-michif/"
+        ],
+        "evidence": [
+          {
+            "source_id": "michif",
+            "locator": "§9.7, interview on local context and community stories",
+            "note": "Checked first-person account and community-specific language histories; no universal claim about every Métis speaker or documentation project's outcome."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:language-documentation",
+            "type": "related_to",
+            "source_ids": [
+              "michif"
+            ],
+            "assertion": "source_asserted",
+            "note": "Cenerini's interview directly describes her story-recording work and its language-documentation and family-legacy purposes."
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      }
+    }
+  ],
+  "all_frozen_sources": [
+    {
+      "id": "shannon",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Introduction, pp. 1–2; Title; Introduction, pp. 1–2",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:58.955686Z",
+      "revision": "1948 reprint with corrections",
+      "source_result_file": "source-texts/web-014.json",
+      "source_result_sha256": "538134c2071cdea553e65961f2cb64b526654b316db8cce61e8092f7ef6e2c1c",
+      "title": "A Mathematical Theory of Communication",
+      "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+    },
+    {
+      "id": "sqliteisolation",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Isolation And Concurrency, rollback mode; Isolation And Concurrency, WAL example",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:00:22.584743Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-001.json",
+      "source_result_sha256": "a7b503e7617a7b62f1a06a4d6fc77bf3912454998318cfe72771a003d61598f0",
+      "title": "Isolation In SQLite",
+      "url": "https://www.sqlite.org/isolation.html"
+    },
+    {
+      "id": "wal",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§2 How WAL Works; §2.1 Checkpointing; §2 How WAL Works; §2.1 Checkpointing",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:00:22.584743Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-001.json",
+      "source_result_sha256": "a7b503e7617a7b62f1a06a4d6fc77bf3912454998318cfe72771a003d61598f0",
+      "title": "Write-Ahead Logging",
+      "url": "https://www.sqlite.org/wal.html"
+    },
+    {
+      "id": "deflate",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Abstract; §2; §3.2.1; §3.2.2; §2; §3.2.5; §3.2.6–§3.2.7",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:05:19.318222Z",
+      "revision": "RFC 1951",
+      "source_result_file": "source-texts/web-029.json",
+      "source_result_sha256": "856c0806c77299a218812b530aa0e877fabb1ecf9de15c57943e70d8597ccef6",
+      "title": "DEFLATE Compressed Data Format Specification version 1.3",
+      "url": "https://www.rfc-editor.org/rfc/rfc1951"
+    },
+    {
+      "id": "normalization",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§1.2–§1.3; §1.1, Figure 1; §1.1, Figure 2; §1.2 warning; §1.4, Table 2",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:00:47.737217Z",
+      "revision": "UAX 15 revision 58, Unicode 18.0.0",
+      "source_result_file": "source-texts/web-002.json",
+      "source_result_sha256": "20e65172e847f597f13f1b1fa31d76273929a7e186d595e7152130aa9a4020a7",
+      "title": "Unicode Normalization Forms",
+      "url": "https://www.unicode.org/reports/tr15/"
+    },
+    {
+      "id": "utf8",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§2–§3; §3; §10; §3, encoding definition",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:01:35.258119Z",
+      "revision": "RFC 3629",
+      "source_result_file": "source-texts/web-003.json",
+      "source_result_sha256": "42469d9c0464e942431b6735b0427882ad8f46400794b43783fbbd4e29cfc25a",
+      "title": "UTF-8, a transformation format of ISO 10646",
+      "url": "https://www.rfc-editor.org/rfc/rfc3629"
+    },
+    {
+      "id": "segmentation",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§3, introductory discussion and Table 1a",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:58.663681Z",
+      "revision": "UAX 29 revision 49, Unicode 18.0.0",
+      "source_result_file": "source-texts/web-012.json",
+      "source_result_sha256": "3a4ef024a1a11937748cb269e6ee8c8264587e4860709851dc132b7166407d99",
+      "title": "Unicode Text Segmentation",
+      "url": "https://www.unicode.org/reports/tr29/"
+    },
+    {
+      "id": "queryplanner",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§1.2–§1.3; §1.7; §1.6; Overview; sections 1.1–1.3; Overview; §1.1–§1.3",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:59.563696Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-013.json",
+      "source_result_sha256": "0baf30ecbd98cc626f078f651937921cc5d77248cc64073fef1881b48a524c65",
+      "title": "Query Planning",
+      "url": "https://www.sqlite.org/queryplanner.html"
+    },
+    {
+      "id": "raft",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§2, replicated state machines; §2; §4–§5; §2; §5; §5.2; §6, pp. 10–11; §2; §5.3",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:04:38.525495Z",
+      "revision": "2014 extended paper",
+      "source_result_file": "source-texts/web-024.json",
+      "source_result_sha256": "cb7bf7a85c61d5cb6ccaa851726aa9274289d4db63ebd8322ed7158ed3941ee2",
+      "title": "In Search of an Understandable Consensus Algorithm",
+      "url": "https://raft.github.io/raft.pdf"
+    },
+    {
+      "id": "saltzerintro",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Abstract; Glossary, Security and Protection; Glossary, Capability and Ticket-oriented; Glossary, Access control list and List-oriented",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:01:34.742109Z",
+      "revision": "1975 paper",
+      "source_result_file": "source-texts/web-004.json",
+      "source_result_sha256": "56f490aac12634e445bff90c794ffdb6793f2a65177e30d334c4f1ed171b48e7",
+      "title": "The Protection of Information in Computer Systems",
+      "url": "https://web.mit.edu/Saltzer/www/publications/protection/"
+    },
+    {
+      "id": "saltzer",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Section I.A, design principles a (economy of mechanism) and c (complete mediation); Section I.A, design principle d (open design); §I.A, principle f; §I.A, principle b; §I.A, principle c; §I.A, principle e; §I.A, principle d; §I.A, principle a",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:04.258667Z",
+      "revision": "1975 paper, Section I",
+      "source_result_file": "source-texts/web-006.json",
+      "source_result_sha256": "78a6f28c09999d6c5a39617c6c0ae747952604ab7b16a3a12cd26e314b8ddf23",
+      "title": "Basic Principles Of Information Protection",
+      "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html"
+    },
+    {
+      "id": "http",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§9.2.2; §8.8.3; §13.1.1",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:04.538672Z",
+      "revision": "RFC 9110",
+      "source_result_file": "source-texts/web-007.json",
+      "source_result_sha256": "f95a66d449aa8eb268901b32dd23264d33819b6104f64dee28603fe55c82fe23",
+      "title": "HTTP Semantics",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "id": "tcp",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§3.1; §2; §3.1",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:59.239691Z",
+      "revision": "RFC 5681",
+      "source_result_file": "source-texts/web-015.json",
+      "source_result_sha256": "3ad43c77c3d923993e418c68f25f67c950df193c5ee853b48347ae224e9d6275",
+      "title": "TCP Congestion Control",
+      "url": "https://datatracker.ietf.org/doc/html/rfc5681"
+    },
+    {
+      "id": "nist",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§3.1.1.2 Password Verifiers; §3.2.2 Rate Limiting; §3.2.7 Replay Resistance; §3.2.5 Phishing Resistance",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:04:38.805500Z",
+      "revision": "NIST SP 800-63B-4",
+      "source_result_file": "source-texts/web-023.json",
+      "source_result_sha256": "47ca13c1744247fb12da6e986fae054ee8b49665fb51867ba06d4bf7e3ea4df7",
+      "title": "Digital Identity Guidelines: Authentication and Authenticator Management",
+      "url": "https://pages.nist.gov/800-63-4/sp800-63b.html"
+    },
+    {
+      "id": "hopper",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Biography, Harvard and Eckert-Mauchly paragraphs",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:25.971073Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-009.json",
+      "source_result_sha256": "6bc9b1d9dd9ace0298f535fc5373c6a6f1746792a1c18c1cb70a17dd0c1ce523",
+      "title": "Grace Murray Hopper",
+      "url": "https://computerhistory.org/profile/grace-murray-hopper/"
+    },
+    {
+      "id": "baby",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Collection description, CRT memory and first program paragraphs",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:26.255079Z",
+      "revision": "Collection YS23/1998",
+      "source_result_file": "source-texts/web-010.json",
+      "source_result_sha256": "51d3dcc8549372d99f17a0944bf191a0a84f03372e341b0029e5c85c10361bcd",
+      "title": "Replica of the Baby or SSEM computer",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer"
+    },
+    {
+      "id": "eniac",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "ENIAC being set up; ENIAC tube change",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:03:35.192334Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-018.json",
+      "source_result_sha256": "bda4acf8f3c5bae6a04a201886b79ba27d731a31ec02c3fdb289b1b3ee9e6af1",
+      "title": "ENIAC",
+      "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78"
+    },
+    {
+      "id": "morris",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Main history, propagation and operational impact paragraphs",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:03:34.688325Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-017.json",
+      "source_result_sha256": "e055af5f5482d66687ec484df1b8333ecdf3f89a58c6b938f37ebb8993bb4c1b",
+      "title": "Morris Worm",
+      "url": "https://www.fbi.gov/history/famous-cases/morris-worm"
+    },
+    {
+      "id": "sqliteabout",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "About SQLite, main explanatory paragraphs; About SQLite, first two main paragraphs",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:05:18.534208Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-027.json",
+      "source_result_sha256": "53fbb483b46f34bacceffbe3c4c6179b30891af6193ba9fdc9aa6f56818ca886",
+      "title": "About SQLite",
+      "url": "https://www.sqlite.org/about.html"
+    },
+    {
+      "id": "atomiccommit",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§1 Introduction; Section 1 Introduction",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:05:18.806213Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-028.json",
+      "source_result_sha256": "a7345c5717be270655da585d533bea0119dd9cd23f07c6b91d0ed62e2743e39d",
+      "title": "Atomic Commit In SQLite",
+      "url": "https://www.sqlite.org/atomiccommit.html"
+    },
+    {
+      "id": "linguistics",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§1.3, descriptive and prescriptive approaches",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:33.291667Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-056.json",
+      "source_result_sha256": "a284cdce755f3124fcafef6d21b5d9e9fbaea021573cd46903a40bb3e469ad13",
+      "title": "Studying language scientifically",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/01%3A_Human_Language_and_Language_Science/1.03%3A_Studying_language_scientifically"
+    },
+    {
+      "id": "phonemes",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§4.1, The essence of phonology; §4.1, The phonological units of spoken language",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:15.171355Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-050.json",
+      "source_result_sha256": "2257c411fe7f3e50b05176a586e55866689eed78e740977b923ee990a5b19d8a",
+      "title": "Phonemes and allophones",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones"
+    },
+    {
+      "id": "morphology",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§5.1, opening examples and morpheme definition",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:33.831676Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-057.json",
+      "source_result_sha256": "727ee2cfbc6d9dcd387a86e7d407b224dfaa129a4e5e4ef1f24e459e18053ef9",
+      "title": "What is morphology?",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.01%3A_What_is_morphology"
+    },
+    {
+      "id": "minimalpair",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§4.3, Comparing distributions with minimal pairs",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:08:33.977627Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-032.json",
+      "source_result_sha256": "5a71ddf6dad2a8e76183b995cf270ed85ab9ee69250c7a73c2df1c35c9d5f524",
+      "title": "Contrastive distribution and minimal pairs",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/4-3-contrastive-distribution-and-minimal-pairs/"
+    },
+    {
+      "id": "complementary",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§4.4, Phones without contrastive distribution; Phonetic similarity",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:14.287340Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-051.json",
+      "source_result_sha256": "ec33dbf99b96b2de6eea10e5c4154df80ecdfded747509a62fce94b3c7f5d142",
+      "title": "Complementary distribution",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.04%3A_Complementary_distribution"
+    },
+    {
+      "id": "allomorphy",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§5.4, opening definition and plural examples",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:14.583345Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-053.json",
+      "source_result_sha256": "ae7ce1dddbb337096523fa91c2f0d82bcd236cb640c40dd2b3afd19d6b3d2339",
+      "title": "Allomorphy",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.04%3A_Allomorphy"
+    },
+    {
+      "id": "reduplication",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§5.3, Reduplication",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:14.031335Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-052.json",
+      "source_result_sha256": "df968c2d08a1986af9e76fb8e945e2acc48124fa2cd9f016adf104bf903c2e00",
+      "title": "Morphology beyond affixes",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.03%3A_Morphology_beyond_affixes"
+    },
+    {
+      "id": "constituency",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§6.4, introduction; Replacement Test; Movement Test",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:13.731330Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-054.json",
+      "source_result_sha256": "28261bf27d9decc961b21a466582f905fb40b10ba5a50ae5ac51ec14682af44f",
+      "title": "Identifying phrases: Constituency tests",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/06%3A_Syntax/6.04%3A_Identifying_phrases-_Constituency_tests"
+    },
+    {
+      "id": "ambiguity",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§6.17, telescope example",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:34.087681Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-058.json",
+      "source_result_sha256": "abc0133aeb1177a4fb49ed7d369433be3a24403d437592a532f1ea3b3af11c84",
+      "title": "Trees: Structural ambiguity",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/06%3A_Syntax/6.17%3A_Trees-_Structural_ambiguity"
+    },
+    {
+      "id": "composition",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§7.2, definition and complex-word example",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:14.871350Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-055.json",
+      "source_result_sha256": "aa320b73795a77057cfe156f59329e39225a90c1c2ec0907829a5105a9adf249",
+      "title": "Compositionality: Why not just syntax?",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/07%3A_Semantics/7.02%3A_Compositionality-_Why_not_just_syntax"
+    },
+    {
+      "id": "entailment",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§7.3, Entailments; §7.3, Implicatures; §7.3, Presuppositions",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:08:56.482016Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-038.json",
+      "source_result_sha256": "3e745620a5afbd1342f66f3fc241a15759e61bda6cebc1b77f223d7fae4def1f",
+      "title": "Entailments vs. implicatures",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/7-3-what-does-this-sentence-mean-entailments-vs-implicatures/"
+    },
+    {
+      "id": "ipa",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§3.6, Transcription; The International Phonetic Alphabet",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:08:56.198011Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-040.json",
+      "source_result_sha256": "7817e1069e0698c25574d76412811b65c9bda5df1e4d11da88c6c7fb7ce3073c",
+      "title": "The International Phonetic Alphabet",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/3-6-the-international-phonetic-alphabet/"
+    },
+    {
+      "id": "languagechange",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§10.3, Language changes; §10.3, Changes from above; §10.3, Changes from below",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:33.539671Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-060.json",
+      "source_result_sha256": "2d181d32e15fa83d7edb3ccd5132a5d90340b2c3b171488f0ff2fd4fce1abed6",
+      "title": "Language changes",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.03%3A_Language_changes"
+    },
+    {
+      "id": "variationist",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§10.1, opening explanation",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:11:02.104167Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-061.json",
+      "source_result_sha256": "635c969f11d9af64e140f984c8e3128f76e24cb92ff5b98201bb9d770630bd45",
+      "title": "What is variationist sociolinguistics?",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.01%3A_What_is_variationist_sociolinguistics"
+    },
+    {
+      "id": "variationmethods",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§10.5, Sociolinguistic interviews and corpora; §10.5, Quantitative analysis; §10.5, Dialectology: Then and now; §10.5, Dialectology: Then and now, Yang Xiong paragraph",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:10:32.875660Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-059.json",
+      "source_result_sha256": "1b04d4c6af47d52145c1e19ee86004d2d13a920f3eb506e59b372bb45e1eb655",
+      "title": "Variationist methods and concepts",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.05%3A_Variationist_methods_and_concepts"
+    },
+    {
+      "id": "socialstatus",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§10.7, Labov comparison of casual speech and reading; §10.7, 1966 Lower East Side study",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:09:20.690433Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-043.json",
+      "source_result_sha256": "5b461fe1442f596614aa2ef4999cedaf5c6ba5aa12b8bb6f321ef31f357aabef",
+      "title": "Sociolinguistic correlations: Social status",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-7-sociolinguistic-correlations-social-status/"
+    },
+    {
+      "id": "michif",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§9.7, interview on local context and community stories; §9.7, story-documentation and family-legacy discussion; §9.7, community-specific histories and priorities",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:09:20.162424Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-045.json",
+      "source_result_sha256": "46c448bb9d1854d0c9c6c07cecf7617c662cdf4947a2ab9e42fa5131c3f72e4a",
+      "title": "Reclaiming Michif",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/9-7-reclaiming-michif/"
+    },
+    {
+      "id": "peerpaper",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§II, Overview of Peer Instruction; Title and author affiliations; §II",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:09:54.847009Z",
+      "revision": "2001, American Journal of Physics 69:970–977",
+      "source_result_file": "source-texts/web-048.json",
+      "source_result_sha256": "1b8efffe9473c3b24d81a0ba63e91a83854bd2775bde98071d4832f19ef29025",
+      "title": "Peer Instruction: Ten years of experience and results",
+      "url": "https://sites.stat.columbia.edu/gelman/communication/CrouchMazur2001.pdf"
+    },
+    {
+      "id": "ies",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Recommendation 5b, printed pp. 21–22; Recommendation 1, printed pp. 5–8; Recommendation 2, printed pp. 9–10; Recommendation 2, printed p. 10; Recommendation 3, printed pp. 13–14; Recommendation 4, printed pp. 15–17; Recommendation 5a, printed pp. 19–20; Recommendation 6a, printed pp. 23–24; Recommendation 7; checklist, printed p. 4",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:09:55.127014Z",
+      "revision": "NCER 2007-2004",
+      "source_result_file": "source-texts/web-047.json",
+      "source_result_sha256": "71f80f56b39c35716c5d73944ac3b7162e0d95488151cbb5469f41c977563583",
+      "title": "Organizing Instruction and Study to Improve Student Learning",
+      "url": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072004.pdf"
+    },
+    {
+      "id": "interleavestudy",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Structured Abstract, Intervention and Control Condition",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:13:32.646744Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-073.json",
+      "source_result_sha256": "688c911143685893a0e560f4297dbe86371d6a29e0b437c76e20730c68071035",
+      "title": "An Efficacy Study of Interleaved Mathematics Practice",
+      "url": "https://ies.ed.gov/use-work/awards/efficacy-study-interleaved-mathematics-practice"
+    },
+    {
+      "id": "formative",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Formative assessment; final paragraph",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:12:10.669343Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-071.json",
+      "source_result_sha256": "490d5ced9b2040cd7012115dea4c31732e84b19c82a933af62d2b5cf4014ce2d",
+      "title": "Formative vs Summative Assessment",
+      "url": "https://www.cmu.edu/teaching/assessment/basics/formative-summative.html"
+    },
+    {
+      "id": "mastery",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "What is it?; distinction from teaching for mastery",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:12:10.973348Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-072.json",
+      "source_result_sha256": "af662ef4c1bb6504d16becd74d9c685810834426beba4c942fb6e1ebae4acce4",
+      "title": "Mastery learning",
+      "url": "https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/mastery-learning"
+    },
+    {
+      "id": "economics",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§1.1, scarcity and specialization",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:19:04.376995Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-107.json",
+      "source_result_sha256": "d231176e6adea504c330b770321363030c061055e2da4fc57c22118e1040a865",
+      "title": "What Is Economics, and Why Is It Important?",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/1-1-what-is-economics-and-why-is-it-important"
+    },
+    {
+      "id": "asymmetric",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§16.1, opening explanation; §16.1, labor-market credentials paragraphs; §16.1, prospective employer screening paragraph; §16.1, used-car dealers and repeat-customer paragraphs; §16.1, Guarantees, Warranties, and Service Contracts; §16.1, mail-order guarantee example",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:14:21.115570Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-074.json",
+      "source_result_sha256": "4af543c178429e58c02eb8180c8f463a11aca50074d621f7318b303501d48697",
+      "title": "The Problem of Imperfect Information and Asymmetric Information",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/16-1-the-problem-of-imperfect-information-and-asymmetric-information"
+    },
+    {
+      "id": "insurance",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§16.2, The Adverse Selection Problem; §16.2, The Moral Hazard Problem; §16.2, automobile-insurance example; §16.2, Risk Groups and Actuarial Fairness; §16.2, moral-hazard cost-sharing paragraph",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:14:21.627578Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-075.json",
+      "source_result_sha256": "0e23928f17fc53c2f2358c6c2cb2f90569fcd332e20c1d4633651cb1bccd4113",
+      "title": "Insurance and Imperfect Information",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/16-2-insurance-and-imperfect-information"
+    },
+    {
+      "id": "bonds",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "What are bonds?; What are the benefits and risks?; What are the benefits and risks of bonds?, Interest rate risk",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:14:21.939584Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-077.json",
+      "source_result_sha256": "254f6af511c31f5de23deb2d61e3aacf5996f0363caa4459ac151db8080fdf38",
+      "title": "Bonds: FAQs",
+      "url": "https://www.investor.gov/introduction-investing/investing-basics/investment-products/bonds-or-fixed-income-products/bonds"
+    },
+    {
+      "id": "auction",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Lecture 24, Chapter 1; Lecture 24, Chapter 2, coin-jar demonstration; Lecture 24, Chapter 3",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:18:35.288446Z",
+      "revision": "ECON 159 Lecture 24, 2007",
+      "source_result_file": "source-texts/web-100.json",
+      "source_result_sha256": "bf8a4baad6b09c9aa920d0b0d2f8184323afbb7f2ab52fe76ab5f4999525257f",
+      "title": "Asymmetric Information: Auctions and the Winner's Curse",
+      "url": "https://oyc.yale.edu/economics/econ-159/lecture-24"
+    },
+    {
+      "id": "orgdesign",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§10.1, opening definitions; §10.1, formal organization paragraphs; §10.1, informal organization paragraphs; §10.1, Mechanistic and Organic Structures; §10.1, Formalization",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:16:42.146374Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-091.json",
+      "source_result_sha256": "a5ef613b78c8a293a44becce7d42948aa6ab12f4ead571a07f2e2d8d0df27029",
+      "title": "Organizational Structures and Design",
+      "url": "https://openstax.org/books/principles-management/pages/10-1-organizational-structures-and-design"
+    },
+    {
+      "id": "orgstructures",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§4.3, functional structure discussion; §4.3, divisional structure discussion; §4.3, matrix structures discussion; §4.3, networked team structures; §4.3, virtual structures and organizations; §4.3, opening description of narrow spans",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:16:42.706311Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-092.json",
+      "source_result_sha256": "63203341cb009021ca3e699df58ce1d2b876b576c8d361aac9006de9e95664cd",
+      "title": "Organizational Designs and Structures",
+      "url": "https://openstax.org/books/principles-management/pages/4-3-organizational-designs-and-structures"
+    },
+    {
+      "id": "firm",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§6.10, Principal–agent models; §6.10, Why are contracts incomplete?; Section 6.4 Employment rents; Section 6.7 Wages, effort, and profits in the labour discipline model; Section 6.7 Wages, effort, and profits in the labour discipline model, Figure 6.6 and efficiency wages definition; Section 6.4 Employment rents; §6.9, cooperative firms; Unit 6 opening supply-chain case",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:16:42.430306Z",
+      "revision": "The Economy 1.0, Unit 6",
+      "source_result_file": "source-texts/web-090.json",
+      "source_result_sha256": "3b28ef38fce7ee8c3b379e155711a86d7da1975af758c94e4d158e6339e4b45e",
+      "title": "The firm: Owners, managers, and employees",
+      "url": "https://books.core-econ.org/the-economy-v1/book/text/06.html"
+    },
+    {
+      "id": "cooperativeidentity",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Principle 3, Member Economic Participation",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:19:03.572980Z",
+      "revision": "1995 Statement on the Cooperative Identity",
+      "source_result_file": "source-texts/web-105.json",
+      "source_result_sha256": "f1552b30b1d4e17f866b359b18c237867a72b9f2c8ea96901c307fcbac3ba97a",
+      "title": "Cooperative identity, values and principles",
+      "url": "https://ica.coop/en/cooperatives/cooperative-identity"
+    },
+    {
+      "id": "toyota",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Just-in-Time; The Pull System; Jidoka or Autonomation; Roots of Ideas; Production system overview; Jidoka; Just-in-Time; Roots of Ideas, How did the idea of Jidoka come about?; Roots of Ideas, How did the idea of Just-in-Time come about?",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:18:34.404429Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-102.json",
+      "source_result_sha256": "1a7fadf41b8460d5fc702091360768e56c4bb2447190b761bbd9c715a2656f45",
+      "title": "Toyota Production System: Virtual Plant Tour",
+      "url": "https://global.toyota/en/company/plant-tours/production-system/"
+    },
+    {
+      "id": "panic1907",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Opening explanation; trust-company run sequence; October 18–22 sequence; Member support; October 26 loan certificates",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:17:19.575032Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-095.json",
+      "source_result_sha256": "6748fde0560e8989b695ee74b790a222cdd1c6b89ea3d03a28cd7a6f765fa91e",
+      "title": "The Panic of 1907",
+      "url": "https://www.federalreservehistory.org/essays/panic-of-1907"
+    },
+    {
+      "id": "bretton",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Creation of the Bretton Woods System, main account",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:17:18.995021Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-096.json",
+      "source_result_sha256": "b6c2d536776b66419d84a85576e75d32d1e77b3d69de39a4373f6f2bf9816356",
+      "title": "Creation of the Bretton Woods System",
+      "url": "https://www.federalreservehistory.org/essays/bretton-woods-created"
+    },
+    {
+      "id": "boehistory",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "1694 foundation; 1946 nationalization entries; 1720 South Sea Bubble entry",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:17:19.315027Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-097.json",
+      "source_result_sha256": "b91d0ebed2c827d1b1ec50fe9e27af7356e97e77a949e09014e17559b3af1d37",
+      "title": "History of the Bank of England",
+      "url": "https://www.bankofengland.co.uk/about/history"
+    },
+    {
+      "id": "coopHistory",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "The Rochdale Pioneers; Opening 1895 foundation paragraph",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:18:34.700435Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-101.json",
+      "source_result_sha256": "abc33b5c0ac7c9901a6d5a9992c052961b68fcd2c3e441b4cf29f71c70f2107d",
+      "title": "History of the Cooperative Movement",
+      "url": "https://ica.coop/en/whats-co-op/history-co-operative-movement"
+    },
+    {
+      "id": "grameen",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "About Grameen Bank, pilot and collateral paragraphs",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:18:34.996441Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-103.json",
+      "source_result_sha256": "dad906085e5e8e5da0ada6fdc8ee7469e73af1560f6cb0d21315e240a1ef21a0",
+      "title": "Introduction to Grameen Bank",
+      "url": "https://grameenbank.org.bd/about/introduction"
+    },
+    {
+      "id": "sociology",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§1.1, What Are Society and Culture?; Studying Patterns",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:23:43.029955Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-126.json",
+      "source_result_sha256": "9c4d723452287c9da7f39260059ab4d4e73809bfb11c8b087a31bb6d34340a43",
+      "title": "What Is Sociology?",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/1-1-what-is-sociology"
+    },
+    {
+      "id": "ties",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Chapter 3 introduction; §3.1; §3.2, The Strength of Weak Ties; §3.1; §3.2, Bridges and Local Bridges; §3.5, Structural holes; §3.6, betweenness measures; §3.2, Strong Triadic Closure Property; §3.5, Embeddedness",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:23:02.017250Z",
+      "revision": "2010 pre-publication chapter 3",
+      "source_result_file": "source-texts/web-117.json",
+      "source_result_sha256": "8813f32ac012e3e51840a74c68f8f0a99210a45943fa204c67040de1c455b213",
+      "title": "Networks, Crowds, and Markets: Strong and Weak Ties",
+      "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch03.pdf"
+    },
+    {
+      "id": "balance",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§5.1, Structural Balance; Chapter 5 introduction; §5.1",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:23:01.761245Z",
+      "revision": "2010 pre-publication chapter 5",
+      "source_result_file": "source-texts/web-119.json",
+      "source_result_sha256": "8849932dbe4ab6a72dc86fbaf656c2d4463342a82124a7b82f3d476b335650f0",
+      "title": "Networks, Crowds, and Markets: Positive and Negative Relationships",
+      "url": "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch05.pdf"
+    },
+    {
+      "id": "groupsize",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§6.2, Dyads, Triads, and Large Groups",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:21:45.963908Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-114.json",
+      "source_result_sha256": "73b954e8d4ed010488ab70a3893ff935486b8ef60e8d669c3192a67e10e5bb37",
+      "title": "Group Size and Structure",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/6-2-group-size-and-structure"
+    },
+    {
+      "id": "grouptypes",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§6.1, Reference Groups",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:21:46.563918Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-113.json",
+      "source_result_sha256": "81c4fbe0a6c71cbdf5c378f015f05e189f1c2bb554dbd98962bb231137867aea",
+      "title": "Types of Groups",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/6-1-types-of-groups"
+    },
+    {
+      "id": "norms",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§3.2, Norms",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:23:42.457945Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-125.json",
+      "source_result_sha256": "0eb74d107a3a7464b774276093f872139e709d4002f7872f73d778ca982358dd",
+      "title": "Elements of Culture",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/3-2-elements-of-culture"
+    },
+    {
+      "id": "socialreality",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§4.3, Roles and Status, parent-worker example; §4.3, school example; §4.3, Roles and Status; §4.3, Roles and Status, Merton paragraph; §4.3, Roles and Status, parenting example; §4.3, Goffman's role performance and courtroom props",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:21:46.851923Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-112.json",
+      "source_result_sha256": "5a01571dc9fdfb28b46bffbc58f14051f80f6c180f81bb77b891f53aaedc5f01",
+      "title": "Social Constructions of Reality",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/4-3-social-constructions-of-reality"
+    },
+    {
+      "id": "collective",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§21.1, Forms of Collective Behavior; §21.1, Emergent-Norm Perspective; §21.1, Value-Added Theory; §21.1, Assembling Perspective",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:21:46.259913Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-115.json",
+      "source_result_sha256": "5b786396dc72c1d91e4afed788b571ca1c85e799a3cee524ba45f9b27c1e8115",
+      "title": "Collective Behavior",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/21-1-collective-behavior"
+    },
+    {
+      "id": "movements",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§21.2, Resource Mobilization; §21.2, Framing/Frame Analysis",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:23:43.325960Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-124.json",
+      "source_result_sha256": "165c7a8025d49a1edd8d854f99e871f84fc6680ecaf304403e3cbec063eb4433",
+      "title": "Social Movements",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/21-2-social-movements"
+    },
+    {
+      "id": "turnanticipation",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Introduction; Abstract and experiment summary; Introduction, turn-constructional units and allocation rules",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:25:04.031364Z",
+      "revision": "doi:10.3389/fpsyg.2015.00089",
+      "source_result_file": "source-texts/web-132.json",
+      "source_result_sha256": "cd94401360e1e3c6220667c436f7f63250a7fdca972d3e7b00660225880ce299",
+      "title": "Anticipation in turn-taking: mechanisms and information sources",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00089/full"
+    },
+    {
+      "id": "grounding",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Evidence in Grounding, printed p. 132; Opening; Grounding in Conversation; contribution model; Opening definition, printed p. 127; Evidence in Grounding, printed pp. 131–132; Least Collaborative Effort, printed p. 134; Grounding Changes with the Medium, constraint 7",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:23:02.585260Z",
+      "revision": "1991 chapter",
+      "source_result_file": "source-texts/web-120.json",
+      "source_result_sha256": "835cba3dc729533ee24766700028649a24e45dd3f04529ba3f27464935dda40d",
+      "title": "Grounding in Communication",
+      "url": "https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf"
+    },
+    {
+      "id": "repair",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Introduction; Materials and Methods, repair-sequence definition; Results, Three basic types recur in all languages, pp. 4–5; Results, restricted offer definition and response patterns, pp. 4–5",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:23:42.741950Z",
+      "revision": "doi:10.1371/journal.pone.0136100",
+      "source_result_file": "source-texts/web-123.json",
+      "source_result_sha256": "a29520737e5c4fc753b77b1bbccb7ee99ba84d1186866494f1206b1d470a760a",
+      "title": "Universal Principles in the Repair of Communication Problems",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/1557948/1/Dingemanse_universal_principles_in_the_repair_of_communication.PDF"
+    },
+    {
+      "id": "tls",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§1; §2; Appendix E; §1.2; §2; Appendix E.1, Forward secret with respect to long-term keys",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:04:39.345510Z",
+      "revision": "RFC 8446",
+      "source_result_file": "source-texts/web-026.json",
+      "source_result_sha256": "38bff685ae050af4526b2dc523110411a65b94a915c5f54b66aebc9bed838076",
+      "title": "The Transport Layer Security Protocol Version 1.3",
+      "url": "https://www.rfc-editor.org/rfc/rfc8446"
+    },
+    {
+      "id": "nist-binary-search",
+      "title": "Binary search — NIST Dictionary of Algorithms and Data Structures",
+      "url": "https://xlinux.nist.gov/dads/HTML/binarySearch.html",
+      "locator": "Definition; Note on run time and ordered linked lists",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T20:49:47.318420+00:00",
+      "revision": null,
+      "publication_update_date": "2022-04-21",
+      "source_result_file": "source-texts/web-140.json",
+      "source_result_sha256": "5739af5a4721e25f7f0471e8a36159fcddae5805a0b958aea28a11a9b9acc4ca",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises"
+    }
+  ]
+}

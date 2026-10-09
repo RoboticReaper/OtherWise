@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "checks_passed": 507,
+  "checks_failed": 0,
+  "final_audit_sha256": "16eb446c46a18b266101596c6143a4ead8bd7a5e5e1c70dfa557c436c844af3a",
+  "final_bytes": 259776,
+  "sampled_cards": 40,
+  "relationships_checked": 42,
+  "counts": {
+    "random_new": {
+      "planned": 20,
+      "checked": 20,
+      "remaining": 0,
+      "cards_with_substantive_findings": 1,
+      "cards_with_minor_only_findings": 3,
+      "minor_qualification_findings": 1,
+      "minor_documentation_findings": 2,
+      "supported_without_findings": 16,
+      "relationships_checked": 21,
+      "relationships_with_wording_corrections": 1,
+      "unresolved_targets": 0,
+      "cached_snapshot_cards": 0,
+      "new_identities": 20,
+      "existing_controls": 0
+    },
+    "risk_selected": {
+      "planned": 20,
+      "checked": 20,
+      "remaining": 0,
+      "cards_with_substantive_findings": 2,
+      "cards_with_minor_only_findings": 0,
+      "minor_qualification_findings": 0,
+      "minor_documentation_findings": 0,
+      "supported_without_findings": 18,
+      "relationships_checked": 21,
+      "relationships_with_wording_corrections": 0,
+      "unresolved_targets": 0,
+      "cached_snapshot_cards": 1,
+      "new_identities": 13,
+      "existing_controls": 7
+    }
+  },
+  "findings": [
+    {
+      "id": "local:catalog:sugar-lift-etching",
+      "sample_kind": "random_new",
+      "code": "optional_aquatint_qualification",
+      "severity": "low",
+      "category": "claim_qualification",
+      "field": "learning_takeaway",
+      "finding": "The source makes aquatint optional, whereas the takeaway’s combined aquatint-and-etching sequence can sound obligatory."
+    },
+    {
+      "id": "local:catalog:negative-space",
+      "sample_kind": "random_new",
+      "code": "a09_object_date_medium",
+      "severity": "medium",
+      "category": "source_object_description",
+      "fields": [
+        "sources[a09].title",
+        "concepts[local:catalog:negative-space].learning_takeaway",
+        "concepts[local:catalog:negative-space].relations[0].note",
+        "concepts[local:catalog:chair-by-ruth-asawa].learning_takeaway",
+        "concepts[local:catalog:chair-by-ruth-asawa].card"
+      ],
+      "finding": "The exact object is the 1965 lithograph Chair (TAM.1558-II); a09’s c.1963 title and both cards’ drawing descriptions misdescribe it. The negative-space claim and conceptual relationship are supported."
+    },
+    {
+      "id": "local:catalog:metanarration",
+      "sample_kind": "random_new",
+      "code": "available_revision_omitted_l07",
+      "severity": "low",
+      "category": "source_metadata",
+      "fields": [
+        "sources[l07].displayed_revision_date (missing)"
+      ],
+      "finding": "The page displays a revised date of 2014-01-24, which is not retained separately in the frozen source. No immutable revision identifier was exposed; null revision_id must not be replaced with a fabricated ID."
+    },
+    {
+      "id": "local:catalog:singulative-narration",
+      "sample_kind": "random_new",
+      "code": "available_revision_omitted_l02",
+      "severity": "low",
+      "category": "source_metadata",
+      "fields": [
+        "sources[l02].displayed_revision_date (missing)"
+      ],
+      "finding": "The page displays a revised date of 2014-04-19, which is not retained separately in the frozen source. No immutable revision identifier was exposed; null revision_id must not be replaced with a fabricated ID."
+    },
+    {
+      "id": "local:catalog:walden",
+      "sample_kind": "risk_selected",
+      "code": "walden_influence_causal_inference",
+      "severity": "medium",
+      "category": "unmarked_editorial_interpretation",
+      "field": "card, final sentence",
+      "finding": "The card turns documented influence into an asserted explanation of why it continues. The cited passage does not establish that explanatory cause."
+    },
+    {
+      "id": "Q252485",
+      "sample_kind": "risk_selected",
+      "code": "great_wave_color_purpose_inference",
+      "severity": "medium",
+      "category": "unmarked_editorial_interpretation",
+      "field": "learning_takeaway",
+      "finding": "The source supports perspective and a blue palette separately; it does not state blue pigments were used to bind the contrast of scale."
+    }
+  ]
+}

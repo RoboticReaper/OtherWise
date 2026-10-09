@@ -1,0 +1,275 @@
+{
+  "batch_id": "research-batch-007",
+  "candidate_sha256": "9529a1feb92abd597d86aed66eab26656d344813f2d81e62a8fffc6e7fa75492",
+  "checked_at": "2026-10-08T21:28:07.541744Z",
+  "counts": {
+    "accepted": 200,
+    "new_identities": 165,
+    "new_fine_subjects": 130,
+    "existing_controls": 35,
+    "named_subjects": 30,
+    "sources": 90,
+    "relations": 200,
+    "author_reviews": 200,
+    "revised_prior_cards": 19,
+    "by_primary_domain": {
+      "Games & sports": 45,
+      "Music & performance": 40,
+      "Mind & behavior": 45,
+      "Philosophy": 35,
+      "Politics & law": 35
+    },
+    "by_primary_subfield": {
+      "Games, traditions and sporting history": 10,
+      "Rules and strategic mechanisms": 26,
+      "Movement and sporting phenomena": 9,
+      "Musical structure and transformation": 16,
+      "Acoustics, instruments and performance": 13,
+      "Works, traditions and musical history": 11,
+      "Attention, perception and memory": 18,
+      "Judgment, motivation and behavior": 17,
+      "Psychological methods and qualified findings": 10,
+      "Ethical arguments and thought experiments": 10,
+      "Metaphysics and philosophical traditions": 13,
+      "Knowledge, inference and reasoning": 12,
+      "Institutional design and political processes": 14,
+      "Legal procedures and interpretive questions": 10,
+      "Public-policy mechanisms and historical cases": 11
+    },
+    "by_scope": {
+      "topic": 45,
+      "idea": 120,
+      "facet_or_application": 32,
+      "broad_field": 3
+    },
+    "by_relation_type": {
+      "related_to": 143,
+      "broader_topic": 9,
+      "facet_of": 38,
+      "application_of": 10
+    },
+    "by_relation_assertion": {
+      "source_asserted": 137,
+      "editorial": 63
+    },
+    "proposals": 204,
+    "excluded_unresolved_distinctness": 3,
+    "supported_unused_reserves": 1
+  },
+  "checks": [
+    {
+      "check": "combiner structural validation",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "exact frozen identity set",
+      "status": "passed",
+      "detail": 200
+    },
+    {
+      "check": "200 unique accepted identities",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "global manifest v3 hash",
+      "status": "passed",
+      "detail": "d6f16948056fb6552b7eba52409ef879e40a6477c58008e1b01025a7a450acab"
+    },
+    {
+      "check": "approved batch hash unchanged",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "baseline imported supplement hash",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "scope and entity kind equal approved selection",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "primary domain first and approved memberships retained",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "approved and frozen baseline aliases retained",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "all 30–50 words",
+      "status": "passed",
+      "detail": [
+        40,
+        50
+      ]
+    },
+    {
+      "check": "all control descriptions and full imported rows preserved",
+      "status": "passed",
+      "detail": 35
+    },
+    {
+      "check": "prior records, hashes and incremented versions retained",
+      "status": "passed",
+      "detail": 19
+    },
+    {
+      "check": "new identities start at version 1 with separate empty import provenance",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "all relation targets resolve in pinned baseline or frozen batch",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "all 200 cards reviewed with claim-specific notes and locators",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "all 200 relations reviewed with specific rationale and locator",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "author review expressly non-independent",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "all inspection records correspond to accepted cards",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "all 90 accepted sources have actual retrieved public passages",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "raw source captures and hashes resolve",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "maximum two failed attempts per URL",
+      "status": "passed",
+      "detail": {
+        "https://www.britishmuseum.org/blog/top-10-historical-board-games": 1,
+        "https://www.britishmuseum.org/collection/object/W_1928-1009-378": 1,
+        "https://www.usgo.org/aga-rules-of-go": 1,
+        "https://worldathletics.org/news/news/dick-fosbury-flop": 1,
+        "https://www.shogi.or.jp/knowledge/rules/": 1,
+        "https://www.shogi.or.jp/event/english-pamphlet.pdf": 1,
+        "https://www.wikidata.org/wiki/Q7565103": 1,
+        "https://www.law.cornell.edu/wex/exhaustion_of_remedies": 1,
+        "https://www.law.cornell.edu/wex/mootness": 1,
+        "https://www.law.cornell.edu/wex/ripeness": 1,
+        "https://musictheory.pugetsound.edu/mt21c/NeapolitanSixthChords.html": 1,
+        "https://musictheory.pugetsound.edu/mt21c/IntroductionToNonChordTones.html": 1,
+        "https://musictheory.pugetsound.edu/mt21c/TheNeapolitanChord.html": 1,
+        "https://openstax.org/books/introduction-philosophy/pages/7-1-what-is-knowledge": 1,
+        "https://plato.stanford.edu/entries/epistemic-injustice/": 1,
+        "https://www.justice.gov.za/trc/legal/justice.htm": 1,
+        "https://pubmed.ncbi.nlm.nih.gov/1500880/": 1,
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC2649674/": 1,
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC6007845/": 1,
+        "https://www.legislation.gov.uk/ukpga/Geo5/1-2/13/section/1/data.htm": 1,
+        "https://www.legislation.gov.uk/ukpga/Geo5/1-2/13/section/1": 1
+      }
+    },
+    {
+      "check": "proposal ceiling",
+      "status": "passed",
+      "detail": 204
+    },
+    {
+      "check": "exact primary-domain allocation",
+      "status": "passed",
+      "detail": {
+        "Games & sports": 45,
+        "Music & performance": 40,
+        "Mind & behavior": 45,
+        "Philosophy": 35,
+        "Politics & law": 35
+      }
+    },
+    {
+      "check": "all starting subfields have at least five cards",
+      "status": "passed",
+      "detail": {
+        "Games, traditions and sporting history": 10,
+        "Rules and strategic mechanisms": 26,
+        "Movement and sporting phenomena": 9,
+        "Musical structure and transformation": 16,
+        "Acoustics, instruments and performance": 13,
+        "Works, traditions and musical history": 11,
+        "Attention, perception and memory": 18,
+        "Judgment, motivation and behavior": 17,
+        "Psychological methods and qualified findings": 10,
+        "Ethical arguments and thought experiments": 10,
+        "Metaphysics and philosophical traditions": 13,
+        "Knowledge, inference and reasoning": 12,
+        "Institutional design and political processes": 14,
+        "Legal procedures and interpretive questions": 10,
+        "Public-policy mechanisms and historical cases": 11
+      }
+    },
+    {
+      "check": "all four scopes represented",
+      "status": "passed",
+      "detail": {
+        "topic": 45,
+        "idea": 120,
+        "facet_or_application": 32,
+        "broad_field": 3
+      }
+    },
+    {
+      "check": "novelty controls fine and named counts",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "no personality-temperament relation for musical meantone",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "source-monitoring control not duplicated or silently merged",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "confirmation control retained without duplicate count",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "federal procedure qualifications explicit",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "named subjects all have specific selected learning takeaways",
+      "status": "passed",
+      "detail": null
+    },
+    {
+      "check": "historical checkpoints retained",
+      "status": "passed",
+      "detail": null
+    }
+  ],
+  "passed": 32,
+  "failed": 0
+}

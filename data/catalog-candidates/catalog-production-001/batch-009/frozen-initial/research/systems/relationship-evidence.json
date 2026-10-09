@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "assignment": "systems",
+  "status": "relationship_pass_complete",
+  "quote_policy": "Exact short excerpts retained for relationship audit, at most 25 unique verbatim words per source; surrounding passage located by section/line and tool reference.",
+  "inspections": [
+    {
+      "id": "Q165596",
+      "target_id": "Q5830907",
+      "target_label": "Computer memory",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "mit-cache",
+      "url": "https://computationstructures.org/lectures/caches/caches.html",
+      "locator": "Memory hierarchy definition; line 131",
+      "tool_ref": "turn714view0",
+      "verbatim_excerpts": [
+        "The SRAM component of our hierarchical memory system is called a cache."
+      ],
+      "note": "Source identifies a hardware cache as SRAM computer memory.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q201339",
+      "target_id": "local:authored:000527",
+      "target_label": "Cryptography",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "nist-public-key",
+      "url": "https://csrc.nist.gov/glossary/term/public_key_cryptography",
+      "locator": "Definitions, SP 800-56B Rev.2; line 146",
+      "tool_ref": "turn711view0",
+      "verbatim_excerpts": [
+        "A form of cryptography that uses two related keys"
+      ],
+      "note": "Source explicitly classifies the method as a form of cryptography.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q623447",
+      "target_id": "Q8366",
+      "target_label": "Algorithm",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "rfc-dh",
+      "url": "https://www.rfc-editor.org/rfc/rfc2631.html",
+      "locator": "Abstract; lines 23–24",
+      "tool_ref": "turn711view1",
+      "verbatim_excerpts": [
+        "Diffie-Hellman is a key agreement algorithm"
+      ],
+      "note": "Source calls Diffie–Hellman an algorithm; no key-agreement-specific target exists in the baseline.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q382444",
+      "target_id": "Q240673",
+      "target_label": "Cost",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "os-costs",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-3-costs-in-the-short-run",
+      "locator": "Marginal cost definition; line 82",
+      "tool_ref": "turn713view1",
+      "verbatim_excerpts": [
+        "marginal cost is the cost of producing one more unit of output."
+      ],
+      "note": "Source defines marginal cost as an economic cost measure.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q466764",
+      "target_id": "Q240673",
+      "target_label": "Cost",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "os-costs",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-3-costs-in-the-short-run",
+      "locator": "Fixed and Variable Costs; line 93",
+      "tool_ref": "turn713view1",
+      "verbatim_excerpts": [
+        "We can decompose costs into fixed and variable costs."
+      ],
+      "note": "Source explicitly divides costs into fixed and variable categories.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q654051",
+      "target_id": "Q193470",
+      "target_label": "Gas-turbine engine",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "nasa-turbofan",
+      "url": "https://www.grc.nasa.gov/www/k-12/BGP/turbfan.html",
+      "locator": "Opening definition; line 6",
+      "tool_ref": "turn714view2",
+      "verbatim_excerpts": [
+        "variation of the basic gas turbine engine"
+      ],
+      "note": "Source identifies turbofan engines as gas-turbine engine variations.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q626658",
+      "target_id": "Q11481471",
+      "target_label": "Aircraft flight control system",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "nasa-flybywire",
+      "url": "https://www.nasa.gov/centers-and-facilities/armstrong/flying-with-nasa-digital-fly-by-wire/",
+      "locator": "Opening technology description; lines 258–259",
+      "tool_ref": "turn715view1",
+      "verbatim_excerpts": [
+        "digital fly-by-wire flight controls"
+      ],
+      "note": "Source describes fly-by-wire as aircraft flight controls acting on control surfaces.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q272458",
+      "target_id": "Q2897903",
+      "target_label": "Goods and services",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "os-public-good",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/13-3-public-goods",
+      "locator": "Public-good category and service examples; lines 30, 38",
+      "tool_ref": "turn715view2",
+      "verbatim_excerpts": [
+        "We call this kind of good a public good.",
+        "A number of government services are examples of public goods."
+      ],
+      "note": "Source explicitly classifies public goods as goods and includes services as examples.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q212737",
+      "target_id": "Q133500",
+      "target_label": "Learning",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "os-classical",
+      "url": "https://openstax.org/books/psychology-2e/pages/6-2-classical-conditioning",
+      "locator": "Opening definition; line 31",
+      "tool_ref": "turn718view0",
+      "verbatim_excerpts": [
+        "classical conditioning is a process by which we learn to associate stimuli"
+      ],
+      "note": "Source identifies classical conditioning as a learning process.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q847079",
+      "target_id": "Q133500",
+      "target_label": "Learning",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "os-operant",
+      "url": "https://openstax.org/books/psychology-2e/pages/6-3-operant-conditioning",
+      "locator": "Opening classification; line 30",
+      "tool_ref": "turn718view1",
+      "verbatim_excerpts": [
+        "Now we turn to the second type of associative learning, operant conditioning."
+      ],
+      "note": "Source explicitly classifies operant conditioning as associative learning.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q191062",
+      "target_id": "Q492",
+      "target_label": "memory",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "os-mnemonic",
+      "url": "https://openstax.org/books/psychology-2e/pages/8-4-ways-to-enhance-memory",
+      "locator": "Mnemonic devices; line 39",
+      "tool_ref": "turn718view2",
+      "verbatim_excerpts": [
+        "Mnemonic devices are memory aids that help us organize information for encoding"
+      ],
+      "note": "Source classifies mnemonics as memory aids for encoding information.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q2078",
+      "target_id": "Q2115",
+      "target_label": "XML",
+      "type": "application_of",
+      "assertion": "source_asserted",
+      "source_id": "w3c-svg-rel",
+      "url": "https://www.w3.org/TR/SVG/intro.html",
+      "locator": "§1.2 Compatibility with other standards efforts; line 22",
+      "tool_ref": "turn722view0",
+      "verbatim_excerpts": [
+        "SVG is an application of XML"
+      ],
+      "note": "W3C explicitly calls SVG an XML application; HTML embedding has a syntax caveat.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q286576",
+      "target_id": "Q3329375",
+      "target_label": "Variety (linguistics)",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "cambridge-register",
+      "url": "https://www.cambridge.org/core/books/abs/corpus-linguistics/register-variation-and-english-for-specific-purposes/72D3387EE08CFCD5D66B437F712DC07B",
+      "locator": "Public chapter summary; line 480",
+      "tool_ref": "turn720view1",
+      "verbatim_excerpts": [
+        "The term “register” is used here as a cover term for varieties defined by their situational characteristics."
+      ],
+      "note": "Source explicitly classifies registers as situational language varieties.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q1377840",
+      "target_id": "Q492",
+      "target_label": "memory",
+      "type": "facet_of",
+      "assertion": "source_asserted",
+      "source_id": "os-forgetting",
+      "url": "https://openstax.org/books/psychology-2e/pages/8-3-problems-with-memory",
+      "locator": "Forgetting and memory-error taxonomy; lines 105, 113–120",
+      "tool_ref": "turn723view3",
+      "verbatim_excerpts": [
+        "Forgetting refers to loss of information from long-term memory."
+      ],
+      "note": "Source treats forgetting as a memory failure, including temporary retrieval blocking.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q5446591",
+      "target_id": "Q171318",
+      "target_label": "Kinship",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "os-fictive-kinship",
+      "url": "https://openstax.org/books/introduction-anthropology/pages/11-2-defining-family-and-household",
+      "locator": "Fictive Kinship definition; line 71",
+      "tool_ref": "turn720view3",
+      "verbatim_excerpts": [
+        "a kinship tie in which individuals are defined as family regardless of biology."
+      ],
+      "note": "Source explicitly identifies fictive kinship as a type of kinship tie.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q194417",
+      "target_id": "Q841628",
+      "target_label": "Social stratification",
+      "type": "facet_of",
+      "assertion": "source_asserted",
+      "source_id": "os-mobility",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/9-2-social-stratification-and-mobility-in-the-united-states",
+      "locator": "Social Mobility definition; line 80",
+      "tool_ref": "turn722view1",
+      "verbatim_excerpts": [
+        "Social mobility refers to the ability of individuals to change positions within a social stratification system."
+      ],
+      "note": "Source defines mobility through movement within a social stratification system.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q1163216",
+      "target_id": "Q1377163",
+      "target_label": "Sociological theory",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "os-symbolic",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/1-3-theoretical-perspectives-in-sociology",
+      "locator": "Sociological theories table and Symbolic Interactionist Theory; lines 36–42, 87",
+      "tool_ref": "turn722view2",
+      "verbatim_excerpts": [
+        "Symbolic interactionism is a micro-level theory"
+      ],
+      "note": "Source lists symbolic interactionism among sociological theories and identifies its micro-level scope.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q185467",
+      "target_id": "Q133500",
+      "target_label": "Learning",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "os-socialization",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/5-introduction",
+      "locator": "Ongoing learning process; line 51",
+      "tool_ref": "turn722view3",
+      "verbatim_excerpts": [
+        "people learn to be productive partners through an ongoing process called socialization."
+      ],
+      "note": "Source explicitly describes socialization as an ongoing learning process.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q12570",
+      "target_id": "Q12280",
+      "target_label": "Bridge",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "golden-suspension",
+      "url": "https://www.goldengate.org/exhibits/how-the-bridge-spans-the-golden-gate/",
+      "locator": "Suspension structure and bridge anatomy; lines 31–32, 49",
+      "tool_ref": "turn724view1",
+      "verbatim_excerpts": [
+        "Anatomy of a Suspension Bridge"
+      ],
+      "note": "Source identifies suspension as a bridge type and explains its structure.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q1429218",
+      "target_id": "Q12280",
+      "target_label": "Bridge",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "forth-cantilever",
+      "url": "https://www.theforthbridges.org/media/xkjlcac0/forth-bridge-world-heritage-site-draft-management-plan-2025.pdf",
+      "locator": "§3.3, printed pp.24–25, PDF indices 23–24; lines 559–576",
+      "tool_ref": "turn724view2",
+      "verbatim_excerpts": [
+        "multispan cantilever bridge"
+      ],
+      "note": "Source identifies cantilever as the bridge's structural type.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q43249",
+      "target_id": "Q8091",
+      "target_label": "Grammar",
+      "type": "facet_of",
+      "assertion": "source_asserted",
+      "source_id": "sil-morpheme",
+      "url": "https://glossary.sil.org/term/morpheme",
+      "locator": "Definition; line 22",
+      "tool_ref": "turn724view0",
+      "verbatim_excerpts": [
+        "A morpheme is the smallest meaningful unit in the grammar of a language."
+      ],
+      "note": "Source explicitly identifies morphemes as meaningful units within grammar.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q208084",
+      "target_id": "Q980357",
+      "target_label": "Grammatical category",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "sil-aspect-rel",
+      "url": "https://glossary.sil.org/term/aspect",
+      "locator": "Definition and glossary hierarchy; lines 22, 89–92",
+      "tool_ref": "turn728view0",
+      "verbatim_excerpts": [
+        "Aspect is a grammatical category associated with verbs"
+      ],
+      "note": "Source explicitly identifies aspect as a grammatical category.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q5378197",
+      "target_id": "Q79894",
+      "target_label": "Braille",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "bana-english",
+      "url": "https://www.brailleauthority.org/signage/index.html",
+      "locator": "Braille codes and English Braille; lines 15–16, 49–57",
+      "tool_ref": "turn723view0",
+      "verbatim_excerpts": [
+        "the current braille code in the U. S. and Canada is Unified English Braille (UEB)."
+      ],
+      "note": "Source identifies an English Braille code within Braille; UEB remains one contemporary example.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "local:authored:000032",
+      "target_id": "Q82604",
+      "target_label": "Design",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "ncsu-universal",
+      "url": "https://design.ncsu.edu/research/center-for-universal-design/",
+      "locator": "Universal Design definition; lines 127–129",
+      "tool_ref": "turn728view2",
+      "verbatim_excerpts": [
+        "The design of products and environments to be usable by all people"
+      ],
+      "note": "Source explicitly defines universal design as design of products and environments.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q2878855",
+      "target_id": "Q178512",
+      "target_label": "Public transport",
+      "type": "broader_topic",
+      "assertion": "source_asserted",
+      "source_id": "itdp-brt",
+      "url": "https://itdp.org/2025/04/17/what-is-brt-and-why-do-cities-need-it/",
+      "locator": "The Role of Rapid Transit; line 57",
+      "tool_ref": "turn729view2",
+      "verbatim_excerpts": [
+        "BRT is a form of high-capacity, bus-based rapid transit system.",
+        "high-quality public transport solutions"
+      ],
+      "note": "Source identifies BRT as rapid transit and explicitly a public-transport solution.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q1934967",
+      "target_id": "Q11442",
+      "target_label": "Bicycle",
+      "type": "facet_of",
+      "assertion": "source_asserted",
+      "source_id": "rei-bike-gears",
+      "url": "https://www.rei.com/learn/expert-advice/bike-gears-and-shifting.html",
+      "locator": "Gearing system and drivetrain components; lines 30–40",
+      "tool_ref": "turn729view3",
+      "verbatim_excerpts": [
+        "The job of your bike's gearing system"
+      ],
+      "note": "The passage identifies gearing as a system of a bicycle.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q138",
+      "target_id": "local:authored:000254",
+      "target_label": "Chess",
+      "type": "facet_of",
+      "assertion": "source_asserted",
+      "source_id": "uschess-pieces",
+      "url": "https://new.uschess.org/sites/default/files/media/documents/us-chess-rule-book-online-only-edition-chapters-1-2-9-10-11.pdf",
+      "locator": "§§3A–3B, printed p.15, PDF index 14; lines 573–578",
+      "tool_ref": "turn733view2",
+      "verbatim_excerpts": [
+        "These pieces are as follows:",
+        "a white king, usually indicated by the symbol:"
+      ],
+      "note": "The chess rules explicitly list the king among each player's pieces.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q139",
+      "target_id": "local:authored:000254",
+      "target_label": "Chess",
+      "type": "facet_of",
+      "assertion": "source_asserted",
+      "source_id": "uschess-pieces",
+      "url": "https://new.uschess.org/sites/default/files/media/documents/us-chess-rule-book-online-only-edition-chapters-1-2-9-10-11.pdf",
+      "locator": "§§3A–3B, printed p.15, PDF index 14; lines 573–579",
+      "tool_ref": "turn733view2",
+      "verbatim_excerpts": [
+        "a white queen, usually indicated by the symbol:"
+      ],
+      "note": "The chess rules explicitly list the queen among each player's pieces.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    },
+    {
+      "id": "Q221284",
+      "target_id": "Q161272",
+      "target_label": "social psychology",
+      "type": "broader_topic",
+      "assertion": "editorial",
+      "source_id": "os-conformity",
+      "url": "https://openstax.org/books/psychology-2e/pages/12-4-conformity-compliance-and-obedience",
+      "locator": "Social influence introduction and classification; lines 31, 63, 117–120",
+      "tool_ref": "turn720view2",
+      "verbatim_excerpts": [
+        "Types of Social Influence"
+      ],
+      "note": "Editorially places conformity within social psychology; the source's explicit narrower category lacks a baseline ID.",
+      "inspection_mode": "web.run open/find targeted relationship statement inspection",
+      "inspected_at": "2026-10-09T04:47:18Z",
+      "inspection_time_basis": "UTC clock read after the grouped relationship inspection interval; not exact request completion"
+    }
+  ]
+}

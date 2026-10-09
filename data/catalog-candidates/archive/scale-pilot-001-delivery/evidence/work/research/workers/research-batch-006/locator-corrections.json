@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-006",
+  "status": "repaired_pending_final_independent_check",
+  "previous_candidate": {
+    "path": "research/workers/research-batch-006/candidate.revised.json",
+    "sha256": "53c28378537fb1bd8d07c4f7ca83e7c45be3889e34c7d5110e24c3bc53a74e4d",
+    "revision": 2
+  },
+  "revised_candidate": {
+    "path": "research/workers/research-batch-006/candidate.post-recheck.json",
+    "sha256": "49f1e931c7833e572bbc77467de7d4b0307ef83c837991cafcbc30ed800b847c",
+    "revision": 3
+  },
+  "independent_recheck_report": {
+    "path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-006/audit-review/audit.recheck.json",
+    "sha256": "a4ef52583e8fa507a9ebccdb1e0a93f53a54ae731d0b8684c0ffa39de8dc72c2"
+  },
+  "changes": [
+    {
+      "id": "local:catalog:fresco-a-secco",
+      "field": "evidence[0].locator",
+      "old_value": "Secco distinction, lines 127–128",
+      "new_value": "Fresco definition and methods, lines 125–126",
+      "old_card_version": 2,
+      "new_card_version": 3,
+      "source_id": "a03",
+      "source_url": "https://www.nationalgallery.org.uk/paintings/glossary/fresco",
+      "evidence": {
+        "capture": "research/workers/research-batch-006/source-acquisition/open-035.json",
+        "reference": "turn1207view0",
+        "locator": "Fresco definition and methods, lines 125–126",
+        "support_note": "Line 125 introduces fresco and its two methods; line 126 distinguishes painting on wet intonaco from painting dry on dry intonaco or dried buon fresco. Line 128 concerns detachment and transfer, not the distinction."
+      }
+    }
+  ],
+  "unchanged": {
+    "source_records": 119,
+    "other_concept_records": 199,
+    "all_card_prose": true,
+    "all_learning_takeaways": true,
+    "all_relations": true,
+    "all_identity_fields": true
+  },
+  "new_source_attempts": 0,
+  "completed_at": "2026-10-08T22:33:24.443401+00:00"
+}

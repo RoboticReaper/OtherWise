@@ -1,0 +1,1710 @@
+{
+  "approved_identity_snapshot_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/frozen-initial/research/science/approved-selection.json",
+  "assignment": "science",
+  "auditor_task_identity": "/root/batch008_audit_science",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "baseline_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+  "independence_statement": "This auditor did not author these cards. Claims and relations were independently assessed from actual cited passages, the frozen assignment and pinned target definitions, without treating author conclusions as evidence.",
+  "initial_candidate_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/frozen-initial/catalog.json",
+  "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "limits": [
+    "Audit covers only these 14 assigned sampled cards and all 16 attached relations; it does not certify the complete 200-card candidate.",
+    "Source text, exact meaning and supported relations are separate from local structural validation and human interestingness.",
+    "MIT PDF page screenshots failed twice; only substantive PDF text and captions were used. No unseen figure was certified.",
+    "Actual platform token and cost data were not exposed.",
+    "Stop after initial review; repairs and any recheck belong to the coordinator workflow."
+  ],
+  "phase": "initial_review",
+  "records": {
+    "local:catalog:apoplast": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:apoplast",
+      "initial_card_sha256": "de4da17261b77ded8c23e12a9afc1090d2dedae70b17e6f367dbec25eb374a4a",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "eff2d382c3b76d8c3bf0d8fd17197abba0e37aae6a88caf304f94ac8ed788a81",
+      "label": "Apoplast",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "idea",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Apoplast",
+        "approved_scope": "idea",
+        "assessment": "Extracellular transport compartment, distinct from cytosolic symplast or the whole plant cell.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "The membrane requirement describes roots where the Casparian barrier is present.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "Root water-transport facts support an editorial narrower-to-plant-physiology placement; classification is not presented as a source quotation.",
+          "assertion_label_check": "Factual premises inspected; classification is honestly marked editorial.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "editorial",
+            "note": "Transport premises support editorial plant-physiology placement.",
+            "source_ids": [
+              "research-batch-008-science::science-bio-briggs-roots"
+            ],
+            "target_id": "Q185973",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "The significance of the casparian strip, lines 234-242",
+            "source_ids": [
+              "research-batch-008-science::science-bio-briggs-roots"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "subdiscipline of botany",
+            "id": "Q185973",
+            "label": "Plant physiology"
+          }
+        }
+      ],
+      "selection_reason": "Deterministic random sample of approved new identities.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened authoritative SUNY Geneseo textbook HTML on LibreTexts; substantive section found and read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T02:59:58.239249+00:00",
+          "locator": "The significance of the casparian strip, lines 234-242",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-bio-briggs-roots",
+          "support_summary": "The textbook defines connected wall/intercellular space and root membrane crossing after the endodermal barrier forms.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Vascular plant anatomy—primary growth",
+          "url": "https://bio.libretexts.org/Bookshelves/Botany/Inanimate_Life_(Briggs)/01:_Chapters/1.08:_Vascular_plant_anatomy-_primary_growth"
+        }
+      ],
+      "stratum": "random_new",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "Apoplast comprises plant cell-wall and extracellular spaces.",
+          "outcome": "verified",
+          "support": {
+            "locator": "236",
+            "source_id": "research-batch-008-science::science-bio-briggs-roots"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Water can travel outside the cytoplasm through this route.",
+          "outcome": "verified",
+          "support": {
+            "locator": "236-237",
+            "source_id": "research-batch-008-science::science-bio-briggs-roots"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "The root Casparian barrier forces membrane entry.",
+          "outcome": "verified",
+          "support": {
+            "locator": "235, 237, 242",
+            "source_id": "research-batch-008-science::science-bio-briggs-roots"
+          }
+        }
+      ]
+    },
+    "local:catalog:basting-sewing": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:basting-sewing",
+      "initial_card_sha256": "b1c213142214d4b1f0ee4f821636bbebfc9334fe7d305485b57edf408acf2695",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "70533b659682e27bd52d2a5a52dd4a42a6bdf3e3c01d2a664bd8bef2afbd2def",
+      "label": "Basting in sewing",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "idea",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Basting in sewing",
+        "approved_scope": "facet_or_application",
+        "assessment": "Sewing stitch sense, explicitly distinct from the registered cooking meaning of basting.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Pillow construction is an example; no assertion that all basting must be removed.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "The sewing instructions explicitly define basting while joining fabric; stitch-to-sewing facet direction is supported.",
+          "assertion_label_check": "Source explicitly supports the directional relation.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "source_asserted",
+            "note": "Source explicitly uses the stitch in sewing.",
+            "source_ids": [
+              "research-batch-008-science::science-home-pillow"
+            ],
+            "target_id": "local:authored:000345",
+            "type": "facet_of"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Pillow back construction, Step 4 and Sewing clue, lines 163-167; Pillow assembly, lines 171-194",
+            "source_ids": [
+              "research-batch-008-science::science-home-pillow"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "Constructing and altering items through stitched fabric pieces.",
+            "id": "local:authored:000345",
+            "label": "Sewing"
+          }
+        }
+      ],
+      "selection_reason": "Sewing sense versus registered cooking basting; temporary-stitch mechanism.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened official Utah State University Extension instructional HTML; basting definition and later assembly read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:01:16.529652+00:00",
+          "locator": "Pillow back construction, Step 4 and Sewing clue, lines 163-167; Pillow assembly, lines 171-194",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-home-pillow",
+          "support_summary": "USU defines temporary long stitches, demonstrates joining the pillow back, and then specifies permanent assembly stitching.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Four Square Pillow",
+          "url": "https://extension.usu.edu/sewing/research/four-square-pillow"
+        }
+      ],
+      "stratum": "targeted",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "Basting uses long temporary stitches to position fabric.",
+          "outcome": "verified",
+          "support": {
+            "locator": "165-167",
+            "source_id": "research-batch-008-science::science-home-pillow"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "The pillow project secures prepared fabric before later sewing.",
+          "outcome": "verified",
+          "support": {
+            "locator": "165, 174-186",
+            "source_id": "research-batch-008-science::science-home-pillow"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "Its temporary placement role differs from the final seam.",
+          "outcome": "verified",
+          "support": {
+            "locator": "167, 186-194",
+            "source_id": "research-batch-008-science::science-home-pillow"
+          }
+        }
+      ]
+    },
+    "local:catalog:cryosuction": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:cryosuction",
+      "initial_card_sha256": "fe63028ca772e1bb7457f88e62102187910a2454b49e37f49ef26fa9025ddf7d",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "f0779001b24947cfda8cb14b562c794106035f95e29e2ffab081638abb8c84bf",
+      "label": "Cryosuction",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "idea",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Cryosuction",
+        "approved_scope": "idea",
+        "assessment": "Water-attraction/freezing mechanism, distinct from permafrost state or resulting heave.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Frozen-ground example retained; no universal expansion percentage asserted.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "Ice growth and water movement within soil support editorial placement under the study of soil physical processes.",
+          "assertion_label_check": "Factual premises inspected; classification is honestly marked editorial.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "editorial",
+            "note": "Soil-water and ice-growth premises support editorial soil-physics placement.",
+            "source_ids": [
+              "research-batch-008-science::science-earth-frozen"
+            ],
+            "target_id": "Q1707766",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Layered Earth: Properties of frozen ground; The density of frozen water, lines 89-94",
+            "source_ids": [
+              "research-batch-008-science::science-earth-frozen"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "the study of soil's physical properties and processes",
+            "id": "Q1707766",
+            "label": "Soil physics"
+          }
+        }
+      ],
+      "selection_reason": "Deterministic random sample of approved new identities.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened official NSIDC educational HTML; cryosuction paragraph found and read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T02:59:58.239249+00:00",
+          "locator": "Layered Earth: Properties of frozen ground; The density of frozen water, lines 89-94",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-earth-frozen",
+          "support_summary": "NSIDC describes growing ground ice drawing water that freezes and enlarges segregated ice.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Science of Frozen Ground",
+          "url": "https://nsidc.org/learn/parts-cryosphere/frozen-ground-permafrost/science-frozen-ground"
+        }
+      ],
+      "stratum": "random_new",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "Cryosuction draws liquid water toward growing ice in ground.",
+          "outcome": "verified",
+          "support": {
+            "locator": "93",
+            "source_id": "research-batch-008-science::science-earth-frozen"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Incoming water freezes and enlarges segregated ice, enabling further water attraction.",
+          "outcome": "verified",
+          "support": {
+            "locator": "93",
+            "source_id": "research-batch-008-science::science-earth-frozen"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "Additional water supplies growth beyond water initially at the growth site.",
+          "outcome": "verified",
+          "support": {
+            "locator": "93",
+            "source_id": "research-batch-008-science::science-earth-frozen"
+          }
+        }
+      ]
+    },
+    "local:catalog:elysia-chlorotica": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:elysia-chlorotica",
+      "initial_card_sha256": "b14b8b9c3b85cc48bca768bdce64e46c07f0d19e522afece3f0c479e0214533b",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "86aa79457ba4dc20190222770403addeb8de71c58ffda5b88218156d00cfd352",
+      "label": "Elysia chlorotica",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "named_subject",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Elysia chlorotica",
+        "approved_scope": "topic",
+        "assessment": "Named sea-slug species, distinct from the broad sea-slug grouping or its algal donor.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Seven-day contrast explicitly belongs to a laboratory juvenile study, not a universal natural threshold.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "The Introduction explicitly calls Elysia chlorotica a sea slug; species-to-group parent direction matches the baseline.",
+          "assertion_label_check": "Source explicitly supports the directional relation.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "source_asserted",
+            "note": "Source explicitly identifies a sea slug.",
+            "source_ids": [
+              "research-batch-008-science::science-bio-kleptoplasty"
+            ],
+            "target_id": "Q7440127",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Abstract, lines 142-145; Introduction, 155-157; laboratory methods, 175-180; Discussion, 346-350",
+            "source_ids": [
+              "research-batch-008-science::science-bio-kleptoplasty"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "group of marine invertebrates with varying levels of resemblance to terrestrial slugs",
+            "id": "Q7440127",
+            "label": "Sea slug"
+          }
+        }
+      ],
+      "selection_reason": "Deterministic random sample of approved new identities.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened the primary PLOS ONE research article; abstract, introduction, methods and developmental comparison read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:00:45.470675+00:00",
+          "locator": "Abstract, lines 142-145; Introduction, 155-157; laboratory methods, 175-180; Discussion, 346-350",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-bio-kleptoplasty",
+          "support_summary": "The study identifies the sea-slug host and algal donor; seven-day feeding supports stable plastids after starvation, unlike younger treatments.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Lipid Accumulation during the Establishment of Kleptoplasty in Elysia chlorotica",
+          "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477"
+        }
+      ],
+      "stratum": "random_new",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "The sea slug retains chloroplasts from Vaucheria litorea.",
+          "outcome": "verified",
+          "support": {
+            "locator": "155-157",
+            "source_id": "research-batch-008-science::science-bio-kleptoplasty"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Laboratory juveniles fed seven days retained plastids after food removal.",
+          "outcome": "verified",
+          "support": {
+            "locator": "144, 177-178, 348",
+            "source_id": "research-batch-008-science::science-bio-kleptoplasty"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "Earlier food removal produced plastid breakdown.",
+          "outcome": "verified",
+          "support": {
+            "locator": "144, 178, 347-350",
+            "source_id": "research-batch-008-science::science-bio-kleptoplasty"
+          }
+        },
+        {
+          "check_id": "C4",
+          "claim": "Stable retention develops during the early feeding period.",
+          "outcome": "verified",
+          "support": {
+            "locator": "143-145, 348",
+            "source_id": "research-batch-008-science::science-bio-kleptoplasty"
+          }
+        }
+      ]
+    },
+    "local:catalog:gn-z11": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:gn-z11",
+      "initial_card_sha256": "3425d8a42268d1a6c2b0bec3d1481002cfc7dc58df052332da94a7edab35842e",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "9d1f6ed35f21c8c48099a868de16988dae3cd6c5a97d23533f2c60e652f3871c",
+      "label": "GN-z11",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "named_subject",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "GN-z11",
+        "approved_scope": "topic",
+        "assessment": "Named whole galaxy, distinct from its inferred central black hole or a broad galaxy category.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Report year and interpretation language retained; no timeless record-distance superlative.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "NASA explicitly calls GN-z11 a galaxy and distinguishes its host component. Named object-to-galaxy class direction is supported.",
+          "assertion_label_check": "Source explicitly supports the directional relation.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "source_asserted",
+            "note": "NASA explicitly identifies GN-z11 and its host component as a galaxy.",
+            "source_ids": [
+              "research-batch-008-science::science-physics-gnz11"
+            ],
+            "target_id": "Q318",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Dated 2024-03-04 article; host galaxy and compact source, lines 322-338",
+            "source_ids": [
+              "research-batch-008-science::science-physics-gnz11"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "large gravitationally bound system of stars and interstellar matter",
+            "id": "Q318",
+            "label": "Galaxy"
+          }
+        }
+      ],
+      "selection_reason": "Named early galaxy; distinguish observations from interpretations and time-sensitive record claims.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened official NASA Webb report; age, observed components, gas signatures and interpretations read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:01:16.529652+00:00",
+          "locator": "Dated 2024-03-04 article; host galaxy and compact source, lines 322-338",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-physics-gnz11",
+          "support_summary": "NASA identifies the early galaxy, extended host and compact source, and observational evidence consistent with accretion.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Webb Unlocks Secrets of One of the Most Distant Galaxies Ever Seen",
+          "url": "https://science.nasa.gov/missions/webb/webb-unlocks-secrets-of-one-of-the-most-distant-galaxies-ever-seen/"
+        }
+      ],
+      "stratum": "targeted",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "GN-z11 is observed about 430 million years after the Big Bang.",
+          "outcome": "verified",
+          "support": {
+            "locator": "322, 332",
+            "source_id": "research-batch-008-science::science-physics-gnz11"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "The 2024 report distinguishes extended host light and a compact central source.",
+          "outcome": "verified",
+          "support": {
+            "locator": "311, 332, 336",
+            "source_id": "research-batch-008-science::science-physics-gnz11"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "Colors and gas signatures support a black-hole interpretation.",
+          "outcome": "verified",
+          "support": {
+            "locator": "327-328, 332, 335-338",
+            "source_id": "research-batch-008-science::science-physics-gnz11"
+          }
+        },
+        {
+          "check_id": "C4",
+          "claim": "Indirect observations investigate early galaxies.",
+          "outcome": "verified",
+          "support": {
+            "locator": "322-338",
+            "source_id": "research-batch-008-science::science-physics-gnz11"
+          }
+        }
+      ]
+    },
+    "local:catalog:hayabusa2": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:hayabusa2",
+      "initial_card_sha256": "a40090aac27b108c8e773048fed8c226adc256532b2842a012c5d697278defc5",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "a81fb7256bf69ba1f01a4863304123bd4f67e56173e79ebbc5d391d7d83c68c6",
+      "label": "Hayabusa2",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "named_subject",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Hayabusa2",
+        "approved_scope": "topic",
+        "assessment": "Specific Hayabusa2 mission, distinct from the earlier Hayabusa mission and its asteroid target.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Completed Ryugu return retained; no later extended-mission outcome asserted.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "Studying and returning asteroid material support editorial narrower-to-space-exploration placement.",
+          "assertion_label_check": "Factual premises inspected; classification is honestly marked editorial.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "editorial",
+            "note": "Sampling and return support editorial space-exploration placement.",
+            "source_ids": [
+              "research-batch-008-science::science-physics-hayabusa"
+            ],
+            "target_id": "Q180046",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Overview, lines 241, 264; instruments, 272-285; dates and surface sampling, 292-318; sample analysis, 328-329",
+            "source_ids": [
+              "research-batch-008-science::science-physics-hayabusa"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "discovery and exploration of outer space and celestial objects outside Earth",
+            "id": "Q180046",
+            "label": "Space exploration"
+          }
+        },
+        {
+          "actual_relation_check": "NASA explicitly names an asteroid as the study target; related_to correctly preserves that association rather than application_of or a taxonomic parent.",
+          "assertion_label_check": "Source explicitly supports the directional relation.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "source_asserted",
+            "note": "NASA explicitly names an asteroid as the mission's study target.",
+            "source_ids": [
+              "research-batch-008-science::science-physics-hayabusa"
+            ],
+            "target_id": "Q3863",
+            "type": "related_to"
+          },
+          "relation_index": 1,
+          "support": {
+            "locator": "Overview, lines 241, 264; instruments, 272-285; dates and surface sampling, 292-318; sample analysis, 328-329",
+            "source_ids": [
+              "research-batch-008-science::science-physics-hayabusa"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "minor planet of the inner Solar System; not a comet",
+            "id": "Q3863",
+            "label": "Asteroid"
+          }
+        }
+      ],
+      "selection_reason": "Named mission with study target; related_to versus application_of direction.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened official NASA mission account; identity, instruments, completed sample return and sample-analysis passages read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:01:35.945120+00:00",
+          "locator": "Overview, lines 241, 264; instruments, 272-285; dates and surface sampling, 292-318; sample analysis, 328-329",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-physics-hayabusa",
+          "support_summary": "NASA names the Japanese spacecraft, Ryugu sampling and 2020 return, surface rovers, and returned material for analysis.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Hayabusa2",
+          "url": "https://science.nasa.gov/mission/hayabusa-2/"
+        }
+      ],
+      "stratum": "targeted",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "The Japanese mission collected Ryugu samples and returned them in 2020.",
+          "outcome": "verified",
+          "support": {
+            "locator": "264, 270, 304, 312-318",
+            "source_id": "research-batch-008-science::science-physics-hayabusa"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Instruments and small rovers explored the surface.",
+          "outcome": "verified",
+          "support": {
+            "locator": "272-285, 294, 312-313",
+            "source_id": "research-batch-008-science::science-physics-hayabusa"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "Physical samples permit direct analysis alongside spacecraft observations.",
+          "outcome": "verified",
+          "support": {
+            "locator": "264, 312, 328-329",
+            "source_id": "research-batch-008-science::science-physics-hayabusa"
+          }
+        }
+      ]
+    },
+    "local:catalog:immortal-time-bias": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:immortal-time-bias",
+      "initial_card_sha256": "f58402feb46d0dc4e40c137b1134194c51fc0e9ed8f11fc5f50c6e7e9d284c21",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "f52814b942dd23642163ac170dbee0c38c8204a6e0dff7e5f2428069085ac490",
+      "label": "Immortal time bias",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "idea",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Immortal time bias",
+        "approved_scope": "idea",
+        "assessment": "Exposure-assignment survival bias, distinct from an earlier diagnosis clock or every treatment delay.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Observational treatment study and conditional language retained; no claim that every delay creates bias.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "The named section explicitly describes cohort entry and follow-up. A methodological facet of cohort studies is supported in this direction.",
+          "assertion_label_check": "Source explicitly supports the directional relation.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "source_asserted",
+            "note": "Source explicitly defines bias through cohort-entry and intervention timing.",
+            "source_ids": [
+              "research-batch-008-science::science-health-immortal"
+            ],
+            "target_id": "Q1778788",
+            "type": "facet_of"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Immortal time bias, lines 204-206; observational setting, lines 139-141",
+            "source_ids": [
+              "research-batch-008-science::science-health-immortal"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "form of longitudinal study",
+            "id": "Q1778788",
+            "label": "Cohort study"
+          }
+        }
+      ],
+      "selection_reason": "Deterministic random sample of approved new identities.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened the primary PLOS Digital Health research/tutorial article; named timing-bias section read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:01:01.568084+00:00",
+          "locator": "Immortal time bias, lines 204-206; observational setting, lines 139-141",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-health-immortal",
+          "support_summary": "The authors explain survival selection when cohort follow-up precedes treatment assignment, inflating apparent treatment effects.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Step-by-step causal analysis of EHRs to ground decision-making",
+          "url": "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000721"
+        }
+      ],
+      "stratum": "random_new",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "Patients classified as treated may need to survive from cohort entry to treatment.",
+          "outcome": "verified",
+          "support": {
+            "locator": "205",
+            "source_id": "research-batch-008-science::science-health-immortal"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Assigning the preceding period to their treated group can create an apparent survival advantage.",
+          "outcome": "verified",
+          "support": {
+            "locator": "205",
+            "source_id": "research-batch-008-science::science-health-immortal"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "The apparent advantage need not reflect treatment effect.",
+          "outcome": "verified",
+          "support": {
+            "locator": "205",
+            "source_id": "research-batch-008-science::science-health-immortal"
+          }
+        }
+      ]
+    },
+    "local:catalog:length-time-bias": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:length-time-bias",
+      "initial_card_sha256": "3d9a2b8579ead6a2fda385b668504a82d5cfc09431295c25066dcb923027bcbb",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "d5934d2ffcb4f483aa452822ac7af49c28f5458f72d8190aae3bccd07315757d",
+      "label": "Length-time bias in cancer screening",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "idea",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Length-time bias in cancer screening",
+        "approved_scope": "idea",
+        "assessment": "Growth-rate selection in cancer screening; distinct from advancing the diagnosis clock.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Cancer-screening context retained; no claim that screening never reduces deaths.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "The named detection bias is explicitly situated within screening; facet-to-practice direction is supported.",
+          "assertion_label_check": "Source explicitly supports the directional relation.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "source_asserted",
+            "note": "Source explicitly explains the bias in cancer screening.",
+            "source_ids": [
+              "research-batch-008-science::science-health-length"
+            ],
+            "target_id": "Q1163564",
+            "type": "facet_of"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Length Bias and Overdiagnosis in Cancer Screening, lines 34-38; mortality distinction, line 49",
+            "source_ids": [
+              "research-batch-008-science::science-health-length"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "medical practice of testing a group or population for disease or medical conditions, who may not yet exhibit disease symptoms, enabling earlier intervention and disease management",
+            "id": "Q1163564",
+            "label": "Screening (medicine)"
+          }
+        }
+      ],
+      "selection_reason": "Deterministic random sample of approved new identities.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened official NCI HTML; substantive section read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T02:59:46.662169+00:00",
+          "locator": "Length Bias and Overdiagnosis in Cancer Screening, lines 34-38; mortality distinction, line 49",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-health-length",
+          "support_summary": "NCI explains preferential detection through longer preclinical windows and distinguishes detection from mortality benefit.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Crunching Numbers: What Cancer Screening Statistics Really Tell Us",
+          "url": "https://www.cancer.gov/about-cancer/screening/research/what-screening-statistics-mean"
+        }
+      ],
+      "stratum": "random_new",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "Slower-growing cancers are preferentially detected because their presymptomatic detectable period is longer.",
+          "outcome": "verified",
+          "support": {
+            "locator": "34-37",
+            "source_id": "research-batch-008-science::science-health-length"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Length bias changes the detected cancer mix.",
+          "outcome": "verified",
+          "support": {
+            "locator": "36-38",
+            "source_id": "research-batch-008-science::science-health-length"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "More early-stage detections alone do not establish reduced deaths.",
+          "outcome": "verified",
+          "support": {
+            "locator": "38, 49",
+            "source_id": "research-batch-008-science::science-health-length"
+          }
+        }
+      ]
+    },
+    "local:catalog:nafion": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:nafion",
+      "initial_card_sha256": "ee564743f2012f1f7b92e1e8b93f497b545d1b30be0725a98991fd4ba6026cef",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "f39d4111ba3cb9f2d23439d2371337d61561decbe1569b2a8d88780cd4f09c9c",
+      "label": "Nafion",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "named_subject",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Nafion",
+        "approved_scope": "topic",
+        "assessment": "Approved named membrane-material family, distinct from generic polymer or membrane.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Composition is limited to sulfonic membranes; manufacturer comparisons are not asserted.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "The manufacturer explicitly calls the membrane basis a copolymer; named material-to-polymer parent direction matches the baseline definition.",
+          "assertion_label_check": "Source explicitly supports the directional relation.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "source_asserted",
+            "note": "Manufacturer explicitly identifies a polymer membrane family.",
+            "source_ids": [
+              "research-batch-008-science::science-chem-nafion"
+            ],
+            "target_id": "Q81163",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Membranes for a Wide Variety of Electrochemical Applications, lines 151-153; grades, lines 169-193",
+            "source_ids": [
+              "research-batch-008-science::science-chem-nafion"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "substance composed of macromolecules with repeating structural units",
+            "id": "Q81163",
+            "label": "Polymer"
+          }
+        }
+      ],
+      "selection_reason": "Deterministic random sample of approved new identities.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened first-party Chemours/Nafion HTML; composition paragraph and grades tables read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T02:59:58.239249+00:00",
+          "locator": "Membranes for a Wide Variety of Electrochemical Applications, lines 151-153; grades, lines 169-193",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-chem-nafion",
+          "support_summary": "The manufacturer identifies the sulfonic copolymer membrane grades and their cation-conducting cell function.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Nafion Sulfonic Membranes",
+          "url": "https://www.nafion.com/en/products/sulfonic-membranes"
+        }
+      ],
+      "stratum": "random_new",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "Nafion names a fluorinated polymer membrane family used electrochemically.",
+          "outcome": "verified",
+          "support": {
+            "locator": "148-153, 169-193",
+            "source_id": "research-batch-008-science::science-chem-nafion"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Its sulfonic membranes use a PFSA/PTFE copolymer.",
+          "outcome": "verified",
+          "support": {
+            "locator": "153",
+            "source_id": "research-batch-008-science::science-chem-nafion"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "The membranes conduct positive ions in electrochemical cells.",
+          "outcome": "verified",
+          "support": {
+            "locator": "153",
+            "source_id": "research-batch-008-science::science-chem-nafion"
+          }
+        }
+      ]
+    },
+    "local:catalog:nixtamalization": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [
+        {
+          "affected_field": "card, sentence 3",
+          "finding_id": "science-N1",
+          "inspected_support": {
+            "locator": "lines 37 and 42",
+            "source_id": "research-batch-008-science::science-food-nixt",
+            "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+          },
+          "precise_issue": "The general processing claim omits that the calcium increase is attributed specifically to lime cooking.",
+          "proposed_repair": "With lime treatment, calcium content increases; processing also makes niacin more available.",
+          "significance": "material_qualification"
+        }
+      ],
+      "id": "local:catalog:nixtamalization",
+      "initial_card_sha256": "961800650ebc680f1a7a2094e6043cba451e5117b431e6ec5ccce91eddc4547d",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "bd343750b461989c8fbb177084ff9407d1994ecd11360ff377796c6f3deb3892",
+      "label": "Nixtamalization",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "idea",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Nixtamalization",
+        "approved_scope": "facet_or_application",
+        "assessment": "Alkaline maize-processing technique, distinct from the crop being processed.",
+        "outcome": "verified"
+      },
+      "outcome": "needs_repair",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Calcium increase requires the lime-treatment qualification present in the inspected source.",
+        "outcome": "needs_repair"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "Cooking, steeping and milling support editorial placement under transformation of ingredients into food.",
+          "assertion_label_check": "Factual premises inspected; classification is honestly marked editorial.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "editorial",
+            "note": "Cooking, soaking and milling support editorial food-processing placement.",
+            "source_ids": [
+              "research-batch-008-science::science-food-nixt"
+            ],
+            "target_id": "Q627371",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "What is nixtamalization?, lines 26-29; chemical changes and nutrition, lines 34-42",
+            "source_ids": [
+              "research-batch-008-science::science-food-nixt"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "transformation of raw ingredients into food, or of food into other forms",
+            "id": "Q627371",
+            "label": "Food processing"
+          }
+        },
+        {
+          "actual_relation_check": "CIMMYT explicitly names maize as the processed material; related_to preserves a material association rather than inventing a parent.",
+          "assertion_label_check": "Source explicitly supports the directional relation.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "source_asserted",
+            "note": "Source explicitly names maize as the processed material.",
+            "source_ids": [
+              "research-batch-008-science::science-food-nixt"
+            ],
+            "target_id": "Q11575",
+            "type": "related_to"
+          },
+          "relation_index": 1,
+          "support": {
+            "locator": "What is nixtamalization?, lines 26-29; chemical changes and nutrition, lines 34-42",
+            "source_ids": [
+              "research-batch-008-science::science-food-nixt"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "species of grass cultivated as a food crop",
+            "id": "Q11575",
+            "label": "Maize"
+          }
+        }
+      ],
+      "selection_reason": "Alkaline processing mechanism, nutrition qualification and material-versus-parent relation.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened official CIMMYT educational explainer; preparation and nutrient passages read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:01:16.529652+00:00",
+          "locator": "What is nixtamalization?, lines 26-29; chemical changes and nutrition, lines 34-42",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-food-nixt",
+          "support_summary": "CIMMYT defines alkaline maize preparation, dough production, niacin availability, and calcium increase specifically through lime cooking.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "What is nixtamalization?",
+          "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+        }
+      ],
+      "stratum": "targeted",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "Maize is cooked and steeped in an alkaline solution, usually lime.",
+          "outcome": "verified",
+          "support": {
+            "locator": "27",
+            "source_id": "research-batch-008-science::science-food-nixt"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Washed kernels can be milled into tortilla dough.",
+          "outcome": "verified",
+          "support": {
+            "locator": "29",
+            "source_id": "research-batch-008-science::science-food-nixt"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "Processing increases calcium without an explicit lime-treatment condition.",
+          "outcome": "needs_repair",
+          "support": {
+            "locator": "37, 42",
+            "source_id": "research-batch-008-science::science-food-nixt"
+          }
+        },
+        {
+          "check_id": "C4",
+          "claim": "Niacin becomes more available.",
+          "outcome": "verified",
+          "support": {
+            "locator": "41",
+            "source_id": "research-batch-008-science::science-food-nixt"
+          }
+        },
+        {
+          "check_id": "C5",
+          "claim": "Food preparation changes chemical composition.",
+          "outcome": "verified",
+          "support": {
+            "locator": "36-37",
+            "source_id": "research-batch-008-science::science-food-nixt"
+          }
+        }
+      ]
+    },
+    "local:catalog:sperners-lemma": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:sperners-lemma",
+      "initial_card_sha256": "dd1d89e3974d49e2f822aafef61037fb1f10023464351c0958955d663548f545",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "826b58625fa5d8979cf6e71584e6cebcc8cfff58b5e5345a11f683d9e7ba92ae",
+      "label": "Sperner's lemma",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "idea",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Sperner's lemma",
+        "approved_scope": "idea",
+        "assessment": "Two-dimensional triangulation lemma, distinct from Sperner's antichain theorem.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "The bounded two-dimensional statement is supported; stronger parity or higher-dimensional claims are not asserted.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "Triangulation and the cited Brouwer fixed-point equivalence support editorial placement under the baseline study of spaces.",
+          "assertion_label_check": "Factual premises inspected; classification is honestly marked editorial.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "editorial",
+            "note": "Triangulation and fixed-point premises support editorial topology placement.",
+            "source_ids": [
+              "research-batch-008-science::science-math-sperner-lemma"
+            ],
+            "target_id": "local:authored:000605",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Opening statement, fixed-point equivalence and distinction, lines 13-18",
+            "source_ids": [
+              "research-batch-008-science::science-math-sperner-lemma"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "Studying properties of spaces preserved under continuous deformation.",
+            "id": "local:authored:000605",
+            "label": "Topology"
+          }
+        }
+      ],
+      "selection_reason": "Triangulation lemma versus separate antichain theorem; bounded two-dimensional formulation.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened Wolfram MathWorld authoritative educational entry; labeling assumptions, conclusion and theorem distinction read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:01:35.945120+00:00",
+          "locator": "Opening statement, fixed-point equivalence and distinction, lines 13-18",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-math-sperner-lemma",
+          "support_summary": "The entry restricts boundary labels and forces an odd, hence nonzero, number of fully labeled triangles.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Sperner's Lemma",
+          "url": "https://mathworld.wolfram.com/SpernersLemma.html"
+        }
+      ],
+      "stratum": "targeted",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "A triangulated triangle has three differently labeled corners and those labels at its vertices.",
+          "outcome": "verified",
+          "support": {
+            "locator": "13",
+            "source_id": "research-batch-008-science::science-math-sperner-lemma"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Boundary vertices use only their side's endpoint labels.",
+          "outcome": "verified",
+          "support": {
+            "locator": "13",
+            "source_id": "research-batch-008-science::science-math-sperner-lemma"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "A small triangle with all three labels must exist.",
+          "outcome": "verified",
+          "support": {
+            "locator": "14",
+            "source_id": "research-batch-008-science::science-math-sperner-lemma"
+          }
+        }
+      ]
+    },
+    "local:catalog:stokes-drift": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 2,
+        "limit": "Two screenshot failures exhausted further visual requests for this URL. Verification uses substantive PDF text and captions, not unseen pixels.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:stokes-drift",
+      "initial_card_sha256": "e00247241477092aca90028f64c21cb5c493c7d19afd9c724a50e0e73cb26730",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "d1480b39bd82cd4935b0a3c17ac2361ea31124f99368b7817af99fcdddbe8881",
+      "label": "Stokes drift",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "idea",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Stokes drift",
+        "approved_scope": "idea",
+        "assessment": "Wave-induced mean parcel drift, distinct from wavelength-dependent wave-speed dispersion.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Progressive surface gravity wave and possibility language retained; no universal claim about every wave.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "The ocean-surface wave transport example supports editorial placement under the baseline physical-oceanography meaning.",
+          "assertion_label_check": "Factual premises inspected; classification is honestly marked editorial.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "editorial",
+            "note": "Surface-wave transport premises support editorial oceanography placement.",
+            "source_ids": [
+              "research-batch-008-science::science-earth-stokes"
+            ],
+            "target_id": "local:authored:000631",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "PDF page 2, lines 25-31; pages 18-19, Figures 7-8 and lines 752-812; page 20, lines 838-855",
+            "source_ids": [
+              "research-batch-008-science::science-earth-stokes"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "Investigating the physical, chemical and biological properties of oceans.",
+            "id": "local:authored:000631",
+            "label": "Oceanography"
+          }
+        }
+      ],
+      "selection_reason": "Deterministic random sample of approved new identities.",
+      "source_inspections": [
+        {
+          "access_failures": [
+            {
+              "attempt": 1,
+              "operation": "web.run screenshot",
+              "page": 18,
+              "result": "Internal Error; no pixels returned"
+            },
+            {
+              "attempt": 2,
+              "operation": "web.run screenshot",
+              "page": 19,
+              "result": "Internal Error; no pixels returned"
+            }
+          ],
+          "actual_inspection_mode": "web.run opened MIT OCW official PDF and inspected extracted complete relevant passage text and figure captions; screenshots unavailable",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:00:45.470675+00:00",
+          "locator": "PDF page 2, lines 25-31; pages 18-19, Figures 7-8 and lines 752-812; page 20, lines 838-855",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-earth-stokes",
+          "support_summary": "Price contrasts fixed-position and parcel averages; surface-wave captions describe open trajectories with drift along propagation.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Lagrangian and Eulerian representations of fluid flow — Part 2: Advection of parcels and fields",
+          "url": "https://ocw.mit.edu/courses/res-12-001-topics-in-fluid-dynamics-fall-2024/mitres_12_001_f24_essay1_pt2.pdf"
+        }
+      ],
+      "stratum": "random_new",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "A parcel under a progressive surface gravity wave can follow an open nearly looping trajectory.",
+          "outcome": "verified",
+          "support": {
+            "locator": "page 18, Figure 7, 752-758",
+            "source_id": "research-batch-008-science::science-earth-stokes"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Its mean displacement can follow wave propagation.",
+          "outcome": "verified",
+          "support": {
+            "locator": "pages 18-19, 756-812",
+            "source_id": "research-batch-008-science::science-earth-stokes"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "Parcel-following transport differs from fixed-position velocity averaging.",
+          "outcome": "verified",
+          "support": {
+            "locator": "pages 2 and 20, 25-31, 838-855",
+            "source_id": "research-batch-008-science::science-earth-stokes"
+          }
+        }
+      ]
+    },
+    "local:catalog:surface-plasmon-resonance-microscopy": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:surface-plasmon-resonance-microscopy",
+      "initial_card_sha256": "df0fd94e9ae268c6f4faaada09d36eb029e480312a4899dc71590e00cc19730a",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "b75839f2e534a80ca4ecade6221751539104e593834299cb069fdf4fdd887a7e",
+      "label": "Surface plasmon resonance microscopy",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "idea",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "Surface plasmon resonance microscopy",
+        "approved_scope": "facet_or_application",
+        "assessment": "Named interfacial imaging method, distinct from plasmon excitation or refractive index itself.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "The abstract uses a high-numerical-aperture implementation; the card keeps its optical measurement lesson without an excitation mechanism or comparative performance claim.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "Authors explicitly carry SPR imaging out on a microscope. Application-to-microscopy direction is supported; the target is the imaging field, not a measured property.",
+          "assertion_label_check": "Source explicitly supports the directional relation.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "source_asserted",
+            "note": "Authors explicitly implement SPR imaging on a microscope.",
+            "source_ids": [
+              "research-batch-008-science::science-chem-spr"
+            ],
+            "target_id": "Q1074953",
+            "type": "application_of"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Abstract, lines 125-128",
+            "source_ids": [
+              "research-batch-008-science::science-chem-spr"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "technical field of using microscopes to view samples and objects that cannot be seen with the unaided eye",
+            "id": "Q1074953",
+            "label": "Microscopy"
+          }
+        }
+      ],
+      "selection_reason": "Deterministic random sample of approved new identities.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened NIST first-party publication page; complete authors' abstract read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:00:14.232887+00:00",
+          "locator": "Abstract, lines 125-128",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-chem-spr",
+          "support_summary": "The authors describe label-free interfacial imaging, objective collection, and optical correction/calibration in their microscope system.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "Surface plasmon resonance microscopy: achieving a quantitative optical response",
+          "url": "https://www.nist.gov/publications/surface-plasmon-resonance-microscopy-achieving-quantitative-optical-response"
+        }
+      ],
+      "stratum": "random_new",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "Interfacial refractive-index response supports label-free imaging.",
+          "outcome": "verified",
+          "support": {
+            "locator": "125",
+            "source_id": "research-batch-008-science::science-chem-spr"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "A microscope objective collects reflected light.",
+          "outcome": "verified",
+          "support": {
+            "locator": "125",
+            "source_id": "research-batch-008-science::science-chem-spr"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "Quantitative optical interpretation uses correction and refractive-index calibration.",
+          "outcome": "verified",
+          "support": {
+            "locator": "126-128",
+            "source_id": "research-batch-008-science::science-chem-spr"
+          }
+        }
+      ]
+    },
+    "local:catalog:van-der-waerdens-theorem": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "limit": "Substantive source passages accessible; no access block on claims.",
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_source_words_used": 0
+      },
+      "findings": [],
+      "id": "local:catalog:van-der-waerdens-theorem",
+      "initial_card_sha256": "595d6b40974e7e59307186240ed412802e046ee7bfea5f8a7cdf7cc2e864da43",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "9644056563e26636d0b95db51315d0941f214fb93fda2e312215aa575250cf22",
+      "label": "van der Waerden's theorem",
+      "learning_takeaway_check": {
+        "basis": "Covered by the substantive claim checks; no additional empirical claim introduced.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "approved_entity_kind": "idea",
+        "approved_identity_basis": "frozen-initial/research/science/approved-selection.json",
+        "approved_label": "van der Waerden's theorem",
+        "approved_scope": "idea",
+        "assessment": "Finite-color existence theorem, distinct from a progression definition or positive-density theorem.",
+        "outcome": "verified"
+      },
+      "outcome": "verified",
+      "owner": "science",
+      "qualification_check": {
+        "assessment": "Positive-integer domain and finite color count retained; no bound or formula asserted.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "Coloring and discrete existence premises support editorial placement under counting, arrangements and discrete structures.",
+          "assertion_label_check": "Factual premises inspected; classification is honestly marked editorial.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "editorial",
+            "note": "Finite-color combinatorial existence supports editorial combinatorics placement.",
+            "source_ids": [
+              "research-batch-008-science::science-math-waerden"
+            ],
+            "target_id": "local:authored:000603",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "Four equivalent formulations, lines 13-19, especially formulations 1-2",
+            "source_ids": [
+              "research-batch-008-science::science-math-waerden"
+            ]
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "Studying counting, arrangements and discrete structures.",
+            "id": "local:authored:000603",
+            "label": "Combinatorics"
+          }
+        }
+      ],
+      "selection_reason": "Deterministic random sample of approved new identities.",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "web.run opened Wolfram MathWorld authoritative educational entry; complete formulations read",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:00:14.232887+00:00",
+          "locator": "Four equivalent formulations, lines 13-19, especially formulations 1-2",
+          "remote_retrieved_at": null,
+          "source_id": "research-batch-008-science::science-math-waerden",
+          "support_summary": "The infinite partition and finite-length formulations support the finite-color arithmetic-progression guarantee.",
+          "timestamp_basis": "Local clock timestamp after auditor passage inspection; exact remote acquisition time unavailable.",
+          "title": "van der Waerden's Theorem",
+          "url": "https://mathworld.wolfram.com/vanderWaerdensTheorem.html"
+        }
+      ],
+      "stratum": "random_new",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "All positive integers are assigned finitely many colors.",
+          "outcome": "verified",
+          "support": {
+            "locator": "15-16",
+            "source_id": "research-batch-008-science::science-math-waerden"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Every chosen finite length occurs as a single-color arithmetic progression.",
+          "outcome": "verified",
+          "support": {
+            "locator": "15-16",
+            "source_id": "research-batch-008-science::science-math-waerden"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "Some regularly spaced progression is forced despite arbitrary coloring.",
+          "outcome": "verified",
+          "support": {
+            "locator": "15-16",
+            "source_id": "research-batch-008-science::science-math-waerden"
+          }
+        }
+      ]
+    }
+  },
+  "review_completed_at": "2026-10-09T03:06:28.817479+00:00",
+  "sample_manifest_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/audit-sample.json",
+  "sample_manifest_sha256": "5b22b4cd61f691075015997f6c240b3365786131ebe2252f10de6a8e23b15f69",
+  "schema_version": 1,
+  "summary": {
+    "assigned_cards": 14,
+    "finding_ids": [
+      "science-N1"
+    ],
+    "random_new": {
+      "verified": 9
+    },
+    "relation_checks": 16,
+    "targeted": {
+      "needs_repair": 1,
+      "verified": 4
+    }
+  }
+}

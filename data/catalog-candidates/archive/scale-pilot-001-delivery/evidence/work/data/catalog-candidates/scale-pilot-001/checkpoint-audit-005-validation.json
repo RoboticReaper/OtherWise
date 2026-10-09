@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-08T22:11:46.288228+00:00",
+  "status": "passed",
+  "checks": {
+    "current_candidate_hash": true,
+    "initial_audit_hash_unchanged": true,
+    "frozen_candidate_hash": true,
+    "initial_exact_40_ids": true,
+    "all_17_changed_bundles_checked": true,
+    "all_initial_findings_resolved": true,
+    "no_residual_findings": true,
+    "frozen_files_unchanged": true
+  },
+  "candidate_sha256": "4df6efb168ceaced979cfe0392b0f2946c7edb12c275efe4105eafe9e372506d",
+  "initial_audit_sha256": "30f4472ffe3ae18a559b9b9c770dbcb10abec65c90e9303ae596ddd71fea75bf",
+  "recheck_audit_sha256": "8e7602e30d1c4ec07cfea3a005a3d75f241c1105de0b670339435821a23ac095",
+  "scope_counts": {
+    "affected_bundles": 17,
+    "changed_full_cards_labels_or_evidence_reviewed": 15,
+    "shared_source_only_diff_checks": 2,
+    "original_sample_affected": 7,
+    "random_sample_affected": 2,
+    "risk_sample_affected": 5,
+    "additional_targeted_full_card_checks": 8,
+    "additional_targeted_source_only_checks": 2,
+    "original_sample_unchanged": 33,
+    "unchanged_records_outside_change_set": 183
+  },
+  "limits": [
+    "This recheck extends independent factual coverage only to the eight additional changed cards; two shared-source-only records were checked for unchanged content and valid metadata, not given a full new factual audit.",
+    "The original twenty random and twenty risk-selected records remain fixed. Initial failures stay visible in audit.initial.json; no pooled unbiased defect estimate is calculated.",
+    "The author’s 200-card boundary pass is verified as an exact ID set, not recast as independent factual certification.",
+    "Grounding support was independently read from hash-verified captured public passages after two unusable live-tool responses.",
+    "Current source support and cached public text do not establish every original acquisition event or certify unsampled unchanged claims."
+  ]
+}

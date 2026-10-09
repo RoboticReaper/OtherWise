@@ -1,0 +1,59 @@
+{
+  "id": "local:catalog:knuckleball-aerodynamics",
+  "label": "Knuckleball aerodynamics",
+  "sample_kind": "risk_selected",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T21:59:09.674944+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "facet_or_application",
+    "entity_kind": "idea",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q8424",
+        "label": "Aerodynamics",
+        "original_description": "branch of dynamics concerned with studying the motion of air",
+        "prior_card_takeaways": []
+      },
+      {
+        "id": "local:authored:000292",
+        "label": "Baseball",
+        "original_description": "Exploring pitching, hitting and fielding strategies.",
+        "prior_card_takeaways": []
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:curveball-aerodynamics",
+        "label": "Curveball aerodynamics"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "NASA explicitly links uneven seam orientation, moving center of pressure and time-varying force to knuckleball motion. Comparison with simplified steady curveball is appropriately editorial.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s014",
+        "b007-s013"
+      ],
+      "locator": "Forces on a Baseball: Drag/Lift lines 15, 21–24; Curveball: Aerodynamic Force lines 9–10; web-07/web-05"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:curveball-aerodynamics",
+      "type": "related_to",
+      "assertion": "editorial",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

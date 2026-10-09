@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "archived_at": "2026-10-08T17:50:20.917751+00:00",
+  "original_candidate": {
+    "path": "data/catalog-candidates/archive/research-batch-002/research-batch-002.original.json",
+    "sha256": "e5b96441329bb1a48cb4bd4f47797030a054905ce09f9dc02063e76bf4cfdce4",
+    "size_bytes": 2419166
+  },
+  "original_audit_bundle": {
+    "path": "data/catalog-candidates/archive/research-batch-002/OtherWise-catalog-research-batch-002-audit-bundle.zip",
+    "sha256": "2e99fdd8d10ed031b00a5f38df6dd563c634ccfa7277db3bb79a0a628caf0074",
+    "manifest_files_verified": 61
+  },
+  "revised_candidate": {
+    "path": "data/catalog-candidates/research-batch-002.json",
+    "sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+    "size_bytes": 2424562,
+    "batch_revision": 2
+  },
+  "corrections": [
+    {
+      "concept_id": "local:catalog:aquatint",
+      "from_batch_revision": 1,
+      "to_batch_revision": 2,
+      "from_card_version": 1,
+      "to_card_version": 2,
+      "reviewed_at": "2026-10-08T17:50:20.917751+00:00",
+      "card_text_changed": false,
+      "reason": "Repair direct parent-classification evidence and the Oxford passage locator.",
+      "source_ids": [
+        "culture-s023",
+        "readiness-s001"
+      ],
+      "original_candidate_path": "data/catalog-candidates/archive/research-batch-002/research-batch-002.original.json",
+      "original_candidate_sha256": "e5b96441329bb1a48cb4bd4f47797030a054905ce09f9dc02063e76bf4cfdce4",
+      "findings_resolved": [
+        "R1: Aquatint relation provenance and Oxford section locator"
+      ],
+      "inspection": "Coordinating reviewer inspected both museum pages; Princeton explicitly classifies aquatint as an etching technique.",
+      "manifest_discovery_locator_corrected": true
+    }
+  ],
+  "operational_catalog_changed": false
+}

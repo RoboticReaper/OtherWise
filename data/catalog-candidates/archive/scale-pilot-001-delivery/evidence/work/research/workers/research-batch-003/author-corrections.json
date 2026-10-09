@@ -1,0 +1,73 @@
+{
+  "batch_id": "research-batch-003",
+  "created_at": "2026-10-08T21:17:29.926002+00:00",
+  "original_proposal_preserved": true,
+  "independent_audit_changes": [],
+  "records": [
+    {
+      "type": "central_identity_amendment",
+      "subject": "Isle Royale and optional synonyms",
+      "action": "Use island scope; remove Isle Royale National Park equivalence, unverified Gause’s principle alias and unverified Lateral gene transfer alias. Preserve reserved IDs and HGT.",
+      "authority": "Central approved selection v2, retained in selections/history."
+    },
+    {
+      "type": "central_membership_amendment",
+      "subject": "IR8, Broadbalk and Park Grass",
+      "action": "Use History & culture in place of History; primary domains/counts unchanged.",
+      "authority": "Central approved selection/global manifest v3."
+    },
+    {
+      "type": "source_metadata",
+      "source_id": "food-retrogradation",
+      "action": "Replace the inaccurate Stage A review-style bibliographic title with the actual primary experimental-paper title. DOI and inspected abstract unchanged.",
+      "evidence": "source-responses/061-food-inspections.json"
+    },
+    {
+      "type": "source_metadata",
+      "source_id": "earth-tomography",
+      "action": "Retain the DOI visible in the USGS-hosted article record.",
+      "evidence": "source-responses/037-geology-inspections.json"
+    },
+    {
+      "type": "additional_passage_support",
+      "concept_id": "Q2293576",
+      "action": "Add MGI first-filial-generation definition and Maryland’s explicit F1 saved-seed explanation; keep original UMN source and registered control identity.",
+      "evidence": "source-responses/088-f1-inspections.json"
+    },
+    {
+      "type": "author_claim_tightening",
+      "concept_id": "local:catalog:keystone-species",
+      "action": "Remove an abundance-relative definition not explicitly supported by the selected NPS passage; retain documented community importance and mussel predation."
+    },
+    {
+      "type": "author_claim_tightening",
+      "concept_id": "local:catalog:tubuloglomerular-feedback",
+      "action": "Use cells along a tubule rather than an imprecise assertion that the macula densa sits at the tubule’s end."
+    },
+    {
+      "type": "author_claim_tightening",
+      "concept_id": "local:catalog:pulse-oximetry",
+      "action": "Keep the optical saturation wording at the level explicitly described in the patient-information source."
+    },
+    {
+      "type": "author_claim_tightening",
+      "concept_id": "local:catalog:marine-stratus",
+      "action": "Describe temperature and humidity changes directly rather than saying air has an ability to retain cloud droplets."
+    },
+    {
+      "type": "author_claim_tightening",
+      "concept_id": "local:catalog:broadbalk-wheat-experiment",
+      "action": "Say unfertilized, not broadly untreated, for the persistent nutrient-treatment control."
+    },
+    {
+      "type": "contract_completion",
+      "subject": "New local identity provenance",
+      "action": "Each new identity now retains its actual inspected discovery URL; no QID or anchor was invented."
+    },
+    {
+      "type": "access_index_repair",
+      "subject": "Actual captured passage links",
+      "action": "Trim separator whitespace and include redirect targets in the Stage B index; preserve the original Stage A log."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "batch_id": "research-batch-004",
+  "batch_revision": 5,
+  "checked_at": "2026-10-08T22:33:32.690082+00:00",
+  "candidate_sha256": "dd8af872210586f6e46b6f0fecdfcf1c4b6078061146f094b47a2a76a8edaf02",
+  "previous_artifact": {
+    "path": "research/workers/research-batch-004/history/source-rechecked-revision-4/candidate.revised.json",
+    "sha256": "43544752f00b38264a23f6eaf25823bfb95e5a480217fc833df89790dc276619",
+    "batch_revision": 4,
+    "independent_source_recheck": {
+      "path": "research/workers/research-batch-004/history/source-rechecked-revision-4/audit.recheck.json",
+      "sha256": "39940b4419395804551c5fce0011c072f50bc1c6d3b7bc0d8d6e257996694bdc"
+    }
+  },
+  "status": "passed",
+  "check_total": 17,
+  "checks": {
+    "revision_compare_passed": true,
+    "admission_passed": true,
+    "exact_approved_sentence": true,
+    "only_graph_theory_changed": true,
+    "correct_card_version": true,
+    "only_takeaway_and_version_changed": true,
+    "all_199_other_cards_unchanged": true,
+    "all_card_prose_unchanged": true,
+    "source_records_unchanged": true,
+    "all_evidence_unchanged": true,
+    "all_relationships_unchanged": true,
+    "no_identity_added_removed": true,
+    "revision_4_unchanged": true,
+    "source_recheck_unchanged": true,
+    "all_preserved_reports_unchanged": true,
+    "access_log_unchanged": true,
+    "global_selection_hash_unchanged": true
+  },
+  "failures": [],
+  "coordinator_revision_compare": {
+    "changed_card_ids": [
+      "local:authored:000604"
+    ],
+    "changed_source_ids": [],
+    "failures": []
+  },
+  "coordinator_admission_failures": [],
+  "manual_review_scope": "No additional 200-card or source review was performed; this applies the exact wording independently approved by semantic review.",
+  "independent_narrow_recheck": "pending"
+}

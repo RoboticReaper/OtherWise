@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "assignment": "systems",
+  "stage": "selection_only",
+  "baseline_index_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+  "baseline_inventory_fingerprint": "7c3499df0aee4b300ce6a11a3a00dc9446b6422e36a7dc1b15ec7ea9db9f27a3",
+  "selected_count": 65,
+  "eligible_count": 6535,
+  "selected_ids_unique": true,
+  "all_ids_eligible": true,
+  "all_prior_card_records_empty": true,
+  "frozen_labels_descriptions_domains_match": true,
+  "domain_counts": {
+    "Computing & information": 10,
+    "Economics & organizations": 9,
+    "Engineering & transport": 10,
+    "Games & sports": 9,
+    "Learning & language": 9,
+    "Mind & behavior": 9,
+    "Society & relationships": 9
+  },
+  "domain_quotas_met": true,
+  "scope_counts": {
+    "broad_field": 5,
+    "idea": 31,
+    "facet_or_application": 14,
+    "topic": 15
+  },
+  "entity_kind_counts": {
+    "idea": 55,
+    "named_subject": 10
+  },
+  "prior_described_identities_scanned": 1467,
+  "legacy_alias_scan": "Unicode NFKD, casefold, alphanumeric tokens, baseline aliases and every prior card record label/alias. Exact normalized intersections checked; close names at SequenceMatcher >=0.82 inspected manually. This does not prove absence of all differently named semantic duplicates.",
+  "legacy_alias_collisions": [],
+  "close_names_reviewed": [
+    {
+      "selected_id": "Q179310",
+      "selected_label": "Computing",
+      "prior_id": "local:authored:000004",
+      "prior_label": "Composting",
+      "similarity": 0.842,
+      "manual_result": "Different subjects; superficial spelling resemblance."
+    },
+    {
+      "selected_id": "Q185467",
+      "selected_label": "Socialization",
+      "prior_id": "local:catalog:focalization",
+      "prior_label": "Focalization",
+      "similarity": 0.88,
+      "manual_result": "Different subjects; superficial spelling resemblance."
+    }
+  ],
+  "source_count": 64,
+  "source_access_issues": 19,
+  "source_budgets_within_limits": true,
+  "sources_without_full_25_word_card_headroom": [],
+  "parent_links": 37,
+  "parent_gaps": [
+    "Q179310",
+    "Q339338",
+    "Q189401",
+    "Q245",
+    "Q187899",
+    "local:authored:000574",
+    "Q215551",
+    "Q5970087",
+    "Q223639",
+    "Q806663",
+    "Q320863",
+    "local:authored:000545",
+    "Q190100",
+    "Q82412",
+    "Q274897",
+    "Q49740",
+    "Q71910",
+    "Q136851",
+    "Q255615",
+    "local:authored:000685",
+    "Q272021",
+    "Q783092",
+    "Q1860557",
+    "Q161272",
+    "Q841628",
+    "Q741550",
+    "Q461",
+    "Q740308"
+  ],
+  "drafting_authorized": false,
+  "card_bodies_written": 0,
+  "limits": [
+    "Coordinator must check cross-assignment IDs, semantic duplicates, and shared URLs before global reservations.",
+    "Budgets are selection-stage only; final bodies, companion representations and research notes require a new count.",
+    "Structural identity and quota checks do not establish unsampled factual accuracy or comprehensive coverage."
+  ],
+  "source_asserted_parent_links": 28,
+  "relationship_evidence_file": "relationship-evidence.json",
+  "relationship_coverage": {
+    "fine_cards": 45,
+    "fine_with_supported_parent": 33,
+    "fine_with_source_asserted_parent": 28,
+    "fine_supported_parent_fraction": 0.7333333333333333,
+    "fine_source_asserted_parent_fraction": 0.6222222222222222,
+    "supported_parent_goal": 0.7,
+    "source_asserted_parent_goal": 0.5,
+    "supported_parent_goal_met": true,
+    "source_asserted_parent_goal_met": true
+  }
+}

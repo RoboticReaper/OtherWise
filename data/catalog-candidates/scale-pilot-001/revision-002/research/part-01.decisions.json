@@ -1,0 +1,918 @@
+{
+  "schema_version": 1,
+  "assignment": "part-01",
+  "review_date": "2026-10-08",
+  "decisions": [
+    {
+      "id": "local:catalog:433",
+      "label": "4′33″",
+      "action": "reuse_existing",
+      "target_id": "Q12030",
+      "reason": "The named subject is Cage's composition, and the Trust explicitly presents the app as a way to perform it. Ambient listening and the app realization do not create a separate software identity for this composition card.",
+      "evidence": [
+        {
+          "url": "https://johncage.org/apps",
+          "locator": "4′33″ app description, especially composition/performance explanation, web-extracted lines 48–50",
+          "note": "The Trust connects its app's ambient-sound performance to Cage's named composition.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q12030",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies Cage's three-movement composition.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:adaptive-optics",
+      "label": "Adaptive optics",
+      "action": "reuse_existing",
+      "target_id": "Q506922",
+      "reason": "The card describes the distortion-compensating optical technique identified by Q506922. A telescope and deformable mirror explain how the technique operates; they do not identify a separately named application or a new concept.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/astronomy-2e/pages/6-2-telescopes-today",
+          "locator": "The Resolution of a Telescope, web-extracted lines 111–113",
+          "note": "The astronomy text names adaptive optics and explains sensor-driven mirror correction of atmospheric distortion.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q506922",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The technique for compensating optical-system distortions.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:arrhenius-equation",
+      "label": "Arrhenius equation",
+      "action": "reuse_existing",
+      "target_id": "Q507505",
+      "reason": "Both entries identify the temperature-dependent reaction-rate equation. Inferring activation energy is a use of that same equation, with its model qualification, rather than a separate identity.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory",
+          "locator": "Activation Energy and the Arrhenius Equation, web-extracted lines 67–71",
+          "note": "The text gives the Arrhenius rate equation and identifies temperature, rate constant, and activation energy.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q507505",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The temperature-dependence equation for reaction rates.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:binary-search",
+      "label": "Binary search",
+      "action": "reuse_existing",
+      "target_id": "Q243754",
+      "reason": "NIST defines the ordered-search halving algorithm described by Q243754. SQLite row lookup is an implementation example of that algorithm, not a new SQLite-specific subject.",
+      "evidence": [
+        {
+          "url": "https://xlinux.nist.gov/dads/HTML/binarySearch.html",
+          "locator": "Definition and runtime note, web-extracted lines 4 and 16",
+          "note": "NIST defines sorted-array interval halving as binary search and supplies its logarithmic comparison bound.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "NIST Definition; SQLite §1.2–§1.3",
+          "note": "NIST defines interval halving on a sorted array; SQLite explicitly names binary search in its ordered row lookup.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q243754",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The ordered-list search algorithm that halves its search interval.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:brooklyn-bridge",
+      "label": "Brooklyn Bridge",
+      "action": "reuse_existing",
+      "target_id": "Q125006",
+      "reason": "Both identify the named East River bridge in New York. Steel cables and stiffening trusses are properties of that bridge; the engineering explanation does not create a separate materials or construction identity.",
+      "evidence": [
+        {
+          "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/brooklyn-bridge",
+          "locator": "Facts, web-extracted lines 359–365",
+          "note": "ASCE identifies the Brooklyn Bridge and describes its suspension-system steel and cable construction.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q125006",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The named bridge crossing New York City's East River.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:buffer-solution",
+      "label": "Buffer solution",
+      "action": "reuse_existing",
+      "target_id": "Q208465",
+      "reason": "The chemistry sense is the same conjugate-pair solution that limits pH change. Weak-acid and weak-base examples are variants of that buffer concept, not separate meanings of buffer.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/chemistry-2e/pages/14-6-buffers",
+          "locator": "14.6 Buffers, opening definition, web-extracted lines 29–30",
+          "note": "OpenStax defines acid–base buffer solutions and includes both weak-acid and weak-base examples.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q208465",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The acid–base solution that resists added-acid or added-base pH changes.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:chinese-imperial-examinations",
+      "label": "Chinese imperial examinations",
+      "action": "reuse_existing",
+      "target_id": "Q7408",
+      "reason": "The subject is the dynastic Chinese examination system for appointing officials. Song-period competition illustrates that historical system; it does not turn the card into an independently named Song-only examination identity.",
+      "evidence": [
+        {
+          "url": "https://afe.easia.columbia.edu/songdynasty-module/confucian-scholar.html",
+          "locator": "The Examination System, web-extracted lines 68–79",
+          "note": "Columbia identifies the examination route into Chinese government and discusses its Song-period role.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q7408",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The dynastic Chinese civil-service examination system.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:columbian-exchange",
+      "label": "Columbian Exchange",
+      "action": "reuse_existing",
+      "target_id": "Q767253",
+      "reason": "Both identify the historical transatlantic exchange beginning with contact after 1492. The card includes biological, human, and cultural consequences within that recognized exchange; these additions do not identify another exchange or event.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/world-history-volume-2/pages/5-2-crossing-the-atlantic",
+          "locator": "The Columbian Exchange, web-extracted lines 144–146",
+          "note": "OpenStax explicitly names the Columbian Exchange and describes biological, human, and cultural movement following 1492.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q767253",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The named historical biological exchange across the Atlantic.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:coriolis-force",
+      "label": "Coriolis force",
+      "action": "reuse_existing",
+      "target_id": "Q169973",
+      "reason": "Both entries identify the apparent force arising in a rotating reference frame. Explaining its inertial-frame counterpart changes the account of the same phenomenon, not its identity.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/6-3-centripetal-force",
+          "locator": "Inertial Forces and Noninertial Frames, especially web-extracted lines 147–148 and 180",
+          "note": "The text places Coriolis force among inertial forces in rotating frames and explains the corresponding inertial-frame description.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q169973",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The apparent force in a rotating reference frame.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:diffraction-grating",
+      "label": "Diffraction grating",
+      "action": "reuse_existing",
+      "target_id": "Q653294",
+      "reason": "Both identify the interference-based optical grating. Spectral separation is a characteristic use of that component, not a separately named spectroscopic technique or generic diffraction identity.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/4-4-diffraction-gratings",
+          "locator": "Diffraction Gratings and Applications of Diffraction Gratings, web-extracted lines 29–43",
+          "note": "OpenStax names the multi-line optical grating and describes its narrow maxima and spectroscopic use.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q653294",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The optical grating that separates light through interference.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:electrolysis",
+      "label": "Electrolysis",
+      "action": "reuse_existing",
+      "target_id": "Q64403",
+      "reason": "Both identify electrically driven nonspontaneous chemical reaction. Battery recharging is explicitly an example of electrolysis in the source, so it does not warrant another local identity.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/chemistry-2e/pages/17-7-electrolysis",
+          "locator": "17.7 Electrolysis, web-extracted lines 30–32",
+          "note": "OpenStax defines electrolysis and immediately gives battery recharging as an example.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q64403",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The electrical-current technique for driving nonspontaneous chemistry.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:forth-bridge",
+      "label": "Forth Bridge",
+      "action": "reuse_existing",
+      "target_id": "Q275",
+      "reason": "The candidate is the named Scottish railway cantilever bridge identified by Q275. ASCE's Firth of Forth Railway Bridge name and double-cantilever discussion refer to that bridge, rather than another road crossing.",
+      "evidence": [
+        {
+          "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/firth-of-forth-railway-bridge",
+          "locator": "Firth of Forth Railway Bridge, web-extracted lines 362–367",
+          "note": "ASCE calls the structure the Forth Bridge and describes its double-cantilever design.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q275",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The Scottish railway bridge; the inspected item also classifies it as a cantilever bridge.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:gaia-mission",
+      "label": "Gaia mission",
+      "action": "reuse_existing",
+      "target_id": "Q767805",
+      "reason": "ESA's source and Q767805 both identify Gaia's astrometric mission. The imported '(spacecraft)' display label does not indicate another subject: the inspected item itself describes the ESA mission and supplies Gaia mission as its default label.",
+      "evidence": [
+        {
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia_overview",
+          "locator": "Gaia overview, Objective and Mission, web-extracted lines 23–31",
+          "note": "ESA identifies Gaia as a space astrometry mission that repeatedly measured stellar properties.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q767805",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The ESA Gaia astrometric mission.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:ghazal",
+      "label": "Ghazal",
+      "action": "reuse_existing",
+      "target_id": "Q281111",
+      "reason": "Both identify the poetic form linked by recurrent rhyme and refrain across autonomous couplets. English adaptation and translation are examples involving the same form, not a separate genre identity.",
+      "evidence": [
+        {
+          "url": "https://poets.org/glossary/ghazal",
+          "locator": "Form, web-extracted line 27; adaptation discussion",
+          "note": "The Academy defines the autonomous-couplet form and its recurring rhyme-and-refrain pattern.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q281111",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The South Asian and Middle Eastern poetic form.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:great-zimbabwe",
+      "label": "Great Zimbabwe",
+      "action": "reuse_existing",
+      "target_id": "Q209217",
+      "reason": "Both identify the archaeological city/site near Masvingo, not the entire historical kingdom. Its masonry and trade evidence are attributes of that site, and the source's World Heritage designation does not create a new historical subject.",
+      "evidence": [
+        {
+          "url": "https://whc.unesco.org/en/list/364/",
+          "locator": "Brief synthesis, web-extracted lines 52–54",
+          "note": "UNESCO identifies the same Masvingo-area property with Hill Ruins, Great Enclosure, and Valley Ruins.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q209217",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The ruined city near Masvingo that served as the Kingdom of Zimbabwe's capital.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:havdalah",
+      "label": "Havdalah",
+      "action": "reuse_existing",
+      "target_id": "Q572515",
+      "reason": "The card's subject is the Sabbath-ending ceremony, matching Q572515. Although the source page catalogs a spice tower, its curatorial passage explicitly identifies Havdalah and explains the object's ritual use; the card is not an identity for that individual object.",
+      "evidence": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/239369",
+          "locator": "Spice tower curatorial description, web-extracted line 10",
+          "note": "The Met describes Havdalah as the Jewish ritual ending the Sabbath and situates its spice tower within it.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q572515",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The Jewish Havdalah ceremony.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:hoover-dam",
+      "label": "Hoover Dam",
+      "action": "reuse_existing",
+      "target_id": "Q172822",
+      "reason": "Both identify the same Colorado River dam. Embedded cooling pipes explain an aspect of its construction, without creating an independently named cooling process, concrete material, or new dam identity.",
+      "evidence": [
+        {
+          "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/hoover-dam",
+          "locator": "Facts, web-extracted lines 367–368",
+          "note": "ASCE attributes the refrigerated-water cooling system to construction of Hoover Dam.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q172822",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The named Colorado River hydroelectric dam.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:hubble-space-telescope",
+      "label": "Hubble Space Telescope",
+      "action": "reuse_existing",
+      "target_id": "Q2513",
+      "reason": "Both identify the NASA/ESA Hubble telescope. Atmospheric avoidance and finite-aperture resolution explain the named instrument's performance; they do not identify a separately named observing technique or general telescope class.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/astronomy-2e/pages/6-2-telescopes-today",
+          "locator": "The Resolution of a Telescope, web-extracted lines 103–113",
+          "note": "The astronomy text names Hubble as a telescope launched to escape atmospheric image blurring.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q2513",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The NASA and ESA Hubble telescope launched in 1990.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:k-lauea",
+      "label": "Kīlauea",
+      "action": "reuse_existing",
+      "target_id": "Q188698",
+      "reason": "The candidate's label and topic subject remain the Kīlauea volcano. The 2018 event explains its connected magma system but is not separately titled as an eruption/event entity. The specific historical example does not justify a second volcano identity.",
+      "evidence": [
+        {
+          "url": "https://www.usgs.gov/volcanoes/kilauea/science/2018-lower-east-rift-zone-eruption-and-summit-collapse",
+          "locator": "2018 lower East Rift Zone Eruption and Summit Collapse at Kīlauea, opening explanation, web-extracted lines 4–12",
+          "note": "USGS explicitly situates the 2018 lower-rift eruption and summit collapse at Kīlauea.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q188698",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The active Hawaiian volcano Kīlauea.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:lava-tube",
+      "label": "Lava tube",
+      "action": "reuse_existing",
+      "target_id": "Q27919",
+      "reason": "Both identify a lava-flow conduit. NPS describes the flowing conduit and its drained cave as successive states of the same lava tube, so a cave-forming explanation does not establish a distinct sense.",
+      "evidence": [
+        {
+          "url": "https://www.nps.gov/subjects/caves/lava-caves-or-tubes.htm",
+          "locator": "Lava Tube Formation, web-extracted lines 29–31",
+          "note": "NPS explains formation of a roof over molten flow and the cave left when the tube drains.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q27919",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The natural conduit carrying lava beneath a flow's surface.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:metonymy",
+      "label": "Metonymy",
+      "action": "reuse_existing",
+      "target_id": "Q41966",
+      "reason": "Both identify reference by an associated attribute or object. The institution example illustrates that rhetorical substitution; it is not an identity for the institution, object, or a different rhetorical figure.",
+      "evidence": [
+        {
+          "url": "https://rhetoric.byu.edu/Figures/M/metonymy.htm",
+          "locator": "Definition and examples, web-extracted lines 9–13",
+          "note": "BYU defines reference through an attribute and provides pen, sword, crown, and suits as examples.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q41966",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The rhetorical figure that refers through close association.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:mobius-inversion-formula",
+      "label": "Möbius inversion formula",
+      "action": "reuse_existing",
+      "target_id": "Q1072771",
+      "reason": "Both have the arithmetic-function/divisor-sum meaning. The inspected formula inverts g(n)=sum over divisors of f(d), using Möbius weights. This qualification matches Q1072771; it does not claim equivalence to every general-poset inversion formulation.",
+      "evidence": [
+        {
+          "url": "https://mathworld.wolfram.com/MoebiusInversionFormula.html",
+          "locator": "Definition and equations (1)–(2), web-extracted lines 13–21",
+          "note": "MathWorld gives the divisor-sum transform and its Möbius-weighted inverse.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1072771",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The inversion relation between arithmetic functions.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:no-till-farming",
+      "label": "No-till farming",
+      "action": "reuse_existing",
+      "target_id": "Q1227672",
+      "reason": "Both identify the agricultural method of planting while avoiding tillage. NRCS's residue-management description explains ordinary no-till practice, not a separately named climate policy, material, or novel application.",
+      "evidence": [
+        {
+          "url": "https://www.nrcs.usda.gov/conservation-basics/climate/climate-smart-mitigation-activities",
+          "locator": "Residue and Tillage Management, No-Till, web-extracted lines 60–62",
+          "note": "NRCS describes no-till's limited soil disturbance, retained residues, and direct planting into them.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1227672",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The no-tillage farming method, with direct drilling among the inspected aliases.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:panic-of-1907",
+      "label": "Panic of 1907",
+      "action": "reuse_existing",
+      "target_id": "Q844449",
+      "reason": "The supplied registered description and the Federal Reserve's source identify the same US financial panic in 1907. The trust-company mechanism is an explanation of that named crisis rather than another crisis or a generic banking-run concept.",
+      "evidence": [
+        {
+          "url": "https://www.federalreservehistory.org/essays/panic-of-1907",
+          "locator": "Opening explanation and trust-company discussion, web-extracted lines 41–45",
+          "note": "Federal Reserve History explicitly identifies the 1907 panic and its distinctive trust-company setting.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q844449",
+          "locator": "Supplied current-inventory broad record index 19060, registered ID Q844449",
+          "note": "The supplied imported inventory identifies The US financial crisis called the Panic of 1907. The exact QID page returned Internal Error during this review.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Exact remote Wikidata Q844449 returned Internal Error on find and open during this review. No remote fields for that QID were inspected. Reuse relies on its supplied registered description plus the inspected official source, not a claim of live QID verification."
+      ]
+    },
+    {
+      "id": "local:catalog:population-bottleneck",
+      "label": "Population bottleneck",
+      "action": "reuse_existing",
+      "target_id": "Q815715",
+      "reason": "The card and Q815715 identify a sharp population reduction with genetic loss through sampling/drift. Numerical recovery in the seal example is a consequence illustrating that genetic event; it is not a new species-level or ecological-density identity.",
+      "evidence": [
+        {
+          "url": "https://evolution.berkeley.edu/bottlenecks-and-founder-effects/",
+          "locator": "Population bottlenecks; An example of a bottleneck",
+          "note": "The supplied candidate provenance identifies Berkeley's bottleneck definition and seal example. This page could not be remotely inspected in this review.",
+          "inspection_mode": "supplied_candidate_source_evidence"
+        },
+        {
+          "url": "https://openstax.org/books/biology-2e/pages/19-2-population-genetics",
+          "locator": "OpenStax Biology 2e §19.2, Genetic Drift and bottleneck effect, web-extracted lines 57–63",
+          "note": "The additional OpenStax source defines a population-reducing bottleneck effect that changes the survivors' gene pool.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q815715",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The population-reduction event that lowers genetic variation.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "The exact Berkeley source URL returned Internal Error on both find and open. The additional official OpenStax definition was inspected for semantic identity; the original northern-elephant-seal claim was not re-audited."
+      ]
+    },
+    {
+      "id": "local:catalog:raft-consensus-algorithm",
+      "label": "Raft consensus algorithm",
+      "action": "distinct_meaning",
+      "target_id": null,
+      "reason": "Raft's authors identify a replicated-log consensus algorithm separating leader election, log replication, and safety. Q200433 identifies a floating watercraft and classifies it as a boat type. These share a name but have different meanings; retain the protocol's local identity.",
+      "evidence": [
+        {
+          "url": "https://raft.github.io/raft.pdf",
+          "locator": "Abstract and §4–§5, especially PDF page 1, web-extracted lines 9–10 and 35–38",
+          "note": "The authors' paper identifies Raft as a consensus algorithm and states its decomposition into election, replication, and safety.",
+          "inspection_mode": "remote_authors_original_paper"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q200433",
+          "locator": "English label and description in remotely retrieved item page; instance-of boat type and subclass-of boat statements",
+          "note": "The inspected item identifies A floating structure for support or transport over water; the inspected item classifies it as a boat type.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [
+        {
+          "id": "Q200433",
+          "reason": "This is a watercraft/boat type, whereas the candidate is a distributed consensus protocol. Name overlap supplies no semantic-equivalence evidence."
+        }
+      ],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:reaction-quotient",
+      "label": "Reaction quotient",
+      "action": "reuse_existing",
+      "target_id": "Q1908325",
+      "reason": "Both identify the chemistry function of the mixture's current composition. Comparison with an equilibrium constant is a use of the reaction quotient, and does not make the candidate an equilibrium-constant identity.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/chemistry-2e/pages/13-2-equilibrium-constants",
+          "locator": "13.2 Equilibrium Constants, reaction-quotient definition, web-extracted lines 30–40",
+          "note": "OpenStax derives reaction quotient expressions from stoichiometry and distinguishes the current composition calculation.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1908325",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The reaction-composition quotient formed from species activities or concentrations.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:senet",
+      "label": "Senet",
+      "action": "reuse_existing",
+      "target_id": "Q582169",
+      "reason": "Both identify the ancient Egyptian board game. The Met's thirty-square box and funerary explanation illustrate that game; the card is not an identity for one museum artifact or the different game of twenty squares.",
+      "evidence": [
+        {
+          "url": "https://www.metmuseum.org/perspectives/ancient-egypt-board-games",
+          "locator": "Senet and What do you see?, web-extracted lines 10–17",
+          "note": "The Met explicitly separates Senet from Twenty Squares and identifies Senet's thirty-square board.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q582169",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The ancient Egyptian Senet board game.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:social-norms",
+      "label": "Social norms",
+      "action": "reuse_existing",
+      "target_id": "Q205665",
+      "reason": "Both identify sociological expectations governing conduct. The card's formal/informal distinction is an explicit teaching classification in OpenStax, while Q205665's short description emphasizes informal conduct. The inspected item identifies the general Social Norms subject through its social-science authority identifiers; this is breadth within the same subject, not a new homonym.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/3-2-elements-of-culture",
+          "locator": "Norms, web-extracted lines 44–51",
+          "note": "OpenStax names norms as societal conduct rules and explicitly includes formal and informal variants.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q205665",
+          "locator": "English label and description in remotely retrieved item page; MeSH, Library of Congress, and social-science classification identifiers",
+          "note": "The inspected item identifies The social-norm subject, with Social Norms authority identifiers including MeSH D066262 and Library of Congress sh85123980.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "The English Wikidata short description emphasizes informal conduct, while OpenStax teaches both formal and informal norms. Preserve that source-specific scope qualification in the card; the reuse is for the same sociological subject."
+      ]
+    },
+    {
+      "id": "local:catalog:sql",
+      "label": "SQL",
+      "action": "reuse_existing",
+      "target_id": "Q47607",
+      "reason": "Both identify SQL, the relational query language. SQLite's planner explains SQL's declarative behavior and is an implementation example; the card does not identify the SQLite product or a standalone query-planning algorithm.",
+      "evidence": [
+        {
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "Overview, web-extracted line 60",
+          "note": "SQLite expressly attributes declarative queries to SQL in all implementations and delegates execution choices to the planner.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q47607",
+          "locator": "Supplied current-inventory broad record index 30492, registered ID Q47607",
+          "note": "The supplied imported inventory identifies The relational database query and modification language SQL. The exact QID page returned Internal Error during this review.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Exact remote Wikidata Q47607 returned Internal Error on find and open during this review. No remote fields for that QID were inspected. Reuse relies on its supplied registered description plus the inspected official source, not a claim of live QID verification."
+      ]
+    },
+    {
+      "id": "local:catalog:stellar-proper-motion",
+      "label": "Stellar proper motion",
+      "action": "reuse_existing",
+      "target_id": "Q193223",
+      "reason": "Both identify the persistent angular change of stars' apparent positions. Stellar qualification is inherent in the supplied proper-motion record, and Gaia measurement is an example rather than a separate Gaia-specific quantity.",
+      "evidence": [
+        {
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/Gaia/Proper_motion",
+          "locator": "Proper motion, web-extracted lines 9–14",
+          "note": "ESA defines stellar proper motion as angular position change over time and combines it with distance and radial velocity.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q193223",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The astronomical measure of changing apparent stellar position.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:stirling-numbers-of-the-second-kind",
+      "label": "Stirling numbers of the second kind",
+      "action": "reuse_existing",
+      "target_id": "Q2601117",
+      "reason": "Both identify the second-kind partition numbers for a fixed count of nonempty unlabeled blocks. The second-kind qualification is essential and present in both; this is not a merge with first-kind Stirling numbers or unrestricted Bell-number counts.",
+      "evidence": [
+        {
+          "url": "https://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html",
+          "locator": "Definition, web-extracted lines 14–15",
+          "note": "MathWorld defines partitions into nonempty set blocks and equivalently distinct balls into identical nonempty boxes.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q2601117",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The second-kind Stirling count of nonempty set partitions.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:thermohaline-circulation",
+      "label": "Thermohaline circulation",
+      "action": "reuse_existing",
+      "target_id": "Q463223",
+      "reason": "Both identify large-scale density-driven circulation tied to seawater temperature and salinity. The contrast with surface wind-driven motion clarifies this same process, without expanding the identity to all ocean circulation.",
+      "evidence": [
+        {
+          "url": "https://oceanservice.noaa.gov/education/tutorial_currents/05conveyor1.html",
+          "locator": "Thermohaline Circulation explanation, web-extracted lines 7–11",
+          "note": "NOAA names deep circulation driven by temperature- and salinity-controlled density differences as thermohaline circulation.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q463223",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The ocean-circulation component driven by density gradients.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:tidal-locking",
+      "label": "Tidal locking",
+      "action": "reuse_existing",
+      "target_id": "Q109144",
+      "reason": "Both identify synchronized orbital and rotational periods due to tidal evolution. The source connects dissipative flexure with lunar synchronization; explaining the mechanism is not a separate identity from the captured-rotation state.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/13-6-tidal-forces",
+          "locator": "Other Tidal Effects, web-extracted lines 99–100",
+          "note": "OpenStax calls the process locking or tidal synchronization and explains the Moon's matched spin and orbital rate.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q109144",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The orbital/rotational synchronization called tidal locking.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    },
+    {
+      "id": "local:catalog:unit-cell",
+      "label": "Unit cell",
+      "action": "reuse_existing",
+      "target_id": "Q11878049",
+      "reason": "The IUCr definition covers both primitive and nonprimitive unit cells, matching the supplied crystallographic unit-cell identity. Fractional counting is explanatory content, and the card explicitly avoids reducing every unit cell to a primitive cell.",
+      "evidence": [
+        {
+          "url": "https://dictionary.iucr.org/Unit_cell",
+          "locator": "Definition, web-extracted lines 16–17",
+          "note": "IUCr defines the crystallographic-basis parallelepiped and distinguishes primitive from multiple cells.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q11878049",
+          "locator": "Supplied current-inventory broad record index 24803, registered ID Q11878049",
+          "note": "The supplied imported inventory identifies The registered crystallographic Unit cell subject. The exact QID page returned Internal Error during this review.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Exact remote Wikidata Q11878049 returned Internal Error on find and open during this review. No remote fields for that QID were inspected. Reuse relies on its supplied registered description plus the inspected official source, not a claim of live QID verification."
+      ]
+    },
+    {
+      "id": "local:catalog:wudu",
+      "label": "Wudu",
+      "action": "reuse_existing",
+      "target_id": "Q219466",
+      "reason": "Both identify ritual ablution before Muslim formal prayer. The preparation/transition interpretation explains the same washing procedure, rather than ordinary hygiene or the whole salat prayer.",
+      "evidence": [
+        {
+          "url": "https://pluralism.org/salat-daily-prayers",
+          "locator": "Prayer preparation, web-extracted lines 149 and 156",
+          "note": "The Pluralism Project explicitly names wudu as ritual washing in preparation for salat.",
+          "inspection_mode": "remote_official_passage"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q219466",
+          "locator": "English label and description in remotely retrieved item page",
+          "note": "The inspected item identifies The Islamic ritual-washing procedure before formal prayer.",
+          "inspection_mode": "remote_wikidata_identity_page"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": []
+    }
+  ],
+  "summary": {
+    "reviewed": 36,
+    "action_counts": {
+      "reuse_existing": 35,
+      "distinct_meaning": 1
+    },
+    "remote_wikidata_pages_inspected": 33,
+    "exact_remote_qids_unavailable": [
+      "Q11878049",
+      "Q47607",
+      "Q844449"
+    ],
+    "distinct_facet_count": 0
+  },
+  "method_notes": [
+    "This meaning review compares candidate subject and learning scope with the supplied registered current-inventory records; it does not select mappings from labels alone.",
+    "Official sources and the Raft authors' paper were inspected remotely for semantic identity. For unavailable Berkeley content an additional official OpenStax definition was inspected.",
+    "Wikidata identity pages were inspected through the web tool where available. Returned pages may be cached: the tool reported crawl ages ranging from today to 1.3 years. No latest API revision or fully current remote snapshot is claimed.",
+    "Retained cards, aliases, and original source provenance must be preserved when the root applies reuse mappings. A narrower example does not independently create an identity or editorial facet. No source-supported or editorial relationship edge is proposed in this assignment."
+  ]
+}

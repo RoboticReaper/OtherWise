@@ -1,0 +1,23 @@
+test_freeze_is_write_once_and_preserves_exact_candidate (test_audit_freeze.AuditFreezeTests.test_freeze_is_write_once_and_preserves_exact_candidate) ... ok
+test_partial_sample_does_not_invent_ids (test_audit_freeze.AuditFreezeTests.test_partial_sample_does_not_invent_ids) ... ok
+test_random_sample_is_order_independent_and_unique (test_audit_freeze.AuditFreezeTests.test_random_sample_is_order_independent_and_unique) ... ok
+test_random_sample_uses_prescribed_sha256_rule (test_audit_freeze.AuditFreezeTests.test_random_sample_uses_prescribed_sha256_rule) ... ok
+test_risk_sample_is_disjoint_and_reports_reasons (test_audit_freeze.AuditFreezeTests.test_risk_sample_is_disjoint_and_reports_reasons) ... ok
+test_control_imports_and_original_description_preserved (test_candidate_admission.CandidateAdmissionTests.test_control_imports_and_original_description_preserved) ... ok
+test_final_requires_exact_reserved_set (test_candidate_admission.CandidateAdmissionTests.test_final_requires_exact_reserved_set) ... ok
+test_new_identity_needs_inspected_subject_url (test_candidate_admission.CandidateAdmissionTests.test_new_identity_needs_inspected_subject_url) ... ok
+test_unknown_relation_target_rejected (test_candidate_admission.CandidateAdmissionTests.test_unknown_relation_target_rejected) ... ok
+test_valid_subject_provenance_and_historical_timestamp_pass (test_candidate_admission.CandidateAdmissionTests.test_valid_subject_provenance_and_historical_timestamp_pass) ... ok
+test_control_keeps_baseline_aliases_and_primary_domain_first (test_central_selection.CentralSelectionTests.test_control_keeps_baseline_aliases_and_primary_domain_first) ... ok
+test_effective_id_uses_reserved_suggestion_over_temporary_proposal_id (test_central_selection.CentralSelectionTests.test_effective_id_uses_reserved_suggestion_over_temporary_proposal_id) ... ok
+test_new_identity_is_not_marked_existing_by_label_alone (test_central_selection.CentralSelectionTests.test_new_identity_is_not_marked_existing_by_label_alone) ... ok
+test_recommendation_normalizes_author_schemas_without_accepting_reserves (test_central_selection.CentralSelectionTests.test_recommendation_normalizes_author_schemas_without_accepting_reserves) ... ok
+test_changed_text_requires_one_version_increment (test_revision_compare.RevisionCompareTests.test_changed_text_requires_one_version_increment) ... ok
+test_extra_version_without_record_or_source_change_is_flagged (test_revision_compare.RevisionCompareTests.test_extra_version_without_record_or_source_change_is_flagged) ... ok
+test_source_change_versions_every_affected_card (test_revision_compare.RevisionCompareTests.test_source_change_versions_every_affected_card) ... ok
+test_unchanged_card_keeps_version (test_revision_compare.RevisionCompareTests.test_unchanged_card_keeps_version) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.008s
+
+OK

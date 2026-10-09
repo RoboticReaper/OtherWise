@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-007",
+  "stage": "independent_post_correction_recheck",
+  "started_at": "2026-10-08T22:15:02Z",
+  "completed_at": "2026-10-08T22:17:18.425086+00:00",
+  "reviewed_candidate_path": "research/workers/research-batch-007/candidate.revised.json",
+  "canonical_candidate_path": "data/catalog-candidates/research-batch-007.json",
+  "reviewed_candidate_sha256": "a49d21157db18807479187fa76422fb119b40bc84febdf68d39c04b64114979e",
+  "reviewed_batch_revision": 3,
+  "finding_id": "007-R1",
+  "result": "fully_resolved",
+  "resolved_findings": [
+    "007-R1"
+  ],
+  "unresolved_substantive_findings": [],
+  "new_findings": [],
+  "card_id": "local:catalog:issue-preclusion",
+  "card_version": 2,
+  "word_count": 47,
+  "revised_card": "In US litigation, issue preclusion can bar relitigation of an issue actually litigated and necessarily decided in a valid final judgment. It generally binds a party who had a full and fair opportunity to litigate, with recognized nonparty exceptions. The issue may recur within a different claim.",
+  "claim_reviews": [
+    {
+      "claim": "US litigation; can bar relitigation of an actually litigated issue necessarily decided in a valid final judgment",
+      "support_source_ids": [
+        "b007-s075",
+        "b007-s091",
+        "b007-s092"
+      ],
+      "locators": [
+        "Cornell issue preclusion opening/elements 1–4,lines 5–11",
+        "Taylor opinion II.A,lines 198–200"
+      ],
+      "assessment": "Supported; can bar now qualifies the applicability of the bar itself, and actual litigation is explicit."
+    },
+    {
+      "claim": "Generally binds a party with full and fair opportunity, with recognized nonparty exceptions",
+      "support_source_ids": [
+        "b007-s092",
+        "b007-s091"
+      ],
+      "locators": [
+        "Taylor opinion II.A–B,lines 200–216",
+        "Cornell issue preclusion nonparty discussion,line16"
+      ],
+      "assessment": "Supported; preserves the protected nonparty default and recognized exceptions without falsely requiring identical parties in all later cases."
+    },
+    {
+      "claim": "The issue may recur within a different claim",
+      "support_source_ids": [
+        "b007-s091",
+        "b007-s092"
+      ],
+      "locators": [
+        "Cornell issue preclusion opening/comparison,lines 5,12",
+        "Taylor opinion II.A,line199"
+      ],
+      "assessment": "Supported; the issue/claim distinction remains intact."
+    }
+  ],
+  "learning_takeaway_review": "Unchanged takeaway correctly distinguishes a specific issue from an entire claim and is supported by the re-inspected comparison passages.",
+  "relationship_review": {
+    "target_id": "local:catalog:claim-preclusion",
+    "type": "related_to",
+    "assertion": "source_asserted",
+    "source_ids": [
+      "b007-s075",
+      "b007-s074"
+    ],
+    "unchanged": true,
+    "result": "supported",
+    "basis": "Fresh Wex collateral-estoppel lines 5–7 and res-judicata lines 6–13 explicitly distinguish issue/claim preclusion; their differing broader uses of res judicata are accurately acknowledged. Target identity remains the pinned claim-preclusion card."
+  },
+  "new_source_reviews": [
+    {
+      "source_id": "b007-s091",
+      "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+      "title": "Issue preclusion — Wex, Cornell Legal Information Institute",
+      "result": "supported",
+      "metadata": {
+        "title_and_identity": "Matches independently retrieved source and accurate publisher/hosting attribution.",
+        "locator": "Cornell opening, elements, comparison and nonparty paragraph are at lines 5–16; last-reviewed label at 18.",
+        "displayed_update_verified": "August 2025",
+        "publication_date_verified": null,
+        "publication_date_locator": null,
+        "revision": "null; no immutable web revision represented as known. Case citation and decision date identify the judicial opinion separately.",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T22:09:39.730Z",
+        "capture_sha256": "2a80f5ad765d85a71d563101a7ca6639df4e6678ec7c767ea09698440f2056bc",
+        "capture_hash_matches": true,
+        "acquisition_limit": "Capture consistency is verified; the independent fresh retrieval supplies factual support and does not certify earlier browsing history."
+      },
+      "fresh_evidence_artifacts": [
+        "recheck-web-01.json",
+        "recheck-web-02.json"
+      ]
+    },
+    {
+      "source_id": "b007-s092",
+      "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+      "title": "Taylor v. Sturgell, 553 U.S. 880 (2008) — Supreme Court opinion, reproduced by Justia",
+      "result": "supported",
+      "metadata": {
+        "title_and_identity": "Matches independently retrieved source and accurate publisher/hosting attribution.",
+        "locator": "Primary opinion §II.A–B is present at lines 198–216; paragraph 199 states actual-litigation/essential-determination and 200–216 supply opportunity and nonparty limits.",
+        "displayed_update_verified": null,
+        "publication_date_verified": "2008-06-12",
+        "publication_date_locator": "Decision metadata line 46 and opinion dateline 142 in recheck-web-02.json",
+        "revision": "null; no immutable web revision represented as known. Case citation and decision date identify the judicial opinion separately.",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T22:09:21.300Z",
+        "capture_sha256": "6e62cf38e8d45c2c4dce4ad390e320b0af06185beb3c44b8e31a82960668e6b3",
+        "capture_hash_matches": true,
+        "acquisition_limit": "Capture consistency is verified; the independent fresh retrieval supplies factual support and does not certify earlier browsing history."
+      },
+      "fresh_evidence_artifacts": [
+        "recheck-web-01.json",
+        "recheck-web-02.json"
+      ]
+    }
+  ],
+  "changed_card_ids": [
+    "local:catalog:issue-preclusion"
+  ],
+  "added_source_ids": [
+    "b007-s091",
+    "b007-s092"
+  ],
+  "preservation_checks": {
+    "reviewed_candidate_hash": true,
+    "canonical_byte_identical": true,
+    "initial_json_preserved": true,
+    "initial_md_preserved": true,
+    "only_expected_card_changed": true,
+    "accepted_ids_unchanged": true,
+    "all 90_old_source_records_unchanged": true,
+    "exact_two_new_sources": true,
+    "card_version_incremented": true,
+    "batch_revision_incremented": true,
+    "47_words": true,
+    "relationship_exactly_unchanged": true,
+    "takeaway_exactly_unchanged": true,
+    "correction_before_matches": true,
+    "correction_after_matches": true,
+    "handoff_hash_matches": true,
+    "coordinator_hash_matches": true,
+    "frozen_candidate.before-audit.json_preserved": true,
+    "frozen_sample.frozen.json_preserved": true,
+    "frozen_sample-cards.frozen.json_preserved": true,
+    "handoff_artifact_candidate.revised.json": true,
+    "handoff_artifact_post-audit-corrections.json": true,
+    "handoff_artifact_post-audit-admission.json": true,
+    "handoff_artifact_post-audit-revision-compare.json": true,
+    "handoff_artifact_post-audit-preservation-check.json": true,
+    "handoff_artifact_author-review.revised.json": true,
+    "handoff_artifact_source-inspections.revised.json": true,
+    "handoff_artifact_access-log.revised.json": true,
+    "handoff_artifact_post-audit-access-log.json": true,
+    "handoff_artifact_post-audit-source-captures/issue-preclusion-taylor.json": true,
+    "handoff_artifact_post-audit-source-captures/issue-preclusion-explicit.json": true,
+    "b007-s091_capture_hash_matches": true,
+    "b007-s091_date_matches_timestamp": true,
+    "b007-s092_capture_hash_matches": true,
+    "b007-s092_date_matches_timestamp": true
+  },
+  "preservation_failures": [],
+  "scope": {
+    "cards_rechecked_now": 1,
+    "relationships_rechecked_now": 1,
+    "new_unique_cards_added_to_audit": 0,
+    "original_random_new": 20,
+    "original_risk_selected": 20,
+    "original_extra_boundary_targeted": 12,
+    "original_unique_cards": 52,
+    "earlier_boundary_changed_cards_checked": 16,
+    "earlier_boundary_coverage_retained": true,
+    "all_other199_cards_equal_frozen": true,
+    "original_initial_findings_remain_visible": true
+  },
+  "initial_report_sha256": "560d4e1d81fa7b1f3199440f1bf46ba5da08f09eb5e0075f1c45cc01995171dd",
+  "access": {
+    "fresh_exact_urls_inspected": 4,
+    "failed_fetches": 0,
+    "fallback_capture_required": false,
+    "no_additional_alternative_references": true,
+    "logs": [
+      "recheck-web-01.json",
+      "recheck-web-02.json"
+    ]
+  },
+  "residual_nonblocking_observations": [
+    "The original low-priority Shogi numeric-PDF-locator clarification remains in the initial report; it is unrelated to 007-R1 and was not changed or re-audited here."
+  ],
+  "limitations": [
+    "This is the one-card repair recheck, not a new 200-card audit or a new sample.",
+    "The initial Othello live-access limitation remains part of the original audit; no new Othello attempt was made.",
+    "The audit finding is resolved for this exact candidate hash. Overall pilot acceptance and admission remain the coordinator’s decision."
+  ],
+  "candidate_edits_by_checker": false,
+  "platform_tokens": null,
+  "platform_cost": null
+}

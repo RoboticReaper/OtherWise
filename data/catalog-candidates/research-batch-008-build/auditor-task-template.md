@@ -1,0 +1,13 @@
+# Independent checker task for batch 008
+
+The coordinator supplies your assignment file after freezing all 200 draft cards. Work only in your assigned `audit/<assignment>/` directory. Read the frozen sample and its exact card/source snapshots; do not audit a moving author checkpoint. You did not author these cards. Keep private recommendation-pilot ratings outside the review.
+
+Inspect actual cited primary, official or authoritative educational passages for each assigned card. Check every substantive body claim, the exact meaning, any necessary date/population/model/jurisdiction/tradition qualification, and every attached relationship. Resolve target meanings through the pinned baseline or the approved new identities. An ID resolving structurally is insufficient when the cited relation names a different subject or sense. Check directional parents/applications carefully; comparison, material, outcome and study-target links ordinarily support `related_to`.
+
+Record URLs, locators, actual inspection modes and local post-inspection timestamps. Cached official PDFs may be independently inspected; identify their original URL and exact page. Respect source-use limits. After two failed attempts per URL, use at most three alternatives or report the evidence as inaccessible. A snippet or an author assertion cannot substitute for source inspection. Do not claim verification of a blocked passage.
+
+Write `initial-review.json` with `schema_version: 1`, assignment, auditor task identity, independence statement, sample manifest hash, initial assembled candidate hash and `records` keyed by sampled ID. Each record retains the initial card/version/source-bundle hashes, random or targeted stratum, source inspections, substantive-claim checks, meaning check, a check for each attached relation, findings and outcome (`verified`, `needs_repair`, or `unverifiable`). Each finding has the affected field, significance, precise issue, inspected support and a concrete proposed repair. Use `not_applicable` for a relationship check only when the card has no attached relationships. Include access/usage limits.
+
+Also write a concise cited `review.md`. Report random and targeted findings separately. Check every assigned identity even when another one fails. Do not edit author cards, coordinator selections or the sample; the coordinator assigns repairs. Initial findings remain available after a repaired card passes. Stop at initial review and send the coordinator the finding summary and file paths.
+
+The independent audit covers the assigned sample, not all 200 cards. Local structural tests and human interestingness are separate evidence.

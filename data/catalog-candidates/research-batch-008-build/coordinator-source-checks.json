@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "status": "selection_review_in_progress",
+  "recorded_at": "2026-10-09T02:07:31.853028+00:00",
+  "timestamp_semantics": "Local recording after web-tool passage inspection, not a precise remote retrieval timestamp.",
+  "checks": [
+    {
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+      "locator": "Euclidean and geodesic buffering, lines 72-87",
+      "inspection_mode": "web_tool_full_text",
+      "identity_finding": "The two construction methods are distinct facets of the baseline Geographic buffer subject. Mathematical planar buffering and the software PLANAR option require different interpretations.",
+      "baseline_ids": [
+        "local:catalog:geographic-buffer"
+      ],
+      "action": "Researcher informed before drafting; use specific facet relations and qualify/remove the ambiguous software alias."
+    },
+    {
+      "url": "https://www.nist.gov/publications/surface-plasmon-resonance-microscopy-achieving-quantitative-optical-response",
+      "locator": "Abstract, lines 125-128",
+      "inspection_mode": "web_tool_full_text",
+      "identity_finding": "Inspected publication supports SPR microscopy/imaging application and its calibration limits; this abstract alone does not establish a full discovery card for the general physical resonance phenomenon.",
+      "baseline_ids": [
+        "Q58392",
+        "Q1074953"
+      ],
+      "action": "Researcher asked to select the application meaning or add inspected phenomenon support."
+    },
+    {
+      "url": "https://go.dev/",
+      "locator": "Main heading and programming-language description, lines 107-112",
+      "inspection_mode": "web_tool_full_text",
+      "identity_finding": "Go denotes a programming language in the baseline Q37227; it remains distinct from the Q11413 board game despite their shared alias.",
+      "baseline_ids": [
+        "Q37227",
+        "Q11413"
+      ],
+      "action": "Explicit shared-name distinctness decision included at global reservation."
+    },
+    {
+      "url": "https://britgo.org/intro/intro2.html",
+      "locator": "The rules; Capturing stones and counting liberties; Strings, lines 11-25, 38-40",
+      "inspection_mode": "web_tool_full_text",
+      "identity_finding": "The board-game sense uses placed stones, territory and orthogonal liberties, establishing a different subject from the programming language.",
+      "baseline_ids": [
+        "Q11413",
+        "Q37227"
+      ],
+      "action": "Retain disambiguated card title and shared Go alias; no merging of meanings."
+    }
+  ],
+  "limits": [
+    "These checks precede card drafting and are not the frozen 40-card independent source audit."
+  ]
+}

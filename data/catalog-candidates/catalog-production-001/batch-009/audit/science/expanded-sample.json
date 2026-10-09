@@ -1,0 +1,1343 @@
+{
+  "batch_id": "research-batch-009",
+  "draft_candidate_sha256": "4612287612b3e2e15fa22a8e8d60bd4f8eb35c4528a5d5f3bf8e506988e35154",
+  "original_fixed_sample_unchanged": true,
+  "reason": "Two independent citation-coverage gaps in the science sample prompt additional verification of health and multi-claim/qualification cards, plus five uniformly sampled remaining cards.",
+  "sample": [
+    {
+      "card": {
+        "aliases": [
+          "Penicillin"
+        ],
+        "card": "Penicillins disrupt new cell-wall construction in susceptible bacteria, weakening the walls so the cells can rupture.",
+        "card_version": 1,
+        "domains": [
+          "Health & medicine"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Inhibitors of Cell Wall Biosynthesis, lines 49-51",
+            "note": "The textbook connects beta-lactams, wall synthesis and osmotic lysis.",
+            "source_id": "science-037"
+          }
+        ],
+        "id": "Q12190",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q12190"
+        ],
+        "imported_records": [
+          {
+            "description": "group of antibiotics derived from Penicillium fungi",
+            "index": 1871,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q12190",
+            "source_revision": 2547570406,
+            "source_url": "https://www.wikidata.org/wiki/Q12190",
+            "topic": "Penicillin"
+          }
+        ],
+        "label": "Penicillin",
+        "learning_takeaway": "Penicillins block crosslinking in new bacterial cell walls, leaving bacteria vulnerable to rupture.",
+        "original_description": "group of antibiotics derived from Penicillium fungi",
+        "relations": [
+          {
+            "assertion": "source_asserted",
+            "note": "The antibacterial-drug section explicitly identifies penicillin as an antibacterial.",
+            "source_ids": [
+              "science-037"
+            ],
+            "target_id": "Q12187",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "idea"
+      },
+      "id": "Q12190",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:36:33Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "additional_inspections": [
+            {
+              "inspected_at": "2026-10-09T04:50:08Z",
+              "inspection_mode": "web_open_text",
+              "locator": "Penicillin identified among antibacterial drugs, lines 25-50",
+              "tool_refs": [
+                "turn710view1"
+              ]
+            }
+          ],
+          "budget_group": "https://openstax.org/books/microbiology/pages/14-3-mechanisms-of-antibacterial-drugs",
+          "id": "science-037",
+          "inspected_at": "2026-10-09T04:36:33Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Inhibitors of Cell Wall Biosynthesis, lines 49-51",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:36:33Z",
+          "revision": null,
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "14.3 Mechanisms of Antibacterial Drugs - Microbiology",
+          "tool_refs": [
+            "turn622view1",
+            "turn625view8",
+            "turn664view6",
+            "turn710view1"
+          ],
+          "url": "https://openstax.org/books/microbiology/pages/14-3-mechanisms-of-antibacterial-drugs",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Vaccine"
+        ],
+        "card": "Vaccines present antigens or genetic instructions for making them, prompting immune responses that help protect against later encounters with the targeted pathogen.",
+        "card_version": 1,
+        "domains": [
+          "Health & medicine"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Antigens and genetic blueprints, lines 105-106",
+            "note": "WHO explicitly explains both antigen and genetic-instruction approaches.",
+            "source_id": "science-038"
+          },
+          {
+            "locator": "Overview, lines 83-87",
+            "note": "WHO describes vaccines as building immune protection within its immunization overview.",
+            "source_id": "science-073"
+          }
+        ],
+        "id": "Q134808",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q134808"
+        ],
+        "imported_records": [
+          {
+            "description": "substance used to stimulate the production of antibodies and provide immunity against one or several diseases, agent of a disease, its products, or a synthetic substitute",
+            "index": 8548,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q134808",
+            "source_revision": 2550892447,
+            "source_url": "https://www.wikidata.org/wiki/Q134808",
+            "topic": "Vaccine"
+          }
+        ],
+        "label": "Vaccine",
+        "learning_takeaway": "Vaccines supply antigens or genetic instructions for them, prompting the immune system to respond.",
+        "original_description": "substance used to stimulate the production of antibodies and provide immunity against one or several diseases, agent of a disease, its products, or a synthetic substitute",
+        "relations": [
+          {
+            "assertion": "source_asserted",
+            "note": "The immunization overview explicitly connects vaccines with building immune protection.",
+            "source_ids": [
+              "science-073"
+            ],
+            "target_id": "Q1415366",
+            "type": "application_of"
+          }
+        ],
+        "scope": "facet_or_application"
+      },
+      "id": "Q134808",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:36:33Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "additional_inspections": [
+            {
+              "inspected_at": "2026-10-09T04:50:08Z",
+              "inspection_mode": "web_open_text",
+              "locator": "How vaccines work, inspected article text",
+              "tool_refs": [
+                "turn710view2"
+              ]
+            }
+          ],
+          "budget_group": "https://www.who.int/news-room/feature-stories/detail/how-do-vaccines-work",
+          "id": "science-038",
+          "inspected_at": "2026-10-09T04:36:33Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Antigens and genetic blueprints, lines 105-106",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:36:33Z",
+          "revision": null,
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "How do vaccines work?",
+          "tool_refs": [
+            "turn619view1",
+            "turn621view2",
+            "turn710view2"
+          ],
+          "url": "https://www.who.int/news-room/feature-stories/detail/how-do-vaccines-work",
+          "word_limit": 200
+        },
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:50:08Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://www.who.int/health-topics/vaccines-and-immunization",
+          "id": "science-073",
+          "inspected_at": "2026-10-09T04:50:08Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Overview, lines 83-87 only",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:50:08Z",
+          "revision": null,
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Vaccines and immunization",
+          "tool_refs": [
+            "turn712view1",
+            "turn716view1",
+            "turn737view0"
+          ],
+          "url": "https://www.who.int/health-topics/vaccines-and-immunization",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Sickle cell disease"
+        ],
+        "card": "In sickle cell disease, altered hemoglobin can make red blood cells stiff and sickle-shaped, obstructing blood flow.",
+        "card_version": 1,
+        "domains": [
+          "Health & medicine"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Hemoglobin and red-cell changes, lines 103-107",
+            "note": "The source explains inherited hemoglobin changes and circulation consequences.",
+            "source_id": "science-035"
+          }
+        ],
+        "id": "Q185034",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q185034"
+        ],
+        "imported_records": [
+          {
+            "description": "group of genetic blood disorders",
+            "index": 8646,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q185034",
+            "source_revision": 2524953545,
+            "source_url": "https://www.wikidata.org/wiki/Q185034",
+            "topic": "Sickle cell disease"
+          }
+        ],
+        "label": "Sickle cell disease",
+        "learning_takeaway": "Altered hemoglobin can make red blood cells rigid and sickle-shaped, obstructing blood flow.",
+        "original_description": "group of genetic blood disorders",
+        "relations": [],
+        "scope": "topic"
+      },
+      "id": "Q185034",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:36:33Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://www.nhlbi.nih.gov/health/sickle-cell-disease",
+          "id": "science-035",
+          "inspected_at": "2026-10-09T04:36:33Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Hemoglobin and red-cell changes, lines 103-107",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:36:33Z",
+          "revision": null,
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Sickle Cell Disease - What Is Sickle Cell Disease?",
+          "tool_refs": [
+            "turn617view3",
+            "turn620view5"
+          ],
+          "url": "https://www.nhlbi.nih.gov/health/sickle-cell-disease",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Type 2 diabetes"
+        ],
+        "card": "Type 2 diabetes raises blood glucose when the body uses insulin ineffectively or the pancreas cannot supply enough of it.",
+        "card_version": 1,
+        "domains": [
+          "Health & medicine"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "What is type 2 diabetes?, line 135",
+            "note": "NIDDK distinguishes insulin supply and insulin response.",
+            "source_id": "science-040"
+          }
+        ],
+        "id": "Q3025883",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q3025883"
+        ],
+        "imported_records": [
+          {
+            "description": "type of diabetes mellitus with high blood sugar and insulin resistance",
+            "index": 8630,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q3025883",
+            "source_revision": 2549752035,
+            "source_url": "https://www.wikidata.org/wiki/Q3025883",
+            "topic": "Type 2 diabetes"
+          }
+        ],
+        "label": "Type 2 diabetes",
+        "learning_takeaway": "In type 2 diabetes, inadequate insulin production or ineffective insulin use leaves too much glucose in blood.",
+        "original_description": "type of diabetes mellitus with high blood sugar and insulin resistance",
+        "relations": [],
+        "scope": "topic"
+      },
+      "id": "Q3025883",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:36:33Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-2-diabetes",
+          "id": "science-040",
+          "inspected_at": "2026-10-09T04:36:33Z",
+          "inspection_mode": "web_open_text",
+          "locator": "What is type 2 diabetes?, line 135",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:36:33Z",
+          "revision": null,
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Type 2 Diabetes",
+          "tool_refs": [
+            "turn619view4",
+            "turn664view7"
+          ],
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-2-diabetes",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Sleep apnea"
+        ],
+        "card": "Sleep apnea repeatedly interrupts breathing when airways become blocked or the brain fails to send normal breathing signals.",
+        "card_version": 1,
+        "domains": [
+          "Health & medicine"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Types, lines 99-103",
+            "note": "NHLBI distinguishes obstructive and central mechanisms.",
+            "source_id": "science-034"
+          }
+        ],
+        "id": "Q213600",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q213600"
+        ],
+        "imported_records": [
+          {
+            "description": "sleep disorder characterized by repeated cessation and commencing of breathing that disrupts sleep",
+            "index": 8971,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q213600",
+            "source_revision": 2526893721,
+            "source_url": "https://www.wikidata.org/wiki/Q213600",
+            "topic": "Sleep apnea"
+          }
+        ],
+        "label": "Sleep apnea",
+        "learning_takeaway": "Sleep apnea repeatedly interrupts breathing through airway blockage or failures in the brain signals controlling breathing.",
+        "original_description": "sleep disorder characterized by repeated cessation and commencing of breathing that disrupts sleep",
+        "relations": [],
+        "scope": "topic"
+      },
+      "id": "Q213600",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:36:33Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://www.nhlbi.nih.gov/health/sleep-apnea",
+          "id": "science-034",
+          "inspected_at": "2026-10-09T04:36:33Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Types, lines 99-103; update line 111",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:36:33Z",
+          "revision": "Updated 2025-01-09",
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Sleep Apnea - What Is Sleep Apnea?",
+          "tool_refs": [
+            "turn617view2",
+            "turn620view4"
+          ],
+          "url": "https://www.nhlbi.nih.gov/health/sleep-apnea",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Fever"
+        ],
+        "card": "During fever, the brain sets a higher temperature target; shivering and reduced heat loss help the body reach it.",
+        "card_version": 1,
+        "domains": [
+          "Health & medicine"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Causes, lines 341-344",
+            "note": "The explanation connects hypothalamic temperature setting with heat balance and shivering.",
+            "source_id": "science-069"
+          }
+        ],
+        "id": "Q38933",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q38933"
+        ],
+        "imported_records": [
+          {
+            "description": "common medical sign characterized by elevated body temperature",
+            "index": 9001,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q38933",
+            "source_revision": 2543413734,
+            "source_url": "https://www.wikidata.org/wiki/Q38933",
+            "topic": "Fever"
+          }
+        ],
+        "label": "Fever",
+        "learning_takeaway": "During fever, the hypothalamus raises the temperature setting, prompting heat production and reduced heat loss; shivering can help generate heat.",
+        "original_description": "common medical sign characterized by elevated body temperature",
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "Editorial placement of the described regulated temperature change within thermoregulation.",
+            "source_ids": [
+              "science-069"
+            ],
+            "target_id": "Q190259",
+            "type": "facet_of"
+          }
+        ],
+        "scope": "idea"
+      },
+      "id": "Q38933",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:50:08Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://www.mayoclinic.org/diseases-conditions/fever/symptoms-causes/syc-20352759",
+          "id": "science-069",
+          "inspected_at": "2026-10-09T04:50:08Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Causes: hypothalamic temperature setting and heat production/loss, lines 341-344",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:50:08Z",
+          "revision": "Published 2025-12-24",
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Fever - Symptoms & causes",
+          "tool_refs": [
+            "turn717view1",
+            "turn725view0"
+          ],
+          "url": "https://www.mayoclinic.org/diseases-conditions/fever/symptoms-causes/syc-20352759",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Canning"
+        ],
+        "card": "Canning preserves food through heat and sealing; low-acid foods need pressure processing because bacterial spores can survive ordinary boiling.",
+        "card_version": 1,
+        "domains": [
+          "Food & agriculture"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Acidity and processing, lines 188-196",
+            "note": "The source contrasts boiling-water and pressure processing for different food acidity.",
+            "source_id": "science-029"
+          },
+          {
+            "locator": "Preservation mechanisms, lines 171-189",
+            "note": "USDA-derived guidance explains preservation through microbial control and a seal preventing re-entry.",
+            "source_id": "science-082"
+          }
+        ],
+        "id": "Q843389",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q843389"
+        ],
+        "imported_records": [
+          {
+            "description": "method of preserving food",
+            "index": 10352,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q843389",
+            "source_revision": 2539745895,
+            "source_url": "https://www.wikidata.org/wiki/Q843389",
+            "topic": "Canning"
+          }
+        ],
+        "label": "Canning",
+        "learning_takeaway": "Food acidity determines canning methods: low-acid foods require pressure processing because bacterial spores can survive boiling.",
+        "original_description": "method of preserving food",
+        "relations": [
+          {
+            "assertion": "source_asserted",
+            "note": "The article explicitly presents canning as a method of preserving foods.",
+            "source_ids": [
+              "science-082"
+            ],
+            "target_id": "local:authored:000147",
+            "type": "application_of"
+          }
+        ],
+        "scope": "facet_or_application"
+      },
+      "id": "Q843389",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:36:33Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "additional_inspections": [
+            {
+              "inspected_at": "2026-10-09T04:50:08Z",
+              "inspection_mode": "web_open_text",
+              "locator": "Preservation discussion and linked general-information article",
+              "tool_refs": [
+                "turn736view2"
+              ]
+            }
+          ],
+          "budget_group": "https://nchfp.uga.edu/how/can/general-information/ensuring-safe-canned-foods/",
+          "id": "science-029",
+          "inspected_at": "2026-10-09T04:36:33Z",
+          "inspection_mode": "web_open_text",
+          "locator": "How canning preserves foods, lines 171-186; acidity and processing, lines 188-196",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:36:33Z",
+          "revision": null,
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Ensuring Safe Canned Foods",
+          "tool_refs": [
+            "turn602view2",
+            "turn620view3",
+            "turn617view6",
+            "turn736view2"
+          ],
+          "url": "https://nchfp.uga.edu/how/can/general-information/ensuring-safe-canned-foods/",
+          "word_limit": 200
+        },
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:50:08Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://nchfp.uga.edu/how/can/general-information/how-canning-preserves-foods/",
+          "id": "science-082",
+          "inspected_at": "2026-10-09T04:50:08Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Preservation mechanisms, lines 171-189; attribution, line 193",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:50:08Z",
+          "revision": "Adapted from USDA Complete Guide to Home Canning, revised 2015",
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "How Canning Preserves Foods",
+          "tool_refs": [
+            "turn737view2",
+            "turn738view0",
+            "turn738view1"
+          ],
+          "url": "https://nchfp.uga.edu/how/can/general-information/how-canning-preserves-foods/",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Betelgeuse"
+        ],
+        "card": "Betelgeuse is a red supergiant; material ejected in 2019 cooled into dust, dimming the star by blocking some of its light.",
+        "card_version": 1,
+        "domains": [
+          "Physics & astronomy"
+        ],
+        "entity_kind": "named_subject",
+        "evidence": [
+          {
+            "locator": "Red supergiant, line 298; 2019 surface mass ejection, lines 326-330",
+            "note": "NASA describes a historical observed event and its dust-obscuration mechanism.",
+            "source_id": "science-060"
+          }
+        ],
+        "id": "Q12124",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q12124"
+        ],
+        "imported_records": [
+          {
+            "description": "red supergiant star in the constellation of Orion",
+            "index": 22097,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q12124",
+            "source_revision": 2544062885,
+            "source_url": "https://www.wikidata.org/wiki/Q12124",
+            "topic": "Betelgeuse"
+          }
+        ],
+        "label": "Betelgeuse",
+        "learning_takeaway": "Betelgeuse’s 2019 outburst ejected material that cooled into dust and temporarily blocked some of the star’s light.",
+        "original_description": "red supergiant star in the constellation of Orion",
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "The source analyzes observations of a particular red-supergiant star.",
+            "source_ids": [
+              "science-060"
+            ],
+            "target_id": "local:authored:000108",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "topic"
+      },
+      "id": "Q12124",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:39:00Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://science.nasa.gov/universe/what-is-betelgeuse-inside-the-strange-volatile-star/",
+          "id": "science-060",
+          "inspected_at": "2026-10-09T04:39:00Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Red supergiant, line 298; 2019 surface mass ejection and cooling dust, lines 326-330",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:39:00Z",
+          "revision": "Published 2023-05-03",
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "What is Betelgeuse? Inside the Strange, Volatile Star",
+          "tool_refs": [
+            "turn697view0",
+            "turn700view1"
+          ],
+          "url": "https://science.nasa.gov/universe/what-is-betelgeuse-inside-the-strange-volatile-star/",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Andromeda Galaxy"
+        ],
+        "card": "Andromeda is a spiral galaxy surrounded by diffuse gas; absorption in background quasar light lets astronomers map that otherwise elusive halo.",
+        "card_version": 1,
+        "domains": [
+          "Physics & astronomy"
+        ],
+        "entity_kind": "named_subject",
+        "evidence": [
+          {
+            "locator": "Halo and spiral galaxy, lines 312-318; background-quasar absorption, lines 319-324",
+            "note": "The observed absorption supplies a mechanism for mapping nearly invisible gas.",
+            "source_id": "science-061"
+          }
+        ],
+        "id": "Q2469",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q2469"
+        ],
+        "imported_records": [
+          {
+            "description": "barred spiral galaxy within the Local Group",
+            "index": 22163,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q2469",
+            "source_revision": 2547702974,
+            "source_url": "https://www.wikidata.org/wiki/Q2469",
+            "topic": "Andromeda Galaxy"
+          }
+        ],
+        "label": "Andromeda Galaxy",
+        "learning_takeaway": "Absorption of background quasar light revealed the diffuse gaseous halo surrounding the Andromeda Galaxy.",
+        "original_description": "barred spiral galaxy within the Local Group",
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "The study uses astronomical observations to investigate a named galaxy.",
+            "source_ids": [
+              "science-061"
+            ],
+            "target_id": "local:authored:000108",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "topic"
+      },
+      "id": "Q2469",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:39:00Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://science.nasa.gov/missions/hubble/hubble-maps-giant-halo-around-andromeda-galaxy/",
+          "id": "science-061",
+          "inspected_at": "2026-10-09T04:39:00Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Halo and spiral galaxy, lines 312-318; background-quasar absorption, lines 319-324",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:39:00Z",
+          "revision": "Published 2020-08-27; last updated 2025-03-31",
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Hubble Maps Giant Halo Around Andromeda Galaxy",
+          "tool_refs": [
+            "turn697view1",
+            "turn700view0"
+          ],
+          "url": "https://science.nasa.gov/missions/hubble/hubble-maps-giant-halo-around-andromeda-galaxy/",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Law of large numbers"
+        ],
+        "card": "For independent, identically distributed trials with finite variance, the law of large numbers says sample averages converge in probability to their expectation.",
+        "card_version": 1,
+        "domains": [
+          "Mathematics"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Assumptions, line 13; convergence, lines 31-36",
+            "note": "The weak-law proof gives both conditions and probabilistic convergence.",
+            "source_id": "science-052"
+          }
+        ],
+        "id": "Q207952",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q207952"
+        ],
+        "imported_records": [
+          {
+            "description": "theorem that describes the result of performing the same experiment a large number of times",
+            "index": 2484,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q207952",
+            "source_revision": 2551251534,
+            "source_url": "https://www.wikidata.org/wiki/Q207952",
+            "topic": "Law of large numbers"
+          }
+        ],
+        "label": "Law of large numbers",
+        "learning_takeaway": "For independent identically distributed trials with finite variance, sample averages increasingly concentrate near their expected value.",
+        "original_description": "theorem that describes the result of performing the same experiment a large number of times",
+        "relations": [
+          {
+            "assertion": "source_asserted",
+            "note": "The opening explicitly identifies the weak law as a result in probability theory.",
+            "source_ids": [
+              "science-052"
+            ],
+            "target_id": "Q5862903",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "idea"
+      },
+      "id": "Q207952",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:39:00Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://mathworld.wolfram.com/WeakLawofLargeNumbers.html",
+          "id": "science-052",
+          "inspected_at": "2026-10-09T04:39:00Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Independent identically distributed variables, lines 13-15; convergence, lines 24-36",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:39:00Z",
+          "revision": null,
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Weak Law of Large Numbers - Wolfram MathWorld",
+          "tool_refs": [
+            "turn695view0",
+            "turn696view0",
+            "turn697view3"
+          ],
+          "url": "https://mathworld.wolfram.com/WeakLawofLargeNumbers.html",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Refraction"
+        ],
+        "card": "Refraction occurs when light crosses materials at different speeds; its direction can change, although perpendicular entry produces no bend.",
+        "card_version": 1,
+        "domains": [
+          "Physics & astronomy"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Direction, speed and Snell’s law, lines 34-45",
+            "note": "The source relates speed contrast and incident angle to the refracted direction.",
+            "source_id": "science-066"
+          }
+        ],
+        "id": "Q72277",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q72277"
+        ],
+        "imported_records": [
+          {
+            "description": "in physics, the change in direction of a wave at the interface between two media",
+            "index": 25605,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q72277",
+            "source_revision": 2516888788,
+            "source_url": "https://www.wikidata.org/wiki/Q72277",
+            "topic": "Refraction"
+          }
+        ],
+        "label": "Refraction",
+        "learning_takeaway": "Light crossing between materials can change direction as its speed changes, with the bend also depending on incidence angle.",
+        "original_description": "in physics, the change in direction of a wave at the interface between two media",
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "The passage studies how light travels across a material interface.",
+            "source_ids": [
+              "science-066"
+            ],
+            "target_id": "local:authored:000620",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "idea"
+      },
+      "id": "Q72277",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:39:00Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://openstax.org/books/university-physics-volume-3/pages/1-3-refraction",
+          "id": "science-066",
+          "inspected_at": "2026-10-09T04:39:00Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Direction, speed and Snell’s law, lines 34-45",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:39:00Z",
+          "revision": null,
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "1.3 Refraction - University Physics Volume 3",
+          "tool_refs": [
+            "turn695view8",
+            "turn696view5",
+            "turn697view6"
+          ],
+          "url": "https://openstax.org/books/university-physics-volume-3/pages/1-3-refraction",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_risk"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Modular arithmetic"
+        ],
+        "card": "Modular arithmetic wraps around a fixed modulus, like a clock: 7 plus 8 equals 3 modulo 12.",
+        "card_version": 1,
+        "domains": [
+          "Mathematics"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Clock arithmetic and examples, lines 13-20",
+            "note": "The source explicitly gives this clock-arithmetic calculation.",
+            "source_id": "science-054"
+          }
+        ],
+        "id": "Q319400",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q319400"
+        ],
+        "imported_records": [
+          {
+            "description": "system of algebraic operations defined for remainders under division by a fixed positive integer; system of arithmetic for integers, where numbers \"wrap around\" upon reaching a certain value—the modulus",
+            "index": 19844,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q319400",
+            "source_revision": 2553545789,
+            "source_url": "https://www.wikidata.org/wiki/Q319400",
+            "topic": "Modular arithmetic"
+          }
+        ],
+        "label": "Modular arithmetic",
+        "learning_takeaway": "Modular arithmetic wraps numbers around a fixed modulus: 7 plus 8 becomes 3 modulo 12.",
+        "original_description": "system of algebraic operations defined for remainders under division by a fixed positive integer; system of arithmetic for integers, where numbers \"wrap around\" upon reaching a certain value—the modulus",
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "The entry concerns arithmetic congruences of integers.",
+            "source_ids": [
+              "science-054"
+            ],
+            "target_id": "local:authored:000602",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "idea"
+      },
+      "id": "Q319400",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:39:00Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://mathworld.wolfram.com/ModularArithmetic.html",
+          "id": "science-054",
+          "inspected_at": "2026-10-09T04:39:00Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Clock arithmetic and examples, lines 13-20",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:39:00Z",
+          "revision": null,
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Modular Arithmetic - Wolfram MathWorld",
+          "tool_refs": [
+            "turn694view3"
+          ],
+          "url": "https://mathworld.wolfram.com/ModularArithmetic.html",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_random"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Monsoon"
+        ],
+        "card": "A monsoon is a seasonal wind shift; uneven heating of land and water helps bring alternating wet and dry seasons.",
+        "card_version": 1,
+        "domains": [
+          "Earth & environment"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "What Causes a Monsoon?, lines 20-30",
+            "note": "The explanation distinguishes seasonal winds from rainfall alone.",
+            "source_id": "science-023"
+          }
+        ],
+        "id": "Q42967",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q42967"
+        ],
+        "imported_records": [
+          {
+            "description": "seasonal changes in atmospheric circulation and precipitation associated with the asymmetric heating of land and sea",
+            "index": 23903,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q42967",
+            "source_revision": 2553056321,
+            "source_url": "https://www.wikidata.org/wiki/Q42967",
+            "topic": "Monsoon"
+          }
+        ],
+        "label": "Monsoon",
+        "learning_takeaway": "Seasonal land-water temperature differences shift winds, producing wet or dry monsoon seasons.",
+        "original_description": "seasonal changes in atmospheric circulation and precipitation associated with the asymmetric heating of land and sea",
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "NOAA explains a physical atmospheric seasonal process.",
+            "source_ids": [
+              "science-023"
+            ],
+            "target_id": "local:authored:000630",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "idea"
+      },
+      "id": "Q42967",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:30:45Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://www.nesdis.noaa.gov/about/k-12-education/severe-weather/what-monsoon",
+          "id": "science-023",
+          "inspected_at": "2026-10-09T04:30:45Z",
+          "inspection_mode": "web_open_text",
+          "locator": "What Causes a Monsoon?, lines 20-30",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:30:45Z",
+          "revision": "Published 2025-08-28",
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "What Is a Monsoon?",
+          "tool_refs": [
+            "turn600view1"
+          ],
+          "url": "https://www.nesdis.noaa.gov/about/k-12-education/severe-weather/what-monsoon",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_random"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Brown dwarf"
+        ],
+        "card": "Brown dwarfs form from collapsing gas but lack enough mass to sustain hydrogen fusion in their cores.",
+        "card_version": 1,
+        "domains": [
+          "Physics & astronomy"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Formation and hydrogen-fusion threshold, line 261",
+            "note": "The NASA article states both formation and the fusion distinction.",
+            "source_id": "science-062"
+          }
+        ],
+        "id": "Q101600",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q101600"
+        ],
+        "imported_records": [
+          {
+            "description": "type of substellar object larger than a gas giant",
+            "index": 2891,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q101600",
+            "source_revision": 2550978425,
+            "source_url": "https://www.wikidata.org/wiki/Q101600",
+            "topic": "Brown dwarf"
+          }
+        ],
+        "label": "Brown dwarf",
+        "learning_takeaway": "Brown dwarfs form from collapsing gas but lack enough mass to sustain hydrogen fusion in their cores.",
+        "original_description": "type of substellar object larger than a gas giant",
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "The source describes a class of celestial objects.",
+            "source_ids": [
+              "science-062"
+            ],
+            "target_id": "local:authored:000108",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "topic"
+      },
+      "id": "Q101600",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:39:00Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "budget_group": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs/",
+          "id": "science-062",
+          "inspected_at": "2026-10-09T04:39:00Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Formation and hydrogen-fusion threshold, line 261",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:39:00Z",
+          "revision": "Published and last updated 2026-10-08",
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "NASA’s SPHEREx Telescope Sees Menagerie of Brown Dwarfs",
+          "tool_refs": [
+            "turn698view0"
+          ],
+          "url": "https://www.nasa.gov/missions/spherex/nasas-spherex-telescope-sees-menagerie-of-brown-dwarfs/",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_random"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Transpiration"
+        ],
+        "card": "Transpiration releases water vapor from plants, often through leaf pores; some water taken up by roots travels through tissues before escaping.",
+        "card_version": 1,
+        "domains": [
+          "Biology & nature"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "What is transpiration?, lines 27-35",
+            "note": "The three listed steps connect roots, tissues and stomata.",
+            "source_id": "science-003"
+          }
+        ],
+        "id": "Q167980",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q167980"
+        ],
+        "imported_records": [
+          {
+            "description": "process of water moving through a plant and its evaporation from aerial parts",
+            "index": 762,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q167980",
+            "source_revision": 2517993942,
+            "source_url": "https://www.wikidata.org/wiki/Q167980",
+            "topic": "Transpiration"
+          }
+        ],
+        "label": "Transpiration",
+        "learning_takeaway": "Some water absorbed by roots travels through plant tissues and exits leaves through stomata as vapor.",
+        "original_description": "process of water moving through a plant and its evaporation from aerial parts",
+        "relations": [
+          {
+            "assertion": "source_asserted",
+            "note": "USGS explicitly places plant-to-atmosphere water transfer within its water-cycle treatment.",
+            "source_ids": [
+              "science-003"
+            ],
+            "target_id": "Q81041",
+            "type": "facet_of"
+          }
+        ],
+        "scope": "idea"
+      },
+      "id": "Q167980",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:30:45Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "additional_inspections": [
+            {
+              "inspected_at": "2026-10-09T04:50:08Z",
+              "inspection_mode": "web_open_text",
+              "locator": "Water-cycle title and evapotranspiration/transpiration discussion, lines 18-35",
+              "tool_refs": [
+                "turn704view2",
+                "turn705view0"
+              ]
+            }
+          ],
+          "budget_group": "https://www.usgs.gov/water-science-school/science/evapotranspiration-and-water-cycle",
+          "id": "science-003",
+          "inspected_at": "2026-10-09T04:30:45Z",
+          "inspection_mode": "web_open_text",
+          "locator": "What is transpiration?, lines 27-35",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:30:45Z",
+          "revision": "Published 2018-06-12",
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Evapotranspiration and the Water Cycle",
+          "tool_refs": [
+            "turn561view2",
+            "turn704view2",
+            "turn705view0"
+          ],
+          "url": "https://www.usgs.gov/water-science-school/science/evapotranspiration-and-water-cycle",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_random"
+    },
+    {
+      "card": {
+        "aliases": [
+          "Geyser"
+        ],
+        "card": "A geyser is a constricted hot spring; falling pressure lets hot water expand into steam, driving an eruption.",
+        "card_version": 1,
+        "domains": [
+          "Earth & environment"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Geysers, lines 69-72",
+            "note": "The passage contrasts freely circulating hot springs with erupting systems.",
+            "source_id": "science-022"
+          }
+        ],
+        "id": "Q83471",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q83471"
+        ],
+        "imported_records": [
+          {
+            "description": "hot spring characterized by intermittent discharge of water ejected turbulently and accompanied by steam",
+            "index": 24429,
+            "kind": "broad",
+            "source": "Wikidata",
+            "source_id": "Q83471",
+            "source_revision": 2546346433,
+            "source_url": "https://www.wikidata.org/wiki/Q83471",
+            "topic": "Geyser"
+          }
+        ],
+        "label": "Geyser",
+        "learning_takeaway": "Constrictions trap heated water until pressure drops and expanding steam drives a geyser eruption.",
+        "original_description": "hot spring characterized by intermittent discharge of water ejected turbulently and accompanied by steam",
+        "relations": [
+          {
+            "assertion": "source_asserted",
+            "note": "NPS explicitly identifies geysers as hot springs with constricted plumbing.",
+            "source_ids": [
+              "science-022"
+            ],
+            "target_id": "Q177380",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "idea"
+      },
+      "id": "Q83471",
+      "sources": [
+        {
+          "acquisition": {
+            "local_inspection_checkpoint": "2026-10-09T04:30:45Z",
+            "remote_retrieval_timestamp": null,
+            "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable."
+          },
+          "additional_inspections": [
+            {
+              "inspected_at": "2026-10-09T04:50:08Z",
+              "inspection_mode": "web_open_text",
+              "locator": "Geysers are hot springs with constrictions, lines 69-72",
+              "tool_refs": [
+                "turn716view2"
+              ]
+            }
+          ],
+          "budget_group": "https://www.nps.gov/yell/learn/nature/hydrothermal-features.htm",
+          "id": "science-022",
+          "inspected_at": "2026-10-09T04:30:45Z",
+          "inspection_mode": "web_open_text",
+          "locator": "Geysers, lines 69-72",
+          "retrieval_date": "2026-10-09",
+          "retrieved_at": "2026-10-09T04:30:45Z",
+          "revision": "Last updated 2025-04-17",
+          "time_basis": "UTC checkpoint recorded after actual web inspection; server acquisition timestamp unavailable.",
+          "title": "Hydrothermal Features - Yellowstone National Park",
+          "tool_refs": [
+            "turn600view2",
+            "turn716view2"
+          ],
+          "url": "https://www.nps.gov/yell/learn/nature/hydrothermal-features.htm",
+          "word_limit": 200
+        }
+      ],
+      "stratum": "follow_up_random"
+    }
+  ],
+  "schema_version": 1,
+  "seed": "otherwise-production001-batch009-expanded-science",
+  "selection_before_followup_inspection": true
+}

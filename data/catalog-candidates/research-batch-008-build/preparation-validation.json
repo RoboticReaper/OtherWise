@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "baseline_identity_count": 35743,
+  "canonical_redirects": 108,
+  "source_input_hashes_match": {
+    "data/catalog-candidates/research-batch-001.json": true,
+    "data/catalog-candidates/research-batch-002.json": true,
+    "data/catalog-candidates/scale-pilot-001/current.json": true,
+    "data/catalog-candidates/scale-pilot-001/revision-002/baseline-imported-records.json": true,
+    "data/catalog-candidates/scale-pilot-001/revision-002/baseline-index.json": true,
+    "data/catalog-candidates/scale-pilot-001/revision-002/catalog.json": true,
+    "data/catalog-candidates/scale-pilot-001/revision-002/completion-manifest.json": true,
+    "data/catalog-candidates/scale-pilot-001/revision-002/revision-lineage.json": true,
+    "data/discovery_graph.json": true,
+    "data/recommendation-identities.json": true,
+    "data/topics.json": true,
+    "recommendation_lab/inventory.py": true
+  },
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "assembly_unit_tests": {
+    "passed": 9,
+    "command": [
+      "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "data/catalog-candidates/research-batch-008-build/tools",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "log": "assembly-unit-tests.txt"
+  },
+  "research_status": "selection_in_progress",
+  "cards_authored": 0,
+  "next_gate": "Coordinator meaning reservations before card drafting"
+}

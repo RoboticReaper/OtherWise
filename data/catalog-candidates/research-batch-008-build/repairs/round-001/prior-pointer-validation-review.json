@@ -1,0 +1,16 @@
+{
+  "accepted_report_path": "data/catalog-candidates/research-batch-008-build/repairs/round-001/repaired-contract-validation.json",
+  "accepted_report_sha256": "624b4ed933c4682df781cf2469534af7eea146a7746911800b6da67154256aa6",
+  "affected_ids": [
+    "local:authored:000616",
+    "local:authored:000624",
+    "local:authored:000629"
+  ],
+  "initial_checker_assumption": "Prior full records must be embedded inline in each control decision.",
+  "initial_report_path": "data/catalog-candidates/research-batch-008-build/repairs/round-001/contract-validation-before-prior-pointer-review.json",
+  "observed_representation": "Exact pointers to complete prior records inside the frozen hash-checked baseline, with independently hash-checked original source bundle paths.",
+  "recorded_at": "2026-10-09T03:34:21.942738+00:00",
+  "resolution": "Check both inline full records and exact full-record pointers against baseline identities, prior indices, batch identities and versions. No card or source bundle was changed for this checker adjustment.",
+  "schema_version": 1,
+  "subject": "full prior-record retention validation"
+}

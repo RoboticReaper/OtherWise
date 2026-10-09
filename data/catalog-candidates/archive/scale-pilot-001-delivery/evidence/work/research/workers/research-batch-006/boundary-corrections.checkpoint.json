@@ -1,0 +1,1958 @@
+{
+  "status": "incremental_not_yet_final",
+  "original_candidate_sha256": "edbbaea2948ad1a1c019cbc24e443873e693614dc752e854b56fce212450499a",
+  "initial_independent_audit_sha256": "16eb446c46a18b266101596c6143a4ead8bd7a5e5e1c70dfa557c436c844af3a",
+  "reviewed_count": 200,
+  "source_changes": [
+    {
+      "source_id": "a09",
+      "exact_field_changes": [
+        {
+          "field_path": "inspection_note",
+          "old_value": "",
+          "new_value": "The structured object record identifies a 1965 lithograph. Gallery prose discusses drawing investigations but does not change this object’s medium."
+        },
+        {
+          "field_path": "locator",
+          "old_value": "Gallery label on chairs and negative space, lines 78–79",
+          "new_value": "Object header, lines 61–68; gallery label, lines 78–79; medium, line 88; object number, line 98"
+        },
+        {
+          "field_path": "object_date",
+          "old_present": false,
+          "new_value": "1965"
+        },
+        {
+          "field_path": "object_medium",
+          "old_present": false,
+          "new_value": "Lithograph"
+        },
+        {
+          "field_path": "object_number",
+          "old_present": false,
+          "new_value": "1625.1967"
+        },
+        {
+          "field_path": "object_title",
+          "old_present": false,
+          "new_value": "Chair (TAM.1558-II)"
+        },
+        {
+          "field_path": "title",
+          "old_value": "Ruth Asawa. Chair. c. 1963 — MoMA",
+          "new_value": "Ruth Asawa. Chair (TAM.1558-II). 1965 — MoMA"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "a09",
+          "reason": "Independent audit a09 dependency correction; same URL and reserved subject remain.",
+          "proof": {
+            "path": "source-acquisition/open-037.json",
+            "reference": "turn1231view0",
+            "locator": "Header 61–68; Medium 88; object 98",
+            "independent_dependency_report_sha256": "516a5afa3133dce375d1eb5aaa92f761b5752c4849128dfad8e4cc9dce28dcde"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "l01",
+      "exact_field_changes": [
+        {
+          "field_path": "displayed_revision_date",
+          "old_present": false,
+          "new_value": "2016-10-10"
+        },
+        {
+          "field_path": "displayed_revision_label",
+          "old_present": false,
+          "new_value": "Revised"
+        },
+        {
+          "field_path": "displayed_revision_locator",
+          "old_present": false,
+          "new_value": "Created/Revised header, line 42"
+        },
+        {
+          "field_path": "displayed_upload_date",
+          "old_present": false,
+          "new_value": "2014-04-23"
+        },
+        {
+          "field_path": "displayed_upload_label",
+          "old_present": false,
+          "new_value": "revised version; uploaded"
+        },
+        {
+          "field_path": "displayed_upload_locator",
+          "old_present": false,
+          "new_value": "Article title, line 38"
+        },
+        {
+          "field_path": "revision",
+          "old_value": "revised version uploaded 2014-04-23",
+          "new_value": null
+        },
+        {
+          "field_path": "revision_id",
+          "old_value": "revised version uploaded 2014-04-23",
+          "new_value": null
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "l01",
+          "reason": "An uploaded-date label is not an immutable revision ID.",
+          "proof": {
+            "path": "source-acquisition/open-026.json",
+            "locator": "Article title, line 38"
+          }
+        },
+        {
+          "source_id": "l01",
+          "reason": "The page title’s 2014 upload date and the header’s 2016 revised date are different metadata and must not be conflated.",
+          "proof": {
+            "path": "source-acquisition/open-026.json",
+            "locator": "Title and Created/Revised header, lines 38–42"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "l02",
+      "exact_field_changes": [
+        {
+          "field_path": "displayed_revision_date",
+          "old_present": false,
+          "new_value": "2014-04-19"
+        },
+        {
+          "field_path": "displayed_revision_label",
+          "old_present": false,
+          "new_value": "Revised"
+        },
+        {
+          "field_path": "displayed_revision_locator",
+          "old_present": false,
+          "new_value": "Created/Revised header, line 46"
+        },
+        {
+          "field_path": "inspection_files",
+          "old_value": [
+            "source-acquisition/open-026.json",
+            "source-acquisition/open-045.json"
+          ],
+          "new_value": [
+            "source-acquisition/open-026.json",
+            "source-acquisition/open-045.json",
+            "source-acquisition/boundary-open-001.json"
+          ]
+        },
+        {
+          "field_path": "inspection_reference",
+          "old_value": "turn1098view1; turn1373view1; source-acquisition/open-045.json; original persisted passage turn1077view0",
+          "new_value": "turn1098view1; turn1373view1; source-acquisition/open-045.json; original persisted passage turn1077view0; turn1449view0; source-acquisition/boundary-open-001.json"
+        },
+        {
+          "field_path": "retrieved_at",
+          "old_value": "2026-10-08T20:58:37.191527+00:00",
+          "new_value": "2026-10-08T21:40:18.633045+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "l02",
+          "reason": "Retain the displayed modification date separately; no immutable revision identifier was exposed.",
+          "proof": {
+            "path": "source-acquisition/boundary-open-001.json",
+            "reference": "turn1449view0",
+            "locator": "Created/Revised header, line 46"
+          }
+        },
+        {
+          "source_id": "l02",
+          "reason": "Preserve the new successful header inspection with its actual local-capture timestamp.",
+          "proof": {
+            "path": "source-acquisition/boundary-open-001.json",
+            "reference": "turn1449view0"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "l03",
+      "exact_field_changes": [
+        {
+          "field_path": "displayed_revision_date",
+          "old_present": false,
+          "new_value": "2014-04-18"
+        },
+        {
+          "field_path": "displayed_revision_label",
+          "old_present": false,
+          "new_value": "Revised"
+        },
+        {
+          "field_path": "displayed_revision_locator",
+          "old_present": false,
+          "new_value": "Created/Revised header, line 42"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "l03",
+          "reason": "Apply the same available-date labeling rule across the inspected handbook sources; do not invent an immutable revision identifier.",
+          "proof": {
+            "path": "source-acquisition/open-026.json",
+            "locator": "Created/Revised header, line 42"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "l04",
+      "exact_field_changes": [
+        {
+          "field_path": "displayed_revision_date",
+          "old_present": false,
+          "new_value": "2013-09-13"
+        },
+        {
+          "field_path": "displayed_revision_label",
+          "old_present": false,
+          "new_value": "Revised"
+        },
+        {
+          "field_path": "displayed_revision_locator",
+          "old_present": false,
+          "new_value": "Created/Revised header, line 42"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "l04",
+          "reason": "Apply the same available-date labeling rule across the inspected handbook sources; do not invent an immutable revision identifier.",
+          "proof": {
+            "path": "source-acquisition/open-026.json",
+            "locator": "Created/Revised header, line 42"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "l05",
+      "exact_field_changes": [
+        {
+          "field_path": "displayed_revision_date",
+          "old_present": false,
+          "new_value": "2013-04-16"
+        },
+        {
+          "field_path": "displayed_revision_label",
+          "old_present": false,
+          "new_value": "Revision from"
+        },
+        {
+          "field_path": "revision",
+          "old_value": "75 (2013-04-16)",
+          "new_value": "75"
+        },
+        {
+          "field_path": "revision_id",
+          "old_value": "75 (2013-04-16)",
+          "new_value": "75"
+        },
+        {
+          "field_path": "revision_id_basis",
+          "old_present": false,
+          "new_value": "Explicit revision identifier in the inspected /revisions/{id}/view.html URL"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "l05",
+          "reason": "Separate the real URL revision identifier from the displayed date.",
+          "proof": {
+            "path": "source-acquisition/open-027.json",
+            "locator": "Revision page title and exact URL"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "l06",
+      "exact_field_changes": [
+        {
+          "field_path": "displayed_revision_date",
+          "old_present": false,
+          "new_value": "2013-07-02"
+        },
+        {
+          "field_path": "displayed_revision_label",
+          "old_present": false,
+          "new_value": "Revision from"
+        },
+        {
+          "field_path": "revision",
+          "old_value": "59 (2013-07-02)",
+          "new_value": "59"
+        },
+        {
+          "field_path": "revision_id",
+          "old_value": "59 (2013-07-02)",
+          "new_value": "59"
+        },
+        {
+          "field_path": "revision_id_basis",
+          "old_present": false,
+          "new_value": "Explicit revision identifier in the inspected /revisions/{id}/view.html URL"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "l06",
+          "reason": "Separate the real URL revision identifier from the displayed date.",
+          "proof": {
+            "path": "source-acquisition/open-027.json",
+            "locator": "Revision page title and exact URL"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "l07",
+      "exact_field_changes": [
+        {
+          "field_path": "displayed_revision_date",
+          "old_present": false,
+          "new_value": "2014-01-24"
+        },
+        {
+          "field_path": "displayed_revision_label",
+          "old_present": false,
+          "new_value": "Revised"
+        },
+        {
+          "field_path": "displayed_revision_locator",
+          "old_present": false,
+          "new_value": "Created/Revised header, line 44"
+        },
+        {
+          "field_path": "inspection_files",
+          "old_value": [
+            "source-acquisition/open-027.json"
+          ],
+          "new_value": [
+            "source-acquisition/open-027.json",
+            "source-acquisition/boundary-open-001.json"
+          ]
+        },
+        {
+          "field_path": "inspection_reference",
+          "old_value": "turn1101view0",
+          "new_value": "turn1101view0; turn1449view1; source-acquisition/boundary-open-001.json"
+        },
+        {
+          "field_path": "retrieved_at",
+          "old_value": "2026-10-08T19:23:36.041834+00:00",
+          "new_value": "2026-10-08T21:40:18.633045+00:00"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "l07",
+          "reason": "Retain the displayed modification date separately; no immutable revision identifier was exposed.",
+          "proof": {
+            "path": "source-acquisition/boundary-open-001.json",
+            "reference": "turn1449view1",
+            "locator": "Created/Revised header, line 44"
+          }
+        },
+        {
+          "source_id": "l07",
+          "reason": "Preserve the new successful header inspection with its actual local-capture timestamp.",
+          "proof": {
+            "path": "source-acquisition/boundary-open-001.json",
+            "reference": "turn1449view1"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "l08",
+      "exact_field_changes": [
+        {
+          "field_path": "displayed_revision_date",
+          "old_present": false,
+          "new_value": "2013-02-18"
+        },
+        {
+          "field_path": "displayed_revision_label",
+          "old_present": false,
+          "new_value": "Revision from"
+        },
+        {
+          "field_path": "revision",
+          "old_value": "18 (2013-02-18)",
+          "new_value": "18"
+        },
+        {
+          "field_path": "revision_id",
+          "old_value": "18 (2013-02-18)",
+          "new_value": "18"
+        },
+        {
+          "field_path": "revision_id_basis",
+          "old_present": false,
+          "new_value": "Explicit revision identifier in the inspected /revisions/{id}/view.html URL"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "l08",
+          "reason": "Separate the real URL revision identifier from the displayed date.",
+          "proof": {
+            "path": "source-acquisition/open-027.json",
+            "locator": "Revision page title and exact URL"
+          }
+        }
+      ]
+    },
+    {
+      "source_id": "l09",
+      "exact_field_changes": [
+        {
+          "field_path": "displayed_revision_date",
+          "old_present": false,
+          "new_value": "2013-12-31"
+        },
+        {
+          "field_path": "displayed_revision_label",
+          "old_present": false,
+          "new_value": "Revised"
+        },
+        {
+          "field_path": "displayed_revision_locator",
+          "old_present": false,
+          "new_value": "Created/Revised header, line 42"
+        }
+      ],
+      "evidence": [
+        {
+          "source_id": "l09",
+          "reason": "Apply the same available-date labeling rule across the inspected handbook sources; do not invent an immutable revision identifier.",
+          "proof": {
+            "path": "source-acquisition/open-027.json",
+            "locator": "Created/Revised header, line 42"
+          }
+        }
+      ]
+    }
+  ],
+  "concept_changes": [
+    {
+      "id": "local:catalog:janissary-corps",
+      "label": "Janissary corps",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "The Janissaries were an elite Ottoman infantry corps and household guard. Recruits trained for service to the ruler, including boys taken through devshirme. Building such a force helped the state reduce its dependence on military support from hereditary nobles and their followers.",
+          "new_value": "The Janissaries were an elite Ottoman infantry corps and household guard. Recruits trained for service to the ruler, including boys taken through devshirme. The sultans intended this force to reduce dependence on hereditary nobles, expecting recruits’ status and privileges to bind them to the ruler."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:janissary-corps",
+          "field": "card",
+          "reason": "Distinguish the rulers’ stated intention and expectation from a demonstrated institutional outcome.",
+          "source_ids": [
+            "h13"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:mansabdari-system",
+      "label": "Mansabdari system",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Akbar tied administrators’ rank and cavalry responsibilities to reassigned revenue allocations, limiting independent hereditary power.",
+          "new_value": "Under Akbar, administrators’ ranks combined civil service and cavalry responsibilities with revenue allocations that could be reassigned."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:mansabdari-system",
+          "field": "learning_takeaway",
+          "reason": "Retain the documented arrangements without adding an unmeasured political-power effect.",
+          "source_ids": [
+            "h15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:haitian-revolution",
+      "label": "Haitian Revolution",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "The Haitian Revolution began in a society built on plantation slavery and led to an independent state. Its consequences extended beyond the island: foreign governments’ recognition and policies were shaped by their own interests in slavery, trade and the wider Atlantic political order.",
+          "new_value": "The Haitian Revolution arose in a colony built on plantation slavery and led to independence. U.S. responses varied as leaders weighed slavery concerns, trade and relations with France. Official U.S. recognition came only in 1862, illustrating the distinction between achieving independence and receiving foreign recognition."
+        },
+        {
+          "field_path": "evidence/0/note",
+          "old_value": "Revolt, independence and foreign slaveholding interests are documented.",
+          "new_value": "The account documents the slave revolt, independence, changing U.S. policies and delayed U.S. recognition in 1862."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "An uprising against plantation slavery developed into independence, while foreign governments’ recognition remained constrained by their own slaveholding interests.",
+          "new_value": "An uprising against plantation slavery led to independence, while U.S. policy and delayed recognition reflected shifting concerns about slavery, trade and diplomacy."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:haitian-revolution",
+          "field": "learning_takeaway",
+          "reason": "Bound the foreign-policy explanation to the U.S. case documented in detail.",
+          "source_ids": [
+            "h19"
+          ]
+        },
+        {
+          "id": "local:catalog:haitian-revolution",
+          "field": "card",
+          "reason": "Do not generalize one government’s motives to all foreign governments; dates and changing U.S. policies are explicit.",
+          "source_ids": [
+            "h19"
+          ]
+        },
+        {
+          "id": "local:catalog:haitian-revolution",
+          "field": "evidence",
+          "reason": "Align the claim-support note with the narrowed or more precisely attributed revised wording.",
+          "source_ids": [
+            "h19"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:tudor-london-cookshops",
+      "label": "Tudor London cookshops",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Tudor Londoners could buy prepared hot food from cookshops, an important service in a crowded city where some homes lacked adequate cooking facilities. Commercial ovens made meals available outside the household. Eating out therefore answered practical needs as well as offering a change of setting.",
+          "new_value": "Tudor Londoners could buy prepared hot food from cookshops, especially when cramped homes lacked cooking facilities. Commercial ovens supplied ready-to-eat meals outside the household. The museum notes that evidence about the exact meals and their customers is limited, preserving uncertainty alongside the practical explanation."
+        },
+        {
+          "field_path": "evidence/0/note",
+          "old_value": "Commercial ovens and homes lacking cooking facilities support the practical explanation.",
+          "new_value": "The museum describes commercial ovens serving households without cooking facilities and explicitly notes limited evidence for exact menus and clientele."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:tudor-london-cookshops",
+          "field": "card",
+          "reason": "Remove an unsupported leisure-motive gloss and retain the source’s explicit limits on menus and clientele.",
+          "source_ids": [
+            "h23"
+          ]
+        },
+        {
+          "id": "local:catalog:tudor-london-cookshops",
+          "field": "evidence",
+          "reason": "Align the claim-support note with the narrowed or more precisely attributed revised wording.",
+          "source_ids": [
+            "h23"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:hanseatic-kontor",
+      "label": "Hanseatic kontor",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "A Hanseatic kontor was an overseas trading establishment where merchants organized commercial activity and maintained privileges. At Bryggen, warehouses and living quarters preserve evidence of this arrangement. The built setting shows how trade depended on durable institutions as well as ships and individual bargains.",
+          "new_value": "A Hanseatic kontor was an overseas trading establishment where merchants organized commercial activity and maintained privileges. At Bryggen, warehouses and living quarters preserve evidence of this arrangement. The built setting offers a case for studying how trading institutions organized commerce and merchant life."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:hanseatic-kontor",
+          "field": "card",
+          "reason": "Frame the general institutional lesson as a case for study, rather than a universal causal necessity for trade.",
+          "source_ids": [
+            "h27"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:chinese-imperial-examinations",
+      "label": "Chinese imperial examinations",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Chinese imperial examinations made mastery of literary and Confucian learning a route toward government service. The system connected education with official status, but success was difficult and most candidates never gained office. Studying the examinations reveals both opportunities for advancement and strong limits on access.",
+          "new_value": "Chinese imperial examinations linked literary and Confucian learning with entry into government. In the Song period, growing candidate numbers competed for limited posts, and most never became officials. This example exposes both a route to advancement and strong constraints on success."
+        },
+        {
+          "field_path": "evidence/0/note",
+          "old_value": "Literary curriculum, official recruitment and low candidate success are explicit.",
+          "new_value": "The Song-specific discussion connects literary/Confucian examinations with fixed available posts, growing candidate numbers and widespread failure to obtain office."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Success in literary and Confucian examinations became a route into government, although most candidates never obtained office.",
+          "new_value": "In the Song case, literary and Confucian examinations offered a route into government, but most candidates never became officials."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:chinese-imperial-examinations",
+          "field": "learning_takeaway",
+          "reason": "The low-success evidence is specifically about Song-era candidates.",
+          "source_ids": [
+            "h25"
+          ]
+        },
+        {
+          "id": "local:catalog:chinese-imperial-examinations",
+          "field": "card",
+          "reason": "Keep the quantified/general success claim within the period actually described.",
+          "source_ids": [
+            "h25"
+          ]
+        },
+        {
+          "id": "local:catalog:chinese-imperial-examinations",
+          "field": "evidence",
+          "reason": "Align the claim-support note with the narrowed or more precisely attributed revised wording.",
+          "source_ids": [
+            "h25"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:ma-huan",
+      "label": "Ma Huan",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Ma Huan, a Muslim translator, accompanied Zheng He’s fourth voyage. His participation draws attention to the knowledge needed to travel through diverse ports and communities. Imperial expeditions depended on people able to interpret languages and encounters, alongside the more visible work of sailors and commanders.",
+          "new_value": "Ma Huan was a Muslim translator and chronicler who joined Zheng He’s fourth voyage. His role puts written observation alongside travel through foreign ports. As a learning case, it invites attention to the people who recorded and interpreted encounters during imperial expeditions."
+        },
+        {
+          "field_path": "evidence/0/note",
+          "old_value": "The fourth-voyage account identifies Ma Huan and his translator role.",
+          "new_value": "The fourth-voyage paragraph identifies Ma Huan as a Muslim translator and the voyages’ main chronicler."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:ma-huan",
+          "field": "card",
+          "reason": "Use the documented translator/chronicler role and mark the broader lesson as an invitation rather than a universal dependency claim.",
+          "source_ids": [
+            "h26"
+          ]
+        },
+        {
+          "id": "local:catalog:ma-huan",
+          "field": "evidence",
+          "reason": "Align the claim-support note with the narrowed or more precisely attributed revised wording.",
+          "source_ids": [
+            "h26"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:dasymetric-mapping",
+      "label": "Dasymetric mapping",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Dasymetric mapping uses additional information to redistribute an aggregate quantity within reporting areas. Population, for example, can be allocated away from places known to be uninhabited. The resulting map improves on treating every part of a census unit as if it had uniform density.",
+          "new_value": "Dasymetric mapping uses additional information to redistribute an aggregate quantity within reporting areas. Population can be allocated away from places identified as uninhabited. The method replaces a uniform-density assumption with a distribution informed by ancillary data, so the result depends on that information."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:dasymetric-mapping",
+          "field": "card",
+          "reason": "Avoid turning the reported performance of one USGS tool into an unconditional accuracy guarantee for the general method.",
+          "source_ids": [
+            "g07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:travel-time-service-area",
+      "label": "Travel-time service area",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "A reachable area follows paths and travel costs in a network, so it differs from a circle drawn at a fixed distance.",
+          "new_value": "A reachable area follows network paths and travel costs, so it need not match a circle drawn at a fixed distance."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:travel-time-service-area",
+          "field": "learning_takeaway",
+          "reason": "Preserve the method distinction without claiming the resulting shapes must always differ.",
+          "source_ids": [
+            "g08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:puja",
+      "label": "Puja",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Offerings, images and acts of hospitality create a ritual encounter with a deity; the details vary among Hindu communities.",
+          "new_value": "Offerings and visual interaction with deity images are common elements of Hindu puja; practices vary with the deity and community."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:puja",
+          "field": "learning_takeaway",
+          "reason": "Remove the unsupported hospitality gloss from the takeaway; the inspected case describes images, offerings and variation.",
+          "source_ids": [
+            "r01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:prasad",
+      "label": "Prasad",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Food or other offerings made to a deity can be shared with worshippers, connecting divine hospitality with communal receipt.",
+          "new_value": "Offerings made to a deity can later be shared among worshippers, connecting devotion with communal distribution."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:prasad",
+          "field": "learning_takeaway",
+          "reason": "Remove divine hospitality as an added interpretation not stated in the inspected passage.",
+          "source_ids": [
+            "r01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:wudu",
+      "label": "Wudu",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Wudu is ritual washing associated with preparation for Muslim prayer. Bodily actions help mark the transition into salat rather than functioning only as ordinary cleaning. Studying this preparation shows how a religious practice can organize attention and conduct before the prayer itself begins.",
+          "new_value": "Wudu is ritual washing associated with preparation for Muslim prayer. It belongs to the sequence leading into salat rather than functioning only as ordinary cleaning. An editorial comparison can consider how this bodily preparation marks the transition into formal prayer."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:wudu",
+          "field": "card",
+          "reason": "Replace an unmarked claim about organizing attention with an explicitly editorial comparison of the documented ritual sequence.",
+          "source_ids": [
+            "r02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:mikveh",
+      "label": "Mikveh",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "A mikveh is a Jewish ritual bath whose requirements can shape substantial communal architecture. Cologne’s medieval example descends about sixteen meters to groundwater and stood within a Jewish quarter. It makes the relationship between religious practice, water and the built environment unusually tangible.",
+          "new_value": "A mikveh is a Jewish ritual bath. Cologne’s medieval example descends about sixteen meters to groundwater and stood within a Jewish quarter. This named case offers a way to examine religious practice, access to water and communal architecture together without assuming every bath has the same design."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Jewish ritual bathing can shape substantial communal architecture, as Cologne’s medieval bath descends deep enough to reach groundwater.",
+          "new_value": "A Jewish ritual bath can be studied through its built setting; Cologne’s medieval mikveh reaches groundwater deep beneath the former Jewish quarter."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:mikveh",
+          "field": "learning_takeaway",
+          "reason": "The museum documents the bath and groundwater, not a general account of ritual requirements causing its design.",
+          "source_ids": [
+            "r07"
+          ]
+        },
+        {
+          "id": "local:catalog:mikveh",
+          "field": "card",
+          "reason": "Remove the unsupported general requirements-to-architecture explanation and preserve the specific observed case.",
+          "source_ids": [
+            "r07"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:omamori",
+      "label": "Omamori",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "A portable shrine amulet is selected for a particular request and carried as an expression of a kami’s protection.",
+          "new_value": "A portable shrine amulet is often selected for a particular request and carried as an expression of a kami’s protection."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:omamori",
+          "field": "learning_takeaway",
+          "reason": "Retain the source’s typical-practice qualification rather than making selection purpose universal.",
+          "source_ids": [
+            "r08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:lectio-divina",
+      "label": "Lectio divina",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Lectio divina is prayerful engagement with scripture through reading, meditation, prayer and contemplation. In the Catholic account cited here, the movement also leads toward action. The aim is not merely to extract information from a passage, but to let attentive reading shape religious life.",
+          "new_value": "Lectio divina is prayerful engagement with scripture through reading, meditation, prayer and contemplation. In the Catholic account cited here, the practice is intended to lead toward action. Its aim is to let attentive reading shape religious life, rather than merely extracting information from a passage."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:lectio-divina",
+          "field": "card",
+          "reason": "Distinguish the account’s intended religious consequence from a guaranteed change in behavior.",
+          "source_ids": [
+            "r14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:focalization",
+      "label": "Focalization",
+      "old_version": 2,
+      "new_version": 3,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l01",
+        "l08"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:unreliable-narration",
+      "label": "Unreliable narration",
+      "old_version": 2,
+      "new_version": 3,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l09"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:homodiegetic-narrator",
+      "label": "Homodiegetic narrator",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l01"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:heterodiegetic-narrator",
+      "label": "Heterodiegetic narrator",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l01",
+        "l08"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:narrative-levels",
+      "label": "Narrative levels",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l01"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:singulative-narration",
+      "label": "Singulative narration",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l02"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:iterative-narration",
+      "label": "Iterative narration",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l02"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:repetitive-narration",
+      "label": "Repetitive narration",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Repetitive narration recounts more than once an event that happened once. The repetition lies in the telling rather than in the occurrence. Recognizing this relation prevents a reader from treating several accounts of one event as evidence that the event itself happened several times.",
+          "new_value": "Repetitive narration recounts more than once an event that happened once. The repetition belongs to the telling, not to the occurrence. Separating those counts distinguishes several accounts of one event from a story in which similar events happen repeatedly."
+        }
+      ],
+      "affected_source_bundles": [
+        "l02"
+      ],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:repetitive-narration",
+          "field": "card",
+          "reason": "State the analytic distinction without promising that recognizing it prevents a particular reader error.",
+          "source_ids": [
+            "l02"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:tellability",
+      "label": "Tellability",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l03"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:narrative-eventfulness",
+      "label": "Narrative eventfulness",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l04"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:implied-author",
+      "label": "Implied author",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l05",
+        "l06"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:implied-reader",
+      "label": "Implied reader",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l06"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:metafiction",
+      "label": "Metafiction",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l07"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:metanarration",
+      "label": "Metanarration",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l07"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:narrative-paralepsis",
+      "label": "Narrative paralepsis",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Narrative paralepsis gives information that exceeds the focalization norm established by a particular text. The exception matters because readers have learned what that narrative ordinarily permits them to know. Identifying it requires attention to the work’s own pattern rather than a universal rule about plausible knowledge.",
+          "new_value": "Narrative paralepsis supplies information that exceeds a particular text’s established focalization norm. The exception is defined against the work’s own pattern of disclosure. Identifying it therefore requires attention to narrative coherence rather than a universal rule about what a narrator could plausibly know."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "A narrative can reveal information beyond its established focalization norm, making an exceptional disclosure meaningful.",
+          "new_value": "A narrative can reveal information beyond its established focalization norm; identifying this excess depends on the particular text."
+        }
+      ],
+      "affected_source_bundles": [
+        "l08"
+      ],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:narrative-paralepsis",
+          "field": "learning_takeaway",
+          "reason": "Remove an unmarked assertion about how meaningful the disclosure becomes for readers.",
+          "source_ids": [
+            "l08"
+          ]
+        },
+        {
+          "id": "local:catalog:narrative-paralepsis",
+          "field": "card",
+          "reason": "Keep Genette’s text-specific informational norm without asserting what every reader has learned.",
+          "source_ids": [
+            "l08"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:anaphora-rhetoric",
+      "label": "Anaphora (rhetoric)",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Repeating initial words across phrases or lines builds rhythmic and emotional accumulation.",
+          "new_value": "Repeating initial words across phrases or lines can build rhythmic and emotional accumulation."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:anaphora-rhetoric",
+          "field": "learning_takeaway",
+          "reason": "Retain the source’s can qualification for rhetorical effects.",
+          "source_ids": [
+            "l17"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:apostrophe-rhetoric",
+      "label": "Apostrophe (rhetoric)",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l06"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:their-eyes-were-watching-god",
+      "label": "Their Eyes Were Watching God",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [],
+      "affected_source_bundles": [
+        "l01"
+      ],
+      "boundary_review_completed": true,
+      "reasons": []
+    },
+    {
+      "id": "local:catalog:fahrenheit-451",
+      "label": "Fahrenheit 451",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Fahrenheit 451 follows a book-burning fireman whose allegiance changes as he begins reading. Its major sections end in increasingly expansive fires, while a community of readers preserves books through memory. The novel connects destruction of texts with the fragile human practices that can carry them forward.",
+          "new_value": "Fahrenheit 451 follows a book-burning fireman whose allegiance changes as he begins reading. Its major sections end in increasingly expansive fires, while a community of readers preserves books through memory. An editorial reading connects these elements with the vulnerability of cultural memory."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:fahrenheit-451",
+          "field": "card",
+          "reason": "Mark the added thematic synthesis separately from the guide’s documented plot and section structure.",
+          "source_ids": [
+            "l25"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:walden",
+      "label": "Walden",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Walden recounts Thoreau’s time living by Walden Pond and has inspired readers to reconsider conventional society. The account makes a particular withdrawal into a literary challenge about how to live. Its continuing influence comes partly from turning a situated experiment into questions later readers can reconsider.",
+          "new_value": "Walden recounts Thoreau’s time living by Walden Pond and has inspired readers to reconsider conventional society. An editorial reading treats the account as an experiment in ways of living. That interpretation invites reflection without claiming to establish why the book’s influence has endured."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Thoreau’s account of life by Walden Pond makes withdrawal from conventional society a literary experiment in how to live.",
+          "new_value": "Thoreau’s account of life by Walden Pond invites an editorial reading of withdrawal from conventional society as an experiment in ways of living."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:walden",
+          "field": "card",
+          "reason": "Remove the unsupported causal explanation of continuing influence; label the reading editorial.",
+          "source_ids": [
+            "l25"
+          ]
+        },
+        {
+          "id": "local:catalog:walden",
+          "field": "learning_takeaway",
+          "reason": "Mark the interpretive point editorial while retaining documented residence and influence.",
+          "source_ids": [
+            "l25"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:sestina-altaforte",
+      "label": "Sestina: Altaforte",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "In Sestina: Altaforte, Ezra Pound adopts the voice of a troubadour-warrior praising combat. Repeated end-words recur in changing contexts, giving the dramatic monologue its formal intensity. The poem shows how a fixed pattern can reinforce a forceful and unsettling speaking persona.",
+          "new_value": "In Sestina: Altaforte, Ezra Pound adopts the voice of a troubadour-warrior praising combat. The poem’s end-words recur in changing contexts. An editorial reading hears that recurrence intensifying the speaker’s fervor, while keeping the dramatic persona distinct from the poet."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Pound uses a troubadour-warrior’s voice and recurring end-words to intensify a dramatic monologue praising combat.",
+          "new_value": "Pound adopts a troubadour-warrior’s voice and recurring end-words; an editorial reading hears their repetition intensifying the monologue’s praise of combat."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:sestina-altaforte",
+          "field": "learning_takeaway",
+          "reason": "Separate documented persona and formal recurrence from the author’s intensity reading.",
+          "source_ids": [
+            "l10"
+          ]
+        },
+        {
+          "id": "local:catalog:sestina-altaforte",
+          "field": "card",
+          "reason": "Mark the added aesthetic-effect interpretation rather than presenting it as a measured or universal effect.",
+          "source_ids": [
+            "l10"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:the-red-wheelbarrow",
+      "label": "The Red Wheelbarrow",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "William Carlos Williams’s The Red Wheelbarrow breaks familiar compound words across short lines. The visible divisions slow the presentation of ordinary objects. One editorial reading treats that pacing as a way of renewing attention to a scene that might otherwise pass unnoticed.",
+          "new_value": "William Carlos Williams’s The Red Wheelbarrow breaks familiar compound words across short lines. An editorial reading treats those divisions as an invitation to slow down and attend to ordinary objects. The visible lineation supports that reading without making it the poem’s only possible effect."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Williams’s short lines split ordinary compound words, making the placement of everyday objects inseparable from the poem’s pacing.",
+          "new_value": "Williams splits compound words across short lines; an editorial reading interprets that lineation as shaping pacing and attention."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:the-red-wheelbarrow",
+          "field": "learning_takeaway",
+          "reason": "Formal observation and proposed effect must remain distinct in the takeaway as well as the card.",
+          "source_ids": [
+            "l11"
+          ]
+        },
+        {
+          "id": "local:catalog:the-red-wheelbarrow",
+          "field": "card",
+          "reason": "Do not assert slowed reading as a guaranteed effect before marking the subsequent interpretation editorial.",
+          "source_ids": [
+            "l11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:we-real-cool",
+      "label": "We Real Cool",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "In We Real Cool, Gwendolyn Brooks repeatedly places the collective pronoun at line endings before the poem concludes with death. An editorial reading hears group bravado meeting a sudden limit. The formal pattern makes the relation between a shared voice and its ending available for interpretation.",
+          "new_value": "In We Real Cool, Gwendolyn Brooks repeatedly places the collective pronoun at line endings before the poem’s final reference to death. An editorial reading hears group bravado meeting a sudden limit. The formal pattern makes the relation between a shared voice and its ending available for interpretation."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Brooks places the repeated group pronoun at line endings, joining collective self-assertion to a rhythm that stops with mortality.",
+          "new_value": "Brooks places a collective pronoun at line endings; an editorial reading connects the recurring group voice with the poem’s final reference to death."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:we-real-cool",
+          "field": "learning_takeaway",
+          "reason": "Make the self-assertion/mortality reading explicit as interpretation rather than a formal fact.",
+          "source_ids": [
+            "l11"
+          ]
+        },
+        {
+          "id": "local:catalog:we-real-cool",
+          "field": "card",
+          "reason": "The text refers to death; it does not literally narrate an on-page death event.",
+          "source_ids": [
+            "l11"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:agha-shahid-ali",
+      "label": "Agha Shahid Ali",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Agha Shahid Ali promoted English ghazals that retained the form’s autonomous couplets and shared rhyme-and-refrain structure. His advocacy resisted treating the name as sufficient. It made adaptation a question of which formal relationships a poem preserves when it moves between languages.",
+          "new_value": "Agha Shahid Ali helped bring the classical ghazal into English-language poetry and edited Ravishing DisUnities. The Academy’s account emphasizes his understanding of autonomous couplets and the anthology’s varied formal fidelity. His work offers a case for studying poetic adaptation across languages."
+        },
+        {
+          "field_path": "evidence/0/note",
+          "old_value": "The glossary describes his advocacy and classical-form emphasis.",
+          "new_value": "The glossary identifies Ali’s classical-ghazal advocacy, autonomous-couplet comparison and editorship of Ravishing DisUnities; it notes varied formal fidelity in the anthology."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Ali advocated English ghazals that retain autonomous couplets and shared rhyme-refrain patterns instead of merely borrowing the name.",
+          "new_value": "Ali promoted the traditional ghazal in English through poetry and anthology editorship, emphasizing the autonomy of its couplets."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:agha-shahid-ali",
+          "field": "learning_takeaway",
+          "reason": "Remove a stronger assertion about rejecting mere use of the name that the inspected passage does not expressly establish.",
+          "source_ids": [
+            "l15"
+          ]
+        },
+        {
+          "id": "local:catalog:agha-shahid-ali",
+          "field": "card",
+          "reason": "Retain documented activity and attributed emphasis without inferring an unquoted polemical position.",
+          "source_ids": [
+            "l15"
+          ]
+        },
+        {
+          "id": "local:catalog:agha-shahid-ali",
+          "field": "evidence",
+          "reason": "Align the claim-support note with the narrowed or more precisely attributed revised wording.",
+          "source_ids": [
+            "l15"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:one-art",
+      "label": "One Art",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Bishop’s villanelle expands from minor misplaced objects to personal loss, making its repeated assurance increasingly difficult for the speaker to sustain.",
+          "new_value": "Bishop’s villanelle moves from small losses toward personal loss; an editorial reading hears increasing strain in its repeated assurance."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:one-art",
+          "field": "learning_takeaway",
+          "reason": "The increasing-strain interpretation must be labeled editorial in both takeaway and card.",
+          "source_ids": [
+            "l26",
+            "l12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:sugar-lift-etching",
+      "label": "Sugar-lift etching",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "A water-soluble sugar drawing beneath a varnish ground lifts away in water, exposing drawn areas for subsequent aquatint and etching.",
+          "new_value": "A water-soluble sugar drawing beneath a varnish ground lifts away in water, exposing drawn areas for etching, often after aquatint."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:sugar-lift-etching",
+          "field": "learning_takeaway",
+          "reason": "The Princeton entry makes aquatint optional rather than obligatory.",
+          "source_ids": [
+            "a01"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:cliche-verre",
+      "label": "Cliché-verre",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "A drawn, painted or scratched glass plate becomes a negative when placed over light-sensitive paper and exposed to light.",
+          "new_value": "A drawn, painted or scratched glass plate acts as a negative for exposing light-sensitive paper."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:cliche-verre",
+          "field": "learning_takeaway",
+          "reason": "The marked plate functions as the negative; placing it on paper does not itself turn the plate into a photographic negative.",
+          "source_ids": [
+            "a04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:photogram",
+      "label": "Photogram",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "A photogram is made by placing objects on light-sensitive paper and exposing it directly. Opaque objects shield areas that remain light, while translucent ones can produce intermediate tones. The image records differences in light transmission and contact rather than a camera’s view of a scene.",
+          "new_value": "A photogram places objects on light-sensitive paper and exposes it directly. In the process described here, opaque objects leave light areas while translucent ones can produce intermediate tones. The image records contact and light transmission rather than a camera’s view of a scene."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Objects laid on photosensitive paper control exposure directly: opaque areas stay light, while translucent objects produce intermediate tones.",
+          "new_value": "In the described paper process, opaque objects leave light areas while translucent objects can yield intermediate tones during direct exposure."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:photogram",
+          "field": "learning_takeaway",
+          "reason": "Keep the tonal description within the paper process documented by the V&A, rather than every possible photogram material.",
+          "source_ids": [
+            "a04"
+          ]
+        },
+        {
+          "id": "local:catalog:photogram",
+          "field": "card",
+          "reason": "Bound the tonal claims to the described process while retaining the camera-free mechanism.",
+          "source_ids": [
+            "a04"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:fresco-a-secco",
+      "label": "Fresco a secco",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Fresco a secco applies paint to a dry wall surface, distinguishing it from wet-plaster buon fresco.",
+          "new_value": "Fresco a secco applies paint to a dry plaster surface, contrasting with buon fresco on wet plaster."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:fresco-a-secco",
+          "field": "learning_takeaway",
+          "reason": "Specify the plaster support rather than any dry wall material.",
+          "source_ids": [
+            "a03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:giornata",
+      "label": "Giornata",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "A fresco painter lays only the area of fresh finishing plaster that can be painted that day, dividing the work into daily sections.",
+          "new_value": "A fresco painter prepares fresh finishing plaster in daily working sections sized to what can be painted while the surface remains workable."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:giornata",
+          "field": "learning_takeaway",
+          "reason": "Describe the planning constraint without implying every prepared section is necessarily completed on schedule.",
+          "source_ids": [
+            "a03"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:negative-space",
+      "label": "Negative space",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Negative space is the area around or between depicted forms that helps shape a composition. In Ruth Asawa’s Chair, unmarked gaps also suggest chairs among dense patterned marks. Attending to these spaces shows how an image can describe an object through what the artist leaves open.",
+          "new_value": "Negative space is the area around or between depicted forms that helps shape a composition. In Ruth Asawa’s 1965 lithograph Chair, unmarked gaps suggest chairs among patterned marks. These spaces show how an image can describe an object through areas left open."
+        },
+        {
+          "field_path": "evidence/0/locator",
+          "old_value": "Gallery label, lines 78–79",
+          "new_value": "Object header, lines 61–68; gallery label, lines 78–79; medium, line 88; object number, line 98"
+        },
+        {
+          "field_path": "evidence/0/note",
+          "old_value": "Asawa’s unmarked chair shapes support the compositional meaning.",
+          "new_value": "Object header identifies the 1965 lithograph; the gallery label describes five patterned chairs and two additional negative-space chairs."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Unmarked areas around or within depicted forms can actively describe an object, as blank chair shapes do among the marks in Asawa’s drawing.",
+          "new_value": "Unmarked areas around or within depicted forms can describe an object, as blank chair shapes do in Ruth Asawa’s 1965 lithograph Chair (TAM.1558-II)."
+        },
+        {
+          "field_path": "relations/0/note",
+          "old_value": "The museum label explicitly identifies negative-space chairs within this drawing.",
+          "new_value": "The museum label identifies negative-space chairs in the work catalogued as the 1965 lithograph Chair (TAM.1558-II)."
+        }
+      ],
+      "affected_source_bundles": [
+        "a09"
+      ],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:negative-space",
+          "field": "learning_takeaway",
+          "reason": "Correct the medium without changing the negative-space meaning.",
+          "source_ids": [
+            "a09"
+          ]
+        },
+        {
+          "id": "local:catalog:negative-space",
+          "field": "card",
+          "reason": "Correct the named example’s date and medium; retain the supported compositional mechanism.",
+          "source_ids": [
+            "a09"
+          ]
+        },
+        {
+          "id": "local:catalog:negative-space",
+          "field": "relations",
+          "reason": "Correct drawing description while preserving the source-asserted relation.",
+          "source_ids": [
+            "a09"
+          ]
+        },
+        {
+          "id": "local:catalog:negative-space",
+          "field": "evidence",
+          "reason": "Include identity and medium fields alongside the interpretive gallery passage.",
+          "source_ids": [
+            "a09"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:trompe-loeil",
+      "label": "Trompe-l’oeil",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Trompe-l’oeil aims to make a painted representation appear to be the object itself. The illusion draws attention to the boundary between an image and what it depicts. Its point is not simply realistic detail, but the possibility of momentarily mistaking the represented thing for a present one.",
+          "new_value": "Trompe-l’oeil aims to make a painted representation appear to be the object itself. The term describes a potential illusion rather than realism alone: a viewer may momentarily mistake a depicted object for something physically present."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:trompe-loeil",
+          "field": "card",
+          "reason": "Retain the source’s illusion definition without claiming the illusion necessarily draws attention to image/object boundaries.",
+          "source_ids": [
+            "a12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:chair-by-ruth-asawa",
+      "label": "Chair by Ruth Asawa",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Ruth Asawa’s Chair lets furniture emerge from dense patterned marks and from unmarked areas between them. Some chairs are constructed through the ink; others appear through its absence. The drawing makes a familiar object a case for examining how a composition uses positive and negative areas together.",
+          "new_value": "Ruth Asawa’s 1965 lithograph Chair (TAM.1558-II) lets furniture emerge from patterned marks and from unmarked areas between them. Some chairs appear through the marks; others through their absence. The work offers a case for examining how positive and negative areas organize a composition."
+        },
+        {
+          "field_path": "evidence/0/locator",
+          "old_value": "Gallery label, lines 78–79",
+          "new_value": "Object header, lines 61–68; gallery label, lines 78–79; medium, line 88; object number, line 98"
+        },
+        {
+          "field_path": "evidence/0/note",
+          "old_value": "The gallery label distinguishes patterned chairs and negative-space chairs.",
+          "new_value": "Object header identifies the 1965 lithograph; the gallery label describes five patterned chairs and two additional negative-space chairs."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Asawa’s drawing lets chairs emerge both from dense marker patterns and from unmarked gaps, making absence as constructive as the surrounding marks.",
+          "new_value": "In the 1965 lithograph Chair (TAM.1558-II), patterned marks and unmarked spaces both delineate chairs, making negative space an active part of the composition."
+        }
+      ],
+      "affected_source_bundles": [
+        "a09"
+      ],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:chair-by-ruth-asawa",
+          "field": "learning_takeaway",
+          "reason": "Use the exact object header rather than the gallery’s general drawing terminology.",
+          "source_ids": [
+            "a09"
+          ]
+        },
+        {
+          "id": "local:catalog:chair-by-ruth-asawa",
+          "field": "card",
+          "reason": "The cited object is a lithograph, not the circa-1963 drawing previously described.",
+          "source_ids": [
+            "a09"
+          ]
+        },
+        {
+          "id": "local:catalog:chair-by-ruth-asawa",
+          "field": "evidence",
+          "reason": "Include identity and medium fields alongside the interpretive gallery passage.",
+          "source_ids": [
+            "a09"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:a-sunday-on-la-grande-jatte",
+      "label": "A Sunday on La Grande Jatte",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Seurat’s A Sunday on La Grande Jatte organizes separate colored strokes within a large composition. The technique became central to Neo-Impressionist ambitions for optical mixture. Looking closely at the marks and then at their larger relationships reveals the gap between physical brushwork and the effects painters hoped viewers would experience.",
+          "new_value": "Seurat’s A Sunday on La Grande Jatte arranges separate colored strokes within a large composition. The Met describes it as a major demonstration of Neo-Impressionist technique. It offers a case for comparing visible brushwork with the optical effects the movement’s artists hoped to achieve."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:a-sunday-on-la-grande-jatte",
+          "field": "card",
+          "reason": "Avoid implying a demonstrated gap or failure between physical marks and perception; retain the explicitly historical hope.",
+          "source_ids": [
+            "a14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:lichtenstein-flowers-parsifal",
+      "label": "Lichtenstein, Flowers, Parsifal",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Elizabeth Peyton’s Lichtenstein, Flowers, Parsifal brings references to a painter’s dots, Wagner’s opera and still-life imagery into one monotype. Marks associated with mechanical reproduction become hand-applied. The work makes artistic borrowing tangible through the way references are translated into a particular material process.",
+          "new_value": "Elizabeth Peyton’s Lichtenstein, Flowers, Parsifal combines references to Lichtenstein’s dots, Wagner’s opera and still-life imagery in a monotype. The dots are hand-applied before printing. An editorial reading emphasizes the contrast between mechanically associated marks and their manual realization."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:lichtenstein-flowers-parsifal",
+          "field": "card",
+          "reason": "Keep documented references and hand-applied dots separate from the curatorial/authorial interpretation of their contrast.",
+          "source_ids": [
+            "a06"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:strawberry-thief",
+      "label": "Strawberry Thief",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "William Morris’s Strawberry Thief places fruit-stealing thrushes among repeated foliage in a printed textile design. Indigo-discharge production helped achieve crisp detail. The pattern connects a recognizable garden scene with the practical demands of repeating and coloring an image across cloth.",
+          "new_value": "William Morris’s Strawberry Thief was produced using indigo-discharge printing. Its motif was inspired by thrushes stealing fruit in his garden. The V&A connects the method with crisp outlines, offering a technical context for examining the pattern’s printed detail."
+        },
+        {
+          "field_path": "evidence/0/note",
+          "old_value": "Thrush motif, named design and indigo-discharge detail are documented.",
+          "new_value": "The V&A identifies the indigo-discharge method and garden-thrush inspiration, then discusses the crisp outlines enabled by that method."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Morris’s textile design uses indigo-discharge printing to give fruit-stealing thrushes and foliage crisp detail within a repeated pattern.",
+          "new_value": "Morris used indigo-discharge printing for Strawberry Thief, a textile pattern inspired by fruit-stealing thrushes in his garden."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:strawberry-thief",
+          "field": "learning_takeaway",
+          "reason": "Retain the documented process and inspiration without assigning a specific intended visual purpose beyond the source.",
+          "source_ids": [
+            "a16"
+          ]
+        },
+        {
+          "id": "local:catalog:strawberry-thief",
+          "field": "card",
+          "reason": "Attribute the crisp-outline observation to the source’s method discussion rather than stating a private design intention.",
+          "source_ids": [
+            "a16"
+          ]
+        },
+        {
+          "id": "local:catalog:strawberry-thief",
+          "field": "evidence",
+          "reason": "Align the claim-support note with the narrowed or more precisely attributed revised wording.",
+          "source_ids": [
+            "a16"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:wandle-textile-design",
+      "label": "Wandle textile design",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "William Morris’s Wandle design uses an unusually large pattern repeat. That repeated unit helps determine how the design unfolds across a length of cloth. An editorial comparison of motif and repeat draws attention to textile composition at a scale larger than any single flower or curve.",
+          "new_value": "William Morris’s Wandle has a pattern repeat measuring 98.4 by 44.5 centimeters, which the V&A calls his largest attempt. An editorial comparison asks how such a large repeating unit shapes a fabric’s composition beyond the scale of its individual motifs."
+        },
+        {
+          "field_path": "evidence/0/note",
+          "old_value": "The V&A identifies Wandle and its notably large repeat.",
+          "new_value": "The V&A gives Wandle’s repeat as 98.4 by 44.5 cm and calls it Morris’s largest attempt; the composition question is editorial."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Morris’s Wandle design uses a notably large pattern repeat, making the scale of repetition a defining feature of its textile composition.",
+          "new_value": "Wandle’s repeat measures 98.4 by 44.5 centimeters; the V&A identifies it as the largest Morris attempted."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:wandle-textile-design",
+          "field": "learning_takeaway",
+          "reason": "Replace an unmarked defining-feature interpretation with the source’s specific measured repeat and attributed comparison.",
+          "source_ids": [
+            "a16"
+          ]
+        },
+        {
+          "id": "local:catalog:wandle-textile-design",
+          "field": "card",
+          "reason": "Separate the documented dimensions from the editorial composition question.",
+          "source_ids": [
+            "a16"
+          ]
+        },
+        {
+          "id": "local:catalog:wandle-textile-design",
+          "field": "evidence",
+          "reason": "Align the claim-support note with the narrowed or more precisely attributed revised wording.",
+          "source_ids": [
+            "a16"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:bayeux-tapestry",
+      "label": "Bayeux Tapestry",
+      "old_version": 1,
+      "new_version": 2,
+      "exact_field_changes": [
+        {
+          "field_path": "card",
+          "old_value": "Despite its familiar name, the Bayeux Tapestry is embroidered rather than woven as a pictorial tapestry. Wool stitches form its historical narrative on joined linen panels. Recognizing the construction changes what viewers look for: the image develops through needlework applied to an existing cloth surface.",
+          "new_value": "Despite its familiar name, the Bayeux Tapestry is embroidery rather than a woven pictorial tapestry. Wool stitches form the narrative on joined linen panels. Examining the stitched surface offers a concrete way to distinguish applied needlework from an image created by weaving."
+        },
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "The so-called tapestry is wool embroidery on joined linen panels; its stitching carries a continuous historical narrative rather than a woven pictorial structure.",
+          "new_value": "The Bayeux Tapestry’s narrative is embroidered in wool on joined linen panels rather than woven as a pictorial tapestry."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "local:catalog:bayeux-tapestry",
+          "field": "learning_takeaway",
+          "reason": "State the supported material distinction directly without changing the established object name.",
+          "source_ids": [
+            "a17"
+          ]
+        },
+        {
+          "id": "local:catalog:bayeux-tapestry",
+          "field": "card",
+          "reason": "Replace a claimed change in what viewers look for with an explicit invitation to inspect the material distinction.",
+          "source_ids": [
+            "a17"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q252485",
+      "label": "Under the Wave off Kanagawa",
+      "old_version": 3,
+      "new_version": 4,
+      "exact_field_changes": [
+        {
+          "field_path": "learning_takeaway",
+          "old_value": "Hokusai frames a small Mount Fuji inside the threatening wave and uses blue pigments to bind this striking contrast of scale into the print.",
+          "new_value": "Hokusai uses perspective and framing to make Mount Fuji appear as a small triangular form within the much larger wave."
+        }
+      ],
+      "affected_source_bundles": [],
+      "boundary_review_completed": true,
+      "reasons": [
+        {
+          "id": "Q252485",
+          "field": "learning_takeaway",
+          "reason": "Remove the unsupported color-purpose claim; preserve the explicitly supported perspective/scale point.",
+          "source_ids": [
+            "a21"
+          ]
+        }
+      ]
+    }
+  ],
+  "changed_concept_count": 54
+}

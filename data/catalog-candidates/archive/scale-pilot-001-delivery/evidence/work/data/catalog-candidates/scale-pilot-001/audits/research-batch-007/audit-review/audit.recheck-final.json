@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-007",
+  "stage": "limited_final_metadata_recheck",
+  "started_at": "2026-10-08T22:23:51Z",
+  "completed_at": "2026-10-08T22:25:09.069994+00:00",
+  "reviewed_candidate_path": "research/workers/research-batch-007/candidate.post-recheck.json",
+  "canonical_candidate_path": "data/catalog-candidates/research-batch-007.json",
+  "reviewed_candidate_sha256": "8a6e51c889065ecc5abc165f45953bec3be7bec72f155aebc362380c90b22860",
+  "batch_revision": 4,
+  "result": "metadata_observation_resolved",
+  "reviewed_card_id": "local:authored:000256",
+  "reviewed_source_id": "b007-s086",
+  "card_version": 2,
+  "changed_card_ids": [
+    "local:authored:000256"
+  ],
+  "changed_source_ids": [
+    "b007-s086"
+  ],
+  "card_changed_fields": [
+    "card_version",
+    "evidence"
+  ],
+  "evidence_changed_fields": [
+    "locator"
+  ],
+  "source_changed_fields": [
+    "locator"
+  ],
+  "locator_accuracy": {
+    "result": "supported",
+    "corrected_evidence_locator": "Physical PDF pages 2, 4 and 13 (zero-based tool page indices 1, 3 and 12): introduction, Comparisons and Placing Captured Pieces",
+    "corrected_source_locator": "Physical PDF pages 2, 4 and 13 (zero-based tool page indices 1, 3 and 12): introduction; Comparisons and Unique features of Shogi; Capture and Placing Captured Pieces",
+    "page_mapping": [
+      {
+        "zero_based_tool_index": 1,
+        "physical_pdf_page": 2,
+        "support_marker": "L18@P1",
+        "section": "Introduction"
+      },
+      {
+        "zero_based_tool_index": 3,
+        "physical_pdf_page": 4,
+        "support_marker": "L34@P3",
+        "section": "Comparisons and Unique features of Shogi"
+      },
+      {
+        "zero_based_tool_index": 12,
+        "physical_pdf_page": 13,
+        "support_marker": "L131@P12",
+        "section": "Capture and Placing Captured Pieces"
+      }
+    ],
+    "basis": "The preserved 14-page PDF extraction numbers its title page P0. The introduction at P1 is therefore physical page 2; Comparisons at P3 is physical page 4; Capture and Placing Captured Pieces at P12 is physical page 13. The revised locators explicitly distinguish both numbering conventions.",
+    "author_capture_path": "research/workers/research-batch-007/source-raw/stage-b-shogi-overview.json",
+    "author_capture_sha256": "290777e99b1f82020a3ed1cc476136ff3c6065b3d5ef10b2aede8b2085138d58",
+    "independently_inspected_original_capture_path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-007/audit-review/web-06.txt",
+    "independent_capture_sha256": "78ce8a99464766dab4b86d6c90c4b17df3d9f7b18c3a61d416155fbc682ec535"
+  },
+  "carry_forward_r1": {
+    "finding_id": "007-R1",
+    "status": "fully_resolved",
+    "prior_recheck_path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-007/audit-review/audit.recheck.json",
+    "prior_recheck_sha256": "abee3b1eacc6202d272c20388aec6ef23233692c097abf5dc875b2e225578258",
+    "basis": "The complete corrected Issue preclusion record and all four supporting source records are unchanged from the independently rechecked revision 3. Its substantive resolution therefore carries forward to this exact revision 4 hash."
+  },
+  "residual_substantive_findings": [],
+  "residual_metadata_findings": [],
+  "new_findings": [],
+  "preservation_checks": {
+    "current_hash": true,
+    "canonical_byte_identical": true,
+    "prior_reviewed_candidate_preserved": true,
+    "same200_ids": true,
+    "same92_source_ids": true,
+    "only_shogi_record_changed": true,
+    "only_shogi_evidence_and_version_changed": true,
+    "only_evidence_locator_changed": true,
+    "only_s086_source_changed": true,
+    "only_source_locator_changed": true,
+    "all200_card_texts_unchanged": true,
+    "all200_takeaways_unchanged": true,
+    "all200_relationships_unchanged": true,
+    "all199_other_complete_cards_unchanged": true,
+    "all91_other_sources_unchanged": true,
+    "shogi_version1_to2": true,
+    "batch_revision3_to4": true,
+    "author_capture_hash_preserved": true,
+    "source_acquisition_metadata_unchanged": true,
+    "r1_card_entirely_unchanged": true,
+    "r1_new_sources_entirely_unchanged": true,
+    "r1_prior_resolution_present": true,
+    "corrected_source_matches_manifest": true,
+    "corrected_card_matches_manifest": true,
+    "coordinator_current_hash_matches": true,
+    "initial_json_preserved": true,
+    "initial_md_preserved": true,
+    "first_recheck_json_preserved": true,
+    "first_recheck_summary_preserved": true,
+    "page_index_1_verified_in_author_and_independent_captures": true,
+    "page_index_3_verified_in_author_and_independent_captures": true,
+    "page_index_12_verified_in_author_and_independent_captures": true,
+    "frozen_candidate.before-audit.json_preserved": true,
+    "frozen_sample.frozen.json_preserved": true,
+    "frozen_sample-cards.frozen.json_preserved": true,
+    "handoff_candidate.post-recheck.json": true,
+    "handoff_locator-corrections.json": true,
+    "handoff_locator-admission.json": true,
+    "handoff_locator-revision-compare.json": true,
+    "handoff_locator-preservation-check.json": true,
+    "handoff_author-review.post-recheck.json": true,
+    "handoff_source-inspections.post-recheck.json": true
+  },
+  "preservation_failures": [],
+  "scope": {
+    "metadata_rechecks_this_step": 1,
+    "new_full_factual_card_audits": 0,
+    "new_source_attempts": 0,
+    "original_random_new": 20,
+    "original_risk_selected": 20,
+    "original_extra_targeted": 12,
+    "original_unique_cards": 52,
+    "earlier_boundary_changes_checked": 16,
+    "no_scope_expansion": true
+  },
+  "historical_reports_preserved": {
+    "audit.initial.json": "560d4e1d81fa7b1f3199440f1bf46ba5da08f09eb5e0075f1c45cc01995171dd",
+    "audit.initial.md": "db230493863485220eb831c0d9a046872a92db84124ea1dfbd17d36e87dfb88a",
+    "audit.recheck.json": "abee3b1eacc6202d272c20388aec6ef23233692c097abf5dc875b2e225578258",
+    "audit.recheck.md": "aa96b7d4a0d2ae0db7ff1bb1962287bdc75615ed47dceda2283c62d28b6611c4"
+  },
+  "limitations": [
+    "The original Othello live-access limitation remains visible and unchanged; it is an access limitation, not an unresolved factual or metadata finding.",
+    "No new public-source attempts were made; pagination was checked against the already inspected preserved guide.",
+    "No assertion of a new 200-card factual audit or overall pilot admission is made."
+  ],
+  "checker_modified_candidates": false,
+  "platform_tokens": null,
+  "platform_cost": null
+}

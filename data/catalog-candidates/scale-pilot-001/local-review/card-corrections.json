@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-08T23:34:20.509169+00:00",
+  "status": "source_verified_correction_not_applied",
+  "reason_not_applied": "Preserve delivered bytes and historical audit hash scope. Apply as a versioned revision alongside current-baseline identity reconciliation, then reassemble and recompute manifests.",
+  "base_batch_path": "data/catalog-candidates/research-batch-006.json",
+  "base_batch_sha256": "64da2bbfc021f61b10a3162b55ba5be8ad6ea162f1fcb7f2e33a8b930565ba73",
+  "base_combined_sha256": "82751cd8c6b301dd3fd178d3f00d772fea2e885836bcf29d6e6f02d131fea4b0",
+  "corrections": [
+    {
+      "id": "local:catalog:chemigram",
+      "issue": "The delivered card and takeaway treat a common resist technique as required for every chemigram. The source supports optional/common use.",
+      "before": {
+        "aliases": [],
+        "card": "A chemigram creates an image by manipulating photographic paper with chemicals and substances that resist them. Working in full light lets materials such as oils or varnishes shape the reaction. Chance and direct intervention can both influence marks without a camera recording an external scene.",
+        "card_version": 1,
+        "domains": [
+          "Visual arts & design"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "Chemigram entry, line 76",
+            "note": "Chemical manipulation, resists, full light and experimental chance are described.",
+            "source_id": "a04"
+          }
+        ],
+        "id": "local:catalog:chemigram",
+        "identity_urls": [
+          "https://www.vam.ac.uk/articles/photographic-processes"
+        ],
+        "imported_records": [],
+        "label": "Chemigram",
+        "learning_takeaway": "Chemigrams manipulate photosensitive paper with resists and photographic chemicals in full light, allowing chemical interaction and chance to shape the image.",
+        "original_description": null,
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "Compare a chemical-resist image with an object-shadow image made through light exposure.",
+            "source_ids": [
+              "a04"
+            ],
+            "target_id": "local:catalog:photogram",
+            "type": "related_to"
+          }
+        ],
+        "scope": "idea"
+      },
+      "after": {
+        "aliases": [],
+        "card": "A chemigram creates an image by manipulating photographic paper with chemicals, often using oils or varnishes. Working in full light combines the maker’s intervention with chance. The marks emerge from material reactions without a camera recording an external scene.",
+        "card_version": 2,
+        "domains": [
+          "Visual arts & design"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "source_id": "a04",
+            "locator": "Chemigram and Photogram entries",
+            "note": "The V&A describes direct chemical manipulation of photographic paper, often using oils or varnishes, in full light with chance; its Photogram entry supports the contrasting exposure process."
+          },
+          {
+            "source_id": "local-review-chemigram-cordier-diagram",
+            "locator": "Process diagram: chemigrams with and without a localizing product; Definition",
+            "note": "The artist’s diagram includes techniques with and without a localizing product. The definition supports full-light, camera-free creation."
+          },
+          {
+            "source_id": "local-review-chemigram-cordier-definition",
+            "locator": "Page 1, Definition paragraph",
+            "note": "The artist’s definition confirms use of photographic chemistry without a camera or enlarger, in full light."
+          }
+        ],
+        "id": "local:catalog:chemigram",
+        "identity_urls": [
+          "https://www.vam.ac.uk/articles/photographic-processes"
+        ],
+        "imported_records": [],
+        "label": "Chemigram",
+        "learning_takeaway": "Chemigrams use photographic chemistry in full light without a camera; optional oils or varnishes and experimental intervention can shape the marks.",
+        "original_description": null,
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "Compare direct chemical manipulation of photographic paper, sometimes shaped by oils or varnishes, with photograms made by exposing paper beneath objects to light.",
+            "source_ids": [
+              "a04"
+            ],
+            "target_id": "local:catalog:photogram",
+            "type": "related_to"
+          }
+        ],
+        "scope": "idea"
+      },
+      "after_word_count": 39,
+      "additional_sources": [
+        {
+          "id": "local-review-chemigram-cordier-diagram",
+          "title": "Pierre Cordier — Le chimigramme",
+          "url": "https://www.pierrecordier.com/lechimigramme.html",
+          "locator": "Process diagram: with and without localizing product; Definition",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T23:34:20.509169+00:00",
+          "revision": null,
+          "inspection_status": "passage_inspected_by_source_reviewer_and_root",
+          "inspection_note": "Public page read during the local delivery review; cannot establish original author browsing.",
+          "timestamp_basis": "Local correction-record timestamp after completed public-source inspection; exact remote acquisition time unavailable."
+        },
+        {
+          "id": "local-review-chemigram-cordier-definition",
+          "title": "Pierre Cordier — Chemigram definition",
+          "url": "https://www.pierrecordier.com/IMG/pdf/definition_EN.pdf",
+          "locator": "Page 1, Definition paragraph",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T23:34:20.509169+00:00",
+          "revision": null,
+          "inspection_status": "passage_inspected_by_source_reviewer_and_root",
+          "inspection_note": "Public single-page PDF read during the local delivery review.",
+          "timestamp_basis": "Local correction-record timestamp after completed public-source inspection; exact remote acquisition time unavailable."
+        }
+      ],
+      "changed_fields": [
+        "card",
+        "learning_takeaway",
+        "evidence",
+        "relations[0].note",
+        "card_version"
+      ],
+      "review": "Proposed by an independent reviewer of the original cards; root separately read the V&A passage and artist diagram/definition and confirmed the qualification.",
+      "severity": "substantive_qualification"
+    },
+    {
+      "id": "Q814254",
+      "severity": "minor_provenance",
+      "issue": "Card-level evidence omits the existing source supporting the context/recording premise; the relationship already cites it.",
+      "before": {
+        "aliases": [
+          "Feature (archaeology)",
+          "Archaeological feature",
+          "Archeological feature"
+        ],
+        "card": "An archaeological feature is a nonportable trace of human activity, such as a hearth or posthole. Excavators record it where it occurs rather than lifting it out like a complete object. Its shape and position help preserve evidence of an earlier activity.",
+        "card_version": 1,
+        "domains": [
+          "History & culture"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "What is an Archeologist?, features definition",
+            "note": "Nonportable features and examples support recording in place.",
+            "source_id": "h04"
+          }
+        ],
+        "id": "Q814254",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q814254"
+        ],
+        "imported_records": [
+          {
+            "description": "archaeological term to describe a collection of one or more contexts representing some human non-portable activity",
+            "description_source": "Wikidata",
+            "id": "Q814254",
+            "index": 516,
+            "inventory_kind": "specific",
+            "kind": "concept",
+            "level": null,
+            "source_revision": 2546186308,
+            "source_url": "https://www.wikidata.org/wiki/Q814254",
+            "topic": "Feature (archaeology)",
+            "wikidata_id": "Q814254",
+            "wikipedia_page_id": 596161,
+            "wikipedia_title": "Feature (archaeology)",
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Feature_(archaeology)"
+          }
+        ],
+        "label": "Feature (archaeology)",
+        "learning_takeaway": "A hearth, soil stain or posthole is evidence that must be recorded in place rather than collected as a portable artifact.",
+        "original_description": "archaeological term to describe a collection of one or more contexts representing some human non-portable activity",
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "A feature’s position and associations are part of the context needed for interpretation.",
+            "source_ids": [
+              "h04",
+              "h02"
+            ],
+            "target_id": "local:catalog:archaeological-context",
+            "type": "related_to"
+          },
+          {
+            "assertion": "source_asserted",
+            "note": "The archaeological teaching source identifies nonportable features as a category of site evidence.",
+            "source_ids": [
+              "h04"
+            ],
+            "target_id": "local:authored:000075",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "idea"
+      },
+      "after": {
+        "aliases": [
+          "Feature (archaeology)",
+          "Archaeological feature",
+          "Archeological feature"
+        ],
+        "card": "An archaeological feature is a nonportable trace of human activity, such as a hearth or posthole. Excavators record it where it occurs rather than lifting it out like a complete object. Its shape and position help preserve evidence of an earlier activity.",
+        "card_version": 2,
+        "domains": [
+          "History & culture"
+        ],
+        "entity_kind": "idea",
+        "evidence": [
+          {
+            "locator": "What is an Archeologist?, features definition",
+            "note": "Nonportable features and examples support recording in place.",
+            "source_id": "h04"
+          },
+          {
+            "source_id": "h02",
+            "locator": "Opening context discussion; geographic context, associations and documenting context",
+            "note": "The NPS explains spatial locations, associations and documenting context for artifacts, features and sites. Together with the nonportable-feature definition, this supports the card’s explanatory connection to recording location."
+          }
+        ],
+        "id": "Q814254",
+        "identity_urls": [
+          "https://www.wikidata.org/wiki/Q814254"
+        ],
+        "imported_records": [
+          {
+            "description": "archaeological term to describe a collection of one or more contexts representing some human non-portable activity",
+            "description_source": "Wikidata",
+            "id": "Q814254",
+            "index": 516,
+            "inventory_kind": "specific",
+            "kind": "concept",
+            "level": null,
+            "source_revision": 2546186308,
+            "source_url": "https://www.wikidata.org/wiki/Q814254",
+            "topic": "Feature (archaeology)",
+            "wikidata_id": "Q814254",
+            "wikipedia_page_id": 596161,
+            "wikipedia_title": "Feature (archaeology)",
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Feature_(archaeology)"
+          }
+        ],
+        "label": "Feature (archaeology)",
+        "learning_takeaway": "A hearth, soil stain or posthole is evidence that must be recorded in place rather than collected as a portable artifact.",
+        "original_description": "archaeological term to describe a collection of one or more contexts representing some human non-portable activity",
+        "relations": [
+          {
+            "assertion": "editorial",
+            "note": "A feature’s position and associations are part of the context needed for interpretation.",
+            "source_ids": [
+              "h04",
+              "h02"
+            ],
+            "target_id": "local:catalog:archaeological-context",
+            "type": "related_to"
+          },
+          {
+            "assertion": "source_asserted",
+            "note": "The archaeological teaching source identifies nonportable features as a category of site evidence.",
+            "source_ids": [
+              "h04"
+            ],
+            "target_id": "local:authored:000075",
+            "type": "broader_topic"
+          }
+        ],
+        "scope": "idea"
+      },
+      "after_word_count": 42,
+      "additional_sources": [],
+      "changed_fields": [
+        "evidence",
+        "card_version"
+      ],
+      "review": "Separate source reviewer identified the missing card-level citation; root independently read the NPS context passage and confirmed support. Card text and identity unchanged."
+    }
+  ]
+}

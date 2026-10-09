@@ -1,0 +1,62 @@
+{
+  "batch": {
+    "completion_status": "synthetic_fixture",
+    "fixture": true,
+    "id": "research-batch-004",
+    "revision": 1,
+    "selection_manifest": []
+  },
+  "concepts": [
+    {
+      "aliases": [
+        "Capillary action"
+      ],
+      "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+      "card_version": 1,
+      "domains": [
+        "Mathematics"
+      ],
+      "entity_kind": "idea",
+      "evidence": [
+        {
+          "locator": "Fixture section 1",
+          "note": "Supports the synthetic explanatory claim.",
+          "source_id": "r1"
+        }
+      ],
+      "id": "fixture:eq",
+      "identity_urls": [
+        "https://example.org/fixture/a"
+      ],
+      "imported_records": [],
+      "label": "Capillary action",
+      "learning_takeaway": "Understand this synthetic mechanism for the labeled fixture only.",
+      "original_description": null,
+      "relations": [
+        {
+          "assertion": "editorial",
+          "note": "This would become circular after the reviewed equivalence mapping.",
+          "source_ids": [
+            "r1"
+          ],
+          "target_id": "fixture:a",
+          "type": "related_to"
+        }
+      ],
+      "scope": "idea"
+    }
+  ],
+  "issues": [],
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "r1",
+      "locator": "Fixture section 1",
+      "retrieved_at": "2024-04-03T12:34:56+00:00",
+      "revision": null,
+      "title": "Synthetic fixture reference",
+      "url": "https://example.org/fixture/equivalence"
+    }
+  ],
+  "validation": {}
+}

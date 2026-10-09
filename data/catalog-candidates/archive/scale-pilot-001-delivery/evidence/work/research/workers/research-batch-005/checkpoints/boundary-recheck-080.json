@@ -1,0 +1,2227 @@
+{
+  "batch_id": "research-batch-005",
+  "status": "in_progress",
+  "checked": 80,
+  "total": 200,
+  "predecessor_sha256": "0b55dce5e0f107113ff5e2c1f036055a786ef8fdc5b0781aa78fdb45a4644571",
+  "audit_sha256": "30f4472ffe3ae18a559b9b9c770dbcb10abec65c90e9303ae596ddd71fea75bf",
+  "records": [
+    {
+      "id": "local:authored:000609",
+      "label": "Information theory",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Shannon's introduction defines an engineering selection/reproduction problem and explicitly separates semantic meaning; the card attributes that framing and does not generalize the bit measure to personal significance. Base-two choice is a unit convention. The paper connection stays editorial.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "shannon",
+          "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+          "locator": "Introduction, pp. 1–2",
+          "preserved_response_file": "source-texts/web-014.json",
+          "preserved_response_sha256": "538134c2071cdea553e65961f2cb64b526654b316db8cce61e8092f7ef6e2c1c"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907636+00:00"
+    },
+    {
+      "id": "Q2493",
+      "label": "Data compression",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "RFC 1951 supports lossless reconstruction and the two mechanisms used in the example. The opening describes compression's purpose, not a promise that every input or short block shrinks. No lossy-reconstruction or universal compression-ratio claim is present.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "deflate",
+          "url": "https://www.rfc-editor.org/rfc/rfc1951",
+          "locator": "Abstract; §2",
+          "preserved_response_file": "source-texts/web-029.json",
+          "preserved_response_sha256": "856c0806c77299a218812b530aa0e877fabb1ecf9de15c57943e70d8597ccef6"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907685+00:00"
+    },
+    {
+      "id": "local:catalog:huffman-coding",
+      "label": "Huffman coding",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The Huffman optimum is bounded to prefix codes for the specified alphabet and symbol frequencies, not every possible compressor or unknown future distribution. The codeword-boundary consequence assumes a valid encoded stream; the parent relation is specifically to prefix-free codes.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "deflate",
+          "url": "https://www.rfc-editor.org/rfc/rfc1951",
+          "locator": "§3.2.1",
+          "preserved_response_file": "source-texts/web-029.json",
+          "preserved_response_sha256": "856c0806c77299a218812b530aa0e877fabb1ecf9de15c57943e70d8597ccef6"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907691+00:00"
+    },
+    {
+      "id": "local:catalog:prefix-free-code",
+      "label": "Prefix-free code",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The non-prefix condition and sequential decoding are mathematical properties of a defined codebook. They do not promise synchronization after corruption or frame boundaries in an arbitrary bitstream. The relation to Huffman coding is an explicit example.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "deflate",
+          "url": "https://www.rfc-editor.org/rfc/rfc1951",
+          "locator": "§3.2.1",
+          "preserved_response_file": "source-texts/web-029.json",
+          "preserved_response_sha256": "856c0806c77299a218812b530aa0e877fabb1ecf9de15c57943e70d8597ccef6"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907699+00:00"
+    },
+    {
+      "id": "local:catalog:canonical-huffman-coding",
+      "label": "Canonical Huffman coding",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The description concerns canonical assignment from symbol-ordered code lengths, including equal-length lexical ordering. DEFLATE is named as the implementation example; no claim that all Huffman codebooks are canonical is made.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "deflate",
+          "url": "https://www.rfc-editor.org/rfc/rfc1951",
+          "locator": "§3.2.2",
+          "preserved_response_file": "source-texts/web-029.json",
+          "preserved_response_sha256": "856c0806c77299a218812b530aa0e877fabb1ecf9de15c57943e70d8597ccef6"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907703+00:00"
+    },
+    {
+      "id": "local:catalog:lz77",
+      "label": "LZ77",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "LZ77-style replacement is illustrated through DEFLATE's backward-distance/length format. The wording keeps that format attributed and does not equate every LZ77 variant's token layout or window policy with RFC 1951.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "deflate",
+          "url": "https://www.rfc-editor.org/rfc/rfc1951",
+          "locator": "§2; §3.2.5",
+          "preserved_response_file": "source-texts/web-029.json",
+          "preserved_response_sha256": "856c0806c77299a218812b530aa0e877fabb1ecf9de15c57943e70d8597ccef6"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907706+00:00"
+    },
+    {
+      "id": "local:catalog:deflate",
+      "label": "DEFLATE",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "RFC 1951 defines DEFLATE as a format and permits fixed, dynamic and uncompressed blocks. The card retains all three, avoiding a claim that every block is Huffman-compressed or that Huffman alone accounts for repetition replacement.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "deflate",
+          "url": "https://www.rfc-editor.org/rfc/rfc1951",
+          "locator": "Abstract; §2",
+          "preserved_response_file": "source-texts/web-029.json",
+          "preserved_response_sha256": "856c0806c77299a218812b530aa0e877fabb1ecf9de15c57943e70d8597ccef6"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907710+00:00"
+    },
+    {
+      "id": "local:catalog:dynamic-huffman-blocks-in-deflate",
+      "label": "Dynamic Huffman blocks in DEFLATE",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Dynamic means a block carries its coding-table description before its content; it is not online rebuilding of the code tree after each symbol. Fixed blocks are contrasted at the format level, without claiming either always compresses better.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "deflate",
+          "url": "https://www.rfc-editor.org/rfc/rfc1951",
+          "locator": "§3.2.6–§3.2.7",
+          "preserved_response_file": "source-texts/web-029.json",
+          "preserved_response_sha256": "856c0806c77299a218812b530aa0e877fabb1ecf9de15c57943e70d8597ccef6"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907713+00:00"
+    },
+    {
+      "id": "local:catalog:unicode-normalization",
+      "label": "Unicode normalization",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The Unicode annex distinguishes canonical and compatibility equivalence and the four forms. The card leaves recomposition conditional and avoids treating visual resemblance as equivalence. The standard's Unicode 18 revision stays in source metadata.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "normalization",
+          "url": "https://www.unicode.org/reports/tr15/",
+          "locator": "§1.2–§1.3",
+          "preserved_response_file": "source-texts/web-002.json",
+          "preserved_response_sha256": "20e65172e847f597f13f1b1fa31d76273929a7e186d595e7152130aa9a4020a7"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907718+00:00"
+    },
+    {
+      "id": "local:catalog:canonical-equivalence-in-unicode",
+      "label": "Canonical equivalence in Unicode",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Precomposed/decomposed accents are an example of canonical equivalence, not a claim that all similar-looking strings are the same character. The relationship to normalization is editorial because it organizes learning rather than asserting an ontology edge.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "normalization",
+          "url": "https://www.unicode.org/reports/tr15/",
+          "locator": "§1.1, Figure 1",
+          "preserved_response_file": "source-texts/web-002.json",
+          "preserved_response_sha256": "20e65172e847f597f13f1b1fa31d76273929a7e186d595e7152130aa9a4020a7"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907723+00:00"
+    },
+    {
+      "id": "local:catalog:compatibility-equivalence-in-unicode",
+      "label": "Compatibility equivalence in Unicode",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The annex's circled-digit example and warning about mathematical/formatting distinctions bound the usefulness of compatibility normalization. The card says can help and may erase, without universalizing semantic equivalence.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "normalization",
+          "url": "https://www.unicode.org/reports/tr15/",
+          "locator": "§1.1, Figure 2; §1.2 warning",
+          "preserved_response_file": "source-texts/web-002.json",
+          "preserved_response_sha256": "20e65172e847f597f13f1b1fa31d76273929a7e186d595e7152130aa9a4020a7"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907728+00:00"
+    },
+    {
+      "id": "local:catalog:normalization-across-string-concatenation",
+      "label": "Normalization across string concatenation",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The annex's concatenation table is a counterexample to closure under joining; the card says software can need renormalization, not that every join changes text. Boundary reordering/composition supplies the mechanism.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "normalization",
+          "url": "https://www.unicode.org/reports/tr15/",
+          "locator": "§1.4, Table 2",
+          "preserved_response_file": "source-texts/web-002.json",
+          "preserved_response_sha256": "20e65172e847f597f13f1b1fa31d76273929a7e186d595e7152130aa9a4020a7"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907733+00:00"
+    },
+    {
+      "id": "local:catalog:utf-8",
+      "label": "UTF-8",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "RFC 3629 permits one to four octets for scalar values, excludes surrogate code points, and preserves ASCII. The card correctly uses scalar values and separates assigned number from stored bytes; it does not promise one byte or code point per user-perceived character.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "utf8",
+          "url": "https://www.rfc-editor.org/rfc/rfc3629",
+          "locator": "§2–§3",
+          "preserved_response_file": "source-texts/web-003.json",
+          "preserved_response_sha256": "42469d9c0464e942431b6735b0427882ad8f46400794b43783fbbd4e29cfc25a"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907737+00:00"
+    },
+    {
+      "id": "local:catalog:overlong-utf-8-encodings",
+      "label": "Overlong UTF-8 encodings",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "RFC 3629 treats overlong sequences as invalid and explains security consequences when validation and decoding differ. The card says accepting them can permit evasion, not that every decoder accepts them or every overlong sequence constitutes an exploit.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "utf8",
+          "url": "https://www.rfc-editor.org/rfc/rfc3629",
+          "locator": "§3; §10",
+          "preserved_response_file": "source-texts/web-003.json",
+          "preserved_response_sha256": "42469d9c0464e942431b6735b0427882ad8f46400794b43783fbbd4e29cfc25a"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907770+00:00"
+    },
+    {
+      "id": "local:catalog:unicode-code-point",
+      "label": "Unicode code point",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The numbered code space is distinct from UTF-8 octets. The scalar-value qualification avoids treating surrogate code points as valid encoded characters; byte counting is not asserted to equal grapheme counting.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "utf8",
+          "url": "https://www.rfc-editor.org/rfc/rfc3629",
+          "locator": "§3, encoding definition",
+          "preserved_response_file": "source-texts/web-003.json",
+          "preserved_response_sha256": "42469d9c0464e942431b6735b0427882ad8f46400794b43783fbbd4e29cfc25a"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907774+00:00"
+    },
+    {
+      "id": "local:catalog:grapheme-cluster",
+      "label": "Grapheme cluster",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "UAX 29 explicitly calls clusters a best-effort approximation and discusses script, operation and font tailoring. Both approximation and tailoring remain visible; cursor movement is an example, not a mandatory behavior for every editor.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "segmentation",
+          "url": "https://www.unicode.org/reports/tr29/",
+          "locator": "§3, introductory discussion and Table 1a",
+          "preserved_response_file": "source-texts/web-012.json",
+          "preserved_response_sha256": "3a4ef024a1a11937748cb269e6ee8c8264587e4860709851dc132b7166407d99"
+        },
+        {
+          "source_id": "utf8",
+          "url": "https://www.rfc-editor.org/rfc/rfc3629",
+          "locator": "§3, encoding definition",
+          "preserved_response_file": "source-texts/web-003.json",
+          "preserved_response_sha256": "42469d9c0464e942431b6735b0427882ad8f46400794b43783fbbd4e29cfc25a"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907780+00:00"
+    },
+    {
+      "id": "local:catalog:binary-search",
+      "label": "Binary search",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "NIST defines sorted-input interval halving; SQLite's indexed row-lookup example supports logarithmic search effort. The card localizes that payoff to the SQLite example and does not claim logarithmic traversal cost for ordered linked lists.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "queryplanner",
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "§1.2–§1.3",
+          "preserved_response_file": "source-texts/web-013.json",
+          "preserved_response_sha256": "0baf30ecbd98cc626f078f651937921cc5d77248cc64073fef1881b48a524c65"
+        },
+        {
+          "source_id": "nist-binary-search",
+          "url": "https://xlinux.nist.gov/dads/HTML/binarySearch.html",
+          "locator": "Definition; Note on run time and ordered linked lists",
+          "preserved_response_file": "source-texts/web-140.json",
+          "preserved_response_sha256": "5739af5a4721e25f7f0471e8a36159fcddae5805a0b958aea28a11a9b9acc4ca"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907786+00:00"
+    },
+    {
+      "id": "local:catalog:covering-index",
+      "label": "Covering index",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "SQLite's covering-index example contains all searched and returned columns. The card says the database can answer from it, preserving query dependence and avoiding a universal promise that every engine will choose an index-only plan.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "queryplanner",
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "§1.7",
+          "preserved_response_file": "source-texts/web-013.json",
+          "preserved_response_sha256": "0baf30ecbd98cc626f078f651937921cc5d77248cc64073fef1881b48a524c65"
+        },
+        {
+          "source_id": "sqliteabout",
+          "url": "https://www.sqlite.org/about.html",
+          "locator": "About SQLite, main explanatory paragraphs",
+          "preserved_response_file": "source-texts/web-027.json",
+          "preserved_response_sha256": "53fbb483b46f34bacceffbe3c4c6179b30891af6193ba9fdc9aa6f56818ca886"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907790+00:00"
+    },
+    {
+      "id": "local:catalog:multi-column-index",
+      "label": "Multi-column index",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The fruit/state example is explicitly SQLite-specific and demonstrates lexicographic column order. It does not assert that an index is useful for every predicate, that both orders are interchangeable, or that all engines implement the same plan.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "queryplanner",
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "§1.6",
+          "preserved_response_file": "source-texts/web-013.json",
+          "preserved_response_sha256": "0baf30ecbd98cc626f078f651937921cc5d77248cc64073fef1881b48a524c65"
+        },
+        {
+          "source_id": "sqliteabout",
+          "url": "https://www.sqlite.org/about.html",
+          "locator": "About SQLite, main explanatory paragraphs",
+          "preserved_response_file": "source-texts/web-027.json",
+          "preserved_response_sha256": "53fbb483b46f34bacceffbe3c4c6179b30891af6193ba9fdc9aa6f56818ca886"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907794+00:00"
+    },
+    {
+      "id": "local:catalog:a-mathematical-theory-of-communication",
+      "label": "A Mathematical Theory of Communication",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The paper's date, selection/reproduction framing and logarithmic unit rationale are historical statements supported by the title/introduction. The wording does not attribute all later information theory to that paper or mistake meaning for its engineering quantity.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "shannon",
+          "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf",
+          "locator": "Title; Introduction, pp. 1–2",
+          "preserved_response_file": "source-texts/web-014.json",
+          "preserved_response_sha256": "538134c2071cdea553e65961f2cb64b526654b316db8cce61e8092f7ef6e2c1c"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907798+00:00"
+    },
+    {
+      "id": "local:authored:000520",
+      "label": "Distributed systems",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The replicated-state-machine example requires deterministic execution as well as a common command order. Add that condition explicitly so matching results do not appear to follow from ordering alone; the broad distributed-systems identity is unchanged.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "raft",
+          "url": "https://raft.github.io/raft.pdf",
+          "locator": "§2, replicated state machines",
+          "preserved_response_file": "source-texts/web-024.json",
+          "preserved_response_sha256": "cb7bf7a85c61d5cb6ccaa851726aa9274289d4db63ebd8322ed7158ed3941ee2"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907802+00:00"
+    },
+    {
+      "id": "Q8513",
+      "label": "Database",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Tables, indexes and transactions are illustrated by SQLite, rather than required of every database model. The wording does not turn a SQL example into a claim that all databases are relational or support identical transactional guarantees.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "sqliteabout",
+          "url": "https://www.sqlite.org/about.html",
+          "locator": "About SQLite, main explanatory paragraphs",
+          "preserved_response_file": "source-texts/web-027.json",
+          "preserved_response_sha256": "53fbb483b46f34bacceffbe3c4c6179b30891af6193ba9fdc9aa6f56818ca886"
+        },
+        {
+          "source_id": "queryplanner",
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "Overview; sections 1.1–1.3",
+          "preserved_response_file": "source-texts/web-013.json",
+          "preserved_response_sha256": "0baf30ecbd98cc626f078f651937921cc5d77248cc64073fef1881b48a524c65"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907806+00:00"
+    },
+    {
+      "id": "local:catalog:sql",
+      "label": "SQL",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "SQLite's overview explicitly describes SQL's declarative query semantics across implementations. Choosing among retrieval plans concerns result-equivalent query evaluation, not a claim that all SQL features are nonprocedural or that every query is optimized equally well.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "queryplanner",
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "Overview; §1.1–§1.3",
+          "preserved_response_file": "source-texts/web-013.json",
+          "preserved_response_sha256": "0baf30ecbd98cc626f078f651937921cc5d77248cc64073fef1881b48a524c65"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907811+00:00"
+    },
+    {
+      "id": "local:catalog:sqlite",
+      "label": "SQLite",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The official SQLite description supports embedding without a separate server and a database occupying one file. The modal can avoids promising that live WAL mode has no auxiliary files; no cross-filesystem or unlimited-concurrency guarantee is made.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "sqliteabout",
+          "url": "https://www.sqlite.org/about.html",
+          "locator": "About SQLite, first two main paragraphs",
+          "preserved_response_file": "source-texts/web-027.json",
+          "preserved_response_sha256": "53fbb483b46f34bacceffbe3c4c6179b30891af6193ba9fdc9aa6f56818ca886"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907815+00:00"
+    },
+    {
+      "id": "local:catalog:atomic-commit",
+      "label": "Atomic commit",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "SQLite's power-loss atomicity depends on stated hardware, filesystem and flush assumptions. Add the documented-storage-assumptions qualification to the recovery example; all-or-nothing remains an observational transaction property, not simultaneous hardware writes.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "atomiccommit",
+          "url": "https://www.sqlite.org/atomiccommit.html",
+          "locator": "§1 Introduction",
+          "preserved_response_file": "source-texts/web-028.json",
+          "preserved_response_sha256": "a7345c5717be270655da585d533bea0119dd9cd23f07c6b91d0ed62e2743e39d"
+        },
+        {
+          "source_id": "sqliteisolation",
+          "url": "https://www.sqlite.org/isolation.html",
+          "locator": "Isolation And Concurrency, rollback mode",
+          "preserved_response_file": "source-texts/web-001.json",
+          "preserved_response_sha256": "a7b503e7617a7b62f1a06a4d6fc77bf3912454998318cfe72771a003d61598f0"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907819+00:00"
+    },
+    {
+      "id": "local:catalog:rollback-journal",
+      "label": "Rollback journal",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The audit identifies a generic-WAL overreach. Keep rollback restoration but name SQLite's write-ahead-log mode in the contrast, retain later checkpointing in its evidence note, and avoid applying SQLite's preserved-main-file arrangement to every WAL system.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "sqliteisolation",
+          "url": "https://www.sqlite.org/isolation.html",
+          "locator": "Isolation And Concurrency, rollback mode",
+          "preserved_response_file": "source-texts/web-001.json",
+          "preserved_response_sha256": "a7b503e7617a7b62f1a06a4d6fc77bf3912454998318cfe72771a003d61598f0"
+        },
+        {
+          "source_id": "wal",
+          "url": "https://www.sqlite.org/wal.html",
+          "locator": "§2 How WAL Works; §2.1 Checkpointing",
+          "preserved_response_file": "source-texts/web-001.json",
+          "preserved_response_sha256": "a7b503e7617a7b62f1a06a4d6fc77bf3912454998318cfe72771a003d61598f0"
+        },
+        {
+          "source_id": "atomiccommit",
+          "url": "https://www.sqlite.org/atomiccommit.html",
+          "locator": "Section 1 Introduction",
+          "preserved_response_file": "source-texts/web-028.json",
+          "preserved_response_sha256": "a7345c5717be270655da585d533bea0119dd9cd23f07c6b91d0ed62e2743e39d"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907824+00:00"
+    },
+    {
+      "id": "local:catalog:write-ahead-logging",
+      "label": "Write-ahead logging",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The first sentence currently defines WAL using SQLite's specific file arrangement. Name SQLite's WAL mode at the start and qualify the takeaway; append, commit marker, concurrent readers and later transfer then remain inside the documented implementation.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "wal",
+          "url": "https://www.sqlite.org/wal.html",
+          "locator": "§2 How WAL Works",
+          "preserved_response_file": "source-texts/web-001.json",
+          "preserved_response_sha256": "a7b503e7617a7b62f1a06a4d6fc77bf3912454998318cfe72771a003d61598f0"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907827+00:00"
+    },
+    {
+      "id": "local:catalog:snapshot-isolation",
+      "label": "Snapshot isolation",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The SQLite read-transaction example is correctly scoped to WAL and a stable snapshot, with an explicit warning that visibility alone does not establish every system's serializability. No new claim about write-skew prevention is introduced.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "sqliteisolation",
+          "url": "https://www.sqlite.org/isolation.html",
+          "locator": "Isolation And Concurrency, WAL example",
+          "preserved_response_file": "source-texts/web-001.json",
+          "preserved_response_sha256": "a7b503e7617a7b62f1a06a4d6fc77bf3912454998318cfe72771a003d61598f0"
+        },
+        {
+          "source_id": "wal",
+          "url": "https://www.sqlite.org/wal.html",
+          "locator": "§2 How WAL Works",
+          "preserved_response_file": "source-texts/web-001.json",
+          "preserved_response_sha256": "a7b503e7617a7b62f1a06a4d6fc77bf3912454998318cfe72771a003d61598f0"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907877+00:00"
+    },
+    {
+      "id": "local:catalog:wal-checkpointing",
+      "label": "WAL checkpointing",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Copying logged content back to the main file is SQLite's checkpoint mechanism; checkpoint meanings differ elsewhere. Name SQLite in the opening and takeaway, preserving automatic/application-controlled timing without suggesting a checkpoint on each commit.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "wal",
+          "url": "https://www.sqlite.org/wal.html",
+          "locator": "§2.1 Checkpointing",
+          "preserved_response_file": "source-texts/web-001.json",
+          "preserved_response_sha256": "a7b503e7617a7b62f1a06a4d6fc77bf3912454998318cfe72771a003d61598f0"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907881+00:00"
+    },
+    {
+      "id": "local:catalog:replicated-state-machine",
+      "label": "Replicated state machine",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The Raft paper explicitly requires deterministic state machines and common command order; both are present. Agreement is separated from execution, and no instantaneous equality of lagging replicas or Byzantine-failure tolerance is claimed.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "raft",
+          "url": "https://raft.github.io/raft.pdf",
+          "locator": "§2",
+          "preserved_response_file": "source-texts/web-024.json",
+          "preserved_response_sha256": "cb7bf7a85c61d5cb6ccaa851726aa9274289d4db63ebd8322ed7158ed3941ee2"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907886+00:00"
+    },
+    {
+      "id": "local:catalog:raft-consensus-algorithm",
+      "label": "Raft consensus algorithm",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Raft's leader, replication and safety decomposition is attributed to its design. Stops and disconnections describe crash/network faults, not malicious servers; agreement is not presented as uninterrupted availability under arbitrary partitions.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "raft",
+          "url": "https://raft.github.io/raft.pdf",
+          "locator": "§4–§5",
+          "preserved_response_file": "source-texts/web-024.json",
+          "preserved_response_sha256": "cb7bf7a85c61d5cb6ccaa851726aa9274289d4db63ebd8322ed7158ed3941ee2"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907890+00:00"
+    },
+    {
+      "id": "local:catalog:distributed-consensus",
+      "label": "Replicated-log consensus under crash faults",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The selected identity is already bounded to replicated logs and crash faults. Make the majority-based safety/availability example expressly Raft-like so the source's practical-protocol description is not read as a theorem covering every conceivable consensus protocol.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "raft",
+          "url": "https://raft.github.io/raft.pdf",
+          "locator": "§2; §5",
+          "preserved_response_file": "source-texts/web-024.json",
+          "preserved_response_sha256": "cb7bf7a85c61d5cb6ccaa851726aa9274289d4db63ebd8322ed7158ed3941ee2"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907895+00:00"
+    },
+    {
+      "id": "local:catalog:randomized-election-timeouts",
+      "label": "Randomized election timeouts",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Randomized timeouts reduce competing elections and retry after split votes; less likely and helps preserve probabilistic rather than guaranteed progress. Timing assumptions affect liveness, and no fixed election-time guarantee is asserted.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "raft",
+          "url": "https://raft.github.io/raft.pdf",
+          "locator": "§5.2",
+          "preserved_response_file": "source-texts/web-024.json",
+          "preserved_response_sha256": "cb7bf7a85c61d5cb6ccaa851726aa9274289d4db63ebd8322ed7158ed3941ee2"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907898+00:00"
+    },
+    {
+      "id": "local:catalog:joint-consensus-in-raft",
+      "label": "Joint consensus in Raft",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The extended Raft paper's joint configuration requires majorities of both old and new memberships. This describes that reconfiguration scheme rather than every implementation or one-server-at-a-time variant; the independent-decision safety rationale is preserved.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "raft",
+          "url": "https://raft.github.io/raft.pdf",
+          "locator": "§6, pp. 10–11",
+          "preserved_response_file": "source-texts/web-024.json",
+          "preserved_response_sha256": "cb7bf7a85c61d5cb6ccaa851726aa9274289d4db63ebd8322ed7158ed3941ee2"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907902+00:00"
+    },
+    {
+      "id": "local:catalog:replicated-log",
+      "label": "Replicated log",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The replicated log is an ordered command history; the Raft example identifies leader propagation and committed entries. Deterministic execution is stated, and the card does not claim every follower has an identical complete log at every instant.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "raft",
+          "url": "https://raft.github.io/raft.pdf",
+          "locator": "§2; §5.3",
+          "preserved_response_file": "source-texts/web-024.json",
+          "preserved_response_sha256": "cb7bf7a85c61d5cb6ccaa851726aa9274289d4db63ebd8322ed7158ed3941ee2"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907907+00:00"
+    },
+    {
+      "id": "local:catalog:http-idempotency",
+      "label": "HTTP method idempotency",
+      "predecessor_card_version": 2,
+      "boundary_review_note": "RFC 9110 restricts idempotence to intended effects and permits separate logging and different responses. Both qualifications survive; retry safety is about not multiplying the requested effect, not proof that every application implements its method correctly.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "http",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "locator": "§9.2.2",
+          "preserved_response_file": "source-texts/web-007.json",
+          "preserved_response_sha256": "f95a66d449aa8eb268901b32dd23264d33819b6104f64dee28603fe55c82fe23"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907911+00:00"
+    },
+    {
+      "id": "local:catalog:http-entity-tag",
+      "label": "HTTP entity tag",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Entity tags are opaque validators; RFC 9110 permits different construction methods and strong/weak forms. The card avoids equating ETags with cryptographic hashes, uniqueness across all resources, or weak-validator suitability for If-Match.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "http",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "locator": "§8.8.3",
+          "preserved_response_file": "source-texts/web-007.json",
+          "preserved_response_sha256": "f95a66d449aa8eb268901b32dd23264d33819b6104f64dee28603fe55c82fe23"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907915+00:00"
+    },
+    {
+      "id": "local:catalog:http-if-match-lost-update-prevention",
+      "label": "HTTP If-Match update preconditions",
+      "predecessor_card_version": 2,
+      "boundary_review_note": "The completed card already says an If-Match condition can require a matching tag. That leaves room for the wildcard existence check, and can stop an overwrite is appropriately conditional on the origin server evaluating the precondition.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "http",
+          "url": "https://www.rfc-editor.org/rfc/rfc9110.html",
+          "locator": "§13.1.1",
+          "preserved_response_file": "source-texts/web-007.json",
+          "preserved_response_sha256": "f95a66d449aa8eb268901b32dd23264d33819b6104f64dee28603fe55c82fe23"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907918+00:00"
+    },
+    {
+      "id": "local:catalog:tcp-slow-start",
+      "label": "TCP slow start",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "RFC 5681's ACK-driven slow start and threshold rules support the description. Can expand quickly avoids asserting exact doubling every RTT despite delayed ACKs or implementation variation; no fixed numeric initial window is generalized.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "tcp",
+          "url": "https://datatracker.ietf.org/doc/html/rfc5681",
+          "locator": "§3.1",
+          "preserved_response_file": "source-texts/web-015.json",
+          "preserved_response_sha256": "3ad43c77c3d923993e418c68f25f67c950df193c5ee853b48347ae224e9d6275"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907921+00:00"
+    },
+    {
+      "id": "local:catalog:tcp-congestion-window",
+      "label": "TCP congestion window",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "RFC 5681 distinguishes congestion and receiver windows and uses their minimum. The card states an outstanding-data limit, not an estimate of actual available bandwidth or permission to ignore receiver flow control.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "tcp",
+          "url": "https://datatracker.ietf.org/doc/html/rfc5681",
+          "locator": "§2; §3.1",
+          "preserved_response_file": "source-texts/web-015.json",
+          "preserved_response_sha256": "3ad43c77c3d923993e418c68f25f67c950df193c5ee853b48347ae224e9d6275"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907926+00:00"
+    },
+    {
+      "id": "Q3510521",
+      "label": "Computer security",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Saltzer and Schroeder discuss information protection and exceptional access paths. The card presents a design concern, not a guarantee of perfect security or a claim that access control exhausts all security objectives. Its mediation relation is directly sourced.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "saltzerintro",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/",
+          "locator": "Abstract; Glossary, Security and Protection",
+          "preserved_response_file": "source-texts/web-004.json",
+          "preserved_response_sha256": "56f490aac12634e445bff90c794ffdb6793f2a65177e30d334c4f1ed171b48e7"
+        },
+        {
+          "source_id": "saltzer",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html",
+          "locator": "Section I.A, design principles a (economy of mechanism) and c (complete mediation)",
+          "preserved_response_file": "source-texts/web-006.json",
+          "preserved_response_sha256": "78a6f28c09999d6c5a39617c6c0ae747952604ab7b16a3a12cd26e314b8ddf23"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907965+00:00"
+    },
+    {
+      "id": "local:authored:000527",
+      "label": "Cryptography",
+      "predecessor_card_version": 2,
+      "boundary_review_note": "The cryptography card uses TLS as a concrete combination of confidentiality, authentication and integrity. Key secrecy is distinguished from secret mechanisms; no claim that encryption alone authenticates messages or that every cryptographic primitive needs a secret key is made.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "tls",
+          "url": "https://www.rfc-editor.org/rfc/rfc8446",
+          "locator": "§1; §2; Appendix E",
+          "preserved_response_file": "source-texts/web-026.json",
+          "preserved_response_sha256": "38bff685ae050af4526b2dc523110411a65b94a915c5f54b66aebc9bed838076"
+        },
+        {
+          "source_id": "saltzer",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html",
+          "locator": "Section I.A, design principle d (open design)",
+          "preserved_response_file": "source-texts/web-006.json",
+          "preserved_response_sha256": "78a6f28c09999d6c5a39617c6c0ae747952604ab7b16a3a12cd26e314b8ddf23"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907972+00:00"
+    },
+    {
+      "id": "local:catalog:principle-of-least-privilege",
+      "label": "Principle of least privilege",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Least privilege is a prescriptive design principle and damage-limitation rationale in the 1975 paper. The card does not promise that minimal permissions remove every attack or that permissions can never change when a job changes.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "saltzer",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html",
+          "locator": "§I.A, principle f",
+          "preserved_response_file": "source-texts/web-006.json",
+          "preserved_response_sha256": "78a6f28c09999d6c5a39617c6c0ae747952604ab7b16a3a12cd26e314b8ddf23"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907976+00:00"
+    },
+    {
+      "id": "local:catalog:fail-safe-defaults",
+      "label": "Fail-safe defaults",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Permission-based default denial is the cited design rule. Tends to deny preserves the paper's failure-direction argument without claiming a flawed implementation must always fail securely or that missing configuration can never be exploitable.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "saltzer",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html",
+          "locator": "§I.A, principle b",
+          "preserved_response_file": "source-texts/web-006.json",
+          "preserved_response_sha256": "78a6f28c09999d6c5a39617c6c0ae747952604ab7b16a3a12cd26e314b8ddf23"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907979+00:00"
+    },
+    {
+      "id": "local:catalog:complete-mediation",
+      "label": "Complete mediation",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Every protected access, including recovery and maintenance, matches the stated mediation principle. This is a requirement for a design, not an empirical claim that existing systems satisfy it; the source also permits carefully maintained cached checks.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "saltzer",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html",
+          "locator": "§I.A, principle c",
+          "preserved_response_file": "source-texts/web-006.json",
+          "preserved_response_sha256": "78a6f28c09999d6c5a39617c6c0ae747952604ab7b16a3a12cd26e314b8ddf23"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907983+00:00"
+    },
+    {
+      "id": "local:catalog:separation-of-privilege",
+      "label": "Separation of privilege",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Separating keys among authorities is a conditional protection design. Need not suffice retains the dependence on actual separation and enforcement, rather than promising immunity to collusion or simultaneous compromise. The comparison with least privilege stays editorial.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "saltzer",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html",
+          "locator": "§I.A, principle e",
+          "preserved_response_file": "source-texts/web-006.json",
+          "preserved_response_sha256": "78a6f28c09999d6c5a39617c6c0ae747952604ab7b16a3a12cd26e314b8ddf23"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907986+00:00"
+    },
+    {
+      "id": "local:catalog:open-security-design",
+      "label": "Open security design",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The paper separates mechanisms from keys/passwords. The card does not claim publishing a mechanism by itself makes it secure; examination without relying on secrecy is the narrower rationale, and the cryptography bridge remains editorial.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "saltzer",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html",
+          "locator": "§I.A, principle d",
+          "preserved_response_file": "source-texts/web-006.json",
+          "preserved_response_sha256": "78a6f28c09999d6c5a39617c6c0ae747952604ab7b16a3a12cd26e314b8ddf23"
+        },
+        {
+          "source_id": "tls",
+          "url": "https://www.rfc-editor.org/rfc/rfc8446",
+          "locator": "§1; §2; Appendix E",
+          "preserved_response_file": "source-texts/web-026.json",
+          "preserved_response_sha256": "38bff685ae050af4526b2dc523110411a65b94a915c5f54b66aebc9bed838076"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907990+00:00"
+    },
+    {
+      "id": "local:catalog:economy-of-mechanism",
+      "label": "Economy of mechanism",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Small/simple design is motivated by detecting hidden access paths. The aim wording avoids treating code size as a measured guarantee of security or equating simplicity with the absence of necessary protections.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "saltzer",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/Basic.html",
+          "locator": "§I.A, principle a",
+          "preserved_response_file": "source-texts/web-006.json",
+          "preserved_response_sha256": "78a6f28c09999d6c5a39617c6c0ae747952604ab7b16a3a12cd26e314b8ddf23"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.907995+00:00"
+    },
+    {
+      "id": "local:catalog:capability-based-security",
+      "label": "Capability-based security",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The capability glossary defines an unforgeable authorization ticket. The comparison concerns ticket-oriented versus object-list organization, without asserting that practical systems cannot combine both or that every possession token is a capability.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "saltzerintro",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/",
+          "locator": "Glossary, Capability and Ticket-oriented",
+          "preserved_response_file": "source-texts/web-004.json",
+          "preserved_response_sha256": "56f490aac12634e445bff90c794ffdb6793f2a65177e30d334c4f1ed171b48e7"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908001+00:00"
+    },
+    {
+      "id": "local:catalog:access-control-list",
+      "label": "Access control list",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The list-oriented glossary supports associating principals with objects. Helps determine authority leaves room for other access conditions; the capability contrast does not imply every ACL implementation contains only one flat list or excludes delegation.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "saltzerintro",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/",
+          "locator": "Glossary, Access control list and List-oriented",
+          "preserved_response_file": "source-texts/web-004.json",
+          "preserved_response_sha256": "56f490aac12634e445bff90c794ffdb6793f2a65177e30d334c4f1ed171b48e7"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908005+00:00"
+    },
+    {
+      "id": "local:catalog:password-salting",
+      "label": "Password salting",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "NIST distinguishes salt from hashing cost and requires collision-minimizing salts. Help prevent equal hashes correctly avoids claiming mathematical impossibility of collisions; offline password guessing is separate from encryption and online throttling.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "nist",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+          "locator": "§3.1.1.2 Password Verifiers",
+          "preserved_response_file": "source-texts/web-023.json",
+          "preserved_response_sha256": "47ca13c1744247fb12da6e986fae054ee8b49665fb51867ba06d4bf7e3ea4df7"
+        },
+        {
+          "source_id": "tls",
+          "url": "https://www.rfc-editor.org/rfc/rfc8446",
+          "locator": "§1; §2; Appendix E",
+          "preserved_response_file": "source-texts/web-026.json",
+          "preserved_response_sha256": "38bff685ae050af4526b2dc523110411a65b94a915c5f54b66aebc9bed838076"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908009+00:00"
+    },
+    {
+      "id": "local:catalog:authentication-rate-limiting",
+      "label": "Authentication rate limiting",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "NIST's throttling section allows waiting/disablement and recognizes malicious lockout. The card names online guessing and does not promise protection for an already stolen hash database, a universal threshold, or a frictionless control.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "nist",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+          "locator": "§3.2.2 Rate Limiting",
+          "preserved_response_file": "source-texts/web-023.json",
+          "preserved_response_sha256": "47ca13c1744247fb12da6e986fae054ee8b49665fb51867ba06d4bf7e3ea4df7"
+        },
+        {
+          "source_id": "saltzerintro",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/",
+          "locator": "Abstract; Glossary, Security and Protection",
+          "preserved_response_file": "source-texts/web-004.json",
+          "preserved_response_sha256": "56f490aac12634e445bff90c794ffdb6793f2a65177e30d334c4f1ed171b48e7"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908015+00:00"
+    },
+    {
+      "id": "local:catalog:replay-resistant-authentication",
+      "label": "Replay-resistant authentication",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "NIST's freshness requirement concerns replay of authenticator outputs even if transport is protected. Appropriately checked one-time outputs retains the verifier condition; passwords are correctly distinguished from protocols that wrap them in additional replay protection.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "nist",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+          "locator": "§3.2.7 Replay Resistance",
+          "preserved_response_file": "source-texts/web-023.json",
+          "preserved_response_sha256": "47ca13c1744247fb12da6e986fae054ee8b49665fb51867ba06d4bf7e3ea4df7"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908019+00:00"
+    },
+    {
+      "id": "local:catalog:phishing-resistant-authentication",
+      "label": "Phishing-resistant authentication",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "NIST specifically recognizes channel and verifier-name binding and rejects manually entered OTPs as phishing-resistant. The card concerns authentication-output relay, not immunity to every phishing consequence, malicious application, or compromised endpoint.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "nist",
+          "url": "https://pages.nist.gov/800-63-4/sp800-63b.html",
+          "locator": "§3.2.5 Phishing Resistance",
+          "preserved_response_file": "source-texts/web-023.json",
+          "preserved_response_sha256": "47ca13c1744247fb12da6e986fae054ee8b49665fb51867ba06d4bf7e3ea4df7"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908054+00:00"
+    },
+    {
+      "id": "local:catalog:tls-1-3",
+      "label": "TLS 1.3",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "RFC 8446's public-key modes, PSK alternatives and early-data limitations are separately acknowledged. The card does not extend forward secrecy to every TLS 1.3 mode or claim that zero-RTT traffic has normal replay protection.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "tls",
+          "url": "https://www.rfc-editor.org/rfc/rfc8446",
+          "locator": "§1.2; §2",
+          "preserved_response_file": "source-texts/web-026.json",
+          "preserved_response_sha256": "38bff685ae050af4526b2dc523110411a65b94a915c5f54b66aebc9bed838076"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908060+00:00"
+    },
+    {
+      "id": "local:catalog:forward-secrecy",
+      "label": "Forward secrecy",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Appendix E bounds forward secrecy to later compromise of long-term material, with erased session secrets and appropriate modes. These conditions are present; there is no protection promised when the session key itself remains available or the endpoint is currently compromised.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "tls",
+          "url": "https://www.rfc-editor.org/rfc/rfc8446",
+          "locator": "Appendix E.1, Forward secret with respect to long-term keys",
+          "preserved_response_file": "source-texts/web-026.json",
+          "preserved_response_sha256": "38bff685ae050af4526b2dc523110411a65b94a915c5f54b66aebc9bed838076"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908064+00:00"
+    },
+    {
+      "id": "local:catalog:grace-hopper",
+      "label": "Grace Hopper",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Computer History Museum attributes early compiler and COBOL work to Hopper without sole-inventor or first-ever claims. The SQL comparison is explicitly editorial; it compares higher-level expression, not a documented claim that Hopper invented SQL.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "hopper",
+          "url": "https://computerhistory.org/profile/grace-murray-hopper/",
+          "locator": "Biography, Harvard and Eckert-Mauchly paragraphs",
+          "preserved_response_file": "source-texts/web-009.json",
+          "preserved_response_sha256": "6bc9b1d9dd9ace0298f535fc5373c6a6f1746792a1c18c1cb70a17dd0c1ce523"
+        },
+        {
+          "source_id": "queryplanner",
+          "url": "https://www.sqlite.org/queryplanner.html",
+          "locator": "Overview; §1.1–§1.3",
+          "preserved_response_file": "source-texts/web-013.json",
+          "preserved_response_sha256": "0baf30ecbd98cc626f078f651937921cc5d77248cc64073fef1881b48a524c65"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908068+00:00"
+    },
+    {
+      "id": "local:catalog:manchester-baby",
+      "label": "Manchester Baby",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The historical description supports the 1948 original, while object YS23/1998 is a working replica. Retain the explanatory URL and add the audit's exact context distinction in evidence/source metadata; no canonical identity equivalence between original and replica is asserted.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "baby",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+          "locator": "Collection description, CRT memory and first program paragraphs",
+          "preserved_response_file": "source-texts/web-010.json",
+          "preserved_response_sha256": "51d3dcc8549372d99f17a0944bf191a0a84f03372e341b0029e5c85c10361bcd"
+        },
+        {
+          "source_id": "eniac",
+          "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78",
+          "locator": "ENIAC being set up; ENIAC tube change",
+          "preserved_response_file": "source-texts/web-018.json",
+          "preserved_response_sha256": "bda4acf8f3c5bae6a04a201886b79ba27d731a31ec02c3fdb289b1b3ee9e6af1"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908073+00:00"
+    },
+    {
+      "id": "Q169399",
+      "label": "ENIAC",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "ENIAC's days of setup and approximate tube count concern documented historical configurations. Preserve could take and the initial-configuration relation; also clarify the Baby replica page used for that relationship so the original-machine comparison remains explicit.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "eniac",
+          "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78",
+          "locator": "ENIAC being set up; ENIAC tube change",
+          "preserved_response_file": "source-texts/web-018.json",
+          "preserved_response_sha256": "bda4acf8f3c5bae6a04a201886b79ba27d731a31ec02c3fdb289b1b3ee9e6af1"
+        },
+        {
+          "source_id": "baby",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+          "locator": "Collection description, CRT memory and first program paragraphs",
+          "preserved_response_file": "source-texts/web-010.json",
+          "preserved_response_sha256": "51d3dcc8549372d99f17a0944bf191a0a84f03372e341b0029e5c85c10361bcd"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908078+00:00"
+    },
+    {
+      "id": "local:catalog:morris-worm",
+      "label": "Morris worm",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The FBI's historical narrative supports 1988 disruption without the worm destroying files and the response-team consequence. Availability is the editorial lesson; no claim is made that all infected hardware survived unchanged or that this was the first malicious program ever.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "morris",
+          "url": "https://www.fbi.gov/history/famous-cases/morris-worm",
+          "locator": "Main history, propagation and operational impact paragraphs",
+          "preserved_response_file": "source-texts/web-017.json",
+          "preserved_response_sha256": "e055af5f5482d66687ec484df1b8333ecdf3f89a58c6b938f37ebb8993bb4c1b"
+        },
+        {
+          "source_id": "saltzerintro",
+          "url": "https://web.mit.edu/Saltzer/www/publications/protection/",
+          "locator": "Abstract; Glossary, Security and Protection",
+          "preserved_response_file": "source-texts/web-004.json",
+          "preserved_response_sha256": "56f490aac12634e445bff90c794ffdb6793f2a65177e30d334c4f1ed171b48e7"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908082+00:00"
+    },
+    {
+      "id": "local:authored:000132",
+      "label": "Linguistics",
+      "predecessor_card_version": 3,
+      "boundary_review_note": "The textbook's descriptive scientific goal does not establish that researchers lack biases. The card frames empirical study rather than moral prescriptions, and the impossible-word example concerns a language's pattern, not social judgments about its speakers.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "linguistics",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/01%3A_Human_Language_and_Language_Science/1.03%3A_Studying_language_scientifically",
+          "locator": "§1.3, descriptive and prescriptive approaches",
+          "preserved_response_file": "source-texts/web-056.json",
+          "preserved_response_sha256": "a284cdce755f3124fcafef6d21b5d9e9fbaea021573cd46903a40bb3e469ad13"
+        },
+        {
+          "source_id": "phonemes",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+          "locator": "§4.1, The essence of phonology",
+          "preserved_response_file": "source-texts/web-050.json",
+          "preserved_response_sha256": "2257c411fe7f3e50b05176a586e55866689eed78e740977b923ee990a5b19d8a"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908088+00:00"
+    },
+    {
+      "id": "Q40998",
+      "label": "Phonology",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The cited phonology chapter explicitly includes spoken and signed units and their patterned realization. The card does not reduce all phonology to speech sounds or claim that physical contrast necessarily changes meaning.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "phonemes",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+          "locator": "§4.1, The essence of phonology",
+          "preserved_response_file": "source-texts/web-050.json",
+          "preserved_response_sha256": "2257c411fe7f3e50b05176a586e55866689eed78e740977b923ee990a5b19d8a"
+        },
+        {
+          "source_id": "linguistics",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/01%3A_Human_Language_and_Language_Science/1.03%3A_Studying_language_scientifically",
+          "locator": "§1.3, descriptive and prescriptive approaches",
+          "preserved_response_file": "source-texts/web-056.json",
+          "preserved_response_sha256": "a284cdce755f3124fcafef6d21b5d9e9fbaea021573cd46903a40bb3e469ad13"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908092+00:00"
+    },
+    {
+      "id": "Q38311",
+      "label": "Morphology",
+      "predecessor_card_version": 2,
+      "boundary_review_note": "The cats and Inuktitut examples support word-internal composition and order constraints. Some languages qualifies sentence-like packing, and the card does not impose English space-separated spelling as a universal definition of a word.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "morphology",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.01%3A_What_is_morphology",
+          "locator": "§5.1, opening examples and morpheme definition",
+          "preserved_response_file": "source-texts/web-057.json",
+          "preserved_response_sha256": "727ee2cfbc6d9dcd387a86e7d407b224dfaa129a4e5e4ef1f24e459e18053ef9"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908095+00:00"
+    },
+    {
+      "id": "local:catalog:minimal-pair",
+      "label": "Minimal pair",
+      "predecessor_card_version": 2,
+      "boundary_review_note": "The source explicitly extends minimal pairs to signed-language parameters. Qualify the card's sound-position definition as the spoken-language case, retaining the same general identity and the pill/kill example; lack of a found pair remains insufficient evidence of equivalence.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "minimalpair",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/4-3-contrastive-distribution-and-minimal-pairs/",
+          "locator": "§4.3, Comparing distributions with minimal pairs",
+          "preserved_response_file": "source-texts/web-032.json",
+          "preserved_response_sha256": "5a71ddf6dad2a8e76183b995cf270ed85ab9ee69250c7a73c2df1c35c9d5f524"
+        },
+        {
+          "source_id": "phonemes",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+          "locator": "§4.1, The essence of phonology",
+          "preserved_response_file": "source-texts/web-050.json",
+          "preserved_response_sha256": "2257c411fe7f3e50b05176a586e55866689eed78e740977b923ee990a5b19d8a"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908100+00:00"
+    },
+    {
+      "id": "local:catalog:allophone",
+      "label": "Allophone",
+      "predecessor_card_version": 2,
+      "boundary_review_note": "Atom/atomic is explicitly limited to many North American varieties and analyzed as realizations of /t/. Partly retains stress/context dependence without promising the same flap/aspiration pattern in every dialect or phonological environment.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "phonemes",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+          "locator": "§4.1, The phonological units of spoken language",
+          "preserved_response_file": "source-texts/web-050.json",
+          "preserved_response_sha256": "2257c411fe7f3e50b05176a586e55866689eed78e740977b923ee990a5b19d8a"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908103+00:00"
+    },
+    {
+      "id": "local:catalog:complementary-distribution",
+      "label": "Complementary distribution",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The source treats complementary distribution as evidence needing further analysis, using /h/ and /ŋ/ for many English speakers. Both the dialect qualification and non-sufficiency remain; physical similarity is not presented as a universal mechanical identity test.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "complementary",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.04%3A_Complementary_distribution",
+          "locator": "§4.4, Phones without contrastive distribution; Phonetic similarity",
+          "preserved_response_file": "source-texts/web-051.json",
+          "preserved_response_sha256": "ec33dbf99b96b2de6eea10e5c4154df80ecdfded747509a62fce94b3c7f5d142"
+        },
+        {
+          "source_id": "phonemes",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+          "locator": "§4.1, The phonological units of spoken language",
+          "preserved_response_file": "source-texts/web-050.json",
+          "preserved_response_sha256": "2257c411fe7f3e50b05176a586e55866689eed78e740977b923ee990a5b19d8a"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908146+00:00"
+    },
+    {
+      "id": "local:catalog:allomorph",
+      "label": "Allomorph",
+      "predecessor_card_version": 2,
+      "boundary_review_note": "The a/an example is conditioned by following sound, not following letter, and plural variation includes predictable and lexical cases. Shared morpheme function is not equated with accidental resemblance between forms.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "allomorphy",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.04%3A_Allomorphy",
+          "locator": "§5.4, opening definition and plural examples",
+          "preserved_response_file": "source-texts/web-053.json",
+          "preserved_response_sha256": "ae7ce1dddbb337096523fa91c2f0d82bcd236cb640c40dd2b3afd19d6b3d2339"
+        },
+        {
+          "source_id": "morphology",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.01%3A_What_is_morphology",
+          "locator": "§5.1, opening examples and morpheme definition",
+          "preserved_response_file": "source-texts/web-057.json",
+          "preserved_response_sha256": "727ee2cfbc6d9dcd387a86e7d407b224dfaa129a4e5e4ef1f24e459e18053ef9"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908152+00:00"
+    },
+    {
+      "id": "local:catalog:reduplication",
+      "label": "Reduplication",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The Halq'eméylem claim is explicitly one reduplication pattern, and salad-salad is a contrasting English example. The card avoids assigning one universal meaning, such as plurality, to repetition across languages.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "reduplication",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.03%3A_Morphology_beyond_affixes",
+          "locator": "§5.3, Reduplication",
+          "preserved_response_file": "source-texts/web-052.json",
+          "preserved_response_sha256": "df968c2d08a1986af9e76fb8e945e2acc48124fa2cd9f016adf104bf903c2e00"
+        },
+        {
+          "source_id": "morphology",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.01%3A_What_is_morphology",
+          "locator": "§5.1, opening examples and morpheme definition",
+          "preserved_response_file": "source-texts/web-057.json",
+          "preserved_response_sha256": "727ee2cfbc6d9dcd387a86e7d407b224dfaa129a4e5e4ef1f24e459e18053ef9"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908161+00:00"
+    },
+    {
+      "id": "local:catalog:constituency-tests",
+      "label": "Constituency tests",
+      "predecessor_card_version": 2,
+      "boundary_review_note": "Replacement and movement are evidence for constituency, not a guaranteed algorithm for every construction. Can supply and complementary clues preserve the need to check grammaticality, intended meaning and language-specific patterns.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "constituency",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/06%3A_Syntax/6.04%3A_Identifying_phrases-_Constituency_tests",
+          "locator": "§6.4, introduction; Replacement Test; Movement Test",
+          "preserved_response_file": "source-texts/web-054.json",
+          "preserved_response_sha256": "28261bf27d9decc961b21a466582f905fb40b10ba5a50ae5ac51ec14682af44f"
+        },
+        {
+          "source_id": "ambiguity",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/06%3A_Syntax/6.17%3A_Trees-_Structural_ambiguity",
+          "locator": "§6.17, telescope example",
+          "preserved_response_file": "source-texts/web-058.json",
+          "preserved_response_sha256": "abc0133aeb1177a4fb49ed7d369433be3a24403d437592a532f1ea3b3af11c84"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908167+00:00"
+    },
+    {
+      "id": "local:catalog:structural-ambiguity",
+      "label": "Structural ambiguity",
+      "predecessor_card_version": 2,
+      "boundary_review_note": "The telescope example holds the words fixed and varies phrase attachment. It illustrates structural rather than lexical ambiguity; the compositionality relation is an editorial connection, without claiming every ambiguity has exactly two readings.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "ambiguity",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/06%3A_Syntax/6.17%3A_Trees-_Structural_ambiguity",
+          "locator": "§6.17, telescope example",
+          "preserved_response_file": "source-texts/web-058.json",
+          "preserved_response_sha256": "abc0133aeb1177a4fb49ed7d369433be3a24403d437592a532f1ea3b3af11c84"
+        },
+        {
+          "source_id": "composition",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/07%3A_Semantics/7.02%3A_Compositionality-_Why_not_just_syntax",
+          "locator": "§7.2, definition and complex-word example",
+          "preserved_response_file": "source-texts/web-055.json",
+          "preserved_response_sha256": "aa320b73795a77057cfe156f59329e39225a90c1c2ec0907829a5105a9adf249"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908172+00:00"
+    },
+    {
+      "id": "local:catalog:semantic-compositionality",
+      "label": "Semantic compositionality",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The principle explains structured combination in sentences and multi-morpheme words. The card does not state that syntax alone determines all semantic properties or that every expression, including idioms, must be transparent from isolated pieces.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "composition",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/07%3A_Semantics/7.02%3A_Compositionality-_Why_not_just_syntax",
+          "locator": "§7.2, definition and complex-word example",
+          "preserved_response_file": "source-texts/web-055.json",
+          "preserved_response_sha256": "aa320b73795a77057cfe156f59329e39225a90c1c2ec0907829a5105a9adf249"
+        },
+        {
+          "source_id": "morphology",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/05%3A_Morphology/5.01%3A_What_is_morphology",
+          "locator": "§5.1, opening examples and morpheme definition",
+          "preserved_response_file": "source-texts/web-057.json",
+          "preserved_response_sha256": "727ee2cfbc6d9dcd387a86e7d407b224dfaa129a4e5e4ef1f24e459e18053ef9"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908176+00:00"
+    },
+    {
+      "id": "local:catalog:semantic-entailment",
+      "label": "Semantic entailment",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The sigh/breath example supports truth-conditional entailment and contradiction under denial. The explanation concerns the intended literal meanings in this example, not a rule that conversational inferences or presuppositions behave identically under every context.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "entailment",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/7-3-what-does-this-sentence-mean-entailments-vs-implicatures/",
+          "locator": "§7.3, Entailments",
+          "preserved_response_file": "source-texts/web-038.json",
+          "preserved_response_sha256": "3e745620a5afbd1342f66f3fc241a15759e61bda6cebc1b77f223d7fae4def1f"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908179+00:00"
+    },
+    {
+      "id": "local:catalog:conversational-implicature",
+      "label": "Conversational implicature",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The source's anger-versus-relief example demonstrates a cancellable contextual suggestion. The card calls it possible rather than necessary and does not equate conversational interpretation with mind-reading or a guaranteed emotional state.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "entailment",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/7-3-what-does-this-sentence-mean-entailments-vs-implicatures/",
+          "locator": "§7.3, Implicatures",
+          "preserved_response_file": "source-texts/web-038.json",
+          "preserved_response_sha256": "3e745620a5afbd1342f66f3fc241a15759e61bda6cebc1b77f223d7fae4def1f"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908183+00:00"
+    },
+    {
+      "id": "Q1076131",
+      "label": "Presupposition",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Stopped charging backgrounds the prior charge in the source's example. The card avoids a universal claim that presuppositions cannot ever be challenged or cancelled; its point is taken-for-granted information versus the asserted change.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "entailment",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/7-3-what-does-this-sentence-mean-entailments-vs-implicatures/",
+          "locator": "§7.3, Presuppositions",
+          "preserved_response_file": "source-texts/web-038.json",
+          "preserved_response_sha256": "3e745620a5afbd1342f66f3fc241a15759e61bda6cebc1b77f223d7fae4def1f"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908186+00:00"
+    },
+    {
+      "id": "Q21204",
+      "label": "International Phonetic Alphabet",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "IPA is explicitly a speech-sound notation with broad/narrow choices. The card does not promise one unique symbol for every accent, represent signed-language articulation through ordinary IPA, or treat spelling as a dependable phonetic guide.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "ipa",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/3-6-the-international-phonetic-alphabet/",
+          "locator": "§3.6, Transcription; The International Phonetic Alphabet",
+          "preserved_response_file": "source-texts/web-040.json",
+          "preserved_response_sha256": "7817e1069e0698c25574d76412811b65c9bda5df1e4d11da88c6c7fb7ce3073c"
+        },
+        {
+          "source_id": "phonemes",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+          "locator": "§4.1, The essence of phonology",
+          "preserved_response_file": "source-texts/web-050.json",
+          "preserved_response_sha256": "2257c411fe7f3e50b05176a586e55866689eed78e740977b923ee990a5b19d8a"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908190+00:00"
+    },
+    {
+      "id": "Q190375",
+      "label": "Historical linguistics",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The source distinguishes stable variation from change in progress. The card retains that distinction and does not infer historical change merely from contemporary differences or portray changes as inevitable improvement or decline.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "languagechange",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.03%3A_Language_changes",
+          "locator": "§10.3, Language changes",
+          "preserved_response_file": "source-texts/web-060.json",
+          "preserved_response_sha256": "2d181d32e15fa83d7edb3ccd5132a5d90340b2c3b171488f0ff2fd4fce1abed6"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908194+00:00"
+    },
+    {
+      "id": "local:catalog:variationist-sociolinguistics",
+      "label": "Variationist sociolinguistics",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The method studies language in context, combining social and linguistic factors. May use retains within-speaker variability without implying all speakers or all variables show the same style pattern; social categories are analytical context rather than destiny.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "variationist",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.01%3A_What_is_variationist_sociolinguistics",
+          "locator": "§10.1, opening explanation",
+          "preserved_response_file": "source-texts/web-061.json",
+          "preserved_response_sha256": "635c969f11d9af64e140f984c8e3128f76e24cb92ff5b98201bb9d770630bd45"
+        },
+        {
+          "source_id": "socialstatus",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-7-sociolinguistic-correlations-social-status/",
+          "locator": "§10.7, Labov comparison of casual speech and reading",
+          "preserved_response_file": "source-texts/web-043.json",
+          "preserved_response_sha256": "5b461fe1442f596614aa2ef4999cedaf5c6ba5aa12b8bb6f321ef31f357aabef"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908199+00:00"
+    },
+    {
+      "id": "local:catalog:sociolinguistic-interview",
+      "label": "Sociolinguistic interview",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The methods chapter describes a historical task sequence that can be tailored. The card explicitly states that not every interview needs every task, so reading/minimal-pair procedures are examples rather than requirements for signed-language or syntactic research.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "variationmethods",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.05%3A_Variationist_methods_and_concepts",
+          "locator": "§10.5, Sociolinguistic interviews and corpora",
+          "preserved_response_file": "source-texts/web-059.json",
+          "preserved_response_sha256": "1b04d4c6af47d52145c1e19ee86004d2d13a920f3eb506e59b372bb45e1eb655"
+        },
+        {
+          "source_id": "socialstatus",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-7-sociolinguistic-correlations-social-status/",
+          "locator": "§10.7, Labov comparison of casual speech and reading",
+          "preserved_response_file": "source-texts/web-043.json",
+          "preserved_response_sha256": "5b461fe1442f596614aa2ef4999cedaf5c6ba5aa12b8bb6f321ef31f357aabef"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908204+00:00"
+    },
+    {
+      "id": "local:catalog:observer-s-paradox-in-sociolinguistics",
+      "label": "Observer's paradox in sociolinguistics",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "Observation can alter self-monitoring and the source expressly denies a foolproof solution. Natural rapport helps but cannot guarantee preserves that limitation; the card does not treat all recordings as unusable or every observed difference as observer bias.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "variationmethods",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.05%3A_Variationist_methods_and_concepts",
+          "locator": "§10.5, Sociolinguistic interviews and corpora",
+          "preserved_response_file": "source-texts/web-059.json",
+          "preserved_response_sha256": "1b04d4c6af47d52145c1e19ee86004d2d13a920f3eb506e59b372bb45e1eb655"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908237+00:00"
+    },
+    {
+      "id": "local:catalog:principle-of-accountability-in-sociolinguistics",
+      "label": "Principle of accountability in sociolinguistics",
+      "predecessor_card_version": 1,
+      "boundary_review_note": "The source itself illustrates 10 versus 8 tokens with different opportunity denominators. The card accurately frames these as an example of proportions, not measured population rates or proof that a larger raw count always means more frequent use.",
+      "claims_relationships_and_takeaway_checked": true,
+      "scope_dimensions_checked": [
+        "implementation_or_model",
+        "empirical_or_causal_strength",
+        "historical_or_company_context",
+        "jurisdiction_if_applicable",
+        "attribution_and_source_identity"
+      ],
+      "support": [
+        {
+          "source_id": "variationmethods",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.05%3A_Variationist_methods_and_concepts",
+          "locator": "§10.5, Quantitative analysis",
+          "preserved_response_file": "source-texts/web-059.json",
+          "preserved_response_sha256": "1b04d4c6af47d52145c1e19ee86004d2d13a920f3eb506e59b372bb45e1eb655"
+        },
+        {
+          "source_id": "variationist",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/10%3A_Language_Variation_and_Change/10.01%3A_What_is_variationist_sociolinguistics",
+          "locator": "§10.1, opening explanation",
+          "preserved_response_file": "source-texts/web-061.json",
+          "preserved_response_sha256": "635c969f11d9af64e140f984c8e3128f76e24cb92ff5b98201bb9d770630bd45"
+        }
+      ],
+      "assessment": "author boundary review; changes identified in note remain pending assembly",
+      "reviewed_at": "2026-10-08T21:45:08.908242+00:00"
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "batch_id": "research-batch-005",
+  "status": "ready_for_independent_recheck",
+  "verified_at": "2026-10-08T22:01:24.054089+00:00",
+  "checks": {
+    "shared_candidate_validator": true,
+    "191_pinned_inputs_unchanged": true,
+    "frozen_candidate_hash_exact": true,
+    "frozen_initial_audit_hash_exact": true,
+    "same_200_reserved_ids_order": true,
+    "all_scope_domain_kind_control_provenance_unchanged": true,
+    "all_cards_30_to_50_words": true,
+    "exact_three_source_changes": true,
+    "every_changed_card_or_bundle_increments_once": true,
+    "183_unchanged_records_byte_content_equal": true,
+    "correction_set_covers_all_changes": true,
+    "exact_before_after_records": true,
+    "substantive_200_unique_boundary_records": true,
+    "all_source_passage_receipts_preserved": true,
+    "revised_hash_matches_both_reports": true,
+    "cue_only_label_keeps_id_and_no_broader_alias": true,
+    "baby_url_and_original_replica_distinction": true,
+    "all_targets_resolve": true,
+    "batch_revision_and_predecessor_exact": true,
+    "initial_audit_findings_not_presented_as_cleared": true,
+    "no_new_identity_or_exclusion": true,
+    "request_log_uses_exact_calls_and_no_failed_retries": true,
+    "all_prior_source_and_card_history_retained": true
+  },
+  "passed_checks": 23,
+  "failed_checks": 0,
+  "counts": {
+    "checked": 200,
+    "changed_records": 17,
+    "changed_card_texts": 12,
+    "changed_labels": 1,
+    "changed_relation_bundles": 1,
+    "changed_source_records": 3,
+    "shared_source_only_changes": 2,
+    "unchanged_records": 183,
+    "exclusions": 0,
+    "new_identities": 0
+  },
+  "shared_source_bundle_affected_records": 7,
+  "unchanged_identity_counts": {
+    "accepted": 200,
+    "new": 160,
+    "existing_controls": 40,
+    "new_fine": 128,
+    "named_subjects": 27,
+    "sources": 71,
+    "relations": 200,
+    "scopes": {
+      "broad_field": 8,
+      "topic": 43,
+      "idea": 114,
+      "facet_or_application": 35
+    },
+    "primary_domains": {
+      "Computing & information": 60,
+      "Learning & language": 45,
+      "Economics & organizations": 55,
+      "Society & relationships": 40
+    },
+    "primary_subfields": {
+      "Algorithms and information representation": 20,
+      "Programming and distributed systems": 20,
+      "Security and computing history": 20,
+      "Language structure and meaning": 15,
+      "Language change and communication": 15,
+      "Learning mechanisms and instructional methods": 15,
+      "Market mechanisms and information": 20,
+      "Organizational coordination and institutions": 20,
+      "Economic history and documented business cases": 15,
+      "Social interaction and networks": 14,
+      "Social institutions and collective behavior": 13,
+      "Communication and relationship mechanisms": 13
+    },
+    "card_words": {
+      "minimum": 40,
+      "maximum": 50
+    }
+  },
+  "files": {
+    "candidate.revised.json": {
+      "path": "research/workers/research-batch-005/candidate.revised.json",
+      "sha256": "4df6efb168ceaced979cfe0392b0f2946c7edb12c275efe4105eafe9e372506d",
+      "bytes": 1717180
+    },
+    "boundary-recheck.json": {
+      "path": "research/workers/research-batch-005/boundary-recheck.json",
+      "sha256": "8ce88a72bce233acba593b474a0353e291ecd0ca6fb230563531ba1a5c156b89",
+      "bytes": 524514
+    },
+    "boundary-corrections.json": {
+      "path": "research/workers/research-batch-005/boundary-corrections.json",
+      "sha256": "111f7dbb789c00caf89b88442fcdad69939208b6f01b8834642f201266f130ba",
+      "bytes": 119972
+    },
+    "boundary-source-inspections.json": {
+      "path": "research/workers/research-batch-005/boundary-source-inspections.json",
+      "sha256": "63d95bb6d4c57b31fa6178f5fdc68ccc0cb906fc8468cc7b4330b5c0baf79988",
+      "bytes": 68685
+    },
+    "boundary-access-log.json": {
+      "path": "research/workers/research-batch-005/boundary-access-log.json",
+      "sha256": "6b9ab1b3c8fe8083a36714d5eff3238ae2b52877b1d9612733151fd5ce93fc80",
+      "bytes": 2950
+    },
+    "boundary-validation.json": {
+      "path": "research/workers/research-batch-005/boundary-validation.json",
+      "sha256": "6e087e2b6baaf58a1d4037bd0b3ba6c1efa730fdd5930917410317558b3557b7",
+      "bytes": 1386
+    },
+    "boundary-predecessors.json": {
+      "path": "research/workers/research-batch-005/boundary-predecessors.json",
+      "sha256": "e44ea47c00db4492c3b55890760d6e8fd326bc4d0fdffb08ee0448a0f4545997",
+      "bytes": 27265
+    }
+  },
+  "independent_recheck_ids": [
+    "Q169399",
+    "local:authored:000520",
+    "local:catalog:atomic-commit",
+    "local:catalog:conversational-turn-taking",
+    "local:catalog:delayed-judgments-of-learning",
+    "local:catalog:distributed-consensus",
+    "local:catalog:grounding-in-communication",
+    "local:catalog:international-cooperative-alliance",
+    "local:catalog:manchester-baby",
+    "local:catalog:minimal-pair",
+    "local:catalog:other-initiated-conversational-repair",
+    "local:catalog:patronage-based-surplus-distribution",
+    "local:catalog:rochdale-pioneers",
+    "local:catalog:rollback-journal",
+    "local:catalog:south-sea-bubble",
+    "local:catalog:wal-checkpointing",
+    "local:catalog:write-ahead-logging"
+  ],
+  "limitations": [
+    "Every changed record requires independent recheck, including source-bundle-only changes.",
+    "The 200-card boundary pass is author review, not independent certification.",
+    "No new source URLs or identities were introduced; original source-access limitations are retained."
+  ]
+}

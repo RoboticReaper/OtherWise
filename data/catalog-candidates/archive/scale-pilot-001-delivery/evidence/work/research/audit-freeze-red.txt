@@ -1,0 +1,69 @@
+test_partial_sample_does_not_invent_ids (test_audit_freeze.AuditFreezeTests.test_partial_sample_does_not_invent_ids) ... FAIL
+test_random_sample_is_order_independent_and_unique (test_audit_freeze.AuditFreezeTests.test_random_sample_is_order_independent_and_unique) ... FAIL
+test_random_sample_uses_prescribed_sha256_rule (test_audit_freeze.AuditFreezeTests.test_random_sample_uses_prescribed_sha256_rule) ... FAIL
+test_risk_sample_is_disjoint_and_reports_reasons (test_audit_freeze.AuditFreezeTests.test_risk_sample_is_disjoint_and_reports_reasons) ... FAIL
+
+======================================================================
+FAIL: test_partial_sample_does_not_invent_ids (test_audit_freeze.AuditFreezeTests.test_partial_sample_does_not_invent_ids)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_audit_freeze.py", line 21, in test_partial_sample_does_not_invent_ids
+    self.assertEqual(set(MODULE.sample_random(['a','b'],'seed',20)),{'a','b'})
+AssertionError: Items in the second set but not the first:
+'a'
+'b'
+
+======================================================================
+FAIL: test_random_sample_is_order_independent_and_unique (test_audit_freeze.AuditFreezeTests.test_random_sample_is_order_independent_and_unique)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_audit_freeze.py", line 18, in test_random_sample_is_order_independent_and_unique
+    self.assertEqual(len(set(MODULE.sample_random(ids,'seed',20))),20)
+AssertionError: 0 != 20
+
+======================================================================
+FAIL: test_random_sample_uses_prescribed_sha256_rule (test_audit_freeze.AuditFreezeTests.test_random_sample_uses_prescribed_sha256_rule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_audit_freeze.py", line 13, in test_random_sample_uses_prescribed_sha256_rule
+    self.assertEqual(MODULE.sample_random(ids,seed,20),expected)
+AssertionError: Lists differ: [] != ['id:51', 'id:16', 'id:38', 'id:17', 'id:3[130 chars]d:3']
+
+Second list contains 20 additional elements.
+First extra element 0:
+'id:51'
+
+- []
++ ['id:51',
++  'id:16',
++  'id:38',
++  'id:17',
++  'id:31',
++  'id:60',
++  'id:8',
++  'id:29',
++  'id:49',
++  'id:12',
++  'id:4',
++  'id:54',
++  'id:21',
++  'id:40',
++  'id:77',
++  'id:58',
++  'id:27',
++  'id:28',
++  'id:22',
++  'id:3']
+
+======================================================================
+FAIL: test_risk_sample_is_disjoint_and_reports_reasons (test_audit_freeze.AuditFreezeTests.test_risk_sample_is_disjoint_and_reports_reasons)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_audit_freeze.py", line 26, in test_risk_sample_is_disjoint_and_reports_reasons
+    self.assertEqual(len(chosen),20)
+AssertionError: 0 != 20
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=4)

@@ -1,0 +1,3865 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-005",
+  "review_type": "independent_stage_a_identity_admission_advisory",
+  "reviewed_at": "2026-10-08T19:49:07.415228+00:00",
+  "input": {
+    "path": "research/workers/research-batch-005/selection.proposed.json",
+    "sha256": "e21a304a3b2dd81314af01f7128eca6fa0cbaf60ba1ca8175930e05e1130b7fd",
+    "proposals": 200,
+    "recommended": 200,
+    "reported_status_counts_recomputed": {
+      "existing_control": 39,
+      "new": 161
+    }
+  },
+  "baseline": {
+    "path": "data/catalog-candidates/scale-pilot-001/baseline-index.json",
+    "sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9",
+    "manifest_sha256": "5a14c4f6179be6f4340f52a4c9fef6d10264862216690b5da1a7e3ee325bd0f1",
+    "identity_count": 7224,
+    "unchanged": true
+  },
+  "checked": {
+    "all_proposal_labels_aliases_takeaways_scopes_types_and_ownership": true,
+    "all_registered_control_ids_resolve": true,
+    "new_unverified_qids": [],
+    "diagnostics": "Word/character TF–IDF retrieval over pinned labels, aliases, descriptions and prior candidate cards, used only to locate likely meaning comparisons. Top three independent diagnostic rows were inspected for new/unresolved proposals; registered controls were checked against their actual IDs/meanings. Author-recorded comparisons, targeted synonym scans and detailed near-case records informed semantic judgment. A lexical miss is not proof of novelty.",
+    "actual_source_passages_inspected": "Exact independent source inspections are enumerated in source-inspection-ledger.json with paths, hashes and locators. Other proposals received identity/meaning review against recorded discovery evidence and pinned meanings, not a full factual-source audit.",
+    "source_quality_scope": "No cards exist yet; this does not replace the independent frozen-card audit."
+  },
+  "recommendations": [
+    {
+      "proposal_id": "local:catalog:organizational-design",
+      "compared_ids": [
+        "Q3318170"
+      ],
+      "recommendation": "reuse_registered_id_central_decision",
+      "meaning_comparison": "The proposal arranges responsibilities and coordination structures to achieve organizational purposes. Baseline Organizational architecture already denotes management of roles, processes and formal reporting relationships. The process-versus-entity comparison to Q43229 misses the semantically equivalent registered design subject.",
+      "evidence": [
+        "baseline-index concepts/Q3318170; selection.proposed.json proposal 126",
+        "https://openstax.org/books/principles-management/pages/10-1-organizational-structures-and-design opening definitions"
+      ],
+      "authoring_conditions": [
+        "Use Q3318170 as an existing control. Preserve Organizational architecture as an alias and preserve baseline provenance. Do not keep the new local ID as an independently counted identity."
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:distributed-consensus",
+      "compared_ids": [
+        "Q5162845"
+      ],
+      "recommendation": "admit_label_scope_clarification_central_decision",
+      "meaning_comparison": "Consensus dynamics is registered broadly as agents reaching common decisions. The proposed source-supported subject is crash-fault-tolerant agreement on ordered replicated-log commands with majority availability, rather than unrestricted collective agreement. A clear computing/failure-model qualifier protects the intended distinct scope.",
+      "evidence": [
+        "baseline-index concepts/Q5162845; selection.proposed.json proposal 32",
+        "https://web.stanford.edu/~ouster/cs190-winter24/lectures/raft/ Motivation: Replicated State Machines"
+      ],
+      "authoring_conditions": [
+        "Use the bounded label Replicated-log consensus under crash faults, preserving local:catalog:distributed-consensus. This is a label/scope clarification, not an added proposal or an equivalence to generic consensus dynamics."
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:snapshot-isolation",
+      "compared_ids": [
+        "local:catalog:serializable-snapshot-isolation",
+        "local:catalog:postgresql-repeatable-read-snapshots"
+      ],
+      "recommendation": "admit_general_mechanism",
+      "meaning_comparison": "General snapshot isolation gives a stable transaction view. Serializable snapshot isolation adds anomaly/conflict checks; the PostgreSQL baseline specifies a product-specific Repeatable Read timing and visibility rule. The general mechanism is separable from either application, but the PostgreSQL control also belongs in the comparisons.",
+      "evidence": [
+        "baseline-index full candidate records for both matched IDs; selection.proposed.json proposal 28"
+      ],
+      "authoring_conditions": [
+        "Do not imply consistent snapshots alone guarantee serializability."
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:http-entity-tag",
+      "compared_ids": [
+        "local:catalog:http-if-match-lost-update-prevention"
+      ],
+      "recommendation": "admit_general_validator",
+      "meaning_comparison": "An ETag is the opaque representation validator; If-Match is a specific conditional-update use of that validator. The object/property is distinct from the lost-update-prevention application.",
+      "evidence": [
+        "baseline-index candidate record; selection.proposed.json proposals 37–38"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:community-led-language-reclamation",
+      "compared_ids": [
+        "local:authored:000133"
+      ],
+      "recommendation": "admit_qualified_governance_facet",
+      "meaning_comparison": "Baseline revitalization concerns sustaining use and transmission. The inspected Cenerini interview supplies a specific local-governance distinction: Métis/Michif communities do not all share one language, so work must follow each community’s own linguistic history and priorities. That is more specific than merely renaming revitalization.",
+      "evidence": [
+        "source-texts/web-045.json lines 405–416; baseline-index complete prior Language revitalization cards"
+      ],
+      "authoring_conditions": [
+        "Retain the concrete community-specific histories/goals distinction, supported by the Michif case; do not reduce it to generic support for threatened languages."
+      ]
+    },
+    {
+      "proposal_id": "local:catalog:language-documentation",
+      "compared_ids": [
+        "local:authored:000133"
+      ],
+      "recommendation": "admit_distinct_activity",
+      "meaning_comparison": "Documentation creates language-use records and family/community histories; revitalization seeks continued use and transmission. The earlier baseline cards themselves distinguish preserving records from sustaining use.",
+      "evidence": [
+        "source-texts/web-045.json lines 411–415; baseline-index complete prior cards"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:networked-team-structure",
+      "compared_ids": [
+        "Q646293",
+        "local:catalog:organic-organizational-structure",
+        "local:catalog:virtual-organization"
+      ],
+      "recommendation": "admit_qualified_facet",
+      "meaning_comparison": "The inspected source describes initially assigned teams that form flexible task-driven networks. Informal organization is emergent relationships generally, organic structure is a wider decentralized design orientation, and virtual organization adds a boundaryless geographically dispersed structure. Keep the task-team arrangement explicit.",
+      "evidence": [
+        "source-texts/web-092.json lines 78–90; baseline-index concepts/Q646293"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:grounding-in-communication",
+      "compared_ids": [
+        "local:catalog:common-ground-in-communication",
+        "Q11024"
+      ],
+      "recommendation": "admit_distinct_process",
+      "meaning_comparison": "Grounding is the collaborative process of establishing sufficient mutual understanding. Common ground is the mutually recognized knowledge/belief basis updated by that process; communication is broader than either.",
+      "evidence": [
+        "source-texts/web-120.json printed opening pp. 127–128, lines 14–47"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:conversational-acknowledgment",
+      "compared_ids": [
+        "local:catalog:grounding-in-communication",
+        "local:catalog:adjacency-pair"
+      ],
+      "recommendation": "admit_distinct_action",
+      "meaning_comparison": "Acknowledgments are brief positive evidence of understanding, often without taking a turn. They are a grounding action, not the entire acceptance process or the general two-part sequential organization of an adjacency pair.",
+      "evidence": [
+        "source-texts/web-120.json printed pp. 131–132, lines 168–188"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:open-repair-request",
+      "compared_ids": [
+        "local:catalog:restricted-repair-request",
+        "local:catalog:candidate-understanding-repair",
+        "local:catalog:other-initiated-conversational-repair"
+      ],
+      "recommendation": "admit_distinct_facet_cluster",
+      "meaning_comparison": "The inspected research explicitly distinguishes open requests (unspecified trouble), restricted requests (a targeted missing component), and restricted offers (a candidate interpretation seeking confirmation). These three mechanisms are not paraphrase variants of the general repair process.",
+      "evidence": [
+        "source-texts/web-123.json pp. 4–5, lines 160–196"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:least-collaborative-effort",
+      "compared_ids": [
+        "local:catalog:grounding-in-communication"
+      ],
+      "recommendation": "admit_distinct_principle",
+      "meaning_comparison": "The source principle minimizes combined participant work through mutual acceptance. That optimization principle is not the process of grounding itself, nor simply minimizing the speaker’s effort.",
+      "evidence": [
+        "source-texts/web-120.json printed p. 133, lines 259–328"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:betweenness-centrality",
+      "compared_ids": [
+        "Q5062194",
+        "Q28401090"
+      ],
+      "recommendation": "admit_distinct_measure",
+      "meaning_comparison": "Betweenness counts shortest-path mediation, whereas eigenvector centrality weights influential neighbors and Centrality is the measure class. One cross-domain owner is needed; the mathematical mechanism must not be counted again in batch 004.",
+      "evidence": [
+        "selection.proposed.json proposal 167; baseline-index concepts/Q5062194 and Q28401090"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:strong-triadic-closure-property",
+      "compared_ids": [
+        "local:catalog:triadic-closure"
+      ],
+      "recommendation": "admit_qualified_model",
+      "meaning_comparison": "The formal condition requiring a tie between two strong neighbors is distinct from the empirical tendency for shared friends to become connected. The condition is an idealized assumption, not a universal social law.",
+      "evidence": [
+        "selection.proposed.json proposals 164 and 168"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:screening-in-economics",
+      "compared_ids": [
+        "local:catalog:economic-signaling"
+      ],
+      "recommendation": "admit_distinct_information_mechanism",
+      "meaning_comparison": "The less-informed party initiates screening; the informed party initiates signaling. These are different information-acquisition mechanisms.",
+      "evidence": [
+        "selection.proposed.json proposals 110–111; baseline-index candidate record"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:bond-finance",
+      "compared_ids": [
+        "Q44424",
+        "Q10863671",
+        "Q3196867"
+      ],
+      "recommendation": "admit_distinct_financial_sense",
+      "meaning_comparison": "A bond is a debt security with specified issuer repayment terms, not an interatomic attraction or a chemical phi bond. General debt is a wider class. The real chemistry homonym Q44424 should be named alongside the author’s phi-bond comparison.",
+      "evidence": [
+        "selection.proposed.json proposal 118; baseline-index concepts/Q44424, Q10863671 and Q3196867"
+      ],
+      "authoring_conditions": []
+    },
+    {
+      "proposal_id": "local:catalog:apple-inc",
+      "compared_ids": [
+        "Q89"
+      ],
+      "recommendation": "admit_distinct_named_sense",
+      "meaning_comparison": "The company is distinct from the fruit sharing Apple as an alias. The selected historical production-chain case identifies the company sense directly.",
+      "evidence": [
+        "selection.proposed.json proposal 146; baseline-index concepts/Q89"
+      ],
+      "authoring_conditions": [
+        "Keep the business case historical; do not assert current supply-chain details."
+      ]
+    }
+  ],
+  "proposal_records": [
+    {
+      "ordinal": 1,
+      "proposal_id": "local:authored:000609",
+      "label": "Information theory",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000609"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000609",
+        "Q11028",
+        "Q204570"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 2,
+      "proposal_id": "Q2493",
+      "label": "Data compression",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2493"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2493",
+        "Q5157043",
+        "Q389772"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 3,
+      "proposal_id": "local:catalog:huffman-coding",
+      "label": "Huffman coding",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2493"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q602136",
+        "Q133150082",
+        "local:authored:000533"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 4,
+      "proposal_id": "local:catalog:prefix-free-code",
+      "label": "Prefix-free code",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2493"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q134409768",
+        "Q79897",
+        "Q5073332"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 5,
+      "proposal_id": "local:catalog:canonical-huffman-coding",
+      "label": "Canonical Huffman coding",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2493"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5033354",
+        "Q1501876",
+        "Q602136"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 6,
+      "proposal_id": "local:catalog:lz77",
+      "label": "LZ77",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2493"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2181337",
+        "Q863695",
+        "Q4118602"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 7,
+      "proposal_id": "local:catalog:deflate",
+      "label": "DEFLATE",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2493"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q161081",
+        "Q276582",
+        "Q654383"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 8,
+      "proposal_id": "local:catalog:dynamic-huffman-blocks-in-deflate",
+      "label": "Dynamic Huffman blocks in DEFLATE",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2493"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q189396",
+        "Q1348006",
+        "Q161081"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 9,
+      "proposal_id": "local:catalog:unicode-normalization",
+      "label": "Unicode normalization",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q494756"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7051851",
+        "Q65043788",
+        "local:catalog:focalization"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 10,
+      "proposal_id": "local:catalog:canonical-equivalence-in-unicode",
+      "label": "Canonical equivalence in Unicode",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q494756"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q130998",
+        "Q5033354",
+        "Q1779238"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 11,
+      "proposal_id": "local:catalog:compatibility-equivalence-in-unicode",
+      "label": "Compatibility equivalence in Unicode",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q494756"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7731670",
+        "Q130998",
+        "Q1779238"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 12,
+      "proposal_id": "local:catalog:normalization-across-string-concatenation",
+      "label": "Normalization across string concatenation",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q494756"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7051851",
+        "Q5348940",
+        "Q576006"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 13,
+      "proposal_id": "local:catalog:utf-8",
+      "label": "UTF-8",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q494756"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1377153",
+        "Q19321851",
+        "Q131156"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 14,
+      "proposal_id": "local:catalog:overlong-utf-8-encodings",
+      "label": "Overlong UTF-8 encodings",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:encoding-specificity"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:encoding-specificity",
+        "Q3900481",
+        "Q602136"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 15,
+      "proposal_id": "local:catalog:unicode-code-point",
+      "label": "Unicode code point",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q494756"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q134409768",
+        "Q79897",
+        "Q5073332"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 16,
+      "proposal_id": "local:catalog:grapheme-cluster",
+      "label": "Grapheme cluster",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q5597119"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q178647",
+        "Q169917",
+        "Q5597119"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 17,
+      "proposal_id": "local:catalog:binary-search",
+      "label": "Binary search",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8513"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1193859",
+        "Q50053",
+        "Q3913"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 18,
+      "proposal_id": "local:catalog:covering-index",
+      "label": "Covering index",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8513"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q849699",
+        "Q3150395",
+        "Q131191"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 19,
+      "proposal_id": "local:catalog:multi-column-index",
+      "label": "Multi-column index",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8513"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4817",
+        "Q849699",
+        "Q3150395"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 20,
+      "proposal_id": "local:catalog:a-mathematical-theory-of-communication",
+      "label": "A Mathematical Theory of Communication",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000609"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11024",
+        "local:authored:000615",
+        "local:authored:000505"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 21,
+      "proposal_id": "local:authored:000520",
+      "label": "Distributed systems",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000520",
+        "local:authored:000675",
+        "local:authored:000547"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 22,
+      "proposal_id": "Q8513",
+      "label": "Database",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8513"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q8513",
+        "local:authored:000519",
+        "Q1340994"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 23,
+      "proposal_id": "local:catalog:sql",
+      "label": "SQL",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8513"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000519",
+        "Q8513",
+        "Q104850257"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 24,
+      "proposal_id": "local:catalog:sqlite",
+      "label": "SQLite",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8513"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q8513",
+        "local:authored:000519",
+        "Q605396"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 25,
+      "proposal_id": "local:catalog:atomic-commit",
+      "label": "Atomic commit",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8513"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q26383",
+        "Q483788",
+        "Q227467"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 26,
+      "proposal_id": "local:catalog:rollback-journal",
+      "label": "Rollback journal",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8513"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3007875",
+        "local:authored:000715",
+        "local:authored:000327"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 27,
+      "proposal_id": "local:catalog:write-ahead-logging",
+      "label": "Write-ahead logging",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8513"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000695",
+        "Q8192",
+        "local:authored:000428"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 28,
+      "proposal_id": "local:catalog:snapshot-isolation",
+      "label": "Snapshot isolation",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_general_mechanism",
+      "author_baseline_comparison_ids": [
+        "local:catalog:serializable-snapshot-isolation"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:serializable-snapshot-isolation",
+        "local:catalog:postgresql-repeatable-read-snapshots",
+        "Q3488758"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 29,
+      "proposal_id": "local:catalog:wal-checkpointing",
+      "label": "WAL checkpointing",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8513"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1339614",
+        "Q11629",
+        "Q11034"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 30,
+      "proposal_id": "local:catalog:replicated-state-machine",
+      "label": "Replicated state machine",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11019",
+        "Q33972",
+        "Q12800"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 31,
+      "proposal_id": "local:catalog:raft-consensus-algorithm",
+      "label": "Raft consensus algorithm",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q8366",
+        "Q5162845",
+        "Q951050"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 32,
+      "proposal_id": "local:catalog:distributed-consensus",
+      "label": "Distributed consensus",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_label_scope_clarification_central_decision",
+      "author_baseline_comparison_ids": [
+        "Q5162845"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5162845",
+        "local:authored:000520",
+        "Q3115646"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 33,
+      "proposal_id": "local:catalog:randomized-election-timeouts",
+      "label": "Randomized election timeouts",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4925173",
+        "Q176623",
+        "Q43478"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 34,
+      "proposal_id": "local:catalog:joint-consensus-in-raft",
+      "label": "Joint consensus in Raft",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q5162845"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5162845",
+        "Q3115646",
+        "Q6269541"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 35,
+      "proposal_id": "local:catalog:replicated-log",
+      "label": "Replicated log",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q746284",
+        "Q30849",
+        "Q1380756"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 36,
+      "proposal_id": "local:catalog:http-idempotency",
+      "label": "HTTP method idempotency",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:http-idempotency"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:http-idempotency",
+        "Q8032308",
+        "Q1627732"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 37,
+      "proposal_id": "local:catalog:http-entity-tag",
+      "label": "HTTP entity tag",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_general_validator",
+      "author_baseline_comparison_ids": [
+        "local:catalog:http-if-match-lost-update-prevention"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:http-if-match-lost-update-prevention",
+        "local:catalog:http-idempotency",
+        "Q5988412"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 38,
+      "proposal_id": "local:catalog:http-if-match-lost-update-prevention",
+      "label": "HTTP If-Match update preconditions",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:http-if-match-lost-update-prevention"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:http-if-match-lost-update-prevention",
+        "Q37507",
+        "local:catalog:http-idempotency"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 39,
+      "proposal_id": "local:catalog:tcp-slow-start",
+      "label": "TCP slow start",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2294523",
+        "local:authored:000329",
+        "Q17141866"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 40,
+      "proposal_id": "local:catalog:tcp-congestion-window",
+      "label": "TCP congestion window",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000520"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1346214",
+        "Q4468899",
+        "Q23900955"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 41,
+      "proposal_id": "Q3510521",
+      "label": "Computer security",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q3510521"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3510521",
+        "Q189900",
+        "Q2483208"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 42,
+      "proposal_id": "local:authored:000527",
+      "label": "Cryptography",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000527"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000527",
+        "Q141090",
+        "local:authored:000060"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 43,
+      "proposal_id": "local:catalog:principle-of-least-privilege",
+      "label": "Principle of least privilege",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q3510521"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q211364",
+        "Q22668",
+        "Q131560"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 44,
+      "proposal_id": "local:catalog:fail-safe-defaults",
+      "label": "Fail-safe defaults",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q3510521"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q17006963",
+        "local:catalog:python-mutable-default-arguments",
+        "Q123455506"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 45,
+      "proposal_id": "local:catalog:complete-mediation",
+      "label": "Complete mediation",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q3510521"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000488",
+        "Q28404855",
+        "Q2631839"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 46,
+      "proposal_id": "local:catalog:separation-of-privilege",
+      "label": "Separation of privilege",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q7451821"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q17116077",
+        "Q7451821",
+        "Q1064600"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 47,
+      "proposal_id": "local:catalog:open-security-design",
+      "label": "Open security design",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q3510521"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3510521",
+        "Q2483208",
+        "Q189900"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 48,
+      "proposal_id": "local:catalog:economy-of-mechanism",
+      "label": "Economy of mechanism",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q3510521"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q953137",
+        "Q159810",
+        "Q7242621"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 49,
+      "proposal_id": "local:catalog:capability-based-security",
+      "label": "Capability-based security",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q3510521"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2483208",
+        "Q3510521",
+        "Q189900"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 50,
+      "proposal_id": "local:catalog:access-control-list",
+      "label": "Access control list",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q3510521"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7603424",
+        "Q959968",
+        "Q28403803"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 51,
+      "proposal_id": "local:catalog:password-salting",
+      "label": "Password salting",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q161157"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q161157",
+        "Q83207",
+        "Q12791"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 52,
+      "proposal_id": "local:catalog:authentication-rate-limiting",
+      "label": "Authentication rate limiting",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q212108"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q212108",
+        "Q6549563",
+        "Q753454"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 53,
+      "proposal_id": "local:catalog:replay-resistant-authentication",
+      "label": "Replay-resistant authentication",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q212108"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q212108",
+        "Q7315448",
+        "Q5139011"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 54,
+      "proposal_id": "local:catalog:phishing-resistant-authentication",
+      "label": "Phishing-resistant authentication",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q212108"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q212108",
+        "Q7315448",
+        "Q3610615"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 55,
+      "proposal_id": "local:catalog:tls-1-3",
+      "label": "TLS 1.3",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000527"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q830043",
+        "Q132041",
+        "Q178512"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 56,
+      "proposal_id": "local:catalog:forward-secrecy",
+      "label": "Forward secrecy",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000527"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5441226",
+        "Q276548",
+        "Q6673539"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 57,
+      "proposal_id": "local:catalog:grace-hopper",
+      "label": "Grace Hopper",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q21198"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q753",
+        "Q131140",
+        "Q130610226"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 58,
+      "proposal_id": "local:catalog:manchester-baby",
+      "label": "Manchester Baby",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q68"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q83913",
+        "Q101487",
+        "Q9645"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 59,
+      "proposal_id": "Q169399",
+      "label": "ENIAC",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q169399"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q169399",
+        "Q96391151",
+        "Q202837"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 60,
+      "proposal_id": "local:catalog:morris-worm",
+      "label": "Morris worm",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q3510521"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2294999",
+        "Q72334",
+        "Q79897"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 61,
+      "proposal_id": "local:authored:000132",
+      "label": "Linguistics",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000132"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000132",
+        "Q190375",
+        "Q878226"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 62,
+      "proposal_id": "Q40998",
+      "label": "Phonology",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q40998"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q40998",
+        "Q661093",
+        "Q130788"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 63,
+      "proposal_id": "Q38311",
+      "label": "Morphology",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q38311"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q38311",
+        "Q25346139",
+        "Q52109"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 64,
+      "proposal_id": "local:catalog:minimal-pair",
+      "label": "Minimal pair",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:minimal-pair"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:minimal-pair",
+        "Q804644",
+        "Q173436"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 65,
+      "proposal_id": "local:catalog:allophone",
+      "label": "Allophone",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:allophone"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:allophone",
+        "Q8183",
+        "Q221079"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 66,
+      "proposal_id": "local:catalog:complementary-distribution",
+      "label": "Complementary distribution",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:allophone"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q205692",
+        "Q200726",
+        "Q243462"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 67,
+      "proposal_id": "local:catalog:allomorph",
+      "label": "Allomorph",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:allomorph"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:allomorph",
+        "Q81915",
+        "Q3612627"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 68,
+      "proposal_id": "local:catalog:reduplication",
+      "label": "Reduplication",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q38311"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q746284",
+        "Q1380756",
+        "Q11024"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 69,
+      "proposal_id": "local:catalog:constituency-tests",
+      "label": "Constituency tests",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:constituency-tests"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:constituency-tests",
+        "Q7755",
+        "Q11206"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 70,
+      "proposal_id": "local:catalog:structural-ambiguity",
+      "label": "Structural ambiguity",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:structural-ambiguity"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:structural-ambiguity",
+        "Q811679",
+        "Q725158"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 71,
+      "proposal_id": "local:catalog:semantic-compositionality",
+      "label": "Semantic compositionality",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000132"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q631616",
+        "Q5258530",
+        "local:authored:000216"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 72,
+      "proposal_id": "local:catalog:semantic-entailment",
+      "label": "Semantic entailment",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q1076131"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q631616",
+        "Q5258530",
+        "Q39645"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 73,
+      "proposal_id": "local:catalog:conversational-implicature",
+      "label": "Conversational implicature",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q1076131"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q219825",
+        "local:authored:000716",
+        "Q938545"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 74,
+      "proposal_id": "Q1076131",
+      "label": "Presupposition",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q1076131"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1076131",
+        "Q2027206",
+        "local:authored:000216"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 75,
+      "proposal_id": "Q21204",
+      "label": "International Phonetic Alphabet",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q21204"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q21204",
+        "Q9779",
+        "Q8216"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 76,
+      "proposal_id": "Q190375",
+      "label": "Historical linguistics",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q190375"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q190375",
+        "local:authored:000132",
+        "Q878226"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 77,
+      "proposal_id": "local:catalog:variationist-sociolinguistics",
+      "label": "Variationist sociolinguistics",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000132"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000132",
+        "Q772835",
+        "Q190375"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 78,
+      "proposal_id": "local:catalog:sociolinguistic-interview",
+      "label": "Sociolinguistic interview",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q772835"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000132",
+        "Q21201",
+        "Q772835"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 79,
+      "proposal_id": "local:catalog:observer-s-paradox-in-sociolinguistics",
+      "label": "Observer's paradox in sociolinguistics",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q772835"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q483372",
+        "Q33401",
+        "Q1890213"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 80,
+      "proposal_id": "local:catalog:principle-of-accountability-in-sociolinguistics",
+      "label": "Principle of accountability in sociolinguistics",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000132"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q211364",
+        "Q131560",
+        "Q1170107"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 81,
+      "proposal_id": "local:catalog:sociolinguistic-corpus",
+      "label": "Sociolinguistic corpus",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000132"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000132",
+        "Q21201",
+        "Q772835"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 82,
+      "proposal_id": "local:catalog:style-shifting",
+      "label": "Style shifting",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000132"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q191105",
+        "local:authored:000393",
+        "Q32880"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 83,
+      "proposal_id": "local:catalog:linguistic-change-from-above",
+      "label": "Linguistic change from above",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q190375"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q772835",
+        "Q7733",
+        "Q107694948"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 84,
+      "proposal_id": "local:catalog:linguistic-change-from-below",
+      "label": "Linguistic change from below",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q190375"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q772835",
+        "Q1510761",
+        "local:authored:000132"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 85,
+      "proposal_id": "local:catalog:atlas-linguistique-de-la-france",
+      "label": "Atlas linguistique de la France",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q190375"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q130135",
+        "Q772835",
+        "local:authored:000132"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 86,
+      "proposal_id": "local:catalog:fangyan",
+      "label": "Fangyan",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q190375"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q193220",
+        "Q33384",
+        "Q180778"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 87,
+      "proposal_id": "local:catalog:william-labov",
+      "label": "William Labov",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000132"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q9476",
+        "Q628967",
+        "local:authored:000105"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 88,
+      "proposal_id": "local:catalog:chantale-cenerini",
+      "label": "Chantale Cenerini",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000133"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q490933",
+        "local:authored:000018",
+        "local:authored:000100"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 89,
+      "proposal_id": "local:catalog:language-documentation",
+      "label": "Language documentation",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_activity",
+      "author_baseline_comparison_ids": [
+        "local:authored:000133"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q315",
+        "Q25295",
+        "local:authored:000133"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 90,
+      "proposal_id": "local:catalog:community-led-language-reclamation",
+      "label": "Community-led language reclamation",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_qualified_governance_facet",
+      "author_baseline_comparison_ids": [
+        "local:authored:000133"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q177634",
+        "Q315",
+        "local:authored:000067"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 91,
+      "proposal_id": "local:authored:000137",
+      "label": "Peer learning",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000137"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000137",
+        "Q133500",
+        "local:authored:000136"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 92,
+      "proposal_id": "Q7705913",
+      "label": "Testing effect",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q7705913"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7705913",
+        "local:authored:000518",
+        "Q7404456"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 93,
+      "proposal_id": "Q1095859",
+      "label": "Spacing effect",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q1095859"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1095859",
+        "Q7705913",
+        "Q7451197"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 94,
+      "proposal_id": "local:catalog:interleaved-practice",
+      "label": "Interleaved practice",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q133500"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7236525",
+        "local:authored:000469",
+        "Q29025626"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 95,
+      "proposal_id": "local:catalog:worked-example",
+      "label": "Worked example",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q133500"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q54128",
+        "Q7410131",
+        "local:authored:000096"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 96,
+      "proposal_id": "local:catalog:faded-worked-examples",
+      "label": "Faded worked examples",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q133500"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5447188",
+        "Q54128",
+        "local:authored:000096"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 97,
+      "proposal_id": "local:catalog:coordinating-graphics-and-verbal-explanations",
+      "label": "Coordinating graphics and verbal explanations",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8434"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7410131",
+        "Q11210",
+        "Q107393962"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 98,
+      "proposal_id": "local:catalog:connecting-concrete-and-abstract-representations",
+      "label": "Connecting concrete and abstract representations",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q18205125"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q18205125",
+        "Q22657",
+        "Q128115"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 99,
+      "proposal_id": "local:catalog:prequestioning",
+      "label": "Prequestioning",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q133500"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2823570",
+        "Q24471751",
+        "local:authored:000056"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 100,
+      "proposal_id": "local:catalog:delayed-judgments-of-learning",
+      "label": "Delayed judgments of learning",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q1602656"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q133500",
+        "local:authored:000678",
+        "local:authored:000136"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 101,
+      "proposal_id": "local:catalog:self-explanation",
+      "label": "Self-explanation",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q133500"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q9162854",
+        "Q609408",
+        "Q17093906"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 102,
+      "proposal_id": "local:catalog:formative-assessment",
+      "label": "Formative assessment",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q27318"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q27318",
+        "local:authored:000023",
+        "Q7998614"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 103,
+      "proposal_id": "local:catalog:mastery-learning",
+      "label": "Mastery learning",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q133500"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q133500",
+        "local:authored:000136",
+        "local:authored:000137"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 104,
+      "proposal_id": "local:catalog:eric-mazur",
+      "label": "Eric Mazur",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000137"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q6512443",
+        "local:authored:000137",
+        "Q1569083"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 105,
+      "proposal_id": "local:catalog:peer-instruction",
+      "label": "Peer Instruction",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000137"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000137",
+        "Q1569083",
+        "Q3875186"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 106,
+      "proposal_id": "Q8134",
+      "label": "Economics",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q8134"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q8134",
+        "local:authored:000592",
+        "Q28161"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 107,
+      "proposal_id": "local:catalog:information-asymmetry",
+      "label": "Information asymmetry",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:information-asymmetry"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:information-asymmetry",
+        "Q11028",
+        "local:authored:000609"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 108,
+      "proposal_id": "local:catalog:adverse-selection",
+      "label": "Adverse selection",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:adverse-selection"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:adverse-selection",
+        "Q28134837",
+        "Q3312854"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 109,
+      "proposal_id": "local:catalog:moral-hazard",
+      "label": "Moral hazard",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:moral-hazard"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:moral-hazard",
+        "Q279454",
+        "Q7752225"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 110,
+      "proposal_id": "local:catalog:economic-signaling",
+      "label": "Signaling in economics",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:economic-signaling"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:economic-signaling",
+        "Q8134",
+        "Q1394203"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 111,
+      "proposal_id": "local:catalog:screening-in-economics",
+      "label": "Screening in economics",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_information_mechanism",
+      "author_baseline_comparison_ids": [
+        "local:catalog:economic-signaling"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q113189787",
+        "Q8134",
+        "Q1394203"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 112,
+      "proposal_id": "local:catalog:reputation-in-markets",
+      "label": "Reputation in markets",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:information-asymmetry"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q37654",
+        "Q50851",
+        "local:catalog:the-market-for-lemons"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 113,
+      "proposal_id": "local:catalog:warranties-as-quality-assurance",
+      "label": "Warranties as quality assurance",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:information-asymmetry"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2498665",
+        "Q43183",
+        "Q938185"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 114,
+      "proposal_id": "local:catalog:risk-pooling",
+      "label": "Risk pooling",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43183"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000058",
+        "Q189800",
+        "Q2154754"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 115,
+      "proposal_id": "local:catalog:actuarially-fair-insurance",
+      "label": "Actuarially fair insurance",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:actuarially-fair-insurance"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:actuarially-fair-insurance",
+        "Q43183",
+        "local:authored:000585"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 116,
+      "proposal_id": "local:catalog:insurance-deductible",
+      "label": "Insurance deductible",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43183"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q43183",
+        "local:authored:000585",
+        "local:catalog:actuarially-fair-insurance"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 117,
+      "proposal_id": "local:catalog:coinsurance",
+      "label": "Coinsurance",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43183"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q43183",
+        "local:authored:000585",
+        "local:catalog:actuarially-fair-insurance"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 118,
+      "proposal_id": "local:catalog:bond-finance",
+      "label": "Bond (finance)",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_financial_sense",
+      "author_baseline_comparison_ids": [
+        "Q10863671",
+        "Q3196867"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q43015",
+        "Q10863671",
+        "Q2914535"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 119,
+      "proposal_id": "local:catalog:interest-rate-risk-in-bonds",
+      "label": "Interest-rate risk in bonds",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q170924"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000058",
+        "Q170924",
+        "Q753454"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 120,
+      "proposal_id": "local:catalog:common-value-auction",
+      "label": "Common-value auction",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q37654"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q253255",
+        "Q186531",
+        "Q5193486"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 121,
+      "proposal_id": "local:catalog:private-value-auction",
+      "label": "Private-value auction",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q37654"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q253255",
+        "Q186531",
+        "Q5193486"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 122,
+      "proposal_id": "local:catalog:winner-s-curse",
+      "label": "Winner's curse",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:information-asymmetry"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q6738411",
+        "Q1757568",
+        "Q657221"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 123,
+      "proposal_id": "local:catalog:first-price-sealed-bid-auction",
+      "label": "First-price sealed-bid auction",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q37654"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7242621",
+        "Q205759",
+        "local:catalog:adverse-selection"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 124,
+      "proposal_id": "local:catalog:second-price-sealed-bid-auction",
+      "label": "Second-price sealed-bid auction",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q37654"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7242621",
+        "local:authored:000682",
+        "Q835065"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 125,
+      "proposal_id": "local:catalog:ascending-open-auction",
+      "label": "Ascending open auction",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q37654"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q213363",
+        "local:authored:000117",
+        "Q23582265"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 126,
+      "proposal_id": "local:catalog:organizational-design",
+      "label": "Organizational design",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "reuse_registered_id_central_decision",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1937189",
+        "local:authored:000562",
+        "Q3318170"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 127,
+      "proposal_id": "local:catalog:formal-organization",
+      "label": "Formal organization",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q646293"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q646293",
+        "Q43229",
+        "local:authored:000384"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 128,
+      "proposal_id": "Q646293",
+      "label": "Informal organization",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q646293"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q646293",
+        "Q43229",
+        "local:authored:000384"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 129,
+      "proposal_id": "local:catalog:mechanistic-organizational-structure",
+      "label": "Mechanistic organizational structure",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3318170",
+        "Q134503305",
+        "Q1937189"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 130,
+      "proposal_id": "local:catalog:organic-organizational-structure",
+      "label": "Organic organizational structure",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q646293"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3318170",
+        "Q1937189",
+        "local:authored:000562"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 131,
+      "proposal_id": "local:catalog:functional-organizational-structure",
+      "label": "Functional organizational structure",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q170409",
+        "Q3318170",
+        "Q1937189"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 132,
+      "proposal_id": "local:catalog:divisional-organizational-structure",
+      "label": "Divisional organizational structure",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3318170",
+        "Q1937189",
+        "local:authored:000562"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 133,
+      "proposal_id": "local:catalog:matrix-organization",
+      "label": "Matrix organization",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q43229",
+        "local:authored:000384",
+        "Q646293"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 134,
+      "proposal_id": "local:catalog:networked-team-structure",
+      "label": "Networked team structure",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_qualified_facet",
+      "author_baseline_comparison_ids": [
+        "Q646293"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q175263",
+        "Q211606",
+        "Q1664027"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 135,
+      "proposal_id": "local:catalog:virtual-organization",
+      "label": "Virtual organization",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q646293"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q43229",
+        "Q2379139",
+        "Q7934981"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 136,
+      "proposal_id": "local:catalog:span-of-control",
+      "label": "Span of control",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q959968",
+        "Q623971",
+        "Q6501221"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 137,
+      "proposal_id": "local:catalog:organizational-formalization",
+      "label": "Organizational formalization",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3318170",
+        "Q1937189",
+        "local:authored:000562"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 138,
+      "proposal_id": "local:catalog:principal-agent-problem",
+      "label": "Principal–agent problem",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q25304581"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7245073",
+        "Q2873",
+        "Q622849"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 139,
+      "proposal_id": "Q25304581",
+      "label": "Incomplete contracts",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q25304581"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q25304581",
+        "Q93288",
+        "Q1200691"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 140,
+      "proposal_id": "local:catalog:employment-rent",
+      "label": "Employment rent",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q28161"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5029917",
+        "Q2382776",
+        "Q629463"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 141,
+      "proposal_id": "local:catalog:efficiency-wage",
+      "label": "Efficiency wage",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186228"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q615445",
+        "Q186228",
+        "Q3682251"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 142,
+      "proposal_id": "local:authored:000096",
+      "label": "Worker cooperatives",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:authored:000096"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000096",
+        "Q4539",
+        "Q54128"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 143,
+      "proposal_id": "local:catalog:patronage-based-surplus-distribution",
+      "label": "Patronage-based surplus distribution",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q4539"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q268617",
+        "Q205692",
+        "Q200726"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 144,
+      "proposal_id": "local:catalog:just-in-time-production",
+      "label": "Just-in-time production",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q215768",
+        "local:authored:000225",
+        "Q19818012"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 145,
+      "proposal_id": "local:catalog:jidoka",
+      "label": "Jidoka",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7973152",
+        "Q744962",
+        "Q1782658"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 146,
+      "proposal_id": "local:catalog:apple-inc",
+      "label": "Apple Inc.",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_named_sense",
+      "author_baseline_comparison_ids": [
+        "Q89"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q89",
+        "Q212920",
+        "Q538733"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 147,
+      "proposal_id": "local:catalog:foxconn",
+      "label": "Foxconn",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1200691",
+        "Q93288",
+        "Q28130610"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 148,
+      "proposal_id": "local:catalog:l-l-bean",
+      "label": "L.L.Bean",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11006",
+        "local:authored:000167",
+        "Q6030325"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 149,
+      "proposal_id": "local:catalog:panic-of-1907",
+      "label": "Panic of 1907",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q22687"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3947",
+        "Q1122452",
+        "Q6036601"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 150,
+      "proposal_id": "local:catalog:knickerbocker-trust-company",
+      "label": "Knickerbocker Trust Company",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q22687"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q783794",
+        "Q7770573",
+        "Q7366199"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 151,
+      "proposal_id": "local:catalog:new-york-clearing-house",
+      "label": "New York Clearing House",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q22687"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7733",
+        "Q107694948",
+        "Q3947"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 152,
+      "proposal_id": "local:catalog:bretton-woods-conference",
+      "label": "Bretton Woods Conference",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q320863"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5159897",
+        "Q1125095",
+        "Q408386"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 153,
+      "proposal_id": "local:catalog:bank-of-england",
+      "label": "Bank of England",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q22687"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q22687",
+        "Q1138494",
+        "Q7164"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 154,
+      "proposal_id": "local:catalog:south-sea-bubble",
+      "label": "South Sea Bubble",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q22687"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q165",
+        "local:authored:000647",
+        "Q2853184"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 155,
+      "proposal_id": "local:catalog:rochdale-pioneers",
+      "label": "Rochdale Pioneers",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q4539"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4539",
+        "local:authored:000260",
+        "Q7449311"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 156,
+      "proposal_id": "local:catalog:international-cooperative-alliance",
+      "label": "International Cooperative Alliance",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q4539"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4539",
+        "local:authored:000590",
+        "local:authored:000260"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 157,
+      "proposal_id": "local:catalog:grameen-bank",
+      "label": "Grameen Bank",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q22687"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q22687",
+        "Q7164",
+        "Q4856007"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 158,
+      "proposal_id": "local:catalog:toyota-motor-corporation",
+      "label": "Toyota Motor Corporation",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q167037"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q167037",
+        "Q656801",
+        "Q192886"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 159,
+      "proposal_id": "local:catalog:sakichi-toyoda",
+      "label": "Sakichi Toyoda",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q184199"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q184901",
+        "Q11422",
+        "Q19602142"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 160,
+      "proposal_id": "local:catalog:kiichiro-toyoda",
+      "label": "Kiichiro Toyoda",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q187939"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1420",
+        "Q11422",
+        "Q11210"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 161,
+      "proposal_id": "Q21201",
+      "label": "Sociology",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q21201"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q21201",
+        "Q1437399",
+        "Q18393970"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 162,
+      "proposal_id": "Q2715623",
+      "label": "Social network",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2715623"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2715623",
+        "Q1041225",
+        "Q3457056"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 163,
+      "proposal_id": "local:catalog:weak-ties",
+      "label": "Weak ties",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:weak-ties"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:weak-ties",
+        "Q11418",
+        "Q795172"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 164,
+      "proposal_id": "local:catalog:triadic-closure",
+      "label": "Triadic closure",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2715623"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7839906",
+        "local:catalog:epistemic-closure",
+        "local:catalog:eruv-carrying-enclosure"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 165,
+      "proposal_id": "local:catalog:local-bridge-in-a-network",
+      "label": "Local bridge in a network",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:structural-holes"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q3408763",
+        "Q12280",
+        "Q23802"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 166,
+      "proposal_id": "local:catalog:structural-holes",
+      "label": "Structural holes",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:structural-holes"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:structural-holes",
+        "Q811679",
+        "Q725158"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 167,
+      "proposal_id": "local:catalog:betweenness-centrality",
+      "label": "Betweenness centrality",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_measure",
+      "author_baseline_comparison_ids": [
+        "Q5062194",
+        "Q28401090"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5062194",
+        "Q28401090",
+        "Q190663"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 168,
+      "proposal_id": "local:catalog:strong-triadic-closure-property",
+      "label": "Strong triadic closure property",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_qualified_model",
+      "author_baseline_comparison_ids": [
+        "Q2715623"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q7839906",
+        "Q11415",
+        "local:catalog:epistemic-closure"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 169,
+      "proposal_id": "local:catalog:edge-embeddedness",
+      "label": "Edge embeddedness",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:structural-holes"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q18193583",
+        "local:authored:000539",
+        "Q898817"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 170,
+      "proposal_id": "local:catalog:structural-balance-in-social-networks",
+      "label": "Structural balance in social networks",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2715623"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q4197737",
+        "Q811679",
+        "Q725158"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 171,
+      "proposal_id": "local:catalog:signed-social-network",
+      "label": "Signed social network",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2715623"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q1041225",
+        "Q2715623",
+        "Q217675"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 172,
+      "proposal_id": "local:catalog:dyad-social-group",
+      "label": "Dyad (social group)",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2715623"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q874405",
+        "Q553270",
+        "Q4817368"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 173,
+      "proposal_id": "local:catalog:triad-social-group",
+      "label": "Triad (social group)",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q2715623"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q874405",
+        "Q4817368",
+        "Q187588"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 174,
+      "proposal_id": "local:catalog:reference-groups",
+      "label": "Reference groups",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:reference-groups"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:reference-groups",
+        "Q121769",
+        "Q1047519"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 175,
+      "proposal_id": "local:catalog:social-norms",
+      "label": "Social norms",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q21201"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q205398",
+        "Q874405",
+        "Q60790939"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 176,
+      "proposal_id": "local:catalog:institutionalization",
+      "label": "Institutionalization",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q178706",
+        "local:authored:000092",
+        "local:authored:000577"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 177,
+      "proposal_id": "local:catalog:ascribed-status",
+      "label": "Ascribed status",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:role-conflict"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q25112022",
+        "Q201610",
+        "Q25303701"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 178,
+      "proposal_id": "local:catalog:achieved-status",
+      "label": "Achieved status",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:role-conflict"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q25112022",
+        "Q201610",
+        "Q25303701"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 179,
+      "proposal_id": "local:catalog:role-set",
+      "label": "Role-set",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:role-strain"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:role-strain",
+        "Q7360622",
+        "local:authored:000261"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 180,
+      "proposal_id": "local:catalog:role-conflict",
+      "label": "Role conflict",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:role-conflict"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:role-conflict",
+        "Q1744607",
+        "Q766875"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 181,
+      "proposal_id": "local:catalog:role-strain",
+      "label": "Role strain",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "existing_control",
+      "registered_id_exists": true,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "local:catalog:role-strain"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:catalog:role-strain",
+        "local:catalog:role-conflict",
+        "Q870"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 182,
+      "proposal_id": "local:catalog:collective-behavior",
+      "label": "Collective behavior",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q21201"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q9332",
+        "local:authored:000494",
+        "local:authored:000496"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 183,
+      "proposal_id": "local:catalog:emergent-norm-theory",
+      "label": "Emergent norm theory",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q21201"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q17737",
+        "Q2107249",
+        "local:authored:000610"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 184,
+      "proposal_id": "local:catalog:value-added-theory-of-collective-behavior",
+      "label": "Value-added theory of collective behavior",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q186531"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q186531",
+        "Q9332",
+        "local:authored:000494"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 185,
+      "proposal_id": "local:catalog:assembling-perspective",
+      "label": "Assembling perspective",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q21201"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000051",
+        "Q5199285",
+        "Q25038398"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 186,
+      "proposal_id": "local:catalog:resource-mobilization-theory",
+      "label": "Resource mobilization theory",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q43229"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q936791",
+        "Q17737",
+        "local:authored:000690"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 187,
+      "proposal_id": "local:catalog:frame-alignment",
+      "label": "Frame alignment",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q5164487"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5164487",
+        "local:catalog:cambial-alignment-in-grafting",
+        "Q5477936"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 188,
+      "proposal_id": "local:catalog:conversational-turn-taking",
+      "label": "Conversational turn-taking",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000051",
+        "Q4375640",
+        "Q7855619"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 189,
+      "proposal_id": "local:catalog:transition-relevance-place",
+      "label": "Transition-relevance place",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q185357",
+        "Q7825092",
+        "Q122227068"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 190,
+      "proposal_id": "local:catalog:adjacency-pair",
+      "label": "Adjacency pair",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q727035",
+        "Q804644",
+        "Q620057"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 191,
+      "proposal_id": "local:catalog:other-initiated-conversational-repair",
+      "label": "Other-initiated conversational repair",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000102",
+        "local:authored:000361",
+        "Q219825"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 192,
+      "proposal_id": "local:catalog:open-repair-request",
+      "label": "Open repair request",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_facet_cluster",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000102",
+        "local:authored:000361",
+        "Q213363"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 193,
+      "proposal_id": "local:catalog:restricted-repair-request",
+      "label": "Restricted repair request",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "local:authored:000102",
+        "local:authored:000361",
+        "Q780686"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 194,
+      "proposal_id": "local:catalog:candidate-understanding-repair",
+      "label": "Candidate-understanding repair",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q5031742",
+        "Q1423575",
+        "local:authored:000102"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 195,
+      "proposal_id": "local:catalog:grounding-in-communication",
+      "label": "Grounding in communication",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_process",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11024",
+        "local:authored:000131",
+        "local:authored:000093"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 196,
+      "proposal_id": "local:catalog:common-ground-in-communication",
+      "label": "Common ground in communication",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q9081"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11024",
+        "local:authored:000131",
+        "local:authored:000505"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 197,
+      "proposal_id": "local:catalog:conversational-acknowledgment",
+      "label": "Conversational acknowledgment",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_action",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q9081",
+        "Q1068312",
+        "local:authored:000696"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 198,
+      "proposal_id": "local:catalog:least-collaborative-effort",
+      "label": "Least collaborative effort",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "admit_distinct_principle",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q65044675",
+        "local:authored:000573",
+        "Q15243261"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 199,
+      "proposal_id": "local:catalog:reviewability-of-communication",
+      "label": "Reviewability of communication",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q11024"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q11024",
+        "local:authored:000505",
+        "local:authored:000093"
+      ],
+      "new_qid_without_baseline": false
+    },
+    {
+      "ordinal": 200,
+      "proposal_id": "local:catalog:impression-management",
+      "label": "Impression management",
+      "proposal_status": "proposed_accept",
+      "input_inventory_status": "new",
+      "registered_id_exists": false,
+      "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+      "author_baseline_comparison_ids": [
+        "Q21201"
+      ],
+      "independent_diagnostic_top_three_ids": [
+        "Q2920921",
+        "local:authored:000556",
+        "local:authored:000564"
+      ],
+      "new_qid_without_baseline": false
+    }
+  ],
+  "limitations": [
+    "Bounded semantic review does not prove the absence of all duplicates in a 7,224-identity baseline.",
+    "The coordinator owns acceptance, reservation and count changes. Author files, baseline and shared manifests were not modified.",
+    "Cross-batch overlap review is separate and remains pending all final selections.",
+    "No control is reclassified or proposal invented to satisfy novelty quotas."
+  ],
+  "conditional_counts_after_central_changes": {
+    "recommended": 200,
+    "new": 160,
+    "existing_control": 40,
+    "new_fine": 128,
+    "note": "Replace organizational-design new local identity with registered Q3318170; subject to final cross-batch review."
+  },
+  "source_inspection_ledger": "research/identity-review/source-inspection-ledger.json"
+}

@@ -1,0 +1,141 @@
+{
+  "batch_id": "research-batch-007",
+  "stage": "A",
+  "checks": [
+    {
+      "check": "Proposal and acceptance bounds",
+      "passed": true
+    },
+    {
+      "check": "Required proposal fields",
+      "passed": true
+    },
+    {
+      "check": "Unique provisional IDs",
+      "passed": true
+    },
+    {
+      "check": "Distinct recommended suggested IDs",
+      "passed": true
+    },
+    {
+      "check": "Scopes and entity kinds",
+      "passed": true
+    },
+    {
+      "check": "All four scopes",
+      "passed": true
+    },
+    {
+      "check": "Exact assigned domain targets",
+      "passed": true
+    },
+    {
+      "check": "At least five per assigned starting subfield",
+      "passed": true
+    },
+    {
+      "check": "All domains valid",
+      "passed": true
+    },
+    {
+      "check": "New identities and controls goals",
+      "passed": true
+    },
+    {
+      "check": "At least 120 new fine subjects",
+      "passed": true
+    },
+    {
+      "check": "At least 20 named subjects",
+      "passed": true
+    },
+    {
+      "check": "Unresolved identity proposals not recommended",
+      "passed": true
+    },
+    {
+      "check": "Registered control IDs resolve; new IDs absent",
+      "passed": true
+    },
+    {
+      "check": "Every baseline comparator resolves",
+      "passed": true
+    },
+    {
+      "check": "Discovery references resolve",
+      "passed": true
+    },
+    {
+      "check": "Source acquisition metadata",
+      "passed": true
+    },
+    {
+      "check": "Inspected captures exist",
+      "passed": true
+    },
+    {
+      "check": "At most two recorded failures per URL",
+      "passed": true
+    },
+    {
+      "check": "Baseline remains pinned",
+      "passed": true
+    },
+    {
+      "check": "No card drafting",
+      "passed": true
+    }
+  ],
+  "passed": 21,
+  "failed": 0,
+  "errors": [],
+  "counts": {
+    "proposals": 204,
+    "recommended": 200,
+    "nonrecommended_proposals": 4,
+    "supported_reserves": 1,
+    "unresolved_distinctness": 3,
+    "new": 165,
+    "existing_controls": 35,
+    "new_fine": 130,
+    "named": 30,
+    "by_domain": {
+      "Games & sports": 45,
+      "Music & performance": 40,
+      "Mind & behavior": 45,
+      "Philosophy": 35,
+      "Politics & law": 35
+    },
+    "by_subfield": {
+      "Games, traditions and sporting history": 10,
+      "Rules and strategic mechanisms": 26,
+      "Movement and sporting phenomena": 9,
+      "Musical structure and transformation": 16,
+      "Acoustics, instruments and performance": 13,
+      "Works, traditions and musical history": 11,
+      "Attention, perception and memory": 18,
+      "Judgment, motivation and behavior": 17,
+      "Psychological methods and qualified findings": 10,
+      "Ethical arguments and thought experiments": 10,
+      "Metaphysics and philosophical traditions": 13,
+      "Knowledge, inference and reasoning": 12,
+      "Institutional design and political processes": 14,
+      "Legal procedures and interpretive questions": 10,
+      "Public-policy mechanisms and historical cases": 11
+    },
+    "by_scope": {
+      "topic": 45,
+      "idea": 120,
+      "facet_or_application": 32,
+      "broad_field": 3
+    },
+    "sources": 85,
+    "access_records": 377,
+    "failed_access_records": 16
+  },
+  "selection_sha256": "bad8da39b70c8421b410c2c26e7c3a5d2d3e0f2716a4bfd60cb925d94be68df1",
+  "limitations": [
+    "Structural verification and author meaning/source checks only; central ownership reconciliation and independent checking are still pending."
+  ]
+}

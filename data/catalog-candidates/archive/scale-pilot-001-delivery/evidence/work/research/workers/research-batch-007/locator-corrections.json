@@ -1,0 +1,352 @@
+{
+  "batch_id": "research-batch-007",
+  "from_revision": 3,
+  "to_revision": 4,
+  "created_at": "2026-10-08T22:22:44.286179Z",
+  "before_candidate_path": "candidate.revised.json",
+  "before_candidate_sha256": "a49d21157db18807479187fa76422fb119b40bc84febdf68d39c04b64114979e",
+  "after_candidate_path": "candidate.post-recheck.json",
+  "after_candidate_sha256": "8a6e51c889065ecc5abc165f45953bec3be7bec72f155aebc362380c90b22860",
+  "reason": "Initial audit metadata observation: b007-s086 used zero-based PDF tool indices as if they were physical page numbers. Named sections already identified the passages.",
+  "source_id": "b007-s086",
+  "before_source": {
+    "id": "b007-s086",
+    "title": "Shogi: An English Player’s Guide — Arkoden (2016), hosted by Tabletopia",
+    "url": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+    "locator": "PDF pages 1, 3 and 12: introduction, Comparisons, Unique features of Shogi, Capture, Placing Captured Pieces; PDF pages 1, 3 and 12, Comparisons and Placing Captured Pieces",
+    "retrieval_date": "2026-10-08",
+    "retrieved_at": "2026-10-08T20:43:32.203Z",
+    "revision": null,
+    "displayed_update": "Written and uploaded by Arkoden, 2016",
+    "access": "public",
+    "inspection_status": "supporting_passages_inspected",
+    "inspection_artifacts": [
+      "source-raw/stage-b-shogi-overview.json"
+    ],
+    "source_quality_note": "Community-authored game guide hosted by Tabletopia. Only independently coherent overview and captured-piece reuse passages are used; overbroad placement/promotion statements elsewhere are excluded.",
+    "acquisition_history": [
+      {
+        "url": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+        "requested_ref": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+        "method": "open",
+        "title": "Microsoft Word - Shogi - English Players Guide",
+        "retrieved_at": "2026-10-08T20:43:32.203Z",
+        "retrieval_date": "2026-10-08",
+        "timestamp_basis": "tool-call completion timestamp",
+        "revision": null,
+        "displayed_update": null,
+        "redirect_url": null,
+        "status": "retrieved",
+        "raw_file": "source-raw/stage-b-shogi-overview.json",
+        "raw_sha256": "290777e99b1f82020a3ed1cc476136ff3c6065b3d5ef10b2aede8b2085138d58"
+      }
+    ]
+  },
+  "after_source": {
+    "id": "b007-s086",
+    "title": "Shogi: An English Player’s Guide — Arkoden (2016), hosted by Tabletopia",
+    "url": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+    "locator": "Physical PDF pages 2, 4 and 13 (zero-based tool page indices 1, 3 and 12): introduction; Comparisons and Unique features of Shogi; Capture and Placing Captured Pieces",
+    "retrieval_date": "2026-10-08",
+    "retrieved_at": "2026-10-08T20:43:32.203Z",
+    "revision": null,
+    "displayed_update": "Written and uploaded by Arkoden, 2016",
+    "access": "public",
+    "inspection_status": "supporting_passages_inspected",
+    "inspection_artifacts": [
+      "source-raw/stage-b-shogi-overview.json"
+    ],
+    "source_quality_note": "Community-authored game guide hosted by Tabletopia. Only independently coherent overview and captured-piece reuse passages are used; overbroad placement/promotion statements elsewhere are excluded.",
+    "acquisition_history": [
+      {
+        "url": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+        "requested_ref": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+        "method": "open",
+        "title": "Microsoft Word - Shogi - English Players Guide",
+        "retrieved_at": "2026-10-08T20:43:32.203Z",
+        "retrieval_date": "2026-10-08",
+        "timestamp_basis": "tool-call completion timestamp",
+        "revision": null,
+        "displayed_update": null,
+        "redirect_url": null,
+        "status": "retrieved",
+        "raw_file": "source-raw/stage-b-shogi-overview.json",
+        "raw_sha256": "290777e99b1f82020a3ed1cc476136ff3c6065b3d5ef10b2aede8b2085138d58"
+      }
+    ]
+  },
+  "affected_card_ids": [
+    "local:authored:000256"
+  ],
+  "before_card": {
+    "id": "local:authored:000256",
+    "label": "Shogi",
+    "aliases": [
+      "Shogi"
+    ],
+    "entity_kind": "named_subject",
+    "scope": "topic",
+    "domains": [
+      "Games & sports"
+    ],
+    "learning_takeaway": "Explain the piece-reuse feature of shogi through a directly supported broad-game overview, leaving the perpetual-check exception to its separate rule card.",
+    "card": "Shogi is Japanese chess with a distinctive form of piece reuse. Captured pieces become reserves for their captor. Instead of moving a piece already on the board, a player can spend a turn returning a captured piece to play on their own side.",
+    "original_description": "Exploring Japanese chess and its distinctive piece-reuse strategies.",
+    "identity_urls": [
+      "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en"
+    ],
+    "evidence": [
+      {
+        "source_id": "b007-s086",
+        "locator": "PDF pages 1, 3 and 12, Comparisons and Placing Captured Pieces",
+        "note": "Captured pieces become the captor’s reserves and may be returned to play instead of moving a board piece; no unrestricted-drop or automatic-promotion claim is used."
+      }
+    ],
+    "relations": [
+      {
+        "target_id": "local:authored:000254",
+        "type": "related_to",
+        "assertion": "source_asserted",
+        "note": "The guide explicitly compares shogi with European chess and identifies returning captured pieces as a difference.",
+        "source_ids": [
+          "b007-s086"
+        ]
+      }
+    ],
+    "card_version": 1,
+    "imported_records": [
+      {
+        "topic": "Shogi",
+        "domain": "Games & sports",
+        "description": "Exploring Japanese chess and its distinctive piece-reuse strategies.",
+        "source": "ProductSpace",
+        "subsection": "Games & interactive worlds",
+        "inventory_kind": "broad",
+        "index": 256
+      }
+    ]
+  },
+  "after_card": {
+    "id": "local:authored:000256",
+    "label": "Shogi",
+    "aliases": [
+      "Shogi"
+    ],
+    "entity_kind": "named_subject",
+    "scope": "topic",
+    "domains": [
+      "Games & sports"
+    ],
+    "learning_takeaway": "Explain the piece-reuse feature of shogi through a directly supported broad-game overview, leaving the perpetual-check exception to its separate rule card.",
+    "card": "Shogi is Japanese chess with a distinctive form of piece reuse. Captured pieces become reserves for their captor. Instead of moving a piece already on the board, a player can spend a turn returning a captured piece to play on their own side.",
+    "original_description": "Exploring Japanese chess and its distinctive piece-reuse strategies.",
+    "identity_urls": [
+      "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en"
+    ],
+    "evidence": [
+      {
+        "source_id": "b007-s086",
+        "locator": "Physical PDF pages 2, 4 and 13 (zero-based tool page indices 1, 3 and 12): introduction, Comparisons and Placing Captured Pieces",
+        "note": "Captured pieces become the captor’s reserves and may be returned to play instead of moving a board piece; no unrestricted-drop or automatic-promotion claim is used."
+      }
+    ],
+    "relations": [
+      {
+        "target_id": "local:authored:000254",
+        "type": "related_to",
+        "assertion": "source_asserted",
+        "note": "The guide explicitly compares shogi with European chess and identifies returning captured pieces as a difference.",
+        "source_ids": [
+          "b007-s086"
+        ]
+      }
+    ],
+    "card_version": 2,
+    "imported_records": [
+      {
+        "topic": "Shogi",
+        "domain": "Games & sports",
+        "description": "Exploring Japanese chess and its distinctive piece-reuse strategies.",
+        "source": "ProductSpace",
+        "subsection": "Games & interactive worlds",
+        "inventory_kind": "broad",
+        "index": 256
+      }
+    ]
+  },
+  "before_author_review": {
+    "id": "local:authored:000256",
+    "label": "Shogi",
+    "review_type": "author_review_not_independent",
+    "card_version": 1,
+    "word_count": 43,
+    "claim_check": {
+      "result": "supported_with_stated_qualifications",
+      "note": "Player's Guide PDF pages 1, 3 and 12 directly support Japanese chess, capture reserves and replacing a board move with a drop; omit its overbroad placement and promotion claims.",
+      "evidence_locators": [
+        {
+          "source_id": "b007-s086",
+          "locator": "PDF pages 1, 3 and 12, Comparisons and Placing Captured Pieces"
+        }
+      ]
+    },
+    "identity_scope_check": {
+      "result": "retains_frozen_selection",
+      "note": "The intended Shogi meaning matches registered local:authored:000256; retain this control's registered identity and prior provenance, not a new local ID.",
+      "constraints": [
+        "Re-inspect an appropriate rule passage for the broad-game overview; do not reuse the perpetual-check takeaway. Any extra source work remains within the original source-attempt bounds."
+      ]
+    },
+    "relationship_checks": [
+      {
+        "target_id": "local:authored:000254",
+        "target_label": "Chess",
+        "type": "related_to",
+        "assertion": "source_asserted",
+        "result": "supported_as_labeled",
+        "note": "The guide explicitly compares shogi with European chess and identifies returning captured pieces as a difference.",
+        "actual_relationship_locator": "PDF page 3, Comparisons and Unique features of Shogi",
+        "source_ids": [
+          "b007-s086"
+        ],
+        "target_sense_verified": true
+      }
+    ],
+    "decision": "retain",
+    "reviewed_at": "2026-10-08T21:45:31.847277Z",
+    "boundary_recheck_note": "The guide supports Japanese chess and reuse of captured pieces. Drop restrictions and promotion are deliberately omitted because the guide's broader placement claims are unreliable; perpetual check remains a separate rule card."
+  },
+  "after_author_review": {
+    "id": "local:authored:000256",
+    "label": "Shogi",
+    "review_type": "author_review_not_independent",
+    "card_version": 2,
+    "word_count": 43,
+    "claim_check": {
+      "result": "supported_with_stated_qualifications",
+      "note": "Player's Guide physical PDF pages 2, 4 and 13 (zero-based tool indices 1, 3 and 12) directly support Japanese chess, capture reserves and replacing a board move with a drop; omit its overbroad placement and promotion claims.",
+      "evidence_locators": [
+        {
+          "source_id": "b007-s086",
+          "locator": "Physical PDF pages 2, 4 and 13 (zero-based tool page indices 1, 3 and 12): introduction, Comparisons and Placing Captured Pieces"
+        }
+      ]
+    },
+    "identity_scope_check": {
+      "result": "retains_frozen_selection",
+      "note": "The intended Shogi meaning matches registered local:authored:000256; retain this control's registered identity and prior provenance, not a new local ID.",
+      "constraints": [
+        "Re-inspect an appropriate rule passage for the broad-game overview; do not reuse the perpetual-check takeaway. Any extra source work remains within the original source-attempt bounds."
+      ]
+    },
+    "relationship_checks": [
+      {
+        "target_id": "local:authored:000254",
+        "target_label": "Chess",
+        "type": "related_to",
+        "assertion": "source_asserted",
+        "result": "supported_as_labeled",
+        "note": "The guide explicitly compares shogi with European chess and identifies returning captured pieces as a difference.",
+        "actual_relationship_locator": "Physical PDF page 4 (zero-based tool page index 3): Comparisons and Unique features of Shogi",
+        "source_ids": [
+          "b007-s086"
+        ],
+        "target_sense_verified": true
+      }
+    ],
+    "decision": "retain",
+    "reviewed_at": "2026-10-08T21:45:31.847277Z",
+    "boundary_recheck_note": "The guide supports Japanese chess and reuse of captured pieces. Drop restrictions and promotion are deliberately omitted because the guide's broader placement claims are unreliable; perpetual check remains a separate rule card.",
+    "locator_rechecked_at": "2026-10-08T22:22:44.286179Z",
+    "locator_recheck_note": "Only numeric pagination metadata clarified from the already inspected capture. Original factual review timestamp and all claim/relationship wording are preserved."
+  },
+  "before_source_inspection": {
+    "id": "local:authored:000256",
+    "label": "Shogi",
+    "stage": "B_card_and_relationship_author_review",
+    "claim_support_note": "Player's Guide PDF pages 1, 3 and 12 directly support Japanese chess, capture reserves and replacing a board move with a drop; omit its overbroad placement and promotion claims.",
+    "passages": [
+      {
+        "url": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+        "source_id": "b007-s086",
+        "locator": "PDF pages 1, 3 and 12, Comparisons and Placing Captured Pieces",
+        "note": "Captured pieces become the captor’s reserves and may be returned to play instead of moving a board piece; no unrestricted-drop or automatic-promotion claim is used."
+      }
+    ],
+    "relationship_review": [
+      {
+        "target_id": "local:authored:000254",
+        "target_label": "Chess",
+        "type": "related_to",
+        "assertion": "source_asserted",
+        "result": "supported_as_labeled",
+        "note": "The guide explicitly compares shogi with European chess and identifies returning captured pieces as a difference.",
+        "actual_relationship_locator": "PDF page 3, Comparisons and Unique features of Shogi",
+        "source_ids": [
+          "b007-s086"
+        ],
+        "target_sense_verified": true
+      }
+    ],
+    "reviewed_at": "2026-10-08T21:45:31.847277Z",
+    "boundary_recheck_note": "The guide supports Japanese chess and reuse of captured pieces. Drop restrictions and promotion are deliberately omitted because the guide's broader placement claims are unreliable; perpetual check remains a separate rule card."
+  },
+  "after_source_inspection": {
+    "id": "local:authored:000256",
+    "label": "Shogi",
+    "stage": "B_card_and_relationship_author_review",
+    "claim_support_note": "Player's Guide physical PDF pages 2, 4 and 13 (zero-based tool indices 1, 3 and 12) directly support Japanese chess, capture reserves and replacing a board move with a drop; omit its overbroad placement and promotion claims.",
+    "passages": [
+      {
+        "url": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+        "source_id": "b007-s086",
+        "locator": "Physical PDF pages 2, 4 and 13 (zero-based tool page indices 1, 3 and 12): introduction, Comparisons and Placing Captured Pieces",
+        "note": "Captured pieces become the captor’s reserves and may be returned to play instead of moving a board piece; no unrestricted-drop or automatic-promotion claim is used."
+      }
+    ],
+    "relationship_review": [
+      {
+        "target_id": "local:authored:000254",
+        "target_label": "Chess",
+        "type": "related_to",
+        "assertion": "source_asserted",
+        "result": "supported_as_labeled",
+        "note": "The guide explicitly compares shogi with European chess and identifies returning captured pieces as a difference.",
+        "actual_relationship_locator": "Physical PDF page 4 (zero-based tool page index 3): Comparisons and Unique features of Shogi",
+        "source_ids": [
+          "b007-s086"
+        ],
+        "target_sense_verified": true
+      }
+    ],
+    "reviewed_at": "2026-10-08T21:45:31.847277Z",
+    "boundary_recheck_note": "The guide supports Japanese chess and reuse of captured pieces. Drop restrictions and promotion are deliberately omitted because the guide's broader placement claims are unreliable; perpetual check remains a separate rule card.",
+    "locator_rechecked_at": "2026-10-08T22:22:44.286179Z",
+    "locator_recheck_note": "Only numeric pagination metadata clarified from the already inspected capture. Original factual review timestamp and all claim/relationship wording are preserved."
+  },
+  "page_mapping": [
+    {
+      "zero_based_tool_index": 1,
+      "physical_pdf_page": 2
+    },
+    {
+      "zero_based_tool_index": 3,
+      "physical_pdf_page": 4
+    },
+    {
+      "zero_based_tool_index": 12,
+      "physical_pdf_page": 13
+    }
+  ],
+  "existing_capture_path": "research/workers/research-batch-007/source-raw/stage-b-shogi-overview.json",
+  "existing_capture_sha256": "290777e99b1f82020a3ed1cc476136ff3c6065b3d5ef10b2aede8b2085138d58",
+  "capture_markers": [
+    "L18@P1: Japanese chess introduction",
+    "L34–53@P3: Comparisons and Unique features",
+    "L126–134@P12: Capture and Placing Captured Pieces"
+  ],
+  "acquisition_metadata_preserved": true,
+  "factual_text_and_relationship_claims_unchanged": true,
+  "new_source_attempts": 0,
+  "independent_metadata_recheck_completed": false
+}

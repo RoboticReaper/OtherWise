@@ -1,0 +1,75 @@
+{
+  "batch_id": "research-batch-004",
+  "batch_revision": 4,
+  "status": "stable_author_repair_pending_independent_recheck",
+  "created_at": "2026-10-08T22:26:58.710684+00:00",
+  "candidate_sha256": "43544752f00b38264a23f6eaf25823bfb95e5a480217fc833df89790dc276619",
+  "previous_artifact": {
+    "path": "research/workers/research-batch-004/history/frozen-audited-revision-3/candidate.authored.json",
+    "sha256": "1d02d5e1e05532db9b7dc65c2aefd68c715e738e21539e9f8da306a7069fc2a5",
+    "batch_revision": 3,
+    "status": "frozen_initial_independent_audit_completed"
+  },
+  "initial_audit_sha256": "ef88d9b261d0db5adb176166e766cf836c85100ac4a082a799a5c7aa0aff4d0b",
+  "corrected_finding": "b004-f01",
+  "changed_concept_ids": [
+    "local:authored:000604"
+  ],
+  "scope": "Graph theory learning takeaway and card version only; all prose/evidence/relations/source records and other 199 cards unchanged.",
+  "counts": {
+    "accepted": 200,
+    "new": 161,
+    "new_fine": 144,
+    "existing_controls": 39,
+    "named_subjects": 22,
+    "sources": 147,
+    "relationships": 191,
+    "post_audit_corrected_bundles": 1
+  },
+  "historical_raw_provenance": {
+    "source_ids_checked": 31,
+    "exact_saved_byte_matches": 2,
+    "residual_raw_unavailable": 29,
+    "files_hashed": 1628,
+    "search_report_sha256": "c25af9afea3c5baf5a1827a9d85bc422b279cf785c9415255534f2704212bf39"
+  },
+  "artifacts": [
+    {
+      "path": "research/workers/research-batch-004/candidate.revised.json",
+      "sha256": "43544752f00b38264a23f6eaf25823bfb95e5a480217fc833df89790dc276619",
+      "bytes": 1481825
+    },
+    {
+      "path": "research/workers/research-batch-004/post-audit-corrections.json",
+      "sha256": "29a15246b15df7556c28f621270e773d9eb91ca1adf3191828f736deda7c419e",
+      "bytes": 7907
+    },
+    {
+      "path": "research/workers/research-batch-004/post-audit-validation.json",
+      "sha256": "ab3e4bc4394b615e8c4908acea30a62de3099f42afbe0e3b6b6f34561c509200",
+      "bytes": 1946
+    },
+    {
+      "path": "research/workers/research-batch-004/post-audit-revision-compare.json",
+      "sha256": "6925eeee2e0f8de2d37f2c4582d02a3b7e68b8ffa9d5ae44c7565a450c1beaa4",
+      "bytes": 41862
+    },
+    {
+      "path": "research/workers/research-batch-004/post-audit-admission.json",
+      "sha256": "46e6188f78886f3562c6d1ec713673373717381b1328fa15ce65e34e17ff112d",
+      "bytes": 133
+    },
+    {
+      "path": "research/workers/research-batch-004/author-review.revised.json",
+      "sha256": "41869e4482ed06609f755819afff8500b0668e838fe3a46747f1c5e7af886d61",
+      "bytes": 522727
+    },
+    {
+      "path": "research/workers/research-batch-004/historical-raw-provenance-check.json",
+      "sha256": "c25af9afea3c5baf5a1827a9d85bc422b279cf785c9415255534f2704212bf39",
+      "bytes": 23966
+    }
+  ],
+  "coordinator_helpers": "admission and revision_compare both passed",
+  "independent_recheck": "pending"
+}

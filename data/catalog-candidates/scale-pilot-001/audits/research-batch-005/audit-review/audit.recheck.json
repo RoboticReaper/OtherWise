@@ -1,0 +1,2224 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-005",
+  "status": "pass_with_disclosed_source_access_limitation",
+  "started_at": "2026-10-08T22:03:36.291363+00:00",
+  "candidate_path": "research/workers/research-batch-005/candidate.revised.json",
+  "candidate_sha256": "4df6efb168ceaced979cfe0392b0f2946c7edb12c275efe4105eafe9e372506d",
+  "canonical_copy_identical": true,
+  "initial_audit_sha256": "30f4472ffe3ae18a559b9b9c770dbcb10abec65c90e9303ae596ddd71fea75bf",
+  "frozen_file_hashes": {
+    "sample-cards.frozen.json": "559c1b461f54a07143ee9ee96e49d7974842f6320e700fc0d03513a32a3ed333",
+    "candidate.before-audit.json": "0b55dce5e0f107113ff5e2c1f036055a786ef8fdc5b0781aa78fdb45a4644571",
+    "sample.frozen.json": "e34a2fb3e7441f18cea67447797c573fae394e8238702a9efe6fa0c774b6c63a"
+  },
+  "independent_change_verification": {
+    "accepted_identity_sets_unchanged": true,
+    "expected_17_bundles_match_actual": true,
+    "source_records_changed": [
+      "baby",
+      "atomiccommit",
+      "cooperativeidentity"
+    ],
+    "version_increments_correct": true,
+    "reproduced_original_random_sample": true,
+    "declared_boundary_review_count": 200,
+    "declared_boundary_unique_count": 200,
+    "coordinator_review_id_coverage": true
+  },
+  "scope": "Recheck all changed claims, labels, source metadata and relationships in 17 affected bundles. Two source-only bundles receive diff/metadata checks, not a full new factual audit. Original sample remains fixed.",
+  "changes": [
+    {
+      "id": "local:authored:000520",
+      "sample_kind": "additional_targeted",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "Distributed systems spread computation across machines that communicate over a network. Keeping their work coordinated becomes difficult when messages are delayed or machines fail. Replicated state machines offer one approach: replicas agree on commands and execute them in the same order to maintain matching results.",
+          "after": "Distributed systems spread computation across machines that communicate over a network. Keeping their work coordinated becomes difficult when messages are delayed or machines fail. Replicated state machines offer one approach: replicas agree on commands and execute them deterministically in the same order to maintain matching results."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "raft",
+              "locator": "§2, replicated state machines",
+              "note": "Checked ordered deterministic execution and failure context; not all distributed systems use replicated state machines or promise identical state."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "raft",
+              "locator": "§2, replicated state machines",
+              "note": "The paper, Section 2, requires deterministic state machines as well as an agreed command order for matching states and outputs. This is one distributed-systems pattern, not a condition met by all distributed programs."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:atomic-commit",
+      "sample_kind": "random_new",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [
+        "atomiccommit"
+      ],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "Atomic commit makes a transaction's changes appear all-or-nothing, even though storage writes occur one after another. SQLite uses recovery mechanisms to preserve that appearance across crashes or power failures. The guarantee concerns which changes take effect, rather than requiring hardware to write everything simultaneously.",
+          "after": "Atomic commit makes a transaction's changes appear all-or-nothing, even though storage writes occur sequentially. SQLite uses recovery mechanisms to preserve that appearance across crashes or power failures under documented storage assumptions. The guarantee concerns which changes take effect, rather than requiring hardware to write everything simultaneously."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "atomiccommit",
+              "locator": "§1 Introduction",
+              "note": "Checked all-or-nothing meaning and sequential hardware writes; crash safety remains subject to the documented storage assumptions."
+            },
+            {
+              "source_id": "sqliteisolation",
+              "locator": "Isolation And Concurrency, rollback mode",
+              "note": "Supplementary inspected premise for the card or its comparison: SQLite's atomic-commit documentation explains rollback journals as the recovery mechanism used for atomic commit in rollback mode."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "atomiccommit",
+              "locator": "Section 1 Introduction; Section 2 Hardware Assumptions; Section 3.5 Creating A Rollback Journal File",
+              "note": "The all-or-nothing appearance is described in Section 1; Section 2 explicitly states storage/OS assumptions behind crash recovery, including correct flush behavior and uncorrupted stored content. Section 3.5 supplies rollback-journal preservation as the related mechanism."
+            },
+            {
+              "source_id": "sqliteisolation",
+              "locator": "Isolation And Concurrency, rollback mode",
+              "note": "Supplementary inspected premise for the card or its comparison: SQLite's atomic-commit documentation explains rollback journals as the recovery mechanism used for atomic commit in rollback mode."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:rollback-journal",
+      "sample_kind": "risk_selected",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [
+        "atomiccommit"
+      ],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "A rollback journal saves original database content before a transaction overwrites it. If the transaction must be undone, the saved content can restore the earlier state. This differs from a write-ahead log, which preserves the main database while appending the new changes elsewhere.",
+          "after": "A rollback journal saves original database content before a transaction overwrites it. If the transaction must be undone, the saved content can restore the earlier state. This differs from SQLite's write-ahead-log mode, which preserves the main database while appending new changes elsewhere."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "sqliteisolation",
+              "locator": "Isolation And Concurrency, rollback mode",
+              "note": "Checked old-versus-new content distinction and restoration purpose; not described as a permanent historical audit log."
+            },
+            {
+              "source_id": "wal",
+              "locator": "§2 How WAL Works; §2.1 Checkpointing",
+              "note": "Supplementary inspected premise for the card or its comparison: The saved-original-content mechanism is a concrete way SQLite realizes atomic commit in rollback mode; WAL provides a contrasting mechanism."
+            },
+            {
+              "source_id": "atomiccommit",
+              "locator": "Section 1 Introduction",
+              "note": "Supplementary inspected premise for the card or its comparison: The saved-original-content mechanism is a concrete way SQLite realizes atomic commit in rollback mode; WAL provides a contrasting mechanism."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "sqliteisolation",
+              "locator": "Isolation And Concurrency, rollback mode",
+              "note": "Checked old-versus-new content distinction and restoration purpose; not described as a permanent historical audit log."
+            },
+            {
+              "source_id": "wal",
+              "locator": "§2 How WAL Works; §2.1 Checkpointing",
+              "note": "SQLite WAL section 2 contrasts saved original pages in rollback mode with appended changed pages in SQLite's WAL file; section 2.1 describes later checkpoint transfer. This is an implementation-specific comparison, not a generic claim about every WAL design."
+            },
+            {
+              "source_id": "atomiccommit",
+              "locator": "Section 1 Introduction",
+              "note": "Supplementary inspected premise for the card or its comparison: The saved-original-content mechanism is a concrete way SQLite realizes atomic commit in rollback mode; WAL provides a contrasting mechanism."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:write-ahead-logging",
+      "sample_kind": "additional_targeted",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "learning_takeaway",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "Write-ahead logging appends new database changes to a separate log instead of immediately overwriting the main file. In SQLite's WAL mode, a commit record marks completion, and readers can continue using an earlier view. Later checkpointing moves committed changes back into the database.",
+          "after": "In SQLite's write-ahead-log mode, changes are appended to a separate log instead of immediately overwriting the main database file. A commit record marks completion, and readers can continue using an earlier view. Later checkpointing moves committed changes back into the database."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "wal",
+              "locator": "§2 How WAL Works",
+              "note": "Checked append, commit marker, concurrent-reader mechanism, and later checkpoint; not a claim that arbitrary network filesystems support SQLite WAL."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "wal",
+              "locator": "§2 How WAL Works",
+              "note": "Checked SQLite's implementation: append changed pages, commit marker, concurrent readers and later checkpoint transfer. The card does not define every other database's WAL file layout or checkpoint semantics."
+            }
+          ]
+        },
+        "learning_takeaway": {
+          "before": "Append committed changes separately before transferring them into the main database, allowing concurrent readers.",
+          "after": "See how SQLite's WAL mode appends changes separately before checkpointing them into the main database, allowing concurrent readers."
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:wal-checkpointing",
+      "sample_kind": "additional_targeted",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "learning_takeaway",
+        "previous_card_version",
+        "relations"
+      ],
+      "changed_shared_sources": [],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "A WAL checkpoint transfers committed changes from a write-ahead log into the main database file. It is a separate operation from reading, writing, or committing a transaction. SQLite can schedule checkpoints automatically or let applications control when they run to manage the accumulated log.",
+          "after": "In SQLite, a WAL checkpoint transfers committed changes from the write-ahead log into the main database file. It is separate from reading, writing, or committing a transaction. SQLite can schedule checkpoints automatically or let applications control when they run to manage the accumulated log."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "wal",
+              "locator": "§2.1 Checkpointing",
+              "note": "Checked transfer direction and automatic/application-controlled timing; no claim that checkpointing must occur on every commit."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "wal",
+              "locator": "§2.1 Checkpointing",
+              "note": "Section 2.1 defines SQLite's checkpoint transfer and automatic/application-controlled timing. No claim is made that all database checkpoints transfer pages from a log or run on each commit."
+            }
+          ]
+        },
+        "learning_takeaway": {
+          "before": "Move committed log content into the database as a separate operation from reading, writing, and committing.",
+          "after": "In SQLite, move committed log content into the database as a separate operation from reading, writing, and committing."
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        },
+        "relations": {
+          "before": [
+            {
+              "target_id": "local:catalog:write-ahead-logging",
+              "type": "facet_of",
+              "source_ids": [
+                "wal"
+              ],
+              "assertion": "source_asserted",
+              "note": "The WAL documentation names checkpointing as a distinct operation within the write-ahead-log approach."
+            }
+          ],
+          "after": [
+            {
+              "target_id": "local:catalog:write-ahead-logging",
+              "type": "facet_of",
+              "source_ids": [
+                "wal"
+              ],
+              "assertion": "source_asserted",
+              "note": "SQLite's WAL documentation names checkpointing as a distinct operation within its write-ahead-log mode; the facet link concerns that documented implementation."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "local:catalog:distributed-consensus",
+      "sample_kind": "additional_targeted",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "Replicated-log consensus lets machines agree on an ordered command history despite crash failures and unreliable communication. Practical protocols preserve safety under delays and partitions, but remain available only while a suitable majority can communicate. Agreement here concerns replicated commands, not every form of collective decision-making.",
+          "after": "Replicated-log consensus lets machines agree on an ordered command history despite crash failures and unreliable communication. Raft-style protocols preserve safety under delays and partitions, but remain available only while a suitable majority can communicate. Agreement here concerns replicated commands, not every form of collective decision-making."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "raft",
+              "locator": "§2; §5",
+              "note": "Checked the paper's non-Byzantine safety and communicating-majority availability conditions; retained the centrally approved bounded label and ID."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "raft",
+              "locator": "§2; §5",
+              "note": "Sections 2 and 5 distinguish safety under non-Byzantine communication failures from availability requiring an operational communicating majority. The card gives a Raft-style example, not a theorem about every consensus protocol."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:manchester-baby",
+      "sample_kind": "random_new",
+      "changed_fields": [
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [
+        "baby"
+      ],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "baby",
+              "locator": "Collection description, CRT memory and first program paragraphs",
+              "note": "Checked CRT storage, program-in-memory purpose, and 1948 run; comparison concerns these documented configurations rather than every later version of ENIAC."
+            },
+            {
+              "source_id": "eniac",
+              "locator": "ENIAC being set up; ENIAC tube change",
+              "note": "Supplementary inspected premise for the card or its comparison: The museum's stored-program explanation and ENIAC's documented cable-and-switch setup support a historical comparison of how programs were configured."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "baby",
+              "locator": "Historical description paragraphs 1–6 (original Baby, 1948); paragraph 8 and object details (1998 replica, YS23/1998)",
+              "note": "This collection record identifies a 1998 working replica; the historical description at paragraphs 1–6 supplies the facts about the original 1948 Manchester Baby. The URL remains an explanatory subject link, not a canonical assertion that the original and replica are the same physical object."
+            },
+            {
+              "source_id": "eniac",
+              "locator": "ENIAC being set up; ENIAC tube change",
+              "note": "Supplementary inspected premise for the card or its comparison: The museum's stored-program explanation and ENIAC's documented cable-and-switch setup support a historical comparison of how programs were configured."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "Q169399",
+      "sample_kind": "risk_selected",
+      "changed_fields": [
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [
+        "baby"
+      ],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "eniac",
+              "locator": "ENIAC being set up; ENIAC tube change",
+              "note": "Checked electronic operation, setup time, approximate tube count, and maintenance learning; no unsupported total-calculations superlative is repeated."
+            },
+            {
+              "source_id": "baby",
+              "locator": "Collection description, CRT memory and first program paragraphs",
+              "note": "Supplementary inspected premise for the card or its comparison: ENIAC's initial physical configuration process contrasts with Baby's stored-program experiment; both illustrate that program representation matters as well as calculation speed."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "eniac",
+              "locator": "ENIAC being set up; ENIAC tube change",
+              "note": "Checked electronic operation, setup time, approximate tube count, and maintenance learning; no unsupported total-calculations superlative is repeated."
+            },
+            {
+              "source_id": "baby",
+              "locator": "Historical description paragraphs 1–6 (original Baby, 1948); paragraph 8 and object details (1998 replica, YS23/1998)",
+              "note": "This collection record identifies a 1998 working replica; the historical description at paragraphs 1–6 supplies the facts about the original 1948 Manchester Baby. The editorial comparison concerns the original Baby stored program and the documented early ENIAC wiring/switch setup."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:minimal-pair",
+      "sample_kind": "additional_targeted",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "learning_takeaway",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [],
+      "shared_source_only": false,
+      "old_version": 2,
+      "new_version": 3,
+      "field_diffs": {
+        "card": {
+          "before": "A minimal pair consists of two words differing in one sound position while the remaining sounds stay the same. A meaning difference, such as English pill versus kill, provides evidence that the contrasting sounds belong to different phonemes. Failing to find a pair does not establish equivalence.",
+          "after": "In spoken language, a minimal pair consists of words differing in one sound position. English pill versus kill provides evidence that the contrasting sounds belong to different phonemes, since the words have different meanings. Failing to find such a pair does not establish equivalence."
+        },
+        "card_version": {
+          "before": 2,
+          "after": 3
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "minimalpair",
+              "locator": "§4.3, Comparing distributions with minimal pairs",
+              "note": "Checked the pill/kill example and evidential asymmetry: a pair establishes contrast, but missing pairs may require other evidence."
+            },
+            {
+              "source_id": "phonemes",
+              "locator": "§4.1, The essence of phonology",
+              "note": "Supplementary inspected premise for the card or its comparison: The phonology chapter explicitly presents minimal pairs as evidence for contrastive distribution and phoneme analysis."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "minimalpair",
+              "locator": "§4.3, Comparing distributions with minimal pairs",
+              "note": "The chapter first notes signed-language parameter contrasts, then adapts minimal pairs to spoken-language sounds using pill/kill. The card now explicitly describes the spoken case and does not exclude signed minimal pairs from the broader identity."
+            },
+            {
+              "source_id": "phonemes",
+              "locator": "§4.1, The essence of phonology",
+              "note": "Supplementary inspected premise for the card or its comparison: The phonology chapter explicitly presents minimal pairs as evidence for contrastive distribution and phoneme analysis."
+            }
+          ]
+        },
+        "learning_takeaway": {
+          "before": "Use a one-position contrast between otherwise matching words as evidence that two sounds distinguish meanings.",
+          "after": "Use a spoken-language word pair differing in one sound as evidence of contrastive phonemes, without treating failure to find a pair as proof of equivalence."
+        },
+        "previous_card_version": {
+          "before": 1,
+          "after": 2
+        }
+      }
+    },
+    {
+      "id": "local:catalog:delayed-judgments-of-learning",
+      "sample_kind": "risk_selected",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "label",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "A delayed judgment of learning asks someone to estimate future recall after time away from the material, using a cue without the answer visible. The delay reduces reliance on immediate familiarity. The cited guide treats this as promising for allocating study, while noting limited classroom evidence.",
+          "after": "A cue-only delayed judgment of learning asks someone to estimate future recall after time away from the material, using a cue without the answer visible. The delay reduces reliance on immediate familiarity. The cited guide treats this as promising for allocating study, while noting limited classroom evidence."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "ies",
+              "locator": "Recommendation 6a, printed pp. 23–24",
+              "note": "Checked delay, cue-only access, prospective judgment, and low classroom-evidence rating; not equated with an immediate confidence rating or actual test performance."
+            },
+            {
+              "source_id": "formative",
+              "locator": "Formative assessment; final paragraph",
+              "note": "Supplementary inspected premise for the card or its comparison: Both approaches use information to guide subsequent learning, but a learner's delayed recall estimate is distinct from the broader formative use of assessment evidence."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "ies",
+              "locator": "Recommendation 6a, printed pp. 23–24",
+              "note": "Recommendation 6a, printed pp. 23–24, describes the cue-only delayed judgment procedure: delay after study, target answer absent and prospective recall judgment. The guide rates classroom evidence as limited; the narrower label retains the same selected facet and reserved ID."
+            },
+            {
+              "source_id": "formative",
+              "locator": "Formative assessment; final paragraph",
+              "note": "Supplementary inspected premise for the card or its comparison: Both approaches use information to guide subsequent learning, but a learner's delayed recall estimate is distinct from the broader formative use of assessment evidence."
+            }
+          ]
+        },
+        "label": {
+          "before": "Delayed judgments of learning",
+          "after": "Cue-only delayed judgments of learning"
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:patronage-based-surplus-distribution",
+      "sample_kind": "additional_targeted",
+      "changed_fields": [
+        "card_version",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [
+        "cooperativeidentity"
+      ],
+      "shared_source_only": true,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:south-sea-bubble",
+      "sample_kind": "additional_targeted",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "The South Sea Bubble linked speculation in company shares with British government debt. The Bank of England's history describes limited actual trading but a dramatic stock-price rise after the company received part of the national debt in 1720. The subsequent crash exposed the gap between excitement and operating activity.",
+          "after": "The South Sea Bubble linked speculation in company shares with British government debt. The Bank of England's history describes limited trading but a dramatic stock-price rise after the company received part of the national debt in 1720. The episode contrasts share prices with actual trading activity."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "boehistory",
+              "locator": "1720 South Sea Bubble entry",
+              "note": "Checked debt connection, limited trade, 1720 rise and crash; avoided treating this one account as an exhaustive explanation of the episode."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "boehistory",
+              "locator": "1720 South Sea Bubble entry",
+              "note": "The 1720 entry reports limited trading, involvement in national debt, a dramatic share-price rise and a crash. The card's closing comparison does not establish intrinsic value or assign the crash a single cause."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:rochdale-pioneers",
+      "sample_kind": "additional_targeted",
+      "changed_fields": [
+        "card_version",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [
+        "cooperativeidentity"
+      ],
+      "shared_source_only": true,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:international-cooperative-alliance",
+      "sample_kind": "risk_selected",
+      "changed_fields": [
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [
+        "cooperativeidentity"
+      ],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "coopHistory",
+              "locator": "Opening 1895 foundation paragraph",
+              "note": "Checked founding aims and cooperative membership; no claim about current membership counts or authority over every cooperative."
+            },
+            {
+              "source_id": "cooperativeidentity",
+              "locator": "Principle 3, Member Economic Participation",
+              "note": "Supplementary inspected premise for the card or its comparison: The Alliance's history expressly describes delegates from cooperatives establishing an international body to support their shared principles and trade."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "coopHistory",
+              "locator": "Opening 1895 foundation paragraph",
+              "note": "Checked founding aims and cooperative membership; no claim about current membership counts or authority over every cooperative."
+            },
+            {
+              "source_id": "cooperativeidentity",
+              "locator": "Principle 4, Autonomy and Independence; Principle 6, Cooperation among Cooperatives",
+              "note": "Principle 4 states member control and cooperative autonomy when entering agreements; Principle 6 describes cooperation through local, national, regional and international structures. Together they support the independence/coordination premise. The 1895 founding aims are separately supported by the history source."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:conversational-turn-taking",
+      "sample_kind": "additional_targeted",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "Conversational turn-taking coordinates who speaks and when. Listeners often prepare a response before the current speaker finishes, and experiments with conversation fragments show that people can anticipate endings. The process therefore involves more than reacting to silence after every turn, although laboratory tasks do not reproduce all of conversation.",
+          "after": "Conversational turn-taking coordinates who speaks and when. Experiments with conversation fragments show that listeners can anticipate turn endings, supporting accounts that involve preparation before silence arrives. Such laboratory tasks isolate useful cues, but do not establish how every transition is managed in natural conversation."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "turnanticipation",
+              "locator": "Introduction; Abstract and experiment summary",
+              "note": "Checked anticipation experiments and their button-press/task limitation; not claimed that every natural transition is fully predicted or governed by syntax alone."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "turnanticipation",
+              "locator": "Introduction; Abstract and experiment summary",
+              "note": "The abstract and experiments report button-press anticipation with conversation fragments; the introduction distinguishes anticipation ability from proof of use in every natural exchange. The card now states the observed ability and the limited inference, while retaining the turn-completion framework."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:other-initiated-conversational-repair",
+      "sample_kind": "risk_selected",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "Other-initiated repair occurs when a listener signals trouble with someone else's message and the original speaker helps resolve it. The response may repeat words, clarify a missing detail, or confirm an interpretation. This creates a brief collaborative detour that repairs understanding before the conversation proceeds.",
+          "after": "Other-initiated repair occurs when a listener signals trouble with someone else's message and the original speaker helps resolve it. The response may repeat words, clarify a missing detail, or confirm an interpretation. This creates a collaborative detour aimed at restoring understanding so the conversation can proceed."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "repair",
+              "locator": "Introduction; Materials and Methods, repair-sequence definition",
+              "note": "Checked initiator/solution sequence and alternative repair operations; the observed mechanisms are not generalized into claims about every language without qualification."
+            },
+            {
+              "source_id": "grounding",
+              "locator": "Opening; Grounding in Conversation; contribution model",
+              "note": "Supplementary inspected premise for the card or its comparison: Repair makes a breakdown explicit, while grounding also includes routine evidence of understanding; the two sources support their connection without making them equivalent."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "repair",
+              "locator": "Introduction; Materials and Methods, repair-sequence definition",
+              "note": "The paper defines trouble source, repair initiator and repair solution. Repair may require more than one attempt; reported brief durations are averages in the sampled corpus. The card describes the collaborative aim without guaranteeing a brief or immediately successful outcome."
+            },
+            {
+              "source_id": "grounding",
+              "locator": "Opening; Grounding in Conversation; contribution model",
+              "note": "Supplementary inspected premise for the card or its comparison: Repair makes a breakdown explicit, while grounding also includes routine evidence of understanding; the two sources support their connection without making them equivalent."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    },
+    {
+      "id": "local:catalog:grounding-in-communication",
+      "sample_kind": "additional_targeted",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_sources": [],
+      "shared_source_only": false,
+      "old_version": 1,
+      "new_version": 2,
+      "field_diffs": {
+        "card": {
+          "before": "Grounding in communication is the collaborative work of establishing that a message has been understood well enough for the current purpose. Saying words is not sufficient by itself: listeners provide evidence through responses or acknowledgments. The required level of understanding can change with the task and medium.",
+          "after": "Grounding in communication is collaborative work toward mutual belief that a message has been understood well enough for the current purpose. Responses and acknowledgments provide evidence for that belief. What counts as sufficient understanding can change with the task and communication medium."
+        },
+        "card_version": {
+          "before": 1,
+          "after": 2
+        },
+        "evidence": {
+          "before": [
+            {
+              "source_id": "grounding",
+              "locator": "Opening; Grounding in Conversation; contribution model",
+              "note": "Checked mutual evidence and current-purpose criterion; grounding does not demand perfect understanding or agreement with every proposition."
+            }
+          ],
+          "after": [
+            {
+              "source_id": "grounding",
+              "locator": "Opening; Grounding in Conversation; contribution model",
+              "note": "The chapter defines the grounding criterion as participants mutually believing understanding is sufficient for current purposes. Responses supply evidence for this belief; neither perfect comprehension nor truth agreement is guaranteed. Grounding remains the process, distinct from common ground as the shared state."
+            }
+          ]
+        },
+        "previous_card_version": {
+          "before": null,
+          "after": 1
+        }
+      }
+    }
+  ],
+  "source_reads": [
+    {
+      "source_id": "raft",
+      "url": "https://raft.github.io/raft.pdf",
+      "locator": "Extended paper §2, pp. 1–2, lines 71–115; §5, p. 3, lines 207–219",
+      "assessment_note": "Identical ordered commands need deterministic machines; Raft’s crash-fault model distinguishes safe agreement from majority-dependent availability.",
+      "access_mode": "fresh_public_tool_passage",
+      "access_receipt_files": [
+        "recheck-access-001.json"
+      ],
+      "revision": "Extended version, 2014-05-20",
+      "reviewed_at": "2026-10-08T22:07:34.621990+00:00",
+      "requested_at": [
+        "2026-10-08T22:03:48.986Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "wal",
+      "url": "https://www.sqlite.org/wal.html",
+      "locator": "SQLite WAL §2–2.2, lines 82–103",
+      "assessment_note": "Commit appends a marker; checkpointing later transfers committed content. Automatic and application-controlled checkpoints are distinct operations.",
+      "access_mode": "fresh_public_tool_passage",
+      "access_receipt_files": [
+        "recheck-access-002.json",
+        "recheck-access-004.json"
+      ],
+      "revision": null,
+      "reviewed_at": "2026-10-08T22:07:34.622007+00:00",
+      "requested_at": [
+        "2026-10-08T22:04:04.635Z",
+        "2026-10-08T22:04:50.226Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "atomiccommit",
+      "url": "https://www.sqlite.org/atomiccommit.html",
+      "locator": "SQLite Atomic Commit §1; §2 lines 132–146; §3.5 lines 174–191",
+      "assessment_note": "Recovery assumes functioning storage/OS behavior; a rollback journal preserves original pages before overwrite.",
+      "access_mode": "fresh_public_tool_passage",
+      "access_receipt_files": [
+        "recheck-access-002.json"
+      ],
+      "revision": null,
+      "reviewed_at": "2026-10-08T22:07:34.622010+00:00",
+      "requested_at": [
+        "2026-10-08T22:04:04.635Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "baby",
+      "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+      "locator": "Historical description paragraphs 1–6, lines 195–200; paragraph 8, line 202; object number lines 213–214",
+      "assessment_note": "The description separates original 1948 Baby facts from the 1998 replica object and catalog number.",
+      "access_mode": "fresh_public_tool_passage",
+      "access_receipt_files": [
+        "recheck-access-003.json"
+      ],
+      "revision": "Collection YS23/1998",
+      "reviewed_at": "2026-10-08T22:07:34.622013+00:00",
+      "requested_at": [
+        "2026-10-08T22:04:21.734Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "cooperativeidentity",
+      "url": "https://ica.coop/en/cooperatives/cooperative-identity",
+      "locator": "Principles 3, 4 and 6, lines 112–123",
+      "assessment_note": "The expanded locator retains surplus allocation and adds autonomy plus international cooperation. URL, acquisition and revision fields are unchanged.",
+      "access_mode": "fresh_public_tool_passage",
+      "access_receipt_files": [
+        "recheck-access-003.json"
+      ],
+      "revision": "1995 Statement on the Cooperative Identity",
+      "reviewed_at": "2026-10-08T22:07:34.622016+00:00",
+      "requested_at": [
+        "2026-10-08T22:04:21.734Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "ies",
+      "url": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072004.pdf",
+      "locator": "Recommendation 6a, printed pp. 23–24, lines 1658–1733",
+      "assessment_note": "The named procedure combines delayed judgment, cue-only access and prospective recall estimates; classroom evidence is limited.",
+      "access_mode": "fresh_public_tool_passage",
+      "access_receipt_files": [
+        "recheck-access-003.json"
+      ],
+      "revision": "NCER 2007-2004, September 2007",
+      "reviewed_at": "2026-10-08T22:07:34.622018+00:00",
+      "requested_at": [
+        "2026-10-08T22:04:21.734Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "sqliteisolation",
+      "url": "https://www.sqlite.org/isolation.html",
+      "locator": "Isolation And Concurrency, lines 32–39",
+      "assessment_note": "Rollback restoration and append/checkpoint behavior are described as SQLite journal modes.",
+      "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+      "prior_audit_sha256": "30f4472ffe3ae18a559b9b9c770dbcb10abec65c90e9303ae596ddd71fea75bf",
+      "access_receipt_files": [
+        "live-004.json"
+      ],
+      "revision": null,
+      "source_record_unchanged": true
+    },
+    {
+      "source_id": "eniac",
+      "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78",
+      "locator": "ENIAC; ENIAC being set up; ENIAC tube change, lines 11–22",
+      "assessment_note": "Electronic operation, days of configuration and tube-maintenance experience are explicit.",
+      "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+      "prior_audit_sha256": "30f4472ffe3ae18a559b9b9c770dbcb10abec65c90e9303ae596ddd71fea75bf",
+      "access_receipt_files": [
+        "live-001.json"
+      ],
+      "revision": null,
+      "source_record_unchanged": true
+    },
+    {
+      "source_id": "formative",
+      "url": "https://www.cmu.edu/teaching/assessment/basics/formative-summative.html",
+      "locator": "Formative assessment, lines 11–21",
+      "assessment_note": "Feedback informs later teaching and studying, supporting the comparison with learner calibration.",
+      "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+      "prior_audit_sha256": "30f4472ffe3ae18a559b9b9c770dbcb10abec65c90e9303ae596ddd71fea75bf",
+      "access_receipt_files": [
+        "live-009.json"
+      ],
+      "revision": null,
+      "source_record_unchanged": true
+    },
+    {
+      "source_id": "coopHistory",
+      "url": "https://ica.coop/en/whats-co-op/history-co-operative-movement",
+      "locator": "Our history opening, line 89",
+      "assessment_note": "International cooperative delegates established the 1895 organization and its information, principles and trade aims.",
+      "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+      "prior_audit_sha256": "30f4472ffe3ae18a559b9b9c770dbcb10abec65c90e9303ae596ddd71fea75bf",
+      "access_receipt_files": [
+        "live-013.json"
+      ],
+      "revision": null,
+      "source_record_unchanged": true
+    },
+    {
+      "source_id": "minimalpair",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/4-3-contrastive-distribution-and-minimal-pairs/",
+      "locator": "§4.3 Comparing distributions with minimal pairs, lines 394–410",
+      "assessment_note": "The chapter distinguishes signed parameter contrasts from the spoken pill/kill example and describes alternatives when exact pairs are unavailable.",
+      "access_mode": "fresh_public_tool_passage",
+      "access_receipt_files": [
+        "recheck-access-002.json",
+        "recheck-access-004.json"
+      ],
+      "revision": "Essentials of Linguistics, 2nd edition, 2022",
+      "reviewed_at": "2026-10-08T22:08:33.474549+00:00",
+      "requested_at": [
+        "2026-10-08T22:04:04.635Z",
+        "2026-10-08T22:04:50.226Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "boehistory",
+      "url": "https://www.bankofengland.co.uk/about/history",
+      "locator": "1720 South Sea Bubble entry, lines 334–340",
+      "assessment_note": "Limited trading, government-debt involvement and rising share prices support the historical contrast without establishing intrinsic value.",
+      "access_mode": "fresh_public_tool_passage",
+      "access_receipt_files": [
+        "recheck-access-003.json"
+      ],
+      "revision": "Page last updated 2024-12-09",
+      "reviewed_at": "2026-10-08T22:08:33.474566+00:00",
+      "requested_at": [
+        "2026-10-08T22:04:21.734Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "turnanticipation",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00089/full",
+      "locator": "Abstract lines 382–386; Introduction lines 392–394, 427–428; discussion lines 675–676",
+      "assessment_note": "The laboratory evidence supports anticipation ability; natural-interaction generalization is limited. The introduction explicitly connects predicted completion points to transition-relevance places.",
+      "access_mode": "fresh_public_tool_passage",
+      "access_receipt_files": [
+        "recheck-access-002.json",
+        "recheck-access-004.json"
+      ],
+      "revision": "Riest, Jorschick and de Ruiter, 2015-02-02; doi:10.3389/fpsyg.2015.00089",
+      "reviewed_at": "2026-10-08T22:08:33.474570+00:00",
+      "requested_at": [
+        "2026-10-08T22:04:04.635Z",
+        "2026-10-08T22:04:50.226Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "repair",
+      "url": "https://discovery.ucl.ac.uk/id/eprint/1557948/1/Dingemanse_universal_principles_in_the_repair_of_communication.PDF",
+      "locator": "Materials and Methods, PDF p. 3, lines 105–111; Results, PDF p. 7, lines 226–240",
+      "assessment_note": "The initiator/solution distinction and documented repeated repair attempts support an aim rather than an assured immediate outcome.",
+      "access_mode": "fresh_public_tool_passage",
+      "access_receipt_files": [
+        "recheck-access-005.json"
+      ],
+      "revision": "Dingemanse et al., 2015; doi:10.1371/journal.pone.0136100",
+      "reviewed_at": "2026-10-08T22:08:33.474572+00:00",
+      "requested_at": [
+        "2026-10-08T22:05:20.259Z"
+      ],
+      "retrieval_date": "2026-10-08"
+    },
+    {
+      "source_id": "grounding",
+      "url": "https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf",
+      "locator": "Captured chapter: web-120 lines 12–17, 40–48, 80–111, 156–188, 330–342; web-131 lines 489–500, 510–576",
+      "assessment_note": "The chapter defines mutual belief as the criterion and links grounding with common-ground updates. Purpose changes criteria; medium changes available evidence and techniques.",
+      "access_mode": "independent_read_of_hash_verified_cached_public_passages_after_live_failure",
+      "access_receipt_files": [
+        "recheck-access-004.json",
+        "recheck-access-005.json"
+      ],
+      "revision": "Clark and Brennan, 1991",
+      "reviewed_at": "2026-10-08T22:08:33.474575+00:00",
+      "cached_public_passage_files": [
+        {
+          "path": "research/workers/research-batch-005/source-texts/web-120.json",
+          "sha256": "835cba3dc729533ee24766700028649a24e45dd3f04529ba3f27464935dda40d",
+          "locator": "Opening and Grounding in Conversation; Evidence in Grounding; Grounding Changes with Purpose",
+          "type": "captured_public_web_response_not_author_support_note",
+          "independently_read": true
+        },
+        {
+          "path": "research/workers/research-batch-005/source-texts/web-131.json",
+          "sha256": "e83424b7dfd4c72e8223f54a081005dc8c362ea9309df76c3e77d37aeda3dc4a",
+          "locator": "Grounding Changes with the Medium, lines 489–615",
+          "type": "captured_public_web_response_not_author_support_note",
+          "independently_read": true
+        }
+      ],
+      "original_source_acquisition": "2026-10-08T19:23:02.585260Z",
+      "access_limitation": "Two public-tool requests returned unusable internal-error responses. No further request or alternate URL was attempted. Independently read the hash-verified previously captured public passages."
+    },
+    {
+      "source_id": "phonemes",
+      "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+      "locator": "§4.1 lines 194–224, including the explicit allophone definition at 216–219",
+      "assessment_note": "Patterns of sound combination and allophonic distinctions supply the target meanings.",
+      "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+      "prior_audit_sha256": "30f4472ffe3ae18a559b9b9c770dbcb10abec65c90e9303ae596ddd71fea75bf",
+      "access_receipt_files": [
+        "live-007.json",
+        "live-006.json",
+        "live-018.json"
+      ],
+      "revision": "Last modified 2024-03-18T04:34:04Z",
+      "source_record_unchanged": true
+    }
+  ],
+  "reviewed_cards": [
+    {
+      "id": "local:authored:000520",
+      "label": "Distributed systems",
+      "sample_kind": "additional_targeted",
+      "review_scope": "full_changed_card_and_attached_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Added determinism is explicitly required for matching replica outputs. Existing delay/failure context remains supported.",
+      "identity_and_label_assessment": "Broad distributed-systems identity retained; state-machine replication remains one approach.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:replicated-state-machine",
+          "target_label": "Replicated state machine",
+          "type": "related_to",
+          "assertion": "editorial",
+          "source_ids": [
+            "raft"
+          ],
+          "assessment": "supported",
+          "note": "Editorial link uses the paper’s concrete fault-tolerant replication pattern.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "raft",
+          "url": "https://raft.github.io/raft.pdf",
+          "locator": "Extended paper §2, pp. 1–2, lines 71–115; §5, p. 3, lines 207–219",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-001.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 46
+    },
+    {
+      "id": "local:catalog:atomic-commit",
+      "label": "Atomic commit",
+      "sample_kind": "random_new",
+      "review_scope": "full_changed_card_and_attached_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [
+        "atomiccommit"
+      ],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Added storage assumptions accurately bound the crash/power-loss guarantee. Sequential-write wording preserves the prior meaning.",
+      "identity_and_label_assessment": "Atomic transaction completion remains distinct from recovery journaling and isolation.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:rollback-journal",
+          "target_label": "Rollback journal",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "atomiccommit",
+            "sqliteisolation"
+          ],
+          "assessment": "supported",
+          "note": "The journal relationship is directly supported by §3.5 and retained SQLite isolation evidence.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "atomiccommit",
+          "url": "https://www.sqlite.org/atomiccommit.html",
+          "locator": "SQLite Atomic Commit §1; §2 lines 132–146; §3.5 lines 174–191",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-002.json"
+          ]
+        },
+        {
+          "source_id": "sqliteisolation",
+          "url": "https://www.sqlite.org/isolation.html",
+          "locator": "Isolation And Concurrency, lines 32–39",
+          "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+          "access_receipt_files": [
+            "live-004.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 46
+    },
+    {
+      "id": "local:catalog:rollback-journal",
+      "label": "Rollback journal",
+      "sample_kind": "risk_selected",
+      "review_scope": "full_changed_card_and_attached_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [
+        "atomiccommit"
+      ],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "The contrast now names SQLite’s WAL mode, matching the source’s implementation scope.",
+      "identity_and_label_assessment": "Same rollback mechanism and local ID; no generic WAL claim remains.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:atomic-commit",
+          "target_label": "Atomic commit",
+          "type": "application_of",
+          "assertion": "editorial",
+          "source_ids": [
+            "sqliteisolation",
+            "wal",
+            "atomiccommit"
+          ],
+          "assessment": "supported",
+          "note": "The editorial atomic-commit application is supported by original-page recovery.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "sqliteisolation",
+          "url": "https://www.sqlite.org/isolation.html",
+          "locator": "Isolation And Concurrency, lines 32–39",
+          "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+          "access_receipt_files": [
+            "live-004.json"
+          ]
+        },
+        {
+          "source_id": "wal",
+          "url": "https://www.sqlite.org/wal.html",
+          "locator": "SQLite WAL §2–2.2, lines 82–103",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-002.json",
+            "recheck-access-004.json"
+          ]
+        },
+        {
+          "source_id": "atomiccommit",
+          "url": "https://www.sqlite.org/atomiccommit.html",
+          "locator": "SQLite Atomic Commit §1; §2 lines 132–146; §3.5 lines 174–191",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-002.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 42
+    },
+    {
+      "id": "local:catalog:write-ahead-logging",
+      "label": "Write-ahead logging",
+      "sample_kind": "additional_targeted",
+      "review_scope": "additional_targeted_full_changed_card_and_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "learning_takeaway",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Opening text and takeaway now explicitly limit the described log layout and reader behavior to SQLite.",
+      "identity_and_label_assessment": "The same WAL learning identity is illustrated through a named implementation.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:wal-checkpointing",
+          "target_label": "WAL checkpointing",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "wal"
+          ],
+          "assessment": "supported",
+          "note": "The source explicitly connects SQLite WAL with later checkpoint transfer.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "wal",
+          "url": "https://www.sqlite.org/wal.html",
+          "locator": "SQLite WAL §2–2.2, lines 82–103",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-002.json",
+            "recheck-access-004.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 41
+    },
+    {
+      "id": "local:catalog:wal-checkpointing",
+      "label": "WAL checkpointing",
+      "sample_kind": "additional_targeted",
+      "review_scope": "additional_targeted_full_changed_card_and_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "learning_takeaway",
+        "previous_card_version",
+        "relations"
+      ],
+      "changed_shared_source_ids": [],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Card and takeaway correctly limit transfer behavior and checkpoint scheduling to SQLite.",
+      "identity_and_label_assessment": "Distinct checkpoint operation within the same implementation; no new identity.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:write-ahead-logging",
+          "target_label": "Write-ahead logging",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "wal"
+          ],
+          "assessment": "supported",
+          "note": "The revised source-asserted facet note explicitly limits itself to the documented SQLite implementation.",
+          "changed": true
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "wal",
+          "url": "https://www.sqlite.org/wal.html",
+          "locator": "SQLite WAL §2–2.2, lines 82–103",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-002.json",
+            "recheck-access-004.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 44
+    },
+    {
+      "id": "local:catalog:distributed-consensus",
+      "label": "Replicated-log consensus under crash faults",
+      "sample_kind": "additional_targeted",
+      "review_scope": "additional_targeted_full_changed_card_and_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Replacing “practical” with “Raft-style” correctly bounds the majority availability condition. “Only while” states a necessary condition rather than guaranteeing liveness under arbitrary delays.",
+      "identity_and_label_assessment": "The already bounded crash-fault replicated-log identity and label are retained.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:authored:000520",
+          "target_label": "Distributed systems",
+          "type": "facet_of",
+          "assertion": "editorial",
+          "source_ids": [
+            "raft"
+          ],
+          "assessment": "supported",
+          "note": "Editorial distributed-systems facet matches the stated non-Byzantine coordination problem.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "raft",
+          "url": "https://raft.github.io/raft.pdf",
+          "locator": "Extended paper §2, pp. 1–2, lines 71–115; §5, p. 3, lines 207–219",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-001.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 45
+    },
+    {
+      "id": "local:catalog:manchester-baby",
+      "label": "Manchester Baby",
+      "sample_kind": "random_new",
+      "review_scope": "changed_evidence_metadata_and_relationship_context_recheck",
+      "changed_fields": [
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [
+        "baby"
+      ],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Explanatory metadata now explicitly distinguishes the 1998 replica page from historical claims about the original 1948 machine. Card text is unchanged.",
+      "identity_and_label_assessment": "Replica/source ambiguity is resolved without changing the original-machine learning identity or URL.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "Q169399",
+          "target_label": "ENIAC",
+          "type": "related_to",
+          "assertion": "editorial",
+          "source_ids": [
+            "baby",
+            "eniac"
+          ],
+          "assessment": "supported",
+          "note": "The unchanged ENIAC comparison remains about early setup versus original Baby program storage.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "baby",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+          "locator": "Historical description paragraphs 1–6, lines 195–200; paragraph 8, line 202; object number lines 213–214",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-003.json"
+          ]
+        },
+        {
+          "source_id": "eniac",
+          "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78",
+          "locator": "ENIAC; ENIAC being set up; ENIAC tube change, lines 11–22",
+          "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+          "access_receipt_files": [
+            "live-001.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 45
+    },
+    {
+      "id": "Q169399",
+      "label": "ENIAC",
+      "sample_kind": "risk_selected",
+      "review_scope": "changed_evidence_metadata_and_relationship_context_recheck",
+      "changed_fields": [
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [
+        "baby"
+      ],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Only the Baby comparison evidence and source context change; ENIAC facts are identical to the independently checked initial card.",
+      "identity_and_label_assessment": "The canonical ENIAC identity and original/replica distinction are preserved.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:manchester-baby",
+          "target_label": "Manchester Baby",
+          "type": "related_to",
+          "assertion": "editorial",
+          "source_ids": [
+            "eniac",
+            "baby"
+          ],
+          "assessment": "supported",
+          "note": "The revised evidence clearly supports comparison with original Baby, not its replica.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "eniac",
+          "url": "https://www.computerhistory.org/revolution/birth-of-the-computer/4/78",
+          "locator": "ENIAC; ENIAC being set up; ENIAC tube change, lines 11–22",
+          "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+          "access_receipt_files": [
+            "live-001.json"
+          ]
+        },
+        {
+          "source_id": "baby",
+          "url": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+          "locator": "Historical description paragraphs 1–6, lines 195–200; paragraph 8, line 202; object number lines 213–214",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-003.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 46
+    },
+    {
+      "id": "local:catalog:minimal-pair",
+      "label": "Minimal pair",
+      "sample_kind": "additional_targeted",
+      "review_scope": "additional_targeted_full_changed_card_and_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "learning_takeaway",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [],
+      "before_card_version": 2,
+      "after_card_version": 3,
+      "claim_and_scope_assessment": "Spoken-language qualification fits the chapter’s explicit contrast with signed-language minimal pairs. The example and failure-to-find caveat remain supported.",
+      "identity_and_label_assessment": "Same general minimal-pair identity and ID; the card openly describes its spoken-language example instead of excluding signed forms.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "Q40998",
+          "target_label": "Phonology",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "minimalpair",
+            "phonemes"
+          ],
+          "assessment": "supported",
+          "note": "The chapter explicitly uses minimal pairs for contrastive distribution and phoneme analysis; the phonology facet remains supported.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "minimalpair",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/4-3-contrastive-distribution-and-minimal-pairs/",
+          "locator": "§4.3 Comparing distributions with minimal pairs, lines 394–410",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-002.json",
+            "recheck-access-004.json"
+          ]
+        },
+        {
+          "source_id": "phonemes",
+          "url": "https://socialsci.libretexts.org/Bookshelves/Linguistics/Essentials_of_Linguistics_2e_%28Anderson_et_al.%29/04%3A_Phonology/4.01%3A_Phonemes_and_allophones",
+          "locator": "§4.1 lines 194–224, including the explicit allophone definition at 216–219",
+          "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+          "access_receipt_files": [
+            "live-007.json",
+            "live-006.json",
+            "live-018.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 44
+    },
+    {
+      "id": "local:catalog:delayed-judgments-of-learning",
+      "label": "Cue-only delayed judgments of learning",
+      "sample_kind": "risk_selected",
+      "review_scope": "full_changed_card_label_and_attached_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "label",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Cue-only wording now appears in both label and definition, matching the specifically supported procedure. Evidence limitation remains.",
+      "identity_and_label_assessment": "Local ID is unchanged; the narrowed label preserves the selected calibration facet.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:formative-assessment",
+          "target_label": "Formative assessment",
+          "type": "related_to",
+          "assertion": "editorial",
+          "source_ids": [
+            "ies",
+            "formative"
+          ],
+          "assessment": "supported",
+          "note": "The editorial formative-assessment comparison remains valid; its premise is unchanged.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "ies",
+          "url": "https://ies.ed.gov/ncee/wwc/Docs/PracticeGuide/20072004.pdf",
+          "locator": "Recommendation 6a, printed pp. 23–24, lines 1658–1733",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-003.json"
+          ]
+        },
+        {
+          "source_id": "formative",
+          "url": "https://www.cmu.edu/teaching/assessment/basics/formative-summative.html",
+          "locator": "Formative assessment, lines 11–21",
+          "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+          "access_receipt_files": [
+            "live-009.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 47
+    },
+    {
+      "id": "local:catalog:patronage-based-surplus-distribution",
+      "label": "Patronage-based surplus distribution",
+      "sample_kind": "additional_targeted",
+      "review_scope": "shared_source_metadata_and_unchanged_card_diff_only",
+      "changed_fields": [
+        "card_version",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [
+        "cooperativeidentity"
+      ],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Card, takeaway, evidence and relationship are byte-content unchanged. Only version/provenance fields and shared-source locator expansion change.",
+      "identity_and_label_assessment": "Same reserved identity; Principle 3 remains present in the expanded metadata.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "Q4539",
+          "target_label": "Cooperative",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "cooperativeidentity"
+          ],
+          "assessment": "unchanged_bundle_verified",
+          "note": "Unchanged relationship bundle inspected; no full new factual audit is claimed.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "cooperativeidentity",
+          "url": "https://ica.coop/en/cooperatives/cooperative-identity",
+          "locator": "Principles 3, 4 and 6, lines 112–123",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-003.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 47
+    },
+    {
+      "id": "local:catalog:south-sea-bubble",
+      "label": "South Sea Bubble",
+      "sample_kind": "additional_targeted",
+      "review_scope": "additional_targeted_full_changed_card_and_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "The closing sentence now makes a price/activity contrast instead of implying that a crash proves intrinsic misvaluation or one causal account.",
+      "identity_and_label_assessment": "Same named 1720 event; source attribution and historical scope are explicit.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:bank-of-england",
+          "target_label": "Bank of England",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "boehistory"
+          ],
+          "assessment": "supported",
+          "note": "The bank history directly connects the company’s debt role with the Bank of England.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "boehistory",
+          "url": "https://www.bankofengland.co.uk/about/history",
+          "locator": "1720 South Sea Bubble entry, lines 334–340",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-003.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 46
+    },
+    {
+      "id": "local:catalog:rochdale-pioneers",
+      "label": "Rochdale Pioneers",
+      "sample_kind": "additional_targeted",
+      "review_scope": "shared_source_metadata_and_unchanged_card_diff_only",
+      "changed_fields": [
+        "card_version",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [
+        "cooperativeidentity"
+      ],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Card, takeaway, evidence and relationship are unchanged. The source expansion retains Principle 3 and does not alter the history reference.",
+      "identity_and_label_assessment": "Same named society and local ID; no semantic or provenance replacement.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "Q4539",
+          "target_label": "Cooperative",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "coopHistory",
+            "cooperativeidentity"
+          ],
+          "assessment": "unchanged_bundle_verified",
+          "note": "Unchanged relationship bundle inspected; no full new factual audit is claimed.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "coopHistory",
+          "url": "https://ica.coop/en/whats-co-op/history-co-operative-movement",
+          "locator": "Our history opening, line 89",
+          "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+          "access_receipt_files": [
+            "live-013.json"
+          ]
+        },
+        {
+          "source_id": "cooperativeidentity",
+          "url": "https://ica.coop/en/cooperatives/cooperative-identity",
+          "locator": "Principles 3, 4 and 6, lines 112–123",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-003.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 48
+    },
+    {
+      "id": "local:catalog:international-cooperative-alliance",
+      "label": "International Cooperative Alliance",
+      "sample_kind": "risk_selected",
+      "review_scope": "changed_evidence_locator_and_relationship_context_recheck",
+      "changed_fields": [
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [
+        "cooperativeidentity"
+      ],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Evidence now points to Principles 4 and 6 for independence and coordination; founding claims and history source remain unchanged.",
+      "identity_and_label_assessment": "Same federation identity; no added current-world membership claim.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "Q4539",
+          "target_label": "Cooperative",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "coopHistory",
+            "cooperativeidentity"
+          ],
+          "assessment": "supported",
+          "note": "The actual cooperative-to-Alliance connection remains directly supported by the independently checked founding passage.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "coopHistory",
+          "url": "https://ica.coop/en/whats-co-op/history-co-operative-movement",
+          "locator": "Our history opening, line 89",
+          "access_mode": "unchanged_premise_inherited_from_independent_initial_audit",
+          "access_receipt_files": [
+            "live-013.json"
+          ]
+        },
+        {
+          "source_id": "cooperativeidentity",
+          "url": "https://ica.coop/en/cooperatives/cooperative-identity",
+          "locator": "Principles 3, 4 and 6, lines 112–123",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-003.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 46
+    },
+    {
+      "id": "local:catalog:conversational-turn-taking",
+      "label": "Conversational turn-taking",
+      "sample_kind": "additional_targeted",
+      "review_scope": "additional_targeted_full_changed_card_and_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "The revised card states demonstrated anticipation ability and a limited inference to anticipatory accounts; it no longer asserts how all natural transitions occur.",
+      "identity_and_label_assessment": "Broad conversational coordination identity remains distinct from the specific completion-point concept.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:transition-relevance-place",
+          "target_label": "Transition-relevance place",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "turnanticipation"
+          ],
+          "assessment": "supported",
+          "note": "The paper’s introduction directly relates turn anticipation to transition-relevance places.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "turnanticipation",
+          "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00089/full",
+          "locator": "Abstract lines 382–386; Introduction lines 392–394, 427–428; discussion lines 675–676",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-002.json",
+            "recheck-access-004.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 44
+    },
+    {
+      "id": "local:catalog:other-initiated-conversational-repair",
+      "label": "Other-initiated conversational repair",
+      "sample_kind": "risk_selected",
+      "review_scope": "full_changed_card_and_attached_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Replacing an assured brief repair with an aim to restore understanding matches the observed possibility of repeated attempts.",
+      "identity_and_label_assessment": "Same collaborative repair mechanism; no guaranteed duration or success.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:grounding-in-communication",
+          "target_label": "Grounding in communication",
+          "type": "related_to",
+          "assertion": "editorial",
+          "source_ids": [
+            "repair",
+            "grounding"
+          ],
+          "assessment": "supported",
+          "note": "The editorial relation to grounding remains defensible: explicit breakdown management complements routine evidence of understanding.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "repair",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/1557948/1/Dingemanse_universal_principles_in_the_repair_of_communication.PDF",
+          "locator": "Materials and Methods, PDF p. 3, lines 105–111; Results, PDF p. 7, lines 226–240",
+          "access_mode": "fresh_public_tool_passage",
+          "access_receipt_files": [
+            "recheck-access-005.json"
+          ]
+        },
+        {
+          "source_id": "grounding",
+          "url": "https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf",
+          "locator": "Captured chapter: web-120 lines 12–17, 40–48, 80–111, 156–188, 330–342; web-131 lines 489–500, 510–576",
+          "access_mode": "independent_read_of_hash_verified_cached_public_passages_after_live_failure",
+          "access_receipt_files": [
+            "recheck-access-004.json",
+            "recheck-access-005.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 46
+    },
+    {
+      "id": "local:catalog:grounding-in-communication",
+      "label": "Grounding in communication",
+      "sample_kind": "additional_targeted",
+      "review_scope": "additional_targeted_full_changed_card_and_relationship_recheck",
+      "changed_fields": [
+        "card",
+        "card_version",
+        "evidence",
+        "previous_card_version"
+      ],
+      "changed_shared_source_ids": [],
+      "before_card_version": 1,
+      "after_card_version": 2,
+      "claim_and_scope_assessment": "Mutual-belief wording accurately replaces an apparent guarantee of comprehension. Responses provide evidence; task and medium condition the grounding process.",
+      "identity_and_label_assessment": "Process remains distinct from common ground as shared knowledge/beliefs/assumptions; no claim of truth agreement.",
+      "relations": [
+        {
+          "index": 0,
+          "target_id": "local:catalog:common-ground-in-communication",
+          "target_label": "Common ground in communication",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "source_ids": [
+            "grounding"
+          ],
+          "assessment": "supported",
+          "note": "The chapter explicitly describes grounding as making contributions part of common ground.",
+          "changed": false
+        }
+      ],
+      "source_checks": [
+        {
+          "source_id": "grounding",
+          "url": "https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf",
+          "locator": "Captured chapter: web-120 lines 12–17, 40–48, 80–111, 156–188, 330–342; web-131 lines 489–500, 510–576",
+          "access_mode": "independent_read_of_hash_verified_cached_public_passages_after_live_failure",
+          "access_receipt_files": [
+            "recheck-access-004.json",
+            "recheck-access-005.json"
+          ]
+        }
+      ],
+      "result": "pass",
+      "residual_findings": [],
+      "word_count": 42
+    }
+  ],
+  "initial_finding_resolutions": [
+    {
+      "finding_id": "005-K01",
+      "id": "local:catalog:rollback-journal",
+      "sample_kind": "risk_selected",
+      "initial_severity": "moderate",
+      "substantive": true,
+      "status": "resolved",
+      "source_id": "wal",
+      "locator": "§2–2.1",
+      "resolution_note": "The revised sentence explicitly names SQLite’s mode; original-page versus appended-page behavior matches the source."
+    },
+    {
+      "finding_id": "005-R01",
+      "id": "local:catalog:manchester-baby",
+      "sample_kind": "random_new",
+      "initial_severity": "minor",
+      "substantive": false,
+      "status": "resolved",
+      "source_id": "baby",
+      "locator": "Historical paragraphs 1–6 and replica paragraph 8",
+      "resolution_note": "Source and evidence metadata distinguish the replica object from the original machine described historically; no identity reassignment was needed."
+    },
+    {
+      "finding_id": "005-K02",
+      "id": "local:catalog:delayed-judgments-of-learning",
+      "sample_kind": "risk_selected",
+      "initial_severity": "minor",
+      "substantive": false,
+      "status": "resolved",
+      "source_id": "ies",
+      "locator": "Recommendation 6a, pp. 23–24",
+      "resolution_note": "Cue-only label and definition match the admitted facet while preserving the stable ID."
+    },
+    {
+      "finding_id": "005-K03",
+      "id": "local:catalog:international-cooperative-alliance",
+      "sample_kind": "risk_selected",
+      "initial_severity": "minor",
+      "substantive": false,
+      "status": "resolved",
+      "source_id": "cooperativeidentity",
+      "locator": "Principles 4 and 6",
+      "resolution_note": "Card evidence and shared source locator now include the actual autonomy/cooperation passages."
+    }
+  ],
+  "residual_findings": [],
+  "updated_at": "2026-10-08T22:08:33.474646+00:00",
+  "progress": {
+    "bundles_checked": 17,
+    "remaining": 0
+  },
+  "changed_source_metadata_reviews": [
+    {
+      "source_id": "baby",
+      "changed_fields": [
+        "locator",
+        "source_context"
+      ],
+      "url_and_historical_acquisition_metadata_unchanged": true,
+      "result": "pass",
+      "note": "Historical original-machine description is distinguished from the 1998 replica object."
+    },
+    {
+      "source_id": "atomiccommit",
+      "changed_fields": [
+        "locator"
+      ],
+      "url_and_historical_acquisition_metadata_unchanged": true,
+      "result": "pass",
+      "note": "Added hardware assumptions and rollback-journal mechanism are real sections supporting the bounded claims."
+    },
+    {
+      "source_id": "cooperativeidentity",
+      "changed_fields": [
+        "locator"
+      ],
+      "url_and_historical_acquisition_metadata_unchanged": true,
+      "result": "pass",
+      "note": "Locator expands Principle 3 to include Principles 4 and 6 without dropping the original shared-source passage."
+    }
+  ],
+  "scope_counts": {
+    "affected_bundles": 17,
+    "changed_full_cards_labels_or_evidence_reviewed": 15,
+    "shared_source_only_diff_checks": 2,
+    "original_sample_affected": 7,
+    "random_sample_affected": 2,
+    "risk_sample_affected": 5,
+    "additional_targeted_full_card_checks": 8,
+    "additional_targeted_source_only_checks": 2,
+    "original_sample_unchanged": 33,
+    "unchanged_records_outside_change_set": 183
+  },
+  "summary_by_sample_kind": {
+    "random_new": {
+      "original_sample_count": 20,
+      "rechecked_changed_ids": [
+        "local:catalog:atomic-commit",
+        "local:catalog:manchester-baby"
+      ],
+      "initial_substantive_findings": 0,
+      "initial_minor_notes": 1,
+      "resolved_initial_finding_ids": [
+        "005-R01"
+      ],
+      "residual_substantive_findings": 0,
+      "residual_minor_findings": 0,
+      "unchanged_sample_retains_initial_scope": true
+    },
+    "risk_selected": {
+      "original_sample_count": 20,
+      "rechecked_changed_ids": [
+        "local:catalog:rollback-journal",
+        "Q169399",
+        "local:catalog:delayed-judgments-of-learning",
+        "local:catalog:international-cooperative-alliance",
+        "local:catalog:other-initiated-conversational-repair"
+      ],
+      "initial_substantive_findings": 1,
+      "initial_minor_notes": 2,
+      "resolved_initial_finding_ids": [
+        "005-K01",
+        "005-K02",
+        "005-K03"
+      ],
+      "residual_substantive_findings": 0,
+      "residual_minor_findings": 0,
+      "unchanged_sample_retains_initial_scope": true
+    }
+  },
+  "additional_targeted_checks": {
+    "full_changed_card_ids": [
+      "local:authored:000520",
+      "local:catalog:write-ahead-logging",
+      "local:catalog:wal-checkpointing",
+      "local:catalog:distributed-consensus",
+      "local:catalog:minimal-pair",
+      "local:catalog:south-sea-bubble",
+      "local:catalog:conversational-turn-taking",
+      "local:catalog:grounding-in-communication"
+    ],
+    "shared_source_only_ids": [
+      "local:catalog:patronage-based-surplus-distribution",
+      "local:catalog:rochdale-pioneers"
+    ],
+    "residual_findings": [],
+    "not_part_of_original_random_or_risk_sample": true
+  },
+  "source_access_summary": {
+    "fresh_public_sources_with_passages": 10,
+    "unchanged_independent_initial_source_premises_reused": 5,
+    "cached_public_sources_independently_read": 1,
+    "cached_files_used": 2,
+    "unusable_public_tool_responses": 2,
+    "failed_source_url": "https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf",
+    "additional_reference_urls_attempted": 0,
+    "exhausted_postgresql_or_cornell_urls_retried": false,
+    "source_denial_bypass": false,
+    "note": "Tool requests and displayed passages are observed; actual origin-server fetches are not asserted. No author support note substitutes for a public passage."
+  },
+  "verification": {
+    "exact_revised_candidate_hash": true,
+    "canonical_copy_identical": true,
+    "original_author_and_frozen_candidate_identical": true,
+    "initial_report_and_all_frozen_artifacts_unchanged": true,
+    "independent_17_card_change_set_exact": true,
+    "all_changed_bundle_versions_incremented_once": true,
+    "all_200_author_review_ids_verified_without_claiming_independent_review": true,
+    "all_200_word_counts_valid": true,
+    "all_reference_ids_and_targets_resolve": true,
+    "all_changed_source_metadata_preserves_acquisition_provenance": true,
+    "all_four_initial_findings_resolved": true
+  },
+  "completed_at": "2026-10-08T22:10:13.235441+00:00",
+  "elapsed_seconds": 396.944078,
+  "limitations": [
+    "This recheck extends independent factual coverage only to the eight additional changed cards; two shared-source-only records were checked for unchanged content and valid metadata, not given a full new factual audit.",
+    "The original twenty random and twenty risk-selected records remain fixed. Initial failures stay visible in audit.initial.json; no pooled unbiased defect estimate is calculated.",
+    "The author’s 200-card boundary pass is verified as an exact ID set, not recast as independent factual certification.",
+    "Grounding support was independently read from hash-verified captured public passages after two unusable live-tool responses.",
+    "Current source support and cached public text do not establish every original acquisition event or certify unsampled unchanged claims."
+  ]
+}

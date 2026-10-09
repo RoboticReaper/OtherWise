@@ -1,0 +1,60 @@
+{
+  "id": "local:catalog:stretch-tuning",
+  "label": "Stretch tuning",
+  "sample_kind": "random_new",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T21:59:09.676076+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "facet_or_application",
+    "entity_kind": "idea",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q5994",
+        "label": "Piano",
+        "original_description": "musical keyboard instrument",
+        "prior_card_takeaways": [
+          "Connect touch-sensitive piano sound with the mechanical role of escapement."
+        ]
+      },
+      {
+        "id": "Q510293",
+        "label": "Musical acoustics",
+        "original_description": "branch of acoustics concerned with researching and describing the physics of music",
+        "prior_card_takeaways": []
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:inharmonicity-of-musical-strings",
+        "label": "Inharmonicity of musical strings"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Wider piano octaves, stiffness-raised second partial and beat reduction are explicitly explained; often/can preserves instrument variation. Inharmonicity application is explicit.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s032"
+      ],
+      "locator": "FAQ: What is stretch tuning? lines 270–271; web-12/web-13"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:inharmonicity-of-musical-strings",
+      "type": "application_of",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

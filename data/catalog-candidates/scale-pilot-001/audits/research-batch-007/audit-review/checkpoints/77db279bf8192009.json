@@ -1,0 +1,54 @@
+{
+  "id": "local:catalog:othello",
+  "label": "Othello",
+  "sample_kind": "risk_selected",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T21:59:09.673733+00:00",
+  "result": "supported_with_access_limitation",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "topic",
+    "entity_kind": "named_subject",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "local:authored:000259",
+        "label": "Board games",
+        "original_description": "Exploring tabletop games built around rules and social interaction.",
+        "prior_card_takeaways": []
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:forced-passing-in-othello",
+        "label": "Forced passing in Othello"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Preserved official text directly supports outflanking, flipping, final majority, compulsory passing and termination when neither can move. No full-board requirement.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s005"
+      ],
+      "locator": "Preserved games-othello.json lines 26–38, 49–50, 65–79"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:forced-passing-in-othello",
+      "type": "related_to",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [
+    "Both fresh attempts to the exact WOF URL timed out; independently read preserved original public-page capture, not author support notes. Current availability remains unverified."
+  ],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

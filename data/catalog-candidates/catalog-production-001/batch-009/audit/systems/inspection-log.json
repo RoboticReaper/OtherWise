@@ -1,0 +1,470 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-009",
+  "reviewer": "production001_audit_systems",
+  "authored_sampled_cards": false,
+  "input_sha256": {
+    "data/catalog-candidates/catalog-production-001/batch-009/audit/systems/assignment.json": "ddeeeeeb6789ff5b9e0b33343143e4236368617918564e0e409b6a5d731f2ecd",
+    "data/catalog-candidates/catalog-production-001/batch-009/audit-sample.json": "71e56fbb2968f8b0b444647a395243a2bb591cc173b81bd1538fdff6cd9e7f28",
+    "data/catalog-candidates/catalog-production-001/batch-009/frozen-initial/manifest.json": "cce2ff4b93ffadc39baebf8e9cc92368e4e22a366054bb11890ebb4d605ecdb3",
+    "data/catalog-candidates/catalog-production-001/baseline-index.json": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+    "data/catalog-candidates/catalog-production-001/batch-009/frozen-initial/draft-candidate.json": "4612287612b3e2e15fa22a8e8d60bd4f8eb35c4528a5d5f3bf8e506988e35154"
+  },
+  "binding_checks": {
+    "assignment_entries_exactly_match_fixed_sample": true,
+    "assignment_cards_exactly_match_frozen_draft": true,
+    "draft_and_sample_hashes_match_manifest": true,
+    "unique_assigned_ids": 15,
+    "random_count": 9,
+    "risk_count": 6,
+    "attached_relation_count": 11,
+    "card_word_range": [
+      16,
+      22
+    ]
+  },
+  "target_meaning_inspection": {
+    "method": "Python JSON lookup of each attached target ID in frozen baseline-index.json; full relevant records inspected before source judgments.",
+    "path": "data/catalog-candidates/catalog-production-001/baseline-index.json",
+    "sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+    "records": [
+      {
+        "id": "Q12280",
+        "label": "Bridge",
+        "original_description": "structure that spans and provides a passage over a road, railway, river, or some other obstacle"
+      },
+      {
+        "id": "Q178512",
+        "label": "Public transport",
+        "original_description": "shared transportation service for use by the general public"
+      },
+      {
+        "id": "Q240673",
+        "label": "Cost",
+        "original_description": "value of money that has been used up to produce something"
+      },
+      {
+        "id": "Q34228",
+        "label": "Sign language",
+        "original_description": "language which uses manual communication and body language to convey meaning"
+      },
+      {
+        "id": "Q40998",
+        "label": "Phonology",
+        "original_description": "branch of linguistics concerned with the systematic organization of sounds in languages"
+      },
+      {
+        "id": "Q492",
+        "label": "memory",
+        "original_description": "mental faculties and processes involved in storing and retrieving information"
+      },
+      {
+        "id": "Q5830907",
+        "label": "Computer memory",
+        "original_description": "physical device used to store information for immediate use in a digital electronic device"
+      },
+      {
+        "id": "Q82604",
+        "label": "Design",
+        "original_description": "creation of a plan or convention for the construction of an object or a system; process of creation; act of creativity and innovation"
+      },
+      {
+        "id": "local:authored:000254",
+        "label": "Chess",
+        "original_description": "Exploring strategic play, tactics and positional thinking in chess."
+      }
+    ]
+  },
+  "web_operations": [
+    {
+      "operation": "web.run open",
+      "tool_refs": [
+        "turn743view0",
+        "turn743view1",
+        "turn743view2",
+        "turn743view3"
+      ],
+      "purpose": "Initial source access; substantive mnemonic passage inspection."
+    },
+    {
+      "operation": "web.run open",
+      "tool_refs": [
+        "turn745view0",
+        "turn745view1",
+        "turn745view2",
+        "turn745view3"
+      ],
+      "purpose": "Targeted claim and relationship inspection; initial Portal access."
+    },
+    {
+      "operation": "web.run open",
+      "tool_refs": [
+        "turn748view0",
+        "turn748view1",
+        "turn748view2",
+        "turn748view3"
+      ],
+      "purpose": "Targeted substantive claim and relationship inspection."
+    },
+    {
+      "operation": "web.run open",
+      "tool_refs": [
+        "turn750view0",
+        "turn750view1",
+        "turn750view2",
+        "turn750view3"
+      ],
+      "purpose": "Targeted substantive claim inspection and relation-premise inspection."
+    },
+    {
+      "operation": "web.run open",
+      "tool_refs": [
+        "turn754view0",
+        "turn754view1",
+        "turn754view2",
+        "turn754view3"
+      ],
+      "purpose": "Targeted relationship and qualification inspection."
+    },
+    {
+      "operation": "web.run open/find",
+      "tool_refs": [
+        "turn757view0",
+        "turn757view1",
+        "turn757view2",
+        "turn757view3"
+      ],
+      "purpose": "Cache and elasticity completion; targeted on-page checks. Find results were not substituted for uninspected substantive evidence."
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "research-batch-009-systems::os-mnemonic",
+      "url": "https://openstax.org/books/psychology-2e/pages/8-4-ways-to-enhance-memory",
+      "card_ids": [
+        "Q191062"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn743view0"
+      ],
+      "locators": [
+        "Memory-Enhancing Strategies and How to Study Effectively, lines 39 and 69-70",
+        "Memory-Enhancing Strategies, line 39"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::forth-cantilever",
+      "url": "https://www.theforthbridges.org/media/xkjlcac0/forth-bridge-world-heritage-site-draft-management-plan-2025.pdf",
+      "card_ids": [
+        "Q1429218"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn745view0"
+      ],
+      "locators": [
+        "Section 3.3, printed p.24 / PDF index 23, lines 559-576"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive PDF text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::os-elasticity",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/5-1-price-elasticity-of-demand-and-price-elasticity-of-supply",
+      "card_ids": [
+        "Q223639"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn745view1",
+        "turn757view1"
+      ],
+      "locators": [
+        "Section 5.1 definitions, lines 29-32",
+        "Section 5.1, unit-free percentage ratio and slope distinction, lines 82-89"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::nidcd-asl",
+      "url": "https://www.nidcd.nih.gov/health/american-sign-language",
+      "card_ids": [
+        "Q14759"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn745view2"
+      ],
+      "locators": [
+        "What is American Sign Language?; Is sign language the same in other countries?; How does ASL compare with spoken language?, lines 22-32",
+        "What is American Sign Language? and Is sign language the same in other countries?, lines 22-27"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::valve-portal",
+      "url": "https://store.steampowered.com/app/400/Portal/",
+      "card_ids": [
+        "Q274897"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn750view0"
+      ],
+      "locators": [
+        "About This Game, lines 175-178"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::os-costs",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-3-costs-in-the-short-run",
+      "card_ids": [
+        "Q466764"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn748view0"
+      ],
+      "locators": [
+        "Fixed and Variable Costs, lines 92-96"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::rpi-hardware",
+      "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html",
+      "card_ids": [
+        "Q245"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn748view1"
+      ],
+      "locators": [
+        "GPIO and the 40-pin header; Outputs; Inputs, lines 2093-2116"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::itdp-brt",
+      "url": "https://itdp.org/2025/04/17/what-is-brt-and-why-do-cities-need-it/",
+      "card_ids": [
+        "Q2878855"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn748view2"
+      ],
+      "locators": [
+        "The Role of Rapid Transit and The BRT Essentials, lines 56-66",
+        "The Role of Rapid Transit, line 57; The BRT Essentials, lines 64-65"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::os-scale",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-5-costs-in-the-long-run",
+      "card_ids": [
+        "Q5970087"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn748view3",
+        "turn754view3"
+      ],
+      "locators": [
+        "Economies of Scale, lines 65-72",
+        "Opening long-run qualification, lines 31-33"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::ncsu-universal",
+      "url": "https://design.ncsu.edu/research/center-for-universal-design/",
+      "card_ids": [
+        "local:authored:000032"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn750view1"
+      ],
+      "locators": [
+        "Universal Design definition; Principles One-Four and Six, lines 127-129, 134-165 and 183-185",
+        "Universal Design definition and design disciplines, lines 127-129"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::uschess-pieces",
+      "url": "https://new.uschess.org/sites/default/files/media/documents/us-chess-rule-book-online-only-edition-chapters-1-2-9-10-11.pdf",
+      "card_ids": [
+        "Q138",
+        "Q139"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn750view2",
+        "turn754view0"
+      ],
+      "locators": [
+        "Rules 7A and 8A1-8A2, printed p.24 / PDF index 23, lines 859-878",
+        "Rules 3A-3B, printed p.15 / PDF index 14, lines 573-579",
+        "Rules 7A-7B and 8B, printed p.24 / PDF index 23, lines 859-865 and 891-892",
+        "Rules 2D-2F, printed p.15 / PDF index 14, lines 564-571"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive PDF text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::ling-assimilation",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/3-6-articulatory-processes-assimilation/",
+      "card_ids": [
+        "Q148877"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn750view3"
+      ],
+      "locators": [
+        "Introduction and Video Script, lines 267-287"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::mit-cache",
+      "url": "https://computationstructures.org/lectures/caches/caches.html",
+      "card_ids": [
+        "Q165596"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn754view1",
+        "turn757view0"
+      ],
+      "locators": [
+        "Locality discussion, lines 115-130",
+        "Cache definition, hits/misses and latency example, lines 131-141",
+        "Memory hierarchy cache definition, lines 131-137"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    },
+    {
+      "source_id": "research-batch-009-systems::lta-mrt",
+      "url": "https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/rail_network/north_east_line.html",
+      "card_ids": [
+        "Q40176"
+      ],
+      "access_status": "substantive_passages_inspected",
+      "tool_refs": [
+        "turn754view2"
+      ],
+      "locators": [
+        "Ahead of its time; Train and Station Features, lines 7-38",
+        "Ahead of its time, lines 9-10; Train and Station Features, lines 31-33"
+      ],
+      "inspection_modes": [
+        "web.run open: substantive HTML text inspection"
+      ],
+      "inspection_checkpoint_utc": "2026-10-09T05:02:18Z",
+      "time_basis": "Clock checkpoint after grouped inspection; not an exact per-request timestamp.",
+      "observed_word_limit": 200,
+      "retained_verbatim_words": 0,
+      "new_source_derived_prose_words": 0
+    }
+  ],
+  "source_access_failures": [],
+  "source_retention": "Passage locators and actual tool references retained; full web text and quotations are not copied into audit files.",
+  "affected_source_followups": []
+}

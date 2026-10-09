@@ -1,0 +1,24 @@
+{
+  "review_kind": "author Stage A proposal review, not independent audit",
+  "accepted_reviewed": 200,
+  "baseline_diagnostics": "baseline-lookups-final.json",
+  "additional_semantic_diagnostics": "baseline-semantic-review.json",
+  "identity_corrections": [
+    {
+      "label": "Archaeological feature",
+      "old_provisional_id": "local:catalog:archaeological-feature",
+      "new_id": "Q814254",
+      "change": "new proposal reconciled to an existing control",
+      "reason": "The frozen Feature (archaeology) identity already covers non-portable archaeological contexts such as hearths and postholes. Preserve its ID; alternative word order does not make a new subject."
+    },
+    {
+      "label": "Mamluk military households",
+      "old_provisional_id": "local:catalog:mamluk-military-households",
+      "new_id": "Q947784",
+      "change": "new proposal reconciled to an existing control",
+      "reason": "The learning point concerns the organization and political role of the already registered Mamluk military category. Use Q947784 as a control rather than inflate novelty through a household-focused relabeling."
+    }
+  ],
+  "central_review_pending": true,
+  "source_evidence_files": 119
+}

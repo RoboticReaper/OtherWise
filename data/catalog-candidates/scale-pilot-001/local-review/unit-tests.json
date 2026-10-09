@@ -1,0 +1,36 @@
+{
+  "tests": [
+    {
+      "name": "coordinator-unit-tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "data/catalog-candidates/scale-pilot-001/local-review/coordinator-unit-tests.txt"
+    },
+    {
+      "name": "combiner-unit-tests",
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "data/catalog-candidates/scale-pilot-001/merge-validation",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "data/catalog-candidates/scale-pilot-001/local-review/combiner-unit-tests.txt"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "batch": {
+    "alias_index": {
+      "capillarity": [
+        "fixture:a"
+      ]
+    },
+    "baseline": {
+      "identity_count": 7224,
+      "role": "pinned_target_snapshot_not_emitted",
+      "sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9"
+    },
+    "concept_provenance": {
+      "fixture:a": [
+        {
+          "batch_id": "research-batch-003",
+          "card_version": 1,
+          "combined_source_id_map": {
+            "r1": "research-batch-003::r1"
+          },
+          "input_sha256": "cebc39592c15b887023490edbeb4404472cca970349d6d1cdad61b686807b4a8",
+          "original_id": "fixture:a",
+          "original_record": {
+            "aliases": [
+              "Capillarity"
+            ],
+            "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+            "card_version": 1,
+            "domains": [
+              "Mathematics"
+            ],
+            "entity_kind": "idea",
+            "evidence": [
+              {
+                "locator": "Fixture section 1",
+                "note": "Supports the synthetic explanatory claim.",
+                "source_id": "r1"
+              }
+            ],
+            "id": "fixture:a",
+            "identity_urls": [
+              "https://example.org/fixture/a"
+            ],
+            "imported_records": [],
+            "label": "Capillarity",
+            "learning_takeaway": "Understand this synthetic mechanism for the labeled fixture only.",
+            "original_description": null,
+            "relations": [
+              {
+                "assertion": "editorial",
+                "note": "Labeled fixture tests resolution against one actual pinned baseline target; this is not a researched relationship.",
+                "source_ids": [
+                  "r1"
+                ],
+                "target_id": "Q1",
+                "type": "related_to"
+              }
+            ],
+            "scope": "idea"
+          },
+          "reference_namespace": {
+            "batch_id": "research-batch-003",
+            "input_sha256": "cebc39592c15b887023490edbeb4404472cca970349d6d1cdad61b686807b4a8",
+            "scope": "original_snapshot_local_ids"
+          }
+        }
+      ]
+    },
+    "id": "scale-pilot-001",
+    "identity_decisions": {
+      "batch_versions": {},
+      "concept_versions": {},
+      "distinctness": [],
+      "equivalences": [],
+      "schema_version": 1,
+      "unresolved": []
+    },
+    "identity_decisions_sha256": "12fd2b8d2b7cc9fe9c92fdf19a87374b68b7ba10c782a3284f1a3b7cb91f085c",
+    "input_provenance": [
+      {
+        "batch_id": "research-batch-003",
+        "candidate_snapshot": {
+          "batch": {
+            "completion_status": "synthetic_fixture",
+            "fixture": true,
+            "id": "research-batch-003",
+            "revision": 1,
+            "selection_manifest": []
+          },
+          "concepts": [
+            {
+              "aliases": [
+                "Capillarity"
+              ],
+              "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+              "card_version": 1,
+              "domains": [
+                "Mathematics"
+              ],
+              "entity_kind": "idea",
+              "evidence": [
+                {
+                  "locator": "Fixture section 1",
+                  "note": "Supports the synthetic explanatory claim.",
+                  "source_id": "r1"
+                }
+              ],
+              "id": "fixture:a",
+              "identity_urls": [
+                "https://example.org/fixture/a"
+              ],
+              "imported_records": [],
+              "label": "Capillarity",
+              "learning_takeaway": "Understand this synthetic mechanism for the labeled fixture only.",
+              "original_description": null,
+              "relations": [
+                {
+                  "assertion": "editorial",
+                  "note": "Labeled fixture tests resolution against one actual pinned baseline target; this is not a researched relationship.",
+                  "source_ids": [
+                    "r1"
+                  ],
+                  "target_id": "Q1",
+                  "type": "related_to"
+                }
+              ],
+              "scope": "idea"
+            }
+          ],
+          "issues": [],
+          "schema_version": 1,
+          "sources": [
+            {
+              "id": "r1",
+              "locator": "Fixture section 1",
+              "retrieved_at": "2024-04-03T12:34:56+00:00",
+              "revision": null,
+              "title": "Synthetic fixture reference",
+              "url": "https://example.org/fixture/a"
+            }
+          ],
+          "validation": {}
+        },
+        "input_sha256": "cebc39592c15b887023490edbeb4404472cca970349d6d1cdad61b686807b4a8",
+        "reference_namespace": {
+          "batch_id": "research-batch-003",
+          "input_sha256": "cebc39592c15b887023490edbeb4404472cca970349d6d1cdad61b686807b4a8",
+          "scope": "original_snapshot_local_ids"
+        },
+        "selected": true
+      }
+    ],
+    "kind": "combined_pilot_candidate",
+    "selected_card_versions": {
+      "fixture:a": {
+        "batch_id": "research-batch-003",
+        "card_version": 1,
+        "input_sha256": "cebc39592c15b887023490edbeb4404472cca970349d6d1cdad61b686807b4a8",
+        "original_id": "fixture:a"
+      }
+    }
+  },
+  "concepts": [
+    {
+      "aliases": [
+        "Capillarity"
+      ],
+      "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+      "card_version": 1,
+      "domains": [
+        "Mathematics"
+      ],
+      "entity_kind": "idea",
+      "evidence": [
+        {
+          "locator": "Fixture section 1",
+          "note": "Supports the synthetic explanatory claim.",
+          "source_id": "research-batch-003::r1"
+        }
+      ],
+      "id": "fixture:a",
+      "identity_urls": [
+        "https://example.org/fixture/a"
+      ],
+      "imported_records": [],
+      "label": "Capillarity",
+      "learning_takeaway": "Understand this synthetic mechanism for the labeled fixture only.",
+      "original_description": null,
+      "relations": [
+        {
+          "assertion": "editorial",
+          "note": "Labeled fixture tests resolution against one actual pinned baseline target; this is not a researched relationship.",
+          "source_ids": [
+            "research-batch-003::r1"
+          ],
+          "target_id": "Q1",
+          "type": "related_to"
+        }
+      ],
+      "scope": "idea"
+    }
+  ],
+  "issues": [],
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "research-batch-003::r1",
+      "locator": "Fixture section 1",
+      "original_id": "r1",
+      "originating_batch_id": "research-batch-003",
+      "originating_input_sha256": "cebc39592c15b887023490edbeb4404472cca970349d6d1cdad61b686807b4a8",
+      "retrieved_at": "2024-04-03T12:34:56+00:00",
+      "revision": null,
+      "title": "Synthetic fixture reference",
+      "url": "https://example.org/fixture/a"
+    }
+  ],
+  "validation": {
+    "baseline_snapshot_records_added": 0,
+    "canonical_content_sha256": "76d83abbd274842d300277129546d6745d35e7cbcb5bfb9ad5f0a300e1bd9733",
+    "distinct_concept_count": 1,
+    "limit": "Structural validation does not certify facts, source inspection, semantic distinctness, or independent audit completion.",
+    "reference_count": 1,
+    "relation_count": 1,
+    "structural_passed": true
+  }
+}

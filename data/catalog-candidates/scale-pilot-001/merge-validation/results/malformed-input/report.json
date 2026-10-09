@@ -1,0 +1,26 @@
+{
+  "errors": [
+    {
+      "code": "missing_field",
+      "path": "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/fixtures/malformed.json",
+      "reason": "concepts[0].evidence is required."
+    },
+    {
+      "code": "invalid_evidence",
+      "path": "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/fixtures/malformed.json",
+      "reason": "concepts[0].evidence must be a nonempty array."
+    }
+  ],
+  "failed": [
+    "invalid_evidence",
+    "missing_field"
+  ],
+  "last_valid_output_retained": true,
+  "last_valid_output_sha256": "ea69122f739cc4953534fdfba92ddb1f82f957bee1fef96b4d956beba612b290",
+  "passed": [],
+  "quarantine_path": "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/results/malformed-input/quarantine/820b1feed91affd47a77224c482a54bf40e2a9b2949ee10ffabeea8b2570a1d0.json",
+  "status": "quarantined",
+  "unrun": [
+    "output_publication"
+  ]
+}

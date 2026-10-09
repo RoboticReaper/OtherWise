@@ -15,8 +15,19 @@ A particular meaning of an interest phrase, such as Java the programming languag
 A named subject available for broad exploration, with a description that identifies its intended meaning. A catalog is a collection of available subjects, not a complete vocabulary.
 _Avoid_: Word list
 
+**Named subject**:
+A particular person, place, organization, product, cultural work, game, or event that can be explored through a distinct learning takeaway supported by sources. Named subjects are eligible alongside concepts, methods, and phenomena.
+
 **Discovery concept**:
 A specific, identifiable idea available to explore, with a description and a source. One concept can belong to several subject areas.
+
+**Concept scope**:
+The breadth of an idea, ranging from a broad field through a topic and particular idea to a distinct facet or application. Scope does not establish learning difficulty and is not determined by a name's word count or category-path depth.
+
+**Discovery card**:
+A short explanation of a catalog topic or discovery concept, with links to the references used, that helps a person decide whether to explore it. Broad subjects use everyday language; more specific ideas may use relevant domain terminology.
+
+When generating or revising discovery-card text, follow the [current card-length and preservation rules](docs/superpowers/specs/2026-10-07-recommendation-system-design.md#catalog-scope-and-discovery-cards). These rules govern future work even when a historical batch prompt specifies an earlier word budget.
 
 **Learning opportunity**:
 A specific phenomenon, method, strategy, question, or mechanism a person could explore. Familiarity with its parent field does not establish familiarity with this particular idea. A generated explanation retains the underlying source identity.

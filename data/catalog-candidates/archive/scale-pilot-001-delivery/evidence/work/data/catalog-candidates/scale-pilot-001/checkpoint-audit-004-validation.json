@@ -1,0 +1,88 @@
+{
+  "checked_at": "2026-10-08T22:48:41.689883+00:00",
+  "status": "passed",
+  "checks": {
+    "exact_current_candidate": true,
+    "initial_report_unchanged": true,
+    "previous_recheck_unchanged": true,
+    "all_76_boundary_bundles_covered": true,
+    "graph_finding_resolved": true,
+    "no_residual_substantive_findings": true
+  },
+  "candidate_sha256": "dd8af872210586f6e46b6f0fecdfcf1c4b6078061146f094b47a2a76a8edaf02",
+  "initial_audit_sha256": "ef88d9b261d0db5adb176166e766cf836c85100ac4a082a799a5c7aa0aff4d0b",
+  "recheck_audit_sha256": "39940b4419395804551c5fce0011c072f50bc1c6d3b7bc0d8d6e257996694bdc",
+  "final_recheck_audit_sha256": "e9a016cdc249eb32db61c4229535d99e40d69a4ad5d217e5e7c843594de1e1db",
+  "scope": {
+    "original_random_new": 20,
+    "original_risk_selected": 20,
+    "original_additional_targeted": 57,
+    "original_unique_ids": 97,
+    "original_boundary_change_bundles": 76,
+    "boundary_overlap_fixed_sample": 19,
+    "original_boundary_card_text_changes": 63,
+    "original_boundary_relationship_bundle_changes": 6,
+    "original_boundary_source_changes": 8,
+    "original_relationships_checked": 94,
+    "original_public_sources_inspected": 99,
+    "additional_full_factual_reviews_this_recheck": 0,
+    "takeaway_refinements_checked_this_recheck": 1,
+    "do_not_pool_denominators": true,
+    "original_initial_finding_count": 1,
+    "original_finding_b004_f01_resolution": "resolved_in_revision4_and_remains_resolved_in_revision5",
+    "residual_substantive_findings_by_group": {
+      "random_new": 0,
+      "risk_selected": 0,
+      "additional_targeted": 0
+    },
+    "reference_only_scope_note": "Three extra targeted IDs remain shared-reference-metadata-only checks, not full factual audits."
+  },
+  "limits": [
+    "29 required historical raw acquisition files remain unavailable; no bytes were refetched or reconstructed.",
+    "The original 20/20/57 audit scope and distinctions are carried forward, not broadened. Unsampled facts and exhaustive semantic uniqueness are not certified.",
+    "The preserved public-source capture may reflect indexed crawl content and does not prove historical author browsing."
+  ],
+  "historical_provenance": {
+    "initial_missing_raw_count": 31,
+    "verified_recovered_source_ids": [
+      "c04",
+      "p19"
+    ],
+    "remaining_missing_count": 29,
+    "remaining_missing_source_ids": [
+      "c01",
+      "c02",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "p02",
+      "p03",
+      "p04",
+      "p05",
+      "p06",
+      "p07",
+      "p08",
+      "p09",
+      "p11",
+      "p13",
+      "p15",
+      "p17",
+      "p18",
+      "p21",
+      "p23"
+    ],
+    "original_required_sources_with_raw_hash_recomputed": 70,
+    "independent_verification_path": "verification.recheck-provenance.json",
+    "independent_verification_sha256": "6c6508f29a0970446cce45a12a18cd9212859856a347e3b7e079f810dd9dbbb7",
+    "no_refetch_or_reconstruction": true
+  }
+}

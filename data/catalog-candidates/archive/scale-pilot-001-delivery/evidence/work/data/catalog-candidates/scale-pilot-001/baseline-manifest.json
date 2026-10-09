@@ -1,0 +1,74 @@
+{
+  "active_candidate_revisions": [
+    {
+      "batch_id": "research-batch-001",
+      "concepts": 200,
+      "path": "../inputs/unpacked/data/catalog-candidates/research-batch-001.json",
+      "revision": 1,
+      "sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+      "sources": 242
+    },
+    {
+      "batch_id": "research-batch-002",
+      "concepts": 200,
+      "path": "../inputs/unpacked/data/catalog-candidates/research-batch-002.json",
+      "revision": 2,
+      "sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+      "sources": 188
+    }
+  ],
+  "archived_copies_counted": false,
+  "archived_provenance_path": "../inputs/unpacked/data/catalog-candidates/archive/research-batch-002",
+  "baseline_identity_count_by_id": 7224,
+  "baseline_index_sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9",
+  "baseline_inventory_fingerprint": "7f771750100bfe65c63a4e12fa067f1236bbe7d8a78657459076d7f5ce3709ad",
+  "frozen_at": "2026-10-08T18:46:05.812727+00:00",
+  "inputs": [
+    {
+      "actual_sha256": "1378e2cb37b2c3b648c2319c6303dbbf6380f20d2f0ff10fe8db8a2f62bd2f44",
+      "matches_preparation": true,
+      "path": "data/topics.json",
+      "sha256": "1378e2cb37b2c3b648c2319c6303dbbf6380f20d2f0ff10fe8db8a2f62bd2f44",
+      "size_bytes": 1519825
+    },
+    {
+      "actual_sha256": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309",
+      "matches_preparation": true,
+      "path": "data/discovery_graph.json",
+      "sha256": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309",
+      "size_bytes": 4491718
+    },
+    {
+      "actual_sha256": "e9968d8e3d1f317b3bcd42c42efd9a1e44305d210464be7427416576a64bf67b",
+      "matches_preparation": true,
+      "path": "data/recommendation-identities.json",
+      "sha256": "e9968d8e3d1f317b3bcd42c42efd9a1e44305d210464be7427416576a64bf67b",
+      "size_bytes": 33658
+    },
+    {
+      "actual_sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+      "matches_preparation": true,
+      "path": "data/catalog-candidates/research-batch-001.json",
+      "sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+      "size_bytes": 829754
+    },
+    {
+      "actual_sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+      "matches_preparation": true,
+      "path": "data/catalog-candidates/research-batch-002.json",
+      "sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+      "size_bytes": 2424562
+    }
+  ],
+  "inventory_identity_count": 7033,
+  "pilot_id": "scale-pilot-001",
+  "schema_version": 1,
+  "selection_inputs": "Public reference material and pinned identity baseline only; no private ratings or held-out judgments.",
+  "status": "frozen",
+  "supplemental_source_snapshot": {
+    "created_at": "2026-10-08T19:00:26.767021+00:00",
+    "path": "data/catalog-candidates/scale-pilot-001/baseline-imported-records.json",
+    "purpose": "Full original source rows for provenance preservation. No identity, meaning, alias, input revision or count changed.",
+    "sha256": "732cd46ba879c8f090998ad0f3e436fdf1d157aec91e4ea01bef6d4f0f2387ba"
+  }
+}

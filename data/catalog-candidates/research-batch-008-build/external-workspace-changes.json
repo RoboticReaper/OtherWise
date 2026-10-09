@@ -1,0 +1,24 @@
+{
+  "changes": [
+    {
+      "accepted_for_frozen_catalog_validation": true,
+      "catalog_impact": "Assembly and auditing read the already frozen baseline JSON; this changed resolver method is not called by catalog assembly.",
+      "expected_pinned_sha256": "2bf5690809db409d7347efc08f99de7fc2baebada72562de1c169d34c2781aec",
+      "observed_sha256": "e28b4a5fb963376c42ae0dab45bfb9b7e2935bf2f7ae037328b3ed25c3282f3a",
+      "origin": "Concurrent workspace work outside catalog research; batch coordinator and researchers did not edit this file.",
+      "patch_path": "data/catalog-candidates/research-batch-008-build/external-workspace-context/observed-inventory.diff",
+      "patch_sha256": "7c7c0d9f95f3fd827f35ce1d184b3b2fc81f83e75b619c28c8211202418bb390",
+      "path": "recommendation_lab/inventory.py",
+      "pinned_original_snapshot": "data/catalog-candidates/research-batch-008-build/external-workspace-context/pinned-inventory.py",
+      "pinned_original_snapshot_sha256": "2bf5690809db409d7347efc08f99de7fc2baebada72562de1c169d34c2781aec",
+      "review": "Exact comparison: adds allow_repeated=False to resolve and conditions duplicate-input rejection on it. Inventory.from_sources, alias construction and the default resolve behavior are unchanged."
+    }
+  ],
+  "limits": [
+    "Do not overwrite concurrent backend edits.",
+    "Do not claim every live workspace input is byte-unchanged; retain the original expected hash and report this observed drift.",
+    "Any additional change requires another inspection."
+  ],
+  "observed_at": "2026-10-09T02:57:22.265966+00:00",
+  "schema_version": 1
+}

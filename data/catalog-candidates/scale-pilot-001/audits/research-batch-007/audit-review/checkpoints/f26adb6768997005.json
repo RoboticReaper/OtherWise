@@ -1,0 +1,52 @@
+{
+  "id": "local:catalog:perpetual-check-in-shogi",
+  "label": "Perpetual check in shogi",
+  "sample_kind": "risk_selected",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T21:59:09.674477+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "facet_or_application",
+    "entity_kind": "idea",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "local:authored:000256",
+        "label": "Shogi",
+        "original_description": "Exploring Japanese chess and its distinctive piece-reuse strategies.",
+        "prior_card_takeaways": []
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:authored:000256",
+        "label": "Shogi"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Japanese FAQ directly assigns loss to continuous checker at fourth identical position and distinguishes ordinary repetition. Scoped JSA rule and shogi facet are accurate.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s003"
+      ],
+      "locator": "連続王手の千日手というのは反則なのですか？; web-03 lines 177–183"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:authored:000256",
+      "type": "facet_of",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

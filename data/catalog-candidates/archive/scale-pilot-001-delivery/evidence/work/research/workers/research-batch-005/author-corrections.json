@@ -1,0 +1,60 @@
+{
+  "batch_id": "research-batch-005",
+  "stage": "pre-independent-audit author corrections",
+  "recorded_at": "2026-10-08T21:15:15.553213+00:00",
+  "corrections": [
+    {
+      "type": "selection_snapshot_metadata",
+      "change": "Pin authorized global selection version 3; preserve original global freeze and v2 authoring hashes plus both central amendments. Batch-005 approved hash, IDs, labels, scopes and counts unchanged."
+    },
+    {
+      "type": "identity_links",
+      "change": "Populate all 160 new local subjects with their inspected discovery/source URLs. These are explanatory subject links, not external canonical identifier assertions; page sharing does not imply identity equality. Historical first-50-card checkpoints predate this correction."
+    },
+    {
+      "type": "access_traceability",
+      "change": "Stage A arrays that captured hyperlinks were renamed captured_reference_urls. Recover concrete open/find/click requests only from saved metadata and count explicit failed-fetch URLs separately; preserve unavailable-request limitations. No citation-marker URL is treated as an attempted fetch merely because it appeared in text."
+    },
+    {
+      "type": "source_support",
+      "ordinal": 17,
+      "change": "Add inspected NIST Dictionary of Algorithms and Data Structures binary-search entry for repeated halving, sorted input and runtime distinctions. No identity change."
+    },
+    {
+      "type": "source_locator",
+      "ordinal": 140,
+      "change": "Correct employment-rent locator from proposal section 6.3 to actual section 6.4 Employment rents; include section 6.7 for wage/effort relation. Verification is saved in web-142.json."
+    },
+    {
+      "type": "source_locator",
+      "ordinal": 141,
+      "change": "Specify section 6.7 Wages, effort, and profits in the labour discipline model, Figure 6.6, efficiency wages definition, and section 6.4. Model qualification preserved."
+    },
+    {
+      "type": "claim_tightening",
+      "ordinal": 117,
+      "change": "Remove optional general statement that policies may combine cost-sharing mechanisms; keep inspected percentage/fixed-charge/threshold distinctions."
+    },
+    {
+      "type": "claim_tightening",
+      "ordinal": 118,
+      "change": "Qualify interest payments as typical; keep default versus contractual promise distinction. Chemical-bond comparison remains in identity reconciliation, rather than an explanatory claim unsupported by this card's financial reference."
+    },
+    {
+      "type": "claim_qualification",
+      "ordinal": 38,
+      "change": "Qualify matching-tag If-Match behavior as a supported use, rather than imply that the wildcard existence-check form also tests an exact version. RFC 9110 section 13.1.1 was rechecked in saved web-007.json."
+    },
+    {
+      "type": "claim_qualification",
+      "ordinal": 101,
+      "change": "Describe the aim of self-explanation without claiming that merely repeating steps has no other learning value."
+    },
+    {
+      "type": "history_completeness",
+      "change": "In addition to the 24 latest prior cards used for version selection, retain all 27 earlier baseline candidate-card records and their full referenced sources/artifact hashes, including both earlier versions of Linguistics, Economics and Sociology."
+    }
+  ],
+  "history": "checkpoints/pre-final-candidate.authored.json and corresponding pre-final author review/validation preserve the completed first authoring snapshot before final corrections. Earlier 25-card checkpoints remain as recorded.",
+  "independent_audit_status": "pending; these corrections are author review, not independent certification."
+}

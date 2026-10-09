@@ -1,0 +1,762 @@
+{
+  "local:authored:000633": {
+    "card": "Biology studies life, from the workings of cells to organisms and the ecosystems they inhabit. Looking across these scales connects small structures with larger living systems: a question about an organism can also involve its cells and environment.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-bio-openstax": "Life studied across cells, organisms and ecosystems."
+    },
+    "limits": []
+  },
+  "local:catalog:guard-cell": {
+    "card": "Guard cells occur in pairs around a stoma, an opening in a plant's surface. By opening that pore, they let gases pass between the surrounding air and deeper leaf cells. The cells and the opening are distinct structures.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-bio-umn-cells": "Paired cells open stomata for gas exchange."
+    },
+    "parent_note": "Passage locates guard cells around stomata.",
+    "limits": []
+  },
+  "local:catalog:root-hair": {
+    "card": "A root hair is a slender extension of a root epidermal cell, with its wall and membrane projecting into the surrounding growing medium. Water and nutrients enter through these fine outgrowths, connecting the root's surface to its supply.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-bio-umn-cells": "Root epidermal outgrowths absorb water and nutrients."
+    },
+    "parent_note": "Passage identifies hairs in root dermal tissue.",
+    "limits": []
+  },
+  "local:catalog:apoplast": {
+    "card": "The apoplast is the connected space of plant cell walls and extracellular regions. Water can move through this route outside the cytoplasm. In roots, the Casparian strip interrupts it, requiring water to cross a cell membrane.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-bio-briggs-roots": "Wall route interrupted by the Casparian barrier."
+    },
+    "parent_note": "Transport premises support editorial plant-physiology placement.",
+    "limits": []
+  },
+  "local:catalog:symplast": {
+    "card": "The symplast comprises plant-cell cytoplasm connected through plasmodesmata, small links between neighboring cells. Water using this route moves within cells rather than along their walls. The distinction separates an internal transport compartment from the extracellular apoplast.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-bio-briggs-roots": "Cytoplasmic connections define the internal route."
+    },
+    "parent_note": "Transport premises support editorial plant-physiology placement.",
+    "limits": []
+  },
+  "local:catalog:casparian-strip": {
+    "card": "The Casparian strip is a water-repelling band in root endodermal cell walls. It blocks continued movement along the apoplast, so water must cross a cell membrane before proceeding inward. A structural barrier thereby changes the available transport route.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-bio-briggs-roots": "Endodermal wall barrier forces membrane crossing."
+    },
+    "parent_note": "Source identifies this band in root anatomy.",
+    "limits": [
+      "Chemical composition not generalized."
+    ]
+  },
+  "local:catalog:kleptoplasty": {
+    "card": "Kleptoplasty is a symbiosis in which an animal retains chloroplasts taken from algal food. In Elysia chlorotica, these plastids remain in digestive cells and continue photosynthesis; the slug retains chloroplasts rather than complete algal cells.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-bio-kleptoplasty": "Retained food plastids continue photosynthesis."
+    },
+    "parent_note": "Introduction explicitly identifies plastid symbiosis.",
+    "limits": [
+      "No gene-transfer claim."
+    ]
+  },
+  "local:catalog:elysia-chlorotica": {
+    "card": "Elysia chlorotica is a sea slug that retains chloroplasts from Vaucheria litorea. In a laboratory study, juveniles fed for seven days kept plastids after food removal, whereas earlier removal led to plastid breakdown. Stable retention develops during early feeding.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-bio-kleptoplasty": "Laboratory feeding duration affected plastid stability."
+    },
+    "parent_note": "Source explicitly identifies a sea slug.",
+    "limits": [
+      "Seven days describes this laboratory study."
+    ]
+  },
+  "local:catalog:vaucheria-litorea": {
+    "card": "Vaucheria litorea is the alga eaten by Elysia chlorotica in its plastid partnership. Its chloroplasts enter the slug's digestive cells, while other algal organelles are not retained. The food organism supplies photosynthetic machinery without becoming a whole-cell resident.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-bio-kleptoplasty": "Algal food supplies only the retained plastids."
+    },
+    "parent_note": "Introduction explicitly identifies algal food.",
+    "limits": []
+  },
+  "Q395": {
+    "card": "Mathematics studies idealized objects such as numbers and shapes, developing tools for reasoning about them. Some tools address abstract questions; others help solve practical quantitative problems. The same field can explore a structure for its own sake and use it elsewhere.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-math-mathematics": "Abstract objects and practical quantitative tools."
+    },
+    "limits": []
+  },
+  "local:catalog:sperners-lemma": {
+    "card": "Give a triangle's corners three different labels, and label every vertex of a triangulation with one of those three. Restrict boundary labels to each side's endpoint labels. Sperner's lemma guarantees a small triangle with all three labels.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-math-sperner-lemma": "Boundary labeling forces a fully labeled triangle."
+    },
+    "parent_note": "Triangulation and fixed-point premises support editorial topology placement.",
+    "limits": [
+      "Two-dimensional formulation; distinct from the antichain theorem."
+    ]
+  },
+  "local:catalog:ham-sandwich-theorem": {
+    "card": "A single plane can simultaneously divide each of three finite-volume solids in three-dimensional space into equal volumes. The ham sandwich theorem extends this pattern: in n dimensions, one hyperplane can bisect n finite volumes, however differently they are positioned.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-math-ham": "Simultaneous finite-volume bisection in matching dimension."
+    },
+    "parent_note": "Dimension and continuous-volume premises support editorial topology placement.",
+    "limits": [
+      "Geometric volume, not equal numbers of pieces."
+    ]
+  },
+  "local:catalog:desargues-theorem": {
+    "card": "In classical projective geometry, two triangles are perspective from a point when lines joining corresponding vertices meet there. Desargues' theorem links this to a line: the intersections of corresponding sides are collinear, connecting two different kinds of geometric alignment.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-math-desargues": "Point perspectivity implies line perspectivity."
+    },
+    "parent_note": "Projective incidence premises support editorial projective-geometry placement.",
+    "limits": [
+      "Classical formulation; not asserted for every abstract projective plane."
+    ]
+  },
+  "local:catalog:van-der-waerdens-theorem": {
+    "card": "Color every positive integer using finitely many colors. Van der Waerden's theorem says that, for any chosen finite length, some arithmetic progression has that many terms all in one color. Regular spacing must emerge somewhere despite the coloring's freedom.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-math-waerden": "Finite colorings force monochromatic arithmetic progressions."
+    },
+    "parent_note": "Finite-color combinatorial existence supports editorial combinatorics placement.",
+    "limits": [
+      "Distinct from a positive-density theorem."
+    ]
+  },
+  "local:catalog:thue-morse-sequence": {
+    "card": "Starting at index zero, the Thue–Morse sequence records whether each integer's binary digit sum is even or odd. Its zero-starting version begins 01101001. The same pattern grows by repeatedly replacing 0 with 01 and 1 with 10.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-math-thuemorse": "Binary digit parity and complementary substitution."
+    },
+    "parent_note": "Source explicitly identifies a number sequence.",
+    "limits": [
+      "Uses the zero-starting convention."
+    ]
+  },
+  "local:catalog:sperners-theorem": {
+    "card": "Choose subsets of an n-element set so none contains another. Their number cannot exceed the binomial coefficient for the middle layer of subsets. Selecting all subsets of a middle size attains the bound: inclusion restrictions impose a precise maximum.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-math-sperner-theorem": "Antichain maximum is the middle binomial coefficient."
+    },
+    "parent_note": "Source identifies an extremal set-theory result.",
+    "limits": []
+  },
+  "local:catalog:bayes-factor": {
+    "card": "A Bayes factor compares two models through the ratio of their marginal likelihoods for observed data. Multiplying prior model odds by this ratio gives posterior odds. The evidence comparison therefore depends on the specified models and their parameter priors.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-math-bayesfactor": "Marginal-likelihood ratio updates model odds.",
+      "science-math-marginal-likelihood": "Marginalization includes the specified model and its parameter prior."
+    },
+    "parent_note": "Definition explicitly belongs to Bayesian model selection.",
+    "limits": [
+      "Specified models and parameter priors matter."
+    ],
+    "source_ids": [
+      "science-math-bayesfactor",
+      "science-math-marginal-likelihood"
+    ]
+  },
+  "local:authored:000624": {
+    "card": "Chemistry investigates what matter contains, how it behaves, and how substances interact. These questions connect familiar activities such as cooking with the development of medicines and materials. Changes in everyday substances become examples of the same broader study of matter.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-chem-control": "Matter's composition, properties and interactions connect everyday applications."
+    },
+    "limits": []
+  },
+  "local:catalog:glass-transition": {
+    "card": "In an amorphous polymer, the glass transition marks a temperature range where chain segments gain substantial mobility. The material changes from glassy behavior toward rubbery behavior. This differs from melting crystalline regions: segment movement and crystalline order describe different changes.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-chem-glass-pslc": "Segmental mobility changes; crystalline melting is distinguished."
+    },
+    "parent_note": "Source explicitly explains a polymer transition.",
+    "limits": [
+      "Material and measurement conditions affect transition temperature."
+    ]
+  },
+  "local:catalog:physical-aging-polymers": {
+    "card": "A polymer's properties can change through structural recovery, a process called physical aging. This affects viscoelastic behavior and engineering properties. Understanding a polymer glass therefore involves more than locating its glass transition: its recovering structure also matters.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-chem-glass-nist": "Structural recovery affects polymer mechanical properties."
+    },
+    "parent_note": "Abstract explicitly associates physical aging with polymer properties.",
+    "limits": [
+      "Abstract-supported scope; detailed recovery models not claimed."
+    ]
+  },
+  "local:catalog:spinodal-decomposition": {
+    "card": "Spinodal decomposition separates an unstable mixture into phases as small composition fluctuations grow. Unlike nucleation in a metastable mixture, this process does not need to overcome a nucleation barrier. Whether fluctuations grow depends on the mixture's thermodynamic state.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-chem-spinodal": "Barrierless separation contrasts with metastable nucleation."
+    },
+    "parent_note": "Phase-separation premises support editorial phase-transition placement.",
+    "limits": [
+      "Instability requires suitable thermodynamic conditions."
+    ]
+  },
+  "local:catalog:critical-micelle-concentration": {
+    "card": "At a surfactant's critical micelle concentration, molecules begin forming micellar aggregates in solution. Above this threshold, added surfactant mainly enters micelles while the monomer concentration stays approximately constant. The threshold is specified for particular conditions, including temperature and pressure.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-chem-cmc": "Threshold changes monomer versus micelle partitioning."
+    },
+    "parent_note": "Source explicitly defines a surfactant concentration threshold.",
+    "limits": [
+      "Surfactant, solvent and thermodynamic conditions matter."
+    ]
+  },
+  "local:catalog:nafion": {
+    "card": "Nafion is a named family of fluorinated polymer membranes used in electrochemical applications. Its sulfonic membranes are based on a perfluorosulfonic-acid and PTFE copolymer and conduct positively charged ions. The membrane's polymer composition is tied to its role inside electrochemical cells.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-chem-nafion": "Manufacturer identifies copolymer basis and cation conduction."
+    },
+    "parent_note": "Manufacturer explicitly identifies a polymer membrane family.",
+    "limits": [
+      "Composition and function; no comparative performance claim."
+    ]
+  },
+  "local:catalog:nist-srm-610": {
+    "card": "NIST SRM 610 is a trace-element glass reference material. A piece aboard NASA's Perseverance rover helps calibrate PIXL, an instrument that measures elements in Martian rocks. A characterized Earth material supplies a reference for interpreting measurements made on another planet.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-chem-srm610": "Glass reference material calibrates Perseverance's PIXL."
+    },
+    "parent_note": "Calibration premises support an editorial metrology application.",
+    "related_notes": {
+      "Q11469": "Source explicitly identifies SRM 610 as glass."
+    },
+    "limits": [
+      "Historical calibration report; current certificate values not claimed."
+    ]
+  },
+  "local:catalog:photobleaching": {
+    "card": "Photobleaching irreversibly removes a fluorescent molecule's ability to emit light through photochemical destruction during illumination. A fading image can therefore reflect damage to the fluorescent label rather than disappearance of the structure being observed. Not every loss of fluorescence is photobleaching.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-chem-photobleach": "Irreversible fluorophore destruction is distinguished from broader fading."
+    },
+    "parent_note": "Source explains a mechanism of fluorescence loss.",
+    "limits": [
+      "No universal reaction pathway asserted."
+    ]
+  },
+  "local:catalog:surface-plasmon-resonance-microscopy": {
+    "card": "Surface plasmon resonance microscopy produces label-free images from refractive-index changes at an interface. Reflected light is collected through a microscope objective. Quantitative interpretation requires calibration and corrections for the optics, connecting an image's response to refractive-index values rather than appearance alone.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-chem-spr": "Abstract describes imaging, optical corrections and calibration."
+    },
+    "parent_note": "Authors explicitly implement SPR imaging on a microscope.",
+    "limits": [
+      "Microscopy application; detailed resonance excitation not described."
+    ]
+  },
+  "local:authored:000345": {
+    "card": "Sewing joins fabric pieces with stitches to construct an object. A patchwork pillow illustrates the process: separate squares become a larger panel, then a cover. Stitch choices serve different purposes, including permanent joining and temporary holding during construction.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-home-pillow": "Pillow construction joins pieces and uses temporary basting."
+    },
+    "limits": []
+  },
+  "local:catalog:basting-sewing": {
+    "card": "Basting in sewing uses long temporary stitches to hold fabric in position during construction. In a pillow project, basting secures a prepared piece before later stitching. Its purpose is temporary placement, so a basting line serves a different role from the final seam.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-home-pillow": "Long temporary stitches hold prepared pillow fabric."
+    },
+    "parent_note": "Source explicitly uses the stitch in sewing.",
+    "limits": [
+      "Qualified sewing sense; distinct from cooking basting."
+    ]
+  },
+  "local:catalog:wearing-ease": {
+    "card": "Wearing ease is room beyond body measurements that a garment pattern includes for comfortable wear. Extra fullness chosen to change the garment's style is separately called design ease, serving a different purpose.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-home-skirt": "Comfort allowance differs from additional style fullness."
+    },
+    "parent_note": "Guide explicitly defines a sewing-pattern component.",
+    "limits": [
+      "Garment-dependent allowance."
+    ]
+  },
+  "local:catalog:design-ease": {
+    "card": "Design ease is additional garment fullness chosen for style, beyond the room needed for comfortable wear. This extra allowance shapes the garment's outline; a pattern can combine comfort room with deliberately chosen styling.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-home-skirt": "Additional pattern fullness serves garment style."
+    },
+    "parent_note": "Guide explicitly defines a sewing-pattern styling component.",
+    "limits": [
+      "Separate from comfort allowance."
+    ]
+  },
+  "local:catalog:selvage": {
+    "card": "A selvage is the firmly woven edge running lengthwise along woven fabric. It can shrink more than the cloth's main area and pucker a seam, so its construction behavior deserves separate attention.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-home-skirt": "Firm lengthwise edges may shrink and pucker seams."
+    },
+    "parent_note": "Woven-edge premises support editorial placement under cloth.",
+    "limits": [
+      "Woven-fabric sense."
+    ]
+  },
+  "local:catalog:grainline-woven-fabric": {
+    "card": "Grainline in woven fabric follows its threads, whose lengthwise and crosswise directions should meet at right angles. A printed stripe can be off grain. Aligning pieces by the print alone may therefore produce difficulties when matching patterns or cutting straight pieces.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-home-grain": "Thread grain differs from printed design alignment."
+    },
+    "parent_note": "Cutting-alignment premises support an editorial sewing facet.",
+    "limits": [
+      "Woven-textile meaning."
+    ]
+  },
+  "local:catalog:seam-allowance": {
+    "card": "Seam allowance is the fabric area between a stitching line and the raw edge. A seam thus has distinct boundaries: where the pieces are joined and where they were cut. The intervening fabric belongs to the construction allowance, not the stitched line itself.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-home-glossary": "Glossary defines area between stitching and raw edge."
+    },
+    "parent_note": "Sewing glossary explicitly defines the construction allowance.",
+    "limits": [
+      "No universal width prescribed."
+    ]
+  },
+  "local:catalog:gathering-sewing": {
+    "card": "Gathering draws a longer length of fabric into small folds so it fits a shorter attaching edge. In a machine-sewn ruffle, long stitches provide threads that can be pulled and adjusted. Distributing the folds lets the ruffle fit its band.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-home-gather": "Pulled gathering threads fit a ruffle to its band."
+    },
+    "parent_note": "Source explicitly gathers a ruffle in a sewing project.",
+    "limits": [
+      "Describes the inspected machine-stitch method."
+    ]
+  },
+  "Q11451": {
+    "card": "Agriculture combines cultivating soil, growing crops and raising animals to supply food and other materials. Its products extend beyond meals: cotton and wool become textiles, while livestock can also supply leather. Farming connects living organisms with the materials people use.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-food-agriculture": "Cultivation and livestock provide food and material products."
+    },
+    "limits": []
+  },
+  "local:catalog:nixtamalization": {
+    "card": "Nixtamalization cooks and steeps maize in an alkaline solution, commonly made with lime. After washing, the kernels can be milled into dough for foods such as tortillas. Processing also increases calcium and makes niacin more available, connecting food preparation with chemical changes.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-food-nixt": "Alkaline maize processing makes dough and changes nutrient availability."
+    },
+    "parent_note": "Cooking, soaking and milling support editorial food-processing placement.",
+    "related_notes": {
+      "Q11575": "Source explicitly names maize as the processed material."
+    },
+    "limits": [
+      "Explanatory food-science card; no operating recipe."
+    ]
+  },
+  "local:catalog:stale-seedbed": {
+    "card": "A stale seedbed lets shallow weed seeds germinate before the crop is planted, then removes the seedlings. Limiting subsequent soil disturbance helps avoid exposing deeper seeds. The strategy uses the weeds' timing to reduce competition before crop growth begins.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-food-stale": "Germination precedes crop planting; limited disturbance avoids new seed exposure."
+    },
+    "parent_note": "Source explicitly uses this method in vegetable crop production.",
+    "limits": []
+  },
+  "local:catalog:soil-solarization": {
+    "card": "Soil solarization covers soil with clear plastic to trap solar heat, suppressing weeds and some soil pests. Its effectiveness depends on sunlight, moisture and local conditions. The clear cover's heating mechanism differs from the light exclusion used by opaque covers.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-food-tarps": "Clear covers trap heat; results depend on conditions."
+    },
+    "parent_note": "Guide explicitly uses solarization to prepare garden beds.",
+    "limits": [
+      "No universal duration or guaranteed control."
+    ]
+  },
+  "local:catalog:occultation-weed-control": {
+    "card": "Occultation for weed control uses an opaque cover to block light over a garden bed. Warmth and moisture can encourage seeds to sprout, while darkness prevents the seedlings from sustaining growth. Weather and site conditions affect how the process performs.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-food-tarps": "Opaque covers combine germination conditions with light exclusion."
+    },
+    "parent_note": "Guide explicitly uses occultation for garden-bed weed control.",
+    "limits": [
+      "No universal duration; qualified horticultural sense."
+    ]
+  },
+  "local:catalog:dryeration": {
+    "card": "Dryeration separates corn drying from final cooling. Hot corn rests in a cooling bin before air is introduced; retained heat helps remove additional moisture during cooling. Using that remaining heat makes the cooling stage part of drying rather than only temperature reduction.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-food-dryeration": "Tempering and slow cooling use retained corn heat for drying."
+    },
+    "parent_note": "Guide explicitly identifies a corn-drying method.",
+    "limits": [
+      "Corn system described; no universal rates or settings."
+    ]
+  },
+  "local:catalog:case-hardening-food-drying": {
+    "card": "Case hardening in food drying happens when excessive heat dries or cooks the outside before the interior dries. The surface can look dry while moisture remains inside. This hidden moisture can permit spoilage, showing why appearance alone does not describe the whole piece.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-food-casehard": "High heat hardens the surface and leaves a moist interior."
+    },
+    "parent_note": "Source explicitly describes a failure during food drying.",
+    "limits": [
+      "Food-drying sense; distinct from geological case hardening."
+    ]
+  },
+  "local:catalog:degrees-brix": {
+    "card": "One degree Brix corresponds to one gram of sucrose per 100 grams of a sucrose-and-water solution. In fruit juice, a refractometer reports soluble solids on this scale, so the reading need not isolate sucrose from other dissolved substances.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-food-brix": "Sucrose scale measures fruit-juice soluble solids by refractometer."
+    },
+    "parent_note": "Refractometer use supports an editorial refractive-index application.",
+    "limits": [
+      "Mixed-juice soluble solids are not sucrose alone."
+    ]
+  },
+  "local:catalog:leaf-area-index": {
+    "card": "Leaf area index compares green leaf surface with ground area. For broadleaf plants it uses one leaf side; for conifers it uses half the total needle surface. This canopy measure helps model photosynthesis and exchanges of water, energy and carbon.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-food-lai": "Leaf-surface ratio and plant-process modeling uses are explicit."
+    },
+    "parent_note": "Canopy and plant-process premises support editorial plant-physiology placement.",
+    "limits": [
+      "Broadleaf and conifer conventions differ; distinct from FPAR."
+    ]
+  },
+  "Q133805": {
+    "card": "Epidemiology studies how health events are distributed through populations and what influences them. Comparing patterns across people, places and times helps investigate causes and guide public-health action. The field concerns population health broadly, rather than only treating one person's illness.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-health-epi": "Population distribution and determinants guide public-health action."
+    },
+    "limits": []
+  },
+  "local:catalog:length-time-bias": {
+    "card": "Cancer screening disproportionately detects slower-growing cancers because they remain detectable before symptoms for longer. This length-time bias changes the mix of cancers found. More early-stage diagnoses can therefore occur without establishing that screening reduces deaths; detection patterns alone do not show the benefit.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-health-length": "Longer preclinical windows enrich slower cancers and distort benefit measures."
+    },
+    "parent_note": "Source explicitly explains the bias in cancer screening.",
+    "limits": [
+      "Distinct from earlier diagnosis alone; no screening recommendation."
+    ]
+  },
+  "local:catalog:sentinel-lymph-node-biopsy": {
+    "card": "Sentinel lymph node biopsy identifies and samples the first node or nodes most likely to receive cancer spreading from a tumor. Examining them helps stage the cancer. A negative result suggests no spread to nearby nodes, but cannot guarantee it.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-health-sentinel": "Selected first nodes are removed and examined for cancer spread."
+    },
+    "parent_note": "Source explicitly describes a biopsy of selected lymph nodes.",
+    "limits": [
+      "A negative result suggests absence; false negatives remain possible."
+    ],
+    "locators": {
+      "science-health-sentinel": "Definition and procedure; lines 27-40; staging benefit, line 47; false-negative risk, line 59"
+    }
+  },
+  "local:catalog:deprescribing": {
+    "card": "Deprescribing is supervised medication discontinuation or dose reduction after reviewing appropriateness, benefits and risks with the patient. It requires continued monitoring: withdrawal symptoms or recurrence of the original problem can lead to dose adjustment or restarting. Reducing medication is an ongoing clinical decision.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-health-deprescribing": "Supervised shared decisions require monitoring for withdrawal or recurrence."
+    },
+    "parent_note": "Clinical medication-management premises support an editorial medicine application.",
+    "limits": [
+      "Supervised process; no individual medication instruction."
+    ]
+  },
+  "local:catalog:refeeding-syndrome": {
+    "card": "After malnutrition, restarting nutrition can trigger dangerous electrolyte shifts as carbohydrate metabolism resumes. Cells draw phosphorus, potassium and magnesium from the blood, potentially leaving blood levels too low. Refeeding syndrome shows why nutritional recovery can require clinical monitoring as well as renewed food intake.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-health-refeeding": "Renewed metabolism shifts electrolytes into cells after malnutrition."
+    },
+    "parent_note": "Source explicitly describes a complication following malnutrition.",
+    "limits": [
+      "Clinical monitoring context; no feeding schedule prescribed."
+    ],
+    "locators": {
+      "science-health-refeeding": "Definition and electrolyte mechanism; lines 53, 69-79; clinical monitoring, lines 150-159"
+    }
+  },
+  "local:catalog:surgical-anastomosis": {
+    "card": "Surgical anastomosis joins tubular structures, such as blood vessels or sections of intestine, to restore flow. It can reconnect healthy ends after damaged tissue is removed or create a bypass. Transplant operations may also require these connections.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-health-anastomosis": "Surgical tube connections restore flow or create bypasses."
+    },
+    "parent_note": "Surgical-procedure premises support editorial placement under medicine.",
+    "related_notes": {
+      "Q105196": "Source explicitly names transplantation as a use setting."
+    },
+    "limits": [
+      "Surgical meaning; natural anatomical connections remain a separate sense."
+    ]
+  },
+  "local:catalog:nonunion": {
+    "card": "A nonunion is a broken bone that fails to heal, rather than a fracture that is merely healing slowly. Bone repair depends on stability, blood supply and nutrition. The distinction requires clinical and imaging context; it is not defined by one universal waiting period.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-health-nonunion": "Failure differs from delay; stability and blood supply support healing."
+    },
+    "parent_note": "Source explicitly defines failure of a fracture to heal.",
+    "limits": [
+      "No universal time cutoff or self-diagnosis rule."
+    ]
+  },
+  "local:catalog:negative-pressure-wound-therapy": {
+    "card": "Negative pressure wound therapy uses a sealed dressing connected to a suction pump. Removing wound fluid and reducing swelling can support healing. Clinicians select suitable wounds for this treatment; the intended outcome does not make the device appropriate for every wound.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-health-npwt": "Sealed-dressing suction removes fluid and reduces swelling."
+    },
+    "parent_note": "Provider-directed treatment supports editorial placement under medicine.",
+    "related_notes": {
+      "Q1509074": "Source identifies wound healing as the intended outcome."
+    },
+    "limits": [
+      "Clinical selection required; suitability varies by wound."
+    ],
+    "locators": {
+      "science-health-npwt": "Definition and mechanism; lines 50-76; indications and contraindications, lines 78-104"
+    }
+  },
+  "local:catalog:immortal-time-bias": {
+    "card": "In an observational treatment study, people classified as treated may need to survive from cohort entry until treatment begins. Misassigning that pre-treatment period to the treated group can create an apparent survival advantage unrelated to the treatment's effect.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-health-immortal": "Survival required before exposure assignment can produce spurious benefit."
+    },
+    "parent_note": "Source explicitly defines bias through cohort-entry and intervention timing.",
+    "limits": [
+      "Illustrates a timing error; not every treatment delay causes bias."
+    ]
+  },
+  "local:authored:000616": {
+    "card": "Physics studies energy, matter, space and time and the interactions among them. Its principles connect phenomena at very different scales, from particles to everyday devices. Understanding a device's operation can therefore involve the same underlying physical rules used to explain motion elsewhere.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-physics-control": "Fundamental interactions connect scales and everyday technologies."
+    },
+    "limits": []
+  },
+  "local:catalog:lageos": {
+    "card": "LAGEOS is a pair of passive satellites covered with reflecting prisms. Laser measurements to these orbiting targets help investigate Earth's motion and shape, including plate movement and rotation. The satellites carry no electronics or sensors: their role is to provide stable reflective targets.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-physics-lageos": "Passive reflecting satellite pair supports laser geodesy."
+    },
+    "parent_note": "NASA explicitly identifies a pair of orbiting satellites.",
+    "limits": [
+      "Identity denotes the pair, not an individual LAGEOS satellite."
+    ]
+  },
+  "local:catalog:hayabusa2": {
+    "card": "The Japanese Hayabusa2 mission collected samples from asteroid Ryugu and returned them to Earth in 2020. Its instruments and small rovers explored the surface. Returning material lets laboratory analysis complement spacecraft observations, giving researchers physical asteroid samples to examine directly.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-physics-hayabusa": "Ryugu exploration and completed 2020 sample return."
+    },
+    "parent_note": "Sampling and return support editorial space-exploration placement.",
+    "related_notes": {
+      "Q3863": "NASA explicitly names an asteroid as the mission's study target."
+    },
+    "limits": [
+      "Completed Ryugu return; extended-mission outcomes not claimed."
+    ]
+  },
+  "local:catalog:101955-bennu": {
+    "card": "101955 Bennu is a rubble-pile asteroid assembled from older rocky debris. The age of its constituent rocks differs from the age of the assembled object. NASA's OSIRIS-REx collected a sample in 2020 and returned it in 2023, enabling direct investigation.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-physics-bennu": "Assembled debris structure and dated OSIRIS-REx sample return."
+    },
+    "parent_note": "NASA explicitly identifies Bennu as an asteroid.",
+    "limits": [
+      "Rock age distinguished from assembly age; composition findings omitted."
+    ]
+  },
+  "local:catalog:gn-z11": {
+    "card": "GN-z11 is a distant galaxy seen about 430 million years after the Big Bang. NASA's 2024 Webb report describes extended host-galaxy light and a compact central source. Its colors and gas signatures support a black-hole interpretation, illustrating how indirect observations investigate early galaxies.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-physics-gnz11": "Dated report resolves host and compact source with black-hole evidence."
+    },
+    "parent_note": "NASA explicitly identifies GN-z11 and its host component as a galaxy.",
+    "limits": [
+      "Interpretation anchored to the 2024 report; no current-distance superlative."
+    ]
+  },
+  "local:catalog:dispersion-measure": {
+    "card": "Dispersion measure sums the free-electron density along a radio signal's path. For pulsars, this electron column determines frequency-dependent arrival delays: lower-frequency waves arrive later. It characterizes the intervening sightline, rather than being an intrinsic property of the pulsar.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-physics-dm": "Integrated electron column controls frequency-dependent propagation delay."
+    },
+    "locators": {
+      "science-physics-dm": "Section 6.2 Pulsars and the Interstellar Medium; equations 6.43–6.46 and following text; lines 241-255"
+    },
+    "parent_note": "Radio-propagation premises support editorial radio-astronomy placement.",
+    "related_notes": {
+      "Q4360": "Pulsar signals measure the intervening electron column."
+    },
+    "limits": [
+      "Distance estimates also require an electron-density model."
+    ]
+  },
+  "local:catalog:coherent-dedispersion": {
+    "card": "Coherent dedispersion corrects a pulsar's dispersed radio signal by deconvolving the interstellar medium's transfer function from recorded voltage data. With known dispersion and suitably sampled baseband data, it can remove dispersion's smearing, preserving sharp pulse structure for high-precision timing.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-physics-dm": "Known dispersion and Nyquist-sampled voltages permit deconvolution."
+    },
+    "parent_note": "Signal-correction premises support an editorial radio-astronomy application.",
+    "related_notes": {
+      "Q4360": "Source explicitly applies the technique to pulsar timing."
+    },
+    "limits": [
+      "Known dispersion and suitable baseband sampling required."
+    ]
+  },
+  "local:catalog:muon-tomography": {
+    "card": "Muon tomography uses scattering of naturally occurring cosmic-ray muons to reconstruct three-dimensional images of hidden material. Tracking changes in particle paths provides the information without adding an artificial radiation dose. Long exposures, limited position resolution and complex reconstruction remain practical challenges.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-physics-muon": "Coulomb scattering enables natural-flux imaging with stated limitations."
+    },
+    "parent_note": "Source explicitly uses muon paths and scattering for imaging.",
+    "limits": [
+      "Scattering tomography; transmission-only muography is a separate method."
+    ]
+  },
+  "local:authored:000629": {
+    "card": "Geology studies Earth's materials, water and processes, including changes that unfold over immense spans of time. Rocks and landscapes preserve evidence of earlier conditions. Reading that evidence helps connect the present Earth with a history much longer than direct human observation.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-earth-geology": "Earth materials and processes are interpreted across deep time."
+    },
+    "limits": []
+  },
+  "local:catalog:frost-heave": {
+    "card": "Frost heave raises ground as ice grows within freezing soil, sometimes deforming road surfaces. Growing ice layers can draw in additional water that freezes, enlarging the layer. The movement therefore need not result solely from expansion of water already occupying soil pores.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-earth-frozen": "Ice growth and additional water can heave frozen ground."
+    },
+    "parent_note": "Soil-water and ice-growth premises support editorial soil-physics placement.",
+    "limits": [
+      "Additional-water mechanism retained; no universal expansion percentage."
+    ]
+  },
+  "local:catalog:cryosuction": {
+    "card": "Cryosuction draws liquid water toward growing ice in freezing ground. As the incoming water freezes, it enlarges a segregated ice layer, which can attract still more water. This supplies ice growth beyond the water initially present at that location.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-earth-frozen": "Growing ice attracts and freezes further water."
+    },
+    "parent_note": "Soil-water and ice-growth premises support editorial soil-physics placement.",
+    "limits": [
+      "Frozen-ground example; no universal expansion percentage."
+    ]
+  },
+  "local:catalog:halocline": {
+    "card": "A halocline is a layer where salinity changes rapidly with depth. Fresher surface water over saltier water can create one. It describes a salt gradient, while a pycnocline describes density and a thermocline describes temperature; these layers need not coincide.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-earth-oceanlayers": "Ocean salinity-gradient layer distinguished from density and temperature layers."
+    },
+    "parent_note": "Source explicitly describes a salinity-stratified ocean zone.",
+    "limits": [
+      "Fresh-over-saltier example is conditional, not universal."
+    ]
+  },
+  "local:catalog:pycnocline": {
+    "card": "A pycnocline is an ocean layer where density increases rapidly with depth. This stable density gradient can restrict exchange between surface and deeper water. Temperature, salinity or both may contribute, so a density boundary need not match one single temperature or salt boundary.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-earth-oceanlayers": "Strong density gradient separates ocean layers and limits mixing."
+    },
+    "parent_note": "Source explicitly identifies a density-stratified ocean zone.",
+    "limits": [
+      "Permanent pycnoclines are not universal, including in polar regions."
+    ]
+  },
+  "local:catalog:stokes-drift": {
+    "card": "Beneath a progressive surface gravity wave, a water parcel can follow a nearly looping path that does not close, leaving net motion in the wave's direction. This Stokes drift differs from averaging velocity at a fixed point: following the parcel reveals transport.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-earth-stokes": "Open parcel trajectories distinguish Lagrangian drift from fixed-position averages."
+    },
+    "parent_note": "Surface-wave transport premises support editorial oceanography placement.",
+    "limits": [
+      "Progressive surface-gravity-wave example; not generalized to every wave."
+    ]
+  },
+  "local:catalog:bankfull-discharge": {
+    "card": "Bankfull discharge is river flow associated with the natural bankfull stage. Field indicators help identify that water level, while channel cross sections and hydraulic estimates help check the corresponding flow. Regional recurrence patterns can assist interpretation, but are not a universal definition.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-earth-bankfull-usgs": "Natural bankfull stage defines the flow under study.",
+      "science-earth-bankfull-usfs": "Field indicators and hydraulic checks estimate flow; recurrence is regional."
+    },
+    "parent_note": "Article explicitly studies river discharge at bankfull stage.",
+    "limits": [
+      "Natural stage distinguished from artificial embankments; recurrence varies."
+    ]
+  },
+  "local:catalog:blood-falls": {
+    "card": "Blood Falls is an iron-rich brine outflow from Antarctica's Taylor Glacier. The liquid turns red when its iron contacts air. Radar traced brine pathways within the cold glacier; dissolved salts lower the freezing point, helping explain liquid water inside such icy surroundings.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-earth-blood": "Iron-rich outflow and radar-mapped saline liquid explain the phenomenon."
+    },
+    "parent_note": "Source explicitly locates the brine system within a glacier.",
+    "limits": [
+      "Storage age not asserted; red color attributed to iron exposure."
+    ]
+  },
+  "local:catalog:ferrar-glacier": {
+    "card": "Ferrar Glacier carries ice from Taylor Dome toward Antarctica's Ross Sea. Snow accumulating at the dome compresses into ice, some of which flows through this glacier and the Royal Society Range. The named route connects inland accumulation with ice reaching the coast.",
+    "author_reviewed": true,
+    "evidence_notes": {
+      "science-earth-ferrar": "Taylor Dome accumulation supplies the named glacier's seaward route."
+    },
+    "parent_note": "NASA explicitly describes Ferrar as a river of ice.",
+    "limits": [
+      "Ferrar Glacier distinguished from Taylor Dome and neighboring Taylor Glacier."
+    ]
+  }
+}

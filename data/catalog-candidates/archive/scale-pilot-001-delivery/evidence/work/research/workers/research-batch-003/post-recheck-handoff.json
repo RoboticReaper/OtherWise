@@ -1,0 +1,41 @@
+{
+  "batch_id": "research-batch-003",
+  "revision": 3,
+  "completed_at": "2026-10-08T22:19:13.620650+00:00",
+  "status": "stable_pending_independent_removal_recheck",
+  "candidate_path": "research/workers/research-batch-003/candidate.post-recheck.json",
+  "candidate_sha256": "e2062d3bf8244df18bb9c2cfec27c170c6e9413038b20af3a60431cc8da6a242",
+  "prior_candidate_sha256": "e9dafbba2dfeb6d382a48cc261ac675f3da0fbae505ba36f288afaa55fa972ab",
+  "first_independent_recheck_sha256": "a6bf2d5f49125f0bc95a2dbd846999d128f031519226702e041a7d768ccfac3b",
+  "counts": {
+    "changed_cards": 1,
+    "unchanged_cards": 199,
+    "changed_card_texts": 0,
+    "removed_relationships": 1,
+    "total_relations": 199,
+    "changed_evidence_records": 0,
+    "changed_source_records": 0,
+    "added_ids": 0,
+    "removed_ids": 0
+  },
+  "changed_id": "local:catalog:systolic-blood-pressure-intervention-trial",
+  "old_card_version": 2,
+  "new_card_version": 3,
+  "before_source_bundle_sha256": "cc08fb8930c4515feef9842a75ed991151c61a42087d0d594e896ed3232786f3",
+  "after_source_bundle_sha256": "f27f60a9d5433b2e9160ca043d22877aea2d0ab3de9f7065d47f1d1c42828b7a",
+  "source_records_sha256": "54dcc8581eaa80584c8114b5d4eac4de679200329eae31847430bed3d8c5489e",
+  "files": {
+    "candidate.post-recheck.json": "e2062d3bf8244df18bb9c2cfec27c170c6e9413038b20af3a60431cc8da6a242",
+    "post-recheck-corrections.json": "cec595b4bc260a18ad9721c462adc93980e359c86f5fb1367367216fd713aad7",
+    "post-recheck-validation.json": "de9a48802530cc8b29ca0fe4458ba9c11b6d258482577cd867426b1192f9712f",
+    "post-recheck-revision-compare.json": "a062f9e2240f43901cd69e743dbae1c0a96a8cf6db42be84ea9d70a93a1d5305"
+  },
+  "independent_check_scope": "Verify the sole SPRINT-to-RCT edge is absent, the missing link is documented, SPRINT version is 3, all other SPRINT fields and all other cards/sources remain unchanged, and prior reports/hashes remain preserved.",
+  "execution": {
+    "environment": "native_cloud",
+    "requested_model": "GPT-6 Astra",
+    "requested_reasoning": "max",
+    "platform_tokens": null,
+    "platform_cost": null
+  }
+}

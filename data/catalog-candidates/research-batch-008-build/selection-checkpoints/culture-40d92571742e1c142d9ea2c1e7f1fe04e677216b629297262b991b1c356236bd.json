@@ -1,0 +1,2329 @@
+{
+  "schema_version": 1,
+  "assignment": "culture",
+  "status": "in_progress",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "proposals": [
+    {
+      "id": "Q1071",
+      "label": "Geography",
+      "aliases": [],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Human and physical geography",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Understand how place connects communities, environments, and changing human activity.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1071",
+          "label": "Geography",
+          "reason": "Same subject; canonical ID reused."
+        }
+      ],
+      "identity_reason": "The inspected subject is the existing canonical meaning; retain its identity.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.rgs.org/about-us/what-is-geography",
+          "locator": "Main text, paragraphs 1–3; “Geography informs us about”; human/physical geography paragraph",
+          "note": "Understand how place connects communities, environments, and changing human activity.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Broad existing control; no claim of a new field."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:equal-earth-projection",
+      "label": "Equal Earth projection",
+      "aliases": [
+        "Equal Earth map projection"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Cartographic projection design",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Preserve mapped area while accepting distortion of shapes and distances.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q186386",
+          "label": "Map projection",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/equal-earth.html",
+          "locator": "Description; Distortion; Usage",
+          "note": "Preserve mapped area while accepting distortion of shapes and distances.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q186386",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/equal-earth.html",
+        "locator": "Description; Distortion; Usage",
+        "note": "Source explicitly defines Equal Earth projection as a particular map projection."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:natural-earth-projection",
+      "label": "Natural Earth projection",
+      "aliases": [
+        "Natural Earth map projection"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Cartographic projection design",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A rounded world-map compromise preserves neither area nor angles.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q186386",
+          "label": "Map projection",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/natural-earth.html",
+          "locator": "Description; Distortion; Limitations",
+          "note": "A rounded world-map compromise preserves neither area nor angles.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q186386",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/natural-earth.html",
+        "locator": "Description; Distortion; Limitations",
+        "note": "Source explicitly defines Natural Earth projection as a particular map projection."
+      },
+      "limits": [
+        "Spherical-model limitations in source must remain visible during drafting."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:goode-homolosine-projection",
+      "label": "Goode homolosine projection",
+      "aliases": [
+        "Goode homolosine",
+        "Interrupted Goode homolosine projection"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Cartographic projection design",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Combine sinusoidal and Mollweide regions while interrupting land or ocean.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q186386",
+          "label": "Map projection",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/goode-homolosine.html",
+          "locator": "Description; Graticule; Usage; Limitations",
+          "note": "Combine sinusoidal and Mollweide regions while interrupting land or ocean.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q186386",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/goode-homolosine.html",
+        "locator": "Description; Graticule; Usage; Limitations",
+        "note": "Source explicitly defines Goode homolosine projection as a particular map projection."
+      },
+      "limits": [
+        "Spherical-model limitations in source must remain visible during drafting."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:hotine-oblique-mercator-projection",
+      "label": "Hotine oblique Mercator projection",
+      "aliases": [
+        "Oblique cylindrical orthomorphic",
+        "Rectified skew orthomorphic"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Cartographic projection design",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Use a conformal projection centered along an obliquely oriented region.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q186386",
+          "label": "Map projection",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/hotine-oblique-mercator.html",
+          "locator": "Description; Distortion; Usage; Variants",
+          "note": "Use a conformal projection centered along an obliquely oriented region.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q186386",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/hotine-oblique-mercator.html",
+        "locator": "Description; Distortion; Usage; Variants",
+        "note": "Source explicitly defines Hotine oblique Mercator projection as a particular map projection."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:peirce-quincuncial-projection",
+      "label": "Peirce quincuncial projection",
+      "aliases": [
+        "Peirce quincuncial"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Cartographic projection design",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Tessellate a square world map with four exceptional boundary points.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q186386",
+          "label": "Map projection",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/peirce-quincuncial.html",
+          "locator": "Description; Graticule; Distortion; Usage",
+          "note": "Tessellate a square world map with four exceptional boundary points.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q186386",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/peirce-quincuncial.html",
+        "locator": "Description; Graticule; Distortion; Usage",
+        "note": "Source explicitly defines Peirce quincuncial projection as a particular map projection."
+      },
+      "limits": [
+        "Conformality has exceptional points; do not claim it holds everywhere."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:adams-square-ii-projection",
+      "label": "Adams square II projection",
+      "aliases": [
+        "Adams square II"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Cartographic projection design",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Place equator and central meridian on square diagonals, with corner singularities.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q186386",
+          "label": "Map projection",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/adams-square-ii.html",
+          "locator": "Description; Graticule; Distortion; Usage",
+          "note": "Place equator and central meridian on square diagonals, with corner singularities.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q186386",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/adams-square-ii.html",
+        "locator": "Description; Graticule; Distortion; Usage",
+        "note": "Source explicitly defines Adams square II projection as a particular map projection."
+      },
+      "limits": [
+        "Conformality has exceptional points; do not claim it holds everywhere."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:geodesic-buffering",
+      "label": "Geodesic buffering",
+      "aliases": [
+        "Geodesic buffer"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Geographic spatial analysis",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Account for spheroid curvature when measuring buffers over large geographic extents.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q483130",
+          "label": "Geographic information system",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        },
+        {
+          "id": "local:catalog:geographic-buffer",
+          "label": "Geographic buffer",
+          "reason": "Existing general proximity-zone subject; this selection isolates a documented construction method."
+        }
+      ],
+      "identity_reason": "The source explicitly contrasts these distinct distance constructions; neither baseline GIS entry is this particular operation.",
+      "discovery_evidence": [
+        {
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+          "locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+          "note": "Account for spheroid curvature when measuring buffers over large geographic extents.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:catalog:geographic-buffer",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+        "locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+        "note": "The buffer-analysis passage distinguishes Euclidean and geodesic methods for constructing geographic buffers."
+      },
+      "limits": [
+        "Software option “Planar” is not synonymous with Euclidean in every input coordinate system."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:euclidean-buffering",
+      "label": "Euclidean buffering",
+      "aliases": [
+        "Euclidean buffer"
+      ],
+      "primary_domain": "Geography & travel",
+      "primary_subfield": "Geographic spatial analysis",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Measure buffer distances in a Cartesian plane, mindful of projection distortion.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q483130",
+          "label": "Geographic information system",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        },
+        {
+          "id": "local:catalog:geographic-buffer",
+          "label": "Geographic buffer",
+          "reason": "Existing general proximity-zone subject; this selection isolates a documented construction method."
+        }
+      ],
+      "identity_reason": "The source explicitly contrasts these distinct distance constructions; neither baseline GIS entry is this particular operation.",
+      "discovery_evidence": [
+        {
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+          "locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+          "note": "Measure buffer distances in a Cartesian plane, mindful of projection distortion.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:catalog:geographic-buffer",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+        "locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+        "note": "The buffer-analysis passage distinguishes Euclidean and geodesic methods for constructing geographic buffers."
+      },
+      "limits": [
+        "Software option “Planar” is not synonymous with Euclidean in every input coordinate system."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "Q1334127",
+      "label": "Sestina",
+      "aliases": [],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic repetition and constraint",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "End-word permutations create recurrence without an ordinary rhyme scheme.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1334127",
+          "label": "Sestina",
+          "reason": "Same subject; canonical ID reused."
+        },
+        {
+          "id": "local:catalog:sestina-altaforte",
+          "label": "Sestina: Altaforte",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "Reuse the generic Sestina ID; the separate Altaforte record is a named example, not a synonym.",
+      "discovery_evidence": [
+        {
+          "url": "https://poets.org/glossary/sestina",
+          "locator": "“Rules of the Sestina Form”; final history paragraphs describing double sestina and tritina",
+          "note": "End-word permutations create recurrence without an ordinary rhyme scheme.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://poets.org/glossary/sestina",
+        "locator": "“Rules of the Sestina Form”; final history paragraphs describing double sestina and tritina",
+        "note": "Passage explicitly identifies this as a map projection or poetic form."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:cento",
+      "label": "Cento",
+      "aliases": [
+        "Collage poem"
+      ],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic forms and composition",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Recombine complete lines from other poems into a new poetic structure.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000404",
+          "label": "Poetry",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://poets.org/glossary/cento",
+          "locator": "Definition; “More about the Cento Form”",
+          "note": "Recombine complete lines from other poems into a new poetic structure.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://poets.org/glossary/cento",
+        "locator": "Definition; “More about the Cento Form”",
+        "note": "Passage explicitly identifies this as a map projection or poetic form."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:haibun",
+      "label": "Haibun",
+      "aliases": [],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic forms and composition",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Combine prose with haiku linked by an implicit relationship.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000404",
+          "label": "Poetry",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://poets.org/glossary/haibun",
+          "locator": "Definition; “From A Poet’s Glossary”, prose–haiku relationship",
+          "note": "Combine prose with haiku linked by an implicit relationship.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://poets.org/glossary/haibun",
+        "locator": "Definition; “From A Poet’s Glossary”, prose–haiku relationship",
+        "note": "Passage explicitly identifies this as a map projection or poetic form."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:triolet",
+      "label": "Triolet",
+      "aliases": [],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic forms and composition",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Refrains recur inside eight lines and only two rhymes.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000404",
+          "label": "Poetry",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://poets.org/glossary/triolet",
+          "locator": "“Rules of the Triolet Form”",
+          "note": "Refrains recur inside eight lines and only two rhymes.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://poets.org/glossary/triolet",
+        "locator": "“Rules of the Triolet Form”",
+        "note": "Passage explicitly identifies this as a map projection or poetic form."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:clerihew",
+      "label": "Clerihew",
+      "aliases": [],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic forms and composition",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Build a comic four-line portrait with paired rhymes and deliberately irregular rhythm.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000404",
+          "label": "Poetry",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://poetryarchive.org/glossary/form/",
+          "locator": "“About Form”; CLERIHEW; DOUBLE-DACTYL; OTTAVA RIMA; SPENSERIAN STANZA",
+          "note": "Build a comic four-line portrait with paired rhymes and deliberately irregular rhythm.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://poetryarchive.org/glossary/form/",
+        "locator": "“About Form”; CLERIHEW; DOUBLE-DACTYL; OTTAVA RIMA; SPENSERIAN STANZA",
+        "note": "The glossary defines Clerihew as a particular poetic form or stanza."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:double-dactyl",
+      "label": "Double dactyl",
+      "aliases": [],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic forms and composition",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Constrain nonsense verse with double-dactylic lines, a name, and a six-syllable word.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000404",
+          "label": "Poetry",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://poetryarchive.org/glossary/form/",
+          "locator": "“About Form”; CLERIHEW; DOUBLE-DACTYL; OTTAVA RIMA; SPENSERIAN STANZA",
+          "note": "Constrain nonsense verse with double-dactylic lines, a name, and a six-syllable word.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://poetryarchive.org/glossary/form/",
+        "locator": "“About Form”; CLERIHEW; DOUBLE-DACTYL; OTTAVA RIMA; SPENSERIAN STANZA",
+        "note": "The glossary defines Double dactyl as a particular poetic form or stanza."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:ottava-rima",
+      "label": "Ottava rima",
+      "aliases": [],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic forms and composition",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Use an eight-line abababcc stanza to close six alternating lines with a couplet.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000404",
+          "label": "Poetry",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://poetryarchive.org/glossary/form/",
+          "locator": "“About Form”; CLERIHEW; DOUBLE-DACTYL; OTTAVA RIMA; SPENSERIAN STANZA",
+          "note": "Use an eight-line abababcc stanza to close six alternating lines with a couplet.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://poetryarchive.org/glossary/form/",
+        "locator": "“About Form”; CLERIHEW; DOUBLE-DACTYL; OTTAVA RIMA; SPENSERIAN STANZA",
+        "note": "The glossary defines Ottava rima as a particular poetic form or stanza."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:spenserian-stanza",
+      "label": "Spenserian stanza",
+      "aliases": [],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic forms and composition",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A nine-line stanza closes with a longer line; its exact rhyme pattern needs a second inspected source.",
+      "inventory_status": "unresolved",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000404",
+          "label": "Poetry",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The passage identifies this specific method or form; baseline aliases and nearby meanings do not name it.",
+      "discovery_evidence": [
+        {
+          "url": "https://poetryarchive.org/glossary/form/",
+          "locator": "“About Form”; CLERIHEW; DOUBLE-DACTYL; OTTAVA RIMA; SPENSERIAN STANZA",
+          "note": "A nine-line stanza closes with a longer line; its exact rhyme pattern needs a second inspected source.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://poetryarchive.org/glossary/form/",
+        "locator": "“About Form”; CLERIHEW; DOUBLE-DACTYL; OTTAVA RIMA; SPENSERIAN STANZA",
+        "note": "The glossary defines Spenserian stanza as a particular poetic form or stanza."
+      },
+      "limits": [
+        "Poetry Archive says nine lines but prints a ten-letter rhyme sequence. Second-source confirmation required before reservation."
+      ],
+      "selection_role": "alternative"
+    },
+    {
+      "id": "local:catalog:tritina",
+      "label": "Tritina",
+      "aliases": [],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic repetition and constraint",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Rotate three end-words through three tercets, then unite them in a single-line envoi.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1334127",
+          "label": "Sestina",
+          "reason": "Related broader subject; inspected passage identifies a distinct method or form."
+        }
+      ],
+      "identity_reason": "The source names Ponsot’s separately specified contraction, rather than another explanation of the six-word sestina.",
+      "discovery_evidence": [
+        {
+          "url": "https://poets.org/glossary/sestina",
+          "locator": "“Rules of the Sestina Form”; final history paragraphs describing double sestina and tritina",
+          "note": "Rotate three end-words through three tercets, then unite them in a single-line envoi.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1334127",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://poets.org/glossary/sestina",
+        "locator": "“Rules of the Sestina Form”; final history paragraphs describing double sestina and tritina",
+        "note": "Source explicitly calls tritina a contraction of the sestina form."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:acrostic",
+      "label": "Acrostic",
+      "aliases": [
+        "Acrostic poem"
+      ],
+      "primary_domain": "Literature & storytelling",
+      "primary_subfield": "Poetic forms and composition",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Initial letters of successive poetic lines reveal a word or phrase.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000404",
+          "label": "Poetry",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "Source defines a distinct letter-position constraint; it is not the general Nonce word baseline sense.",
+      "discovery_evidence": [
+        {
+          "url": "https://poetryarchive.org/glossary/form/",
+          "locator": "ACROSTIC paragraph",
+          "note": "Initial letters of successive poetic lines reveal a word or phrase.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000404",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://poetryarchive.org/glossary/form/",
+        "locator": "ACROSTIC paragraph",
+        "note": "The glossary defines Acrostic as a particular poetic form or stanza."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:metaphysical-grounding",
+      "label": "Metaphysical grounding",
+      "aliases": [
+        "Grounding (metaphysics)"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Metaphysical explanation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Separate constitutive dependence from causal explanation.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:grounding-in-communication",
+          "label": "Grounding in communication",
+          "reason": "Conversational common-ground coordination is a different meaning."
+        },
+        {
+          "id": "local:authored:000431",
+          "label": "Metaphysics",
+          "reason": "Metaphysics is the broader philosophical subject."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://plato.stanford.edu/entries/grounding/",
+          "locator": "Introduction, strike/picketing example; §1.1",
+          "note": "Separate constitutive dependence from causal explanation.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000431",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://plato.stanford.edu/entries/grounding/",
+        "locator": "Introduction, strike/picketing example; §1.1",
+        "note": "Introduction explicitly locates grounding debates in metaphysics."
+      },
+      "limits": [
+        "Unionist and separatist accounts differ; present the debate rather than a settled ontology."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:truthmaker-theory",
+      "label": "Truthmaker theory",
+      "aliases": [
+        "Truthmaking theory",
+        "Truthmakers"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Truth and ontology",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Ask what existing entity, if any, makes a proposition true.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000431",
+          "label": "Metaphysics",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://plato.stanford.edu/entries/truthmakers/",
+          "locator": "Introduction; §1; §2.1 Maximalism",
+          "note": "Ask what existing entity, if any, makes a proposition true.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000431",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://plato.stanford.edu/entries/truthmakers/",
+        "locator": "Introduction; §1; §2.1 Maximalism",
+        "note": "Introduction calls this a debate in contemporary metaphysics."
+      },
+      "limits": [
+        "The existence and nature of truthmakers are disputed."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:truthmaker-maximalism",
+      "label": "Truthmaker maximalism",
+      "aliases": [],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Truth and ontology",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Test the demand that every truth have a truthmaker.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000431",
+          "label": "Metaphysics",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "A specifically stated universal requirement, distinct from the general truthmaker question.",
+      "discovery_evidence": [
+        {
+          "url": "https://plato.stanford.edu/entries/truthmakers/",
+          "locator": "§2.1 Maximalism",
+          "note": "Test the demand that every truth have a truthmaker.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:catalog:truthmaker-theory",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://plato.stanford.edu/entries/truthmakers/",
+        "locator": "§2.1 Maximalism",
+        "note": "§2.1 identifies maximalism as one position in truthmaker debates."
+      },
+      "limits": [
+        "Parent is another proposed ID and requires coordinator reservation; maximalism is contested."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:fitting-attitude-theories-of-value",
+      "label": "Fitting-attitude theories of value",
+      "aliases": [
+        "FA theories of value"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Value theory",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Explain value through which responses are fitting rather than merely common.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q186531",
+          "label": "Value theory",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://plato.stanford.edu/entries/fitting-attitude-theories/",
+          "locator": "Introduction; §3.1 The Wrong Kind of Reason Problem",
+          "note": "Explain value through which responses are fitting rather than merely common.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q186531",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://plato.stanford.edu/entries/fitting-attitude-theories/",
+        "locator": "Introduction; §3.1 The Wrong Kind of Reason Problem",
+        "note": "Introduction explicitly presents theories explaining evaluative facts."
+      },
+      "limits": [
+        "A family of disputed accounts, not a universally accepted definition of value."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:wrong-kind-of-reason-problem",
+      "label": "Wrong kind of reason problem",
+      "aliases": [
+        "WKR problem"
+      ],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Value theory",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Distinguish incentives to value something from reasons grounded in its value.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q186531",
+          "label": "Value theory",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The passage names a particular counterexample problem, distinct from its target theory.",
+      "discovery_evidence": [
+        {
+          "url": "https://plato.stanford.edu/entries/fitting-attitude-theories/",
+          "locator": "§3.1 The Wrong Kind of Reason Problem",
+          "note": "Distinguish incentives to value something from reasons grounded in its value.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:catalog:fitting-attitude-theories-of-value",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://plato.stanford.edu/entries/fitting-attitude-theories/",
+        "locator": "§3.1 The Wrong Kind of Reason Problem",
+        "note": "§3.1 explicitly identifies this challenge to fitting-attitude theories."
+      },
+      "limits": [
+        "Proposed parent requires reservation; do not turn the counterexample into an established refutation."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "Q48970669",
+      "label": "Epistemic injustice",
+      "aliases": [],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Social epistemology",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Recognize wrongs that impair a person specifically as a knower.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q48970669",
+          "label": "Epistemic injustice",
+          "reason": "Same subject; canonical ID reused."
+        }
+      ],
+      "identity_reason": "The inspected meaning is the existing canonical subject; retain its identity.",
+      "discovery_evidence": [
+        {
+          "url": "https://plato.stanford.edu/entries/feminist-social-epistemology/",
+          "locator": "§4.1 Epistemic Injustice, Fricker and Dotson paragraphs",
+          "note": "Recognize wrongs that impair a person specifically as a knower.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000430",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://plato.stanford.edu/entries/feminist-social-epistemology/",
+        "locator": "§4.1 Epistemic Injustice, Fricker and Dotson paragraphs",
+        "note": "Editorial placement in epistemology, grounded in the section’s explicit concern with knowing and testimony."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:testimonial-injustice",
+      "label": "Testimonial injustice",
+      "aliases": [],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Social epistemology",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Identity prejudice can cause an undeserved credibility deficit.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q48970669",
+          "label": "Epistemic injustice",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The passage defines the credibility mechanism as one form of epistemic injustice.",
+      "discovery_evidence": [
+        {
+          "url": "https://plato.stanford.edu/entries/feminist-social-epistemology/",
+          "locator": "§4.1, Fricker’s testimonial-injustice paragraphs",
+          "note": "Identity prejudice can cause an undeserved credibility deficit.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q48970669",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://plato.stanford.edu/entries/feminist-social-epistemology/",
+        "locator": "§4.1, Fricker’s testimonial-injustice paragraphs",
+        "note": "Section explicitly identifies a form of epistemic injustice."
+      },
+      "limits": [
+        "A philosophical account; preserve the specified social mechanism rather than generalizing to any disagreement."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:hermeneutical-injustice",
+      "label": "Hermeneutical injustice",
+      "aliases": [],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Social epistemology",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Unequal interpretive resources can obstruct understanding and expression of experience.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q48970669",
+          "label": "Epistemic injustice",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The passage defines structural interpretive disadvantage as another form.",
+      "discovery_evidence": [
+        {
+          "url": "https://plato.stanford.edu/entries/feminist-social-epistemology/",
+          "locator": "§4.1, Fricker’s hermeneutical-injustice paragraphs",
+          "note": "Unequal interpretive resources can obstruct understanding and expression of experience.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q48970669",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://plato.stanford.edu/entries/feminist-social-epistemology/",
+        "locator": "§4.1, Fricker’s hermeneutical-injustice paragraphs",
+        "note": "Section explicitly identifies a form of epistemic injustice."
+      },
+      "limits": [
+        "A philosophical account; preserve the specified social mechanism rather than generalizing to any disagreement."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:contributory-injustice",
+      "label": "Contributory injustice",
+      "aliases": [],
+      "primary_domain": "Philosophy",
+      "primary_subfield": "Social epistemology",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Dominant groups may refuse interpretive resources already developed by marginalized communities.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q48970669",
+          "label": "Epistemic injustice",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The passage distinguishes refusal of available resources from absence of a collective concept.",
+      "discovery_evidence": [
+        {
+          "url": "https://plato.stanford.edu/entries/feminist-social-epistemology/",
+          "locator": "§4.1, Dotson and Pohlhaus paragraphs",
+          "note": "Dominant groups may refuse interpretive resources already developed by marginalized communities.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q48970669",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://plato.stanford.edu/entries/feminist-social-epistemology/",
+        "locator": "§4.1, Dotson and Pohlhaus paragraphs",
+        "note": "Section explicitly identifies a form of epistemic injustice."
+      },
+      "limits": [
+        "A philosophical account; preserve the specified social mechanism rather than generalizing to any disagreement."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:khipu",
+      "label": "Khipu",
+      "aliases": [
+        "Quipu"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Andean record keeping",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Knots occupy decimal positions, while cord structures and colors offer additional information whose interpretation remains under study.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:khipu",
+          "label": "Khipu",
+          "reason": "Same subject; canonical ID reused."
+        }
+      ],
+      "identity_reason": "The inspected meaning is the existing canonical subject; retain its identity.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.nist.gov/nist-museum/standardizing-empire",
+          "locator": "What is a khipu?, Encoding the Khipu, Khipu Uses (lines 132–157, 194–196)",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q28573",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.nist.gov/nist-museum/standardizing-empire",
+        "locator": "What is a khipu?, Encoding the Khipu, Khipu Uses (lines 132–157, 194–196)",
+        "note": "The exhibit identifies khipu as Inca imperial record-keeping devices."
+      },
+      "limits": [
+        "Narrative uses and several material meanings remain hypotheses."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:chaski",
+      "label": "Chaski (Inca messenger)",
+      "aliases": [
+        "Chaskis"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Andean communication",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Official Inca messengers carried portable bundles of khipu, connecting a record-keeping device with an imperial communication role.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:catalog:khipu",
+          "label": "Khipu",
+          "reason": "The record-keeping device is distinct from the messenger role."
+        },
+        {
+          "id": "Q28573",
+          "label": "Inca Empire",
+          "reason": "Broader imperial history."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.nist.gov/nist-museum/standardizing-empire",
+          "locator": "Khipu Uses, line 196",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q28573",
+        "type": "facet_of",
+        "assertion": "editorial",
+        "url": "https://www.nist.gov/nist-museum/standardizing-empire",
+        "locator": "Khipu Uses, line 196",
+        "note": "The documented imperial messenger role motivates placement under Inca history."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:lukasa-met-1977-467-3",
+      "label": "Lukasa memory board (Met 1977.467.3)",
+      "aliases": [],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Material memory and political knowledge",
+      "entity_kind": "named_subject",
+      "scope": "facet_or_application",
+      "learning_takeaway": "This individual Luba board encodes history and political geography through carved designs that trained custodians interpret.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1768252",
+          "label": "Luba Empire",
+          "reason": "Broader Luba political history, rather than this individual memory board."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/690570",
+          "locator": "Curatorial description (lines 10–16), Artwork Details",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Individual artifact identity; bare Lukasa denotes the larger object category.",
+        "No asserted parent: a generic Lukasa subject is absent from the baseline.",
+        "Curatorial interpretation and spiritual references describe Luba beliefs."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:mbudye-association",
+      "label": "Mbudye association",
+      "aliases": [],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Luba political institutions",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Mbudye councils preserve and interpret political history; graduated knowledge enables them to check or reinforce chiefs’ authority.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q1768252",
+          "label": "Luba Empire",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/690570",
+          "locator": "Curatorial description, lines 12–13",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1768252",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.metmuseum.org/art/collection/search/690570",
+        "locator": "Curatorial description, lines 12–13",
+        "note": "Luba state institutions motivate this broader historical placement."
+      },
+      "limits": [
+        "The association and the individual board are distinct subjects."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:paiza-met-1993-256",
+      "label": "Safe Conduct Pass in Phakpa script (Met 1993.256)",
+      "aliases": [],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Mongol imperial documents",
+      "entity_kind": "named_subject",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Silver-filled openwork gives this imperial pass projecting script on both sides, with the reverse characters inverted.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q7313",
+          "label": "Yuan dynasty",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.metmuseum.org/art/collection/search/39624",
+          "locator": "Curatorial description (lines 10–11), Artwork Details",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q7313",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.metmuseum.org/art/collection/search/39624",
+        "locator": "Curatorial description (lines 10–11), Artwork Details",
+        "note": "The museum dates the artifact to the Yuan dynasty."
+      },
+      "limits": [
+        "This identity denotes object 1993.256; Paiza alone names a general pass category."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:sanke-mon",
+      "label": "Sanké Môn",
+      "aliases": [
+        "Sanke Mon"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Malian living heritage",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "San’s annual collective fishing ritual combines foundation remembrance, local spiritual practices and intergenerational cultural transmission.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q189819",
+          "label": "Ritual",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.unesco.org/fr/articles/unesco-mali-aux-cotes-des-communautes-et-des-autorites-du-mali-pour-la-celebration-de-la-625-edition",
+          "locator": "Main French text, lines 24–26, 34–35",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q189819",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://www.unesco.org/fr/articles/unesco-mali-aux-cotes-des-communautes-et-des-autorites-du-mali-pour-la-celebration-de-la-625-edition",
+        "locator": "Main French text, lines 24–26, 34–35",
+        "note": "UNESCO explicitly calls Sanké Môn a collective fishing ritual."
+      },
+      "limits": [
+        "Translated from an inspected French passage.",
+        "Spiritual meanings are attributed to local belief; social benefits are UNESCO’s interpretation."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:negro-motorist-green-book",
+      "label": "The Negro Motorist Green Book",
+      "aliases": [
+        "The Negro Travelers’ Green Book",
+        "Green Book (travel guide)"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "African American travel history",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "A directory of nondiscriminating businesses helped Black travelers plan journeys through the segregated United States.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q2652357",
+          "label": "Racial segregation in the United States",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.nps.gov/articles/green-book-properties-listed-in-the-national-register-of-historic-places.htm",
+          "locator": "Opening history, lines 24–38",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q2652357",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.nps.gov/articles/green-book-properties-listed-in-the-national-register-of-historic-places.htm",
+        "locator": "Opening history, lines 24–38",
+        "note": "The guide’s documented response to segregation motivates this historical placement."
+      },
+      "limits": [
+        "Publication series, 1936–1966, with a wartime interruption; distinct from the film titled Green Book.",
+        "A response to discrimination is not an application of discrimination."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:port-chicago-mutiny-trial",
+      "label": "Port Chicago mutiny trial",
+      "aliases": [],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Military segregation and civil rights",
+      "entity_kind": "named_subject",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Ammunition-loading refusals after the 1944 disaster led to fifty mutiny convictions, highlighting unequal treatment in the segregated Navy.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q2652357",
+          "label": "Racial segregation in the United States",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://www.nps.gov/poch/learn/historyculture/the-mutiny-trial.htm",
+          "locator": "Aftermath and Trial Proceedings (lines 39–47); exoneration update (55, 77)",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q2652357",
+        "type": "broader_topic",
+        "assertion": "editorial",
+        "url": "https://www.nps.gov/poch/learn/historyculture/the-mutiny-trial.htm",
+        "locator": "Aftermath and Trial Proceedings (lines 39–47); exoneration update (55, 77)",
+        "note": "Documented naval segregation motivates placement in this broader history."
+      },
+      "limits": [
+        "NPS records official exoneration on 2024-07-17.",
+        "The page contradicts itself on the explosion’s cause; no definitive cause is claimed here.",
+        "Thurgood Marshall publicized the case; Gerald Veltmann led the trial defense."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:civilian-public-service",
+      "label": "Civilian Public Service (US, World War II)",
+      "aliases": [
+        "CPS (World War II program)"
+      ],
+      "primary_domain": "History & culture",
+      "primary_subfield": "Conscientious objection and wartime service",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Church-funded civilian work offered conscientious objectors a wartime service option, with unpaid labor and fewer family benefits than military service.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q58848",
+          "label": "Pacifism",
+          "reason": "Pacifism is a broader principle; CPS is a specific historical program."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://home.nps.gov/places/patapsco-camp-wwii-civilian-public-service-site.htm",
+          "locator": "Civilian Public Service and Challenges, lines 44–60",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q58848",
+        "type": "application_of",
+        "assertion": "editorial",
+        "url": "https://home.nps.gov/places/patapsco-camp-wwii-civilian-public-service-site.htm",
+        "locator": "Civilian Public Service and Challenges, lines 44–60",
+        "note": "The program implemented service compatible with participants’ pacifist commitments."
+      },
+      "limits": [
+        "United States World War II program; broader conscientious objection is not newly reserved here."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:pansori",
+      "label": "Pansori",
+      "aliases": [],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Korean narrative performance",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "A single singer delivers an epic story with one drummer, combining dramatic, poetic and musical storytelling.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q638",
+          "label": "Music",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://archive.gugak.go.kr/portal/detail/searchVideoDetail?clipid=39174&recording_type_code=V&system_id=AV",
+          "locator": "Program pamphlet text, lines 100–105",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q638",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://archive.gugak.go.kr/portal/detail/searchVideoDetail?clipid=39174&recording_type_code=V&system_id=AV",
+        "locator": "Program pamphlet text, lines 100–105",
+        "note": "The program identifies pansori as a Korean vocal genre."
+      },
+      "limits": [],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:sugungga",
+      "label": "Sugungga",
+      "aliases": [
+        "The Tale of the Hare"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Korean narrative repertoire",
+      "entity_kind": "named_subject",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A hare escapes a Dragon King seeking its liver by claiming that the organ was left behind in the forest.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q638",
+          "label": "Music",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://archive.gugak.go.kr/portal/detail/searchVideoDetail?clipid=39174&recording_type_code=V&system_id=AV",
+          "locator": "Program pamphlet text, lines 100–105",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:catalog:pansori",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://archive.gugak.go.kr/portal/detail/searchVideoDetail?clipid=39174&recording_type_code=V&system_id=AV",
+        "locator": "Program pamphlet text, lines 100–105",
+        "note": "The program explicitly names Sugungga among the surviving pansori stories."
+      },
+      "limits": [
+        "Story identity, distinct from this particular 2020 performance.",
+        "Hare Taryeong names a scene, not an alias for the complete work.",
+        "Parent depends on global reservation of Pansori."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:kulintang-music",
+      "label": "Kulintang music",
+      "aliases": [
+        "Kulintang (music tradition)"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Philippine gong traditions",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Philippine gong-chime music connects cultural preservation with adaptations made by Filipino American communities.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q133163",
+          "label": "Percussion instrument",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US",
+          "locator": "Lesson introduction and learning objectives, lines 440–455",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q638",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US",
+        "locator": "Lesson introduction and learning objectives, lines 440–455",
+        "note": "The lesson identifies kulintang as gong-chime music."
+      },
+      "limits": [
+        "Music tradition sense; the namesake instrument is a related narrower object."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:kundiman",
+      "label": "Kundiman",
+      "aliases": [],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Philippine patriotic song",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Philippine patriotic songs provide a case for how a musical tradition can be sustained and transformed in diaspora.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000204",
+          "label": "Folk music",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US",
+          "locator": "Lesson introduction and learning objectives, lines 440–455",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q638",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US",
+        "locator": "Lesson introduction and learning objectives, lines 440–455",
+        "note": "The lesson identifies kundiman as Philippine patriotic songs."
+      },
+      "limits": [
+        "The source’s patriotic-song framing supports selection; musical-form details require further inspected references."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:pinpeat",
+      "label": "Pinpeat",
+      "aliases": [],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Cambodian ensemble traditions",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Cambodian court music offers a case for studying how Cambodian American artists sustain and transform inherited musical practices.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q638",
+          "label": "Music",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US",
+          "locator": "Lesson introduction and learning objectives, lines 440–455",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q638",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US",
+        "locator": "Lesson introduction and learning objectives, lines 440–455",
+        "note": "The lesson explicitly identifies pinpeat as Cambodian court music."
+      },
+      "limits": [
+        "Further instrumentation claims need the blocked teacher guide or another accessible primary passage."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:kulintang-kultura",
+      "label": "Kulintang Kultura: Danongan Kalanduyan and Gong Music of the Philippine Diaspora",
+      "aliases": [
+        "Kulintang Kultura"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Diaspora recordings",
+      "entity_kind": "named_subject",
+      "scope": "facet_or_application",
+      "learning_takeaway": "The album pairs traditional gong repertoire with diaspora musicians’ uses of the tradition in hip-hop, jazz and electronic music.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "Q638",
+          "label": "Music",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://folkways.si.edu/kulintang-kultura",
+          "locator": "Album description, lines 456–457; Release Info, 505–513",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:catalog:kulintang-music",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://folkways.si.edu/kulintang-kultura",
+        "locator": "Album description, lines 456–457; Release Info, 505–513",
+        "note": "Folkways explicitly describes the album’s contrasting uses of kulintang traditions."
+      },
+      "limits": [
+        "Album identity, catalog SFW40593, rather than a general genre.",
+        "Parent depends on global reservation of Kulintang music."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:authored:000211",
+      "label": "Gamelan",
+      "aliases": [],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Indonesian ensemble traditions",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Balinese repertoire varies across contexts: dynamic gong kebyar contrasts with older ceremonial styles documented among Balinese communities in Lombok.",
+      "inventory_status": "existing",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000211",
+          "label": "Gamelan",
+          "reason": "Same subject; canonical ID reused."
+        }
+      ],
+      "identity_reason": "The inspected meaning is the existing canonical subject; retain its identity.",
+      "discovery_evidence": [
+        {
+          "url": "https://folkways.si.edu/news-and-press/unesco-collection-week-34-balinese-court-music",
+          "locator": "David Harnish’s guest article, lines 450–468",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q638",
+        "type": "broader_topic",
+        "assertion": "source_asserted",
+        "url": "https://folkways.si.edu/news-and-press/unesco-collection-week-34-balinese-court-music",
+        "locator": "David Harnish’s guest article, lines 450–468",
+        "note": "The article describes gamelan repertoire and contrasting musical contexts."
+      },
+      "limits": [
+        "This is a contextual example of the existing Gamelan subject, not a new identity."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:gamelan-gong-kebyar",
+      "label": "Gamelan gong kebyar",
+      "aliases": [
+        "Gong kebyar"
+      ],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Balinese gamelan styles",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "This Balinese gamelan style uses changing tempi and dynamic interlocking parts, emerging in northern Bali around 1915.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000211",
+          "label": "Gamelan",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://folkways.si.edu/news-and-press/unesco-collection-week-34-balinese-court-music",
+          "locator": "David Harnish’s guest article, lines 450–468",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000211",
+        "type": "facet_of",
+        "assertion": "source_asserted",
+        "url": "https://folkways.si.edu/news-and-press/unesco-collection-week-34-balinese-court-music",
+        "locator": "David Harnish’s guest article, lines 450–468",
+        "note": "The article identifies gong kebyar as a gamelan repertoire."
+      },
+      "limits": [
+        "A specific style, distinct from general Gamelan.",
+        "The article cautions that an album’s court-music title misrepresents most performance contexts."
+      ],
+      "selection_role": "primary"
+    },
+    {
+      "id": "local:catalog:kotekan",
+      "label": "Kotekan",
+      "aliases": [],
+      "primary_domain": "Music & performance",
+      "primary_subfield": "Balinese interlocking technique",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Interlocking instrumental parts create dynamic figuration in gong kebyar, distinguishing a playing technique from an ensemble style.",
+      "inventory_status": "proposed_new",
+      "nearest_baseline_matches": [
+        {
+          "id": "local:authored:000211",
+          "label": "Gamelan",
+          "reason": "Nearby broader meaning; source identifies a separately named subject or principle."
+        }
+      ],
+      "identity_reason": "The source names a distinct subject; focused baseline label, alias, and meaning checks found no identity for this subject.",
+      "discovery_evidence": [
+        {
+          "url": "https://folkways.si.edu/news-and-press/unesco-collection-week-34-balinese-court-music",
+          "locator": "David Harnish’s guest article, lines 450–468",
+          "note": "Inspected passage names this subject and supports the stated takeaway.",
+          "inspection_mode": "web.open_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000211",
+        "type": "application_of",
+        "assertion": "source_asserted",
+        "url": "https://folkways.si.edu/news-and-press/unesco-collection-week-34-balinese-court-music",
+        "locator": "David Harnish’s guest article, lines 450–468",
+        "note": "The article names kotekan as interlocking parts within gamelan gong kebyar."
+      },
+      "limits": [
+        "The inspected passage establishes interlocking parts; exact polos/sangsih rules await further primary inspection."
+      ],
+      "selection_role": "primary"
+    }
+  ],
+  "issues": [
+    {
+      "kind": "source_access",
+      "note": "ICH UNESCO direct pages commonly return CAPTCHA. These blocked pages have not been used as supporting evidence. Remaining domains still under research."
+    }
+  ],
+  "sources_inspected": [
+    {
+      "id": "culture-rgs-geography",
+      "title": "What is geography? — Royal Geographical Society",
+      "url": "https://www.rgs.org/about-us/what-is-geography",
+      "locator": "Main text, paragraphs 1–3; “Geography informs us about”; human/physical geography paragraph",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Geography connects social and environmental processes through place."
+      ]
+    },
+    {
+      "id": "culture-esri-equal-earth",
+      "title": "Equal Earth projection — ArcGIS Pro documentation",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/equal-earth.html",
+      "locator": "Description; Distortion; Usage",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Preserve mapped area while accepting distortion of shapes and distances."
+      ]
+    },
+    {
+      "id": "culture-esri-natural-earth",
+      "title": "Natural Earth projection — ArcGIS Pro documentation",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/natural-earth.html",
+      "locator": "Description; Distortion; Limitations",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "A rounded world-map compromise preserves neither area nor angles."
+      ]
+    },
+    {
+      "id": "culture-esri-goode-homolosine",
+      "title": "Goode homolosine projection — ArcGIS Pro documentation",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/goode-homolosine.html",
+      "locator": "Description; Graticule; Usage; Limitations",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Combine sinusoidal and Mollweide regions while interrupting land or ocean."
+      ]
+    },
+    {
+      "id": "culture-esri-hotine-oblique-mercator",
+      "title": "Hotine oblique Mercator projection — ArcGIS Pro documentation",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/hotine-oblique-mercator.html",
+      "locator": "Description; Distortion; Usage; Variants",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Use a conformal projection centered along an obliquely oriented region."
+      ]
+    },
+    {
+      "id": "culture-esri-peirce-quincuncial",
+      "title": "Peirce quincuncial projection — ArcGIS Pro documentation",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/peirce-quincuncial.html",
+      "locator": "Description; Graticule; Distortion; Usage",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Tessellate a square world map with four exceptional boundary points."
+      ]
+    },
+    {
+      "id": "culture-esri-adams-square-ii",
+      "title": "Adams square II projection — ArcGIS Pro documentation",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/adams-square-ii.html",
+      "locator": "Description; Graticule; Distortion; Usage",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Place equator and central meridian on square diagonals, with corner singularities."
+      ]
+    },
+    {
+      "id": "culture-esri-buffer",
+      "title": "How Buffer (Analysis) works — ArcGIS Pro documentation",
+      "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+      "locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Buffer polygons can measure planar distances or account for spheroid curvature; software Planar may select either by input coordinates."
+      ]
+    },
+    {
+      "id": "culture-poetry-archive-form",
+      "title": "Form — Poetry Archive glossary",
+      "url": "https://poetryarchive.org/glossary/form/",
+      "locator": "“About Form”; CLERIHEW; DOUBLE-DACTYL; OTTAVA RIMA; SPENSERIAN STANZA",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Named fixed forms use different line, meter, and rhyme constraints."
+      ]
+    },
+    {
+      "id": "culture-aap-sestina",
+      "title": "Sestina — Academy of American Poets",
+      "url": "https://poets.org/glossary/sestina",
+      "locator": "“Rules of the Sestina Form”; final history paragraphs describing double sestina and tritina",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Sestina permutes six end-words; tritina compresses this to three words."
+      ]
+    },
+    {
+      "id": "culture-aap-cento",
+      "title": "Cento — Academy of American Poets",
+      "url": "https://poets.org/glossary/cento",
+      "locator": "Definition; “More about the Cento Form”",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Recombine complete lines from other poems into a new poetic structure."
+      ]
+    },
+    {
+      "id": "culture-aap-haibun",
+      "title": "Haibun — Academy of American Poets",
+      "url": "https://poets.org/glossary/haibun",
+      "locator": "Definition; “From A Poet’s Glossary”, prose–haiku relationship",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Combine prose with haiku linked by an implicit relationship."
+      ]
+    },
+    {
+      "id": "culture-aap-triolet",
+      "title": "Triolet — Academy of American Poets",
+      "url": "https://poets.org/glossary/triolet",
+      "locator": "“Rules of the Triolet Form”",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Refrains recur inside eight lines and only two rhymes."
+      ]
+    },
+    {
+      "id": "culture-sep-grounding",
+      "title": "Metaphysical Grounding — Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/grounding/",
+      "locator": "Introduction, strike/picketing example; §1.1",
+      "revision": "Substantive revision 2021-12-06",
+      "inspected_at": "2026-10-09T01:48:42.114105+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:48:42.114105+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Grounding concerns constitutive dependence rather than ordinary causal production."
+      ]
+    },
+    {
+      "id": "culture-sep-truthmakers",
+      "title": "Truthmakers — Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/truthmakers/",
+      "locator": "Introduction; §1; §2.1 Maximalism",
+      "revision": "Substantive revision 2024-09-23",
+      "inspected_at": "2026-10-09T01:48:42.114192+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:48:42.114192+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Truthmaker debates distinguish what makes a claim true from how many truths require such entities."
+      ]
+    },
+    {
+      "id": "culture-sep-fitting-attitudes",
+      "title": "Fitting Attitude Theories of Value — Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/fitting-attitude-theories/",
+      "locator": "Introduction; §3.1 The Wrong Kind of Reason Problem",
+      "revision": "First published 2023-01-24",
+      "inspected_at": "2026-10-09T01:48:42.114197+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:48:42.114197+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Fitting-attitude accounts connect value to warranted responses; incentive reasons can misfit an object’s value."
+      ]
+    },
+    {
+      "id": "culture-sep-feminist-social-epistemology",
+      "title": "Feminist Social Epistemology — Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/feminist-social-epistemology/",
+      "locator": "§4.1 Epistemic Injustice, Fricker and Dotson paragraphs",
+      "revision": "Substantive revision 2018-07-24",
+      "inspected_at": "2026-10-09T01:48:42.114202+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:48:42.114202+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "The section distinguishes credibility deficits, interpretive gaps, and refusal of marginalized interpretive resources."
+      ]
+    },
+    {
+      "id": "nist-khipu",
+      "title": "Standardizing an Empire",
+      "url": "https://www.nist.gov/nist-museum/standardizing-empire",
+      "locator": "What is a khipu?, Encoding the Khipu, Khipu Uses (lines 132–157, 194–196)",
+      "revision": "Updated 2025-01-23",
+      "inspected_at": "2026-10-09T01:56:29.615872+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:56:29.615872+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Decimal knot positions, material encoding and official messengers are described; narrative encoding remains tentative."
+      ]
+    },
+    {
+      "id": "met-lukasa-1977-467-3",
+      "title": "Lukasa (memory board), object 1977.467.3",
+      "url": "https://www.metmuseum.org/art/collection/search/690570",
+      "locator": "Curatorial description (lines 10–16), Artwork Details",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:56:29.615977+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:56:29.615977+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "This board uses incised and relief designs; trained Mbudye custodians interpret boards and constrain political authority."
+      ]
+    },
+    {
+      "id": "met-paiza-1993-256",
+      "title": "Safe Conduct Pass (Paiza) with Inscription in Phakpa Script, object 1993.256",
+      "url": "https://www.metmuseum.org/art/collection/search/39624",
+      "locator": "Curatorial description (lines 10–11), Artwork Details",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:56:29.615982+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:56:29.615982+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Silver-filled openwork script projects on both sides; the inscription invokes imperial authority. The record dates the artifact to the Yuan dynasty."
+      ]
+    },
+    {
+      "id": "unesco-sanke-mon",
+      "title": "UNESCO-Mali: 625th edition of Sanké Môn",
+      "url": "https://www.unesco.org/fr/articles/unesco-mali-aux-cotes-des-communautes-et-des-autorites-du-mali-pour-la-celebration-de-la-625-edition",
+      "locator": "Main French text, lines 24–26, 34–35",
+      "revision": "Published 2025-06-23; updated 2026-01-19",
+      "inspected_at": "2026-10-09T01:56:29.615985+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:56:29.615985+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "An annual collective fishing ritual commemorates San’s foundation and transmits local memory; pond preservation is a documented concern."
+      ]
+    },
+    {
+      "id": "nps-green-book",
+      "title": "Green Book Properties Listed in the National Register of Historic Places",
+      "url": "https://www.nps.gov/articles/green-book-properties-listed-in-the-national-register-of-historic-places.htm",
+      "locator": "Opening history, lines 24–38",
+      "revision": "Updated 2022-05-05",
+      "inspected_at": "2026-10-09T01:56:29.615988+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:56:29.615988+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "The guide listed nondiscriminating businesses for Black travelers and expanded beyond its original New York listings."
+      ]
+    },
+    {
+      "id": "nps-port-chicago-trial",
+      "title": "The Mutiny Trial",
+      "url": "https://www.nps.gov/poch/learn/historyculture/the-mutiny-trial.htm",
+      "locator": "Aftermath and Trial Proceedings (lines 39–47); exoneration update (55, 77)",
+      "revision": "Updated 2024-08-09",
+      "inspected_at": "2026-10-09T01:56:29.615990+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:56:29.615990+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Fifty sailors were convicted after refusing ammunition-loading orders; the page records their 2024 exoneration."
+      ]
+    },
+    {
+      "id": "nps-civilian-public-service",
+      "title": "Patapsco Camp (WWII Civilian Public Service Site)",
+      "url": "https://home.nps.gov/places/patapsco-camp-wwii-civilian-public-service-site.htm",
+      "locator": "Civilian Public Service and Challenges, lines 44–60",
+      "revision": "Updated 2024-12-16",
+      "inspected_at": "2026-10-09T01:56:29.615993+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:56:29.615993+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Government-authorized, church-funded civilian work provided an alternative for conscientious objectors; participants worked without pay."
+      ]
+    },
+    {
+      "id": "gugak-pansori-sugungga",
+      "title": "National Gugak Center: Sugungga, English program note",
+      "url": "https://archive.gugak.go.kr/portal/detail/searchVideoDetail?clipid=39174&recording_type_code=V&system_id=AV",
+      "locator": "Program pamphlet text, lines 100–105",
+      "revision": "Performance 2020-03-25",
+      "inspected_at": "2026-10-09T01:57:33.362078+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:57:33.362078+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "Pansori combines a storyteller-singer and drummer; Sugungga is a surviving story whose hare escapes through a verbal trick."
+      ]
+    },
+    {
+      "id": "folkways-diaspora-lesson",
+      "title": "Cultural Preservation and Adaptation: Kulintang, Kundiman, and Pinpeat in the US",
+      "url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US",
+      "locator": "Lesson introduction and learning objectives, lines 440–455",
+      "revision": null,
+      "inspected_at": "2026-10-09T01:57:33.362407+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:57:33.362407+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "The lesson distinguishes three musical traditions and examines their continuity and adaptation in US communities."
+      ]
+    },
+    {
+      "id": "folkways-kulintang-kultura",
+      "title": "Kulintang Kultura: Danongan Kalanduyan and Gong Music of the Philippine Diaspora",
+      "url": "https://folkways.si.edu/kulintang-kultura",
+      "locator": "Album description, lines 456–457; Release Info, 505–513",
+      "revision": "Released 2021; catalog SFW40593",
+      "inspected_at": "2026-10-09T01:57:33.362415+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:57:33.362415+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "The 2021 album juxtaposes traditional ensemble repertoire with contemporary diaspora styles."
+      ]
+    },
+    {
+      "id": "folkways-balinese-court",
+      "title": "UNESCO Collection Week 34: Balinese Court Music",
+      "url": "https://folkways.si.edu/news-and-press/unesco-collection-week-34-balinese-court-music",
+      "locator": "David Harnish’s guest article, lines 450–468",
+      "revision": "Published 2014-12-16",
+      "inspected_at": "2026-10-09T01:57:33.362417+00:00",
+      "inspection_mode": "web.open_text",
+      "acquisition": {
+        "local_inspection_completed_at": "2026-10-09T01:57:33.362417+00:00",
+        "remote_retrieval_timestamp": null,
+        "time_basis": "Local clock after actual passage inspection; exact remote retrieval time unavailable"
+      },
+      "passage_notes": [
+        "The musician-scholar contrasts gong kebyar dynamics with older ceremonial styles preserved in Lombok."
+      ]
+    }
+  ]
+}

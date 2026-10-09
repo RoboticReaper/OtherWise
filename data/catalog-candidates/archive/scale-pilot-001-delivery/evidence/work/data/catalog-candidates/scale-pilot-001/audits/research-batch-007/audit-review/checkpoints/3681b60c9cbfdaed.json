@@ -1,0 +1,61 @@
+{
+  "id": "local:catalog:neapolitan-chord",
+  "label": "Neapolitan chord",
+  "sample_kind": "random_new",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T21:59:09.675869+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "idea",
+    "entity_kind": "idea",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q170439",
+        "label": "Chord",
+        "original_description": "harmonic set of three or more notes",
+        "prior_card_takeaways": []
+      },
+      {
+        "id": "local:catalog:cadential-six-four",
+        "label": "Cadential six-four chord",
+        "original_description": null,
+        "prior_card_takeaways": [
+          "Distinguish a chord’s tonic pitch content from its dominant function at a cadence."
+        ]
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:cadential-six-four",
+        "label": "Cadential six-four chord"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Uppercase flat II supplies major lowered-supertonic quality; common first inversion and predominant function are explicit. Editorial comparison accurately contrasts cadential six-four dominant function.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s029",
+        "b007-s022"
+      ],
+      "locator": "20.1 lines 735–742; 16.3 lines 735, 754; web-10"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:cadential-six-four",
+      "type": "related_to",
+      "assertion": "editorial",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

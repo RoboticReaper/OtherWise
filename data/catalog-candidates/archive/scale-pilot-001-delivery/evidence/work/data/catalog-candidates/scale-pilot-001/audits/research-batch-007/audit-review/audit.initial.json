@@ -1,0 +1,3019 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-007",
+  "audit_stage": "initial_independent_findings_frozen_before_any_post_audit_correction",
+  "audit_started_at": "2026-10-08T21:54:27Z",
+  "audit_completed_at": "2026-10-08T22:06:35.106614+00:00",
+  "pre_audit_candidate_sha256": "1989b1a2ea351e4f277012d1860f37c5f02662a1d7d857a3e278a5ea68ea9952",
+  "role_independence": "This checker did not author these candidate cards. It independently read actual public passages; author support notes alone were not used as proof. Existing author capture used only for Othello after fresh URL failures.",
+  "sample_verification": {
+    "checks": {
+      "candidate_sha": true,
+      "candidate_size": true,
+      "baseline_sha": true,
+      "selection_sha": true,
+      "accepted_ids": true,
+      "new_id_frame": true,
+      "frame_sha": true,
+      "seed": true,
+      "random": true,
+      "risk": true,
+      "sample_disjoint": true,
+      "snapshot": true,
+      "snapshot_sources": true
+    },
+    "new_frame_count": 165,
+    "fixed_random": 20,
+    "fixed_risk": 20,
+    "boundary_changed_count": 16,
+    "boundary_changed_overlap_fixed": 4,
+    "extra_targeted_count": 12,
+    "extra_targeted_ids": [
+      "local:catalog:adagio-for-strings",
+      "local:catalog:amicus-curiae",
+      "local:catalog:doubling-cube",
+      "local:catalog:gradus-ad-parnassum",
+      "local:catalog:offside-in-association-football",
+      "local:catalog:parliament-act-1911",
+      "local:catalog:shogi-impasse",
+      "local:catalog:species-counterpoint",
+      "local:catalog:stare-decisis",
+      "local:catalog:sweeping-in-curling",
+      "local:catalog:threefold-repetition",
+      "local:catalog:touch-move-rule"
+    ],
+    "unique_review_target_count": 52,
+    "frozen_input_hashes": {
+      "candidate.before-audit.json": "1989b1a2ea351e4f277012d1860f37c5f02662a1d7d857a3e278a5ea68ea9952",
+      "sample.frozen.json": "e9a8c623b85962efecab19c4dde91495a5491aded18dea0a5935dbd3a62b07cc",
+      "sample-cards.frozen.json": "d4316acb409ac54ea81412c9894e9e57ddae51be2c3123ec618e3dbc131aaa3e"
+    }
+  },
+  "review_counts": {
+    "random_new": {
+      "reviewed": 20,
+      "cards_with_substantive_findings": 0,
+      "substantive_findings": 0,
+      "access_limited_cards": 0,
+      "relationships_reviewed": 20
+    },
+    "risk_selected": {
+      "reviewed": 20,
+      "cards_with_substantive_findings": 1,
+      "substantive_findings": 1,
+      "access_limited_cards": 1,
+      "relationships_reviewed": 20
+    },
+    "extra_boundary_targeted": {
+      "reviewed": 12,
+      "cards_with_substantive_findings": 0,
+      "substantive_findings": 0,
+      "access_limited_cards": 0,
+      "relationships_reviewed": 12
+    }
+  },
+  "total_unique_cards_reviewed": 52,
+  "all_attached_relationships_reviewed": 52,
+  "relationship_assertion_counts": {
+    "source_asserted": 40,
+    "editorial": 12
+  },
+  "boundary_recheck": {
+    "changed_cards_reviewed": 16,
+    "overlap_fixed_random": 2,
+    "overlap_fixed_risk": 2,
+    "extra_distinct_cards": 12,
+    "all16_current_boundary_changes_supported": true,
+    "changed_relationship_card_ids": [
+      "local:catalog:two-pages"
+    ],
+    "changed_source_bundles": 0,
+    "verification_file": "verification.boundary.json"
+  },
+  "findings": [
+    {
+      "finding_id": "007-R1",
+      "severity": "medium",
+      "category": "missing_applicability_qualification",
+      "field": "card",
+      "claim": "issue preclusion bars repeating a factual or legal issue already validly, finally and necessarily decided in an earlier proceeding",
+      "issue": "The unconditional opening omits actual litigation and limits on who may be bound. The later can matter qualifies different claims, not applicability of the bar; an unrelated litigant does not generally lose a fresh hearing solely because the issue was decided elsewhere.",
+      "required_fix": "State that issue preclusion can bar a party who had a full and fair opportunity to litigate an issue actually litigated and necessarily resolved in a valid final judgment. Avoid an absolute same-parties-only rule because recognized nonparty exceptions and nonmutual uses exist. Add the more explicit support to the source bundle and preserve a versioned correction.",
+      "support": [
+        {
+          "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+          "locator": "Opening; elements3–4; nonparty discussion, web-22 lines5–16"
+        },
+        {
+          "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+          "locator": "Taylor v. Sturgell, opinion §II.A–B, 553 U.S.880,891–895; web-25 lines198–205"
+        }
+      ],
+      "relationship_impact": "The related_to claim-preclusion comparison is supported and needs no conceptual change; a new source bundle must be versioned.",
+      "concept_id": "local:catalog:issue-preclusion",
+      "sample_kind": "risk_selected"
+    }
+  ],
+  "initial_substantive_findings_resolved": false,
+  "no_candidate_mutations": true,
+  "overall_acceptance": "Not decided by this audit; coordinator owns corrections and admission.",
+  "reference_inspection_counts": {
+    "candidate_sources": 47,
+    "fresh_exact_candidate_sources": 46,
+    "preserved_capture_only_candidate_sources": 1,
+    "extra_sources_for_finding": 2
+  },
+  "limitations": [
+    "Fixed random and risk findings are separate; they must not be pooled as an unbiased defect estimate. Extra boundary checks are targeted and not added to either denominator.",
+    "Only52 distinct cards and their52 attached relations received substantive independent checks here; this does not certify the other148 cards or reperform the200 author boundary reviews.",
+    "The exact WOF Othello URL failed twice. Its original preserved public passage was independently read and hash-checked; current live availability remains unverified.",
+    "Fresh pages do not prove historical browsing behavior or every source revision. Most references expose no immutable revision identifier.",
+    "The broad notion of semantic duplication cannot be excluded exhaustively by this bounded audit; inspected distinctions, known ambiguity and actual pinned target senses were checked.",
+    "This initial report assesses the frozen candidate after16 author boundary changes. It does not retrospectively erase earlier author defects or later replace initial findings.",
+    "Platform-reported token/cost usage is unavailable."
+  ],
+  "metadata_observations": [
+    {
+      "severity": "low_nonblocking",
+      "source_id": "b007-s086",
+      "observation": "Its numeric PDF page locator uses zero-based tool page indices without saying so. Named sections resolve; cite physical PDF pages2,4,13 or explicitly say indices1,3,12 when next revising.",
+      "requires_correction_for_substantive_admission": false
+    }
+  ],
+  "cards": [
+    {
+      "id": "local:catalog:countersubject",
+      "label": "Countersubject",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.675303+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q181014",
+            "label": "Fugue",
+            "original_description": "contrapuntal musical form based on a subject that recurs in imitation",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "Q181014",
+            "label": "Fugue"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Recurring accompaniment rather than changing counterpoint is the source definition; alto and soprano examples support different voices. Source explicitly treats it as a fugue feature.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s025"
+          ],
+          "locator": "30.8 countersubject definition; web-10 line 788"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q181014",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:absolute-sensory-threshold",
+      "label": "Absolute sensory threshold",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.466812+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q160402",
+            "label": "perception",
+            "original_description": "organization, identification, and interpretation of sensory information in order to represent and understand the environment in the brain",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:signal-detection-theory",
+            "label": "Signal detection theory"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Half-of-presentations definition and testing-context caveat match OpenStax. Probabilistic interpretation follows that criterion; editorial SDT comparison is supported by Heeger’s information/criterion distinction.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s037",
+            "b007-s087"
+          ],
+          "locator": "5.1 Sensation lines 34–39 (web-14); Heeger Information and Criterion lines 14–22 (web-16)"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:signal-detection-theory",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:stretch-tuning",
+      "label": "Stretch tuning",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.676076+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q5994",
+            "label": "Piano",
+            "original_description": "musical keyboard instrument",
+            "prior_card_takeaways": [
+              "Connect touch-sensitive piano sound with the mechanical role of escapement."
+            ]
+          },
+          {
+            "id": "Q510293",
+            "label": "Musical acoustics",
+            "original_description": "branch of acoustics concerned with researching and describing the physics of music",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:inharmonicity-of-musical-strings",
+            "label": "Inharmonicity of musical strings"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Wider piano octaves, stiffness-raised second partial and beat reduction are explicitly explained; often/can preserves instrument variation. Inharmonicity application is explicit.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s032"
+          ],
+          "locator": "FAQ: What is stretch tuning? lines 270–271; web-12/web-13"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:inharmonicity-of-musical-strings",
+          "type": "application_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:signal-detection-theory",
+      "label": "Signal detection theory",
+      "sample_kind": "random_new",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T22:03:34.467066+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q160402",
+            "label": "perception",
+            "original_description": "organization, identification, and interpretation of sensory information in order to represent and understand the environment in the brain",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:absolute-sensory-threshold",
+            "label": "Absolute sensory threshold"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Revised fixed-information condition accurately separates criterion shifts from improved sensitivity; both hit and false-alarm direction follow Heeger’s probability curves. Motivation premise and editorial threshold contrast are supported.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s037",
+            "b007-s087"
+          ],
+          "locator": "Heeger Information and Criterion / criterion role, web-16 lines 17–22, 45–57; OpenStax5.1 lines 34–39 and 64–66"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:absolute-sensory-threshold",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:mixed-member-proportional-representation",
+      "label": "Mixed-member proportional representation",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.468483+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q3509537",
+            "label": "Electoral system of New Zealand",
+            "original_description": "system by which New Zealand parliament is elected",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "Q182985",
+            "label": "Electoral system",
+            "original_description": "method by which voters make a choice between options",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:new-zealand-mmp-threshold",
+            "label": "New Zealand MMP threshold"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Electorate/list combination, distinct votes, party-driven total and winning candidates are explicit. NZ-specific phrasing and largely preserve eligibility/overhang qualifications. The threshold edge stays limited to NZ.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s064"
+          ],
+          "locator": "What is MMP? two votes, party/electorate votes and allocation; web-21 lines108–137"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:new-zealand-mmp-threshold",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:milgram-s-obedience-experiments",
+      "label": "Milgram's obedience experiments",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.467223+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q161272",
+            "label": "social psychology",
+            "original_description": "a branch of psychology that combines concepts from psychology and sociology and that focuses on social influence on human behavior",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:asch-s-conformity-experiments",
+            "label": "Asch's conformity experiments"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Believed shocks, no actual learner shock, many continuing and lower rates under off-campus/proximity variants all appear in the passage. Statement is bounded to these experiments; Asch comparison matches peer-judgment versus authority-demand setups.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s042"
+          ],
+          "locator": "12.4 Asch and Stanley Milgram’s Experiment; web-15 lines 34–36 and web-16 lines 61–73"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:asch-s-conformity-experiments",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:seki",
+      "label": "Seki",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.674103+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q11413",
+            "label": "Go",
+            "original_description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+            "prior_card_takeaways": [
+              "Understand how liberties connect local capture rules with surrounding territory."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:eyes-in-go",
+            "label": "Eyes in Go"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Mutual survival, missing independent eyes, liberty shortage and self-defeating capture attempts match the seki explanation. The same source directly contrasts two-eye life.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s002"
+          ],
+          "locator": "Seki; Life and death and the concept of eyes; web-07 lines 63–67 and 96–98"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:eyes-in-go",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:bach-s-fugue-in-c-minor-bwv-847",
+      "label": "Bach's Fugue in C minor, BWV 847",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.675582+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q181014",
+            "label": "Fugue",
+            "original_description": "contrapuntal musical form based on a subject that recurs in imitation",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "Q181014",
+            "label": "Fugue"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Work title/BWV 847, full entries in every voice and fragmented subject/countersubject episodes are explicit in analysis and captions. Fugue parent resolves correct musical form.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s025"
+          ],
+          "locator": "30.8 definitions, first exposition/episode; web-09 lines 752–780; web-10 lines 788–804"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q181014",
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:two-truths-in-indian-buddhist-philosophy",
+      "label": "Two truths in Indian Buddhist philosophy",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.467955+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:authored:000450",
+            "label": "Buddhist philosophy",
+            "original_description": "Exploring traditions examining suffering, experience and liberation.",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "Q7949",
+            "label": "truth",
+            "original_description": "what is in accord with fact or reality",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:authored:000430",
+            "label": "Epistemology"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Conventional linguistic practice, ultimate analysis and substantially differing school interpretations are explicitly stated. Epistemology comparison is editorial and supported by both entries; no universal historical-origin claim retained.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s059",
+            "b007-s055"
+          ],
+          "locator": "Two Truths opening lines 19–29; Epistemology opening lines 13–17; web-20"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000430",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:mode-locking-in-bowed-strings",
+      "label": "Mode locking in bowed strings",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.675441+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q576006",
+            "label": "String harmonic",
+            "original_description": "string instrument technique",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "Q510293",
+            "label": "Musical acoustics",
+            "original_description": "branch of acoustics concerned with researching and describing the physics of music",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:inharmonicity-of-musical-strings",
+            "label": "Inharmonicity of musical strings"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Nonlinear stick-slip drive, harmonic forcing despite inharmonic resonances and steady-note qualification directly follow the physics explanation. Inharmonicity relation is explicit.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s027"
+          ],
+          "locator": "How harmonic are harmonics? lines 31, 33–39; web-13"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:inharmonicity-of-musical-strings",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:just-intonation",
+      "label": "Just intonation",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.676164+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q6057278",
+            "label": "Interval ratio",
+            "original_description": "ratio of the frequencies of the pitches in a musical interval",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "Q1971526",
+            "label": "Harmonic seventh",
+            "original_description": "musical interval with a frequency ratio of 7:4 (approximatley 969 cents); slightly narrower than a minor seventh (9:5 under just temperament, 1018 cents); equal temperament (1000 cents) does not distinguish between the two",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:meantone-temperament",
+            "label": "Meantone temperament"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Pure 3:2 fifth-chain mismatch with pure third and fixed versus adjustable instruments follow the worked example; compromises rather than universally best tuning is supported. Meantone comparison is direct.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s032"
+          ],
+          "locator": "FAQ: temperament lines 257–263; web-12/web-13"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:meantone-temperament",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:fake-barn-case",
+      "label": "Fake-barn case",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.467828+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q9081",
+            "label": "knowledge",
+            "original_description": "awareness of facts, familiarity with individuals and situations, or practical skill; encompasses descriptive, procedural, and acquaintance knowledge, typically characterized as justified true belief distinct from opinion or guesswork",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:no-false-lemmas-condition",
+            "label": "No-false-lemmas condition"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Henry’s real barn amid facades, justified true but luckily correct belief, and lack of false inference match Barn County. The evaluation is kept as a challenge, not a settled definition. Source directly connects it to the attempted repair.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s052"
+          ],
+          "locator": "4. No False Lemmas: Barn County; web-18 lines 172–175"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:no-false-lemmas-condition",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:bearing-off-in-backgammon",
+      "label": "Bearing off in backgammon",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.674331+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:authored:000257",
+            "label": "Backgammon",
+            "original_description": "Exploring strategic play involving movement, probability and dice.",
+            "prior_card_takeaways": [
+              "Understand how hitting and re-entry complicate the race to bear off checkers."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:authored:000257",
+            "label": "Backgammon"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Home-board prerequisite, ordinary matching roll and oversized highest-checker removal match Bearing Off. Can rather than must preserves alternative legal moves.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s004"
+          ],
+          "locator": "Bearing Off and Object; web-03 lines 166, 173–180"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000257",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:jacoby-rule",
+      "label": "Jacoby rule",
+      "sample_kind": "random_new",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.674403+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:authored:000257",
+            "label": "Backgammon",
+            "original_description": "Exploring strategic play involving movement, probability and dice.",
+            "prior_card_takeaways": [
+              "Understand how hitting and re-entry complicate the race to bear off checkers."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:doubling-cube",
+            "label": "Doubling cube"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Optional status, undoubled single-game score and motivation match USBGF; match-play exclusion is explicit, preserving revised boundary. Cube relationship is directly explained.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s004"
+          ],
+          "locator": "Optional Rules item 3 and match-play FAQ; web-03 lines 187–192, web-02 line 251"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:doubling-cube",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:money-bills-under-the-parliament-acts",
+      "label": "Money bills under the Parliament Acts",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.468385+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q35749",
+            "label": "Parliament",
+            "original_description": "legislative body of government",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:parliament-act-1911",
+            "label": "Parliament Act 1911"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "OPC guidance directly supports certification, prior Commons passage, both one-month conditions, contrary Commons direction and assent. It overrides two misleading simplifications on the introductory Parliament page, which the evidence notes openly flag.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s063",
+            "b007-s090"
+          ],
+          "locator": "OPC paragraphs1.2,1.5,1.8,2.2,2.7; web-21/web-23; Parliament introductory comparison web-21 lines165–168"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:parliament-act-1911",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:meantone-temperament",
+      "label": "Meantone temperament",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.676233+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q6057278",
+            "label": "Interval ratio",
+            "original_description": "ratio of the frequencies of the pitches in a musical interval",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "Q80157",
+            "label": "temperament",
+            "original_description": "term used to indicate the mixture of the innate aspects of the personality",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:just-intonation",
+            "label": "Just intonation"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Source divides third discrepancy over four narrowed fifths and warns of changing keys. The card makes no universal exact narrowing claim; just-intonation comparison is explicit.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s032"
+          ],
+          "locator": "FAQ: temperament lines 260–263; web-12/web-13"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:just-intonation",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:misinformation-effect",
+      "label": "Misinformation effect",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.466501+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q2051704",
+            "label": "False memory",
+            "original_description": "memory of events that actually did not happen",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "Q6815715",
+            "label": "Memory conformity",
+            "original_description": "phenomenon where memories or information reported by others influences an individual and is incorporated into their memory.",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "Q7565103",
+            "label": "Source-monitoring error"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Loftus–Palmer wording and broken-glass reports match the cited examples; plural studies and can shape reports avoid universal eyewitness unreliability. Source-misattribution comparison is explicitly editorial and matches the source’s distinction.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s036"
+          ],
+          "locator": "8.3 The Misinformation Effect and distortion errors; web-15 lines 80–88, 121, 141–146"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q7565103",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:neapolitan-chord",
+      "label": "Neapolitan chord",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.675869+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q170439",
+            "label": "Chord",
+            "original_description": "harmonic set of three or more notes",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "local:catalog:cadential-six-four",
+            "label": "Cadential six-four chord",
+            "original_description": null,
+            "prior_card_takeaways": [
+              "Distinguish a chord’s tonic pitch content from its dominant function at a cadence."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:cadential-six-four",
+            "label": "Cadential six-four chord"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Uppercase flat II supplies major lowered-supertonic quality; common first inversion and predominant function are explicit. Editorial comparison accurately contrasts cadential six-four dominant function.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s029",
+            "b007-s022"
+          ],
+          "locator": "20.1 lines 735–742; 16.3 lines 735, 754; web-10"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:cadential-six-four",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:sensory-adaptation",
+      "label": "Sensory adaptation",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.466981+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q160402",
+            "label": "perception",
+            "original_description": "organization, identification, and interpretation of sensory information in order to represent and understand the environment in the brain",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "Q483921",
+            "label": "Adaptation",
+            "original_description": "evolutionary biological process that fits organisms to their environment, adaptive trait, or state reached by an evolving population",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:inattentional-blindness",
+            "label": "Inattentional blindness"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Phenomenological loss of notice during prolonged stimulus matches the explicitly attributed account. Editorial comparison with task-focused inattentional blindness preserves the distinction and does not invent a receptor mechanism.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s037"
+          ],
+          "locator": "5.1 Perception and attention lines 52–61; web-14/web-16"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:inattentional-blindness",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:pedal-point",
+      "label": "Pedal point",
+      "sample_kind": "random_new",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.675237+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q184421",
+            "label": "Harmony",
+            "original_description": "process by which individual sounds are joined together or composed into whole units or compositions",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:suspension-in-tonal-music",
+            "label": "Suspension in tonal music"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Held pitch through changing harmony, initial chord status and possible upper placement are explicit. Suspension comparison retains different resolution behavior.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s020",
+            "b007-s021"
+          ],
+          "locator": "10.8 lines 735, 758, 765; 10.9 line 735; web-09"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:suspension-in-tonal-music",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:two-pages",
+      "label": "Two Pages",
+      "sample_kind": "risk_selected",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.675511+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q173436",
+            "label": "Minimalism",
+            "original_description": "movements in various forms of art and design",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:additive-minimalism",
+            "label": "Additive minimalism"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Opening-only attribution now matches the textbook transcription: successive added repetitions subtract their predecessor’s final note. Application of additive minimalism is directly named.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s023"
+          ],
+          "locator": "35.1 opening paragraph and Figure 35.1.1; web-10 lines 733–745"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:additive-minimalism",
+          "type": "application_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "Q1412040",
+      "label": "Figure–ground (perception)",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.467145+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": true,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q1412040",
+            "label": "Figure–ground (perception)",
+            "original_description": "humans' ability to separate foreground from background in visual images",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:perceptual-closure",
+            "label": "Perceptual closure"
+          }
+        ],
+        "import_preservation": {
+          "original_description_equal": true,
+          "imported_records_equal": true
+        }
+      },
+      "card_and_takeaway_review": "Object/background organization and reversible vase/faces directly match Figure5.25. Editorial comparison to closure uses complete-object examples. The card avoids the source’s disputed claim about recognition requiring prior segmentation.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s038"
+          ],
+          "locator": "5.6 figure-ground and closure; web-14 lines 33–44"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:perceptual-closure",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:knuckleball-aerodynamics",
+      "label": "Knuckleball aerodynamics",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.674944+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q8424",
+            "label": "Aerodynamics",
+            "original_description": "branch of dynamics concerned with studying the motion of air",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "local:authored:000292",
+            "label": "Baseball",
+            "original_description": "Exploring pitching, hitting and fielding strategies.",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:curveball-aerodynamics",
+            "label": "Curveball aerodynamics"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "NASA explicitly links uneven seam orientation, moving center of pressure and time-varying force to knuckleball motion. Comparison with simplified steady curveball is appropriately editorial.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s014",
+            "b007-s013"
+          ],
+          "locator": "Forces on a Baseball: Drag/Lift lines 15, 21–24; Curveball: Aerodynamic Force lines 9–10; web-07/web-05"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:curveball-aerodynamics",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "Q36442",
+      "label": "Political science",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T22:03:34.468036+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "broad_field",
+        "entity_kind": "idea",
+        "baseline_existing": true,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q36442",
+            "label": "Political science",
+            "original_description": "scientific study of politics",
+            "prior_card_takeaways": [
+              "Connect questions about power and public decisions with systematic comparative study."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "Q7755",
+            "label": "Constitution (politics)"
+          }
+        ],
+        "import_preservation": {
+          "original_description_equal": true,
+          "imported_records_equal": true
+        }
+      },
+      "card_and_takeaway_review": "Government-focused collective choice and rules/reality/choice interaction directly follow the text. Constant rules with changing circumstances is explicitly illustrated. Constitution connection is directly named in the framework.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s061"
+          ],
+          "locator": "1.1 opening, Rules, Reality and Choices; web-23 lines 33–38 and web-21 lines 50–77"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q7755",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:no-false-lemmas-condition",
+      "label": "No-false-lemmas condition",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.467741+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q9081",
+            "label": "knowledge",
+            "original_description": "awareness of facts, familiarity with individuals and situations, or practical skill; encompasses descriptive, procedural, and acquaintance knowledge, typically characterized as justified true belief distinct from opinion or guesswork",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:gettier-problem",
+            "label": "Gettier problem"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Section4 proposes the fourth condition, explains its success on original counterexamples, then gives noninferential counterexamples. The tentative language preserves contested status. Relationship is explicitly an attempted Gettier repair.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s052"
+          ],
+          "locator": "4. No False Lemmas; web-18 lines 159–175"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:gettier-problem",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:henry-molaison",
+      "label": "Henry Molaison",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.466708+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q492",
+            "label": "Memory",
+            "original_description": "mental faculties and processes involved in storing and retrieving information",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:procedural-memory",
+            "label": "Procedural memory"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Primary-paper abstract independently identifies Molaison as H.M. Textbook supports surgery-related declarative impairment and task improvement without recall. No claim of total hippocampal removal or completely intact old memory appears in the card.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s036",
+            "b007-s088",
+            "b007-s089"
+          ],
+          "locator": "8.3 Anterograde Amnesia lines 40–41 (web-14); 8.2 Hippocampus lines 45–48 and PMID25154857 abstract line 240 (web-15)"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:procedural-memory",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:issue-preclusion",
+      "label": "Issue preclusion",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.469200+00:00",
+      "result": "finding",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q7748",
+            "label": "Law",
+            "original_description": "system of rules and guidelines, generally backed by governmental authority",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:claim-preclusion",
+            "label": "Claim preclusion"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Issue-versus-claim distinction and valid/final/necessary determination are supported. Actual-litigation and fair-opportunity/nonparty boundaries are missing from the unconditional opening; see007-R1.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s075",
+            "b007-s074"
+          ],
+          "locator": "Wex collateral estoppel opening and civil-procedure paragraph; res judicata opening/Bar and Merger; web-19 lines5–13"
+        },
+        {
+          "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+          "locator": "web-22 lines5–16"
+        },
+        {
+          "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+          "locator": "§II.A–B; web-25 lines198–205"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:claim-preclusion",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Both Wex entries explicitly distinguish issue from claim preclusion; comparison type and source_asserted label are supported. R1 concerns card applicability, not this edge."
+        }
+      ],
+      "limitations": [],
+      "findings": [
+        {
+          "finding_id": "007-R1",
+          "severity": "medium",
+          "category": "missing_applicability_qualification",
+          "field": "card",
+          "claim": "issue preclusion bars repeating a factual or legal issue already validly, finally and necessarily decided in an earlier proceeding",
+          "issue": "The unconditional opening omits actual litigation and limits on who may be bound. The later can matter qualifies different claims, not applicability of the bar; an unrelated litigant does not generally lose a fresh hearing solely because the issue was decided elsewhere.",
+          "required_fix": "State that issue preclusion can bar a party who had a full and fair opportunity to litigate an issue actually litigated and necessarily resolved in a valid final judgment. Avoid an absolute same-parties-only rule because recognized nonparty exceptions and nonmutual uses exist. Add the more explicit support to the source bundle and preserve a versioned correction.",
+          "support": [
+            {
+              "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+              "locator": "Opening; elements3–4; nonparty discussion, web-22 lines5–16"
+            },
+            {
+              "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+              "locator": "Taylor v. Sturgell, opinion §II.A–B, 553 U.S.880,891–895; web-25 lines198–205"
+            }
+          ],
+          "relationship_impact": "The related_to claim-preclusion comparison is supported and needs no conceptual change; a new source bundle must be versioned."
+        }
+      ],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:pitch-music",
+      "label": "Pitch (music)",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.675374+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q2717062",
+            "label": "Musical tone",
+            "original_description": "sound with a typical pitch; steady periodic sound; characterized by its duration, pitch, intensity (or loudness), and timbre (or quality)",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "Q1103750",
+            "label": "Concert pitch",
+            "original_description": "pitch reference to which a group of musical instruments are tuned for a performance",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:missing-fundamental",
+            "label": "Missing fundamental"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Keyboard high/low direction and perceived pitch are supported; FAQ explicitly gives octave doubling, frequency ratios and missing-fundamental example. Musical sense stays separate from material pitch.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s026",
+            "b007-s032"
+          ],
+          "locator": "1.1 line 735; FAQ Pitch/frequency lines 250–255; web-10/web-13"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:missing-fundamental",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:komi",
+      "label": "Komi",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.674181+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q11413",
+            "label": "Go",
+            "original_description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+            "prior_card_takeaways": [
+              "Understand how liberties connect local capture rules with surrounding territory."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "Q11413",
+            "label": "Go"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "White score compensation for Black moving first is explicit; 7½ is correctly tied to BGA default, with historical alternatives. Stone handicap is distinct.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s002",
+            "b007-s010"
+          ],
+          "locator": "How to Play: Komi, lines 115–119; Default Rules: Komi, lines 13–15; web-07 and web-02"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q11413",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:appoggiatura",
+      "label": "Appoggiatura",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.675166+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q170439",
+            "label": "Chord",
+            "original_description": "harmonic set of three or more notes",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:suspension-in-tonal-music",
+            "label": "Suspension in tonal music"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Analytical definition, usual accent and either direction of resolution are explicit. Same-note preparation of suspension supports the correctly editorial comparison.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s019",
+            "b007-s021"
+          ],
+          "locator": "10.4 lines 735, 758; 10.9 line 735; web-09"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:suspension-in-tonal-music",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:authored:000256",
+      "label": "Shogi",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.673631+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": true,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:authored:000256",
+            "label": "Shogi",
+            "original_description": "Exploring Japanese chess and its distinctive piece-reuse strategies.",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:authored:000254",
+            "label": "Chess"
+          }
+        ],
+        "import_preservation": {
+          "original_description_equal": true,
+          "imported_records_equal": true
+        }
+      },
+      "card_and_takeaway_review": "Guide identifies Japanese chess, reserves, and a drop instead of a board move; European-chess comparison explicitly identifies reuse. No unrestricted-drop or forced-promotion claim imported.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s086"
+          ],
+          "locator": "Introduction, Comparisons, Capture and Placing Captured Pieces; web-06 PDF indices 1, 3, 12 (physical pages 2, 4, 13)"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000254",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:othello",
+      "label": "Othello",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.673733+00:00",
+      "result": "supported_with_access_limitation",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:authored:000259",
+            "label": "Board games",
+            "original_description": "Exploring tabletop games built around rules and social interaction.",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:forced-passing-in-othello",
+            "label": "Forced passing in Othello"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Preserved official text directly supports outflanking, flipping, final majority, compulsory passing and termination when neither can move. No full-board requirement.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s005"
+          ],
+          "locator": "Preserved games-othello.json lines 26–38, 49–50, 65–79"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:forced-passing-in-othello",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [
+        "Both fresh attempts to the exact WOF URL timed out; independently read preserved original public-page capture, not author support notes. Current availability remains unverified."
+      ],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:authored:000254",
+      "label": "Chess",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.673459+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": true,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:authored:000254",
+            "label": "Chess",
+            "original_description": "Exploring strategic play, tactics and positional thinking in chess.",
+            "prior_card_takeaways": [
+              "Connect different piece movements with attack, legal moves and checkmate."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:stalemate",
+            "label": "Stalemate"
+          }
+        ],
+        "import_preservation": {
+          "original_description_equal": true,
+          "imported_records_equal": true
+        }
+      },
+      "card_and_takeaway_review": "Checkmate and no king capture follow FIDE 1.4; stalemate correctly requires no legal move and no check (5.2.1). The comparison edge is explicit.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s001"
+          ],
+          "locator": "FIDE 1.4.1 and 5.2.1; web-01 lines 152–155, 324"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:stalemate",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:bach-s-invention-in-c-major-bwv-772",
+      "label": "Bach's Invention in C major, BWV 772",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.675654+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q1061398",
+            "label": "Invention (musical composition)",
+            "original_description": "short musical composition with two-part counterpoint",
+            "prior_card_takeaways": []
+          },
+          {
+            "id": "local:catalog:melodic-inversion",
+            "label": "Melodic inversion",
+            "original_description": null,
+            "prior_card_takeaways": [
+              "Distinguish reversing melodic interval direction from changing note order."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:melodic-inversion",
+            "label": "Melodic inversion"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Named BWV 772 example inverts first seven notes and augments fragment a; card does not claim whole-theme augmentation everywhere. Inversion application is explicitly labeled.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s018"
+          ],
+          "locator": "11.2.1 and 11.2.3, Figures 11.2.1–2 and 11.2.5; web-09 lines 738–806"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:melodic-inversion",
+          "type": "application_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:stratified-sortition",
+      "label": "Stratified sortition for citizens’ assemblies",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T22:03:34.468782+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": true,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:catalog:stratified-sortition",
+            "label": "Stratified sortition for citizens’ assemblies",
+            "original_description": null,
+            "prior_card_takeaways": [
+              "Combine random invitations with demographic balancing rather than treating volunteers as a representative sample."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:authored:000085",
+            "label": "Citizens' assemblies"
+          }
+        ],
+        "import_preservation": {
+          "original_description_equal": true,
+          "imported_records_equal": true
+        }
+      },
+      "card_and_takeaway_review": "Official current method gives random household invitation, adult nominee and demographic selection; intended/broadly avoids perfect representation. The existing civic-lottery ID is preserved, and source explicitly ties procedure to citizens’ assemblies.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s076"
+          ],
+          "locator": "FAQ Who are members? and How selected?; web-21 lines59–95"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000085",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:tennis-racket-sweet-spot",
+      "label": "Tennis racket sweet spot",
+      "sample_kind": "risk_selected",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.675025+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q847",
+            "label": "Tennis",
+            "original_description": "Developing racket skills and strategies in tennis.",
+            "prior_card_takeaways": [
+              "Understand the scoring hierarchy and why deuce differs from ordinary point progression."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:center-of-percussion-in-a-tennis-racket",
+            "label": "Center of percussion in a tennis racket"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Revised attribution and distinctions match Cross: vibration node, COP and maximum rebound differ; translation and rotation still load the hand. Relationship is expressly comparative.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s015"
+          ],
+          "locator": "1. The sweet spots of a racquet and 3. Centre of Percussion; web-05 lines 3–13, 47–52"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:center-of-percussion-in-a-tennis-racket",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:circumstantial-moral-luck",
+      "label": "Circumstantial moral luck",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.467644+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:catalog:moral-luck",
+            "label": "Moral luck",
+            "original_description": null,
+            "prior_card_takeaways": [
+              "Examine tension between judging people only for what they control and judging different outcomes differently."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:moral-luck",
+            "label": "Moral luck"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Unchosen circumstances and differing moral tests accurately generalize the stated Germany/Argentina comparison. The card frames assessment as a problem, not an excuse or deterministic claim; taxonomy directly supports moral-luck facet.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s049"
+          ],
+          "locator": "Types of luck: Circumstantial luck; web-18 lines 62–68"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:moral-luck",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:perpetual-check-in-shogi",
+      "label": "Perpetual check in shogi",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T21:59:09.674477+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:authored:000256",
+            "label": "Shogi",
+            "original_description": "Exploring Japanese chess and its distinctive piece-reuse strategies.",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:authored:000256",
+            "label": "Shogi"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Japanese FAQ directly assigns loss to continuous checker at fourth identical position and distinguishes ordinary repetition. Scoped JSA rule and shogi facet are accurate.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s003"
+          ],
+          "locator": "連続王手の千日手というのは反則なのですか？; web-03 lines 177–183"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000256",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:foia-segregability",
+      "label": "FOIA segregability",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.468991+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q171251",
+            "label": "Administrative law",
+            "original_description": "branch of law on the relationship between a state and its citizens as well as between different state institutions",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:freedom-of-information-act-united-states",
+            "label": "Freedom of Information Act (United States)"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Statute requires considering partial disclosure and reasonably separating/releasing nonexempt portions. Federal scope and reasonably limit the duty; the relationship is the statutory FOIA mechanism itself.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s079"
+          ],
+          "locator": "5 USC552(a)(8)(A)(ii) and final paragraph(b); web-23 lines380–391,439"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:freedom-of-information-act-united-states",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:research-debriefing",
+      "label": "Research debriefing",
+      "sample_kind": "risk_selected",
+      "boundary_changed": false,
+      "card_version": 1,
+      "reviewed_at": "2026-10-08T22:03:34.467301+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q9418",
+            "label": "Psychology",
+            "original_description": "study of mental functions and behaviours",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:deception-in-psychological-research",
+            "label": "Deception in psychological research"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Post-deception explanation, purpose, data use and reasons are explicitly prescribed. Information restoration is a plain implication, not a claim that debriefing removes harm. Relationship to deception is expressly stated.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s046"
+          ],
+          "locator": "2.4 Research Involving Human Participants; web-15 lines 40–42"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:deception-in-psychological-research",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:adagio-for-strings",
+      "label": "Adagio for Strings",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.675773+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q170439",
+            "label": "Chord",
+            "original_description": "harmonic set of three or more notes",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:suspension-in-tonal-music",
+            "label": "Suspension in tonal music"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Barber example is labeled 4–3. Prepared same-note dissonance/downward step and reduction of compound intervals are explicit, preserving revised interval-class qualification.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s021"
+          ],
+          "locator": "10.9 definition, classification and Figure 10.9.3; web-09 lines 735–765"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:suspension-in-tonal-music",
+          "type": "application_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:amicus-curiae",
+      "label": "Amicus curiae",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T22:03:34.468571+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q7748",
+            "label": "Law",
+            "original_description": "system of rules and guidelines, generally backed by governmental authority",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:standing-to-sue",
+            "label": "Standing to sue"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Nonparty brief role and US court-specific rules match Wex. Revised US attribution is appropriate; standing comparison is editorial and grounded in the distinct federal injury/causation/redressability requirements.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s067",
+            "b007-s066"
+          ],
+          "locator": "amicus opening/court rules lines7–13 and federal standing lines12–17; web-19"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:standing-to-sue",
+          "type": "related_to",
+          "assertion": "editorial",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:doubling-cube",
+      "label": "Doubling cube",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.674254+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:authored:000257",
+            "label": "Backgammon",
+            "original_description": "Exploring strategic play involving movement, probability and dice.",
+            "prior_card_takeaways": [
+              "Understand how hitting and re-entry complicate the race to bear off checkers."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:authored:000257",
+            "label": "Backgammon"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Own-turn-before-roll timing, refusal at old stake and accepting-player cube ownership all match USBGF. Format qualification avoids Crawford overgeneralization.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s004"
+          ],
+          "locator": "Doubling; web-03 lines 181–183"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000257",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:gradus-ad-parnassum",
+      "label": "Gradus ad Parnassum",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.676301+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q186393",
+            "label": "Counterpoint",
+            "original_description": "compositional technique based on the combination of several overlapping melodic lines",
+            "prior_card_takeaways": [
+              "Recognize simultaneous melodies and the purpose of simplified species exercises.",
+              "Distinguish interacting simultaneous melodies from melody with accompaniment."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:species-counterpoint",
+            "label": "Species counterpoint"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Fux, 1725, species pedagogy and rhythmic relationships are explicit. Revised example no longer incorrectly makes first-species note shorter or claims measured learning outcomes.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s031"
+          ],
+          "locator": "30.1 opening paragraph; web-10 line 735"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:species-counterpoint",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:offside-in-association-football",
+      "label": "Offside in association football",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.674828+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q2736",
+            "label": "Football (soccer)",
+            "original_description": "Exploring the skills, tactics and culture of association football.",
+            "prior_card_takeaways": [
+              "Distinguish the result of a match from competition-specific procedures for resolving a tie."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "Q2736",
+            "label": "Football (soccer)"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Law 11 supports teammate contact timing, position/offence distinction, active involvement and all three direct-receipt exemptions. No unsupported exhaustive geometry or first-contact claim.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s012"
+          ],
+          "locator": "IFAB 11.1–11.3; web-04 lines 655–732"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q2736",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:parliament-act-1911",
+      "label": "Parliament Act 1911",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T22:03:34.468293+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "named_subject",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q35749",
+            "label": "Parliament",
+            "original_description": "legislative body of government",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:bicameralism",
+            "label": "Bicameralism"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "1909 dispute, 1911 veto-to-delay change, explicit beyond-five-years exclusion and shorter1949 delay are supported. Revised most-public-bills scope retains exceptions; Commons/Lords connection is explicit.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s063"
+          ],
+          "locator": "Opening; Why brought into force?; Bills not subject; web-23 lines 156–177"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:bicameralism",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:shogi-impasse",
+      "label": "Shogi impasse",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.674543+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:authored:000256",
+            "label": "Shogi",
+            "original_description": "Exploring Japanese chess and its distinctive piece-reuse strategies.",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:authored:000256",
+            "label": "Shogi"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Professional scope, both kings entering, no mating/capture prospect, 5/1-point counts excluding kings and 24 each for replay all match the Japanese paragraph. Amateur procedures correctly excluded.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s003"
+          ],
+          "locator": "持将棋の規定はどうなっていますか; web-03 lines 145–167"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000256",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:species-counterpoint",
+      "label": "Species counterpoint",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.675959+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "topic",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q186393",
+            "label": "Counterpoint",
+            "original_description": "compositional technique based on the combination of several overlapping melodic lines",
+            "prior_card_takeaways": [
+              "Recognize simultaneous melodies and the purpose of simplified species exercises.",
+              "Distinguish interacting simultaneous melodies from melody with accompaniment."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "Q186393",
+            "label": "Counterpoint"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Rhythmic ratios, two-voice textbook focus and possible four-voice course are explicit. Revised wording avoids asserting longer notes in first species or measured educational benefits.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s031"
+          ],
+          "locator": "30.1 opening paragraph; web-10 lines 733–738"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q186393",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:stare-decisis",
+      "label": "Stare decisis",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T22:03:34.468646+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q665141",
+            "label": "Case law",
+            "original_description": "principle or rule established in a previous legal case that is either binding on or persuasive for a court",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:brown-v-board-of-education",
+            "label": "Brown v. Board of Education"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Revised US scope, horizontal/vertical distinction and Supreme Court’s power to depart from precedent all match Wex. Brown/Plessy example directly supports the attached relationship.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s070"
+          ],
+          "locator": "Wex definition, operation and Brown example; web-19 lines5–11"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:brown-v-board-of-education",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:sweeping-in-curling",
+      "label": "Sweeping in curling",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.675096+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "facet_or_application",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "Q136851",
+            "label": "Curling",
+            "original_description": "winter team sport played on ice",
+            "prior_card_takeaways": []
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "Q136851",
+            "label": "Curling"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "2024 practitioner report explicitly describes pressure/angle, different surfaces, disagreement and continuing research. Card correctly avoids claiming universal effectiveness or current legality.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s017"
+          ],
+          "locator": "Observation research; Back to the roots?; Single sweeper; web-05 lines 41–88"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q136851",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:threefold-repetition",
+      "label": "Threefold repetition",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.674025+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:catalog:fivefold-repetition-chess",
+            "label": "Fivefold repetition in chess",
+            "original_description": null,
+            "prior_card_takeaways": [
+              "Distinguish an automatic repetition draw from a player’s threefold-repetition claim."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:catalog:fivefold-repetition-chess",
+            "label": "Fivefold repetition in chess"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Claim and intended-move timing now match 9.2; fivefold edge is explicit in 9.6.1. Position means the rules-defined state, not merely identical piece placement.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s001"
+          ],
+          "locator": "FIDE 9.2, 9.2.1–3, 9.6.1; web-03 lines 452–476"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:fivefold-repetition-chess",
+          "type": "related_to",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    },
+    {
+      "id": "local:catalog:touch-move-rule",
+      "label": "Touch-move rule",
+      "sample_kind": "extra_boundary_targeted",
+      "boundary_changed": true,
+      "card_version": 2,
+      "reviewed_at": "2026-10-08T21:59:09.673930+00:00",
+      "result": "supported",
+      "identity_and_scope": {
+        "result": "supported",
+        "scope": "idea",
+        "entity_kind": "idea",
+        "baseline_existing": false,
+        "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+        "nearest_comparisons": [
+          {
+            "id": "local:authored:000254",
+            "label": "Chess",
+            "original_description": "Exploring strategic play, tactics and positional thinking in chess.",
+            "prior_card_takeaways": [
+              "Connect different piece movements with attack, legal moves and checkmate."
+            ]
+          }
+        ],
+        "target_resolution": [
+          {
+            "id": "local:authored:000254",
+            "label": "Chess"
+          }
+        ],
+        "import_preservation": null
+      },
+      "card_and_takeaway_review": "Revised card correctly limits turn-holder and over-the-board play, chooses the first legally movable own piece, and distinguishes advance adjustment announcement and accidental contact. Facet is within the chess laws.",
+      "support": [
+        {
+          "source_ids": [
+            "b007-s001"
+          ],
+          "locator": "FIDE Introduction and 4.2–4.5; web-01 lines 124, 283–301"
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000254",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "result": "supported",
+          "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+        }
+      ],
+      "limitations": [],
+      "findings": [],
+      "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+    }
+  ]
+}

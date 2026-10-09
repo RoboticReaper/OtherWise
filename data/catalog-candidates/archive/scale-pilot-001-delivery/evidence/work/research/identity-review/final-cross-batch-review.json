@@ -1,0 +1,2578 @@
+{
+  "schema_version": 1,
+  "review_type": "bounded_final_card_semantic_overlap_and_admission_check",
+  "status": "complete_no_unresolved_semantic_duplicate_identified",
+  "completed_at": "2026-10-08T22:49:14.241570+00:00",
+  "inputs": [
+    {
+      "batch_id": "research-batch-003",
+      "path": "data/catalog-candidates/research-batch-003.json",
+      "sha256": "e2062d3bf8244df18bb9c2cfec27c170c6e9413038b20af3a60431cc8da6a242",
+      "concepts": 200,
+      "semantic_sha256": "8aa7bccc20b81c296128037f8c74326e651d3adbf927b60eac3b7ddf2f32f6fd"
+    },
+    {
+      "batch_id": "research-batch-004",
+      "path": "data/catalog-candidates/research-batch-004.json",
+      "sha256": "dd8af872210586f6e46b6f0fecdfcf1c4b6078061146f094b47a2a76a8edaf02",
+      "concepts": 200,
+      "semantic_sha256": "72546008e08e47412c6e69bc1a077e34ce28840561bd253a5dfff9f97cb6c5a5"
+    },
+    {
+      "batch_id": "research-batch-005",
+      "path": "data/catalog-candidates/research-batch-005.json",
+      "sha256": "4df6efb168ceaced979cfe0392b0f2946c7edb12c275efe4105eafe9e372506d",
+      "concepts": 200,
+      "semantic_sha256": "6c48fc8e22884ffb0202e00e3a7d0c57f15edb751bc24e8e6d88ebe3bd2ec6f4"
+    },
+    {
+      "batch_id": "research-batch-006",
+      "path": "data/catalog-candidates/research-batch-006.json",
+      "sha256": "49f1e931c7833e572bbc77467de7d4b0307ef83c837991cafcbc30ed800b847c",
+      "concepts": 200,
+      "semantic_sha256": "9046e3f33558a13dadbcdaeb5a9e61dac6dbcc002d94247aeb2c8c9c0b14298d"
+    },
+    {
+      "batch_id": "research-batch-007",
+      "path": "data/catalog-candidates/research-batch-007.json",
+      "sha256": "8a6e51c889065ecc5abc165f45953bec3be7bec72f155aebc362380c90b22860",
+      "concepts": 200,
+      "semantic_sha256": "afa6505aaf8335d43903393347c3fcbd2f0651d0f8af72195956fb4781807585"
+    }
+  ],
+  "baseline_index_sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9",
+  "selection_manifest_sha256": "d6f16948056fb6552b7eba52409ef879e40a6477c58008e1b01025a7a450acab",
+  "selection_version": 3,
+  "prior_cross_batch_review": {
+    "path": "research/identity-review/cross-batch-overlap-review.json",
+    "sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa"
+  },
+  "semantic_sha256": "d426ecaa8cf72b3fe38d84a394c0f4806319380c7bd6bdf861a7a11f180e9fe0",
+  "semantic_projection_definition": "Identity/card semantic projection: NFC and whitespace-normalized id, label, learning_takeaway and card; exact scope/entity_kind; sorted unique aliases/domains; owner/primary_domain/primary_subfield from central selection v3. Excludes card versions, source/evidence/relationship metadata, locators, timestamps and validation/audit bookkeeping. It is a canonical content projection, not a claim that arbitrary paraphrases have identical hashes.",
+  "semantic_snapshot": {
+    "path": "research/identity-review/final-semantic-snapshot.json",
+    "file_sha256": "4c86f6e96baabd1494aa73ed33487f024e5c47a9d10cf114ecb70823b7f8a9f8"
+  },
+  "metadata_only_input_refreshes": [
+    {
+      "batch_id": "research-batch-006",
+      "previous_sha256": "53c28378537fb1bd8d07c4f7ca83e7c45be3889e34c7d5110e24c3bc53a74e4d",
+      "current_sha256": "49f1e931c7833e572bbc77467de7d4b0307ef83c837991cafcbc30ed800b847c",
+      "semantic_projection_unchanged": true
+    }
+  ],
+  "checks": {
+    "actual_ids_unique": 1000,
+    "manifest_alignment_failures": [],
+    "previous_concrete_comparison_groups_rechecked": 24,
+    "shared_alias_groups_rechecked": 5,
+    "final_cross_batch_diagnostic_pairs_screened": 61,
+    "within_batch_high_similarity_pairs_read": 6,
+    "new_to_baseline_neighbor_cases_read": 30,
+    "unique_current_cards_read_in_targeted_meaning_checks": 157,
+    "takeaway_or_label_delta_records_reconciled": 32,
+    "fresh_external_source_audits_performed": 0
+  },
+  "prior_concrete_comparisons": [
+    {
+      "case_id": "prior-01",
+      "left": [
+        {
+          "id": "local:catalog:fail-safe-track-circuit-signalling",
+          "label": "Fail-safe track-circuit signalling",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "fe603dbafa1a3ea8b9f01143fa27ad4cb6f8c09bf5eabc729de6332f51d0afa2"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:fail-safe-defaults",
+          "label": "Fail-safe defaults",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "6ba08359a240e38630e805e40f80b586ff5b84f63763c0c65e81d6b581a33b48"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "A railway circuit treats specified faults like track occupancy to protect train separation; computer fail-safe defaults deny access unless permission is explicitly granted. The shared fail-safe design principle does not make this concrete railway detection application identical to default authorization.",
+      "boundary": "004 owns the railway application; 005 owns computer authorization defaults."
+    },
+    {
+      "case_id": "prior-02",
+      "left": [
+        {
+          "id": "local:catalog:stereographic-projection",
+          "label": "Stereographic projection",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "73687a795113e78efed65482161a0f15df673518ec61f60083a1f443ee406888"
+        }
+      ],
+      "right": [
+        {
+          "id": "Q186386",
+          "label": "Map projection",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "416ea32185549e703e3ab2fa474ba033fe72567111cc2951e1b139c57e2e80f4"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Stereographic projection is one specific geometric pole-to-plane construction. Map projection is the wider class of mappings used to flatten Earth and negotiate cartographic distortions.",
+      "boundary": "004 owns the specific geometric construction; 006 owns the existing general cartographic control."
+    },
+    {
+      "case_id": "prior-03",
+      "left": [
+        {
+          "id": "Q3744733",
+          "label": "Mechanical resonance",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "1e4029468f32c1db79b305abffe5f6d8883089b4d557348bb2ebcd8eaa2ba609"
+        }
+      ],
+      "right": [
+        {
+          "id": "Q7661371",
+          "label": "Sympathetic resonance",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "c042d9ff3de2f06da5c29d24d0a5410095c73eb92d6379c0af4c5c193f506c24"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Mechanical resonance is strong response to forcing near a natural frequency. The 007 Sympathetic resonance proposal concerns vibration transfer between systems with matching harmonics. Both are existing controls and the source-specific coupling discussion is not a second new generic-resonance count.",
+      "boundary": "The exact 007 registered ID is resolved from its final selection below; no new resonance identity is created."
+    },
+    {
+      "case_id": "prior-04",
+      "left": [
+        {
+          "id": "local:catalog:allocation-concealment",
+          "label": "Allocation concealment",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "2ff8adbc6556e4c81b5021e3afdf3fd2764131e7b85e22e0763217a16f01a5f5"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:double-blind-study",
+          "label": "Double-blind study",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "c084faa2f05cc0088cb10384dc4ad23f587f8369c509f6d310c63a2970cb8428"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Allocation concealment prevents recruiters foreseeing the next assignment before enrollment. Blinding withholds treatment knowledge during the study to limit participant and researcher expectations. Timing, actors and the bias pathways differ.",
+      "boundary": "003 owns allocation concealment; 007 owns generic double-blind study."
+    },
+    {
+      "case_id": "prior-05",
+      "left": [
+        {
+          "id": "local:catalog:diagnostic-sensitivity",
+          "label": "Diagnostic sensitivity",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "a39bc65b642e29974768e25142c089bd056183e680442448428787dd1b47af1d"
+        },
+        {
+          "id": "local:catalog:diagnostic-specificity",
+          "label": "Diagnostic specificity",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "828ada6233448282e922b5834d227de5ed845751c601ef2d0b3230acebe5bf93"
+        },
+        {
+          "id": "local:catalog:positive-predictive-value",
+          "label": "Positive predictive value",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "617d13c959086413c8608af27e103599684f885adb0969ca0da1de3667fc1278"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:signal-detection-theory",
+          "label": "Signal detection theory",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "15e582fd6b3d9c2265aac07697b5d91b34021386cb3c90f8083f4431b209b67e"
+        },
+        {
+          "id": "local:catalog:absolute-sensory-threshold",
+          "label": "Absolute sensory threshold",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "ae9ce5586f1ce3f5e8d7d1afed8736ec73d66d9e3bbb1f1412aecace11d1157f"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Diagnostic metrics condition results on disease status or vice versa. Signal detection models decisions amid noise; an absolute sensory threshold concerns detection probability for stimulus strength. These quantities/frameworks are not interchangeable.",
+      "boundary": "Clinical-test quantities remain in 003; general perceptual measurement in 007."
+    },
+    {
+      "case_id": "prior-06",
+      "left": [
+        {
+          "id": "local:catalog:pure-tone-audiometry",
+          "label": "Pure-tone audiometry",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "7bdbe2b18299fe1f727312f907e01363369e4a1060c256cab8c772ef3a9d0838"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:absolute-sensory-threshold",
+          "label": "Absolute sensory threshold",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "ae9ce5586f1ce3f5e8d7d1afed8736ec73d66d9e3bbb1f1412aecace11d1157f"
+        },
+        {
+          "id": "local:catalog:pitch-music",
+          "label": "Pitch (music)",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "8ef7a1c2bd2bab86d46823243669629f01fb6e7bb849a73b3c12df264fb8fa6e"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Pure-tone audiometry is a clinical procedure mapping detection thresholds by sound frequency. Absolute threshold is a general psychophysical property; musical pitch is the perceived high/low ordering of notes.",
+      "boundary": "003 owns the clinical test; 007 owns the general perception and music senses."
+    },
+    {
+      "case_id": "prior-07",
+      "left": [
+        {
+          "id": "local:catalog:observer-s-paradox-in-sociolinguistics",
+          "label": "Observer's paradox in sociolinguistics",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "1ce00236f7fc61a81cd578441545aa41652c79b4a6eda31c8f2d63e34dc88b79"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:experimenter-expectancy-bias",
+          "label": "Experimenter expectancy bias",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "7b4a873b60f54c34d38b25d141928bd5963c084518f21028e465e46aa7db224b"
+        },
+        {
+          "id": "local:catalog:social-desirability-bias",
+          "label": "Social desirability bias",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "f1e8a62cf90067e05641594ada12844a71f40100edb91a22699c70446f45ea25"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Observing/recording ordinary speech can change the speech researchers seek. Experimenter expectancy concerns researcher-side expectations affecting observation, while social desirability is participant response shaped to appear acceptable. The mechanisms can coexist without being synonyms.",
+      "boundary": "Keep the sociolinguistic observation target explicit; do not rename generic research reactivity as another subject."
+    },
+    {
+      "case_id": "prior-08",
+      "left": [
+        {
+          "id": "local:catalog:impression-management",
+          "label": "Impression management",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "d9e266bfb32f3b0a2fea486806889e783058e878aa038de05ca9f9de8022230b"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:social-desirability-bias",
+          "label": "Social desirability bias",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "f1e8a62cf90067e05641594ada12844a71f40100edb91a22699c70446f45ea25"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Impression management is shaping others’ impressions in ordinary social performances. Social-desirability bias is a measurement distortion in responses given to appear acceptable.",
+      "boundary": "005 owns the general social-presentation mechanism; 007 owns the specific research-response bias."
+    },
+    {
+      "case_id": "prior-09",
+      "left": [
+        {
+          "id": "local:catalog:social-norms",
+          "label": "Social norms",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "7eb2524f5313566e7985145d27a1a0b398996de01b16b5aa53520661a3c6eabf"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:normative-social-influence",
+          "label": "Normative social influence",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "8265dffb571cf2582b5449edd5f4ade261a49dcc6ae2a91f00e41d493ba1eb5f"
+        },
+        {
+          "id": "local:catalog:informational-social-influence",
+          "label": "Informational social influence",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "0dabc5fc1f214bf0ec3877a15ef86dd92d69ff440ec671cae296848e41379bb5"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "A norm is a shared behavioral expectation. Normative influence is conforming for acceptance; informational influence is treating others as evidence. The expectation and the two compliance/information mechanisms are distinct.",
+      "boundary": "Do not treat the same generic conformity definition as all three cards."
+    },
+    {
+      "case_id": "prior-10",
+      "left": [
+        {
+          "id": "Q7705913",
+          "label": "Testing effect",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "46554e5fd7f67c577c102dad4758a06ca662f63a46faa751b4cb050f8b1ea07a"
+        },
+        {
+          "id": "Q1095859",
+          "label": "Spacing effect",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "7b637a65c7b5e6c814a2cb49af7d1e0e7964f2b1623df2540272e94f2163addd"
+        },
+        {
+          "id": "local:catalog:interleaved-practice",
+          "label": "Interleaved practice",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "ac7e6373096f0deba251b898badfe30bf8e4ac1cf2cd8e10c87a1314d1008d16"
+        },
+        {
+          "id": "local:catalog:worked-example",
+          "label": "Worked example",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "6f807b9f306803df88790acf4c33fbf90765f797d43290c0efaa38f28790f6de"
+        },
+        {
+          "id": "local:catalog:peer-instruction",
+          "label": "Peer Instruction",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "c2f73a89ec2bfe20d2a605319a3d183d0e66848ec883dceccbdb1fce0254773a"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:working-memory-model",
+          "label": "Working memory model",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "218cf1e39326dcc61c0f447f3d5db50daf783b0f4356cf0100f4a1c132c6071c"
+        },
+        {
+          "id": "local:catalog:proactive-interference",
+          "label": "Proactive interference",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "1689851ad5a300c7a8b71b6551a5aa6a3f5a5a2b0be84d7359e65e7b42e12cb9"
+        },
+        {
+          "id": "local:catalog:retroactive-interference",
+          "label": "Retroactive interference",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "7f0f2f9c1f91676d0f4ba5cef70e71d7e1d19113822c3ef4d5892b2c929e9eeb"
+        },
+        {
+          "id": "local:catalog:intrinsic-motivation",
+          "label": "Intrinsic motivation",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "a210164347a1f55e5484c1137b3ac6d68b2ec5172ddb84907025a3d5b042d0c4"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "005 contains instructional procedures and already registered testing/spacing effects. 007 addresses general memory architecture, interference and motivation. No duplicate retrieval-practice/spacing mechanism remains under a new instructional label.",
+      "boundary": "Keep 005 instructional ownership and preserve existing Testing effect/Spacing effect IDs."
+    },
+    {
+      "case_id": "prior-11",
+      "left": [
+        {
+          "id": "local:catalog:betweenness-centrality",
+          "label": "Betweenness centrality",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "d5c630e2f5e800efaef652178315d8ba0c26f2e28833ff285be90930c2451984"
+        },
+        {
+          "id": "local:catalog:triadic-closure",
+          "label": "Triadic closure",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "b592dbbda181d2aaa50e71b3497c361b2484d35699aa1398d2263bfcacaef093"
+        },
+        {
+          "id": "local:catalog:strong-triadic-closure-property",
+          "label": "Strong triadic closure property",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "526bc06c9d1fc1e0d6a60d58a45ffb7dbf8c5fccb7a944fc2e57da4a850f19bd"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:authored:000604",
+          "label": "Graph theory",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "3a454baf8b2dea5cce6f15d421a4f87b7ca06c1ec93916ec70355dafb359fe1f"
+        },
+        {
+          "id": "local:catalog:bipartite-graph",
+          "label": "Bipartite graph",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "582ef3913b1a7b8f3d2a0309ac4706c66db2f12750b34af5e73b203756e4be75"
+        },
+        {
+          "id": "local:catalog:matrix-tree-theorem",
+          "label": "Matrix-tree theorem",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "46ef4b94d23e58cdb159e52609569e9b35f4bd7c414ffb6dd8869fc71d74becf"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Shortest-path mediation and social tie-formation models differ from graph theory generally, two-class graph structure and a theorem counting spanning trees. These mathematical overlaps do not give another batch ownership of the identical network measure.",
+      "boundary": "005 remains sole owner of its network measures/models; 004 may link them without duplicating them."
+    },
+    {
+      "case_id": "prior-12",
+      "left": [
+        {
+          "id": "local:catalog:elastic-rebound-theory",
+          "label": "Elastic rebound theory",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "23bbfed9631e061f62ea9b8e8ca7b9152ae989888e157a6b0c957ce4ae51196d"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:elastic-limit",
+          "label": "Elastic limit",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "ef302f90d8ad3b4bf7e48ee42b803ac77b420dec81c44f6a580f34706d7eb4fe"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "The earthquake model concerns elastic strain accumulated around a fault and released during slip. Elastic limit is the material boundary beyond which deformation is not wholly recoverable.",
+      "boundary": "003 owns the geological mechanism; 004 the material-property boundary."
+    },
+    {
+      "case_id": "prior-13",
+      "left": [
+        {
+          "id": "local:catalog:ekman-spiral",
+          "label": "Ekman spiral",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "5f68664079985a9594c362ec6911183e4f9016d96888a787f406becf13f9cbb2"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:coriolis-force",
+          "label": "Coriolis force",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "aa1196cb0881642b28049756a74d6545693a6d3697b682ac75a2437fac00608d"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "The depth-dependent ocean current spiral arises from rotation and momentum transfer; Coriolis force is the rotating-frame inertial term more generally.",
+      "boundary": "003 owns the oceanographic application; 004 the force concept."
+    },
+    {
+      "case_id": "prior-14",
+      "left": [
+        {
+          "id": "local:catalog:drip-irrigation",
+          "label": "Drip irrigation",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "130128ae0303d601b1f804cde007da2a21e15143e9f69e479caf2082fba3118b"
+        },
+        {
+          "id": "local:catalog:variable-rate-irrigation",
+          "label": "Variable-rate irrigation",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "8ded115e9cbd6f01658b3546bbd6133bb2fe27af32268204f582a1853d1956ad"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:aflaj-water-sharing-settlements",
+          "label": "Aflaj water-sharing settlements",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "91d04a69a06eee09d20618e4fb17c194a14f5f7f884e0007d97c42f9776cffc6"
+        },
+        {
+          "id": "local:catalog:aflaj-irrigation-landscapes-of-oman",
+          "label": "Aflaj irrigation landscapes of Oman",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "4e63f158366cef48058b394bb57765647c6c0d508801ef3f521ebf79fbb98717"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Metered outlets and spatially adjusted application are irrigation techniques. Aflaj entries concern gravity-fed systems, shared access/maintenance and a particular protected cultural landscape.",
+      "boundary": "Technique, social-spatial institution and named landscape are separately identifiable subjects; the two 006 Aflaj entries still need their own per-batch review."
+    },
+    {
+      "case_id": "prior-15",
+      "left": [
+        {
+          "id": "local:catalog:riparian-forest-buffer",
+          "label": "Riparian forest buffer",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "9280580dd366466170cb692b057a8891e4640672655f37e399146942730ab3a1"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:geographic-buffer",
+          "label": "Geographic buffer",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "b3c0caa9ba2dbbc1d5cfd4d8514f5b47e3146b1582514c01bef18f33adbf7038"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "The riparian buffer is a physical vegetated strip with ecological functions. A GIS buffer is a computed distance zone; it need not contain plants or change runoff.",
+      "boundary": "Separate material/ecological and analytical-geospatial meanings."
+    },
+    {
+      "case_id": "prior-16",
+      "left": [
+        {
+          "id": "local:catalog:sociolinguistic-interview",
+          "label": "Sociolinguistic interview",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "238b782121dbd5f4c44cd3354387f44145931016b977537bb2599c0dfcec2f82"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:oral-history-interview-lead-in",
+          "label": "Oral-history interview lead-in",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "2f67dadf2a6a20eb55be6df690b05d1b5152b7969ed00d34c3944e47b4ee4fb1"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "The sociolinguistic interview elicits speech with different self-monitoring contexts. The oral-history lead-in records participant/date/location/topic metadata to preserve evidentiary context.",
+      "boundary": "Different interview stages and research functions; no split based only on audience labels."
+    },
+    {
+      "case_id": "prior-17",
+      "left": [
+        {
+          "id": "local:catalog:common-ground-in-communication",
+          "label": "Common ground in communication",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "2b2d077b539bcdd2db4c17d811316c727bcd57e7feb561ef91252a2dc99878e2"
+        },
+        {
+          "id": "local:catalog:grounding-in-communication",
+          "label": "Grounding in communication",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "61bb458f0ae569cbc3a78dfcb1254fb74a30e498c6bb98f4752c88c5df0ea557"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:implied-reader",
+          "label": "Implied reader",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "499d1a86f88c46be5a617daf1235d96af5deffccba4bd9616d46d49cdffe963b"
+        },
+        {
+          "id": "local:catalog:focalization",
+          "label": "Focalization",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "e118fc34c978410487c452b369ab7e27ddd45780e450ec95b5eff0438bce0259"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Mutually accepted conversational knowledge and the process of establishing it differ from the reader presupposed by a text or limits on narrative information.",
+      "boundary": "Conversation pragmatics stays in 005; narrative constructs stay in 006."
+    },
+    {
+      "case_id": "prior-18",
+      "left": [
+        {
+          "id": "local:catalog:negative-space",
+          "label": "Negative space",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "758da997a2ec33d1d4e7b6f641fe93106a95e914e2eaea1c71a1e9af0ffd45b0"
+        },
+        {
+          "id": "local:catalog:simultaneous-contrast",
+          "label": "Simultaneous contrast",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "7feb3a99d9c203ab074ef90f642d4965845362dfbf4fb707a84e7464751545da"
+        },
+        {
+          "id": "local:catalog:successive-contrast",
+          "label": "Successive contrast",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "758b8528db888b84862fe94c74bd26d2dec471ce1a5d083d86f82297bcb3870b"
+        }
+      ],
+      "right": [
+        {
+          "id": "Q1412040",
+          "label": "Figure–ground (perception)",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "1191563aa747115de524a93a3b62e84557568d98ac7e98e459e0ed7811f41377"
+        },
+        {
+          "id": "local:catalog:perceptual-closure",
+          "label": "Perceptual closure",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "0a38c62678efb38c911d6aa37441306d03411e8b5a4d5a31a9443c10a53547ae"
+        },
+        {
+          "id": "local:catalog:sensory-adaptation",
+          "label": "Sensory adaptation",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "1fd51ec26e386c6cd4f9eeb828a4150c149b79c71b93b8baf03ce3b2f676b49e"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Using empty pictorial areas, neighboring-color effects and sequential afterimage effects are specific visual/art subjects. Figure-ground segregation, completion of missing contours and sensory adaptation are general perceptual processes.",
+      "boundary": "007 alone owns the general figure-ground control; 006’s excluded duplicate remains excluded. Source/card wording must retain the specific art/color mechanisms."
+    },
+    {
+      "case_id": "prior-19",
+      "left": [
+        {
+          "id": "local:authored:000460",
+          "label": "Buddhism",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "29d440125b8a35879d731779142f69b52477377fcad9562d8bb574be4f82c454"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:two-truths-in-indian-buddhist-philosophy",
+          "label": "Two truths in Indian Buddhist philosophy",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "760de81dbea1416034814df23aa44f0817d8ad62d62c9a6326dda5dba3e5e1b1"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Buddhism is the wider collection of traditions; conventional versus ultimate truth is a particular philosophical distinction with school-specific interpretations.",
+      "boundary": "006 owns the broad religion control; 007 owns the philosophical distinction."
+    },
+    {
+      "case_id": "prior-20",
+      "left": [
+        {
+          "id": "Q11469",
+          "label": "Glass",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "61706af1a98d490e5ea83895253f331d78f320bf148141f2d20787131fdaa17b"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:glass-armonica",
+          "label": "Glass armonica",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "909be0fb9ecd777e3e81a1505b92f0e087e53ec42ea4aeaf3ef4d2cfe7a4b413"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Glass is a material; Franklin’s rotating-bowl friction instrument is a particular named design using that material.",
+      "boundary": "Do not infer identity from material naming."
+    },
+    {
+      "case_id": "prior-21",
+      "left": [
+        {
+          "id": "local:catalog:genetic-mapping",
+          "label": "Genetic linkage mapping",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "d5cdfb0809b91dc6c9237d39623b9c768885a0c16bc684f739bdf3c904691339"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:choropleth-mapping",
+          "label": "Choropleth mapping",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "5498977cbf267e916d9ea34c341fc4c8220825555979e642984aba92c2efdc0e"
+        },
+        {
+          "id": "local:catalog:dasymetric-mapping",
+          "label": "Dasymetric mapping",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "22459c636e44b3150d2c39e9848fa9f2b93035c13ab29389cb2f3194ebab25d4"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Mapping chromosome-marker order from inheritance is distinct from visualizing geographical quantities or reallocating spatial population estimates.",
+      "boundary": "Separate genetic versus geographical meanings."
+    },
+    {
+      "case_id": "prior-22",
+      "left": [
+        {
+          "id": "local:catalog:equilibrium-moisture-content-of-wood",
+          "label": "Equilibrium moisture content of wood",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "5110f0e9b2cf28166400d1fa70a42c693a4ef2bab6426daa3fe8895ba02f1bc3"
+        }
+      ],
+      "right": [
+        {
+          "id": "Q189520",
+          "label": "Chemical equilibrium",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "2413886df3acc57e2efbd542f72c0ee1cb798f28da9411b2c6b3e8db5753cb9d"
+        },
+        {
+          "id": "local:catalog:heterogeneous-equilibrium",
+          "label": "Heterogeneous equilibrium",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "9d60fb779f401206fd8616f6a97ab4e0d402f711986982f986a51504c91f0401"
+        },
+        {
+          "id": "local:catalog:combining-equilibrium-constants",
+          "label": "Combining equilibrium constants",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "6af9de309ebba383b7eb2bee79a7c8382b1704ddbceb077b68513cae8fb1c9f3"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Wood EMC is a material’s moisture balance with surrounding air under given environmental conditions. Chemical equilibrium concerns reversible reactions; combining equilibrium constants is an algebraic transformation of reaction equations. The wood-specific sorption application is not a new name for reaction equilibrium.",
+      "boundary": "003 owns the material/application subject; 004 owns chemical reaction concepts."
+    },
+    {
+      "case_id": "prior-23",
+      "left": [
+        {
+          "id": "local:catalog:steam-bending",
+          "label": "Steam bending",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "212609722d28fa18be16364b02ff099444fe07d8144162960d2b2336df0789a8"
+        },
+        {
+          "id": "local:catalog:kerf-bending",
+          "label": "Kerf bending",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "4dc47059a5b7313076e9c2dba03b740a9bae91511728c8ab3db3c92c0b965eef"
+        }
+      ],
+      "right": [
+        {
+          "id": "local:catalog:neutral-axis-in-beam-bending",
+          "label": "Neutral axis in beam bending",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "b0e22f266ddd4f9d92e4a30a4fd00ecad79dd51bed66d9d7f3d731c6543537e8"
+        },
+        {
+          "id": "local:catalog:three-point-bending-test",
+          "label": "Three-point bending test",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "ea8e80af70f0513dada78b0360146b03397e2fe21b9080d46759d9bdaecbafa9"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Steam bending alters wood pliability with heat and moisture; kerf bending removes material in relief slots. A neutral axis is a stress-distribution feature, and a three-point test measures response in a controlled loading configuration. Manufacturing methods, mechanical property and test remain distinct.",
+      "boundary": "Do not describe the forming methods as merely another elastic stiffness test."
+    },
+    {
+      "case_id": "prior-24",
+      "left": [
+        {
+          "id": "local:catalog:leather-temper",
+          "label": "Leather temper",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "9e2b529e6fadeba36b1901c1cb7be5289b61fef3371abcdff93daec589e913af"
+        }
+      ],
+      "right": [
+        {
+          "id": "Q175166",
+          "label": "Tempera",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "eced8888e7bfa62a77c8e334f1cf09cf8a5ec286dd30c56201dc8810ebfb5fbc"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "actual_card_check": "Actual current card text and learning takeaways were read; the previously documented distinction remains explicit.",
+      "meaning_comparison": "Leather temper describes pliability versus firmness of hide. Tempera is a paint-binding technique; the similar label component has no shared learning identity.",
+      "boundary": "Separate material property from painting medium."
+    }
+  ],
+  "shared_alias_comparisons": [
+    {
+      "alias": "Homology",
+      "cards": [
+        {
+          "id": "Q1144780",
+          "label": "Homology",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "de531173f2854a41536a4c62bff51373d51e678e6d937e6b127158b2e0b8a4c9"
+        },
+        {
+          "id": "local:catalog:homology-biology",
+          "label": "Homology (biology)",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "afc921899761ff5d7eb22bcae1576535eb3457937222b976239a03c7f9693891"
+        }
+      ],
+      "result": "separate_supported_senses",
+      "meaning_comparison": "Topological cycles/boundaries versus similarity inherited from common ancestry."
+    },
+    {
+      "alias": "Graft",
+      "cards": [
+        {
+          "id": "local:catalog:horticultural-grafting",
+          "label": "Horticultural grafting",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "d07ac0e53a7c2480e192091ff0a2d51388664a96b365a8dfc3a8819acd43e5b6"
+        },
+        {
+          "id": "local:catalog:skin-grafting",
+          "label": "Skin grafting",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "9ea3ae186b969e31344bc9478633954608e4f900bc95f3a4656b1650454fc775"
+        }
+      ],
+      "result": "separate_supported_senses",
+      "meaning_comparison": "Joining scion/rootstock versus detached skin requiring a new blood supply."
+    },
+    {
+      "alias": "Bond",
+      "cards": [
+        {
+          "id": "Q44424",
+          "label": "Chemical bond",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "0c4b212e1a06d667cd0049cd1e6fb5df4f2913e8dd72f1befe27368368d4391b"
+        },
+        {
+          "id": "local:catalog:bond-finance",
+          "label": "Bond (finance)",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "d5ed17ac8dbd3801ff8917a2e60478a0663c8171a6d416169619102a92e947fe"
+        }
+      ],
+      "result": "separate_supported_senses",
+      "meaning_comparison": "Interatomic attraction versus a debt-security repayment promise."
+    },
+    {
+      "alias": "Pitch",
+      "cards": [
+        {
+          "id": "local:catalog:pitch-material",
+          "label": "Pitch (tar-derived material)",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "9e8f7a852f6142982a96fec8340affddc981658eaf5967c6e8eb9257ce6a20ce"
+        },
+        {
+          "id": "local:catalog:pitch-music",
+          "label": "Pitch (music)",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "8ef7a1c2bd2bab86d46823243669629f01fb6e7bb849a73b3c12df264fb8fa6e"
+        }
+      ],
+      "result": "separate_supported_senses",
+      "meaning_comparison": "Explicitly tar-derived, slowly flowing material versus perceived musical highness/lowness."
+    },
+    {
+      "alias": "Constitution",
+      "cards": [
+        {
+          "id": "Q7755",
+          "label": "Constitution (politics)",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "3f65734b0c9d8ce89bc496c0ceb2eb84f440e4080775d34fcec21ee1233ad555"
+        },
+        {
+          "id": "local:catalog:material-constitution",
+          "label": "Material constitution",
+          "owner": "research-batch-007",
+          "semantic_record_sha256": "e067abbc538c02fbe360a4ce25fac41055717e68b8c1f20c0e23ce50f32b253c"
+        }
+      ],
+      "result": "separate_supported_senses",
+      "meaning_comparison": "Governmental powers and rules versus the disputed relationship between an object and its constituting matter."
+    }
+  ],
+  "current_shared_alias_lookup": {
+    "homology": [
+      "Q1144780",
+      "local:catalog:homology-biology"
+    ],
+    "bond": [
+      "Q44424",
+      "local:catalog:bond-finance"
+    ],
+    "constitution": [
+      "Q7755",
+      "local:catalog:material-constitution"
+    ],
+    "graft": [
+      "local:catalog:horticultural-grafting",
+      "local:catalog:skin-grafting"
+    ],
+    "pitch": [
+      "local:catalog:pitch-material",
+      "local:catalog:pitch-music"
+    ]
+  },
+  "supplemental_comparisons": [
+    {
+      "case_id": "central-organizational-design",
+      "cards": [
+        {
+          "id": "Q3318170",
+          "label": "Organizational design",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "783fa705543cbecf43b432038eb736a959292c9c2da9848cb9a01c893773e640"
+        }
+      ],
+      "result": "registered_id_reuse_verified",
+      "meaning_comparison": "The final card arranges roles, responsibilities and coordination, matching the pinned Organizational architecture meaning. Q3318170 is an existing control, with the original architecture alias preserved. No separately accepted local:catalog:organizational-design remains."
+    },
+    {
+      "case_id": "graph-theory-adjacency-refinement",
+      "cards": [
+        {
+          "id": "local:authored:000604",
+          "label": "Graph theory",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "3a454baf8b2dea5cce6f15d421a4f87b7ca06c1ec93916ec70355dafb359fe1f"
+        },
+        {
+          "id": "Q727035",
+          "label": "Adjacency matrix",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "6044dd76c039549f6855e39be826a21fc4903dc61f2ef6e05bc393d6d7d06550"
+        }
+      ],
+      "result": "presentation_overlap_resolved_identity_distinct",
+      "meaning_comparison": "The initially observed Graph theory takeaway repeated the adjacency-matrix/relabeling lesson. The saved version-5 refinement now separates underlying connections from drawing/labeling. Q727035 separately teaches matrix encoding, zero diagonal and symmetry for simple undirected graphs. Both registered IDs remain appropriate; no merge or novelty change is warranted."
+    },
+    {
+      "case_id": "cue-only-delayed-judgments",
+      "cards": [
+        {
+          "id": "local:catalog:delayed-judgments-of-learning",
+          "label": "Cue-only delayed judgments of learning",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "e02b3b7201eeedb411b85d59136cef87bafa4b4a1d19cb14d9455f92bdd4b29f"
+        }
+      ],
+      "result": "scope_clarification_retained",
+      "meaning_comparison": "The display-label refinement explicitly preserves the cue-only delayed calibration procedure already intended at selection. It does not add a new identity or broaden a method into all judgments of learning."
+    },
+    {
+      "case_id": "sqlite-wal-checkpoint",
+      "cards": [
+        {
+          "id": "local:catalog:write-ahead-logging",
+          "label": "Write-ahead logging",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "92379d4f3285420d7dafc35d9040bf3d947fd2bf95310a6d3aa29019062d9214"
+        },
+        {
+          "id": "local:catalog:wal-checkpointing",
+          "label": "WAL checkpointing",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "e9506bfc7c38c0a5bc4ab33d999b357261b8046767503ad9fe035f924155b9bf"
+        }
+      ],
+      "result": "general_architecture_and_distinct_phase",
+      "meaning_comparison": "SQLite is the bounded explanatory implementation. The log architecture separates appending/commit from main-file updates, while checkpointing is the later transfer phase. The source-specific wording does not create a duplicate or an extra product-specific identity."
+    },
+    {
+      "case_id": "replicated-consensus-log-raft",
+      "cards": [
+        {
+          "id": "local:catalog:distributed-consensus",
+          "label": "Replicated-log consensus under crash faults",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "a0d4a309f66a8bb384e4f751d5a4f1b69b5064fcb5e9db52959f836c153de4a2"
+        },
+        {
+          "id": "local:catalog:replicated-log",
+          "label": "Replicated log",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "8dc7b9860d7fb131decd3a46b43d5c47e27f6c41ce37a069a6ba9989d1418131"
+        },
+        {
+          "id": "local:catalog:raft-consensus-algorithm",
+          "label": "Raft consensus algorithm",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "f111a49c80fe2896ef65fbc12f65628de4dcd9bc472a923b0e538ad73324983f"
+        }
+      ],
+      "result": "distinct_problem_artifact_and_algorithm",
+      "meaning_comparison": "The approved crash-fault consensus label is retained. Ordered agreement with a communicating-majority condition, the replicated command-history data structure, and Raft’s particular leader/election/safety protocol remain distinct learning subjects."
+    }
+  ],
+  "within_batch_likely_collision_comparisons": [
+    {
+      "cards": [
+        {
+          "id": "local:catalog:first-price-sealed-bid-auction",
+          "label": "First-price sealed-bid auction",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "2e611b93e7b84c9014a2421c3646499f9b554e65356d04c8af3b15780699bc85"
+        },
+        {
+          "id": "local:catalog:second-price-sealed-bid-auction",
+          "label": "Second-price sealed-bid auction",
+          "owner": "research-batch-005",
+          "semantic_record_sha256": "9c74811ee4817a0b0cd2c56a6feab61e3b42755a86e02f227503aeeb2ebaef49"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "meaning_comparison": "Winner pays own bid versus second-highest bid; same allocation rule does not erase the different payment mechanism."
+    },
+    {
+      "cards": [
+        {
+          "id": "local:catalog:chair-by-ruth-asawa",
+          "label": "Chair by Ruth Asawa",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "ff6e19d09808b2c87b5801941ac053aa98c6c642868ae73b4b746b4dd849e1d8"
+        },
+        {
+          "id": "local:catalog:negative-space",
+          "label": "Negative space",
+          "owner": "research-batch-006",
+          "semantic_record_sha256": "758da997a2ec33d1d4e7b6f641fe93106a95e914e2eaea1c71a1e9af0ffd45b0"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "meaning_comparison": "The named 1965 lithograph TAM.1558-II is a particular work; negative space is the general compositional use of unmarked areas, exemplified by that work."
+    },
+    {
+      "cards": [
+        {
+          "id": "local:catalog:first-order-reaction-half-life",
+          "label": "First-order reaction half-life",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "658725b5c7dfcd735eb3a423ec8fea72e4ed8eae649e3f0e5ab5f0e9c6be44cb"
+        },
+        {
+          "id": "local:catalog:second-order-reaction-half-life",
+          "label": "Second-order reaction half-life",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "34524717566a257f25b4c0fd2d8e49a6740cfb7aec90176c39c2c829d1b4fc8b"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "meaning_comparison": "Concentration-independent half-life under first-order kinetics versus concentration-dependent half-life under the stated single-reactant second-order law."
+    },
+    {
+      "cards": [
+        {
+          "id": "local:catalog:body-centered-cubic-structure",
+          "label": "Body-centered cubic structure",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "2cc57e70e500fcc8d967da497e392a423cd91d8f6383a48b04eb5cb41399189b"
+        },
+        {
+          "id": "local:catalog:face-centered-cubic-structure",
+          "label": "Face-centered cubic structure",
+          "owner": "research-batch-004",
+          "semantic_record_sha256": "6fca2857a33e4b216315c94ef0083218b74bddf5896114026d782c9f2cd1b5e9"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "meaning_comparison": "Different atomic positions, conventional-cell populations and coordination numbers establish different crystal arrangements."
+    },
+    {
+      "cards": [
+        {
+          "id": "local:catalog:diagnostic-sensitivity",
+          "label": "Diagnostic sensitivity",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "a39bc65b642e29974768e25142c089bd056183e680442448428787dd1b47af1d"
+        },
+        {
+          "id": "local:catalog:diagnostic-specificity",
+          "label": "Diagnostic specificity",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "828ada6233448282e922b5834d227de5ed845751c601ef2d0b3230acebe5bf93"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "meaning_comparison": "Positive results conditioned on disease presence versus negative results conditioned on disease absence."
+    },
+    {
+      "cards": [
+        {
+          "id": "local:catalog:karner-blue-butterfly",
+          "label": "Karner blue butterfly",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "e6bd21e511fffe10c6eeb21dd125df89d4d74239ac016fc5998a73285a8db21c"
+        },
+        {
+          "id": "local:catalog:mutualism",
+          "label": "Mutualism",
+          "owner": "research-batch-003",
+          "semantic_record_sha256": "2812c27ea1cdd4a20b735b67e4399fe70217f15560f87fe08cef078e95c36a9e"
+        }
+      ],
+      "result": "distinct_meanings_retained",
+      "meaning_comparison": "The butterfly is a named taxon with a documented ant interaction; mutualism is the broader interaction category. Shared use of this example does not make the taxon identical to the mechanism."
+    }
+  ],
+  "baseline_near_match_comparisons": [
+    {
+      "card": {
+        "id": "local:catalog:pulse-oximetry",
+        "label": "Pulse oximetry",
+        "owner": "research-batch-003",
+        "semantic_record_sha256": "b8ae71aea1c8a6b4d24f005ddb8fdc34305eca776062a79a6dbc3cee73c89db5"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:catalog:skin-pigmentation-and-pulse-oximetry",
+          "label": "Skin pigmentation and pulse oximetry",
+          "description": null,
+          "score": 0.54225
+        },
+        {
+          "id": "Q1074",
+          "label": "Skin",
+          "description": "soft outer covering organ of vertebrates",
+          "score": 0.16099
+        },
+        {
+          "id": "Q629",
+          "label": "Oxygen",
+          "description": "chemical element with symbol O and atomic number 8",
+          "score": 0.09077
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "General optical estimation procedure versus the specific pigmentation-related accuracy limitation. The general card also explains noninvasive estimation; the existing limitation card remains bounded to an accuracy factor.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:akhand-path",
+        "label": "Akhand path",
+        "owner": "research-batch-006",
+        "semantic_record_sha256": "f4b2a6da73f6139710fc136c6fd16b4a7e96295ba1e45bda203011ce77e1034c"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q203249",
+          "label": "Guru Granth Sahib",
+          "description": "The primary holy scripture of Sikhism",
+          "score": 0.53312
+        },
+        {
+          "id": "Q12670591",
+          "label": "Shared-use path",
+          "description": "trail that supports multiple recreation and transportation types, such as walking, bicycling, inline skating and people in wheelchairs",
+          "score": 0.11646
+        },
+        {
+          "id": "Q132644804",
+          "label": "Bike path",
+          "description": "independent infrastructure exclusively for bicycle traffic",
+          "score": 0.11389
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Uninterrupted collective recitation practice versus the named scripture being read.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:inertial-reference-frame",
+        "label": "Inertial reference frame",
+        "owner": "research-batch-004",
+        "semantic_record_sha256": "66ee45dfc15b8fe1feaa74139d1d04120e4cd3f28a6b3bf65257d5f5df0d0567"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q3310692",
+          "label": "Rotating reference frame",
+          "description": "special case of a non-inertial reference frame that is rotating relative to an inertial reference frame",
+          "score": 0.47438
+        },
+        {
+          "id": "Q6664509",
+          "label": "Local reference frame",
+          "description": "frame of reference localized to a specific region of spacetime",
+          "score": 0.27162
+        },
+        {
+          "id": "Q212126",
+          "label": "Fictitious force",
+          "description": "apparent force that acts on all masses whose motion is described using a non-inertial frame of reference, such as a rotating reference frame",
+          "score": 0.26658
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Inertial frames omit inertial-force corrections; rotating frames are one non-inertial class requiring them.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:coriolis-force",
+        "label": "Coriolis force",
+        "owner": "research-batch-004",
+        "semantic_record_sha256": "aa1196cb0881642b28049756a74d6545693a6d3697b682ac75a2437fac00608d"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q212126",
+          "label": "Fictitious force",
+          "description": "apparent force that acts on all masses whose motion is described using a non-inertial frame of reference, such as a rotating reference frame",
+          "score": 0.44954
+        },
+        {
+          "id": "Q3310692",
+          "label": "Rotating reference frame",
+          "description": "special case of a non-inertial reference frame that is rotating relative to an inertial reference frame",
+          "score": 0.3849
+        },
+        {
+          "id": "Q74561",
+          "label": "International Terrestrial Reference System and Frame",
+          "description": "world spatial reference system co-rotating with the Earth in its diurnal motion in space",
+          "score": 0.20104
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Coriolis is the rotation-related sideways-deflection term, narrower than the general class of fictitious forces; the card retains its rotating-frame meaning.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:martingale",
+        "label": "Martingale",
+        "owner": "research-batch-004",
+        "semantic_record_sha256": "b931c85245a5c1b3d798e3975f87efe1f4d1fc8cdd0fb8afc3441ff4fbd2bc3a"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q200125",
+          "label": "Expected value",
+          "description": "long-run average value of a random variable",
+          "score": 0.42421
+        },
+        {
+          "id": "Q204570",
+          "label": "Information entropy",
+          "description": "expected value of the amount of information delivered by a message",
+          "score": 0.14183
+        },
+        {
+          "id": "Q176623",
+          "label": "Random variable",
+          "description": "variable representing a random phenomenon",
+          "score": 0.13187
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Conditional no-expected-change stochastic process versus the general expected-value operation.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:keystone-species",
+        "label": "Keystone species",
+        "owner": "research-batch-003",
+        "semantic_record_sha256": "622cd510e97ac3c1cb4dde4fb4d52117e77d9ff487993ebc8e182b1fa56d962e"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q55647734",
+          "label": "Cultural keystone species",
+          "description": "concept in ecology",
+          "score": 0.41346
+        },
+        {
+          "id": "Q7432",
+          "label": "Species",
+          "description": "one of the basic units of biological classification and a taxonomic rank",
+          "score": 0.08825
+        },
+        {
+          "id": "Q177634",
+          "label": "Community",
+          "description": "social unit of human organisms who share common values",
+          "score": 0.08725
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Ecological influence on community persistence is the selected keystone meaning; a culturally significant species is not automatically that ecological mechanism.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:manchester-baby",
+        "label": "Manchester Baby",
+        "owner": "research-batch-005",
+        "semantic_record_sha256": "f8408f4122b984afa76f560b24cb0b6bc6d6fb415ce13f287924a88edab91b5b"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q83913",
+          "label": "Cathode ray tube",
+          "description": "vacuum tube that can show moving pictures, vector graphics, or lines",
+          "score": 0.41138
+        },
+        {
+          "id": "Q40056",
+          "label": "Computer program",
+          "description": "sequence of instructions written in programming language to perform a specified task with a computer",
+          "score": 0.13045
+        },
+        {
+          "id": "Q3042540",
+          "label": "X-ray microtomography",
+          "description": "X-ray imaging method",
+          "score": 0.11666
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "The particular stored-program computer and its historical operation differ from the cathode-ray-tube component.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:rule-of-lenity",
+        "label": "Rule of lenity",
+        "owner": "research-batch-007",
+        "semantic_record_sha256": "6f3aed32e1b0c17044be5e839e990f06f7c640cf6fdeb635fb094fd5b51372d2"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q146491",
+          "label": "Criminal law",
+          "description": "body of law that relates to crime",
+          "score": 0.40979
+        },
+        {
+          "id": "Q44918",
+          "label": "Rule of law",
+          "description": "doctrine that advocates that every citizen, including those in government, is subject to the law",
+          "score": 0.13231
+        },
+        {
+          "id": "Q665141",
+          "label": "Case law",
+          "description": "principle or rule established in a previous legal case that is either binding on or persuasive for a court",
+          "score": 0.12137
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "A specific criminal-statute ambiguity principle differs from criminal law as a field.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:melodic-retrograde",
+        "label": "Melodic retrograde",
+        "owner": "research-batch-007",
+        "semantic_record_sha256": "d6bb07e8159a39dd52b983fc2dc68fa8424fbc03e78242cdcee2b1b9ba05e2a7"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:catalog:melodic-inversion",
+          "label": "Melodic inversion",
+          "description": null,
+          "score": 0.40904
+        },
+        {
+          "id": "Q2082711",
+          "label": "Retrograde analysis",
+          "description": "technique employed to determine which moves were played leading up to a given position",
+          "score": 0.15576
+        },
+        {
+          "id": "Q186393",
+          "label": "Counterpoint",
+          "description": "compositional technique based on the combination of several overlapping melodic lines",
+          "score": 0.09117
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Reversing note order differs explicitly from reversing interval direction.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:apple-inc",
+        "label": "Apple Inc.",
+        "owner": "research-batch-005",
+        "semantic_record_sha256": "3bc029befb2ba3dda62cf65258bd09baa848ad4a36231f491e43f953f9d76963"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q89",
+          "label": "Apple",
+          "description": "edible fruit of the apple tree",
+          "score": 0.40844
+        },
+        {
+          "id": "local:authored:000101",
+          "label": "Supply chain transparency",
+          "description": "Making the origins and production conditions of goods more visible.",
+          "score": 0.13919
+        },
+        {
+          "id": "local:authored:000566",
+          "label": "Supply chain management",
+          "description": "Coordinating the movement of materials, products and information.",
+          "score": 0.13329
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Apple is explicitly the company in a historical supply-chain case, not the fruit.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:bar-entry-in-backgammon",
+        "label": "Bar entry in backgammon",
+        "owner": "research-batch-007",
+        "semantic_record_sha256": "2b46edf32a6526770db42e315bea5e04d5b1c2285236728c82c976d515e3e173"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:authored:000257",
+          "label": "Backgammon",
+          "description": "Exploring strategic play involving movement, probability and dice.",
+          "score": 0.40494
+        },
+        {
+          "id": "Q1048487",
+          "label": "Pull-up",
+          "description": "An upper-body compound exercise where you pull yourself up on a bar (with an overhand grip) until your chin is above the bar, targeting the back (secondarily the biceps and shoulders)",
+          "score": 0.09152
+        },
+        {
+          "id": "Q7240507",
+          "label": "Premove",
+          "description": "input given by a player to the server during the player's opponent's turn that instructs the server to make a certain move on a certain turn in the future if possible",
+          "score": 0.08595
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "The entry priority and inability-to-enter rule is a specific game procedure, distinct from Backgammon overall even though an older broad card used bar entry as its example.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:paris-law-for-fatigue-crack-growth",
+        "label": "Paris law for fatigue crack growth",
+        "owner": "research-batch-004",
+        "semantic_record_sha256": "e95b9a90e2c9a703c7eb97bdaa4dee811595eb4819b93a14c5ebb2c0aaba19cf"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q65046116",
+          "label": "Crack growth equation",
+          "description": "class of equation used for calculating the growing size of a fatigue crack",
+          "score": 0.40376
+        },
+        {
+          "id": "Q7236525",
+          "label": "Power law of practice",
+          "description": "example of the learning curve effect on performance",
+          "score": 0.15608
+        },
+        {
+          "id": "Q507234",
+          "label": "Fatigue (material)",
+          "description": "weakening of a material caused by repeatedly applied loads",
+          "score": 0.12009
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "The bounded empirical Paris law is one member of the general crack-growth-equation class.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:wandle-textile-design",
+        "label": "Wandle textile design",
+        "owner": "research-batch-006",
+        "semantic_record_sha256": "5371b9e8d442187482655460f20e8b609d01f5b2a64e5cbfc361811390f6d1d8"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:authored:000395",
+          "label": "Textile design",
+          "description": "Designing patterns, structures and surfaces for fabrics.",
+          "score": 0.39766
+        },
+        {
+          "id": "Q28823",
+          "label": "Textile",
+          "description": "various fiber-based materials",
+          "score": 0.17297
+        },
+        {
+          "id": "Q17137002",
+          "label": "Repeat sign",
+          "description": "musical notation indicating repetition",
+          "score": 0.1208
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "A particular named Morris textile design, including its measured repeat, differs from textile design generally.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:triad-social-group",
+        "label": "Triad (social group)",
+        "owner": "research-batch-005",
+        "semantic_record_sha256": "db7f159a5fb3e8a714264df0eef623356c19338e310117c286e8d87ba51b5ae0"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q874405",
+          "label": "Social group",
+          "description": "two or more humans who interact with one another",
+          "score": 0.38951
+        },
+        {
+          "id": "Q133311",
+          "label": "Tribe",
+          "description": "human social group",
+          "score": 0.16007
+        },
+        {
+          "id": "Q484416",
+          "label": "Caste",
+          "description": "fixed social group into which an individual is born within a particular system of social stratification",
+          "score": 0.14569
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Three-member coalition and persistence structure differs from the general social-group category.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:new-zealand-mmp-threshold",
+        "label": "New Zealand MMP threshold",
+        "owner": "research-batch-007",
+        "semantic_record_sha256": "a8110337d6b01915be48390044a21a1aaa5442b3e6e2d70c91b16848ec0e6b36"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q672551",
+          "label": "History of New Zealand",
+          "description": "aspect of history",
+          "score": 0.38643
+        },
+        {
+          "id": "Q3509537",
+          "label": "Electoral system of New Zealand",
+          "description": "system by which New Zealand parliament is elected",
+          "score": 0.3861
+        },
+        {
+          "id": "Q774145",
+          "label": "Threshold (architecture)",
+          "description": "sill of a door",
+          "score": 0.18085
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "A specific MMP eligibility rule differs from New Zealand history and the country’s electoral system as a whole.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:dyad-social-group",
+        "label": "Dyad (social group)",
+        "owner": "research-batch-005",
+        "semantic_record_sha256": "36fd2a8abf2fbb6a518579c724b6c0e51bb9493c966414f3fab78970775052c9"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q874405",
+          "label": "Social group",
+          "description": "two or more humans who interact with one another",
+          "score": 0.38289
+        },
+        {
+          "id": "Q6008637",
+          "label": "In-group favoritism",
+          "description": "pattern of favoring members of one's in-group over out-group members",
+          "score": 0.17379
+        },
+        {
+          "id": "Q133311",
+          "label": "Tribe",
+          "description": "human social group",
+          "score": 0.16919
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Two-person dependence on continued participation differs from the general group category.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:qibla",
+        "label": "Qibla",
+        "owner": "research-batch-006",
+        "semantic_record_sha256": "ee776f0774efd3d3c902e2d90ac2cabafb2716b4c63becaab1c831ce8cd4155b"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:catalog:mihrab",
+          "label": "Mihrab",
+          "description": null,
+          "score": 0.36891
+        },
+        {
+          "id": "Q14565197",
+          "label": "Body-relative direction",
+          "description": "direction that is dependent on the orientation of an observer (up, down, right, left, forwards or backwards)",
+          "score": 0.16159
+        },
+        {
+          "id": "Q47740",
+          "label": "Muslim",
+          "description": "adherent of the religion of Islam",
+          "score": 0.15675
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Prayer direction differs explicitly from the architectural niche that marks it.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:circumstantial-moral-luck",
+        "label": "Circumstantial moral luck",
+        "owner": "research-batch-007",
+        "semantic_record_sha256": "f9d3923f1b189d877c4ca2a22d37782d41648af06610b703adaaed37395c4222"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:catalog:moral-luck",
+          "label": "Moral luck",
+          "description": null,
+          "score": 0.36111
+        },
+        {
+          "id": "Q4355306",
+          "label": "Moral psychology",
+          "description": "field of study in both philosophy and psychology",
+          "score": 0.12893
+        },
+        {
+          "id": "Q6909092",
+          "label": "Moral certainty",
+          "description": "concept of intuitive probability",
+          "score": 0.12123
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Luck in the situations encountered differs from moral luck generally and from its older outcome-luck example.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:species-counterpoint",
+        "label": "Species counterpoint",
+        "owner": "research-batch-007",
+        "semantic_record_sha256": "4e328a3a28d9379501ec1e4d39c25cfff597aefa919ae9c86710058d5fd230a7"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q186393",
+          "label": "Counterpoint",
+          "description": "compositional technique based on the combination of several overlapping melodic lines",
+          "score": 0.3601
+        },
+        {
+          "id": "local:catalog:rhythmic-augmentation",
+          "label": "Rhythmic augmentation",
+          "description": null,
+          "score": 0.10191
+        },
+        {
+          "id": "Q7432",
+          "label": "Species",
+          "description": "one of the basic units of biological classification and a taxonomic rank",
+          "score": 0.09672
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "The restricted pedagogical note-ratio exercise method differs from combining simultaneous melodic lines generally; the current Counterpoint control is not another new method count.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:ocean-acidification",
+        "label": "Ocean acidification",
+        "owner": "research-batch-003",
+        "semantic_record_sha256": "67c1e669f25a272a2ff2a41e1b8a86286929936ede619378a37f44ff05ffec32"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q60791727",
+          "label": "Ocean acidification in the Arctic Ocean",
+          "description": "Aspect of climate change",
+          "score": 0.35984
+        },
+        {
+          "id": "Q28130508",
+          "label": "Ocean acidification in the Great Barrier Reef",
+          "description": "threat to the reef which reduces the viability and strength of reef-building corals",
+          "score": 0.27383
+        },
+        {
+          "id": "Q11193",
+          "label": "Base (chemistry)",
+          "description": "chemical substance that can react with an acid, accepting hydrogen ions (protons) or more generally, donating a pair of valence electrons",
+          "score": 0.14035
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "General carbon-dioxide-driven ocean chemistry differs in breadth from regional Arctic or Great Barrier Reef applications.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:castling",
+        "label": "Castling",
+        "owner": "research-batch-007",
+        "semantic_record_sha256": "a3154d61592822f9ab8f030b73f9944e5eb98dc3520e153a9b4d8e003a91a286"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:catalog:chess960-castling",
+          "label": "Castling in Chess960",
+          "description": null,
+          "score": 0.35264
+        },
+        {
+          "id": "Q2940894",
+          "label": "Corresponding squares",
+          "description": "in chess, a pair of squares such that the occupation of one square by a king forces the enemy king to move to the other square in order to hold the position",
+          "score": 0.14046
+        },
+        {
+          "id": "Q3745603",
+          "label": "Rook and pawn versus rook endgame",
+          "description": "chess endgame theory",
+          "score": 0.1136
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "General castling rights/temporary barriers differ from Chess960-specific starting positions and resulting piece movement.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:constitutive-moral-luck",
+        "label": "Constitutive moral luck",
+        "owner": "research-batch-007",
+        "semantic_record_sha256": "ee44b05a24e2241a91fea73373821f0ec768f907ad79199d3a8da1b16563bc83"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:catalog:moral-luck",
+          "label": "Moral luck",
+          "description": null,
+          "score": 0.35182
+        },
+        {
+          "id": "Q200303",
+          "label": "Inheritance",
+          "description": "practice of passing on property, position, or office upon the death, resignation, or stepping down of individuals",
+          "score": 0.10129
+        },
+        {
+          "id": "Q4355306",
+          "label": "Moral psychology",
+          "description": "field of study in both philosophy and psychology",
+          "score": 0.10002
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Luck shaping traits and dispositions differs from luck in circumstances or outcomes and from the general philosophical category.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:archaeological-stratigraphy",
+        "label": "Archaeological stratigraphy",
+        "owner": "research-batch-006",
+        "semantic_record_sha256": "3a1da9fcfde85f2a59594640c6a1c9ccb9b7241438ca98c2b644e7753b2fdc1f"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q134783",
+          "label": "Stratigraphy",
+          "description": "study of rock layers and the layering process",
+          "score": 0.34954
+        },
+        {
+          "id": "Q7452457",
+          "label": "Sequence dating",
+          "description": "archaeological relative dating method",
+          "score": 0.15051
+        },
+        {
+          "id": "Q736917",
+          "label": "Formation (stratigraphy)",
+          "description": "body of rock identified by lithic characteristics and stratigraphic position; it is usually but not necessarily tabular and is mappable at the Earth's surface or traceable in the subsurface. Smaller than a subgroup",
+          "score": 0.12854
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Archaeological interpretation of deposits is a bounded application to human activity, while the pinned general stratigraphic subject concerns rock layers.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:shabad",
+        "label": "Shabad",
+        "owner": "research-batch-006",
+        "semantic_record_sha256": "153770c100b099d77eaf1f78972b0a53cfc5ef1e3a14757a157767952594f442"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q203249",
+          "label": "Guru Granth Sahib",
+          "description": "The primary holy scripture of Sikhism",
+          "score": 0.34616
+        },
+        {
+          "id": "Q582093",
+          "label": "Antiphon",
+          "description": "short sentence sung or recited before or after a psalm or canticle; call and response, especially in Christian music and ritual",
+          "score": 0.15728
+        },
+        {
+          "id": "Q180422",
+          "label": "Harmandir Sahib",
+          "description": "Sikh religious site in Amritsar, Punjab, India",
+          "score": 0.11113
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "A hymn and its devotional use differ from the entire named scriptural collection.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:problem-of-closeness-in-double-effect",
+        "label": "Problem of closeness in double effect",
+        "owner": "research-batch-007",
+        "semantic_record_sha256": "98d7302ba37938d8b1785b40845fbb59269b5c0d8ab3c34b26767c5e36a1e205"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:catalog:doctrine-of-double-effect",
+          "label": "Doctrine of double effect",
+          "description": null,
+          "score": 0.34527
+        },
+        {
+          "id": "Q109546940",
+          "label": "Double empathy problem",
+          "description": "psychological theory regarding individuals on the autism spectrum",
+          "score": 0.15763
+        },
+        {
+          "id": "Q17006963",
+          "label": "Default effect",
+          "description": "phenomenon that making an option the default increases the likelihood that it is chosen",
+          "score": 0.11279
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "A specific objection about inseparable intended means/side effects differs from the doctrine it challenges.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:critical-point-of-a-fluid",
+        "label": "Critical point of a fluid",
+        "owner": "research-batch-004",
+        "semantic_record_sha256": "42d82f932bf0b46ad42705acb18315913fc0c8bf0afd6ca57570c0f7c8996e2a"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:catalog:supercritical-fluid",
+          "label": "Supercritical fluid",
+          "description": null,
+          "score": 0.34424
+        },
+        {
+          "id": "Q255722",
+          "label": "Vapor",
+          "description": "a substance in the gas phase at a temperature lower than its critical point",
+          "score": 0.31784
+        },
+        {
+          "id": "Q1003183",
+          "label": "Boiling point",
+          "description": "temperature at which a substance changes from liquid into vapor",
+          "score": 0.19047
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Liquid–vapor boundary endpoint differs from a fluid state beyond the critical temperature and pressure.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:imperfect-duty",
+        "label": "Imperfect duty",
+        "owner": "research-batch-007",
+        "semantic_record_sha256": "6202a305f97f96a0a6f6658c604e66062045d6e52303a6c908c9b8cc388df530"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q878070",
+          "label": "duty",
+          "description": "commitment or obligation to someone or something or to perform an action on the behalf of",
+          "score": 0.34207
+        },
+        {
+          "id": "Q52389",
+          "label": "Customs duty",
+          "description": "tax on the import and export of goods",
+          "score": 0.21261
+        },
+        {
+          "id": "Q2648051",
+          "label": "Obligation",
+          "description": "legal or moral requirement to take a certain course of action",
+          "score": 0.16275
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "An obligation with latitude in fulfillment is a specified duty category rather than duty generally or optional supererogation.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:acid-base-indicator",
+        "label": "Acid-base indicator",
+        "owner": "research-batch-004",
+        "semantic_record_sha256": "a401a9888f6fcce7b28148ca99584847957eedba9c89ab69b6dfbf445a708866"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q378751",
+          "label": "Acid–base reaction",
+          "description": "chemical reaction between an acid and a base",
+          "score": 0.33828
+        },
+        {
+          "id": "Q40936",
+          "label": "PH",
+          "description": "measure of the acidity of an aqueous solution",
+          "score": 0.21223
+        },
+        {
+          "id": "Q11193",
+          "label": "Base (chemistry)",
+          "description": "chemical substance that can react with an acid, accepting hydrogen ions (protons) or more generally, donating a pair of valence electrons",
+          "score": 0.16344
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "The color-changing measurement substance/application differs from proton-transfer reactions generally.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:snapshot-isolation",
+        "label": "Snapshot isolation",
+        "owner": "research-batch-005",
+        "semantic_record_sha256": "9fcb69d13285063940da0fb357c3d444f2bb06a4cdd2115758a256e672a70dc9"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "local:catalog:serializable-snapshot-isolation",
+          "label": "Serializable snapshot isolation",
+          "description": null,
+          "score": 0.33666
+        },
+        {
+          "id": "local:catalog:postgresql-repeatable-read-snapshots",
+          "label": "PostgreSQL Repeatable Read snapshots",
+          "description": null,
+          "score": 0.23237
+        },
+        {
+          "id": "local:catalog:stable-multipass-sorting",
+          "label": "Stable multi-pass sorting",
+          "description": null,
+          "score": 0.07805
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "Stable snapshot visibility is different from added serializability checks and from PostgreSQL-specific Repeatable Read timing; the card expressly avoids inferring serializability from visibility alone.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    },
+    {
+      "card": {
+        "id": "local:catalog:carnot-cycle",
+        "label": "Carnot cycle",
+        "owner": "research-batch-004",
+        "semantic_record_sha256": "256826ef5d1a7946d880217447643bb02d0801a987984fe5bec73a0702baf9a1"
+      },
+      "baseline_neighbors_screened": [
+        {
+          "id": "Q178185",
+          "label": "Heat engine",
+          "description": "system that performs the conversion of heat or thermal energy to mechanical work",
+          "score": 0.33503
+        },
+        {
+          "id": "Q12760",
+          "label": "Steam engine",
+          "description": "heat engine that performs mechanical work using steam as its working fluid",
+          "score": 0.18528
+        },
+        {
+          "id": "Q5198175",
+          "label": "Cycle space",
+          "description": "construction in graph theory",
+          "score": 0.1442
+        }
+      ],
+      "result": "no_unresolved_equivalence_found",
+      "meaning_comparison": "An ideal reversible benchmark cycle differs from the broader heat-engine class.",
+      "inspection_scope": "Current card read; nearest baseline registered meaning and any displayed prior candidate card read. This is identity comparison, not a fresh source audit."
+    }
+  ],
+  "selection_text_delta_reconciliation": [
+    {
+      "id": "local:authored:000604",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Represent connections by vertices and edges, then use structural constraints such as bipartite colorability.",
+          "actual": "Separate a network’s underlying connections from the way its vertices and edges are drawn or labeled."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:write-ahead-logging",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Append committed changes separately before transferring them into the main database, allowing concurrent readers.",
+          "actual": "See how SQLite's WAL mode appends changes separately before checkpointing them into the main database, allowing concurrent readers."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:wal-checkpointing",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Move committed log content into the database as a separate operation from reading, writing, and committing.",
+          "actual": "In SQLite, move committed log content into the database as a separate operation from reading, writing, and committing."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:minimal-pair",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Use a one-position contrast between otherwise matching words as evidence that two sounds distinguish meanings.",
+          "actual": "Use a spoken-language word pair differing in one sound as evidence of contrastive phonemes, without treating failure to find a pair as proof of equivalence."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:delayed-judgments-of-learning",
+      "changes": {
+        "label": {
+          "selected": "Delayed judgments of learning",
+          "actual": "Cue-only delayed judgments of learning"
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:mansabdari-system",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Akbar tied administrators’ rank and cavalry responsibilities to reassigned revenue allocations, limiting independent hereditary power.",
+          "actual": "Under Akbar, administrators’ ranks combined civil service and cavalry responsibilities with revenue allocations that could be reassigned."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:haitian-revolution",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "An uprising against plantation slavery developed into independence, while foreign governments’ recognition remained constrained by their own slaveholding interests.",
+          "actual": "An uprising against plantation slavery led to independence, while U.S. policy and delayed recognition reflected shifting concerns about slavery, trade and diplomacy."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:chinese-imperial-examinations",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Success in literary and Confucian examinations became a route into government, although most candidates never obtained office.",
+          "actual": "In the Song case, literary and Confucian examinations offered a route into government, but most candidates never became officials."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:travel-time-service-area",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "A reachable area follows paths and travel costs in a network, so it differs from a circle drawn at a fixed distance.",
+          "actual": "A reachable area follows network paths and travel costs, so it need not match a circle drawn at a fixed distance."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:puja",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Offerings, images and acts of hospitality create a ritual encounter with a deity; the details vary among Hindu communities.",
+          "actual": "Offerings and visual interaction with deity images are common elements of Hindu puja; practices vary with the deity and community."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:prasad",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Food or other offerings made to a deity can be shared with worshippers, connecting divine hospitality with communal receipt.",
+          "actual": "Offerings made to a deity can later be shared among worshippers, connecting devotion with communal distribution."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:mikveh",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Jewish ritual bathing can shape substantial communal architecture, as Cologne’s medieval bath descends deep enough to reach groundwater.",
+          "actual": "A Jewish ritual bath can be studied through its built setting; Cologne’s medieval mikveh reaches groundwater deep beneath the former Jewish quarter."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:omamori",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "A portable shrine amulet is selected for a particular request and carried as an expression of a kami’s protection.",
+          "actual": "A portable shrine amulet is often selected for a particular request and carried as an expression of a kami’s protection."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:narrative-paralepsis",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "A narrative can reveal information beyond its established focalization norm, making an exceptional disclosure meaningful.",
+          "actual": "A narrative can reveal information beyond its established focalization norm; identifying this excess depends on the particular text."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:anaphora-rhetoric",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Repeating initial words across phrases or lines builds rhythmic and emotional accumulation.",
+          "actual": "Repeating initial words across phrases or lines can build rhythmic and emotional accumulation."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:walden",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Thoreau’s account of life by Walden Pond makes withdrawal from conventional society a literary experiment in how to live.",
+          "actual": "Thoreau’s account of life by Walden Pond invites an editorial reading of withdrawal from conventional society as an experiment in ways of living."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:sestina-altaforte",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Pound uses a troubadour-warrior’s voice and recurring end-words to intensify a dramatic monologue praising combat.",
+          "actual": "Pound adopts a troubadour-warrior’s voice and recurring end-words; an editorial reading hears their repetition intensifying the monologue’s praise of combat."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:the-red-wheelbarrow",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Williams’s short lines split ordinary compound words, making the placement of everyday objects inseparable from the poem’s pacing.",
+          "actual": "Williams splits compound words across short lines; an editorial reading interprets that lineation as shaping pacing and attention."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:we-real-cool",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Brooks places the repeated group pronoun at line endings, joining collective self-assertion to a rhythm that stops with mortality.",
+          "actual": "Brooks places a collective pronoun at line endings; an editorial reading connects the recurring group voice with the poem’s final reference to death."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:agha-shahid-ali",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Ali advocated English ghazals that retain autonomous couplets and shared rhyme-refrain patterns instead of merely borrowing the name.",
+          "actual": "Ali promoted the traditional ghazal in English through poetry and anthology editorship, emphasizing the autonomy of its couplets."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:one-art",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Bishop’s villanelle expands from minor misplaced objects to personal loss, making its repeated assurance increasingly difficult for the speaker to sustain.",
+          "actual": "Bishop’s villanelle moves from small losses toward personal loss; an editorial reading hears increasing strain in its repeated assurance."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:sugar-lift-etching",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "A water-soluble sugar drawing beneath a varnish ground lifts away in water, exposing drawn areas for subsequent aquatint and etching.",
+          "actual": "A water-soluble sugar drawing beneath a varnish ground lifts away in water, exposing drawn areas for etching, often after aquatint."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:cliche-verre",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "A drawn, painted or scratched glass plate becomes a negative when placed over light-sensitive paper and exposed to light.",
+          "actual": "A drawn, painted or scratched glass plate acts as a negative for exposing light-sensitive paper."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:photogram",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Objects laid on photosensitive paper control exposure directly: opaque areas stay light, while translucent objects produce intermediate tones.",
+          "actual": "In the described paper process, opaque objects leave light areas while translucent objects can yield intermediate tones during direct exposure."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:fresco-a-secco",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Fresco a secco applies paint to a dry wall surface, distinguishing it from wet-plaster buon fresco.",
+          "actual": "Fresco a secco applies paint to a dry plaster surface, contrasting with buon fresco on wet plaster."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:giornata",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "A fresco painter lays only the area of fresh finishing plaster that can be painted that day, dividing the work into daily sections.",
+          "actual": "A fresco painter prepares fresh finishing plaster in daily working sections sized to what can be painted while the surface remains workable."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:negative-space",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Unmarked areas around or within depicted forms can actively describe an object, as blank chair shapes do among the marks in Asawa’s drawing.",
+          "actual": "Unmarked areas around or within depicted forms can describe an object, as blank chair shapes do in Ruth Asawa’s 1965 lithograph Chair (TAM.1558-II)."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:chair-by-ruth-asawa",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Asawa’s drawing lets chairs emerge both from dense marker patterns and from unmarked gaps, making absence as constructive as the surrounding marks.",
+          "actual": "In the 1965 lithograph Chair (TAM.1558-II), patterned marks and unmarked spaces both delineate chairs, making negative space an active part of the composition."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:strawberry-thief",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Morris’s textile design uses indigo-discharge printing to give fruit-stealing thrushes and foliage crisp detail within a repeated pattern.",
+          "actual": "Morris used indigo-discharge printing for Strawberry Thief, a textile pattern inspired by fruit-stealing thrushes in his garden."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:wandle-textile-design",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Morris’s Wandle design uses a notably large pattern repeat, making the scale of repetition a defining feature of its textile composition.",
+          "actual": "Wandle’s repeat measures 98.4 by 44.5 centimeters; the V&A identifies it as the largest Morris attempted."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "local:catalog:bayeux-tapestry",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "The so-called tapestry is wool embroidery on joined linen panels; its stitching carries a continuous historical narrative rather than a woven pictorial structure.",
+          "actual": "The Bayeux Tapestry’s narrative is embroidered in wool on joined linen panels rather than woven as a pictorial tapestry."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    },
+    {
+      "id": "Q252485",
+      "changes": {
+        "learning_takeaway": {
+          "selected": "Hokusai frames a small Mount Fuji inside the threatening wave and uses blue pigments to bind this striking contrast of scale into the print.",
+          "actual": "Hokusai uses perspective and framing to make Mount Fuji appear as a small triangular form within the much larger wave."
+        }
+      },
+      "result": "same_intended_identity_after_qualification_or_example_refinement"
+    }
+  ],
+  "targeted_card_ids_read": [
+    "Q1095859",
+    "Q1144780",
+    "Q11469",
+    "Q1412040",
+    "Q175166",
+    "Q186386",
+    "Q189520",
+    "Q252485",
+    "Q3318170",
+    "Q3744733",
+    "Q44424",
+    "Q727035",
+    "Q7661371",
+    "Q7705913",
+    "Q7755",
+    "local:authored:000460",
+    "local:authored:000604",
+    "local:catalog:absolute-sensory-threshold",
+    "local:catalog:acid-base-indicator",
+    "local:catalog:aflaj-irrigation-landscapes-of-oman",
+    "local:catalog:aflaj-water-sharing-settlements",
+    "local:catalog:agha-shahid-ali",
+    "local:catalog:akhand-path",
+    "local:catalog:allocation-concealment",
+    "local:catalog:anaphora-rhetoric",
+    "local:catalog:apple-inc",
+    "local:catalog:archaeological-stratigraphy",
+    "local:catalog:bar-entry-in-backgammon",
+    "local:catalog:bayeux-tapestry",
+    "local:catalog:betweenness-centrality",
+    "local:catalog:bipartite-graph",
+    "local:catalog:body-centered-cubic-structure",
+    "local:catalog:bond-finance",
+    "local:catalog:carnot-cycle",
+    "local:catalog:castling",
+    "local:catalog:chair-by-ruth-asawa",
+    "local:catalog:chinese-imperial-examinations",
+    "local:catalog:choropleth-mapping",
+    "local:catalog:circumstantial-moral-luck",
+    "local:catalog:cliche-verre",
+    "local:catalog:combining-equilibrium-constants",
+    "local:catalog:common-ground-in-communication",
+    "local:catalog:constitutive-moral-luck",
+    "local:catalog:coriolis-force",
+    "local:catalog:critical-point-of-a-fluid",
+    "local:catalog:dasymetric-mapping",
+    "local:catalog:delayed-judgments-of-learning",
+    "local:catalog:diagnostic-sensitivity",
+    "local:catalog:diagnostic-specificity",
+    "local:catalog:distributed-consensus",
+    "local:catalog:double-blind-study",
+    "local:catalog:drip-irrigation",
+    "local:catalog:dyad-social-group",
+    "local:catalog:ekman-spiral",
+    "local:catalog:elastic-limit",
+    "local:catalog:elastic-rebound-theory",
+    "local:catalog:equilibrium-moisture-content-of-wood",
+    "local:catalog:experimenter-expectancy-bias",
+    "local:catalog:face-centered-cubic-structure",
+    "local:catalog:fail-safe-defaults",
+    "local:catalog:fail-safe-track-circuit-signalling",
+    "local:catalog:first-order-reaction-half-life",
+    "local:catalog:first-price-sealed-bid-auction",
+    "local:catalog:focalization",
+    "local:catalog:fresco-a-secco",
+    "local:catalog:genetic-mapping",
+    "local:catalog:geographic-buffer",
+    "local:catalog:giornata",
+    "local:catalog:glass-armonica",
+    "local:catalog:grounding-in-communication",
+    "local:catalog:haitian-revolution",
+    "local:catalog:heterogeneous-equilibrium",
+    "local:catalog:homology-biology",
+    "local:catalog:horticultural-grafting",
+    "local:catalog:imperfect-duty",
+    "local:catalog:implied-reader",
+    "local:catalog:impression-management",
+    "local:catalog:inertial-reference-frame",
+    "local:catalog:informational-social-influence",
+    "local:catalog:interleaved-practice",
+    "local:catalog:intrinsic-motivation",
+    "local:catalog:karner-blue-butterfly",
+    "local:catalog:kerf-bending",
+    "local:catalog:keystone-species",
+    "local:catalog:leather-temper",
+    "local:catalog:manchester-baby",
+    "local:catalog:mansabdari-system",
+    "local:catalog:martingale",
+    "local:catalog:material-constitution",
+    "local:catalog:matrix-tree-theorem",
+    "local:catalog:melodic-retrograde",
+    "local:catalog:mikveh",
+    "local:catalog:minimal-pair",
+    "local:catalog:mutualism",
+    "local:catalog:narrative-paralepsis",
+    "local:catalog:negative-space",
+    "local:catalog:neutral-axis-in-beam-bending",
+    "local:catalog:new-zealand-mmp-threshold",
+    "local:catalog:normative-social-influence",
+    "local:catalog:observer-s-paradox-in-sociolinguistics",
+    "local:catalog:ocean-acidification",
+    "local:catalog:omamori",
+    "local:catalog:one-art",
+    "local:catalog:oral-history-interview-lead-in",
+    "local:catalog:paris-law-for-fatigue-crack-growth",
+    "local:catalog:peer-instruction",
+    "local:catalog:perceptual-closure",
+    "local:catalog:photogram",
+    "local:catalog:pitch-material",
+    "local:catalog:pitch-music",
+    "local:catalog:positive-predictive-value",
+    "local:catalog:prasad",
+    "local:catalog:proactive-interference",
+    "local:catalog:problem-of-closeness-in-double-effect",
+    "local:catalog:puja",
+    "local:catalog:pulse-oximetry",
+    "local:catalog:pure-tone-audiometry",
+    "local:catalog:qibla",
+    "local:catalog:raft-consensus-algorithm",
+    "local:catalog:replicated-log",
+    "local:catalog:retroactive-interference",
+    "local:catalog:riparian-forest-buffer",
+    "local:catalog:rule-of-lenity",
+    "local:catalog:second-order-reaction-half-life",
+    "local:catalog:second-price-sealed-bid-auction",
+    "local:catalog:sensory-adaptation",
+    "local:catalog:sestina-altaforte",
+    "local:catalog:shabad",
+    "local:catalog:signal-detection-theory",
+    "local:catalog:simultaneous-contrast",
+    "local:catalog:skin-grafting",
+    "local:catalog:skin-pigmentation-and-pulse-oximetry",
+    "local:catalog:snapshot-isolation",
+    "local:catalog:social-desirability-bias",
+    "local:catalog:social-norms",
+    "local:catalog:sociolinguistic-interview",
+    "local:catalog:species-counterpoint",
+    "local:catalog:steam-bending",
+    "local:catalog:stereographic-projection",
+    "local:catalog:strawberry-thief",
+    "local:catalog:strong-triadic-closure-property",
+    "local:catalog:successive-contrast",
+    "local:catalog:sugar-lift-etching",
+    "local:catalog:the-red-wheelbarrow",
+    "local:catalog:three-point-bending-test",
+    "local:catalog:travel-time-service-area",
+    "local:catalog:triad-social-group",
+    "local:catalog:triadic-closure",
+    "local:catalog:two-truths-in-indian-buddhist-philosophy",
+    "local:catalog:variable-rate-irrigation",
+    "local:catalog:wal-checkpointing",
+    "local:catalog:walden",
+    "local:catalog:wandle-textile-design",
+    "local:catalog:we-real-cool",
+    "local:catalog:worked-example",
+    "local:catalog:working-memory-model",
+    "local:catalog:write-ahead-logging"
+  ],
+  "findings": [
+    {
+      "id": "final-identity-001",
+      "severity": "resolved_presentation_overlap",
+      "ids": [
+        "local:authored:000604",
+        "Q727035"
+      ],
+      "finding": "The initial Graph theory takeaway duplicated the matrix/relabeling promise. The author saved the approved field-level refinement at card version 5; exact semantic delta independently verified. Registered identities remain separate.",
+      "verification_artifact": "research/identity-review/final-graph-theory-refinement-check.json"
+    }
+  ],
+  "unresolved_semantic_duplicates": [],
+  "admission_counts": {
+    "accepted": 1000,
+    "new": 819,
+    "existing_controls": 181,
+    "new_fine_by_scope": 703,
+    "new_fine_idea_entities": 650,
+    "new_fine_named_subjects": 53,
+    "named_subjects": 158
+  },
+  "record_counts_artifact": {
+    "path": "research/identity-review/final-record-counts.json",
+    "sha256": "4d24261e0cd053cc8499d8048908d19614e818fde4c9cf1eeb51bb2e697bb908"
+  },
+  "limits": [
+    "This is bounded semantic admission/overlap review. It does not independently source-audit all 1,000 facts, certify every relationship, or replace the frozen random/risk source audits.",
+    "Similarity retrieval only identified candidates to inspect. Scores are not equivalence decisions or proof of novelty; undetected semantic overlap remains possible.",
+    "Exact novelty uses preserved IDs against the pinned baseline after central decisions. Historical urban-heat-island, Silk Road and confirmation-bias equivalence proposals remain unmerged.",
+    "A broad subject may use the same example as a separately meaningful method, application or named case. Shared examples alone do not collapse those identities.",
+    "Fine counts follow actual approved scope classes. They include 53 named subjects and separately report 650 idea entities; this count is not proof of an exhaustive or unique ontology.",
+    "The semantic fingerprint excludes sources, locators, versions and audit bookkeeping. Metadata-only updates do not invalidate these meaning comparisons, but changed included text or assignments require a delta recheck.",
+    "No candidates, IDs, central reservations or older reviews were modified by this reviewer."
+  ]
+}

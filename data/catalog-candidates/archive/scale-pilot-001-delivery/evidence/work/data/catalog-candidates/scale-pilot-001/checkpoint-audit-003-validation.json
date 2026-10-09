@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-08T22:25:44.830948+00:00",
+  "status": "passed",
+  "checks": {
+    "current_candidate_hash": true,
+    "initial_audit_hash_unchanged": true,
+    "first_recheck_hash_unchanged": true,
+    "frozen_candidate_hash": true,
+    "all_11_changed_bundles_checked": true,
+    "all_prior_content_checks_carried_forward": true,
+    "LTEE_resolved": true,
+    "SPRINT_gap_resolved_by_removal": true,
+    "no_residual_findings": true,
+    "zero_added_source_attempts": true
+  },
+  "candidate_sha256": "e2062d3bf8244df18bb9c2cfec27c170c6e9413038b20af3a60431cc8da6a242",
+  "initial_audit_sha256": "7d80ccf3a2ad8319cdd9605d413eb3d34b3b9c9ec4c56d99c4e5f2ce7d5e910a",
+  "recheck_audit_sha256": "a6bf2d5f49125f0bc95a2dbd846999d128f031519226702e041a7d768ccfac3b",
+  "final_recheck_audit_sha256": "4d697ccd28bc582881606cce5d970d75f0e52e01c3c3c44e43634a60c7a3474a",
+  "sample_results": {
+    "random_new": {
+      "original_denominator": 20,
+      "initial_substantive_failures": 0,
+      "remaining_known_substantive_findings": 0
+    },
+    "risk_selected": {
+      "original_denominator": 20,
+      "initial_substantive_failures": 1,
+      "resolved": 1,
+      "remaining_known_substantive_findings": 0
+    },
+    "additional_targeted": {
+      "unique_cards": 9,
+      "source_premise_gaps_in_first_recheck": 1,
+      "resolved_by_removal": 1,
+      "remaining_known_substantive_findings": 0
+    }
+  },
+  "limits": [
+    "Pass applies to the original frozen 40-card audit plus nine additional targeted cards and the changes actually examined; it does not certify every unsampled fact in all 200 cards.",
+    "Original source-access and cached-snapshot limitations remain as recorded in the preserved initial audit and first recheck.",
+    "No new public retrieval was attempted; the final change only removed a previously identified unsupported edge.",
+    "Current-page evidence does not certify historical author acquisition."
+  ]
+}

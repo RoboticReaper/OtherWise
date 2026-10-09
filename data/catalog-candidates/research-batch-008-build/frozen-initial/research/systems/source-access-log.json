@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "assignment": "systems",
+  "note": "This records observed access limitations and successful replacements. No failed page or search snippet is cited as explanatory support. Exact remote retrieval timestamps are unavailable.",
+  "selection_phase": [
+    {"source_family": "NACTO queue-jump guidance", "observed_outcome": "access error", "used_replacement": "Inspected Federal Transit Administration Signal Priority page"},
+    {"source_family": "Pressbooks language-learning pages", "observed_outcome": "access error", "used_replacement": "Inspected Haskins and author-hosted Woodward-Markman material"},
+    {"source_family": "eLife/PMC stop-signal consensus pages", "observed_outcome": "client challenge or failed access", "used_replacement": "Inspected primary PLOS stop-signal paper; saved challenge HTML excluded"},
+    {"source_family": "Roth-Xing PDF and Nobel biography/lecture", "observed_outcome": "failed access", "used_replacement": "Inspected Roth-Xing author-hosted HTML copy"}
+  ],
+  "draft_phase": [
+    {"url": "https://snap.stanford.edu/class/cs224w-readings/kossinets06evolving.pdf", "observed_outcome": "web extraction failed with timeout; no actual explanatory passage used", "resolution": "Retained inspected Cornell book support and kept its collective generated prose within 200 words"},
+    {"url": "https://iqua.ece.toronto.edu/baochun/ece1771f/papers/Gale-Shapley-1962.pdf", "observed_outcome": "PDF opened but returned zero extracted lines; no actual explanatory passage used", "resolution": "Retained inspected matching lecture support and canonical Q65123731"},
+    {"url": "https://www.rfc-editor.org/rfc/rfc9421.html", "observed_outcome": "later term-finding call did not return the MAC passage", "resolution": "Inspected official RFC 9421 text companion, sections 1.1 and 7.3.3; same-work summary budget preserved"}
+  ],
+  "scope_limits": [
+    "Friendship paradox and relative performance evaluation use bounded claims supported by inspected primary abstracts.",
+    "Earlier body/reference records remain available in the pinned baseline; current researched bodies retain approved identity/version semantics.",
+    "The source-access log reports access outcomes, not an independent factual audit."
+  ],
+  "usage": {"model_tokens": null, "monetary_cost": null, "reason": "Per-agent usage telemetry is not available through the exposed tools."}
+}

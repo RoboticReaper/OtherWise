@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "purpose": "Early selection/source-language check; separate from the fixed post-draft independent audit.",
+  "inspections": [
+    {
+      "url": "https://www.usgs.gov/water-science-school/science/ph-and-water",
+      "locator": "Definition and measurement units; lines 43\u201349",
+      "inspection_mode": "web.run actual open text",
+      "tool_ref": "turn628view0",
+      "note": "General water example supports logarithmic acidity. Avoid inferring a universal pH range or transferring loosely worded statements into precise technical claims."
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc2631.html",
+      "locator": "Overview of Method; lines81\u201385",
+      "inspection_mode": "web.run actual open text",
+      "tool_ref": "turn628view1",
+      "note": "Each party combines private and peer public key to compute the same shared secret. This supports key agreement, not authenticated identity by itself."
+    }
+  ],
+  "source_access_failures": [
+    {
+      "url": "https://goldbook.iupac.org/terms/view/P04524",
+      "tool_ref": "turn633view0",
+      "outcome": "403; search result located the technical definition but direct page inspection failed. Do not count as inspected explanation evidence."
+    },
+    {
+      "url": "https://goldbook.iupac.org/terms/view/P04524/plain",
+      "tool_ref": "turn636view0",
+      "outcome": "403"
+    },
+    {
+      "url": "https://old.goldbook.iupac.org/html/P/P04524.html",
+      "tool_ref": "turn636view1",
+      "outcome": "502"
+    },
+    {
+      "url": "https://iupac.org/publications/pac/pdf/2002/pdf/7411x2169.pdf",
+      "tool_ref": "turn641view0",
+      "outcome": "Not accessible through tool; alternatives bounded."
+    }
+  ]
+}

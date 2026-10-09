@@ -1,0 +1,746 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-009",
+  "reviewer": "production001_audit_science",
+  "authored_sampled_cards": false,
+  "draft_candidate_sha256": "4612287612b3e2e15fa22a8e8d60bd4f8eb35c4528a5d5f3bf8e506988e35154",
+  "sample_sha256": "71e56fbb2968f8b0b444647a395243a2bb591cc173b81bd1538fdff6cd9e7f28",
+  "recorded_at": "2026-10-09T05:02:26Z",
+  "reviews": [
+    {
+      "id": "Q124407",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "verified",
+      "claims": [
+        {
+          "group": "C1: body and learning_takeaway",
+          "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-1-diabetes",
+          "locator": "What is type 1 diabetes?, lines 135-139",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn741view0"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [],
+      "findings": [],
+      "body_word_count": 20
+    },
+    {
+      "id": "Q100196",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "needs_repair",
+      "claims": [
+        {
+          "group": "C1: body and learning_takeaway excluding tail-length qualifier",
+          "url": "https://www.amnh.org/explore/news-blogs/archaeopteryx-lithographica-feathered-dinosaur",
+          "locator": "Introduction and In Transition, lines 200-212",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn741view1"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        },
+        {
+          "group": "C2: tail-length qualifier",
+          "url": "https://www.amnh.org/explore/news-blogs/archaeopteryx-lithographica-feathered-dinosaur",
+          "locator": "Introduction and In Transition, lines 200-212",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn741view1"
+          ],
+          "supported": false,
+          "reasoning": "Absent from attached text; alternative inspected.",
+          "alternative_passages": [
+            {
+              "url": "https://www.amnh.org/learn-teach/curriculum-collections/dinosaurs-activities-and-lesson-plans/explore-the-family-tree-of-birds",
+              "locator": "Sample Essay - Week 4, lines 406-407 and 439-441",
+              "inspection_mode": "web_open_text_find",
+              "tool_refs": [
+                "turn755view1",
+                "turn756view0",
+                "turn756view1",
+                "turn756view2"
+              ],
+              "supported": true,
+              "reasoning": "Supports the detail; absent from frozen citations."
+            }
+          ]
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "local:authored:000632",
+          "type": "broader_topic",
+          "assertion": "editorial",
+          "supported": true,
+          "url": "https://www.amnh.org/explore/news-blogs/archaeopteryx-lithographica-feathered-dinosaur",
+          "locator": "Introduction and In Transition, lines 200-212",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn741view1"
+          ],
+          "reasoning": "Editorial grouping follows inspected subject and baseline meaning.",
+          "target_meaning": {
+            "label": "Paleontology",
+            "baseline_locator": "concepts[\"local:authored:000632\"]",
+            "baseline_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+            "meaning_checked": true
+          }
+        }
+      ],
+      "findings": [
+        {
+          "finding_id": "F-SCI-001",
+          "severity": "material",
+          "affected_field": "card; learning_takeaway; evidence",
+          "problem": "The tail-length qualifier is not supported by the attached text.",
+          "evidence": "See C2 and its inspected alternative.",
+          "proposed_repair": "Attach the alternative or remove the length qualifier.",
+          "evidence_refs": [
+            "turn741view1",
+            "turn756view1"
+          ]
+        }
+      ],
+      "body_word_count": 20
+    },
+    {
+      "id": "Q853859",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "verified",
+      "claims": [
+        {
+          "group": "C1: body and learning_takeaway",
+          "url": "https://www.sare.org/publications/crop-rotation-on-organic-farms/guidelines-for-intercropping/",
+          "locator": "Chapter text, lines 101-112",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn741view2"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q11451",
+          "type": "application_of",
+          "assertion": "editorial",
+          "supported": true,
+          "url": "https://www.sare.org/publications/crop-rotation-on-organic-farms/guidelines-for-intercropping/",
+          "locator": "Chapter text, lines 101-112",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn741view2"
+          ],
+          "reasoning": "The practice implements the baseline target; editorial assertion is appropriate.",
+          "target_meaning": {
+            "label": "Agriculture",
+            "baseline_locator": "concepts[\"Q11451\"]",
+            "baseline_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+            "meaning_checked": true
+          }
+        }
+      ],
+      "findings": [],
+      "body_word_count": 17
+    },
+    {
+      "id": "local:authored:000344",
+      "stratum": "random",
+      "card_version": 1,
+      "status": "verified",
+      "claims": [
+        {
+          "group": "C1: body and learning_takeaway",
+          "url": "https://www.vam.ac.uk/articles/an-introduction-to-quilting-and-patchwork",
+          "locator": "What is quilting? and Quilting stitches, lines 35-49",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn741view3"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "local:authored:000345",
+          "type": "application_of",
+          "assertion": "editorial",
+          "supported": true,
+          "url": "https://www.vam.ac.uk/articles/an-introduction-to-quilting-and-patchwork",
+          "locator": "What is quilting? and Quilting stitches, lines 35-49",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn741view3"
+          ],
+          "reasoning": "The technique implements the baseline target; editorial assertion is appropriate.",
+          "target_meaning": {
+            "label": "Sewing",
+            "baseline_locator": "concepts[\"local:authored:000345\"]",
+            "baseline_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+            "meaning_checked": true
+          }
+        }
+      ],
+      "findings": [],
+      "body_word_count": 16
+    },
+    {
+      "id": "Q101017",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "claims": [
+        {
+          "group": "C1: body and learning_takeaway",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_Lab_Techniques_(Nichols)/05:_Distillation",
+          "locator": "Chapter introduction, lines 190-195",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn744view0"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q898987",
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "supported": true,
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_Lab_Techniques_(Nichols)/05:_Distillation",
+          "locator": "Chapter introduction, lines 190-195",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn744view0"
+          ],
+          "reasoning": "Explicit separation-method relation matches the baseline target.",
+          "target_meaning": {
+            "label": "Separation process",
+            "baseline_locator": "concepts[\"Q898987\"]",
+            "baseline_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+            "meaning_checked": true
+          }
+        }
+      ],
+      "findings": [],
+      "body_word_count": 21
+    },
+    {
+      "id": "Q1310671",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "claims": [
+        {
+          "group": "C1: body and learning_takeaway",
+          "url": "https://nsidc.org/learn/parts-cryosphere/sea-ice/why-sea-ice-matters",
+          "locator": "Greater warming leads to greater melting, lines 218-222",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn744view1"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q918004",
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "supported": true,
+          "url": "https://nsidc.org/learn/parts-cryosphere/sea-ice/why-sea-ice-matters",
+          "locator": "Greater warming leads to greater melting, lines 218-222",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn744view1"
+          ],
+          "reasoning": "Explicit feedback-loop classification matches the baseline target.",
+          "target_meaning": {
+            "label": "Positive feedback",
+            "baseline_locator": "concepts[\"Q918004\"]",
+            "baseline_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+            "meaning_checked": true
+          }
+        }
+      ],
+      "findings": [],
+      "body_word_count": 19
+    },
+    {
+      "id": "Q190026",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "claims": [
+        {
+          "group": "C1: definition and example; learning_takeaway",
+          "url": "https://mathworld.wolfram.com/TotientFunction.html",
+          "locator": "Definition and example, lines 16-17",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn744view2"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "local:authored:000602",
+          "type": "broader_topic",
+          "assertion": "editorial",
+          "supported": true,
+          "url": "https://mathworld.wolfram.com/TotientFunction.html",
+          "locator": "Definition and example, lines 16-17",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn744view2"
+          ],
+          "reasoning": "Editorial grouping follows inspected definition and baseline meaning.",
+          "target_meaning": {
+            "label": "Number theory",
+            "baseline_locator": "concepts[\"local:authored:000602\"]",
+            "baseline_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+            "meaning_checked": true
+          }
+        }
+      ],
+      "findings": [],
+      "body_word_count": 20
+    },
+    {
+      "id": "Q111",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "claims": [
+        {
+          "group": "C1: body and learning_takeaway",
+          "url": "https://science.nasa.gov/mars/facts/",
+          "locator": "Mars Facts introduction and Namesake, lines 237-239, 269-271",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn744view3"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "local:authored:000108",
+          "type": "broader_topic",
+          "assertion": "editorial",
+          "supported": true,
+          "url": "https://science.nasa.gov/mars/facts/",
+          "locator": "Mars Facts introduction and Namesake, lines 237-239, 269-271",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn744view3"
+          ],
+          "reasoning": "Editorial grouping follows inspected subject and baseline meaning.",
+          "target_meaning": {
+            "label": "Astronomy",
+            "baseline_locator": "concepts[\"local:authored:000108\"]",
+            "baseline_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+            "meaning_checked": true
+          }
+        }
+      ],
+      "findings": [],
+      "body_word_count": 15
+    },
+    {
+      "id": "Q1381652",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "needs_repair",
+      "claims": [
+        {
+          "group": "C1: oral-treatment clause and learning_takeaway",
+          "url": "https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
+          "locator": "Overview, lines 90-95",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn747view0"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        },
+        {
+          "group": "C2: intravenous clause",
+          "url": "https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
+          "locator": "Overview, lines 90-95",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn747view0"
+          ],
+          "supported": false,
+          "reasoning": "The attached overview does not specify the intravenous route.",
+          "alternative_passages": [
+            {
+              "url": "https://www.who.int/en/news-room/fact-sheets/detail/diarrhoeal-disease",
+              "locator": "Prevention and treatment, lines 143-148",
+              "inspection_mode": "web_open_text",
+              "tool_refs": [
+                "turn755view0"
+              ],
+              "supported": true,
+              "reasoning": "Supports the clause; absent from frozen citations."
+            }
+          ]
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q179661",
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "supported": true,
+          "url": "https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
+          "locator": "Overview, lines 90-95",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn747view0"
+          ],
+          "reasoning": "Explicit treatment relation matches the baseline medical sense.",
+          "target_meaning": {
+            "label": "Therapy",
+            "baseline_locator": "concepts[\"Q179661\"]",
+            "baseline_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+            "meaning_checked": true
+          }
+        }
+      ],
+      "findings": [
+        {
+          "finding_id": "F-SCI-002",
+          "severity": "material",
+          "affected_field": "card; evidence",
+          "problem": "The intravenous clause has no supporting passage in the attached overview.",
+          "evidence": "See C2; the companion PDF returned 403.",
+          "proposed_repair": "Attach the inspected WHO alternative or omit the intravenous clause.",
+          "evidence_refs": [
+            "turn747view0",
+            "turn751view0",
+            "turn755view0"
+          ]
+        }
+      ],
+      "body_word_count": 21
+    },
+    {
+      "id": "Q954381",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "claims": [
+        {
+          "group": "C1: body and learning_takeaway",
+          "url": "https://www.rhs.org.uk/soil-composts-mulches/green-manures",
+          "locator": "Introduction, line 9; Why and when, lines 65-80; no-dig regimes, lines 109-117",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn747view1"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "local:catalog:cover-crops",
+          "type": "related_to",
+          "assertion": "editorial",
+          "supported": true,
+          "url": "https://www.rhs.org.uk/soil-composts-mulches/green-manures",
+          "locator": "Introduction, line 9; Why and when, lines 65-80; no-dig regimes, lines 109-117",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn747view1"
+          ],
+          "reasoning": "Inspected premises support relatedness; no equivalence or parenthood asserted.",
+          "target_meaning": {
+            "label": "Cover crops",
+            "baseline_locator": "concepts[\"local:catalog:cover-crops\"]",
+            "baseline_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+            "meaning_checked": true
+          }
+        }
+      ],
+      "findings": [],
+      "body_word_count": 18
+    },
+    {
+      "id": "Q217541",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "claims": [
+        {
+          "group": "C1: body and learning_takeaway",
+          "url": "https://www.fda.gov/consumers/consumer-updates/tips-stay-safe-sun-sunscreen-sunglasses",
+          "locator": "Protect Your Eyes With Sunglasses, lines 108-120",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn747view2"
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [],
+      "findings": [],
+      "body_word_count": 20
+    },
+    {
+      "id": "Q101991",
+      "stratum": "risk",
+      "card_version": 1,
+      "status": "verified",
+      "claims": [
+        {
+          "group": "C1: body and learning_takeaway",
+          "passages": [
+            {
+              "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/chronic-inflammation",
+              "locator": "Chronic Inflammation, lines 12-13",
+              "inspection_mode": "web_open_text",
+              "tool_refs": [
+                "turn747view3"
+              ]
+            },
+            {
+              "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-2-barrier-defenses-and-the-innate-immune-response",
+              "locator": "Inflammatory Response, lines 107-120",
+              "inspection_mode": "web_open_text",
+              "tool_refs": [
+                "turn747view4"
+              ]
+            }
+          ],
+          "supported": true,
+          "reasoning": "Supported."
+        }
+      ],
+      "clarity": {
+        "meaning_clear": true,
+        "concrete_takeaway": true,
+        "qualification_preserved": true,
+        "scope_appropriate_wording": true
+      },
+      "relations": [
+        {
+          "target_id": "Q428253",
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "supported": true,
+          "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-2-barrier-defenses-and-the-innate-immune-response",
+          "locator": "Inflammatory Response, lines 107-120",
+          "inspection_mode": "web_open_text",
+          "tool_refs": [
+            "turn747view4"
+          ],
+          "reasoning": "Explicit immune-response characterization supports the nonexclusive facet relation.",
+          "target_meaning": {
+            "label": "Innate immune system",
+            "baseline_locator": "concepts[\"Q428253\"]",
+            "baseline_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+            "meaning_checked": true
+          }
+        }
+      ],
+      "findings": [],
+      "body_word_count": 18
+    }
+  ],
+  "source_access_failures": [
+    {
+      "url": "https://iris.who.int/server/api/core/bitstreams/e52f1746-cf33-4a63-9f97-4c0bfaaeb230/content",
+      "locator": "Download link 67 on the cited WHO publication landing page",
+      "inspection_mode": "web_click_pdf",
+      "tool_refs": [
+        "turn751view0"
+      ],
+      "error": "403 Forbidden",
+      "attempts": 1,
+      "card_ids": [
+        "Q1381652"
+      ],
+      "outcome": "Stopped retries; inspected official alternative. Original citation repair remains pending."
+    }
+  ],
+  "affected_source_followups": [
+    {
+      "url": "https://www.amnh.org/explore/news-blogs/archaeopteryx-lithographica-feathered-dinosaur",
+      "same_source_card_ids": [
+        "Q100196"
+      ],
+      "unsampled_same_source_card_ids": [],
+      "status": "no additional same-URL cards in frozen 200"
+    },
+    {
+      "url": "https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
+      "same_source_card_ids": [
+        "Q1381652"
+      ],
+      "unsampled_same_source_card_ids": [],
+      "status": "no additional same-URL cards in frozen 200"
+    }
+  ],
+  "formulation_followups": [
+    {
+      "finding_ids": [
+        "F-SCI-001",
+        "F-SCI-002"
+      ],
+      "pattern": "Two clause-to-citation coverage gaps; coordinator should expand this check before continuation.",
+      "candidate_card_ids": [
+        "Q101600",
+        "Q12124",
+        "Q121610",
+        "Q12190",
+        "Q127920",
+        "Q134808",
+        "Q14599311",
+        "Q167980",
+        "Q16817",
+        "Q169324",
+        "Q171446",
+        "Q172858",
+        "Q179177",
+        "Q179904",
+        "Q179918",
+        "Q179924",
+        "Q185034",
+        "Q185243",
+        "Q192627",
+        "Q207952",
+        "Q212871",
+        "Q213600",
+        "Q215915",
+        "Q232207",
+        "Q245031",
+        "Q2469",
+        "Q271997",
+        "Q272467",
+        "Q3025883",
+        "Q319400",
+        "Q327069",
+        "Q33602",
+        "Q38933",
+        "Q40936",
+        "Q42967",
+        "Q500094",
+        "Q5194",
+        "Q5283",
+        "Q5309",
+        "Q660071",
+        "Q663365",
+        "Q72277",
+        "Q750176",
+        "Q8070",
+        "Q81915",
+        "Q83471",
+        "Q843389",
+        "Q868454",
+        "Q954454",
+        "Q961751",
+        "local:authored:000343",
+        "local:authored:000357",
+        "local:authored:000362",
+        "local:authored:000388",
+        "local:authored:000391",
+        "local:authored:000398",
+        "local:authored:000625",
+        "local:authored:000630"
+      ],
+      "status": "coordinator review pending; no failure inferred for these unsampled cards"
+    }
+  ],
+  "limits": [
+    "Fixed 12-card science assignment: 4 random, 8 risk; no replacement or resampling.",
+    "Initial citation judgments concern frozen v1 cards. Alternatives verify facts but have not repaired author inputs.",
+    "One companion-PDF access failed; all cited landing-page passages were accessible.",
+    "No human-interest evaluation, effectiveness claim, or operational import.",
+    "No inference that the unsampled population is verified."
+  ]
+}

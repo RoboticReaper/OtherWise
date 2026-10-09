@@ -1,0 +1,65 @@
+{
+  "events": [
+    {
+      "affected_batches": [
+        "research-batch-004",
+        "research-batch-003"
+      ],
+      "continued_work": "Source inspection and corrections within already assigned selections; no card drafting or later-phase admission.",
+      "corrective_action": "Independent all-row semantic admission review; replace generic comparisons with meaningful same-sense/nearby-sense distinctions; keep lexical/contextual diagnostics separate; prohibit converting nearest matches into relations; only freeze once findings are resolved or excluded.",
+      "reason": "Generic nearest-baseline fallback comparisons were found across batches 004 and 003; some falsely implied parentage or novelty. No cards have been authored or admitted.",
+      "resolution": "Every proposal received independent bounded admission review. Incorrect fallback comparisons are superseded in the central approved manifests. Mechanical stress is quarantined and replaced; organizational design reuses its existing ID. Authoring constraints forbid automatic parent inference from match diagnostics.",
+      "resolved_at": "2026-10-08T20:38:57.348685+00:00",
+      "stage": "before_global_selection_freeze_and_card_drafting",
+      "started_at": "2026-10-08T19:51:51Z",
+      "status": "resolved_before_drafting"
+    },
+    {
+      "additional_object_metadata_finding": {
+        "batch_id": "research-batch-006",
+        "finding": "Chair is documented by MoMA as 1965 lithograph, not c.1963 drawing.",
+        "source_id": "a09"
+      },
+      "authorization_blocker": null,
+      "corrective_gate": {
+        "existing_audits": "003, 005 and 006 continue the original frozen samples unchanged.",
+        "final_admission": "All 1000 boundary rechecks recorded, all known findings corrected or excluded, and independent rechecks complete for every changed card/relationship, including changed unsampled cards.",
+        "per_batch": "200 substantive scope/qualification/attribution rechecks against cited support, with all changes preserved and versioned.",
+        "remaining_audit_start": "Batches 004 and 007 may start fixed independent audits only after their own 200-card corrective recheck passes.",
+        "sampling": "No favorable resampling; original findings remain visible."
+      },
+      "examples": [
+        {
+          "batch_id": "research-batch-003",
+          "concept_id": "local:catalog:e-coli-long-term-evolution-experiment",
+          "finding": "Citrate-use trait needs oxic/aerobic condition."
+        },
+        {
+          "batch_id": "research-batch-005",
+          "concept_id": "local:catalog:rollback-journal",
+          "finding": "WAL comparison needs SQLite implementation scope."
+        },
+        {
+          "batch_id": "research-batch-006",
+          "concept_id": "Q252485",
+          "finding": "Compositional purpose in takeaway is an interpretation, not established source fact."
+        },
+        {
+          "batch_id": "research-batch-006",
+          "concept_id": "local:catalog:walden",
+          "finding": "Continuing influence causal explanation exceeds source support."
+        }
+      ],
+      "final_admission_manifest": "data/catalog-candidates/scale-pilot-001/final-admission.json",
+      "id": "audit-boundary-hold-002",
+      "pattern": "unqualified_generalization_or_inference_from_bounded_source",
+      "resolution": "All 1,000 extra boundary reviews completed; all known findings resolved or unsupported edge removed; every changed card/reference bundle independently rechecked.",
+      "resolved_at": "2026-10-08T22:51:18.930127+00:00",
+      "resource_blocker": null,
+      "started_at": "2026-10-08T21:26:00Z",
+      "status": "resolved",
+      "trigger": "Independent audits in batches 003 and 005 found missing source-boundary qualifications; batch 006 also found interpretive/causal claims beyond the cited support."
+    }
+  ],
+  "schema_version": 1
+}

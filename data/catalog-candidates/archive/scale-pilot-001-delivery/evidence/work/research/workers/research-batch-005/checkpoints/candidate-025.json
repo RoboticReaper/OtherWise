@@ -1,0 +1,3811 @@
+{
+  "schema_version": 1,
+  "batch": {
+    "id": "research-batch-005",
+    "revision": 1,
+    "target_count": 200,
+    "language": "en",
+    "completion_status": "partial_author_checkpoint",
+    "date": "2026-10-08",
+    "stage_b_started_at": "2026-10-08T20:40:22Z",
+    "completed_at": null,
+    "selection_manifest": {
+      "path": "data/catalog-candidates/scale-pilot-001/selections/approved/research-batch-005.json",
+      "sha256": "d139a9aac7f4706f4608642062cff0c7a9b9e86302be70898efb5cc64ac4607a",
+      "frozen_at": "2026-10-08T20:38:57.348685+00:00",
+      "accepted": [
+        {
+          "aliases": [
+            "Information theory"
+          ],
+          "author_effective_id": "local:authored:000609",
+          "author_provisional_id": "local:authored:000609",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [
+            "local:authored:000609"
+          ],
+          "decision_reason": "Same established field of quantified information and communication limits.",
+          "discovery_locators": [
+            {
+              "locator": "Introduction, pp. 1–2",
+              "source_id": "shannon"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Measure communication choices without treating message meaning as the engineering quantity.",
+              "locator": "Introduction, pp. 1–2",
+              "source_id": "shannon",
+              "title": "A Mathematical Theory of Communication",
+              "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+            }
+          ],
+          "discovery_source_ids": [
+            "shannon"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:authored:000609",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "local:authored:000609"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "local:authored:000609",
+                "Q11028",
+                "Q204570"
+              ],
+              "input_inventory_status": "existing_control",
+              "label": "Information theory",
+              "new_qid_without_baseline": false,
+              "ordinal": 1,
+              "proposal_id": "local:authored:000609",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": true
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "existing",
+          "label": "Information theory",
+          "learning_takeaway": "Measure communication choices without treating message meaning as the engineering quantity.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Same established field of quantified information and communication limits.",
+              "id": "local:authored:000609",
+              "label": "Information theory",
+              "original_description": "Quantifying information, uncertainty and communication limits."
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:authored:000609",
+          "scope": "broad_field",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [
+            "Data compression"
+          ],
+          "author_effective_id": "Q2493",
+          "author_provisional_id": "Q2493",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [
+            "Q2493"
+          ],
+          "decision_reason": "Same broad encoding-with-fewer-bits meaning; DEFLATE supplies a concrete example.",
+          "discovery_locators": [
+            {
+              "locator": "Abstract; §2",
+              "source_id": "deflate"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Reduce representation size by replacing repeated strings and assigning economical symbol codes.",
+              "locator": "Abstract; §2",
+              "source_id": "deflate",
+              "title": "DEFLATE Compressed Data Format Specification version 1.3",
+              "url": "https://www.rfc-editor.org/rfc/rfc1951"
+            }
+          ],
+          "discovery_source_ids": [
+            "deflate"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "Q2493",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q2493"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q2493",
+                "Q5157043",
+                "Q389772"
+              ],
+              "input_inventory_status": "existing_control",
+              "label": "Data compression",
+              "new_qid_without_baseline": false,
+              "ordinal": 2,
+              "proposal_id": "Q2493",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": true
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "existing",
+          "label": "Data compression",
+          "learning_takeaway": "Reduce representation size by replacing repeated strings and assigning economical symbol codes.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Same broad encoding-with-fewer-bits meaning; DEFLATE supplies a concrete example.",
+              "id": "Q2493",
+              "label": "Data compression",
+              "original_description": "process of encoding information using fewer bits than the original representation"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "Q2493",
+          "scope": "topic",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:huffman-coding",
+          "author_provisional_id": "local:catalog:huffman-coding",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "Data compression is the general goal; Huffman coding is a particular frequency-based coding construction.",
+          "discovery_locators": [
+            {
+              "locator": "§3.2.1",
+              "source_id": "deflate"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Assign variable-length prefix codes using symbol frequencies to minimize expected code length.",
+              "locator": "§3.2.1",
+              "source_id": "deflate",
+              "title": "DEFLATE Compressed Data Format Specification version 1.3",
+              "url": "https://www.rfc-editor.org/rfc/rfc1951"
+            }
+          ],
+          "discovery_source_ids": [
+            "deflate"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:huffman-coding",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q2493"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q602136",
+                "Q133150082",
+                "local:authored:000533"
+              ],
+              "input_inventory_status": "new",
+              "label": "Huffman coding",
+              "new_qid_without_baseline": false,
+              "ordinal": 3,
+              "proposal_id": "local:catalog:huffman-coding",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Huffman coding",
+          "learning_takeaway": "Assign variable-length prefix codes using symbol frequencies to minimize expected code length.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Data compression is the general goal; Huffman coding is a particular frequency-based coding construction.",
+              "id": "Q2493",
+              "label": "Data compression",
+              "original_description": "process of encoding information using fewer bits than the original representation"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:huffman-coding",
+          "scope": "idea",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [
+            "Prefix code"
+          ],
+          "author_effective_id": "local:catalog:prefix-free-code",
+          "author_provisional_id": "local:catalog:prefix-free-code",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "General compression does not identify the prefix restriction that permits instantaneous symbol decoding.",
+          "discovery_locators": [
+            {
+              "locator": "§3.2.1",
+              "source_id": "deflate"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Decode concatenated codewords unambiguously because no codeword is another codeword's prefix.",
+              "locator": "§3.2.1",
+              "source_id": "deflate",
+              "title": "DEFLATE Compressed Data Format Specification version 1.3",
+              "url": "https://www.rfc-editor.org/rfc/rfc1951"
+            }
+          ],
+          "discovery_source_ids": [
+            "deflate"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:prefix-free-code",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q2493"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q134409768",
+                "Q79897",
+                "Q5073332"
+              ],
+              "input_inventory_status": "new",
+              "label": "Prefix-free code",
+              "new_qid_without_baseline": false,
+              "ordinal": 4,
+              "proposal_id": "local:catalog:prefix-free-code",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Prefix-free code",
+          "learning_takeaway": "Decode concatenated codewords unambiguously because no codeword is another codeword's prefix.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "General compression does not identify the prefix restriction that permits instantaneous symbol decoding.",
+              "id": "Q2493",
+              "label": "Data compression",
+              "original_description": "process of encoding information using fewer bits than the original representation"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:prefix-free-code",
+          "scope": "idea",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:canonical-huffman-coding",
+          "author_provisional_id": "local:catalog:canonical-huffman-coding",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "This is a codebook-representation method, distinct from general compression and from selecting Huffman lengths.",
+          "discovery_locators": [
+            {
+              "locator": "§3.2.2",
+              "source_id": "deflate"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Reconstruct a Huffman codebook from ordered code lengths using deterministic code assignment.",
+              "locator": "§3.2.2",
+              "source_id": "deflate",
+              "title": "DEFLATE Compressed Data Format Specification version 1.3",
+              "url": "https://www.rfc-editor.org/rfc/rfc1951"
+            }
+          ],
+          "discovery_source_ids": [
+            "deflate"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:canonical-huffman-coding",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q2493"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q5033354",
+                "Q1501876",
+                "Q602136"
+              ],
+              "input_inventory_status": "new",
+              "label": "Canonical Huffman coding",
+              "new_qid_without_baseline": false,
+              "ordinal": 5,
+              "proposal_id": "local:catalog:canonical-huffman-coding",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Canonical Huffman coding",
+          "learning_takeaway": "Reconstruct a Huffman codebook from ordered code lengths using deterministic code assignment.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "This is a codebook-representation method, distinct from general compression and from selecting Huffman lengths.",
+              "id": "Q2493",
+              "label": "Data compression",
+              "original_description": "process of encoding information using fewer bits than the original representation"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:canonical-huffman-coding",
+          "scope": "facet_or_application",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [
+            "Lempel–Ziv 77"
+          ],
+          "author_effective_id": "local:catalog:lz77",
+          "author_provisional_id": "local:catalog:lz77",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "General compression does not specify dictionary backreferences, which differ from frequency-based symbol coding.",
+          "discovery_locators": [
+            {
+              "locator": "§2; §3.2.5",
+              "source_id": "deflate"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Replace repeated byte strings with backward distance and length references within a sliding history.",
+              "locator": "§2; §3.2.5",
+              "source_id": "deflate",
+              "title": "DEFLATE Compressed Data Format Specification version 1.3",
+              "url": "https://www.rfc-editor.org/rfc/rfc1951"
+            }
+          ],
+          "discovery_source_ids": [
+            "deflate"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:lz77",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q2493"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q2181337",
+                "Q863695",
+                "Q4118602"
+              ],
+              "input_inventory_status": "new",
+              "label": "LZ77",
+              "new_qid_without_baseline": false,
+              "ordinal": 6,
+              "proposal_id": "local:catalog:lz77",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "LZ77",
+          "learning_takeaway": "Replace repeated byte strings with backward distance and length references within a sliding history.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "General compression does not specify dictionary backreferences, which differ from frequency-based symbol coding.",
+              "id": "Q2493",
+              "label": "Data compression",
+              "original_description": "process of encoding information using fewer bits than the original representation"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:lz77",
+          "scope": "idea",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [
+            "Deflate"
+          ],
+          "author_effective_id": "local:catalog:deflate",
+          "author_provisional_id": "local:catalog:deflate",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "The named interoperable format is a specific composition of methods, not the broad compression identity.",
+          "discovery_locators": [
+            {
+              "locator": "Abstract; §2",
+              "source_id": "deflate"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Combine LZ77 references and Huffman-coded symbols inside a lossless block format.",
+              "locator": "Abstract; §2",
+              "source_id": "deflate",
+              "title": "DEFLATE Compressed Data Format Specification version 1.3",
+              "url": "https://www.rfc-editor.org/rfc/rfc1951"
+            }
+          ],
+          "discovery_source_ids": [
+            "deflate"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:deflate",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q2493"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q161081",
+                "Q276582",
+                "Q654383"
+              ],
+              "input_inventory_status": "new",
+              "label": "DEFLATE",
+              "new_qid_without_baseline": false,
+              "ordinal": 7,
+              "proposal_id": "local:catalog:deflate",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "DEFLATE",
+          "learning_takeaway": "Combine LZ77 references and Huffman-coded symbols inside a lossless block format.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "The named interoperable format is a specific composition of methods, not the broad compression identity.",
+              "id": "Q2493",
+              "label": "Data compression",
+              "original_description": "process of encoding information using fewer bits than the original representation"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:deflate",
+          "scope": "idea",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:dynamic-huffman-blocks-in-deflate",
+          "author_provisional_id": "local:catalog:dynamic-huffman-blocks-in-deflate",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "Block-specific codebook transmission is a supported format choice, distinct from the general format or Huffman algorithm.",
+          "discovery_locators": [
+            {
+              "locator": "§3.2.6–§3.2.7",
+              "source_id": "deflate"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Transmit block-specific code lengths rather than always using the format's fixed Huffman tables.",
+              "locator": "§3.2.6–§3.2.7",
+              "source_id": "deflate",
+              "title": "DEFLATE Compressed Data Format Specification version 1.3",
+              "url": "https://www.rfc-editor.org/rfc/rfc1951"
+            }
+          ],
+          "discovery_source_ids": [
+            "deflate"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:dynamic-huffman-blocks-in-deflate",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q2493"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q189396",
+                "Q1348006",
+                "Q161081"
+              ],
+              "input_inventory_status": "new",
+              "label": "Dynamic Huffman blocks in DEFLATE",
+              "new_qid_without_baseline": false,
+              "ordinal": 8,
+              "proposal_id": "local:catalog:dynamic-huffman-blocks-in-deflate",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Dynamic Huffman blocks in DEFLATE",
+          "learning_takeaway": "Transmit block-specific code lengths rather than always using the format's fixed Huffman tables.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Block-specific codebook transmission is a supported format choice, distinct from the general format or Huffman algorithm.",
+              "id": "Q2493",
+              "label": "Data compression",
+              "original_description": "process of encoding information using fewer bits than the original representation"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:dynamic-huffman-blocks-in-deflate",
+          "scope": "facet_or_application",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:unicode-normalization",
+          "author_provisional_id": "local:catalog:unicode-normalization",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "Data is the broad representation category; normalization is a specified equivalence-preserving text transformation.",
+          "discovery_locators": [
+            {
+              "locator": "§1.2–§1.3",
+              "source_id": "normalization"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Transform equivalent character sequences into a common binary representation through decomposition, ordering, and optional recomposition.",
+              "locator": "§1.2–§1.3",
+              "source_id": "normalization",
+              "title": "Unicode Normalization Forms",
+              "url": "https://www.unicode.org/reports/tr15/"
+            }
+          ],
+          "discovery_source_ids": [
+            "normalization"
+          ],
+          "domains": [
+            "Computing & information",
+            "Learning & language"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:unicode-normalization",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q494756"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q7051851",
+                "Q65043788",
+                "local:catalog:focalization"
+              ],
+              "input_inventory_status": "new",
+              "label": "Unicode normalization",
+              "new_qid_without_baseline": false,
+              "ordinal": 9,
+              "proposal_id": "local:catalog:unicode-normalization",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Unicode normalization",
+          "learning_takeaway": "Transform equivalent character sequences into a common binary representation through decomposition, ordering, and optional recomposition.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Data is the broad representation category; normalization is a specified equivalence-preserving text transformation.",
+              "id": "Q494756",
+              "label": "Data (computing)",
+              "original_description": "quantities, characters, or symbols on which operations are performed by a computer"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:unicode-normalization",
+          "scope": "idea",
+          "secondary_domains": [
+            "Learning & language"
+          ],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:canonical-equivalence-in-unicode",
+          "author_provisional_id": "local:catalog:canonical-equivalence-in-unicode",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "This formal equivalence relation concerns alternative text encodings, not data in general or sociological normalization.",
+          "discovery_locators": [
+            {
+              "locator": "§1.1, Figure 1",
+              "source_id": "normalization"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Recognize a precomposed accented character and its decomposed sequence as the same abstract character.",
+              "locator": "§1.1, Figure 1",
+              "source_id": "normalization",
+              "title": "Unicode Normalization Forms",
+              "url": "https://www.unicode.org/reports/tr15/"
+            }
+          ],
+          "discovery_source_ids": [
+            "normalization"
+          ],
+          "domains": [
+            "Computing & information",
+            "Learning & language"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:canonical-equivalence-in-unicode",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q494756"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q130998",
+                "Q5033354",
+                "Q1779238"
+              ],
+              "input_inventory_status": "new",
+              "label": "Canonical equivalence in Unicode",
+              "new_qid_without_baseline": false,
+              "ordinal": 10,
+              "proposal_id": "local:catalog:canonical-equivalence-in-unicode",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Canonical equivalence in Unicode",
+          "learning_takeaway": "Recognize a precomposed accented character and its decomposed sequence as the same abstract character.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "This formal equivalence relation concerns alternative text encodings, not data in general or sociological normalization.",
+              "id": "Q494756",
+              "label": "Data (computing)",
+              "original_description": "quantities, characters, or symbols on which operations are performed by a computer"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:canonical-equivalence-in-unicode",
+          "scope": "facet_or_application",
+          "secondary_domains": [
+            "Learning & language"
+          ],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:compatibility-equivalence-in-unicode",
+          "author_provisional_id": "local:catalog:compatibility-equivalence-in-unicode",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "Weaker compatibility equivalence can erase distinctions that canonical equivalence preserves.",
+          "discovery_locators": [
+            {
+              "locator": "§1.1, Figure 2; §1.2 warning",
+              "source_id": "normalization"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Treat certain stylistic or presentation variants as equivalent while recognizing potentially meaningful distinctions lost by folding.",
+              "locator": "§1.1, Figure 2; §1.2 warning",
+              "source_id": "normalization",
+              "title": "Unicode Normalization Forms",
+              "url": "https://www.unicode.org/reports/tr15/"
+            }
+          ],
+          "discovery_source_ids": [
+            "normalization"
+          ],
+          "domains": [
+            "Computing & information",
+            "Learning & language"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:compatibility-equivalence-in-unicode",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q494756"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q7731670",
+                "Q130998",
+                "Q1779238"
+              ],
+              "input_inventory_status": "new",
+              "label": "Compatibility equivalence in Unicode",
+              "new_qid_without_baseline": false,
+              "ordinal": 11,
+              "proposal_id": "local:catalog:compatibility-equivalence-in-unicode",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Compatibility equivalence in Unicode",
+          "learning_takeaway": "Treat certain stylistic or presentation variants as equivalent while recognizing potentially meaningful distinctions lost by folding.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Weaker compatibility equivalence can erase distinctions that canonical equivalence preserves.",
+              "id": "Q494756",
+              "label": "Data (computing)",
+              "original_description": "quantities, characters, or symbols on which operations are performed by a computer"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:compatibility-equivalence-in-unicode",
+          "scope": "facet_or_application",
+          "secondary_domains": [
+            "Learning & language"
+          ],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:normalization-across-string-concatenation",
+          "author_provisional_id": "local:catalog:normalization-across-string-concatenation",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "This is a closure failure of normalization under concatenation, not another name for normalization itself.",
+          "discovery_locators": [
+            {
+              "locator": "§1.4, Table 2",
+              "source_id": "normalization"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Recheck normalization at concatenation boundaries because joining normalized strings can require reordering or composition.",
+              "locator": "§1.4, Table 2",
+              "source_id": "normalization",
+              "title": "Unicode Normalization Forms",
+              "url": "https://www.unicode.org/reports/tr15/"
+            }
+          ],
+          "discovery_source_ids": [
+            "normalization"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:normalization-across-string-concatenation",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q494756"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q7051851",
+                "Q5348940",
+                "Q576006"
+              ],
+              "input_inventory_status": "new",
+              "label": "Normalization across string concatenation",
+              "new_qid_without_baseline": false,
+              "ordinal": 12,
+              "proposal_id": "local:catalog:normalization-across-string-concatenation",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Normalization across string concatenation",
+          "learning_takeaway": "Recheck normalization at concatenation boundaries because joining normalized strings can require reordering or composition.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "This is a closure failure of normalization under concatenation, not another name for normalization itself.",
+              "id": "Q494756",
+              "label": "Data (computing)",
+              "original_description": "quantities, characters, or symbols on which operations are performed by a computer"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:normalization-across-string-concatenation",
+          "scope": "facet_or_application",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:utf-8",
+          "author_provisional_id": "local:catalog:utf-8",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "A defined variable-length text encoding is narrower than the baseline's general computing-data category.",
+          "discovery_locators": [
+            {
+              "locator": "§2–§3",
+              "source_id": "utf8"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Encode Unicode scalar values in one to four bytes while preserving ASCII byte values.",
+              "locator": "§2–§3",
+              "source_id": "utf8",
+              "title": "UTF-8, a transformation format of ISO 10646",
+              "url": "https://www.rfc-editor.org/rfc/rfc3629"
+            }
+          ],
+          "discovery_source_ids": [
+            "utf8"
+          ],
+          "domains": [
+            "Computing & information",
+            "Learning & language"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:utf-8",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q494756"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q1377153",
+                "Q19321851",
+                "Q131156"
+              ],
+              "input_inventory_status": "new",
+              "label": "UTF-8",
+              "new_qid_without_baseline": false,
+              "ordinal": 13,
+              "proposal_id": "local:catalog:utf-8",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "UTF-8",
+          "learning_takeaway": "Encode Unicode scalar values in one to four bytes while preserving ASCII byte values.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "A defined variable-length text encoding is narrower than the baseline's general computing-data category.",
+              "id": "Q494756",
+              "label": "Data (computing)",
+              "original_description": "quantities, characters, or symbols on which operations are performed by a computer"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:utf-8",
+          "scope": "idea",
+          "secondary_domains": [
+            "Learning & language"
+          ],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:overlong-utf-8-encodings",
+          "author_provisional_id": "local:catalog:overlong-utf-8-encodings",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "The baseline concept concerns memory retrieval cues; this is invalid text encoding and parser security.",
+          "discovery_locators": [
+            {
+              "locator": "§3; §10",
+              "source_id": "utf8"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Reject longer-than-permitted encodings so alternate byte sequences cannot bypass character-based security checks.",
+              "locator": "§3; §10",
+              "source_id": "utf8",
+              "title": "UTF-8, a transformation format of ISO 10646",
+              "url": "https://www.rfc-editor.org/rfc/rfc3629"
+            }
+          ],
+          "discovery_source_ids": [
+            "utf8"
+          ],
+          "domains": [
+            "Computing & information",
+            "Learning & language"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:overlong-utf-8-encodings",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "local:catalog:encoding-specificity"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "local:catalog:encoding-specificity",
+                "Q3900481",
+                "Q602136"
+              ],
+              "input_inventory_status": "new",
+              "label": "Overlong UTF-8 encodings",
+              "new_qid_without_baseline": false,
+              "ordinal": 14,
+              "proposal_id": "local:catalog:overlong-utf-8-encodings",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Overlong UTF-8 encodings",
+          "learning_takeaway": "Reject longer-than-permitted encodings so alternate byte sequences cannot bypass character-based security checks.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [
+                "Explain why a cue works through overlap with how an event was encoded."
+              ],
+              "comparison": "The baseline concept concerns memory retrieval cues; this is invalid text encoding and parser security.",
+              "id": "local:catalog:encoding-specificity",
+              "label": "Encoding specificity principle",
+              "original_description": null
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:overlong-utf-8-encodings",
+          "scope": "facet_or_application",
+          "secondary_domains": [
+            "Learning & language"
+          ],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:unicode-code-point",
+          "author_provisional_id": "local:catalog:unicode-code-point",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "An abstract numeric character position is distinct from its storage encoding and from data generally.",
+          "discovery_locators": [
+            {
+              "locator": "§3, encoding definition",
+              "source_id": "utf8"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Distinguish the integer assigned to a character from the bytes used by an encoding.",
+              "locator": "§3, encoding definition",
+              "source_id": "utf8",
+              "title": "UTF-8, a transformation format of ISO 10646",
+              "url": "https://www.rfc-editor.org/rfc/rfc3629"
+            }
+          ],
+          "discovery_source_ids": [
+            "utf8"
+          ],
+          "domains": [
+            "Computing & information",
+            "Learning & language"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:unicode-code-point",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q494756"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q134409768",
+                "Q79897",
+                "Q5073332"
+              ],
+              "input_inventory_status": "new",
+              "label": "Unicode code point",
+              "new_qid_without_baseline": false,
+              "ordinal": 15,
+              "proposal_id": "local:catalog:unicode-code-point",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Unicode code point",
+          "learning_takeaway": "Distinguish the integer assigned to a character from the bytes used by an encoding.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "An abstract numeric character position is distinct from its storage encoding and from data generally.",
+              "id": "Q494756",
+              "label": "Data (computing)",
+              "original_description": "quantities, characters, or symbols on which operations are performed by a computer"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:unicode-code-point",
+          "scope": "idea",
+          "secondary_domains": [
+            "Learning & language"
+          ],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [
+            "Extended grapheme cluster"
+          ],
+          "author_effective_id": "local:catalog:grapheme-cluster",
+          "author_provisional_id": "local:catalog:grapheme-cluster",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "Graphetics studies written forms; grapheme clusters are an implementable Unicode segmentation unit.",
+          "discovery_locators": [
+            {
+              "locator": "§3, introductory discussion and Table 1a",
+              "source_id": "segmentation"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Group code points into a best-effort approximation of a user-perceived character for text editing.",
+              "locator": "§3, introductory discussion and Table 1a",
+              "source_id": "segmentation",
+              "title": "Unicode Text Segmentation",
+              "url": "https://www.unicode.org/reports/tr29/"
+            }
+          ],
+          "discovery_source_ids": [
+            "segmentation"
+          ],
+          "domains": [
+            "Computing & information",
+            "Learning & language"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:grapheme-cluster",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q5597119"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q178647",
+                "Q169917",
+                "Q5597119"
+              ],
+              "input_inventory_status": "new",
+              "label": "Grapheme cluster",
+              "new_qid_without_baseline": false,
+              "ordinal": 16,
+              "proposal_id": "local:catalog:grapheme-cluster",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Grapheme cluster",
+          "learning_takeaway": "Group code points into a best-effort approximation of a user-perceived character for text editing.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Graphetics studies written forms; grapheme clusters are an implementable Unicode segmentation unit.",
+              "id": "Q5597119",
+              "label": "Graphetics",
+              "original_description": "study of written graphs independent of language"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:grapheme-cluster",
+          "scope": "idea",
+          "secondary_domains": [
+            "Learning & language"
+          ],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:binary-search",
+          "author_provisional_id": "local:catalog:binary-search",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "A database is the collection; binary search is a general ordered-search procedure used to retrieve records.",
+          "discovery_locators": [
+            {
+              "locator": "§1.2–§1.3",
+              "source_id": "queryplanner"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Exploit sorted keys to find a record with logarithmic rather than full-scan search effort.",
+              "locator": "§1.2–§1.3",
+              "source_id": "queryplanner",
+              "title": "Query Planning",
+              "url": "https://www.sqlite.org/queryplanner.html"
+            }
+          ],
+          "discovery_source_ids": [
+            "queryplanner"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:binary-search",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q8513"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q1193859",
+                "Q50053",
+                "Q3913"
+              ],
+              "input_inventory_status": "new",
+              "label": "Binary search",
+              "new_qid_without_baseline": false,
+              "ordinal": 17,
+              "proposal_id": "local:catalog:binary-search",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Binary search",
+          "learning_takeaway": "Exploit sorted keys to find a record with logarithmic rather than full-scan search effort.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "A database is the collection; binary search is a general ordered-search procedure used to retrieve records.",
+              "id": "Q8513",
+              "label": "Database",
+              "original_description": "organized collection of data in computing"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:binary-search",
+          "scope": "idea",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:covering-index",
+          "author_provisional_id": "local:catalog:covering-index",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "Distinct from a database generally and from indexes that still require table lookups.",
+          "discovery_locators": [
+            {
+              "locator": "§1.7",
+              "source_id": "queryplanner"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Include search and output columns in an index so a query need not consult the original table.",
+              "locator": "§1.7",
+              "source_id": "queryplanner",
+              "title": "Query Planning",
+              "url": "https://www.sqlite.org/queryplanner.html"
+            }
+          ],
+          "discovery_source_ids": [
+            "queryplanner"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:covering-index",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q8513"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q849699",
+                "Q3150395",
+                "Q131191"
+              ],
+              "input_inventory_status": "new",
+              "label": "Covering index",
+              "new_qid_without_baseline": false,
+              "ordinal": 18,
+              "proposal_id": "local:catalog:covering-index",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Covering index",
+          "learning_takeaway": "Include search and output columns in an index so a query need not consult the original table.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Distinct from a database generally and from indexes that still require table lookups.",
+              "id": "Q8513",
+              "label": "Database",
+              "original_description": "organized collection of data in computing"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:covering-index",
+          "scope": "facet_or_application",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [
+            "Composite index"
+          ],
+          "author_effective_id": "local:catalog:multi-column-index",
+          "author_provisional_id": "local:catalog:multi-column-index",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "Composite key ordering is an indexing technique, not a paraphrase of a database or covering-index property.",
+          "discovery_locators": [
+            {
+              "locator": "§1.6",
+              "source_id": "queryplanner"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Order index entries by several columns so combined constraints avoid filtering unrelated intermediate matches.",
+              "locator": "§1.6",
+              "source_id": "queryplanner",
+              "title": "Query Planning",
+              "url": "https://www.sqlite.org/queryplanner.html"
+            }
+          ],
+          "discovery_source_ids": [
+            "queryplanner"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:multi-column-index",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q8513"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q4817",
+                "Q849699",
+                "Q3150395"
+              ],
+              "input_inventory_status": "new",
+              "label": "Multi-column index",
+              "new_qid_without_baseline": false,
+              "ordinal": 19,
+              "proposal_id": "local:catalog:multi-column-index",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Multi-column index",
+          "learning_takeaway": "Order index entries by several columns so combined constraints avoid filtering unrelated intermediate matches.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Composite key ordering is an indexing technique, not a paraphrase of a database or covering-index property.",
+              "id": "Q8513",
+              "label": "Database",
+              "original_description": "organized collection of data in computing"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:multi-column-index",
+          "scope": "facet_or_application",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:a-mathematical-theory-of-communication",
+          "author_provisional_id": "local:catalog:a-mathematical-theory-of-communication",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "The specific published work differs from the broader field it helped establish.",
+          "discovery_locators": [
+            {
+              "locator": "Title; Introduction, pp. 1–2",
+              "source_id": "shannon"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "See how Shannon's 1948 paper separated message selection from semantics to formulate an engineering theory.",
+              "locator": "Title; Introduction, pp. 1–2",
+              "source_id": "shannon",
+              "title": "A Mathematical Theory of Communication",
+              "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+            }
+          ],
+          "discovery_source_ids": [
+            "shannon"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "named_subject",
+          "id": "local:catalog:a-mathematical-theory-of-communication",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "local:authored:000609"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q11024",
+                "local:authored:000615",
+                "local:authored:000505"
+              ],
+              "input_inventory_status": "new",
+              "label": "A Mathematical Theory of Communication",
+              "new_qid_without_baseline": false,
+              "ordinal": 20,
+              "proposal_id": "local:catalog:a-mathematical-theory-of-communication",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "A Mathematical Theory of Communication",
+          "learning_takeaway": "See how Shannon's 1948 paper separated message selection from semantics to formulate an engineering theory.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "The specific published work differs from the broader field it helped establish.",
+              "id": "local:authored:000609",
+              "label": "Information theory",
+              "original_description": "Quantifying information, uncertainty and communication limits."
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Algorithms and information representation",
+          "provisional_id": "local:catalog:a-mathematical-theory-of-communication",
+          "scope": "topic",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [
+            "Distributed systems"
+          ],
+          "author_effective_id": "local:authored:000520",
+          "author_provisional_id": "local:authored:000520",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [
+            "local:authored:000520"
+          ],
+          "decision_reason": "Same networked-computation field; replicated state machines provide the concrete example.",
+          "discovery_locators": [
+            {
+              "locator": "§2, replicated state machines",
+              "source_id": "raft"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Coordinate machines through messages while preserving shared results despite some machine failures.",
+              "locator": "§2, replicated state machines",
+              "source_id": "raft",
+              "title": "In Search of an Understandable Consensus Algorithm",
+              "url": "https://raft.github.io/raft.pdf"
+            }
+          ],
+          "discovery_source_ids": [
+            "raft"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:authored:000520",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "local:authored:000520"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "local:authored:000520",
+                "local:authored:000675",
+                "local:authored:000547"
+              ],
+              "input_inventory_status": "existing_control",
+              "label": "Distributed systems",
+              "new_qid_without_baseline": false,
+              "ordinal": 21,
+              "proposal_id": "local:authored:000520",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": true
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "existing",
+          "label": "Distributed systems",
+          "learning_takeaway": "Coordinate machines through messages while preserving shared results despite some machine failures.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Same networked-computation field; replicated state machines provide the concrete example.",
+              "id": "local:authored:000520",
+              "label": "Distributed systems",
+              "original_description": "Coordinating computation across multiple networked machines."
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Programming and distributed systems",
+          "provisional_id": "local:authored:000520",
+          "scope": "broad_field",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [
+            "Database"
+          ],
+          "author_effective_id": "Q8513",
+          "author_provisional_id": "Q8513",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [
+            "Q8513"
+          ],
+          "decision_reason": "Same organized-computing-data meaning; SQLite illustrates its implementation.",
+          "discovery_locators": [
+            {
+              "locator": "About SQLite, main explanatory paragraphs",
+              "source_id": "sqliteabout"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Organize related tables and indexes so stored information can be queried and updated consistently.",
+              "locator": "About SQLite, main explanatory paragraphs",
+              "source_id": "sqliteabout",
+              "title": "About SQLite",
+              "url": "https://www.sqlite.org/about.html"
+            }
+          ],
+          "discovery_source_ids": [
+            "sqliteabout"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "Q8513",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q8513"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q8513",
+                "local:authored:000519",
+                "Q1340994"
+              ],
+              "input_inventory_status": "existing_control",
+              "label": "Database",
+              "new_qid_without_baseline": false,
+              "ordinal": 22,
+              "proposal_id": "Q8513",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": true
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "existing",
+          "label": "Database",
+          "learning_takeaway": "Organize related tables and indexes so stored information can be queried and updated consistently.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "Same organized-computing-data meaning; SQLite illustrates its implementation.",
+              "id": "Q8513",
+              "label": "Database",
+              "original_description": "organized collection of data in computing"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Programming and distributed systems",
+          "provisional_id": "Q8513",
+          "scope": "topic",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [
+            "Structured Query Language"
+          ],
+          "author_effective_id": "local:catalog:sql",
+          "author_provisional_id": "local:catalog:sql",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "SQL is a query language; a database is the collection it operates on.",
+          "discovery_locators": [
+            {
+              "locator": "Overview; §1.1–§1.3",
+              "source_id": "queryplanner"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Describe desired query results declaratively while a database planner chooses how to find them.",
+              "locator": "Overview; §1.1–§1.3",
+              "source_id": "queryplanner",
+              "title": "Query Planning",
+              "url": "https://www.sqlite.org/queryplanner.html"
+            }
+          ],
+          "discovery_source_ids": [
+            "queryplanner"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:sql",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q8513"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "local:authored:000519",
+                "Q8513",
+                "Q104850257"
+              ],
+              "input_inventory_status": "new",
+              "label": "SQL",
+              "new_qid_without_baseline": false,
+              "ordinal": 23,
+              "proposal_id": "local:catalog:sql",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "SQL",
+          "learning_takeaway": "Describe desired query results declaratively while a database planner chooses how to find them.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "SQL is a query language; a database is the collection it operates on.",
+              "id": "Q8513",
+              "label": "Database",
+              "original_description": "organized collection of data in computing"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Programming and distributed systems",
+          "provisional_id": "local:catalog:sql",
+          "scope": "topic",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:sqlite",
+          "author_provisional_id": "local:catalog:sqlite",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "The particular software library is distinct from the general database concept.",
+          "discovery_locators": [
+            {
+              "locator": "About SQLite, first two main paragraphs",
+              "source_id": "sqliteabout"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Embed a transactional database directly in an application without a separate database server process.",
+              "locator": "About SQLite, first two main paragraphs",
+              "source_id": "sqliteabout",
+              "title": "About SQLite",
+              "url": "https://www.sqlite.org/about.html"
+            }
+          ],
+          "discovery_source_ids": [
+            "sqliteabout"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "named_subject",
+          "id": "local:catalog:sqlite",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q8513"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q8513",
+                "local:authored:000519",
+                "Q605396"
+              ],
+              "input_inventory_status": "new",
+              "label": "SQLite",
+              "new_qid_without_baseline": false,
+              "ordinal": 24,
+              "proposal_id": "local:catalog:sqlite",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "SQLite",
+          "learning_takeaway": "Embed a transactional database directly in an application without a separate database server process.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "The particular software library is distinct from the general database concept.",
+              "id": "Q8513",
+              "label": "Database",
+              "original_description": "organized collection of data in computing"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Programming and distributed systems",
+          "provisional_id": "local:catalog:sqlite",
+          "scope": "topic",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        },
+        {
+          "aliases": [],
+          "author_effective_id": "local:catalog:atomic-commit",
+          "author_provisional_id": "local:catalog:atomic-commit",
+          "author_stage": "A_selection_only",
+          "authoring_constraints": [],
+          "baseline_comparison_status": "Independent bounded review completed; contextual diagnostics are not relationship assertions or automatic novelty proof.",
+          "baseline_exact_homonym_review_required": [],
+          "baseline_exact_label_or_alias_ids": [],
+          "decision_reason": "A transaction completion guarantee is narrower than a database and distinct from concurrent-read isolation.",
+          "discovery_locators": [
+            {
+              "locator": "§1 Introduction",
+              "source_id": "atomiccommit"
+            }
+          ],
+          "discovery_references": [
+            {
+              "inspected_support_note": "Make a transaction appear all-or-nothing even though storage writes happen sequentially and can be interrupted.",
+              "locator": "§1 Introduction",
+              "source_id": "atomiccommit",
+              "title": "Atomic Commit In SQLite",
+              "url": "https://www.sqlite.org/atomiccommit.html"
+            }
+          ],
+          "discovery_source_ids": [
+            "atomiccommit"
+          ],
+          "domains": [
+            "Computing & information"
+          ],
+          "duplicate_review_decision": "no_unresolved_duplicate_identified_in_bounded_review",
+          "entity_kind": "idea",
+          "id": "local:catalog:atomic-commit",
+          "independent_identity_review": {
+            "path": "research/identity-review/batch-005-review.json",
+            "record": {
+              "author_baseline_comparison_ids": [
+                "Q8513"
+              ],
+              "identity_recommendation": "no_unresolved_duplicate_identified_in_bounded_review",
+              "independent_diagnostic_top_three_ids": [
+                "Q26383",
+                "Q483788",
+                "Q227467"
+              ],
+              "input_inventory_status": "new",
+              "label": "Atomic commit",
+              "new_qid_without_baseline": false,
+              "ordinal": 25,
+              "proposal_id": "local:catalog:atomic-commit",
+              "proposal_status": "proposed_accept",
+              "registered_id_exists": false
+            },
+            "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2",
+            "specific_decision": null
+          },
+          "inventory_status": "new",
+          "label": "Atomic commit",
+          "learning_takeaway": "Make a transaction appear all-or-nothing even though storage writes happen sequentially and can be interrupted.",
+          "nearest_baseline_matches": [
+            {
+              "candidate_takeaways": [],
+              "comparison": "A transaction completion guarantee is narrower than a database and distinct from concurrent-read isolation.",
+              "id": "Q8513",
+              "label": "Database",
+              "original_description": "organized collection of data in computing"
+            }
+          ],
+          "nearest_sibling_matches": {
+            "review_path": "research/identity-review/cross-batch-overlap-review.json",
+            "review_sha256": "6bc6423fec64124084c8b0a7d90aadcd5e45da45bdfa476e84154aa5b1b9ffaa",
+            "status": "No unresolved cross-batch duplicate identified in bounded all-five review."
+          },
+          "originating_batch_id": "research-batch-005",
+          "owner": "research-batch-005",
+          "primary_domain": "Computing & information",
+          "primary_subfield": "Programming and distributed systems",
+          "provisional_id": "local:catalog:atomic-commit",
+          "scope": "idea",
+          "secondary_domains": [],
+          "selection_status": "approved_for_card_research",
+          "source_namespace": "research-batch-005"
+        }
+      ]
+    },
+    "global_selection_manifest": {
+      "path": "data/catalog-candidates/scale-pilot-001/selection-manifest.json",
+      "sha256": "7aa3490aa9f032db98a3c51bb12d9d7eaa9eac09f032f0e43a3ea8d886bb1fa7",
+      "selection_version": 2,
+      "amendments": [
+        {
+          "at": "2026-10-08T20:42:38.559533+00:00",
+          "changes": [
+            {
+              "id": "local:catalog:competitive-exclusion-principle",
+              "new_aliases": [],
+              "old_aliases": [
+                "Gause’s principle"
+              ]
+            },
+            {
+              "id": "local:catalog:isle-royale",
+              "new_aliases": [],
+              "old_aliases": [
+                "Isle Royale National Park"
+              ]
+            },
+            {
+              "id": "local:catalog:horizontal-gene-transfer",
+              "new_aliases": [
+                "HGT"
+              ],
+              "old_aliases": [
+                "HGT",
+                "Lateral gene transfer"
+              ]
+            }
+          ],
+          "previous_manifest_sha256": "c52580c18d45b19ededc91e1c4e15682e3f27c2feab6f5d70f215174c1ffb125",
+          "reason": "Post-freeze alias cleanup requested by the author before final cards: preserve island scope and remove two optional synonyms without recorded passage support. No ID, ownership, primary count or learning-scope changes.",
+          "revision": 2,
+          "source": "research/workers/research-batch-003/author-selection-corrections.json"
+        }
+      ]
+    },
+    "input_provenance": {
+      "baseline_manifest": {
+        "active_candidate_revisions": [
+          {
+            "batch_id": "research-batch-001",
+            "concepts": 200,
+            "path": "../inputs/unpacked/data/catalog-candidates/research-batch-001.json",
+            "revision": 1,
+            "sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+            "sources": 242
+          },
+          {
+            "batch_id": "research-batch-002",
+            "concepts": 200,
+            "path": "../inputs/unpacked/data/catalog-candidates/research-batch-002.json",
+            "revision": 2,
+            "sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+            "sources": 188
+          }
+        ],
+        "archived_copies_counted": false,
+        "archived_provenance_path": "../inputs/unpacked/data/catalog-candidates/archive/research-batch-002",
+        "baseline_identity_count_by_id": 7224,
+        "baseline_index_sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9",
+        "baseline_inventory_fingerprint": "7f771750100bfe65c63a4e12fa067f1236bbe7d8a78657459076d7f5ce3709ad",
+        "frozen_at": "2026-10-08T18:46:05.812727+00:00",
+        "inputs": [
+          {
+            "actual_sha256": "1378e2cb37b2c3b648c2319c6303dbbf6380f20d2f0ff10fe8db8a2f62bd2f44",
+            "matches_preparation": true,
+            "path": "data/topics.json",
+            "sha256": "1378e2cb37b2c3b648c2319c6303dbbf6380f20d2f0ff10fe8db8a2f62bd2f44",
+            "size_bytes": 1519825
+          },
+          {
+            "actual_sha256": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309",
+            "matches_preparation": true,
+            "path": "data/discovery_graph.json",
+            "sha256": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309",
+            "size_bytes": 4491718
+          },
+          {
+            "actual_sha256": "e9968d8e3d1f317b3bcd42c42efd9a1e44305d210464be7427416576a64bf67b",
+            "matches_preparation": true,
+            "path": "data/recommendation-identities.json",
+            "sha256": "e9968d8e3d1f317b3bcd42c42efd9a1e44305d210464be7427416576a64bf67b",
+            "size_bytes": 33658
+          },
+          {
+            "actual_sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+            "matches_preparation": true,
+            "path": "data/catalog-candidates/research-batch-001.json",
+            "sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+            "size_bytes": 829754
+          },
+          {
+            "actual_sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+            "matches_preparation": true,
+            "path": "data/catalog-candidates/research-batch-002.json",
+            "sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+            "size_bytes": 2424562
+          }
+        ],
+        "inventory_identity_count": 7033,
+        "pilot_id": "scale-pilot-001",
+        "schema_version": 1,
+        "selection_inputs": "Public reference material and pinned identity baseline only; no private ratings or held-out judgments.",
+        "status": "frozen",
+        "supplemental_source_snapshot": {
+          "created_at": "2026-10-08T19:00:26.767021+00:00",
+          "path": "data/catalog-candidates/scale-pilot-001/baseline-imported-records.json",
+          "purpose": "Full original source rows for provenance preservation. No identity, meaning, alias, input revision or count changed.",
+          "sha256": "732cd46ba879c8f090998ad0f3e436fdf1d157aec91e4ea01bef6d4f0f2387ba"
+        }
+      },
+      "baseline_imported_records_sha256": "732cd46ba879c8f090998ad0f3e436fdf1d157aec91e4ea01bef6d4f0f2387ba"
+    },
+    "source_id_scope": "Local to research-batch-005; coordinator namespaces during assembly.",
+    "ownership": {
+      "local:authored:000609": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "Q2493": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:huffman-coding": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:prefix-free-code": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:canonical-huffman-coding": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:lz77": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:deflate": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:dynamic-huffman-blocks-in-deflate": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:unicode-normalization": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:canonical-equivalence-in-unicode": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:compatibility-equivalence-in-unicode": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:normalization-across-string-concatenation": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:utf-8": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:overlong-utf-8-encodings": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:unicode-code-point": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:grapheme-cluster": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:binary-search": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:covering-index": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:multi-column-index": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:catalog:a-mathematical-theory-of-communication": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Algorithms and information representation"
+      },
+      "local:authored:000520": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Programming and distributed systems"
+      },
+      "Q8513": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Programming and distributed systems"
+      },
+      "local:catalog:sql": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Programming and distributed systems"
+      },
+      "local:catalog:sqlite": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Programming and distributed systems"
+      },
+      "local:catalog:atomic-commit": {
+        "owner": "research-batch-005",
+        "primary_domain": "Computing & information",
+        "primary_subfield": "Programming and distributed systems"
+      }
+    },
+    "duplicate_review": {
+      "independent_review": {
+        "path": "research/identity-review/batch-005-review.json",
+        "sha256": "498ad8d23405946434f51ec27323b32ebb421063a908b0f02785d3fc868f68d2"
+      },
+      "identity_decisions_path": "data/catalog-candidates/scale-pilot-001/identity-decisions.json",
+      "approved_conditions_preserved_in_selection": true
+    },
+    "prior_version_records": [],
+    "card_version_decisions": [
+      {
+        "id": "local:authored:000609",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "Q2493",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:huffman-coding",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:prefix-free-code",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:canonical-huffman-coding",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:lz77",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:deflate",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:dynamic-huffman-blocks-in-deflate",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:unicode-normalization",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:canonical-equivalence-in-unicode",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:compatibility-equivalence-in-unicode",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:normalization-across-string-concatenation",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:utf-8",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:overlong-utf-8-encodings",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:unicode-code-point",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:grapheme-cluster",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:binary-search",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:covering-index",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:multi-column-index",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:a-mathematical-theory-of-communication",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:authored:000520",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "Q8513",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:sql",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:sqlite",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      },
+      {
+        "id": "local:catalog:atomic-commit",
+        "selected_card_version": 1,
+        "previous_card_version": null,
+        "reason": "New card and reference/relationship bundle authored after the global selection freeze; prior artifact preserved where present."
+      }
+    ],
+    "access_log": "research/workers/research-batch-005/access-log.json",
+    "author_review": "research/workers/research-batch-005/author-review.json",
+    "usage": {
+      "platform_reported_tokens": null,
+      "platform_reported_cost": null,
+      "reason": "Not exposed by this execution platform."
+    }
+  },
+  "sources": [
+    {
+      "id": "shannon",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Introduction, pp. 1–2; Title; Introduction, pp. 1–2",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:58.955686Z",
+      "revision": "1948 reprint with corrections",
+      "source_result_file": "source-texts/web-014.json",
+      "source_result_sha256": "538134c2071cdea553e65961f2cb64b526654b316db8cce61e8092f7ef6e2c1c",
+      "title": "A Mathematical Theory of Communication",
+      "url": "https://people.math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf"
+    },
+    {
+      "id": "sqliteisolation",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Isolation And Concurrency, rollback mode",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:00:22.584743Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-001.json",
+      "source_result_sha256": "a7b503e7617a7b62f1a06a4d6fc77bf3912454998318cfe72771a003d61598f0",
+      "title": "Isolation In SQLite",
+      "url": "https://www.sqlite.org/isolation.html"
+    },
+    {
+      "id": "deflate",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "Abstract; §2; §3.2.1; §3.2.2; §2; §3.2.5; §3.2.6–§3.2.7",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:05:19.318222Z",
+      "revision": "RFC 1951",
+      "source_result_file": "source-texts/web-029.json",
+      "source_result_sha256": "856c0806c77299a218812b530aa0e877fabb1ecf9de15c57943e70d8597ccef6",
+      "title": "DEFLATE Compressed Data Format Specification version 1.3",
+      "url": "https://www.rfc-editor.org/rfc/rfc1951"
+    },
+    {
+      "id": "normalization",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§1.2–§1.3; §1.1, Figure 1; §1.1, Figure 2; §1.2 warning; §1.4, Table 2",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:00:47.737217Z",
+      "revision": "UAX 15 revision 58, Unicode 18.0.0",
+      "source_result_file": "source-texts/web-002.json",
+      "source_result_sha256": "20e65172e847f597f13f1b1fa31d76273929a7e186d595e7152130aa9a4020a7",
+      "title": "Unicode Normalization Forms",
+      "url": "https://www.unicode.org/reports/tr15/"
+    },
+    {
+      "id": "utf8",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§2–§3; §3; §10; §3, encoding definition",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:01:35.258119Z",
+      "revision": "RFC 3629",
+      "source_result_file": "source-texts/web-003.json",
+      "source_result_sha256": "42469d9c0464e942431b6735b0427882ad8f46400794b43783fbbd4e29cfc25a",
+      "title": "UTF-8, a transformation format of ISO 10646",
+      "url": "https://www.rfc-editor.org/rfc/rfc3629"
+    },
+    {
+      "id": "segmentation",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§3, introductory discussion and Table 1a",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:58.663681Z",
+      "revision": "UAX 29 revision 49, Unicode 18.0.0",
+      "source_result_file": "source-texts/web-012.json",
+      "source_result_sha256": "3a4ef024a1a11937748cb269e6ee8c8264587e4860709851dc132b7166407d99",
+      "title": "Unicode Text Segmentation",
+      "url": "https://www.unicode.org/reports/tr29/"
+    },
+    {
+      "id": "queryplanner",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§1.2–§1.3; §1.7; §1.6; Overview; sections 1.1–1.3; Overview; §1.1–§1.3",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:02:59.563696Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-013.json",
+      "source_result_sha256": "0baf30ecbd98cc626f078f651937921cc5d77248cc64073fef1881b48a524c65",
+      "title": "Query Planning",
+      "url": "https://www.sqlite.org/queryplanner.html"
+    },
+    {
+      "id": "raft",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§2, replicated state machines",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:04:38.525495Z",
+      "revision": "2014 extended paper",
+      "source_result_file": "source-texts/web-024.json",
+      "source_result_sha256": "cb7bf7a85c61d5cb6ccaa851726aa9274289d4db63ebd8322ed7158ed3941ee2",
+      "title": "In Search of an Understandable Consensus Algorithm",
+      "url": "https://raft.github.io/raft.pdf"
+    },
+    {
+      "id": "sqliteabout",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "About SQLite, main explanatory paragraphs; About SQLite, first two main paragraphs",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:05:18.534208Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-027.json",
+      "source_result_sha256": "53fbb483b46f34bacceffbe3c4c6179b30891af6193ba9fdc9aa6f56818ca886",
+      "title": "About SQLite",
+      "url": "https://www.sqlite.org/about.html"
+    },
+    {
+      "id": "atomiccommit",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises",
+      "locator": "§1 Introduction",
+      "retrieval_date": "2026-10-08",
+      "retrieval_time_basis": "Timestamp of raw acquisition-result checkpoint written in the same tool call",
+      "retrieved_at": "2026-10-08T19:05:18.806213Z",
+      "revision": null,
+      "source_result_file": "source-texts/web-028.json",
+      "source_result_sha256": "a7345c5717be270655da585d533bea0119dd9cd23f07c6b91d0ed62e2743e39d",
+      "title": "Atomic Commit In SQLite",
+      "url": "https://www.sqlite.org/atomiccommit.html"
+    },
+    {
+      "id": "nist-binary-search",
+      "title": "Binary search — NIST Dictionary of Algorithms and Data Structures",
+      "url": "https://xlinux.nist.gov/dads/HTML/binarySearch.html",
+      "locator": "Definition; Note on run time and ordered linked lists",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T20:49:47.318420+00:00",
+      "revision": null,
+      "publication_update_date": "2022-04-21",
+      "source_result_file": "source-texts/web-140.json",
+      "source_result_sha256": "5739af5a4721e25f7f0471e8a36159fcddae5805a0b958aea28a11a9b9acc4ca",
+      "inspection_status": "Author reviewed selected passages for claims and relationship premises"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "local:authored:000609",
+      "label": "Information theory",
+      "aliases": [
+        "Information theory"
+      ],
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Measure communication choices without treating message meaning as the engineering quantity.",
+      "card": "Information theory measures the choices involved in sending messages and the limits of communication systems. In Shannon's formulation, a message is selected from possible alternatives; its personal meaning is a separate question. Using base-two logarithms measures those choices in bits.",
+      "original_description": "Quantifying information, uncertainty and communication limits.",
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "shannon",
+          "locator": "Introduction, pp. 1–2",
+          "note": "Checked the message-selection problem, explicit separation from semantics, and logarithm-base choice in the introduction; no claim that human meaning is unimportant generally."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:a-mathematical-theory-of-communication",
+          "type": "related_to",
+          "source_ids": [
+            "shannon"
+          ],
+          "assertion": "editorial",
+          "note": "Shannon's paper provides a concrete historical entry into the field by formulating message selection and its bit-based measure."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": [
+        {
+          "topic": "Information theory",
+          "domain": "Mathematics",
+          "description": "Quantifying information, uncertainty and communication limits.",
+          "source": "ProductSpace",
+          "subsection": "Mathematics & reasoning",
+          "inventory_kind": "broad",
+          "index": 609
+        }
+      ]
+    },
+    {
+      "id": "Q2493",
+      "label": "Data compression",
+      "aliases": [
+        "Data compression"
+      ],
+      "entity_kind": "idea",
+      "scope": "topic",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Reduce representation size by replacing repeated strings and assigning economical symbol codes.",
+      "card": "Data compression represents information using fewer bits. Lossless methods preserve everything needed to reconstruct the original: DEFLATE, for example, replaces repeated byte strings with references and encodes symbols economically. Its combination shows that exploiting repetition and shortening frequent symbols are different routes to smaller representations.",
+      "original_description": "process of encoding information using fewer bits than the original representation",
+      "identity_urls": [
+        "https://www.wikidata.org/wiki/Q2493"
+      ],
+      "evidence": [
+        {
+          "source_id": "deflate",
+          "locator": "Abstract; §2",
+          "note": "Checked lossless reconstruction and the two coding mechanisms against the abstract and section 2; no promise that every input becomes smaller."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:deflate",
+          "type": "related_to",
+          "source_ids": [
+            "deflate"
+          ],
+          "assertion": "source_asserted",
+          "note": "RFC 1951 explicitly identifies DEFLATE as a lossless compressed format using LZ77 and Huffman coding, providing a concrete example of compression."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": [
+        {
+          "topic": "Data compression",
+          "domain": "Computing & information",
+          "description": "process of encoding information using fewer bits than the original representation",
+          "source": "Wikidata",
+          "source_url": "https://www.wikidata.org/wiki/Q2493",
+          "guide_title": "Data compression",
+          "wikidata_id": "Q2493",
+          "subsection": "Technology / Information technology / Computer science",
+          "source_revision": 2518235193,
+          "list_revision": 30916276,
+          "list_section": "Technology",
+          "inventory_kind": "broad",
+          "index": 1072
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:huffman-coding",
+      "label": "Huffman coding",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Assign variable-length prefix codes using symbol frequencies to minimize expected code length.",
+      "card": "Huffman coding assigns variable-length bit strings to symbols using their frequencies. Frequent symbols can receive shorter codes. The result is an optimal prefix code for the given frequencies, so a decoder can identify consecutive symbols unambiguously without inserting a separator after every codeword.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "deflate",
+          "locator": "§3.2.1",
+          "note": "Checked variable lengths, known frequencies, prefix decoding, and optimality limited to prefix codes for the specified frequencies."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:prefix-free-code",
+          "type": "broader_topic",
+          "source_ids": [
+            "deflate"
+          ],
+          "assertion": "source_asserted",
+          "note": "RFC 1951 section 3.2.1 explicitly defines a Huffman code as an optimal prefix code for given symbol frequencies."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:prefix-free-code",
+      "label": "Prefix-free code",
+      "aliases": [
+        "Prefix code"
+      ],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Decode concatenated codewords unambiguously because no codeword is another codeword's prefix.",
+      "card": "A prefix-free code gives each symbol a bit string that is never the beginning of another symbol's complete code. A decoder follows bits until it reaches a symbol, then starts again. Variable-length messages can therefore be separated into codewords without additional boundary markers.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "deflate",
+          "locator": "§3.2.1",
+          "note": "Checked the binary-tree leaves and symbol-by-symbol decoding; prefix-free does not mean every possible bit string is a valid codeword."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:huffman-coding",
+          "type": "related_to",
+          "source_ids": [
+            "deflate"
+          ],
+          "assertion": "source_asserted",
+          "note": "The RFC's prefix-coding explanation directly introduces Huffman coding as a frequency-based construction of such codes."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:canonical-huffman-coding",
+      "label": "Canonical Huffman coding",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Reconstruct a Huffman codebook from ordered code lengths using deterministic code assignment.",
+      "card": "Canonical Huffman coding determines the actual codewords from ordered symbol lengths. Codes of equal length receive consecutive values, with shorter codes preceding longer ones. DEFLATE uses these rules so a decoder can reconstruct the codebook from lengths rather than receiving every codeword explicitly.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "deflate",
+          "locator": "§3.2.2",
+          "note": "Checked both ordering rules and reconstruction sufficiency; this concerns representing a codebook, not choosing optimal lengths."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:huffman-coding",
+          "type": "facet_of",
+          "source_ids": [
+            "deflate"
+          ],
+          "assertion": "source_asserted",
+          "note": "RFC 1951 section 3.2.2 gives additional ordering rules for Huffman codes and explains reconstruction from code lengths."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:lz77",
+      "label": "LZ77",
+      "aliases": [
+        "Lempel–Ziv 77"
+      ],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Replace repeated byte strings with backward distance and length references within a sliding history.",
+      "card": "LZ77-style compression replaces repeated strings with references to earlier input. In DEFLATE, a reference gives a backward distance and a length, telling the decoder what earlier bytes to copy. Literal bytes handle material without a suitable match in the available history.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "deflate",
+          "locator": "§2; §3.2.5",
+          "note": "Checked literals, distance-length pairs, and earlier-history copying; wording identifies the DEFLATE implementation rather than imposing its limits on every LZ77 variant."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q2493",
+          "type": "broader_topic",
+          "source_ids": [
+            "deflate"
+          ],
+          "assertion": "source_asserted",
+          "note": "RFC 1951 section 2 identifies LZ77 as a compression technique used to represent repeated strings with backward references."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:deflate",
+      "label": "DEFLATE",
+      "aliases": [
+        "Deflate"
+      ],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Combine LZ77 references and Huffman-coded symbols inside a lossless block format.",
+      "card": "DEFLATE is a lossless compressed-data format combining two techniques. Repeated byte strings become LZ77-style length-and-distance references, while literals and references are represented with Huffman codes. Data is organized into blocks, which can use fixed codes, transmitted code tables, or no compression.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "deflate",
+          "locator": "Abstract; §2",
+          "note": "Checked the combination and three valid block types; not described as an Internet standard because RFC 1951 is informational."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:lz77",
+          "type": "application_of",
+          "source_ids": [
+            "deflate"
+          ],
+          "assertion": "source_asserted",
+          "note": "The RFC abstract and section 2 expressly state that DEFLATE combines the LZ77 algorithm with Huffman coding."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:dynamic-huffman-blocks-in-deflate",
+      "label": "Dynamic Huffman blocks in DEFLATE",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Transmit block-specific code lengths rather than always using the format's fixed Huffman tables.",
+      "card": "A dynamic Huffman block in DEFLATE carries descriptions of its own coding tables before the compressed data. The descriptions encode code lengths, including repeated lengths. Fixed-code blocks avoid that table description, creating a format-level choice between predetermined codes and block-specific ones.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "deflate",
+          "locator": "§3.2.6–§3.2.7",
+          "note": "Checked transmitted lengths and repeated-length symbols; no unsupported claim that dynamic blocks always compress better."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:deflate",
+          "type": "facet_of",
+          "source_ids": [
+            "deflate"
+          ],
+          "assertion": "source_asserted",
+          "note": "RFC 1951 sections 3.2.6–3.2.7 define fixed and dynamic Huffman block types within DEFLATE."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:unicode-normalization",
+      "label": "Unicode normalization",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Computing & information",
+        "Learning & language"
+      ],
+      "learning_takeaway": "Transform equivalent character sequences into a common binary representation through decomposition, ordering, and optional recomposition.",
+      "card": "Unicode normalization gives equivalent text sequences a common representation. It decomposes characters, orders combining marks, and sometimes recomposes them. The chosen normalization form matters: canonical forms preserve distinctions that compatibility forms may remove, so normalization is more specific than simply making text look alike.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "normalization",
+          "locator": "§1.2–§1.3",
+          "note": "Checked decomposition, ordering, recomposition, and canonical versus compatibility behavior; normalization is not a general visual-similarity matcher."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:canonical-equivalence-in-unicode",
+          "type": "related_to",
+          "source_ids": [
+            "normalization"
+          ],
+          "assertion": "source_asserted",
+          "note": "UAX 15 sections 1.1–1.3 explicitly use canonical equivalence to define normalization forms and their transformations."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:canonical-equivalence-in-unicode",
+      "label": "Canonical equivalence in Unicode",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "domains": [
+        "Computing & information",
+        "Learning & language"
+      ],
+      "learning_takeaway": "Recognize a precomposed accented character and its decomposed sequence as the same abstract character.",
+      "card": "Unicode can represent the same abstract character in different ways, such as a precomposed accented letter or a letter followed by a combining accent. Canonical equivalence identifies these alternatives as fundamentally equivalent. Normalization allows software to compare their representations consistently.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "normalization",
+          "locator": "§1.1, Figure 1",
+          "note": "Checked the combining-sequence example and equivalence definition; no assumption that every similarly drawn character is canonically equivalent."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:unicode-normalization",
+          "type": "facet_of",
+          "source_ids": [
+            "normalization"
+          ],
+          "assertion": "editorial",
+          "note": "Canonical equivalence supplies one precisely defined basis for normalization; grouping it as a facet distinguishes the equivalence relation from the transformation algorithm."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:compatibility-equivalence-in-unicode",
+      "label": "Compatibility equivalence in Unicode",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "domains": [
+        "Computing & information",
+        "Learning & language"
+      ],
+      "learning_takeaway": "Treat certain stylistic or presentation variants as equivalent while recognizing potentially meaningful distinctions lost by folding.",
+      "card": "Compatibility equivalence connects Unicode forms that may differ in presentation, such as a circled numeral and its ordinary digit. Compatibility normalization can fold these distinctions. That can help comparison, but blindly applying it may erase formatting or mathematical distinctions that matter in context.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "normalization",
+          "locator": "§1.1, Figure 2; §1.2 warning",
+          "note": "Checked examples and the warning about lost semantic distinctions; compatibility folding is not declared safe for arbitrary text."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:unicode-normalization",
+          "type": "facet_of",
+          "source_ids": [
+            "normalization"
+          ],
+          "assertion": "editorial",
+          "note": "Compatibility equivalence is a separately specified equivalence basis used by NFKC and NFKD, so it is grouped as a qualified normalization facet."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:normalization-across-string-concatenation",
+      "label": "Normalization across string concatenation",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Recheck normalization at concatenation boundaries because joining normalized strings can require reordering or composition.",
+      "card": "Joining two normalized Unicode strings does not guarantee that the result stays normalized. A combining mark at the boundary may need reordering or composition with the preceding text. Software can therefore need to normalize the join even when both original pieces were already normalized.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "normalization",
+          "locator": "§1.4, Table 2",
+          "note": "Checked concatenation versus substring behavior; the claim is limited to joins and does not say every concatenation changes normalization."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:unicode-normalization",
+          "type": "facet_of",
+          "source_ids": [
+            "normalization"
+          ],
+          "assertion": "source_asserted",
+          "note": "UAX 15 section 1.4 explicitly explains normalization's failure to be closed under concatenation and shows boundary examples."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:utf-8",
+      "label": "UTF-8",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Computing & information",
+        "Learning & language"
+      ],
+      "learning_takeaway": "Encode Unicode scalar values in one to four bytes while preserving ASCII byte values.",
+      "card": "UTF-8 represents Unicode scalar values using one to four bytes. ASCII characters retain their familiar single-byte values, while other values use recognizable multibyte patterns. A character's assigned number and its encoded bytes are different things, which matters when counting or processing text.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "utf8",
+          "locator": "§2–§3",
+          "note": "Checked ASCII preservation, byte range, and distinction between scalar value and encoding; surrogate code points are not valid UTF-8 scalar values."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:unicode-code-point",
+          "type": "related_to",
+          "source_ids": [
+            "utf8"
+          ],
+          "assertion": "source_asserted",
+          "note": "RFC 3629 sections 2–3 directly relate character numbers to their one-to-four-byte UTF-8 encodings."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:overlong-utf-8-encodings",
+      "label": "Overlong UTF-8 encodings",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "domains": [
+        "Computing & information",
+        "Learning & language"
+      ],
+      "learning_takeaway": "Reject longer-than-permitted encodings so alternate byte sequences cannot bypass character-based security checks.",
+      "card": "An overlong UTF-8 sequence uses more bytes than the encoding permits for a character. Accepting such sequences can make one character appear in multiple byte patterns. Security checks may reject a forbidden normal encoding yet overlook an invalid alternative that a later parser interprets identically.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "utf8",
+          "locator": "§3; §10",
+          "note": "Checked invalidity and the bypass mechanism; no actionable exploit procedure or claim that all parsers accept such sequences."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:utf-8",
+          "type": "facet_of",
+          "source_ids": [
+            "utf8"
+          ],
+          "assertion": "source_asserted",
+          "note": "RFC 3629 sections 3 and 10 explicitly prohibit invalid overlong sequences and describe their parser-security consequences."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:unicode-code-point",
+      "label": "Unicode code point",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Computing & information",
+        "Learning & language"
+      ],
+      "learning_takeaway": "Distinguish the integer assigned to a character from the bytes used by an encoding.",
+      "card": "A Unicode code point is a numbered position in the character space, rather than the bytes stored in a file. UTF-8 encodes valid scalar values with different byte lengths. Keeping the number separate from its encoding helps explain why counting bytes need not count characters.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "utf8",
+          "locator": "§3, encoding definition",
+          "note": "Checked character-number terminology and variable-length storage; wording does not claim all code points are assigned characters or valid scalar values."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:utf-8",
+          "type": "related_to",
+          "source_ids": [
+            "utf8"
+          ],
+          "assertion": "source_asserted",
+          "note": "RFC 3629 explicitly distinguishes character numbers from the octet sequences used to encode them."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:grapheme-cluster",
+      "label": "Grapheme cluster",
+      "aliases": [
+        "Extended grapheme cluster"
+      ],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Computing & information",
+        "Learning & language"
+      ],
+      "learning_takeaway": "Group code points into a best-effort approximation of a user-perceived character for text editing.",
+      "card": "A grapheme cluster groups Unicode code points into an approximation of a user-perceived character. A letter and its combining accents may belong together, letting a cursor move over them as a unit. The default rules are useful but may require tailoring for particular scripts or editing tasks.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "segmentation",
+          "locator": "§3, introductory discussion and Table 1a",
+          "note": "Checked approximation, combining-sequence example, and explicit tailoring caveat in UAX 29; not a universal one-cluster/one-glyph equation."
+        },
+        {
+          "source_id": "utf8",
+          "locator": "§3, encoding definition",
+          "note": "Supplementary inspected premise for the card or its comparison: The sources distinguish abstract code points from editing-oriented groups of them; this comparison explains why text length has several legitimate units."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:unicode-code-point",
+          "type": "related_to",
+          "source_ids": [
+            "segmentation",
+            "utf8"
+          ],
+          "assertion": "editorial",
+          "note": "The sources distinguish abstract code points from editing-oriented groups of them; this comparison explains why text length has several legitimate units."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:binary-search",
+      "label": "Binary search",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Exploit sorted keys to find a record with logarithmic rather than full-scan search effort.",
+      "card": "Binary search exploits an ordered collection instead of inspecting every entry. It repeatedly narrows the range that could contain a requested key. SQLite's row lookup illustrates the payoff: search effort grows logarithmically with the number of records, rather than in proportion to the entire table.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "queryplanner",
+          "locator": "§1.2–§1.3",
+          "note": "Checked sorted-key requirement and logarithmic comparison with a scan; the card avoids the source's illustrative numerical speed estimate as a universal benchmark."
+        },
+        {
+          "source_id": "nist-binary-search",
+          "locator": "Definition; Note on run time and ordered linked lists",
+          "note": "Supplementary inspected premise for the card or its comparison: SQLite's query-planner examples connect ordered binary searches with covering indexes, which avoid an additional lookup in the original table."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:covering-index",
+          "type": "related_to",
+          "source_ids": [
+            "queryplanner",
+            "nist-binary-search"
+          ],
+          "assertion": "editorial",
+          "note": "SQLite's query-planner examples connect ordered binary searches with covering indexes, which avoid an additional lookup in the original table."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:covering-index",
+      "label": "Covering index",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Include search and output columns in an index so a query need not consult the original table.",
+      "card": "A covering index contains every column a particular query needs, including its output columns. The database can answer that query from the index without looking up matching rows in the original table. Whether an index covers a query therefore depends on that query's requested information.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "queryplanner",
+          "locator": "§1.7",
+          "note": "Checked search-plus-output coverage and eliminated table lookup; an index can cover one query without covering every query."
+        },
+        {
+          "source_id": "sqliteabout",
+          "locator": "About SQLite, main explanatory paragraphs",
+          "note": "Supplementary inspected premise for the card or its comparison: This index design changes how a database retrieves selected columns; it is an implementation facet rather than a synonym for the database itself."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q8513",
+          "type": "facet_of",
+          "source_ids": [
+            "queryplanner",
+            "sqliteabout"
+          ],
+          "assertion": "editorial",
+          "note": "This index design changes how a database retrieves selected columns; it is an implementation facet rather than a synonym for the database itself."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:multi-column-index",
+      "label": "Multi-column index",
+      "aliases": [
+        "Composite index"
+      ],
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Order index entries by several columns so combined constraints avoid filtering unrelated intermediate matches.",
+      "card": "A multi-column index orders records using several fields together. In SQLite's fruit example, indexing fruit and state lets the database locate California oranges directly instead of first finding all oranges and rejecting other states. Column order determines how that combined ordering can be used.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "queryplanner",
+          "locator": "§1.6",
+          "note": "Checked combined conditions and ordered index columns; no blanket guarantee that any column order accelerates every query."
+        },
+        {
+          "source_id": "sqliteabout",
+          "locator": "About SQLite, main explanatory paragraphs",
+          "note": "Supplementary inspected premise for the card or its comparison: Composite ordering is a particular database access structure; the fruit-and-state example supports the concrete retrieval mechanism."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q8513",
+          "type": "facet_of",
+          "source_ids": [
+            "queryplanner",
+            "sqliteabout"
+          ],
+          "assertion": "editorial",
+          "note": "Composite ordering is a particular database access structure; the fruit-and-state example supports the concrete retrieval mechanism."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:a-mathematical-theory-of-communication",
+      "label": "A Mathematical Theory of Communication",
+      "aliases": [],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "See how Shannon's 1948 paper separated message selection from semantics to formulate an engineering theory.",
+      "card": "Shannon's 1948 paper, A Mathematical Theory of Communication, framed communication as selecting and reproducing messages from possible alternatives. It separated that engineering problem from what messages mean to people. Its logarithmic measure also explained why base-two units could conveniently be called bits.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "shannon",
+          "locator": "Title; Introduction, pp. 1–2",
+          "note": "Checked title, date, engineering-versus-semantics distinction, and bits passage; no unsupported sole-inventor claim."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:authored:000609",
+          "type": "related_to",
+          "source_ids": [
+            "shannon"
+          ],
+          "assertion": "editorial",
+          "note": "The paper's formulation supplies a historically specific route into the broader field of information theory, without treating work and field as equivalent identities."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:authored:000520",
+      "label": "Distributed systems",
+      "aliases": [
+        "Distributed systems"
+      ],
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Coordinate machines through messages while preserving shared results despite some machine failures.",
+      "card": "Distributed systems spread computation across machines that communicate over a network. Keeping their work coordinated becomes difficult when messages are delayed or machines fail. Replicated state machines offer one approach: replicas agree on commands and execute them in the same order to maintain matching results.",
+      "original_description": "Coordinating computation across multiple networked machines.",
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "raft",
+          "locator": "§2, replicated state machines",
+          "note": "Checked ordered deterministic execution and failure context; not all distributed systems use replicated state machines or promise identical state."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:replicated-state-machine",
+          "type": "related_to",
+          "source_ids": [
+            "raft"
+          ],
+          "assertion": "editorial",
+          "note": "The Raft paper's replicated-state-machine discussion gives one concrete coordination approach within the broad distributed-systems field."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": [
+        {
+          "topic": "Distributed systems",
+          "domain": "Computing & information",
+          "description": "Coordinating computation across multiple networked machines.",
+          "source": "ProductSpace",
+          "subsection": "Computing & software practice",
+          "inventory_kind": "broad",
+          "index": 520
+        }
+      ]
+    },
+    {
+      "id": "Q8513",
+      "label": "Database",
+      "aliases": [
+        "Database"
+      ],
+      "entity_kind": "idea",
+      "scope": "topic",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Organize related tables and indexes so stored information can be queried and updated consistently.",
+      "card": "A database organizes stored information so programs can retrieve and change it systematically. Tables can hold related records, while indexes help find selected entries. SQLite illustrates another useful feature: transactions group changes so applications can treat several updates as a coherent operation.",
+      "original_description": "organized collection of data in computing",
+      "identity_urls": [
+        "https://www.wikidata.org/wiki/Q8513"
+      ],
+      "evidence": [
+        {
+          "source_id": "sqliteabout",
+          "locator": "About SQLite, main explanatory paragraphs",
+          "note": "Checked tables, indexes, and transactions in SQLite as an example; not all databases are asserted to use the relational model."
+        },
+        {
+          "source_id": "queryplanner",
+          "locator": "Overview; sections 1.1–1.3",
+          "note": "Supplementary inspected premise for the card or its comparison: SQLite's official description explicitly identifies the software as a transactional SQL database engine containing tables and indexes."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:sqlite",
+          "type": "related_to",
+          "source_ids": [
+            "sqliteabout",
+            "queryplanner"
+          ],
+          "assertion": "source_asserted",
+          "note": "SQLite's official description explicitly identifies the software as a transactional SQL database engine containing tables and indexes."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": [
+        {
+          "topic": "Database",
+          "domain": "Computing & information",
+          "description": "organized collection of data in computing",
+          "source": "Wikidata",
+          "source_url": "https://www.wikidata.org/wiki/Q8513",
+          "guide_title": "Database",
+          "wikidata_id": "Q8513",
+          "subsection": "Technology / Information technology / Computer software",
+          "source_revision": 2551973316,
+          "list_revision": 30916276,
+          "list_section": "Technology",
+          "inventory_kind": "broad",
+          "index": 1127
+        }
+      ]
+    },
+    {
+      "id": "local:catalog:sql",
+      "label": "SQL",
+      "aliases": [
+        "Structured Query Language"
+      ],
+      "entity_kind": "idea",
+      "scope": "topic",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Describe desired query results declaratively while a database planner chooses how to find them.",
+      "card": "SQL lets a program describe the data it wants rather than prescribe every retrieval step. The database's query planner chooses an execution strategy, such as scanning a table or using an index. The same requested result can therefore be produced through different underlying algorithms.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "queryplanner",
+          "locator": "Overview; §1.1–§1.3",
+          "note": "Checked declarative query semantics and planner alternatives; the description is about querying, not every SQL operation or implementation."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q8513",
+          "type": "related_to",
+          "source_ids": [
+            "queryplanner"
+          ],
+          "assertion": "source_asserted",
+          "note": "SQLite's query-planner overview explicitly explains SQL's declarative role and the database engine's choice of retrieval algorithm."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:sqlite",
+      "label": "SQLite",
+      "aliases": [],
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Embed a transactional database directly in an application without a separate database server process.",
+      "card": "SQLite embeds a transactional SQL database engine inside an application. It reads and writes ordinary files without a separate database server process, and a complete database can occupy one file. That design makes a database library useful where an application would otherwise manage its own file format.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "sqliteabout",
+          "locator": "About SQLite, first two main paragraphs",
+          "note": "Checked in-process operation, absent separate server, and single-file storage; no claim that transient journal files never exist."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "Q8513",
+          "type": "related_to",
+          "source_ids": [
+            "sqliteabout"
+          ],
+          "assertion": "source_asserted",
+          "note": "SQLite's About page directly states that it is an embedded, serverless SQL database engine and discusses its application-file-format role."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    },
+    {
+      "id": "local:catalog:atomic-commit",
+      "label": "Atomic commit",
+      "aliases": [],
+      "entity_kind": "idea",
+      "scope": "idea",
+      "domains": [
+        "Computing & information"
+      ],
+      "learning_takeaway": "Make a transaction appear all-or-nothing even though storage writes happen sequentially and can be interrupted.",
+      "card": "Atomic commit makes a transaction's changes appear all-or-nothing, even though storage writes occur one after another. SQLite uses recovery mechanisms to preserve that appearance across crashes or power failures. The guarantee concerns which changes take effect, rather than requiring hardware to write everything simultaneously.",
+      "original_description": null,
+      "identity_urls": [],
+      "evidence": [
+        {
+          "source_id": "atomiccommit",
+          "locator": "§1 Introduction",
+          "note": "Checked all-or-nothing meaning and sequential hardware writes; crash safety remains subject to the documented storage assumptions."
+        },
+        {
+          "source_id": "sqliteisolation",
+          "locator": "Isolation And Concurrency, rollback mode",
+          "note": "Supplementary inspected premise for the card or its comparison: SQLite's atomic-commit documentation explains rollback journals as the recovery mechanism used for atomic commit in rollback mode."
+        }
+      ],
+      "relations": [
+        {
+          "target_id": "local:catalog:rollback-journal",
+          "type": "related_to",
+          "source_ids": [
+            "atomiccommit",
+            "sqliteisolation"
+          ],
+          "assertion": "source_asserted",
+          "note": "SQLite's atomic-commit documentation explains rollback journals as the recovery mechanism used for atomic commit in rollback mode."
+        }
+      ],
+      "card_version": 1,
+      "imported_records": []
+    }
+  ],
+  "issues": [
+    {
+      "type": "independent_audit_pending",
+      "note": "These are author-reviewed cards. The coordinator will freeze the candidate and assign independent source/relationship audit."
+    },
+    {
+      "type": "excluded_discovery_leads",
+      "records": [
+        {
+          "label": "Homophily",
+          "primary_domain": "Society & relationships",
+          "primary_subfield": "Social interaction and networks",
+          "status": "unresolved_excluded",
+          "reason": "The discovered chapter could not be retrieved in two URL attempts and the whole-book alternative also failed. No explanatory support admitted from snippets; selection used other independently supported network subjects.",
+          "access_result_files": [
+            "source-texts/web-118.json",
+            "source-texts/web-122.json",
+            "source-texts/web-129.json"
+          ]
+        },
+        {
+          "label": "Affiliation network",
+          "primary_domain": "Society & relationships",
+          "primary_subfield": "Social interaction and networks",
+          "status": "unresolved_excluded",
+          "reason": "Same inaccessible discovery chapter and whole-book alternative as Homophily. No source-backed proposal admitted; a distinct supported network subject was selected instead.",
+          "access_result_files": [
+            "source-texts/web-118.json",
+            "source-texts/web-122.json",
+            "source-texts/web-129.json"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "source_access_limitations",
+      "note": "Use access-log.json for actual request evidence. Failed Nobel, some Pressbooks and Cornell chapter-4 pages supplied no accepted explanatory claims; accessible inspected sources support the accepted records."
+    },
+    {
+      "type": "coverage_limits",
+      "note": "The sampled references support selected learning subjects, not exhaustive coverage or validated curiosity outcomes."
+    },
+    {
+      "type": "no_stronger_parent_claim",
+      "concept_ids": [
+        "local:authored:000609",
+        "Q2493",
+        "local:catalog:prefix-free-code",
+        "local:catalog:unicode-normalization",
+        "local:catalog:utf-8",
+        "local:catalog:unicode-code-point",
+        "local:catalog:grapheme-cluster",
+        "local:catalog:binary-search",
+        "local:catalog:a-mathematical-theory-of-communication",
+        "local:authored:000520",
+        "Q8513",
+        "local:catalog:sql",
+        "local:catalog:sqlite",
+        "local:catalog:atomic-commit"
+      ],
+      "note": "These subjects use specifically reasoned related_to links. A stronger parent/application claim is not asserted from the inspected passages."
+    }
+  ],
+  "validation": {
+    "passed": true,
+    "structural_only": false,
+    "admission_scope": "Author checks and local structural validation; independent source audit not yet performed.",
+    "counts": {
+      "accepted": 25,
+      "new": 21,
+      "existing_controls": 4,
+      "new_fine": 18,
+      "named_subjects": 2,
+      "sources": 11,
+      "relations": 25,
+      "scopes": {
+        "broad_field": 2,
+        "topic": 5,
+        "idea": 10,
+        "facet_or_application": 8
+      },
+      "primary_domains": {
+        "Computing & information": 25
+      },
+      "primary_subfields": {
+        "Algorithms and information representation": 20,
+        "Programming and distributed systems": 5
+      },
+      "card_words": {
+        "minimum": 40,
+        "maximum": 47
+      }
+    },
+    "accepted_count": 25,
+    "unresolved_candidate_count": 2,
+    "rejected_count": 0,
+    "failures": [],
+    "every_card_review": {
+      "type": "author_review_not_independent",
+      "reviewed": 25,
+      "path": "author-review.json"
+    },
+    "independent_source_audit": {
+      "status": "pending",
+      "sample_frozen": false
+    },
+    "limits": [
+      "Meaning reconciliation is bounded rather than proof of an exhaustive duplicate search.",
+      "Current inspected passages do not certify uninspected source claims or future page revisions."
+    ]
+  }
+}

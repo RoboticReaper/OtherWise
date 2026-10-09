@@ -1,0 +1,926 @@
+{
+  "assignment": "culture",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "baseline_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+  "entries": [
+    {
+      "id": "local:catalog:echr-pilot-judgment-procedure",
+      "initial_card_sha256": "f0eb5f8f71950370936aa4706d2c9a18c8bde7d3359cb1fac02853075d25ab0a",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "f1384b84b3eba7f897b6e58d4bedef1a1fe186411a08dc3ba123e13d392cfcc7",
+      "owner": "culture",
+      "primary_domain": "Politics & law",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "ECHR pilot judgments"
+          ],
+          "card": "The pilot judgment procedure lets the European Court of Human Rights address structural problems behind repetitive applications. It selects representative cases and indicates remedial measures to governments. Related cases may be paused while national action proceeds, with examination resumable when justice requires.",
+          "card_version": 1,
+          "domains": [
+            "Politics & law"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "What is the pilot judgment procedure?, printed page 1, lines 4–18",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::echr-pilot-judgments"
+            }
+          ],
+          "id": "local:catalog:echr-pilot-judgment-procedure",
+          "identity_urls": [
+            "https://www.echr.coe.int/documents/d/echr/FS_Pilot_judgments_ENG"
+          ],
+          "imported_records": [],
+          "label": "Pilot judgment procedure (European Court of Human Rights)",
+          "learning_takeaway": "Link individual cases with remedies for a systemic problem.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "Pilot judgments address systemic violations of Convention rights.",
+              "source_ids": [
+                "research-batch-008-culture::echr-pilot-judgments"
+              ],
+              "target_id": "Q183191",
+              "type": "application_of"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T02:45:12.366490+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::echr-pilot-judgments",
+            "inspected_at": "2026-10-09T02:45:12.366490+00:00",
+            "inspection_mode": "web.pdf_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/30",
+            "locator": "What is the pilot judgment procedure?, printed page 1, lines 4–18",
+            "original_id": "echr-pilot-judgments",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T02:45:12.366490+00:00",
+            "revision": "November 2023",
+            "selection_inspected_at": "2026-10-09T01:58:37.834943+00:00",
+            "summary_word_limit": 200,
+            "title": "Factsheet – Pilot judgments",
+            "url": "https://www.echr.coe.int/documents/d/echr/FS_Pilot_judgments_ENG"
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:tashlich",
+      "initial_card_sha256": "dd0c5530d45e80057281285672069327c150b72bcb708f58c4b9e66142c6a6a0",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "b866ef180c05286f7209903e0bb118e2ad6d66bd92260d5f134156384226b5ee",
+      "owner": "culture",
+      "primary_domain": "Religion & spirituality",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "Tashlich is a Rosh Hashanah custom of prayer beside water and symbolic casting away of sins. Chabad’s account describes shaking garment corners as part of that symbolism. It distinguishes this ritual action from feeding fish, which is not the custom’s essential act.",
+          "card_version": 1,
+          "domains": [
+            "Religion & spirituality"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Yehuda Shurpin’s main explanation, lines 258–265",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::chabad-tashlich"
+            }
+          ],
+          "id": "local:catalog:tashlich",
+          "identity_urls": [
+            "https://www.chabad.org/library/article_cdo/aid/4501100/jewish/Why-Cant-I-Feed-Fish-at-Tashlich.htm"
+          ],
+          "imported_records": [],
+          "label": "Tashlich",
+          "learning_takeaway": "Distinguish ritual symbolism from feeding fish.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "The article identifies Tashlich as a Rosh Hashanah custom.",
+              "source_ids": [
+                "research-batch-008-culture::chabad-tashlich"
+              ],
+              "target_id": "Q131028",
+              "type": "facet_of"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T02:00:13.925683+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::chabad-tashlich",
+            "inspected_at": "2026-10-09T02:00:13.925683+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/37",
+            "locator": "Yehuda Shurpin’s main explanation, lines 258–265",
+            "original_id": "chabad-tashlich",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T02:00:13.925683+00:00",
+            "revision": null,
+            "summary_word_limit": 200,
+            "title": "Why Can’t I Feed Fish at Tashlich?",
+            "url": "https://www.chabad.org/library/article_cdo/aid/4501100/jewish/Why-Cant-I-Feed-Fish-at-Tashlich.htm"
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:gyotaku",
+      "initial_card_sha256": "4e99068d01572291c131d551ff923c607ccea31f8f3b0e98735a575df98139ed",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "a0b124c3494bf99652e436b55c7f6466f44027794bf53e7dccefb0e9b0fc04ee",
+      "owner": "culture",
+      "primary_domain": "Visual arts & design",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Japanese fish printing"
+          ],
+          "card": "Gyotaku transfers a fish’s surface to paper by rubbing it over an inked specimen. The print records details of shape and texture. In a Smithsonian educational version, rubber replicas replace real fish; excessive paint blurs the transfer, making material quantity part of the result.",
+          "card_version": 1,
+          "domains": [
+            "Visual arts & design"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Catherine Sutera’s museum account, lines 65–69",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::smithsonian-gyotaku"
+            }
+          ],
+          "id": "local:catalog:gyotaku",
+          "identity_urls": [
+            "https://ocean.si.edu/conservation/get-involved/educational-uses-gyotaku-or-fish-printing"
+          ],
+          "imported_records": [],
+          "label": "Gyotaku",
+          "learning_takeaway": "Connect transferred detail with paint quantity and surface contact.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "editorial",
+              "note": "Documented ink and paper transfer supports this printmaking placement.",
+              "source_ids": [
+                "research-batch-008-culture::smithsonian-gyotaku"
+              ],
+              "target_id": "local:authored:000351",
+              "type": "application_of"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T02:45:12.366490+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::smithsonian-gyotaku",
+            "inspected_at": "2026-10-09T02:45:12.366490+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/47",
+            "locator": "Catherine Sutera’s museum account, lines 65–69",
+            "original_id": "smithsonian-gyotaku",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T02:45:12.366490+00:00",
+            "revision": "July 2011",
+            "selection_inspected_at": "2026-10-09T02:01:50.944811+00:00",
+            "summary_word_limit": 200,
+            "title": "Educational Uses of Gyotaku or Fish Printing",
+            "url": "https://ocean.si.edu/conservation/get-involved/educational-uses-gyotaku-or-fish-printing"
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:euclidean-buffering",
+      "initial_card_sha256": "ea0d56728d83d0da27a8d8d2dc4c507cdc027eeae850739f8373ff234a651ea7",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "3d6a39fb682e62a81cac6116c3d0f787279bc3ab5efd1402381cc5cecb4b1e17",
+      "owner": "culture",
+      "primary_domain": "Geography & travel",
+      "reason": "Mathematical planar distances versus the software PLANAR option; directional geographic-buffer facet.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Euclidean buffer"
+          ],
+          "card": "Euclidean buffering draws a distance zone using straight-line measurements on a flat coordinate plane. It works best around features concentrated within a suitably projected small region. Where the projection distorts distance substantially, equal map offsets no longer represent equal distances on Earth.",
+          "card_version": 1,
+          "domains": [
+            "Geography & travel"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::culture-esri-buffer"
+            }
+          ],
+          "id": "local:catalog:euclidean-buffering",
+          "identity_urls": [
+            "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html"
+          ],
+          "imported_records": [],
+          "label": "Euclidean buffering",
+          "learning_takeaway": "Identify when flat-map distance zones inherit projection distortion.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "Esri names Euclidean buffering as a geographic buffer construction method.",
+              "source_ids": [
+                "research-batch-008-culture::culture-esri-buffer"
+              ],
+              "target_id": "local:catalog:geographic-buffer",
+              "type": "facet_of"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::culture-esri-buffer",
+            "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/7",
+            "locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+            "original_id": "culture-esri-buffer",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T01:45:59.970387+00:00",
+            "revision": null,
+            "summary_word_limit": 200,
+            "title": "How Buffer (Analysis) works",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html"
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:geodesic-buffering",
+      "initial_card_sha256": "8c804994118f4a6497fca6335d28c0cae7798c601a9859b2c63dfebfaf79133d",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "e44c90590fa6c26e59a76f352053a56b330a94c9cb08c3ece948783d30c4f07e",
+      "owner": "culture",
+      "primary_domain": "Geography & travel",
+      "reason": "Distinct curved-surface method versus flat coordinates; same parent with a separate meaning boundary.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Geodesic buffer"
+          ],
+          "card": "Geodesic buffering builds distance zones while accounting for Earth’s curved spheroidal surface. It is useful over large extents and near poles or the date line. A zone may look distorted on a flat map while showing the intended distance correctly on a globe.",
+          "card_version": 1,
+          "domains": [
+            "Geography & travel"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::culture-esri-buffer"
+            }
+          ],
+          "id": "local:catalog:geodesic-buffering",
+          "identity_urls": [
+            "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html"
+          ],
+          "imported_records": [],
+          "label": "Geodesic buffering",
+          "learning_takeaway": "Separate curved-surface distance from flat-map appearance.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "Esri names geodesic buffering as a geographic buffer construction method.",
+              "source_ids": [
+                "research-batch-008-culture::culture-esri-buffer"
+              ],
+              "target_id": "local:catalog:geographic-buffer",
+              "type": "facet_of"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::culture-esri-buffer",
+            "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/7",
+            "locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+            "original_id": "culture-esri-buffer",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T01:45:59.970387+00:00",
+            "revision": null,
+            "summary_word_limit": 200,
+            "title": "How Buffer (Analysis) works",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html"
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:port-chicago-mutiny-trial",
+      "initial_card_sha256": "68a20667fd51366a98014d39bbb1e8a0b83f5650dd881ee5ebc251b7c856cd1f",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "254a63d7eab163c74d386d06bf3731a97b83f9faf330737d779588a41d30bf90",
+      "owner": "culture",
+      "primary_domain": "History & culture",
+      "reason": "Dated named event, roles and official exoneration; source contains conflicting explosion-cause statements.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "After the 1944 Port Chicago explosion, 258 Black sailors refused renewed ammunition-loading work; fifty were convicted of mutiny. Their case exposed the intersection of dangerous work and racial discrimination in the Navy. The Secretary of the Navy exonerated the sailors on July 17, 2024.",
+          "card_version": 1,
+          "domains": [
+            "History & culture"
+          ],
+          "entity_kind": "named_subject",
+          "evidence": [
+            {
+              "locator": "The Aftermath and Mutiny; Trial Proceedings; Exoneration, lines 39–47 and 55",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::nps-port-chicago-trial"
+            }
+          ],
+          "id": "local:catalog:port-chicago-mutiny-trial",
+          "identity_urls": [
+            "https://www.nps.gov/poch/learn/historyculture/the-mutiny-trial.htm"
+          ],
+          "imported_records": [],
+          "label": "Port Chicago mutiny trial",
+          "learning_takeaway": "Compare an unjust wartime conviction with later exoneration.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "editorial",
+              "note": "Editorial placement based on documented segregation in the US Navy.",
+              "source_ids": [
+                "research-batch-008-culture::nps-port-chicago-trial"
+              ],
+              "target_id": "Q2652357",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T01:56:29.615990+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::nps-port-chicago-trial",
+            "inspected_at": "2026-10-09T01:56:29.615990+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/22",
+            "locator": "Aftermath and Trial Proceedings (lines 39–47); exoneration update (55, 77)",
+            "original_id": "nps-port-chicago-trial",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T01:56:29.615990+00:00",
+            "revision": "Updated 2024-08-09",
+            "summary_word_limit": 200,
+            "title": "The Mutiny Trial",
+            "url": "https://www.nps.gov/poch/learn/historyculture/the-mutiny-trial.htm"
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:tritina",
+      "initial_card_sha256": "f5a6372aeb9287953d5762502f2f823650ad3cd0f9fff19bf779358c78233cf3",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "9be2aba57452df7939660565e426fe59bfa4336c7fcdc592b0391f041f4193b4",
+      "owner": "culture",
+      "primary_domain": "Literature & storytelling",
+      "reason": "Distinct contraction of an existing poetic form; shared-source budgets and exact structural constraint.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "A tritina contracts the sestina’s pattern of recurring end-words. Three end-words return across three three-line stanzas and meet in a final one-line envoi. Invented by Marie Ponsot, it concentrates formal repetition into a smaller space without abandoning the end-word constraint.",
+          "card_version": 1,
+          "domains": [
+            "Literature & storytelling"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "“Rules of the Sestina Form”; final history paragraphs describing double sestina and tritina",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::culture-aap-sestina"
+            }
+          ],
+          "id": "local:catalog:tritina",
+          "identity_urls": [
+            "https://poets.org/glossary/sestina"
+          ],
+          "imported_records": [],
+          "label": "Tritina",
+          "learning_takeaway": "Compare a compressed form with its sestina model.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "The Academy explicitly calls tritina a contraction of sestina.",
+              "source_ids": [
+                "research-batch-008-culture::culture-aap-sestina"
+              ],
+              "target_id": "Q1334127",
+              "type": "facet_of"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T01:45:59.970387+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::culture-aap-sestina",
+            "inspected_at": "2026-10-09T01:45:59.970387+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/9",
+            "locator": "“Rules of the Sestina Form”; final history paragraphs describing double sestina and tritina",
+            "original_id": "culture-aap-sestina",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T01:45:59.970387+00:00",
+            "revision": null,
+            "summary_word_limit": 200,
+            "title": "Sestina",
+            "url": "https://poets.org/glossary/sestina"
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:pinpeat",
+      "initial_card_sha256": "2ddf441012a4fa87f944a3cffc713ff544a27dca9f7aff043950fdb377d4d216",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "7bf5bade42d9ba35f573967dff6843bace4e3c67c7be365295ea62d0bbc1fd1e",
+      "owner": "culture",
+      "primary_domain": "Music & performance",
+      "reason": "Evidence-limited musical subject; inspect whether the source supports a concrete description and parent.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "Pinpeat is Cambodia’s court music tradition. Smithsonian’s diaspora lesson asks how Cambodian American artists sustain and transform it in the United States. Studying both settings shows how cultural preservation can include adaptation as musicians encounter new social contexts.",
+          "card_version": 1,
+          "domains": [
+            "Music & performance"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Lesson introduction and learning objectives, lines 440–455",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::folkways-diaspora-lesson"
+            }
+          ],
+          "id": "local:catalog:pinpeat",
+          "identity_urls": [
+            "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US"
+          ],
+          "imported_records": [],
+          "label": "Pinpeat",
+          "learning_takeaway": "Compare preservation and adaptation across community settings.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "The lesson identifies pinpeat as Cambodian court music.",
+              "source_ids": [
+                "research-batch-008-culture::folkways-diaspora-lesson"
+              ],
+              "target_id": "Q638",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "topic"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T01:57:33.362407+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::folkways-diaspora-lesson",
+            "inspected_at": "2026-10-09T01:57:33.362407+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/25",
+            "locator": "Lesson introduction and learning objectives, lines 440–455",
+            "original_id": "folkways-diaspora-lesson",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T01:57:33.362407+00:00",
+            "revision": null,
+            "summary_word_limit": 200,
+            "title": "Cultural Preservation and Adaptation: Kulintang, Kundiman, and Pinpeat in the US",
+            "url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US"
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:metaphysical-grounding",
+      "initial_card_sha256": "bb3f93723c093fec3801ee8e39c4a5060db3e3ae36967bb79cbd9faade95406d",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "1c41527309cb9df2f8e2be2ca7b0cdf68caf83518ed7c96a79386228c6760b00",
+      "owner": "culture",
+      "primary_domain": "Philosophy",
+      "reason": "Different grounding meanings and contested philosophical account; parent meaning.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Grounding (metaphysics)"
+          ],
+          "card": "Metaphysical grounding asks what makes a fact hold in virtue of another, rather than what caused it earlier. Philosophers use picketing as constituting a strike to illustrate the distinction. The disputed notion concerns constitutive explanation or determination, not just a necessary connection.",
+          "card_version": 1,
+          "domains": [
+            "Philosophy"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Introduction, lines 13–18; §1.1 Determination and explanation",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::culture-sep-grounding"
+            }
+          ],
+          "id": "local:catalog:metaphysical-grounding",
+          "identity_urls": [
+            "https://plato.stanford.edu/entries/grounding/"
+          ],
+          "imported_records": [],
+          "label": "Metaphysical grounding",
+          "learning_takeaway": "Separate constitutive dependence from causal history.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "The entry explicitly locates grounding questions within metaphysics.",
+              "source_ids": [
+                "research-batch-008-culture::culture-sep-grounding"
+              ],
+              "target_id": "local:authored:000431",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T01:48:42.114105+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::culture-sep-grounding",
+            "inspected_at": "2026-10-09T01:48:42.114105+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/13",
+            "locator": "Introduction, strike/picketing example; §1.1",
+            "original_id": "culture-sep-grounding",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T01:48:42.114105+00:00",
+            "revision": "Substantive revision 2021-12-06",
+            "summary_word_limit": 200,
+            "title": "Metaphysical Grounding",
+            "url": "https://plato.stanford.edu/entries/grounding/"
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:nembutsu",
+      "initial_card_sha256": "cb9debb8f0b86403271d3ddedadaf596a2622855568597b1b0238c8763a4ccc8",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "ffc4302a12e3c2b332835bbcc2f0031e8d3d14bcf1fb53f0d5b7be5f8d880007",
+      "owner": "culture",
+      "primary_domain": "Religion & spirituality",
+      "reason": "A tradition-specific doctrinal account versus the broader practice; avoid unqualified efficacy.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "Nembutsu is a Buddhist chanting practice. At the Buddhist Temple of Marin, a Jodo Shinshu community, chanting Namo Amida Butsu expresses gratitude. The temple places this chant alongside listening and compassionate living, illustrating a devotional function within one specific Buddhist tradition.",
+          "card_version": 1,
+          "domains": [
+            "Religion & spirituality"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Tradition statement and practices, lines 118, 145–165",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::bca-nembutsu"
+            }
+          ],
+          "id": "local:catalog:nembutsu",
+          "identity_urls": [
+            "https://www.buddhistchurchesofamerica.org/temple/visit/buddhist-temple-of-marin"
+          ],
+          "imported_records": [],
+          "label": "Nembutsu",
+          "learning_takeaway": "Recognize gratitude as the chant’s described devotional function.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "The temple identifies Nembutsu within its Buddhist practices.",
+              "source_ids": [
+                "research-batch-008-culture::bca-nembutsu"
+              ],
+              "target_id": "local:authored:000460",
+              "type": "application_of"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T02:00:13.925695+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::bca-nembutsu",
+            "inspected_at": "2026-10-09T02:00:13.925695+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/40",
+            "locator": "Tradition statement and practices, lines 118, 145–165",
+            "original_id": "bca-nembutsu",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T02:00:13.925695+00:00",
+            "revision": null,
+            "summary_word_limit": 200,
+            "title": "Visit Our Temple",
+            "url": "https://www.buddhistchurchesofamerica.org/temple/visit/buddhist-temple-of-marin"
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:non-refoulement",
+      "initial_card_sha256": "61c07b87f020ad44e509154c868267fb522193e909ae3ab4a70adca36f0bdc3f",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "32edee58d0f0609c212ccb8ceb0b46d025fd914cbcf3fbda3fde42f71322d14d",
+      "owner": "culture",
+      "primary_domain": "Politics & law",
+      "reason": "Instrument-specific legal exceptions, dated authority and refugee-recognition qualification.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "Non-refoulement protects people against return to prohibited danger. UNHCR’s account explains that refugee protection can apply before formal status recognition: returning an applicant prematurely could defeat it. Applicable dangers and exceptions depend on the governing refugee or human rights instrument.",
+          "card_version": 1,
+          "domains": [
+            "Politics & law"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Legal basis, Beneficiaries and Exceptions, lines 44–79, 107–120",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::unhcr-refoulement-note"
+            }
+          ],
+          "id": "local:catalog:non-refoulement",
+          "identity_urls": [
+            "https://www.refworld.org/policy/legalguidance/unhcr/1997/en/36258"
+          ],
+          "imported_records": [],
+          "label": "Non-refoulement",
+          "learning_takeaway": "Connect protection before recognition with instrument-specific rules.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "The note locates non-refoulement in international refugee law.",
+              "source_ids": [
+                "research-batch-008-culture::unhcr-refoulement-note"
+              ],
+              "target_id": "Q4394526",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T02:45:12.366490+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::unhcr-refoulement-note",
+            "inspected_at": "2026-10-09T02:45:12.366490+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/32",
+            "locator": "Legal basis, Beneficiaries and Exceptions, lines 44–79, 107–120",
+            "original_id": "unhcr-refoulement-note",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T02:45:12.366490+00:00",
+            "revision": "November 1997",
+            "selection_inspected_at": "2026-10-09T01:58:37.834950+00:00",
+            "summary_word_limit": 200,
+            "title": "UNHCR Note on the Principle of Non-Refoulement",
+            "url": "https://www.refworld.org/policy/legalguidance/unhcr/1997/en/36258"
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:lukasa-met-1977-467-3",
+      "initial_card_sha256": "f1727d1323719e49e025921e4683cc053d4bff45c0f1299ce5af976550f52a06",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "3e57961e96cc038175193a75c34e1531ba0b1c01ec35321e73c691a0b0b73d2b",
+      "owner": "culture",
+      "primary_domain": "History & culture",
+      "reason": "Individual named artifact versus generic category; curatorial and belief attribution.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "This Luba memory board communicates through incised designs and relief carving, whereas many other lukasa use attached beads and shells. The Met’s interpretation connects its motifs with political history and territory. Senior Mbudye members learned to decipher the board within a specialized knowledge tradition.",
+          "card_version": 1,
+          "domains": [
+            "History & culture"
+          ],
+          "entity_kind": "named_subject",
+          "evidence": [
+            {
+              "locator": "Curatorial description, lines 10–16; Artwork Details, object number 1977.467.3",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::met-lukasa-1977-467-3"
+            }
+          ],
+          "id": "local:catalog:lukasa-met-1977-467-3",
+          "identity_urls": [
+            "https://www.metmuseum.org/art/collection/search/690570"
+          ],
+          "imported_records": [],
+          "label": "Lukasa memory board (Met 1977.467.3)",
+          "learning_takeaway": "Examine how this carved board supports trained historical interpretation.",
+          "original_description": null,
+          "relations": [],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T01:56:29.615977+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::met-lukasa-1977-467-3",
+            "inspected_at": "2026-10-09T01:56:29.615977+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/18",
+            "locator": "Curatorial description (lines 10–16), Artwork Details",
+            "original_id": "met-lukasa-1977-467-3",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T01:56:29.615977+00:00",
+            "revision": null,
+            "summary_word_limit": 200,
+            "title": "Lukasa (Memory Board)",
+            "url": "https://www.metmuseum.org/art/collection/search/690570"
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:chod",
+      "initial_card_sha256": "683afb9941c572ed9368ef28a8afab0c3deea32521d0b66f1792ef5b320aa474",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "efab1814fba5c0d14a8df86c857c505212caffb55b0eb968d06aded5517ba264",
+      "owner": "culture",
+      "primary_domain": "Religion & spirituality",
+      "reason": "Teacher-specific doctrinal account and symbolic bodily offering; explanatory scope and religious attribution.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Chod"
+          ],
+          "card": "Chöd is a Buddhist offering practice directed at cutting self clinging. In Lama Zopa’s teaching, ritual offerings of the body to spirits are connected with examining the apparently inherent self. Fear becomes an occasion to investigate that self’s supposed independent existence.",
+          "card_version": 1,
+          "domains": [
+            "Religion & spirituality"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Lama Zopa Rinpoche’s teaching, lines 43–52, 101–104",
+              "note": "Definition and card claims inspected.",
+              "source_id": "research-batch-008-culture::lywa-chod"
+            }
+          ],
+          "id": "local:catalog:chod",
+          "identity_urls": [
+            "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego"
+          ],
+          "imported_records": [],
+          "label": "Chöd",
+          "learning_takeaway": "Connect offering practice with investigation of self clinging.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "The teaching situates chöd within Buddhist charity and wisdom.",
+              "source_ids": [
+                "research-batch-008-culture::lywa-chod"
+              ],
+              "target_id": "local:authored:000460",
+              "type": "application_of"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T02:00:13.925690+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "research-batch-008-culture::lywa-chod",
+            "inspected_at": "2026-10-09T02:00:13.925690+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/39",
+            "locator": "Lama Zopa Rinpoche’s teaching, lines 43–52, 101–104",
+            "original_id": "lywa-chod",
+            "originating_batch_id": "research-batch-008-culture",
+            "originating_input_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+            "retrieved_at": "2026-10-09T02:00:13.925690+00:00",
+            "revision": "Maitripa College teaching, June 2009; unedited transcript",
+            "summary_word_limit": 200,
+            "title": "Chöd: Slaying the Ego",
+            "url": "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego"
+          }
+        ]
+      },
+      "stratum": "targeted"
+    }
+  ],
+  "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "sample_manifest_sha256": "5b22b4cd61f691075015997f6c240b3365786131ebe2252f10de6a8e23b15f69",
+  "sample_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/audit-sample.json",
+  "schema_version": 1
+}

@@ -1,0 +1,36 @@
+{
+  "artifact_role": "Regression only; not a research candidate, baseline input or source evidence.",
+  "case": "actual_200_card_candidate_rejects_unregistered_target_and_retains_prior_valid_output",
+  "checked_at": "2026-10-09T02:59:40.707756+00:00",
+  "command": [
+    "/Users/baorenliu/.pyenv/versions/3.13.7/bin/python3",
+    "data/catalog-candidates/research-batch-008-build/tools/assemble.py",
+    "--inputs",
+    "data/catalog-candidates/research-batch-008-build/frozen-initial/research/science/candidate.json",
+    "data/catalog-candidates/research-batch-008-build/frozen-initial/research/systems/candidate.json",
+    "data/catalog-candidates/research-batch-008-build/regression/invalid-dangling-target-shard.json",
+    "--baseline",
+    "data/catalog-candidates/research-batch-008-build/baseline-index.json",
+    "--decisions",
+    "data/catalog-candidates/research-batch-008-build/identity-decisions.json",
+    "--approved",
+    "data/catalog-candidates/research-batch-008-build/selection-manifest.json",
+    "--output",
+    "data/catalog-candidates/research-batch-008-build/regression/retained-valid-catalog.json",
+    "--report",
+    "data/catalog-candidates/research-batch-008-build/regression/dangling-target-rejection.json"
+  ],
+  "exit_code": 1,
+  "initial_valid_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "mutation_path": "data/catalog-candidates/research-batch-008-build/regression/invalid-dangling-target-shard.json",
+  "mutation_sha256": "43e3da039417ce44eca5b50f77b6fd5b2f382c666b11c557d81f798d48a31e88",
+  "rejection_report": {
+    "last_valid_output_retained": true,
+    "prior_output_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+    "reason": "unresolved_target: Q1071 points to local:regression-only:unregistered-target, absent from the combined catalog and pinned baseline.",
+    "status": "quarantined"
+  },
+  "retained_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "schema_version": 1,
+  "status": "passed"
+}

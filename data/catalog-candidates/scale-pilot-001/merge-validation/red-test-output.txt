@@ -1,0 +1,230 @@
+test_actual_all_five_batch_requirement_cannot_be_mislabeled_complete (__main__.CombinerTests.test_actual_all_five_batch_requirement_cannot_be_mislabeled_complete) ... FAIL
+test_actual_output_verification_runs_repeat_reverse_and_resolution (__main__.CombinerTests.test_actual_output_verification_runs_repeat_reverse_and_resolution) ... FAIL
+test_ambiguous_alias_without_review_is_quarantined (__main__.CombinerTests.test_ambiguous_alias_without_review_is_quarantined) ... FAIL
+test_batch_scoped_sources_rewrite_evidence_and_relation_links (__main__.CombinerTests.test_batch_scoped_sources_rewrite_evidence_and_relation_links) ... FAIL
+test_competing_batch_revisions_require_explicit_choice (__main__.CombinerTests.test_competing_batch_revisions_require_explicit_choice) ... FAIL
+test_conflicting_concept_quarantines_and_retains_last_valid_bytes (__main__.CombinerTests.test_conflicting_concept_quarantines_and_retains_last_valid_bytes) ... FAIL
+test_explicit_hash_bound_version_choice_works_in_both_orders (__main__.CombinerTests.test_explicit_hash_bound_version_choice_works_in_both_orders) ... FAIL
+test_historical_timestamp_without_date_preserved (__main__.CombinerTests.test_historical_timestamp_without_date_preserved) ... FAIL
+test_local_source_id_conflict_is_not_silently_overwritten (__main__.CombinerTests.test_local_source_id_conflict_is_not_silently_overwritten) ... FAIL
+test_malformed_input_and_duplicate_json_keys_do_not_replace_output (__main__.CombinerTests.test_malformed_input_and_duplicate_json_keys_do_not_replace_output) ... FAIL
+test_repeated_import_is_idempotent (__main__.CombinerTests.test_repeated_import_is_idempotent) ... FAIL
+test_reversed_input_order_same_content_and_decisions (__main__.CombinerTests.test_reversed_input_order_same_content_and_decisions) ... FAIL
+test_reviewed_equivalence_keeps_aliases_full_provenance_and_rewrites_targets (__main__.CombinerTests.test_reviewed_equivalence_keeps_aliases_full_provenance_and_rewrites_targets) ... FAIL
+test_same_name_distinct_meanings_retains_all_alias_matches (__main__.CombinerTests.test_same_name_distinct_meanings_retains_all_alias_matches) ... FAIL
+test_same_url_revisions_and_passages_preserved (__main__.CombinerTests.test_same_url_revisions_and_passages_preserved) ... FAIL
+test_similar_names_do_not_make_unreviewed_equivalence_accepted (__main__.CombinerTests.test_similar_names_do_not_make_unreviewed_equivalence_accepted) ... FAIL
+test_unresolved_semantic_overlap_with_different_ids_quarantines (__main__.CombinerTests.test_unresolved_semantic_overlap_with_different_ids_quarantines) ... FAIL
+test_unresolved_target_quarantines_but_pinned_baseline_target_resolves (__main__.CombinerTests.test_unresolved_target_quarantines_but_pinned_baseline_target_resolves) ... FAIL
+
+======================================================================
+FAIL: test_actual_all_five_batch_requirement_cannot_be_mislabeled_complete (__main__.CombinerTests.test_actual_all_five_batch_requirement_cannot_be_mislabeled_complete)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 118, in test_actual_all_five_batch_requirement_cannot_be_mislabeled_complete
+    self.assertTrue(self.report.exists(),p.stdout+p.stderr)
+AssertionError: False is not true : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_actual_output_verification_runs_repeat_reverse_and_resolution (__main__.CombinerTests.test_actual_output_verification_runs_repeat_reverse_and_resolution)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 109, in test_actual_output_verification_runs_repeat_reverse_and_resolution
+    self.good(['a','b'],command='verify-actual')
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_ambiguous_alias_without_review_is_quarantined (__main__.CombinerTests.test_ambiguous_alias_without_review_is_quarantined)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 61, in test_ambiguous_alias_without_review_is_quarantined
+    self.fail(['planet','element'],'unreviewed_alias_collision')
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 30, in fail
+    self.assertTrue(self.report.exists(),p.stdout+p.stderr)
+AssertionError: False is not true : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_batch_scoped_sources_rewrite_evidence_and_relation_links (__main__.CombinerTests.test_batch_scoped_sources_rewrite_evidence_and_relation_links)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 63, in test_batch_scoped_sources_rewrite_evidence_and_relation_links
+    x=self.good(['a','b'])
+      ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_competing_batch_revisions_require_explicit_choice (__main__.CombinerTests.test_competing_batch_revisions_require_explicit_choice)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 89, in test_competing_batch_revisions_require_explicit_choice
+    self.fail(['a','revision2'],'batch_revision_conflict')
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 30, in fail
+    self.assertTrue(self.report.exists(),p.stdout+p.stderr)
+AssertionError: False is not true : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_conflicting_concept_quarantines_and_retains_last_valid_bytes (__main__.CombinerTests.test_conflicting_concept_quarantines_and_retains_last_valid_bytes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 79, in test_conflicting_concept_quarantines_and_retains_last_valid_bytes
+    self.good(['a']); before=self.output.read_bytes()
+    ^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_explicit_hash_bound_version_choice_works_in_both_orders (__main__.CombinerTests.test_explicit_hash_bound_version_choice_works_in_both_orders)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 84, in test_explicit_hash_bound_version_choice_works_in_both_orders
+    a=self.good(['a','conflict'],'version-decisions')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_historical_timestamp_without_date_preserved (__main__.CombinerTests.test_historical_timestamp_without_date_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 75, in test_historical_timestamp_without_date_preserved
+    x=self.good(['a']); s=x['sources'][0]
+      ^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_local_source_id_conflict_is_not_silently_overwritten (__main__.CombinerTests.test_local_source_id_conflict_is_not_silently_overwritten)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 107, in test_local_source_id_conflict_is_not_silently_overwritten
+    self.fail(['duplicate-source'],'duplicate_source_id')
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 30, in fail
+    self.assertTrue(self.report.exists(),p.stdout+p.stderr)
+AssertionError: False is not true : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_malformed_input_and_duplicate_json_keys_do_not_replace_output (__main__.CombinerTests.test_malformed_input_and_duplicate_json_keys_do_not_replace_output)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 94, in test_malformed_input_and_duplicate_json_keys_do_not_replace_output
+    self.good(['a']); before=self.output.read_bytes()
+    ^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_repeated_import_is_idempotent (__main__.CombinerTests.test_repeated_import_is_idempotent)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 37, in test_repeated_import_is_idempotent
+    a=self.good(['a','b']); original=self.output.read_bytes()
+      ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_reversed_input_order_same_content_and_decisions (__main__.CombinerTests.test_reversed_input_order_same_content_and_decisions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 43, in test_reversed_input_order_same_content_and_decisions
+    a=self.good(['a','b']); b=self.good(['b','a'])
+      ^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_reviewed_equivalence_keeps_aliases_full_provenance_and_rewrites_targets (__main__.CombinerTests.test_reviewed_equivalence_keeps_aliases_full_provenance_and_rewrites_targets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 46, in test_reviewed_equivalence_keeps_aliases_full_provenance_and_rewrites_targets
+    x=self.good(['a','equivalent','link'],'equivalence-decisions')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_same_name_distinct_meanings_retains_all_alias_matches (__main__.CombinerTests.test_same_name_distinct_meanings_retains_all_alias_matches)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 57, in test_same_name_distinct_meanings_retains_all_alias_matches
+    x=self.good(['planet','element'],'distinct-decisions')
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_same_url_revisions_and_passages_preserved (__main__.CombinerTests.test_same_url_revisions_and_passages_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 70, in test_same_url_revisions_and_passages_preserved
+    x=self.good(['a','same-url'])
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_similar_names_do_not_make_unreviewed_equivalence_accepted (__main__.CombinerTests.test_similar_names_do_not_make_unreviewed_equivalence_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 55, in test_similar_names_do_not_make_unreviewed_equivalence_accepted
+    self.fail(['a','equivalent'],'unreviewed_equivalence','proposed-equivalence')
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 30, in fail
+    self.assertTrue(self.report.exists(),p.stdout+p.stderr)
+AssertionError: False is not true : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_unresolved_semantic_overlap_with_different_ids_quarantines (__main__.CombinerTests.test_unresolved_semantic_overlap_with_different_ids_quarantines)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 105, in test_unresolved_semantic_overlap_with_different_ids_quarantines
+    self.fail(['a','b'],'unresolved_identity','unresolved-decisions')
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 30, in fail
+    self.assertTrue(self.report.exists(),p.stdout+p.stderr)
+AssertionError: False is not true : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+======================================================================
+FAIL: test_unresolved_target_quarantines_but_pinned_baseline_target_resolves (__main__.CombinerTests.test_unresolved_target_quarantines_but_pinned_baseline_target_resolves)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 100, in test_unresolved_target_quarantines_but_pinned_baseline_target_resolves
+    x=self.good(['b']); before=self.output.read_bytes()
+      ^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py", line 25, in good
+    self.assertEqual(p.returncode,0,p.stdout+p.stderr)
+AssertionError: 2 != 0 : /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python: can't open file '/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/tools/catalog_combiner.py': [Errno 2] No such file or directory
+
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.199s
+
+FAILED (failures=18)

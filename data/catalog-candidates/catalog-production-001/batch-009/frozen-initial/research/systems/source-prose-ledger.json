@@ -1,0 +1,4036 @@
+{
+  "schema_version": 1,
+  "assignment": "systems",
+  "status": "author_final_before_independent_audit",
+  "counting_basis": "Final whitespace count of every distinct authored card, first-body checkpoint, takeaway, substantive evidence/relationship note, source-specific qualification, selection-review source-derived sentence, and retained exact excerpt. Identical copies across artifacts counted once per page. Bodies and takeaways with multiple cited evidence pages are conservatively charged to each page. Frozen imports, bibliographic locators/titles, acquisition failures, and procedural author-review/research-note metadata excluded. Full text and origins are retained in source-prose-ledger.json. Cross-shard shared-source reconciliation remains a coordinator responsibility.",
+  "source_prose_in_research_notes": false,
+  "pages": [
+    {
+      "source_id": "acm-computing",
+      "url": "https://ccecc.acm.org/guidance",
+      "word_limit": 200,
+      "total_derived_words": 53,
+      "remaining_words": 147,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Computing includes designing software, constructing hardware, and organizing information systems for practical problems.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q179310:learning_takeaway",
+            "approved-selection.json:Q179310:learning_takeaway",
+            "selection-checkpoint.json:Q179310:learning_takeaway",
+            "candidate.json:Q179310:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Covers several computing disciplines and their different kinds of work.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q179310:support_note",
+            "approved-selection.json:Q179310:support_note",
+            "selection-checkpoint.json:Q179310:support_note",
+            "candidate.json:Q179310:evidence_note"
+          ]
+        },
+        {
+          "text": "Do not present ACM's older five-part list as an exhaustive current taxonomy.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q179310:source_qualification",
+            "approved-selection.json:Q179310:source_qualification",
+            "selection-checkpoint.json:Q179310:source_qualification"
+          ]
+        },
+        {
+          "text": "Computing turns information into useful systems: people design programs, build hardware, and organize data to solve practical problems.",
+          "word_count": 18,
+          "origins": [
+            "candidate.json:Q179310:card",
+            "draft-cards.json:Q179310:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "mdn-endianness",
+      "url": "https://developer.mozilla.org/en-US/docs/Glossary/Endianness",
+      "word_limit": 200,
+      "total_derived_words": 56,
+      "remaining_words": 144,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "The same multi-byte number is stored in different byte orders under big-endian and little-endian conventions.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q339338:learning_takeaway",
+            "approved-selection.json:Q339338:learning_takeaway",
+            "selection-checkpoint.json:Q339338:learning_takeaway",
+            "candidate.json:Q339338:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The example shows reversed significance ordering across memory addresses.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q339338:support_note",
+            "approved-selection.json:Q339338:support_note",
+            "selection-checkpoint.json:Q339338:support_note",
+            "candidate.json:Q339338:evidence_note"
+          ]
+        },
+        {
+          "text": "Byte order differs from the order of bits within one byte.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q339338:source_qualification",
+            "approved-selection.json:Q339338:source_qualification",
+            "selection-checkpoint.json:Q339338:source_qualification"
+          ]
+        },
+        {
+          "text": "Endianness orders a number's bytes in memory: big-endian puts the most significant byte at the lowest address; little-endian puts it last.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q339338:card",
+            "draft-cards.json:Q339338:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "ms-virtual-memory",
+      "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/virtual-address-spaces",
+      "word_limit": 200,
+      "total_derived_words": 56,
+      "remaining_words": 144,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Virtual addresses translate to physical memory, allowing separate processes to use identical addresses without sharing the same physical pages.",
+          "word_count": 19,
+          "origins": [
+            "proposals.json:Q189401:learning_takeaway",
+            "approved-selection.json:Q189401:learning_takeaway",
+            "selection-checkpoint.json:Q189401:learning_takeaway",
+            "candidate.json:Q189401:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Explains translation and isolated process mappings.",
+          "word_count": 6,
+          "origins": [
+            "proposals.json:Q189401:support_note",
+            "approved-selection.json:Q189401:support_note",
+            "selection-checkpoint.json:Q189401:support_note",
+            "candidate.json:Q189401:evidence_note"
+          ]
+        },
+        {
+          "text": "Windows is the inspected example; avoid claiming identical memory limits across systems.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q189401:source_qualification",
+            "approved-selection.json:Q189401:source_qualification",
+            "selection-checkpoint.json:Q189401:source_qualification"
+          ]
+        },
+        {
+          "text": "Virtual memory translates program addresses into physical locations; separate processes can use identical addresses while accessing different memory pages.",
+          "word_count": 19,
+          "origins": [
+            "candidate.json:Q189401:card",
+            "draft-cards.json:Q189401:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "mit-cache",
+      "url": "https://computationstructures.org/lectures/caches/caches.html",
+      "word_limit": 200,
+      "total_derived_words": 78,
+      "remaining_words": 122,
+      "verbatim_words": 12,
+      "verbatim_items": [
+        {
+          "text": "The SRAM component of our hierarchical memory system is called a cache.",
+          "word_count": 12
+        }
+      ],
+      "entries": [
+        {
+          "text": "Caches exploit repeated or nearby memory accesses by keeping recently accessed data in faster storage.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q165596:learning_takeaway",
+            "approved-selection.json:Q165596:learning_takeaway",
+            "selection-checkpoint.json:Q165596:learning_takeaway",
+            "candidate.json:Q165596:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Connects locality to fast SRAM and slower main memory.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q165596:support_note",
+            "approved-selection.json:Q165596:support_note",
+            "selection-checkpoint.json:Q165596:support_note",
+            "candidate.json:Q165596:evidence_note"
+          ]
+        },
+        {
+          "text": "Cache benefits depend on access patterns; misses still require slower storage.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q165596:source_qualification",
+            "approved-selection.json:Q165596:source_qualification",
+            "selection-checkpoint.json:Q165596:source_qualification"
+          ]
+        },
+        {
+          "text": "Source identifies a hardware cache as SRAM computer memory.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q165596:parent_note",
+            "approved-selection.json:Q165596:parent_note",
+            "relationship-evidence.json:Q165596:note",
+            "relationship-checkpoint.json:Q165596:note",
+            "candidate.json:Q165596:relation_note"
+          ]
+        },
+        {
+          "text": "The SRAM component of our hierarchical memory system is called a cache.",
+          "word_count": 12,
+          "origins": [
+            "relationship-evidence.json:Q165596:verbatim_excerpt",
+            "relationship-checkpoint.json:Q165596:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "A cache keeps copies of recently accessed data in faster storage, making repeated or nearby memory accesses quicker when cache hits occur.",
+          "word_count": 22,
+          "origins": [
+            "candidate.json:Q165596:card",
+            "draft-cards.json:Q165596:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "nist-public-key",
+      "url": "https://csrc.nist.gov/glossary/term/public_key_cryptography",
+      "word_limit": 200,
+      "total_derived_words": 73,
+      "remaining_words": 127,
+      "verbatim_words": 9,
+      "verbatim_items": [
+        {
+          "text": "A form of cryptography that uses two related keys",
+          "word_count": 9
+        }
+      ],
+      "entries": [
+        {
+          "text": "Public-key cryptography separates public and private keys, enabling encryption or verifiable signatures with different key roles.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q201339:learning_takeaway",
+            "approved-selection.json:Q201339:learning_takeaway",
+            "selection-checkpoint.json:Q201339:learning_takeaway",
+            "candidate.json:Q201339:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Defines paired keys and separate encryption/signature operations.",
+          "word_count": 7,
+          "origins": [
+            "proposals.json:Q201339:support_note",
+            "approved-selection.json:Q201339:support_note",
+            "selection-checkpoint.json:Q201339:support_note",
+            "candidate.json:Q201339:evidence_note"
+          ]
+        },
+        {
+          "text": "Do not imply every public-key algorithm supports both encryption and signing.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q201339:source_qualification",
+            "approved-selection.json:Q201339:source_qualification",
+            "selection-checkpoint.json:Q201339:source_qualification"
+          ]
+        },
+        {
+          "text": "Source explicitly classifies the method as a form of cryptography.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q201339:parent_note",
+            "approved-selection.json:Q201339:parent_note",
+            "relationship-evidence.json:Q201339:note",
+            "relationship-checkpoint.json:Q201339:note",
+            "candidate.json:Q201339:relation_note"
+          ]
+        },
+        {
+          "text": "A form of cryptography that uses two related keys",
+          "word_count": 9,
+          "origins": [
+            "relationship-evidence.json:Q201339:verbatim_excerpt",
+            "relationship-checkpoint.json:Q201339:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Public-key cryptography pairs public and private keys. For encryption, a public key encrypts messages that its corresponding private key decrypts.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q201339:card",
+            "draft-cards.json:Q201339:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "rfc-dh",
+      "url": "https://www.rfc-editor.org/rfc/rfc2631.html",
+      "word_limit": 200,
+      "total_derived_words": 85,
+      "remaining_words": 115,
+      "verbatim_words": 6,
+      "verbatim_items": [
+        {
+          "text": "Diffie-Hellman is a key agreement algorithm",
+          "word_count": 6
+        }
+      ],
+      "entries": [
+        {
+          "text": "Diffie–Hellman combines each party's private key with the other's public key to calculate a shared secret.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q623447:learning_takeaway",
+            "approved-selection.json:Q623447:learning_takeaway",
+            "selection-checkpoint.json:Q623447:learning_takeaway",
+            "candidate.json:Q623447:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The equations show both parties compute the same secret from different private/public inputs.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q623447:support_note",
+            "approved-selection.json:Q623447:support_note",
+            "selection-checkpoint.json:Q623447:support_note",
+            "candidate.json:Q623447:evidence_note"
+          ]
+        },
+        {
+          "text": "Key agreement alone is not a claim that peers are authenticated; historical RFC is not modern deployment advice.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q623447:source_qualification",
+            "approved-selection.json:Q623447:source_qualification",
+            "selection-checkpoint.json:Q623447:source_qualification"
+          ]
+        },
+        {
+          "text": "Source calls Diffie–Hellman an algorithm; no key-agreement-specific target exists in the baseline.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q623447:parent_note",
+            "approved-selection.json:Q623447:parent_note",
+            "relationship-evidence.json:Q623447:note",
+            "relationship-checkpoint.json:Q623447:note",
+            "candidate.json:Q623447:relation_note"
+          ]
+        },
+        {
+          "text": "Diffie-Hellman is a key agreement algorithm",
+          "word_count": 6,
+          "origins": [
+            "relationship-evidence.json:Q623447:verbatim_excerpt",
+            "relationship-checkpoint.json:Q623447:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Diffie–Hellman lets two parties calculate the same shared secret by combining their private key with the other party's public key.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q623447:card",
+            "draft-cards.json:Q623447:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "mdn-recursion",
+      "url": "https://developer.mozilla.org/en-US/docs/Glossary/Recursion",
+      "word_limit": 200,
+      "total_derived_words": 61,
+      "remaining_words": 139,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "A recursive function solves smaller instances by calling itself and stops when a base case is reached.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q264164:learning_takeaway",
+            "approved-selection.json:Q264164:learning_takeaway",
+            "selection-checkpoint.json:Q264164:learning_takeaway",
+            "candidate.json:Q264164:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Self-calls continue until the stopping condition.",
+          "word_count": 6,
+          "origins": [
+            "proposals.json:Q264164:support_note",
+            "approved-selection.json:Q264164:support_note",
+            "selection-checkpoint.json:Q264164:support_note",
+            "candidate.json:Q264164:evidence_note"
+          ]
+        },
+        {
+          "text": "A base case must be reachable; recursion does not always terminate.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q264164:source_qualification",
+            "approved-selection.json:Q264164:source_qualification",
+            "selection-checkpoint.json:Q264164:source_qualification"
+          ]
+        },
+        {
+          "text": "The passage describes recursive functions in programming.",
+          "word_count": 7,
+          "origins": [
+            "proposals.json:Q264164:parent_note",
+            "approved-selection.json:Q264164:parent_note",
+            "candidate.json:Q264164:relation_note"
+          ]
+        },
+        {
+          "text": "Recursion solves a problem through calls to the same function on smaller instances; a reachable base case stops the calls.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q264164:card",
+            "draft-cards.json:Q264164:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "mdn-svg",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/SVG",
+      "word_limit": 200,
+      "total_derived_words": 52,
+      "remaining_words": 148,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "SVG describes vector images in editable XML text, allowing clean scaling and scripted behavior.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q2078:learning_takeaway",
+            "approved-selection.json:Q2078:learning_takeaway",
+            "selection-checkpoint.json:Q2078:learning_takeaway",
+            "candidate.json:Q2078:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Describes vector scaling and text-based XML representation.",
+          "word_count": 7,
+          "origins": [
+            "proposals.json:Q2078:support_note",
+            "approved-selection.json:Q2078:support_note",
+            "selection-checkpoint.json:Q2078:support_note",
+            "candidate.json:Q2078:evidence_note"
+          ]
+        },
+        {
+          "text": "The scaling claim concerns vector content; embedded raster images retain their raster limits.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q2078:source_qualification",
+            "approved-selection.json:Q2078:source_qualification",
+            "selection-checkpoint.json:Q2078:source_qualification"
+          ]
+        },
+        {
+          "text": "Standalone SVG describes vector shapes in XML text; the shapes can scale cleanly while text-based properties remain editable.",
+          "word_count": 18,
+          "origins": [
+            "candidate.json:Q2078:card",
+            "draft-cards.json:Q2078:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "rpi-hardware",
+      "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html",
+      "word_limit": 200,
+      "total_derived_words": 58,
+      "remaining_words": 142,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Raspberry Pi exposes configurable GPIO pins so software can read digital inputs and control outputs.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q245:learning_takeaway",
+            "approved-selection.json:Q245:learning_takeaway",
+            "selection-checkpoint.json:Q245:learning_takeaway",
+            "candidate.json:Q245:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Input/output modes connect the computer to external components.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q245:support_note",
+            "approved-selection.json:Q245:support_note",
+            "selection-checkpoint.json:Q245:support_note",
+            "candidate.json:Q245:evidence_note"
+          ]
+        },
+        {
+          "text": "Family entry; pin counts and electrical capabilities vary by model. Avoid direct motor-drive instructions.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q245:source_qualification",
+            "approved-selection.json:Q245:source_qualification",
+            "selection-checkpoint.json:Q245:source_qualification"
+          ]
+        },
+        {
+          "text": "Raspberry Pi computers connect software to hardware through configurable pins that programs can read as digital inputs or set as outputs.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q245:card",
+            "draft-cards.json:Q245:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "ibm-deep-blue",
+      "url": "https://research.ibm.com/publications/deep-blue",
+      "word_limit": 200,
+      "total_derived_words": 56,
+      "remaining_words": 144,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Deep Blue combined parallel chess search, position evaluation, and grandmaster game data rather than relying on one technique.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q187899:learning_takeaway",
+            "approved-selection.json:Q187899:learning_takeaway",
+            "selection-checkpoint.json:Q187899:learning_takeaway",
+            "candidate.json:Q187899:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Authors list search hardware, parallelism, evaluation and game databases.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q187899:support_note",
+            "approved-selection.json:Q187899:support_note",
+            "selection-checkpoint.json:Q187899:support_note",
+            "candidate.json:Q187899:evidence_note"
+          ]
+        },
+        {
+          "text": "This explains the historical system; avoid claims of human-like thought.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q187899:source_qualification",
+            "approved-selection.json:Q187899:source_qualification",
+            "selection-checkpoint.json:Q187899:source_qualification"
+          ]
+        },
+        {
+          "text": "Deep Blue searched chess positions in parallel, combining position evaluation with a database of grandmaster games to choose moves.",
+          "word_count": 19,
+          "origins": [
+            "candidate.json:Q187899:card",
+            "draft-cards.json:Q187899:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-micro",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/1-2-microeconomics-and-macroeconomics",
+      "word_limit": 200,
+      "total_derived_words": 50,
+      "remaining_words": 150,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Microeconomics studies households, workers, and firms, including how they choose spending, work, prices, and production.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:local:authored:000574:learning_takeaway",
+            "approved-selection.json:local:authored:000574:learning_takeaway",
+            "selection-checkpoint.json:local:authored:000574:learning_takeaway",
+            "candidate.json:local:authored:000574:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Distinguishes individual decision-makers from economy-wide measures.",
+          "word_count": 6,
+          "origins": [
+            "proposals.json:local:authored:000574:support_note",
+            "approved-selection.json:local:authored:000574:support_note",
+            "selection-checkpoint.json:local:authored:000574:support_note",
+            "candidate.json:local:authored:000574:evidence_note"
+          ]
+        },
+        {
+          "text": "A broad field entry, distinct from the separate Macroeconomics identity.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:local:authored:000574:source_qualification",
+            "approved-selection.json:local:authored:000574:source_qualification",
+            "selection-checkpoint.json:local:authored:000574:source_qualification"
+          ]
+        },
+        {
+          "text": "Microeconomics studies choices by people and firms, such as what households buy and how businesses decide prices and production.",
+          "word_count": 19,
+          "origins": [
+            "candidate.json:local:authored:000574:card",
+            "draft-cards.json:local:authored:000574:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-comparative",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/19-1-absolute-and-comparative-advantage",
+      "word_limit": 200,
+      "total_derived_words": 58,
+      "remaining_words": 142,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Comparative advantage depends on what production gives up, rather than who produces more with the same resources.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q215551:learning_takeaway",
+            "approved-selection.json:Q215551:learning_takeaway",
+            "selection-checkpoint.json:Q215551:learning_takeaway",
+            "candidate.json:Q215551:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Defines lower cost in terms of other goods.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q215551:support_note",
+            "approved-selection.json:Q215551:support_note",
+            "selection-checkpoint.json:Q215551:support_note",
+            "candidate.json:Q215551:evidence_note"
+          ]
+        },
+        {
+          "text": "Avoid unconditional promises that every person benefits from actual trade policies.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q215551:source_qualification",
+            "approved-selection.json:Q215551:source_qualification",
+            "selection-checkpoint.json:Q215551:source_qualification"
+          ]
+        },
+        {
+          "text": "Comparative advantage means producing something at a lower opportunity cost: giving up less of another product, even without being the most productive.",
+          "word_count": 22,
+          "origins": [
+            "candidate.json:Q215551:card",
+            "draft-cards.json:Q215551:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-scale",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-5-costs-in-the-long-run",
+      "word_limit": 200,
+      "total_derived_words": 57,
+      "remaining_words": 143,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Economies of scale reduce average cost as production expands while all inputs can vary in the long run.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q5970087:learning_takeaway",
+            "approved-selection.json:Q5970087:learning_takeaway",
+            "selection-checkpoint.json:Q5970087:learning_takeaway",
+            "candidate.json:Q5970087:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Distinguishes long-run scale from changing one short-run input.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q5970087:support_note",
+            "approved-selection.json:Q5970087:support_note",
+            "selection-checkpoint.json:Q5970087:support_note",
+            "candidate.json:Q5970087:evidence_note"
+          ]
+        },
+        {
+          "text": "Larger production need not always lower cost; diseconomies can follow.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q5970087:source_qualification",
+            "approved-selection.json:Q5970087:source_qualification",
+            "selection-checkpoint.json:Q5970087:source_qualification"
+          ]
+        },
+        {
+          "text": "Economies of scale occur when expanding production lowers average cost in the long run, when firms can change all their inputs.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q5970087:card",
+            "draft-cards.json:Q5970087:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-elasticity",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/5-1-price-elasticity-of-demand-and-price-elasticity-of-supply",
+      "word_limit": 200,
+      "total_derived_words": 56,
+      "remaining_words": 144,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Economic elasticity compares percentage changes; price elasticity measures how quantity responds to price changes.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q223639:learning_takeaway",
+            "approved-selection.json:Q223639:learning_takeaway",
+            "selection-checkpoint.json:Q223639:learning_takeaway",
+            "candidate.json:Q223639:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Demand and supply examples use percentage ratios.",
+          "word_count": 7,
+          "origins": [
+            "proposals.json:Q223639:support_note",
+            "approved-selection.json:Q223639:support_note",
+            "selection-checkpoint.json:Q223639:support_note",
+            "candidate.json:Q223639:evidence_note"
+          ]
+        },
+        {
+          "text": "The selected identity is general economic elasticity; price response is an example, not its only form.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q223639:source_qualification",
+            "approved-selection.json:Q223639:source_qualification",
+            "selection-checkpoint.json:Q223639:source_qualification"
+          ]
+        },
+        {
+          "text": "Elasticity measures proportional responsiveness; price elasticity compares percentage changes in quantity demanded or supplied with percentage changes in price.",
+          "word_count": 19,
+          "origins": [
+            "candidate.json:Q223639:card",
+            "draft-cards.json:Q223639:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-costs",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-3-costs-in-the-short-run",
+      "word_limit": 200,
+      "total_derived_words": 150,
+      "remaining_words": 50,
+      "verbatim_words": 21,
+      "verbatim_items": [
+        {
+          "text": "marginal cost is the cost of producing one more unit of output.",
+          "word_count": 12
+        },
+        {
+          "text": "We can decompose costs into fixed and variable costs.",
+          "word_count": 9
+        }
+      ],
+      "entries": [
+        {
+          "text": "Marginal cost measures the additional cost of extra output, unlike average cost spread across all units.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q382444:learning_takeaway",
+            "approved-selection.json:Q382444:learning_takeaway",
+            "selection-checkpoint.json:Q382444:learning_takeaway",
+            "candidate.json:Q382444:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Defines marginal cost using changes in cost and quantity.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q382444:support_note",
+            "approved-selection.json:Q382444:support_note",
+            "selection-checkpoint.json:Q382444:support_note",
+            "candidate.json:Q382444:evidence_note"
+          ]
+        },
+        {
+          "text": "Discrete batches use cost change divided by output change.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q382444:source_qualification",
+            "approved-selection.json:Q382444:source_qualification",
+            "selection-checkpoint.json:Q382444:source_qualification"
+          ]
+        },
+        {
+          "text": "Source defines marginal cost as an economic cost measure.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q382444:parent_note",
+            "approved-selection.json:Q382444:parent_note",
+            "relationship-evidence.json:Q382444:note",
+            "relationship-checkpoint.json:Q382444:note",
+            "candidate.json:Q382444:relation_note"
+          ]
+        },
+        {
+          "text": "Fixed costs, such as a signed factory lease, stay unchanged as output changes over the relevant short run.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q466764:learning_takeaway",
+            "approved-selection.json:Q466764:learning_takeaway",
+            "selection-checkpoint.json:Q466764:learning_takeaway",
+            "candidate.json:Q466764:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Lease example preserves the time horizon.",
+          "word_count": 6,
+          "origins": [
+            "proposals.json:Q466764:support_note",
+            "approved-selection.json:Q466764:support_note",
+            "selection-checkpoint.json:Q466764:support_note",
+            "candidate.json:Q466764:evidence_note"
+          ]
+        },
+        {
+          "text": "Costs can change after the lease or planning period; not permanently fixed.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q466764:source_qualification",
+            "approved-selection.json:Q466764:source_qualification",
+            "selection-checkpoint.json:Q466764:source_qualification"
+          ]
+        },
+        {
+          "text": "Source explicitly divides costs into fixed and variable categories.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q466764:parent_note",
+            "approved-selection.json:Q466764:parent_note",
+            "relationship-evidence.json:Q466764:note",
+            "relationship-checkpoint.json:Q466764:note",
+            "candidate.json:Q466764:relation_note"
+          ]
+        },
+        {
+          "text": "marginal cost is the cost of producing one more unit of output.",
+          "word_count": 12,
+          "origins": [
+            "relationship-evidence.json:Q382444:verbatim_excerpt",
+            "relationship-checkpoint.json:Q382444:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "We can decompose costs into fixed and variable costs.",
+          "word_count": 9,
+          "origins": [
+            "relationship-evidence.json:Q466764:verbatim_excerpt",
+            "relationship-checkpoint.json:Q466764:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Marginal cost is the extra cost divided by extra output; average cost instead spreads total cost across all units produced.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q382444:card",
+            "draft-cards.json:Q382444:first_body_checkpoint"
+          ]
+        },
+        {
+          "text": "Fixed costs stay unchanged as output varies in the short run; a signed factory lease is one example until it expires.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q466764:card",
+            "draft-cards.json:Q466764:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-public-good",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/13-3-public-goods",
+      "word_limit": 200,
+      "total_derived_words": 87,
+      "remaining_words": 113,
+      "verbatim_words": 19,
+      "verbatim_items": [
+        {
+          "text": "We call this kind of good a public good.",
+          "word_count": 9
+        },
+        {
+          "text": "A number of government services are examples of public goods.",
+          "word_count": 10
+        }
+      ],
+      "entries": [
+        {
+          "text": "Public goods are hard to exclude people from using, and one person's use does not diminish another's use.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q272458:learning_takeaway",
+            "approved-selection.json:Q272458:learning_takeaway",
+            "selection-checkpoint.json:Q272458:learning_takeaway",
+            "candidate.json:Q272458:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Both nonexcludability and non-rivalry are required.",
+          "word_count": 6,
+          "origins": [
+            "proposals.json:Q272458:support_note",
+            "approved-selection.json:Q272458:support_note",
+            "selection-checkpoint.json:Q272458:support_note",
+            "candidate.json:Q272458:evidence_note"
+          ]
+        },
+        {
+          "text": "Government funding alone does not make a good a public good.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q272458:source_qualification",
+            "approved-selection.json:Q272458:source_qualification",
+            "selection-checkpoint.json:Q272458:source_qualification"
+          ]
+        },
+        {
+          "text": "Source explicitly classifies public goods as goods and includes services as examples.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q272458:parent_note",
+            "approved-selection.json:Q272458:parent_note",
+            "relationship-evidence.json:Q272458:note",
+            "relationship-checkpoint.json:Q272458:note",
+            "candidate.json:Q272458:relation_note"
+          ]
+        },
+        {
+          "text": "We call this kind of good a public good.",
+          "word_count": 9,
+          "origins": [
+            "relationship-evidence.json:Q272458:verbatim_excerpt",
+            "relationship-checkpoint.json:Q272458:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "A number of government services are examples of public goods.",
+          "word_count": 10,
+          "origins": [
+            "relationship-evidence.json:Q272458:verbatim_excerpt",
+            "relationship-checkpoint.json:Q272458:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Public goods are costly or impossible to exclude people from using, while one person's use does not reduce availability to others.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q272458:card",
+            "draft-cards.json:Q272458:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "fed-bank-run",
+      "url": "https://www.stlouisfed.org/publications/regional-economist/2023/may/interest-rate-risk-bank-runs",
+      "word_limit": 200,
+      "total_derived_words": 62,
+      "remaining_words": 138,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Simultaneous deposit withdrawals can overwhelm a bank's ability to turn long-term assets into cash, even when assets exceed liabilities.",
+          "word_count": 19,
+          "origins": [
+            "proposals.json:Q806663:learning_takeaway",
+            "approved-selection.json:Q806663:learning_takeaway",
+            "selection-checkpoint.json:Q806663:learning_takeaway",
+            "candidate.json:Q806663:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Explains why solvency does not guarantee immediate liquidity.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q806663:support_note",
+            "approved-selection.json:Q806663:support_note",
+            "selection-checkpoint.json:Q806663:support_note",
+            "candidate.json:Q806663:evidence_note"
+          ]
+        },
+        {
+          "text": "Mechanism only; no prediction about a particular bank or current depositor action.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q806663:source_qualification",
+            "approved-selection.json:Q806663:source_qualification",
+            "selection-checkpoint.json:Q806663:source_qualification"
+          ]
+        },
+        {
+          "text": "A bank run occurs when many depositors withdraw together; even a solvent bank can fail if it cannot turn assets into cash quickly.",
+          "word_count": 23,
+          "origins": [
+            "candidate.json:Q806663:card",
+            "draft-cards.json:Q806663:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "world-bank-group",
+      "url": "https://www.worldbank.org/ext/en/who-we-are",
+      "word_limit": 200,
+      "total_derived_words": 59,
+      "remaining_words": 141,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "The World Bank Group divides development work among five institutions, including government lending and private-sector investment.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q320863:learning_takeaway",
+            "approved-selection.json:Q320863:learning_takeaway",
+            "selection-checkpoint.json:Q320863:learning_takeaway",
+            "candidate.json:Q320863:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Lists five distinct organizations and functions.",
+          "word_count": 6,
+          "origins": [
+            "proposals.json:Q320863:support_note",
+            "approved-selection.json:Q320863:support_note",
+            "selection-checkpoint.json:Q320863:support_note",
+            "candidate.json:Q320863:evidence_note"
+          ]
+        },
+        {
+          "text": "World Bank Group is broader than the World Bank (IBRD and IDA); do not conflate those IDs.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q320863:source_qualification",
+            "approved-selection.json:Q320863:source_qualification",
+            "selection-checkpoint.json:Q320863:source_qualification"
+          ]
+        },
+        {
+          "text": "The World Bank Group's five institutions support development through different tools, including lending to governments and investing in private businesses.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q320863:card",
+            "draft-cards.json:Q320863:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "asce-civil",
+      "url": "https://www.asce.org/about-civil-engineering/",
+      "word_limit": 200,
+      "total_derived_words": 50,
+      "remaining_words": 150,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Civil engineering designs and maintains shared infrastructure, including bridges, drinking-water networks, and transport systems.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:local:authored:000545:learning_takeaway",
+            "approved-selection.json:local:authored:000545:learning_takeaway",
+            "selection-checkpoint.json:local:authored:000545:learning_takeaway",
+            "candidate.json:local:authored:000545:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Names infrastructure examples spanning structures, transport and water.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:local:authored:000545:support_note",
+            "approved-selection.json:local:authored:000545:support_note",
+            "selection-checkpoint.json:local:authored:000545:support_note",
+            "candidate.json:local:authored:000545:evidence_note"
+          ]
+        },
+        {
+          "text": "The field includes both construction and ongoing maintenance.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:local:authored:000545:source_qualification",
+            "approved-selection.json:local:authored:000545:source_qualification",
+            "selection-checkpoint.json:local:authored:000545:source_qualification"
+          ]
+        },
+        {
+          "text": "Civil engineering designs and maintains infrastructure people share, such as bridges, transport routes, and systems that deliver clean drinking water.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:local:authored:000545:card",
+            "draft-cards.json:local:authored:000545:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "nasa-turbofan",
+      "url": "https://www.grc.nasa.gov/www/k-12/BGP/turbfan.html",
+      "word_limit": 200,
+      "total_derived_words": 67,
+      "remaining_words": 133,
+      "verbatim_words": 7,
+      "verbatim_items": [
+        {
+          "text": "variation of the basic gas turbine engine",
+          "word_count": 7
+        }
+      ],
+      "entries": [
+        {
+          "text": "A turbofan splits incoming air between an engine core and a bypass stream; both streams contribute thrust.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q654051:learning_takeaway",
+            "approved-selection.json:Q654051:learning_takeaway",
+            "selection-checkpoint.json:Q654051:learning_takeaway",
+            "candidate.json:Q654051:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Distinguishes bypass fan flow from air entering combustion.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q654051:support_note",
+            "approved-selection.json:Q654051:support_note",
+            "selection-checkpoint.json:Q654051:support_note",
+            "candidate.json:Q654051:evidence_note"
+          ]
+        },
+        {
+          "text": "Avoid a universal efficiency or bypass-ratio claim.",
+          "word_count": 7,
+          "origins": [
+            "proposals.json:Q654051:source_qualification",
+            "approved-selection.json:Q654051:source_qualification",
+            "selection-checkpoint.json:Q654051:source_qualification"
+          ]
+        },
+        {
+          "text": "Source identifies turbofan engines as gas-turbine engine variations.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q654051:parent_note",
+            "approved-selection.json:Q654051:parent_note",
+            "relationship-evidence.json:Q654051:note",
+            "relationship-checkpoint.json:Q654051:note",
+            "candidate.json:Q654051:relation_note"
+          ]
+        },
+        {
+          "text": "variation of the basic gas turbine engine",
+          "word_count": 7,
+          "origins": [
+            "relationship-evidence.json:Q654051:verbatim_excerpt",
+            "relationship-checkpoint.json:Q654051:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "A turbofan's fan sends air through an engine core and around it in a bypass stream; both streams contribute thrust.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q654051:card",
+            "draft-cards.json:Q654051:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "nasa-flybywire",
+      "url": "https://www.nasa.gov/centers-and-facilities/armstrong/flying-with-nasa-digital-fly-by-wire/",
+      "word_limit": 200,
+      "total_derived_words": 75,
+      "remaining_words": 125,
+      "verbatim_words": 4,
+      "verbatim_items": [
+        {
+          "text": "digital fly-by-wire flight controls",
+          "word_count": 4
+        }
+      ],
+      "entries": [
+        {
+          "text": "Fly-by-wire sends pilot commands electrically to actuators; digital versions use computers instead of direct mechanical control linkages.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q626658:learning_takeaway",
+            "approved-selection.json:Q626658:learning_takeaway",
+            "selection-checkpoint.json:Q626658:learning_takeaway",
+            "candidate.json:Q626658:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Shows a digital example replacing mechanical cockpit connections.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q626658:support_note",
+            "approved-selection.json:Q626658:support_note",
+            "selection-checkpoint.json:Q626658:support_note",
+            "candidate.json:Q626658:evidence_note"
+          ]
+        },
+        {
+          "text": "The general identity also includes analog systems; do not define all fly-by-wire as digital.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q626658:source_qualification",
+            "approved-selection.json:Q626658:source_qualification",
+            "selection-checkpoint.json:Q626658:source_qualification"
+          ]
+        },
+        {
+          "text": "Source describes fly-by-wire as aircraft flight controls acting on control surfaces.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q626658:parent_note",
+            "approved-selection.json:Q626658:parent_note",
+            "relationship-evidence.json:Q626658:note",
+            "relationship-checkpoint.json:Q626658:note",
+            "candidate.json:Q626658:relation_note"
+          ]
+        },
+        {
+          "text": "digital fly-by-wire flight controls",
+          "word_count": 4,
+          "origins": [
+            "relationship-evidence.json:Q626658:verbatim_excerpt",
+            "relationship-checkpoint.json:Q626658:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Fly-by-wire sends pilot commands electrically to actuators that move aircraft control surfaces; digital systems use computers to replace direct mechanical linkages.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q626658:card",
+            "draft-cards.json:Q626658:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "golden-suspension",
+      "url": "https://www.goldengate.org/exhibits/how-the-bridge-spans-the-golden-gate/",
+      "word_limit": 200,
+      "total_derived_words": 76,
+      "remaining_words": 124,
+      "verbatim_words": 5,
+      "verbatim_items": [
+        {
+          "text": "Anatomy of a Suspension Bridge",
+          "word_count": 5
+        }
+      ],
+      "entries": [
+        {
+          "text": "A suspension bridge transfers deck loads through hangers to main cables, towers, and anchored foundations.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q12570:learning_takeaway",
+            "approved-selection.json:Q12570:learning_takeaway",
+            "selection-checkpoint.json:Q12570:learning_takeaway",
+            "candidate.json:Q12570:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The described load path links deck to ground.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q12570:support_note",
+            "approved-selection.json:Q12570:support_note",
+            "selection-checkpoint.json:Q12570:support_note",
+            "candidate.json:Q12570:evidence_note"
+          ]
+        },
+        {
+          "text": "The Golden Gate Bridge is the inspected example; avoid claiming all designs use identical anchorages.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q12570:source_qualification",
+            "approved-selection.json:Q12570:source_qualification",
+            "selection-checkpoint.json:Q12570:source_qualification"
+          ]
+        },
+        {
+          "text": "Source identifies suspension as a bridge type and explains its structure.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q12570:parent_note",
+            "approved-selection.json:Q12570:parent_note",
+            "relationship-evidence.json:Q12570:note",
+            "relationship-checkpoint.json:Q12570:note",
+            "candidate.json:Q12570:relation_note"
+          ]
+        },
+        {
+          "text": "Anatomy of a Suspension Bridge",
+          "word_count": 5,
+          "origins": [
+            "relationship-evidence.json:Q12570:verbatim_excerpt",
+            "relationship-checkpoint.json:Q12570:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "A suspension bridge hangs its deck from main cables through vertical hangers; at the Golden Gate, towers and anchorages carry the loads.",
+          "word_count": 22,
+          "origins": [
+            "candidate.json:Q12570:card",
+            "draft-cards.json:Q12570:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "forth-cantilever",
+      "url": "https://www.theforthbridges.org/media/xkjlcac0/forth-bridge-world-heritage-site-draft-management-plan-2025.pdf",
+      "word_limit": 200,
+      "total_derived_words": 72,
+      "remaining_words": 128,
+      "verbatim_words": 3,
+      "verbatim_items": [
+        {
+          "text": "multispan cantilever bridge",
+          "word_count": 3
+        }
+      ],
+      "entries": [
+        {
+          "text": "Cantilever bridge arms project from supporting towers or piers; at the Forth Bridge they connect through suspended spans.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q1429218:learning_takeaway",
+            "approved-selection.json:Q1429218:learning_takeaway",
+            "selection-checkpoint.json:Q1429218:learning_takeaway",
+            "candidate.json:Q1429218:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The heritage statement describes projecting arms and connecting suspended spans.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q1429218:support_note",
+            "approved-selection.json:Q1429218:support_note",
+            "selection-checkpoint.json:Q1429218:support_note",
+            "candidate.json:Q1429218:evidence_note"
+          ]
+        },
+        {
+          "text": "Specific dimensions and steel details belong to the Forth example, not every cantilever bridge.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q1429218:source_qualification",
+            "approved-selection.json:Q1429218:source_qualification",
+            "selection-checkpoint.json:Q1429218:source_qualification"
+          ]
+        },
+        {
+          "text": "Source identifies cantilever as the bridge's structural type.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q1429218:parent_note",
+            "approved-selection.json:Q1429218:parent_note",
+            "relationship-evidence.json:Q1429218:note",
+            "relationship-checkpoint.json:Q1429218:note",
+            "candidate.json:Q1429218:relation_note"
+          ]
+        },
+        {
+          "text": "multispan cantilever bridge",
+          "word_count": 3,
+          "origins": [
+            "relationship-evidence.json:Q1429218:verbatim_excerpt",
+            "relationship-checkpoint.json:Q1429218:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Cantilever bridges extend arms from supporting towers or piers; at the Forth Bridge, suspended spans connect the projecting arms.",
+          "word_count": 19,
+          "origins": [
+            "candidate.json:Q1429218:card",
+            "draft-cards.json:Q1429218:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "nsk-bearing",
+      "url": "https://www.nsk.com/eu-en/tools-resources/training/whats-a-bearing/",
+      "word_limit": 200,
+      "total_derived_words": 64,
+      "remaining_words": 136,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Bearings support relative motion and transmit forces; rolling bearings separate moving rings with balls or rollers rather than a sliding surface.",
+          "word_count": 21,
+          "origins": [
+            "proposals.json:Q190100:learning_takeaway",
+            "approved-selection.json:Q190100:learning_takeaway",
+            "selection-checkpoint.json:Q190100:learning_takeaway",
+            "candidate.json:Q190100:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Separates the support/load function from different friction mechanisms.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q190100:support_note",
+            "approved-selection.json:Q190100:support_note",
+            "selection-checkpoint.json:Q190100:support_note",
+            "candidate.json:Q190100:evidence_note"
+          ]
+        },
+        {
+          "text": "Not all bearings use rolling elements; plain and other types remain part of the identity.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q190100:source_qualification",
+            "approved-selection.json:Q190100:source_qualification",
+            "selection-checkpoint.json:Q190100:source_qualification"
+          ]
+        },
+        {
+          "text": "A bearing supports a moving part while carrying forces; rolling bearings place balls or rollers between rings to permit rotation.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q190100:card",
+            "draft-cards.json:Q190100:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "rei-bike-gears",
+      "url": "https://www.rei.com/learn/expert-advice/bike-gears-and-shifting.html",
+      "word_limit": 200,
+      "total_derived_words": 76,
+      "remaining_words": 124,
+      "verbatim_words": 7,
+      "verbatim_items": [
+        {
+          "text": "The job of your bike's gearing system",
+          "word_count": 7
+        }
+      ],
+      "entries": [
+        {
+          "text": "On a derailleur bicycle, a smaller front chainring or larger rear cog makes pedaling easier by changing gearing.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q1934967:learning_takeaway",
+            "approved-selection.json:Q1934967:learning_takeaway",
+            "selection-checkpoint.json:Q1934967:learning_takeaway",
+            "candidate.json:Q1934967:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Shows the opposing effects of front and rear sprocket sizes.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q1934967:support_note",
+            "approved-selection.json:Q1934967:support_note",
+            "selection-checkpoint.json:Q1934967:support_note",
+            "candidate.json:Q1934967:evidence_note"
+          ]
+        },
+        {
+          "text": "This example concerns a conventional chain-and-derailleur drivetrain; hub gearing differs.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q1934967:source_qualification",
+            "approved-selection.json:Q1934967:source_qualification",
+            "selection-checkpoint.json:Q1934967:source_qualification"
+          ]
+        },
+        {
+          "text": "The passage identifies gearing as a system of a bicycle.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q1934967:parent_note",
+            "approved-selection.json:Q1934967:parent_note",
+            "relationship-evidence.json:Q1934967:note",
+            "relationship-checkpoint.json:Q1934967:note",
+            "candidate.json:Q1934967:relation_note"
+          ]
+        },
+        {
+          "text": "The job of your bike's gearing system",
+          "word_count": 7,
+          "origins": [
+            "relationship-evidence.json:Q1934967:verbatim_excerpt",
+            "relationship-checkpoint.json:Q1934967:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "On a derailleur bicycle, shifting to a smaller front chainring or larger rear cog makes pedaling easier by changing the gearing.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q1934967:card",
+            "draft-cards.json:Q1934967:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "khk-planetary",
+      "url": "https://khkgears.net/pdf/2025/internal-gears.pdf",
+      "word_limit": 200,
+      "total_derived_words": 78,
+      "remaining_words": 122,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Epicyclic or planetary gearing shares transmitted loads among several planet gears, supporting high torque capacity.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q82412:learning_takeaway",
+            "approved-selection.json:Q82412:learning_takeaway",
+            "selection-checkpoint.json:Q82412:learning_takeaway",
+            "candidate.json:Q82412:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Manufacturer explains why several planet gears can carry a larger load.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q82412:support_note",
+            "approved-selection.json:Q82412:support_note",
+            "selection-checkpoint.json:Q82412:support_note",
+            "candidate.json:Q82412:evidence_note"
+          ]
+        },
+        {
+          "text": "Do not treat the illustrated product ratios as universal epicyclic ratios.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q82412:source_qualification",
+            "approved-selection.json:Q82412:source_qualification",
+            "selection-checkpoint.json:Q82412:source_qualification"
+          ]
+        },
+        {
+          "text": "Epicyclic gearing shares transmitted loads among several planet gears, allowing the gear system to carry larger loads and transmit higher torque.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q82412:card"
+          ]
+        },
+        {
+          "text": "Epicyclic gearing arranges planet gears around a sun gear; multiple planets share loads, helping a compact mechanism transmit substantial torque.",
+          "word_count": 20,
+          "origins": [
+            "draft-cards.json:Q82412:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "itdp-brt",
+      "url": "https://itdp.org/2025/04/17/what-is-brt-and-why-do-cities-need-it/",
+      "word_limit": 200,
+      "total_derived_words": 81,
+      "remaining_words": 119,
+      "verbatim_words": 14,
+      "verbatim_items": [
+        {
+          "text": "BRT is a form of high-capacity, bus-based rapid transit system.",
+          "word_count": 10
+        },
+        {
+          "text": "high-quality public transport solutions",
+          "word_count": 4
+        }
+      ],
+      "entries": [
+        {
+          "text": "Bus rapid transit combines protected bus lanes with rapid-transit features such as off-board fares and platform-level boarding.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q2878855:learning_takeaway",
+            "approved-selection.json:Q2878855:learning_takeaway",
+            "selection-checkpoint.json:Q2878855:learning_takeaway",
+            "candidate.json:Q2878855:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Identifies corridor design and boarding/payment elements.",
+          "word_count": 6,
+          "origins": [
+            "proposals.json:Q2878855:support_note",
+            "approved-selection.json:Q2878855:support_note",
+            "selection-checkpoint.json:Q2878855:support_note",
+            "candidate.json:Q2878855:evidence_note"
+          ]
+        },
+        {
+          "text": "Features vary by system; the ITDP Standard is an explicit evaluation framework.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q2878855:source_qualification",
+            "approved-selection.json:Q2878855:source_qualification",
+            "selection-checkpoint.json:Q2878855:source_qualification"
+          ]
+        },
+        {
+          "text": "Source identifies BRT as rapid transit and explicitly a public-transport solution.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q2878855:parent_note",
+            "approved-selection.json:Q2878855:parent_note",
+            "relationship-evidence.json:Q2878855:note",
+            "relationship-checkpoint.json:Q2878855:note",
+            "candidate.json:Q2878855:relation_note"
+          ]
+        },
+        {
+          "text": "BRT is a form of high-capacity, bus-based rapid transit system.",
+          "word_count": 10,
+          "origins": [
+            "relationship-evidence.json:Q2878855:verbatim_excerpt",
+            "relationship-checkpoint.json:Q2878855:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "high-quality public transport solutions",
+          "word_count": 4,
+          "origins": [
+            "relationship-evidence.json:Q2878855:verbatim_excerpt",
+            "relationship-checkpoint.json:Q2878855:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Bus rapid transit combines dedicated bus lanes with features such as off-board fare collection and platform-level boarding to speed passenger service.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q2878855:card",
+            "draft-cards.json:Q2878855:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "lta-mrt",
+      "url": "https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/rail_network/north_east_line.html",
+      "word_limit": 200,
+      "total_derived_words": 71,
+      "remaining_words": 129,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Singapore's MRT includes the North East Line, an early fully automated underground heavy-rail line designed as part of integrated public transport.",
+          "word_count": 21,
+          "origins": [
+            "proposals.json:Q40176:learning_takeaway",
+            "approved-selection.json:Q40176:learning_takeaway",
+            "selection-checkpoint.json:Q40176:learning_takeaway",
+            "candidate.json:Q40176:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Explains automation and integration within the MRT system.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q40176:support_note",
+            "approved-selection.json:Q40176:support_note",
+            "selection-checkpoint.json:Q40176:support_note",
+            "candidate.json:Q40176:evidence_note"
+          ]
+        },
+        {
+          "text": "Automation claim is about the North East Line example; do not imply every MRT line is driverless.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q40176:source_qualification",
+            "approved-selection.json:Q40176:source_qualification",
+            "selection-checkpoint.json:Q40176:source_qualification"
+          ]
+        },
+        {
+          "text": "The official page describes a public passenger rail service.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q40176:parent_note",
+            "approved-selection.json:Q40176:parent_note",
+            "candidate.json:Q40176:relation_note"
+          ]
+        },
+        {
+          "text": "Singapore's MRT includes the North East Line, a fully automated underground heavy-rail line operating without drivers.",
+          "word_count": 16,
+          "origins": [
+            "candidate.json:Q40176:card",
+            "draft-cards.json:Q40176:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "valve-portal",
+      "url": "https://store.steampowered.com/app/400/Portal/",
+      "word_limit": 200,
+      "total_derived_words": 79,
+      "remaining_words": 121,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Portal makes linked openings into a puzzle tool for moving both the player and objects through space.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q274897:learning_takeaway",
+            "approved-selection.json:Q274897:learning_takeaway",
+            "selection-checkpoint.json:Q274897:learning_takeaway",
+            "candidate.json:Q274897:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Valve explicitly describes physical puzzles solved by opening portals for objects and the player.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q274897:support_note",
+            "approved-selection.json:Q274897:support_note",
+            "selection-checkpoint.json:Q274897:support_note",
+            "candidate.json:Q274897:evidence_note"
+          ]
+        },
+        {
+          "text": "The source describes Portal, not its sequel or arbitrary real-world teleportation.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q274897:source_qualification",
+            "approved-selection.json:Q274897:source_qualification",
+            "selection-checkpoint.json:Q274897:source_qualification"
+          ]
+        },
+        {
+          "text": "Portal makes spatial puzzles from openings that move players and objects through space, encouraging players to reconsider possible routes.",
+          "word_count": 19,
+          "origins": [
+            "candidate.json:Q274897:card"
+          ]
+        },
+        {
+          "text": "Portal turns paired gateways into puzzles: players and objects enter one opening and emerge from its linked partner.",
+          "word_count": 18,
+          "origins": [
+            "draft-cards.json:Q274897:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "minecraft-modes",
+      "url": "https://www.minecraft.net/en-us/article/creative-vs-survival-mode",
+      "word_limit": 200,
+      "total_derived_words": 60,
+      "remaining_words": 140,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Minecraft changes building constraints by mode: Survival requires gathered materials, while Creative supplies blocks immediately.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q49740:learning_takeaway",
+            "approved-selection.json:Q49740:learning_takeaway",
+            "selection-checkpoint.json:Q49740:learning_takeaway",
+            "candidate.json:Q49740:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The developer contrasts mined building resources with immediate block availability.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q49740:support_note",
+            "approved-selection.json:Q49740:support_note",
+            "selection-checkpoint.json:Q49740:support_note",
+            "candidate.json:Q49740:evidence_note"
+          ]
+        },
+        {
+          "text": "The comparison is between standard Survival and Creative, not every custom game mode.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q49740:source_qualification",
+            "approved-selection.json:Q49740:source_qualification",
+            "selection-checkpoint.json:Q49740:source_qualification"
+          ]
+        },
+        {
+          "text": "Minecraft's Survival mode requires players to gather building materials; Creative mode supplies blocks directly, changing the constraints on what players can build.",
+          "word_count": 22,
+          "origins": [
+            "candidate.json:Q49740:card",
+            "draft-cards.json:Q49740:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "tetris-about",
+      "url": "https://play.tetris.com/about",
+      "word_limit": 200,
+      "total_derived_words": 59,
+      "remaining_words": 141,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Tetris turns falling-piece placement into line clearing: a completely filled horizontal row disappears.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q71910:learning_takeaway",
+            "approved-selection.json:Q71910:learning_takeaway",
+            "selection-checkpoint.json:Q71910:learning_takeaway",
+            "candidate.json:Q71910:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Official instructions require rotation and placement of Tetriminos to complete rows without gaps.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q71910:support_note",
+            "approved-selection.json:Q71910:support_note",
+            "selection-checkpoint.json:Q71910:support_note",
+            "candidate.json:Q71910:evidence_note"
+          ]
+        },
+        {
+          "text": "Do not generalize variant scoring or speed rules beyond this core mechanic.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q71910:source_qualification",
+            "approved-selection.json:Q71910:source_qualification",
+            "selection-checkpoint.json:Q71910:source_qualification"
+          ]
+        },
+        {
+          "text": "Tetris pieces fall into a grid; fitting them into complete horizontal lines clears those lines and makes space for more pieces.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q71910:card",
+            "draft-cards.json:Q71910:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "uschess-pieces",
+      "url": "https://new.uschess.org/sites/default/files/media/documents/us-chess-rule-book-online-only-edition-chapters-1-2-9-10-11.pdf",
+      "word_limit": 200,
+      "total_derived_words": 173,
+      "remaining_words": 27,
+      "verbatim_words": 21,
+      "verbatim_items": [
+        {
+          "text": "These pieces are as follows:",
+          "word_count": 5
+        },
+        {
+          "text": "a white king, usually indicated by the symbol:",
+          "word_count": 8
+        },
+        {
+          "text": "a white queen, usually indicated by the symbol:",
+          "word_count": 8
+        }
+      ],
+      "entries": [
+        {
+          "text": "Outside castling, a chess king moves to an adjacent square that an opponent does not attack.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q138:learning_takeaway",
+            "approved-selection.json:Q138:learning_takeaway",
+            "selection-checkpoint.json:Q138:learning_takeaway",
+            "candidate.json:Q138:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The official rule gives adjacent movement and excludes attacked destinations; the next section establishes castling as an exception.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q138:support_note",
+            "approved-selection.json:Q138:support_note",
+            "selection-checkpoint.json:Q138:support_note",
+            "candidate.json:Q138:evidence_note"
+          ]
+        },
+        {
+          "text": "Keep the castling exception; ordinary movement is not the king's only legal move.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q138:source_qualification",
+            "approved-selection.json:Q138:source_qualification",
+            "selection-checkpoint.json:Q138:source_qualification"
+          ]
+        },
+        {
+          "text": "The chess rules explicitly list the king among each player's pieces.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q138:parent_note",
+            "approved-selection.json:Q138:parent_note",
+            "relationship-evidence.json:Q138:note",
+            "relationship-checkpoint.json:Q138:note",
+            "candidate.json:Q138:relation_note"
+          ]
+        },
+        {
+          "text": "A chess queen travels along ranks, files, or diagonals, but cannot jump over intervening pieces.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q139:learning_takeaway",
+            "approved-selection.json:Q139:learning_takeaway",
+            "selection-checkpoint.json:Q139:learning_takeaway",
+            "candidate.json:Q139:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The queen movement rule incorporates the rule against crossing occupied squares.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q139:support_note",
+            "approved-selection.json:Q139:support_note",
+            "selection-checkpoint.json:Q139:support_note",
+            "candidate.json:Q139:evidence_note"
+          ]
+        },
+        {
+          "text": "Destinations still obey general legality and occupancy rules; this is a movement pattern, not a complete move validator.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q139:source_qualification",
+            "approved-selection.json:Q139:source_qualification",
+            "selection-checkpoint.json:Q139:source_qualification"
+          ]
+        },
+        {
+          "text": "The chess rules explicitly list the queen among each player's pieces.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q139:parent_note",
+            "approved-selection.json:Q139:parent_note",
+            "relationship-evidence.json:Q139:note",
+            "relationship-checkpoint.json:Q139:note",
+            "candidate.json:Q139:relation_note"
+          ]
+        },
+        {
+          "text": "These pieces are as follows:",
+          "word_count": 5,
+          "origins": [
+            "relationship-evidence.json:Q138:verbatim_excerpt",
+            "relationship-checkpoint.json:Q138:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "a white king, usually indicated by the symbol:",
+          "word_count": 8,
+          "origins": [
+            "relationship-evidence.json:Q138:verbatim_excerpt",
+            "relationship-checkpoint.json:Q138:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "a white queen, usually indicated by the symbol:",
+          "word_count": 8,
+          "origins": [
+            "relationship-evidence.json:Q139:verbatim_excerpt",
+            "relationship-checkpoint.json:Q139:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Except when castling, a chess king moves one square in any direction, and cannot move to a square an opponent attacks.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q138:card",
+            "draft-cards.json:Q138:first_body_checkpoint"
+          ]
+        },
+        {
+          "text": "A chess queen moves any distance horizontally, vertically, or diagonally, but cannot jump over pieces in its path.",
+          "word_count": 18,
+          "origins": [
+            "candidate.json:Q139:card",
+            "draft-cards.json:Q139:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "wa-high-jump",
+      "url": "https://worldathletics.org/disciplines/high-jumping-event/high-jump",
+      "word_limit": 200,
+      "total_derived_words": 64,
+      "remaining_words": 136,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "High jump uses a one-foot takeoff to clear an elevated horizontal bar without dislodging it.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q165704:learning_takeaway",
+            "approved-selection.json:Q165704:learning_takeaway",
+            "selection-checkpoint.json:Q165704:learning_takeaway",
+            "candidate.json:Q165704:learning_takeaway"
+          ]
+        },
+        {
+          "text": "World Athletics describes the takeoff, clearance objective, and landing mat.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q165704:support_note",
+            "approved-selection.json:Q165704:support_note",
+            "selection-checkpoint.json:Q165704:support_note",
+            "candidate.json:Q165704:evidence_note"
+          ]
+        },
+        {
+          "text": "Do not imply that a particular clearance technique is compulsory.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q165704:source_qualification",
+            "approved-selection.json:Q165704:source_qualification",
+            "selection-checkpoint.json:Q165704:source_qualification"
+          ]
+        },
+        {
+          "text": "The official athletics page describes a jumping event.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q165704:parent_note",
+            "approved-selection.json:Q165704:parent_note",
+            "candidate.json:Q165704:relation_note"
+          ]
+        },
+        {
+          "text": "In high jump, athletes take off from one foot and try to clear an elevated horizontal bar without knocking it down.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q165704:card",
+            "draft-cards.json:Q165704:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "wa-technical",
+      "url": "https://worldathletics.org/download/download?filename=3c94ced8-df32-41d0-82a6-b0bef85ef787.pdf&urlslug=C1.1+%26+C2.1+-+Competition+Rules+%26+Technical+Rules",
+      "word_limit": 200,
+      "total_derived_words": 157,
+      "remaining_words": 43,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "In stadium relays, baton exchange is judged by the baton's position within the takeover zone, not simply the runners' bodies.",
+          "word_count": 20,
+          "origins": [
+            "proposals.json:Q327742:learning_takeaway",
+            "approved-selection.json:Q327742:learning_takeaway",
+            "selection-checkpoint.json:Q327742:learning_takeaway",
+            "candidate.json:Q327742:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The rule defines the exchange from first receiving contact to sole possession and locates the entire baton.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q327742:support_note",
+            "approved-selection.json:Q327742:support_note",
+            "selection-checkpoint.json:Q327742:support_note",
+            "candidate.json:Q327742:evidence_note"
+          ]
+        },
+        {
+          "text": "Qualify the stadium baton example; relay race is broader than this athletics rule and zone lengths differ.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q327742:source_qualification",
+            "approved-selection.json:Q327742:source_qualification",
+            "selection-checkpoint.json:Q327742:source_qualification"
+          ]
+        },
+        {
+          "text": "This relation concerns the inspected stadium athletics relay example.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q327742:parent_note",
+            "approved-selection.json:Q327742:parent_note",
+            "candidate.json:Q327742:relation_note"
+          ]
+        },
+        {
+          "text": "Triple jump follows hop, step, and jump: the hop lands on the takeoff foot, then the step lands on the other.",
+          "word_count": 21,
+          "origins": [
+            "proposals.json:Q187204:learning_takeaway",
+            "approved-selection.json:Q187204:learning_takeaway",
+            "selection-checkpoint.json:Q187204:learning_takeaway",
+            "candidate.json:Q187204:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The rules state the sequence and distinguish same-foot from other-foot landings.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q187204:support_note",
+            "approved-selection.json:Q187204:support_note",
+            "selection-checkpoint.json:Q187204:support_note",
+            "candidate.json:Q187204:evidence_note"
+          ]
+        },
+        {
+          "text": "This explains the prescribed sequence, not a training technique or performance guarantee.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q187204:source_qualification",
+            "approved-selection.json:Q187204:source_qualification",
+            "selection-checkpoint.json:Q187204:source_qualification"
+          ]
+        },
+        {
+          "text": "The athletics rules prescribe a jumping event sequence.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q187204:parent_note",
+            "approved-selection.json:Q187204:parent_note",
+            "candidate.json:Q187204:relation_note"
+          ]
+        },
+        {
+          "text": "Triple jump combines hop, step, and jump: the hop lands on the takeoff foot, then the step lands on the opposite foot.",
+          "word_count": 22,
+          "origins": [
+            "candidate.json:Q187204:card",
+            "draft-cards.json:Q187204:first_body_checkpoint"
+          ]
+        },
+        {
+          "text": "In stadium relay races, teammates pass a baton; a legal exchange depends on the baton's position inside the takeover zone.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q327742:card",
+            "draft-cards.json:Q327742:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "curling-teaching",
+      "url": "https://www.curling.ca/wp-content/uploads/2026/02/Getting-Started-in-Curling-Teacher-Gudie.pdf",
+      "word_limit": 200,
+      "total_derived_words": 80,
+      "remaining_words": 120,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Curling stones curve as they slide; players apply rotation at release to control the direction of that curve.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q136851:learning_takeaway",
+            "approved-selection.json:Q136851:learning_takeaway",
+            "selection-checkpoint.json:Q136851:learning_takeaway",
+            "candidate.json:Q136851:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The national federation's guide connects stone rotation at release with direction of curl.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q136851:support_note",
+            "approved-selection.json:Q136851:support_note",
+            "selection-checkpoint.json:Q136851:support_note",
+            "candidate.json:Q136851:evidence_note"
+          ]
+        },
+        {
+          "text": "Avoid claiming a settled microscopic explanation of curling or that every form allows sweeping.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q136851:source_qualification",
+            "approved-selection.json:Q136851:source_qualification",
+            "selection-checkpoint.json:Q136851:source_qualification"
+          ]
+        },
+        {
+          "text": "Curling stones curve as they slide; players apply rotation at release to influence the direction of that curve.",
+          "word_count": 18,
+          "origins": [
+            "candidate.json:Q136851:card"
+          ]
+        },
+        {
+          "text": "Curling players slide stones toward a target; rotation added at release influences which direction the stone curves.",
+          "word_count": 17,
+          "origins": [
+            "draft-cards.json:Q136851:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "ling-phonetics",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/2-2-how-humans-produce-speech/",
+      "word_limit": 200,
+      "total_derived_words": 71,
+      "remaining_words": 129,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Phonetics studies speech as physical sound: how bodies produce it and which acoustic properties listeners receive.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q35395:learning_takeaway",
+            "approved-selection.json:Q35395:learning_takeaway",
+            "selection-checkpoint.json:Q35395:learning_takeaway",
+            "candidate.json:Q35395:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The lesson distinguishes articulatory study of bodily production from acoustic study of sound waves.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q35395:support_note",
+            "approved-selection.json:Q35395:support_note",
+            "selection-checkpoint.json:Q35395:support_note",
+            "candidate.json:Q35395:evidence_note"
+          ]
+        },
+        {
+          "text": "Use speech as the concrete focus here; do not claim that modern phonetics excludes signed-language modality.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q35395:source_qualification",
+            "approved-selection.json:Q35395:source_qualification",
+            "selection-checkpoint.json:Q35395:source_qualification"
+          ]
+        },
+        {
+          "text": "The linguistics chapter introduces the physical study of speech.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q35395:parent_note",
+            "approved-selection.json:Q35395:parent_note",
+            "candidate.json:Q35395:relation_note"
+          ]
+        },
+        {
+          "text": "Phonetics studies speech physically: how the body produces sounds and how sound-wave properties can be measured.",
+          "word_count": 16,
+          "origins": [
+            "candidate.json:Q35395:card",
+            "draft-cards.json:Q35395:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "sil-morpheme",
+      "url": "https://glossary.sil.org/term/morpheme",
+      "word_limit": 200,
+      "total_derived_words": 84,
+      "remaining_words": 116,
+      "verbatim_words": 16,
+      "verbatim_items": [
+        {
+          "text": "A morpheme is the smallest meaningful unit in the grammar of a language.",
+          "word_count": 13
+        },
+        {
+          "text": "dogs",
+          "word_count": 1
+        },
+        {
+          "text": "dog",
+          "word_count": 1
+        },
+        {
+          "text": "-s",
+          "word_count": 1
+        }
+      ],
+      "entries": [
+        {
+          "text": "A morpheme is a smallest meaningful unit; dogs contains dog and a plural ending despite having only one syllable.",
+          "word_count": 19,
+          "origins": [
+            "proposals.json:Q43249:learning_takeaway",
+            "approved-selection.json:Q43249:learning_takeaway",
+            "selection-checkpoint.json:Q43249:learning_takeaway",
+            "candidate.json:Q43249:learning_takeaway"
+          ]
+        },
+        {
+          "text": "SIL explicitly contrasts two meaningful units with one syllable in dogs.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q43249:support_note",
+            "approved-selection.json:Q43249:support_note",
+            "selection-checkpoint.json:Q43249:support_note",
+            "candidate.json:Q43249:evidence_note"
+          ]
+        },
+        {
+          "text": "Morphemes need not correspond to syllables or stand alone as words.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q43249:source_qualification",
+            "approved-selection.json:Q43249:source_qualification",
+            "selection-checkpoint.json:Q43249:source_qualification"
+          ]
+        },
+        {
+          "text": "Source explicitly identifies morphemes as meaningful units within grammar.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q43249:parent_note",
+            "approved-selection.json:Q43249:parent_note",
+            "relationship-evidence.json:Q43249:note",
+            "relationship-checkpoint.json:Q43249:note",
+            "candidate.json:Q43249:relation_note"
+          ]
+        },
+        {
+          "text": "A morpheme is the smallest meaningful unit in the grammar of a language.",
+          "word_count": 13,
+          "origins": [
+            "relationship-evidence.json:Q43249:verbatim_excerpt",
+            "relationship-checkpoint.json:Q43249:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "A morpheme is a smallest meaningful language unit: 'dogs' has two, 'dog' and plural '-s', although it has only one syllable.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q43249:card",
+            "draft-cards.json:Q43249:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "ling-assimilation",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/3-6-articulatory-processes-assimilation/",
+      "word_limit": 200,
+      "total_derived_words": 70,
+      "remaining_words": 130,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Assimilation makes a speech sound more like a nearby sound, with influence possible from either a preceding or following segment.",
+          "word_count": 20,
+          "origins": [
+            "proposals.json:Q148877:learning_takeaway",
+            "approved-selection.json:Q148877:learning_takeaway",
+            "selection-checkpoint.json:Q148877:learning_takeaway",
+            "candidate.json:Q148877:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The lesson defines similarity to neighboring sounds and distinguishes anticipatory from perseveratory influence.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q148877:support_note",
+            "approved-selection.json:Q148877:support_note",
+            "selection-checkpoint.json:Q148877:support_note",
+            "candidate.json:Q148877:evidence_note"
+          ]
+        },
+        {
+          "text": "This is phonological assimilation, not cultural assimilation.",
+          "word_count": 7,
+          "origins": [
+            "proposals.json:Q148877:source_qualification",
+            "approved-selection.json:Q148877:source_qualification",
+            "selection-checkpoint.json:Q148877:source_qualification"
+          ]
+        },
+        {
+          "text": "The chapter describes an articulatory process within sound patterns.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q148877:parent_note",
+            "approved-selection.json:Q148877:parent_note",
+            "candidate.json:Q148877:relation_note"
+          ]
+        },
+        {
+          "text": "In speech, assimilation makes one sound more like a neighboring sound; influence may come from the sound before or after it.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q148877:card",
+            "draft-cards.json:Q148877:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "ling-aspect",
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/5-6/",
+      "word_limit": 200,
+      "total_derived_words": 70,
+      "remaining_words": 130,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Grammatical aspect presents an event as ongoing or complete, whereas tense locates it relative to time.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q208084:learning_takeaway",
+            "approved-selection.json:Q208084:learning_takeaway",
+            "selection-checkpoint.json:Q208084:learning_takeaway",
+            "candidate.json:Q208084:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The lesson separates temporal location from the perspective taken on an event, including English progressive forms.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q208084:support_note",
+            "approved-selection.json:Q208084:support_note",
+            "selection-checkpoint.json:Q208084:support_note",
+            "candidate.json:Q208084:evidence_note"
+          ]
+        },
+        {
+          "text": "Aspect distinctions and their grammatical marking vary across languages; English perfect and perfective are not interchangeable labels.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q208084:source_qualification",
+            "approved-selection.json:Q208084:source_qualification",
+            "selection-checkpoint.json:Q208084:source_qualification"
+          ]
+        },
+        {
+          "text": "Grammatical aspect can present an event as ongoing or complete; tense instead locates it in time, such as past or present.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q208084:card",
+            "draft-cards.json:Q208084:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "cs-survey",
+      "url": "https://arxiv.org/abs/1904.00784",
+      "word_limit": 200,
+      "total_derived_words": 70,
+      "remaining_words": 130,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Code-switching alternates languages within a conversation or utterance, so language-processing systems must handle more than one language together.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q255615:learning_takeaway",
+            "approved-selection.json:Q255615:learning_takeaway",
+            "selection-checkpoint.json:Q255615:learning_takeaway",
+            "candidate.json:Q255615:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The authors define alternation within conversation or utterance and motivate processing code-switched speech and text.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q255615:support_note",
+            "approved-selection.json:Q255615:support_note",
+            "selection-checkpoint.json:Q255615:support_note",
+            "candidate.json:Q255615:evidence_note"
+          ]
+        },
+        {
+          "text": "Use the multilingual sense inspected here; broader social uses of the phrase are outside this source.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q255615:source_qualification",
+            "approved-selection.json:Q255615:source_qualification",
+            "selection-checkpoint.json:Q255615:source_qualification"
+          ]
+        },
+        {
+          "text": "Code-switching alternates languages within a conversation or utterance; recognizing such speech requires handling more than one language in the same exchange.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q255615:card",
+            "draft-cards.json:Q255615:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "cambridge-register",
+      "url": "https://www.cambridge.org/core/books/abs/corpus-linguistics/register-variation-and-english-for-specific-purposes/72D3387EE08CFCD5D66B437F712DC07B",
+      "word_limit": 200,
+      "total_derived_words": 95,
+      "remaining_words": 105,
+      "verbatim_words": 17,
+      "verbatim_items": [
+        {
+          "text": "The term “register” is used here as a cover term for varieties defined by their situational characteristics.",
+          "word_count": 17
+        }
+      ],
+      "entries": [
+        {
+          "text": "A register groups language by situation of use, such as conversation or research methods, rather than simply by speaker community.",
+          "word_count": 20,
+          "origins": [
+            "proposals.json:Q286576:learning_takeaway",
+            "approved-selection.json:Q286576:learning_takeaway",
+            "selection-checkpoint.json:Q286576:learning_takeaway",
+            "candidate.json:Q286576:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The authors define situational varieties and distinguish them from dialects associated with speaker groups.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q286576:support_note",
+            "approved-selection.json:Q286576:support_note",
+            "selection-checkpoint.json:Q286576:support_note",
+            "candidate.json:Q286576:evidence_note"
+          ]
+        },
+        {
+          "text": "This is the authors' functional register framework; not every sociolinguistic theory draws the same boundary.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q286576:source_qualification",
+            "approved-selection.json:Q286576:source_qualification",
+            "selection-checkpoint.json:Q286576:source_qualification"
+          ]
+        },
+        {
+          "text": "Source explicitly classifies registers as situational language varieties.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q286576:parent_note",
+            "approved-selection.json:Q286576:parent_note",
+            "relationship-evidence.json:Q286576:note",
+            "relationship-checkpoint.json:Q286576:note",
+            "candidate.json:Q286576:relation_note"
+          ]
+        },
+        {
+          "text": "The term “register” is used here as a cover term for varieties defined by their situational characteristics.",
+          "word_count": 17,
+          "origins": [
+            "relationship-evidence.json:Q286576:verbatim_excerpt",
+            "relationship-checkpoint.json:Q286576:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Registers distinguish language by situation of use, such as conversation or research methods; dialects distinguish varieties associated with different speaker groups.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q286576:card",
+            "draft-cards.json:Q286576:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "bana-english",
+      "url": "https://www.brailleauthority.org/signage/index.html",
+      "word_limit": 200,
+      "total_derived_words": 98,
+      "remaining_words": 102,
+      "verbatim_words": 15,
+      "verbatim_items": [
+        {
+          "text": "the current braille code in the U. S. and Canada is Unified English Braille (UEB).",
+          "word_count": 15
+        }
+      ],
+      "entries": [
+        {
+          "text": "English Braille can spell letters individually or use contractions that represent frequent words and letter groups.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q5378197:learning_takeaway",
+            "approved-selection.json:Q5378197:learning_takeaway",
+            "selection-checkpoint.json:Q5378197:learning_takeaway",
+            "candidate.json:Q5378197:learning_takeaway"
+          ]
+        },
+        {
+          "text": "BANA describes six-dot cells, character meanings, and contracted versus uncontracted English text.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q5378197:support_note",
+            "approved-selection.json:Q5378197:support_note",
+            "selection-checkpoint.json:Q5378197:support_note",
+            "candidate.json:Q5378197:evidence_note"
+          ]
+        },
+        {
+          "text": "English Braille is the broad identity; UEB is the inspected contemporary example, not a synonym for all historical English codes.",
+          "word_count": 20,
+          "origins": [
+            "proposals.json:Q5378197:source_qualification",
+            "approved-selection.json:Q5378197:source_qualification",
+            "selection-checkpoint.json:Q5378197:source_qualification"
+          ]
+        },
+        {
+          "text": "Source identifies an English Braille code within Braille; UEB remains one contemporary example.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q5378197:parent_note",
+            "approved-selection.json:Q5378197:parent_note",
+            "relationship-evidence.json:Q5378197:note",
+            "relationship-checkpoint.json:Q5378197:note",
+            "candidate.json:Q5378197:relation_note"
+          ]
+        },
+        {
+          "text": "the current braille code in the U. S. and Canada is Unified English Braille (UEB).",
+          "word_count": 15,
+          "origins": [
+            "relationship-evidence.json:Q5378197:verbatim_excerpt",
+            "relationship-checkpoint.json:Q5378197:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "English Braille represents writing with raised-dot cells; contracted forms use symbols for frequent words or letter groups instead of spelling every letter.",
+          "word_count": 22,
+          "origins": [
+            "candidate.json:Q5378197:card",
+            "draft-cards.json:Q5378197:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "nidcd-asl",
+      "url": "https://www.nidcd.nih.gov/health/american-sign-language",
+      "word_limit": 200,
+      "total_derived_words": 82,
+      "remaining_words": 118,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "American Sign Language uses hands and facial movement with its own grammar, rather than reproducing English word for word.",
+          "word_count": 19,
+          "origins": [
+            "proposals.json:Q14759:learning_takeaway",
+            "approved-selection.json:Q14759:learning_takeaway",
+            "selection-checkpoint.json:Q14759:learning_takeaway",
+            "candidate.json:Q14759:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The NIH institute identifies ASL as a natural language expressed with hands and face and with grammar different from English.",
+          "word_count": 20,
+          "origins": [
+            "proposals.json:Q14759:support_note",
+            "approved-selection.json:Q14759:support_note",
+            "selection-checkpoint.json:Q14759:support_note",
+            "candidate.json:Q14759:evidence_note"
+          ]
+        },
+        {
+          "text": "ASL is not a universal sign language; other regions have different signed languages.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q14759:source_qualification",
+            "approved-selection.json:Q14759:source_qualification",
+            "selection-checkpoint.json:Q14759:source_qualification"
+          ]
+        },
+        {
+          "text": "The passage identifies ASL as a distinct signed language.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q14759:parent_note",
+            "approved-selection.json:Q14759:parent_note",
+            "candidate.json:Q14759:relation_note"
+          ]
+        },
+        {
+          "text": "American Sign Language uses hands and facial movements with its own grammar; it differs from English and from other signed languages.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q14759:card",
+            "draft-cards.json:Q14759:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "ams-montessori",
+      "url": "https://amshq.org/about-us/inside-the-montessori-classroom/infant-and-toddler/",
+      "word_limit": 200,
+      "total_derived_words": 65,
+      "remaining_words": 135,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Montessori practice arranges accessible materials so children choose an activity, work with it, and restore it before choosing again.",
+          "word_count": 19,
+          "origins": [
+            "proposals.json:local:authored:000685:learning_takeaway",
+            "approved-selection.json:local:authored:000685:learning_takeaway",
+            "selection-checkpoint.json:local:authored:000685:learning_takeaway",
+            "candidate.json:local:authored:000685:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The society describes accessible learning materials and the child's choose-use-clean-up cycle.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:local:authored:000685:support_note",
+            "approved-selection.json:local:authored:000685:support_note",
+            "selection-checkpoint.json:local:authored:000685:support_note",
+            "candidate.json:local:authored:000685:evidence_note"
+          ]
+        },
+        {
+          "text": "The inspected example concerns infant and toddler classrooms; it does not establish comparative educational outcomes.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:local:authored:000685:source_qualification",
+            "approved-selection.json:local:authored:000685:source_qualification",
+            "selection-checkpoint.json:local:authored:000685:source_qualification"
+          ]
+        },
+        {
+          "text": "In Montessori infant and toddler classrooms, children choose accessible materials, work with them, and return them before selecting another activity.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:local:authored:000685:card",
+            "draft-cards.json:local:authored:000685:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-classical",
+      "url": "https://openstax.org/books/psychology-2e/pages/6-2-classical-conditioning",
+      "word_limit": 200,
+      "total_derived_words": 85,
+      "remaining_words": 115,
+      "verbatim_words": 12,
+      "verbatim_items": [
+        {
+          "text": "classical conditioning is a process by which we learn to associate stimuli",
+          "word_count": 12
+        }
+      ],
+      "entries": [
+        {
+          "text": "Classical conditioning lets a previously neutral cue elicit a learned response after it is paired with another stimulus.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q212737:learning_takeaway",
+            "approved-selection.json:Q212737:learning_takeaway",
+            "selection-checkpoint.json:Q212737:learning_takeaway",
+            "candidate.json:Q212737:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The text traces tone-food pairing and later salivation to the tone alone.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q212737:support_note",
+            "approved-selection.json:Q212737:support_note",
+            "selection-checkpoint.json:Q212737:support_note",
+            "candidate.json:Q212737:evidence_note"
+          ]
+        },
+        {
+          "text": "The example concerns stimulus association; do not equate it with reinforcement of voluntary actions.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q212737:source_qualification",
+            "approved-selection.json:Q212737:source_qualification",
+            "selection-checkpoint.json:Q212737:source_qualification"
+          ]
+        },
+        {
+          "text": "Source identifies classical conditioning as a learning process.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q212737:parent_note",
+            "approved-selection.json:Q212737:parent_note",
+            "relationship-evidence.json:Q212737:note",
+            "relationship-checkpoint.json:Q212737:note",
+            "candidate.json:Q212737:relation_note"
+          ]
+        },
+        {
+          "text": "classical conditioning is a process by which we learn to associate stimuli",
+          "word_count": 12,
+          "origins": [
+            "relationship-evidence.json:Q212737:verbatim_excerpt",
+            "relationship-checkpoint.json:Q212737:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Classical conditioning links stimuli: after repeated tone-food pairings, Pavlov's dogs salivated to the tone, which previously had not triggered that response.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q212737:card",
+            "draft-cards.json:Q212737:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-operant",
+      "url": "https://openstax.org/books/psychology-2e/pages/6-3-operant-conditioning",
+      "word_limit": 200,
+      "total_derived_words": 82,
+      "remaining_words": 118,
+      "verbatim_words": 12,
+      "verbatim_items": [
+        {
+          "text": "Now we turn to the second type of associative learning, operant conditioning.",
+          "word_count": 12
+        }
+      ],
+      "entries": [
+        {
+          "text": "Operant conditioning changes future behavior through its consequences: reinforcement increases a behavior's likelihood, while punishment decreases it.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q847079:learning_takeaway",
+            "approved-selection.json:Q847079:learning_takeaway",
+            "selection-checkpoint.json:Q847079:learning_takeaway",
+            "candidate.json:Q847079:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The text defines behavior-consequence association and the direction of reinforcement and punishment.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q847079:support_note",
+            "approved-selection.json:Q847079:support_note",
+            "selection-checkpoint.json:Q847079:support_note",
+            "candidate.json:Q847079:evidence_note"
+          ]
+        },
+        {
+          "text": "Negative reinforcement removes a stimulus to increase behavior; it is not another name for punishment.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q847079:source_qualification",
+            "approved-selection.json:Q847079:source_qualification",
+            "selection-checkpoint.json:Q847079:source_qualification"
+          ]
+        },
+        {
+          "text": "Source explicitly classifies operant conditioning as associative learning.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q847079:parent_note",
+            "approved-selection.json:Q847079:parent_note",
+            "relationship-evidence.json:Q847079:note",
+            "relationship-checkpoint.json:Q847079:note",
+            "candidate.json:Q847079:relation_note"
+          ]
+        },
+        {
+          "text": "Now we turn to the second type of associative learning, operant conditioning.",
+          "word_count": 12,
+          "origins": [
+            "relationship-evidence.json:Q847079:verbatim_excerpt",
+            "relationship-checkpoint.json:Q847079:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Operant conditioning changes behavior through consequences: reinforcement makes a behavior more likely, while punishment makes it less likely.",
+          "word_count": 18,
+          "origins": [
+            "candidate.json:Q847079:card",
+            "draft-cards.json:Q847079:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-gestalt",
+      "url": "https://openstax.org/books/psychology-2e/pages/5-6-gestalt-principles-of-perception",
+      "word_limit": 200,
+      "total_derived_words": 61,
+      "remaining_words": 139,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Gestalt psychology studies organized perception; nearby dots, for example, tend to appear as groups rather than isolated inputs.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q272021:learning_takeaway",
+            "approved-selection.json:Q272021:learning_takeaway",
+            "selection-checkpoint.json:Q272021:learning_takeaway",
+            "candidate.json:Q272021:learning_takeaway"
+          ]
+        },
+        {
+          "text": "OpenStax connects Gestalt's organized-whole account to the proximity grouping principle.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q272021:support_note",
+            "approved-selection.json:Q272021:support_note",
+            "selection-checkpoint.json:Q272021:support_note",
+            "candidate.json:Q272021:evidence_note"
+          ]
+        },
+        {
+          "text": "Proximity is one example, not an exhaustive account of the historical school.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q272021:source_qualification",
+            "approved-selection.json:Q272021:source_qualification",
+            "selection-checkpoint.json:Q272021:source_qualification"
+          ]
+        },
+        {
+          "text": "Gestalt psychology examines organized perception: dots close together tend to look like a group, showing how arrangement shapes what people perceive.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q272021:card",
+            "draft-cards.json:Q272021:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "harvard-executive",
+      "url": "https://developingchild.harvard.edu/resource-guides/guide-executive-function/",
+      "word_limit": 200,
+      "total_derived_words": 58,
+      "remaining_words": 142,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Executive functions help people plan, focus attention, switch between demands, and coordinate tasks.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q783092:learning_takeaway",
+            "approved-selection.json:Q783092:learning_takeaway",
+            "selection-checkpoint.json:Q783092:learning_takeaway",
+            "candidate.json:Q783092:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Harvard describes planning, attention, shifting, juggling tasks, and information management.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q783092:support_note",
+            "approved-selection.json:Q783092:support_note",
+            "selection-checkpoint.json:Q783092:support_note",
+            "candidate.json:Q783092:evidence_note"
+          ]
+        },
+        {
+          "text": "This is a group of cognitive skills, not a single brain switch or a measure of personal virtue.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q783092:source_qualification",
+            "approved-selection.json:Q783092:source_qualification",
+            "selection-checkpoint.json:Q783092:source_qualification"
+          ]
+        },
+        {
+          "text": "Executive functions are skills for managing tasks, such as focusing attention, planning ahead, and switching between demands.",
+          "word_count": 17,
+          "origins": [
+            "candidate.json:Q783092:card",
+            "draft-cards.json:Q783092:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-conformity",
+      "url": "https://openstax.org/books/psychology-2e/pages/12-4-conformity-compliance-and-obedience",
+      "word_limit": 200,
+      "total_derived_words": 82,
+      "remaining_words": 118,
+      "verbatim_words": 4,
+      "verbatim_items": [
+        {
+          "text": "Types of Social Influence",
+          "word_count": 4
+        }
+      ],
+      "entries": [
+        {
+          "text": "Conformity can mean following a group's behavior without privately agreeing; people may seek acceptance or trust the group's information.",
+          "word_count": 19,
+          "origins": [
+            "proposals.json:Q221284:learning_takeaway",
+            "approved-selection.json:Q221284:learning_takeaway",
+            "selection-checkpoint.json:Q221284:learning_takeaway",
+            "candidate.json:Q221284:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The text distinguishes going along, normative acceptance, and informational reliance.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q221284:support_note",
+            "approved-selection.json:Q221284:support_note",
+            "selection-checkpoint.json:Q221284:support_note",
+            "candidate.json:Q221284:evidence_note"
+          ]
+        },
+        {
+          "text": "These are mechanisms and possibilities; do not imply that everyone conforms in every group.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q221284:source_qualification",
+            "approved-selection.json:Q221284:source_qualification",
+            "selection-checkpoint.json:Q221284:source_qualification"
+          ]
+        },
+        {
+          "text": "Editorially places conformity within social psychology; the source's explicit narrower category lacks a baseline ID.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q221284:parent_note",
+            "approved-selection.json:Q221284:parent_note",
+            "relationship-evidence.json:Q221284:note",
+            "relationship-checkpoint.json:Q221284:note",
+            "candidate.json:Q221284:relation_note"
+          ]
+        },
+        {
+          "text": "Types of Social Influence",
+          "word_count": 4,
+          "origins": [
+            "relationship-evidence.json:Q221284:verbatim_excerpt",
+            "relationship-checkpoint.json:Q221284:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Conformity means changing behavior to follow a group; people may do this to gain acceptance even when they privately disagree.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q221284:card",
+            "draft-cards.json:Q221284:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-mnemonic",
+      "url": "https://openstax.org/books/psychology-2e/pages/8-4-ways-to-enhance-memory",
+      "word_limit": 200,
+      "total_derived_words": 84,
+      "remaining_words": 116,
+      "verbatim_words": 18,
+      "verbatim_items": [
+        {
+          "text": "Mnemonic devices are memory aids that help us organize information for encoding",
+          "word_count": 12
+        },
+        {
+          "text": "HOMES",
+          "word_count": 1
+        },
+        {
+          "text": "Huron",
+          "word_count": 1
+        },
+        {
+          "text": "Ontario",
+          "word_count": 1
+        },
+        {
+          "text": "Michigan",
+          "word_count": 1
+        },
+        {
+          "text": "Erie",
+          "word_count": 1
+        },
+        {
+          "text": "Superior",
+          "word_count": 1
+        }
+      ],
+      "entries": [
+        {
+          "text": "A mnemonic organizes recall cues; the acronym HOMES uses initials to cue the five Great Lakes.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q191062:learning_takeaway",
+            "approved-selection.json:Q191062:learning_takeaway",
+            "selection-checkpoint.json:Q191062:learning_takeaway",
+            "candidate.json:Q191062:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The text defines memory aids and explicitly gives HOMES as an acronym example.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q191062:support_note",
+            "approved-selection.json:Q191062:support_note",
+            "selection-checkpoint.json:Q191062:support_note",
+            "candidate.json:Q191062:evidence_note"
+          ]
+        },
+        {
+          "text": "A mnemonic provides cues; it does not guarantee accurate recall or understanding.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q191062:source_qualification",
+            "approved-selection.json:Q191062:source_qualification",
+            "selection-checkpoint.json:Q191062:source_qualification"
+          ]
+        },
+        {
+          "text": "Source classifies mnemonics as memory aids for encoding information.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q191062:parent_note",
+            "approved-selection.json:Q191062:parent_note",
+            "relationship-evidence.json:Q191062:note",
+            "relationship-checkpoint.json:Q191062:note",
+            "candidate.json:Q191062:relation_note"
+          ]
+        },
+        {
+          "text": "Mnemonic devices are memory aids that help us organize information for encoding",
+          "word_count": 12,
+          "origins": [
+            "relationship-evidence.json:Q191062:verbatim_excerpt",
+            "relationship-checkpoint.json:Q191062:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "A mnemonic supplies cues for remembering: HOMES uses the initials of Huron, Ontario, Michigan, Erie, and Superior to recall the Great Lakes.",
+          "word_count": 22,
+          "origins": [
+            "candidate.json:Q191062:card",
+            "draft-cards.json:Q191062:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-forgetting",
+      "url": "https://openstax.org/books/psychology-2e/pages/8-3-problems-with-memory",
+      "word_limit": 200,
+      "total_derived_words": 86,
+      "remaining_words": 114,
+      "verbatim_words": 9,
+      "verbatim_items": [
+        {
+          "text": "Forgetting refers to loss of information from long-term memory.",
+          "word_count": 9
+        }
+      ],
+      "entries": [
+        {
+          "text": "Forgetting can reflect interference: older information blocks new recall, or newer information competes with an older memory.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q1377840:learning_takeaway",
+            "approved-selection.json:Q1377840:learning_takeaway",
+            "selection-checkpoint.json:Q1377840:learning_takeaway",
+            "candidate.json:Q1377840:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The passage distinguishes proactive and retroactive interference and notes inaccessible stored information.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q1377840:support_note",
+            "approved-selection.json:Q1377840:support_note",
+            "selection-checkpoint.json:Q1377840:support_note",
+            "candidate.json:Q1377840:evidence_note"
+          ]
+        },
+        {
+          "text": "Interference is one cause of forgetting; failure to recall does not by itself prove permanent erasure.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q1377840:source_qualification",
+            "approved-selection.json:Q1377840:source_qualification",
+            "selection-checkpoint.json:Q1377840:source_qualification"
+          ]
+        },
+        {
+          "text": "Source treats forgetting as a memory failure, including temporary retrieval blocking.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q1377840:parent_note",
+            "approved-selection.json:Q1377840:parent_note",
+            "relationship-evidence.json:Q1377840:note",
+            "relationship-checkpoint.json:Q1377840:note",
+            "candidate.json:Q1377840:relation_note"
+          ]
+        },
+        {
+          "text": "Forgetting refers to loss of information from long-term memory.",
+          "word_count": 9,
+          "origins": [
+            "relationship-evidence.json:Q1377840:verbatim_excerpt",
+            "relationship-checkpoint.json:Q1377840:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Forgetting can occur when memories interfere: older learning disrupts recall of newer information, or newer learning competes with an older memory.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q1377840:card",
+            "draft-cards.json:Q1377840:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-self-concept",
+      "url": "https://openstax.org/books/psychology-2e/pages/11-5-humanistic-approaches",
+      "word_limit": 200,
+      "total_derived_words": 66,
+      "remaining_words": 134,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Self-concept is how someone thinks and feels about themselves; Rogers distinguished the perceived real self from an ideal self.",
+          "word_count": 19,
+          "origins": [
+            "proposals.json:Q1860557:learning_takeaway",
+            "approved-selection.json:Q1860557:learning_takeaway",
+            "selection-checkpoint.json:Q1860557:learning_takeaway",
+            "candidate.json:Q1860557:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The text defines self-concept and gives Rogers's real-versus-ideal distinction.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q1860557:support_note",
+            "approved-selection.json:Q1860557:support_note",
+            "selection-checkpoint.json:Q1860557:support_note",
+            "candidate.json:Q1860557:evidence_note"
+          ]
+        },
+        {
+          "text": "Attribute the distinction to Rogers; avoid presenting his claims about health or parenting as established universal effects.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q1860557:source_qualification",
+            "approved-selection.json:Q1860557:source_qualification",
+            "selection-checkpoint.json:Q1860557:source_qualification"
+          ]
+        },
+        {
+          "text": "Self-concept is how someone thinks and feels about themselves; Carl Rogers distinguished a person's perceived real self from their ideal self.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q1860557:card",
+            "draft-cards.json:Q1860557:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-social-psych",
+      "url": "https://openstax.org/books/psychology-2e/pages/12-1-what-is-social-psychology",
+      "word_limit": 200,
+      "total_derived_words": 65,
+      "remaining_words": 135,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Social psychology examines how other people and social situations shape thoughts, feelings, and actions alongside individual characteristics.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q161272:learning_takeaway",
+            "approved-selection.json:Q161272:learning_takeaway",
+            "selection-checkpoint.json:Q161272:learning_takeaway",
+            "candidate.json:Q161272:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The section covers interpersonal influence, situational interpretation, and modern attention to both person and situation.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q161272:support_note",
+            "approved-selection.json:Q161272:support_note",
+            "selection-checkpoint.json:Q161272:support_note",
+            "candidate.json:Q161272:evidence_note"
+          ]
+        },
+        {
+          "text": "Do not imply that situations determine all behavior or that personality is irrelevant.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q161272:source_qualification",
+            "approved-selection.json:Q161272:source_qualification",
+            "selection-checkpoint.json:Q161272:source_qualification"
+          ]
+        },
+        {
+          "text": "Social psychology studies how other people and situations shape thoughts, feelings, and actions, considering both social circumstances and individual characteristics.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q161272:card",
+            "draft-cards.json:Q161272:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-stratification",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/9-1-what-is-social-stratification",
+      "word_limit": 200,
+      "total_derived_words": 52,
+      "remaining_words": 148,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Social stratification ranks groups through unequal resources and status, rather than merely describing individual differences.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q841628:learning_takeaway",
+            "approved-selection.json:Q841628:learning_takeaway",
+            "selection-checkpoint.json:Q841628:learning_takeaway",
+            "candidate.json:Q841628:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The passage connects social rankings with wealth, income, education, background and power.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q841628:support_note",
+            "approved-selection.json:Q841628:support_note",
+            "selection-checkpoint.json:Q841628:support_note",
+            "candidate.json:Q841628:evidence_note"
+          ]
+        },
+        {
+          "text": "Ranking systems and relevant resources vary across societies.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q841628:source_qualification",
+            "approved-selection.json:Q841628:source_qualification",
+            "selection-checkpoint.json:Q841628:source_qualification"
+          ]
+        },
+        {
+          "text": "Social stratification ranks groups by resources and status; education, income, and family background can influence someone's position.",
+          "word_count": 17,
+          "origins": [
+            "candidate.json:Q841628:card",
+            "draft-cards.json:Q841628:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-mobility",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/9-2-social-stratification-and-mobility-in-the-united-states",
+      "word_limit": 200,
+      "total_derived_words": 89,
+      "remaining_words": 111,
+      "verbatim_words": 16,
+      "verbatim_items": [
+        {
+          "text": "Social mobility refers to the ability of individuals to change positions within a social stratification system.",
+          "word_count": 16
+        }
+      ],
+      "entries": [
+        {
+          "text": "Social mobility can move people up or down; intergenerational comparisons track parents and children, while intragenerational comparisons track one lifetime.",
+          "word_count": 20,
+          "origins": [
+            "proposals.json:Q194417:learning_takeaway",
+            "approved-selection.json:Q194417:learning_takeaway",
+            "selection-checkpoint.json:Q194417:learning_takeaway",
+            "candidate.json:Q194417:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Defines mobility and distinguishes upward, downward, intergenerational and intragenerational changes.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q194417:support_note",
+            "approved-selection.json:Q194417:support_note",
+            "selection-checkpoint.json:Q194417:support_note",
+            "candidate.json:Q194417:evidence_note"
+          ]
+        },
+        {
+          "text": "Mobility is possible without being equally accessible or common in every system.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q194417:source_qualification",
+            "approved-selection.json:Q194417:source_qualification",
+            "selection-checkpoint.json:Q194417:source_qualification"
+          ]
+        },
+        {
+          "text": "Source defines mobility through movement within a social stratification system.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q194417:parent_note",
+            "approved-selection.json:Q194417:parent_note",
+            "relationship-evidence.json:Q194417:note",
+            "relationship-checkpoint.json:Q194417:note",
+            "candidate.json:Q194417:relation_note"
+          ]
+        },
+        {
+          "text": "Social mobility refers to the ability of individuals to change positions within a social stratification system.",
+          "word_count": 16,
+          "origins": [
+            "relationship-evidence.json:Q194417:verbatim_excerpt",
+            "relationship-checkpoint.json:Q194417:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Social mobility changes someone's position in a class system; intergenerational comparisons track parents and children, while intragenerational comparisons follow one lifetime.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q194417:card",
+            "draft-cards.json:Q194417:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-cultural-relativism",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/3-1-what-is-culture",
+      "word_limit": 200,
+      "total_derived_words": 57,
+      "remaining_words": 143,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Cultural relativism interprets a culture using its own standards; understanding a practice does not require endorsing it.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:Q741550:learning_takeaway",
+            "approved-selection.json:Q741550:learning_takeaway",
+            "selection-checkpoint.json:Q741550:learning_takeaway",
+            "candidate.json:Q741550:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Contrasts cultural relativism with judging another culture through one's own standards.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q741550:support_note",
+            "approved-selection.json:Q741550:support_note",
+            "selection-checkpoint.json:Q741550:support_note",
+            "candidate.json:Q741550:evidence_note"
+          ]
+        },
+        {
+          "text": "Do not imply that interpretation prevents criticism or requires accepting every practice.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q741550:source_qualification",
+            "approved-selection.json:Q741550:source_qualification",
+            "selection-checkpoint.json:Q741550:source_qualification"
+          ]
+        },
+        {
+          "text": "Cultural relativism interprets practices using a culture's own standards; understanding those practices does not require endorsing them.",
+          "word_count": 17,
+          "origins": [
+            "candidate.json:Q741550:card",
+            "draft-cards.json:Q741550:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-fictive-kinship",
+      "url": "https://openstax.org/books/introduction-anthropology/pages/11-2-defining-family-and-household",
+      "word_limit": 200,
+      "total_derived_words": 78,
+      "remaining_words": 122,
+      "verbatim_words": 13,
+      "verbatim_items": [
+        {
+          "text": "a kinship tie in which individuals are defined as family regardless of biology.",
+          "word_count": 13
+        }
+      ],
+      "entries": [
+        {
+          "text": "Fictive kinship recognizes family ties through social commitment without requiring biological ancestry; godparenthood provides one example.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q5446591:learning_takeaway",
+            "approved-selection.json:Q5446591:learning_takeaway",
+            "selection-checkpoint.json:Q5446591:learning_takeaway",
+            "candidate.json:Q5446591:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The section describes intentional family relationships and godparenthood.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q5446591:support_note",
+            "approved-selection.json:Q5446591:support_note",
+            "selection-checkpoint.json:Q5446591:support_note",
+            "candidate.json:Q5446591:evidence_note"
+          ]
+        },
+        {
+          "text": "Fictive does not mean fake; a godparent may also be a biological relative.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q5446591:source_qualification",
+            "approved-selection.json:Q5446591:source_qualification",
+            "selection-checkpoint.json:Q5446591:source_qualification"
+          ]
+        },
+        {
+          "text": "Source explicitly identifies fictive kinship as a type of kinship tie.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:Q5446591:parent_note",
+            "approved-selection.json:Q5446591:parent_note",
+            "relationship-evidence.json:Q5446591:note",
+            "relationship-checkpoint.json:Q5446591:note",
+            "candidate.json:Q5446591:relation_note"
+          ]
+        },
+        {
+          "text": "a kinship tie in which individuals are defined as family regardless of biology.",
+          "word_count": 13,
+          "origins": [
+            "relationship-evidence.json:Q5446591:verbatim_excerpt",
+            "relationship-checkpoint.json:Q5446591:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Fictive kinship creates recognized family ties through social relationships, without requiring shared ancestry; godparenthood is one example.",
+          "word_count": 17,
+          "origins": [
+            "candidate.json:Q5446591:card",
+            "draft-cards.json:Q5446591:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-symbolic",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/1-3-theoretical-perspectives-in-sociology",
+      "word_limit": 200,
+      "total_derived_words": 78,
+      "remaining_words": 122,
+      "verbatim_words": 6,
+      "verbatim_items": [
+        {
+          "text": "Symbolic interactionism is a micro-level theory",
+          "word_count": 6
+        }
+      ],
+      "entries": [
+        {
+          "text": "Symbolic interactionism examines how people create and interpret shared meanings through everyday interactions.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q1163216:learning_takeaway",
+            "approved-selection.json:Q1163216:learning_takeaway",
+            "selection-checkpoint.json:Q1163216:learning_takeaway",
+            "candidate.json:Q1163216:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The theory emphasizes communication, symbols and meanings formed and interpreted through interaction.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q1163216:support_note",
+            "approved-selection.json:Q1163216:support_note",
+            "selection-checkpoint.json:Q1163216:support_note",
+            "candidate.json:Q1163216:evidence_note"
+          ]
+        },
+        {
+          "text": "Present this as a theoretical perspective, not a claim that one mechanism explains all society.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q1163216:source_qualification",
+            "approved-selection.json:Q1163216:source_qualification",
+            "selection-checkpoint.json:Q1163216:source_qualification"
+          ]
+        },
+        {
+          "text": "Source lists symbolic interactionism among sociological theories and identifies its micro-level scope.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q1163216:parent_note",
+            "approved-selection.json:Q1163216:parent_note",
+            "relationship-evidence.json:Q1163216:note",
+            "relationship-checkpoint.json:Q1163216:note",
+            "candidate.json:Q1163216:relation_note"
+          ]
+        },
+        {
+          "text": "Symbolic interactionism is a micro-level theory",
+          "word_count": 6,
+          "origins": [
+            "relationship-evidence.json:Q1163216:verbatim_excerpt",
+            "relationship-checkpoint.json:Q1163216:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "In symbolic interactionism, people create meanings through interaction; valuing books can develop through shared reading routines with family or friends.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q1163216:card",
+            "draft-cards.json:Q1163216:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "os-socialization",
+      "url": "https://openstax.org/books/introduction-sociology-3e/pages/5-introduction",
+      "word_limit": 200,
+      "total_derived_words": 81,
+      "remaining_words": 119,
+      "verbatim_words": 12,
+      "verbatim_items": [
+        {
+          "text": "people learn to be productive partners through an ongoing process called socialization.",
+          "word_count": 12
+        }
+      ],
+      "entries": [
+        {
+          "text": "Socialization is lifelong learning of a group's norms, beliefs and values; changing workplaces can require learning new expectations.",
+          "word_count": 18,
+          "origins": [
+            "proposals.json:Q185467:learning_takeaway",
+            "approved-selection.json:Q185467:learning_takeaway",
+            "selection-checkpoint.json:Q185467:learning_takeaway",
+            "candidate.json:Q185467:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The workplace example and definition show social learning beyond childhood.",
+          "word_count": 10,
+          "origins": [
+            "proposals.json:Q185467:support_note",
+            "approved-selection.json:Q185467:support_note",
+            "selection-checkpoint.json:Q185467:support_note",
+            "candidate.json:Q185467:evidence_note"
+          ]
+        },
+        {
+          "text": "Socialization is broader than casual socializing and does not end in childhood.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q185467:source_qualification",
+            "approved-selection.json:Q185467:source_qualification",
+            "selection-checkpoint.json:Q185467:source_qualification"
+          ]
+        },
+        {
+          "text": "Source explicitly describes socialization as an ongoing learning process.",
+          "word_count": 9,
+          "origins": [
+            "proposals.json:Q185467:parent_note",
+            "approved-selection.json:Q185467:parent_note",
+            "relationship-evidence.json:Q185467:note",
+            "relationship-checkpoint.json:Q185467:note",
+            "candidate.json:Q185467:relation_note"
+          ]
+        },
+        {
+          "text": "people learn to be productive partners through an ongoing process called socialization.",
+          "word_count": 12,
+          "origins": [
+            "relationship-evidence.json:Q185467:verbatim_excerpt",
+            "relationship-checkpoint.json:Q185467:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Socialization is lifelong learning of a group's norms and values; joining a new workplace can mean adapting to different expectations.",
+          "word_count": 20,
+          "origins": [
+            "candidate.json:Q185467:card",
+            "draft-cards.json:Q185467:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "ncsu-universal",
+      "url": "https://design.ncsu.edu/research/center-for-universal-design/",
+      "word_limit": 200,
+      "total_derived_words": 86,
+      "remaining_words": 114,
+      "verbatim_words": 12,
+      "verbatim_items": [
+        {
+          "text": "The design of products and environments to be usable by all people",
+          "word_count": 12
+        }
+      ],
+      "entries": [
+        {
+          "text": "Universal design accommodates diverse users through choices such as perceptible information, flexible use and reduced physical effort.",
+          "word_count": 17,
+          "origins": [
+            "proposals.json:local:authored:000032:learning_takeaway",
+            "approved-selection.json:local:authored:000032:learning_takeaway",
+            "selection-checkpoint.json:local:authored:000032:learning_takeaway",
+            "candidate.json:local:authored:000032:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The principles describe equivalent access, user options, understandable information and comfortable use.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:local:authored:000032:support_note",
+            "approved-selection.json:local:authored:000032:support_note",
+            "selection-checkpoint.json:local:authored:000032:support_note",
+            "candidate.json:local:authored:000032:evidence_note"
+          ]
+        },
+        {
+          "text": "The principles guide design; no single design necessarily meets every user's needs.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:local:authored:000032:source_qualification",
+            "approved-selection.json:local:authored:000032:source_qualification",
+            "selection-checkpoint.json:local:authored:000032:source_qualification"
+          ]
+        },
+        {
+          "text": "Source explicitly defines universal design as design of products and environments.",
+          "word_count": 11,
+          "origins": [
+            "proposals.json:local:authored:000032:parent_note",
+            "approved-selection.json:local:authored:000032:parent_note",
+            "relationship-evidence.json:local:authored:000032:note",
+            "relationship-checkpoint.json:local:authored:000032:note",
+            "candidate.json:local:authored:000032:relation_note"
+          ]
+        },
+        {
+          "text": "The design of products and environments to be usable by all people",
+          "word_count": 12,
+          "origins": [
+            "relationship-evidence.json:local:authored:000032:verbatim_excerpt",
+            "relationship-checkpoint.json:local:authored:000032:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Universal design aims for usability across diverse abilities, using features such as clear information and low physical effort in products and environments.",
+          "word_count": 22,
+          "origins": [
+            "candidate.json:local:authored:000032:card",
+            "draft-cards.json:local:authored:000032:first_body_checkpoint"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "ia-wayback",
+      "url": "https://help.archive.org/help/using-the-wayback-machine/",
+      "word_limit": 200,
+      "total_derived_words": 105,
+      "remaining_words": 95,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "Internet Archive's Wayback Machine lets people inspect captured webpages by URL and date, though an archived site can contain gaps.",
+          "word_count": 20,
+          "origins": [
+            "proposals.json:Q461:learning_takeaway",
+            "approved-selection.json:Q461:learning_takeaway",
+            "selection-checkpoint.json:Q461:learning_takeaway",
+            "candidate.json:Q461:learning_takeaway"
+          ]
+        },
+        {
+          "text": "The help page explains URL/date searches and warns that missing captures may lead to another date or the live web.",
+          "word_count": 20,
+          "origins": [
+            "proposals.json:Q461:support_note",
+            "approved-selection.json:Q461:support_note",
+            "selection-checkpoint.json:Q461:support_note",
+            "candidate.json:Q461:evidence_note"
+          ]
+        },
+        {
+          "text": "One service illustrates the institution; avoid claiming comprehensive or complete archival coverage.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q461:source_qualification",
+            "approved-selection.json:Q461:source_qualification",
+            "selection-checkpoint.json:Q461:source_qualification"
+          ]
+        },
+        {
+          "text": "Internet Archive's Wayback Machine preserves captured webpages for browsing by URL and date; missing captures can leave gaps in a site's history.",
+          "word_count": 22,
+          "origins": [
+            "candidate.json:Q461:card",
+            "draft-cards.json:Q461:first_body_checkpoint"
+          ]
+        },
+        {
+          "text": "The Internet Archive institutional page returned no substantive readable passage; the inspected official Wayback help page supplies the selected service example.",
+          "word_count": 21,
+          "origins": [
+            "selection-review.md:service_source_boundary"
+          ]
+        },
+        {
+          "text": "One service does not stand for the institution's entire mandate.",
+          "word_count": 10,
+          "origins": [
+            "selection-review.md:institution_scope_boundary"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "unicef-cold",
+      "url": "https://www.unicef.org/supply/what-cold-chain",
+      "word_limit": 200,
+      "total_derived_words": 41,
+      "remaining_words": 159,
+      "verbatim_words": 0,
+      "verbatim_items": [],
+      "entries": [
+        {
+          "text": "UNICEF supports childhood immunization by procuring cold-chain equipment that protects vaccines during storage and transport.",
+          "word_count": 15,
+          "origins": [
+            "proposals.json:Q740308:learning_takeaway",
+            "approved-selection.json:Q740308:learning_takeaway",
+            "selection-checkpoint.json:Q740308:learning_takeaway",
+            "candidate.json:Q740308:card",
+            "candidate.json:Q740308:learning_takeaway",
+            "draft-cards.json:Q740308:first_body_checkpoint"
+          ]
+        },
+        {
+          "text": "The passage describes equipment and services UNICEF procures with governments and partners.",
+          "word_count": 12,
+          "origins": [
+            "proposals.json:Q740308:support_note",
+            "approved-selection.json:Q740308:support_note",
+            "selection-checkpoint.json:Q740308:support_note",
+            "candidate.json:Q740308:evidence_note"
+          ]
+        },
+        {
+          "text": "This is one documented activity, not UNICEF's full mandate; storage requirements vary by vaccine.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q740308:source_qualification",
+            "approved-selection.json:Q740308:source_qualification",
+            "selection-checkpoint.json:Q740308:source_qualification"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "w3c-svg-rel",
+      "url": "https://www.w3.org/TR/SVG/intro.html",
+      "word_limit": 200,
+      "total_derived_words": 67,
+      "remaining_words": 133,
+      "verbatim_words": 6,
+      "verbatim_items": [
+        {
+          "text": "SVG is an application of XML",
+          "word_count": 6
+        }
+      ],
+      "entries": [
+        {
+          "text": "SVG describes vector images in editable XML text, allowing clean scaling and scripted behavior.",
+          "word_count": 14,
+          "origins": [
+            "proposals.json:Q2078:learning_takeaway",
+            "approved-selection.json:Q2078:learning_takeaway",
+            "candidate.json:Q2078:learning_takeaway"
+          ]
+        },
+        {
+          "text": "W3C explicitly calls SVG an XML application; HTML embedding has a syntax caveat.",
+          "word_count": 13,
+          "origins": [
+            "proposals.json:Q2078:support_note",
+            "proposals.json:Q2078:parent_note",
+            "approved-selection.json:Q2078:support_note",
+            "approved-selection.json:Q2078:parent_note",
+            "relationship-evidence.json:Q2078:note",
+            "relationship-checkpoint.json:Q2078:note",
+            "candidate.json:Q2078:evidence_note",
+            "candidate.json:Q2078:relation_note"
+          ]
+        },
+        {
+          "text": "SVG is an application of XML",
+          "word_count": 6,
+          "origins": [
+            "relationship-evidence.json:Q2078:verbatim_excerpt",
+            "relationship-checkpoint.json:Q2078:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Standalone SVG describes vector shapes in XML text; the shapes can scale cleanly while text-based properties remain editable.",
+          "word_count": 18,
+          "origins": [
+            "candidate.json:Q2078:card",
+            "draft-cards.json:Q2078:first_body_checkpoint"
+          ]
+        },
+        {
+          "text": "Two additional authoritative references clarify SVG as an XML application and aspect as a grammatical category.",
+          "word_count": 16,
+          "origins": [
+            "selection-review.md:additional_reference_sentence"
+          ]
+        }
+      ]
+    },
+    {
+      "source_id": "sil-aspect-rel",
+      "url": "https://glossary.sil.org/term/aspect",
+      "word_limit": 200,
+      "total_derived_words": 69,
+      "remaining_words": 131,
+      "verbatim_words": 8,
+      "verbatim_items": [
+        {
+          "text": "Aspect is a grammatical category associated with verbs",
+          "word_count": 8
+        }
+      ],
+      "entries": [
+        {
+          "text": "Grammatical aspect presents an event as ongoing or complete, whereas tense locates it relative to time.",
+          "word_count": 16,
+          "origins": [
+            "proposals.json:Q208084:learning_takeaway",
+            "approved-selection.json:Q208084:learning_takeaway",
+            "candidate.json:Q208084:learning_takeaway"
+          ]
+        },
+        {
+          "text": "Source explicitly identifies aspect as a grammatical category.",
+          "word_count": 8,
+          "origins": [
+            "proposals.json:Q208084:support_note",
+            "proposals.json:Q208084:parent_note",
+            "approved-selection.json:Q208084:support_note",
+            "approved-selection.json:Q208084:parent_note",
+            "relationship-evidence.json:Q208084:note",
+            "relationship-checkpoint.json:Q208084:note",
+            "candidate.json:Q208084:evidence_note",
+            "candidate.json:Q208084:relation_note"
+          ]
+        },
+        {
+          "text": "Aspect is a grammatical category associated with verbs",
+          "word_count": 8,
+          "origins": [
+            "relationship-evidence.json:Q208084:verbatim_excerpt",
+            "relationship-checkpoint.json:Q208084:verbatim_excerpt"
+          ]
+        },
+        {
+          "text": "Grammatical aspect can present an event as ongoing or complete; tense instead locates it in time, such as past or present.",
+          "word_count": 21,
+          "origins": [
+            "candidate.json:Q208084:card",
+            "draft-cards.json:Q208084:first_body_checkpoint"
+          ]
+        },
+        {
+          "text": "Two additional authoritative references clarify SVG as an XML application and aspect as a grammatical category.",
+          "word_count": 16,
+          "origins": [
+            "selection-review.md:additional_reference_sentence"
+          ]
+        }
+      ]
+    }
+  ]
+}

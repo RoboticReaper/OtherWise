@@ -1,0 +1,198 @@
+{
+  "batch_id": "research-batch-005",
+  "status": "authoring_complete_ready_for_independent_audit",
+  "verified_at": "2026-10-08T21:18:34.991201+00:00",
+  "checks": {
+    "schema_and_shared_validator": true,
+    "exact_approved_identity_order": true,
+    "exact_approved_labels_scopes_kinds_domains": true,
+    "counts_200_160_128_40_27": true,
+    "four_scopes_and_all_twelve_subfields": true,
+    "cards_30_to_50_words": true,
+    "every_new_identity_has_inspected_subject_link": true,
+    "source_fields_and_actual_locators": true,
+    "every_evidence_and_relation_reference_resolves": true,
+    "unique_per_card_author_review": true,
+    "every_related_only_card_explains_missing_stronger_link": true,
+    "all_40_controls_exact_provenance_and_alias_preservation": true,
+    "card_versions_increment_latest_or_start_at_one": true,
+    "all_27_prior_card_versions_preserved_exactly": true,
+    "prior_artifact_hashes_and_source_rows_exact": true,
+    "approved_batch_and_current_global_hashes_match": true,
+    "global_v1_v2_v3_history_preserved": true,
+    "eight_valid_25_card_checkpoints": true,
+    "access_links_separated_from_requests_and_failure_counts_bounded": true,
+    "all_saved_access_responses_match_hashes": true,
+    "tokens_and_cost_unavailable_not_estimated": true,
+    "independent_audit_honestly_pending": true
+  },
+  "passed_checks": 22,
+  "failed_checks": 0,
+  "counts": {
+    "accepted": 200,
+    "new": 160,
+    "existing_controls": 40,
+    "new_fine": 128,
+    "named_subjects": 27,
+    "sources": 71,
+    "relations": 200,
+    "scopes": {
+      "broad_field": 8,
+      "topic": 43,
+      "idea": 114,
+      "facet_or_application": 35
+    },
+    "primary_domains": {
+      "Computing & information": 60,
+      "Learning & language": 45,
+      "Economics & organizations": 55,
+      "Society & relationships": 40
+    },
+    "primary_subfields": {
+      "Algorithms and information representation": 20,
+      "Programming and distributed systems": 20,
+      "Security and computing history": 20,
+      "Language structure and meaning": 15,
+      "Language change and communication": 15,
+      "Learning mechanisms and instructional methods": 15,
+      "Market mechanisms and information": 20,
+      "Organizational coordination and institutions": 20,
+      "Economic history and documented business cases": 15,
+      "Social interaction and networks": 14,
+      "Social institutions and collective behavior": 13,
+      "Communication and relationship mechanisms": 13
+    },
+    "card_words": {
+      "minimum": 40,
+      "maximum": 50
+    }
+  },
+  "relationship_assertions": {
+    "editorial": 61,
+    "source_asserted": 139
+  },
+  "relationship_types": {
+    "related_to": 145,
+    "broader_topic": 7,
+    "facet_of": 38,
+    "application_of": 10
+  },
+  "all_prior_card_versions": 27,
+  "latest_prior_records": 24,
+  "unresolved_accepted": 0,
+  "excluded_source_unresolved_discovery_leads": [
+    {
+      "label": "Homophily",
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Social interaction and networks",
+      "status": "unresolved_excluded",
+      "reason": "The discovered chapter could not be retrieved in two URL attempts and the whole-book alternative also failed. No explanatory support admitted from snippets; selection used other independently supported network subjects.",
+      "access_result_files": [
+        "source-texts/web-118.json",
+        "source-texts/web-122.json",
+        "source-texts/web-129.json"
+      ]
+    },
+    {
+      "label": "Affiliation network",
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Social interaction and networks",
+      "status": "unresolved_excluded",
+      "reason": "Same inaccessible discovery chapter and whole-book alternative as Homophily. No source-backed proposal admitted; a distinct supported network subject was selected instead.",
+      "access_result_files": [
+        "source-texts/web-118.json",
+        "source-texts/web-122.json",
+        "source-texts/web-129.json"
+      ]
+    }
+  ],
+  "source_access_traceability": {
+    "coverage": "Checkpointed public-web responses plus one explicitly identified visible-request record. Explicit open requests, explicit failed-fetch URLs, and returned hyperlinks are distinct. Tool/cache requests do not prove actual network fetches. Some early exploratory calls were not checkpointed; this is not an exhaustive historical attempt count.",
+    "failed_url_counts_from_explicit_errors": {
+      "https://www.rfc-editor.org/rfc/rfc5681": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/4-1-phonemes-and-allophones/": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/4-4-complementary-distribution/": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/allomorphy/": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/5-4-morphology-beyond-affixes/": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/identifying-phrases-constituency-tests/": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/7-2-compositionality-why-not-just-syntax/": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/8-1-at-issue-vs-non-at-issue-meaning/": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-5-variationist-methods-and-concepts/": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/10-3-language-changes/": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/14-4-morphological-change/": 1,
+      "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/preserving/": 1,
+      "https://www.nobelprize.org/prizes/economic-sciences/2020/popular-information/": 1,
+      "https://www.nobelprize.org/prizes/economic-sciences/2009/press-release/": 1,
+      "https://www.nobelprize.org/prizes/economic-sciences/2016/press-release/": 1,
+      "https://www.nobelprize.org/prizes/economic-sciences/2001/press-release/": 1,
+      "https://www.nobelprize.org/uploads/2018/06/popular-economicsciences2009.pdf": 1,
+      "https://www.nobelprize.org/uploads/2018/06/popular-economicsciences2016.pdf": 1,
+      "https://www.nobelprize.org/uploads/2018/06/advanced-economicsciences2009.pdf": 1,
+      "https://www.nobelprize.org/prizes/economic-sciences/2009/press-release/?wptouch_preview_theme=enabled": 1,
+      "https://www.nobelprize.org/prizes/economic-sciences/2001/press-release/%26quot/": 1,
+      "https://www.nobelprize.org/uploads/2020/10/Speakersmanuscript_Economicsciences_2020_Nobelprizelessons.pdf": 1,
+      "https://www.co-operative.coop/media/comments-and-insights/a-history-of-co-operation": 1,
+      "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch04.pdf": 2,
+      "https://pure.mpg.de/rest/items/item_2376846/component/file_2376845/content": 1,
+      "https://www.cs.cornell.edu/home/kleinber/networks-book/networks-book.pdf": 1
+    },
+    "maximum_recorded_failed_attempts_per_url": 2,
+    "source_reference_links_counted_as_attempts": false,
+    "challenge_pages_solved": false,
+    "entries": 143,
+    "checkpointed_response_files": 142,
+    "updated_at": "2026-10-08T21:15:15.526555+00:00"
+  },
+  "files": {
+    "candidate.authored.json": {
+      "path": "research/workers/research-batch-005/candidate.authored.json",
+      "sha256": "0b55dce5e0f107113ff5e2c1f036055a786ef8fdc5b0781aa78fdb45a4644571",
+      "bytes": 1558619
+    },
+    "candidate.checkpoint.json": {
+      "path": "research/workers/research-batch-005/candidate.checkpoint.json",
+      "sha256": "0b55dce5e0f107113ff5e2c1f036055a786ef8fdc5b0781aa78fdb45a4644571",
+      "bytes": 1558619
+    },
+    "author-review.json": {
+      "path": "research/workers/research-batch-005/author-review.json",
+      "sha256": "ed9612cfbfaf4c4dd2bfc6199194006299f55cc7f0ae0a5878e0e1e17b75f084",
+      "bytes": 383192
+    },
+    "author-validation.json": {
+      "path": "research/workers/research-batch-005/author-validation.json",
+      "sha256": "a8e29b7b949fc6e8f1fda25a4380d22f1176cad271f2d1a89ae6474d220e5bee",
+      "bytes": 1566
+    },
+    "author-corrections.json": {
+      "path": "research/workers/research-batch-005/author-corrections.json",
+      "sha256": "53588d1510af1f4f69bdba072a0f705dbd832aa8e73d4e3f2027d0f86a62e816",
+      "bytes": 3657
+    },
+    "source-inspections.json": {
+      "path": "research/workers/research-batch-005/source-inspections.json",
+      "sha256": "bc9df5994ca85ef5287243219eef03fd7cc426b71e006886da1bf3fd028bbec6",
+      "bytes": 359238
+    },
+    "access-log.json": {
+      "path": "research/workers/research-batch-005/access-log.json",
+      "sha256": "d794c4cf4955b74e2382ac07fce85a562705a4b5a18735a5645a7357861572fa",
+      "bytes": 241584
+    },
+    "access-log-traceability.json": {
+      "path": "research/workers/research-batch-005/access-log-traceability.json",
+      "sha256": "44d07c06899002dad4f25e278a517de367b6bf982f2184cabbc9f40a609645f3",
+      "bytes": 3184
+    },
+    "cards-authored.tsv": {
+      "path": "research/workers/research-batch-005/cards-authored.tsv",
+      "sha256": "4b8f551fa4ab7b837c2c0293f74876687c3b7a0d8a2c55f4bf11ae2cab2fe4c5",
+      "bytes": 128414
+    }
+  },
+  "limitations": [
+    "Author review is not independent source audit; coordinator must freeze and audit this exact candidate.",
+    "The access log distinguishes observed request metadata from returned page links and discloses incomplete early-call history.",
+    "No claim of exhaustive duplication search, source coverage, or validated curiosity outcomes."
+  ]
+}

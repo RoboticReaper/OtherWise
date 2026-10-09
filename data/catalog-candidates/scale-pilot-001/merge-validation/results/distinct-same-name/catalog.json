@@ -1,0 +1,365 @@
+{
+  "batch": {
+    "alias_index": {
+      "mercury": [
+        "fixture:mercury-element",
+        "fixture:mercury-planet"
+      ]
+    },
+    "baseline": {
+      "identity_count": 1,
+      "role": "pinned_target_snapshot_not_emitted",
+      "sha256": "3aa9b679f0e8f6015b76d1db67e75f504b9d9008d61205a09b76b640e80c32f0"
+    },
+    "concept_provenance": {
+      "fixture:mercury-element": [
+        {
+          "batch_id": "research-batch-004",
+          "card_version": 1,
+          "combined_source_id_map": {
+            "r1": "research-batch-004::r1"
+          },
+          "input_sha256": "3572426eb288658ac4ba242fe20a057a6a71c8b9ec31361a858150bd1b54514c",
+          "original_id": "fixture:mercury-element",
+          "original_record": {
+            "aliases": [
+              "Mercury"
+            ],
+            "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+            "card_version": 1,
+            "domains": [
+              "Mathematics"
+            ],
+            "entity_kind": "idea",
+            "evidence": [
+              {
+                "locator": "Fixture section 1",
+                "note": "Supports the synthetic explanatory claim.",
+                "source_id": "r1"
+              }
+            ],
+            "id": "fixture:mercury-element",
+            "identity_urls": [
+              "https://example.org/fixture/a"
+            ],
+            "imported_records": [],
+            "label": "Mercury",
+            "learning_takeaway": "Identify Mercury as an element rather than the planet.",
+            "original_description": null,
+            "relations": [],
+            "scope": "idea"
+          },
+          "reference_namespace": {
+            "batch_id": "research-batch-004",
+            "input_sha256": "3572426eb288658ac4ba242fe20a057a6a71c8b9ec31361a858150bd1b54514c",
+            "scope": "original_snapshot_local_ids"
+          }
+        }
+      ],
+      "fixture:mercury-planet": [
+        {
+          "batch_id": "research-batch-003",
+          "card_version": 1,
+          "combined_source_id_map": {
+            "r1": "research-batch-003::r1"
+          },
+          "input_sha256": "6b1e2c9b6605d77a898183f5bcc34e642f6df289bb4052b64190a41a6764a500",
+          "original_id": "fixture:mercury-planet",
+          "original_record": {
+            "aliases": [
+              "Mercury"
+            ],
+            "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+            "card_version": 1,
+            "domains": [
+              "Mathematics"
+            ],
+            "entity_kind": "idea",
+            "evidence": [
+              {
+                "locator": "Fixture section 1",
+                "note": "Supports the synthetic explanatory claim.",
+                "source_id": "r1"
+              }
+            ],
+            "id": "fixture:mercury-planet",
+            "identity_urls": [
+              "https://example.org/fixture/a"
+            ],
+            "imported_records": [],
+            "label": "Mercury",
+            "learning_takeaway": "Identify Mercury as a planet rather than the chemical element.",
+            "original_description": null,
+            "relations": [],
+            "scope": "idea"
+          },
+          "reference_namespace": {
+            "batch_id": "research-batch-003",
+            "input_sha256": "6b1e2c9b6605d77a898183f5bcc34e642f6df289bb4052b64190a41a6764a500",
+            "scope": "original_snapshot_local_ids"
+          }
+        }
+      ]
+    },
+    "id": "scale-pilot-001",
+    "identity_decisions": {
+      "batch_versions": {},
+      "concept_versions": {},
+      "distinctness": [
+        {
+          "evidence": [
+            {
+              "locator": "Meaning list",
+              "note": "The two meanings have separate learning takeaways.",
+              "url": "https://example.org/fixture/mercury"
+            }
+          ],
+          "member_ids": [
+            "fixture:mercury-planet",
+            "fixture:mercury-element"
+          ],
+          "reason": "Fixture review distinguishes planet and chemical-element senses.",
+          "reviewed": true
+        }
+      ],
+      "equivalences": [],
+      "schema_version": 1,
+      "unresolved": []
+    },
+    "identity_decisions_sha256": "072f20c911bdc473240c1db7ae23a28d11e1ad16a194835bb3956b57e1ef8c8a",
+    "input_provenance": [
+      {
+        "batch_id": "research-batch-003",
+        "candidate_snapshot": {
+          "batch": {
+            "completion_status": "synthetic_fixture",
+            "fixture": true,
+            "id": "research-batch-003",
+            "revision": 1,
+            "selection_manifest": []
+          },
+          "concepts": [
+            {
+              "aliases": [
+                "Mercury"
+              ],
+              "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+              "card_version": 1,
+              "domains": [
+                "Mathematics"
+              ],
+              "entity_kind": "idea",
+              "evidence": [
+                {
+                  "locator": "Fixture section 1",
+                  "note": "Supports the synthetic explanatory claim.",
+                  "source_id": "r1"
+                }
+              ],
+              "id": "fixture:mercury-planet",
+              "identity_urls": [
+                "https://example.org/fixture/a"
+              ],
+              "imported_records": [],
+              "label": "Mercury",
+              "learning_takeaway": "Identify Mercury as a planet rather than the chemical element.",
+              "original_description": null,
+              "relations": [],
+              "scope": "idea"
+            }
+          ],
+          "issues": [],
+          "schema_version": 1,
+          "sources": [
+            {
+              "id": "r1",
+              "locator": "Fixture section 1",
+              "retrieved_at": "2024-04-03T12:34:56+00:00",
+              "revision": null,
+              "title": "Synthetic fixture reference",
+              "url": "https://example.org/fixture/a"
+            }
+          ],
+          "validation": {}
+        },
+        "input_sha256": "6b1e2c9b6605d77a898183f5bcc34e642f6df289bb4052b64190a41a6764a500",
+        "reference_namespace": {
+          "batch_id": "research-batch-003",
+          "input_sha256": "6b1e2c9b6605d77a898183f5bcc34e642f6df289bb4052b64190a41a6764a500",
+          "scope": "original_snapshot_local_ids"
+        },
+        "selected": true
+      },
+      {
+        "batch_id": "research-batch-004",
+        "candidate_snapshot": {
+          "batch": {
+            "completion_status": "synthetic_fixture",
+            "fixture": true,
+            "id": "research-batch-004",
+            "revision": 1,
+            "selection_manifest": []
+          },
+          "concepts": [
+            {
+              "aliases": [
+                "Mercury"
+              ],
+              "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+              "card_version": 1,
+              "domains": [
+                "Mathematics"
+              ],
+              "entity_kind": "idea",
+              "evidence": [
+                {
+                  "locator": "Fixture section 1",
+                  "note": "Supports the synthetic explanatory claim.",
+                  "source_id": "r1"
+                }
+              ],
+              "id": "fixture:mercury-element",
+              "identity_urls": [
+                "https://example.org/fixture/a"
+              ],
+              "imported_records": [],
+              "label": "Mercury",
+              "learning_takeaway": "Identify Mercury as an element rather than the planet.",
+              "original_description": null,
+              "relations": [],
+              "scope": "idea"
+            }
+          ],
+          "issues": [],
+          "schema_version": 1,
+          "sources": [
+            {
+              "id": "r1",
+              "locator": "Fixture section 1",
+              "retrieved_at": "2024-04-03T12:34:56+00:00",
+              "revision": null,
+              "title": "Synthetic fixture reference",
+              "url": "https://example.org/fixture/a"
+            }
+          ],
+          "validation": {}
+        },
+        "input_sha256": "3572426eb288658ac4ba242fe20a057a6a71c8b9ec31361a858150bd1b54514c",
+        "reference_namespace": {
+          "batch_id": "research-batch-004",
+          "input_sha256": "3572426eb288658ac4ba242fe20a057a6a71c8b9ec31361a858150bd1b54514c",
+          "scope": "original_snapshot_local_ids"
+        },
+        "selected": true
+      }
+    ],
+    "kind": "combined_pilot_candidate",
+    "selected_card_versions": {
+      "fixture:mercury-element": {
+        "batch_id": "research-batch-004",
+        "card_version": 1,
+        "input_sha256": "3572426eb288658ac4ba242fe20a057a6a71c8b9ec31361a858150bd1b54514c",
+        "original_id": "fixture:mercury-element"
+      },
+      "fixture:mercury-planet": {
+        "batch_id": "research-batch-003",
+        "card_version": 1,
+        "input_sha256": "6b1e2c9b6605d77a898183f5bcc34e642f6df289bb4052b64190a41a6764a500",
+        "original_id": "fixture:mercury-planet"
+      }
+    }
+  },
+  "concepts": [
+    {
+      "aliases": [
+        "Mercury"
+      ],
+      "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+      "card_version": 1,
+      "domains": [
+        "Mathematics"
+      ],
+      "entity_kind": "idea",
+      "evidence": [
+        {
+          "locator": "Fixture section 1",
+          "note": "Supports the synthetic explanatory claim.",
+          "source_id": "research-batch-004::r1"
+        }
+      ],
+      "id": "fixture:mercury-element",
+      "identity_urls": [
+        "https://example.org/fixture/a"
+      ],
+      "imported_records": [],
+      "label": "Mercury",
+      "learning_takeaway": "Identify Mercury as an element rather than the planet.",
+      "original_description": null,
+      "relations": [],
+      "scope": "idea"
+    },
+    {
+      "aliases": [
+        "Mercury"
+      ],
+      "card": "This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.",
+      "card_version": 1,
+      "domains": [
+        "Mathematics"
+      ],
+      "entity_kind": "idea",
+      "evidence": [
+        {
+          "locator": "Fixture section 1",
+          "note": "Supports the synthetic explanatory claim.",
+          "source_id": "research-batch-003::r1"
+        }
+      ],
+      "id": "fixture:mercury-planet",
+      "identity_urls": [
+        "https://example.org/fixture/a"
+      ],
+      "imported_records": [],
+      "label": "Mercury",
+      "learning_takeaway": "Identify Mercury as a planet rather than the chemical element.",
+      "original_description": null,
+      "relations": [],
+      "scope": "idea"
+    }
+  ],
+  "issues": [],
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "research-batch-003::r1",
+      "locator": "Fixture section 1",
+      "original_id": "r1",
+      "originating_batch_id": "research-batch-003",
+      "originating_input_sha256": "6b1e2c9b6605d77a898183f5bcc34e642f6df289bb4052b64190a41a6764a500",
+      "retrieved_at": "2024-04-03T12:34:56+00:00",
+      "revision": null,
+      "title": "Synthetic fixture reference",
+      "url": "https://example.org/fixture/a"
+    },
+    {
+      "id": "research-batch-004::r1",
+      "locator": "Fixture section 1",
+      "original_id": "r1",
+      "originating_batch_id": "research-batch-004",
+      "originating_input_sha256": "3572426eb288658ac4ba242fe20a057a6a71c8b9ec31361a858150bd1b54514c",
+      "retrieved_at": "2024-04-03T12:34:56+00:00",
+      "revision": null,
+      "title": "Synthetic fixture reference",
+      "url": "https://example.org/fixture/a"
+    }
+  ],
+  "validation": {
+    "baseline_snapshot_records_added": 0,
+    "canonical_content_sha256": "6f34af3336dc9ccb0b448b04079571b72ee6eceda9cec5b7dc118a4fcaa5be63",
+    "distinct_concept_count": 2,
+    "limit": "Structural validation does not certify facts, source inspection, semantic distinctness, or independent audit completion.",
+    "reference_count": 2,
+    "relation_count": 0,
+    "structural_passed": true
+  }
+}

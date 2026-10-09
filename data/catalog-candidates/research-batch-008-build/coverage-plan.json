@@ -1,0 +1,70 @@
+{
+  "accepted_card_limit": 200,
+  "all_four_scopes_required": true,
+  "assignments": {
+    "culture": {
+      "cards": 70,
+      "control_goal": 6,
+      "new_goal": 64,
+      "primary_domains": {
+        "Geography & travel": 9,
+        "History & culture": 9,
+        "Literature & storytelling": 9,
+        "Music & performance": 9,
+        "Philosophy": 9,
+        "Politics & law": 9,
+        "Religion & spirituality": 8,
+        "Visual arts & design": 8
+      }
+    },
+    "science": {
+      "cards": 69,
+      "control_goal": 8,
+      "new_goal": 61,
+      "primary_domains": {
+        "Biology & nature": 9,
+        "Chemistry & materials": 9,
+        "Earth & environment": 9,
+        "Food & agriculture": 9,
+        "Health & medicine": 9,
+        "Home & crafts": 8,
+        "Mathematics": 8,
+        "Physics & astronomy": 8
+      }
+    },
+    "systems": {
+      "cards": 61,
+      "control_goal": 6,
+      "new_goal": 55,
+      "primary_domains": {
+        "Computing & information": 10,
+        "Economics & organizations": 9,
+        "Engineering & transport": 10,
+        "Games & sports": 9,
+        "Learning & language": 8,
+        "Mind & behavior": 8,
+        "Society & relationships": 7
+      }
+    }
+  },
+  "audit": {
+    "disjoint_risk": 20,
+    "random_new": 20,
+    "seed": "otherwise-batch-008-2026-10-08-v1"
+  },
+  "batch_id": "research-batch-008",
+  "goals": {
+    "existing_controls": 20,
+    "fine_cards_with_any_supported_parent_application_fraction": 0.7,
+    "fine_cards_with_source_asserted_parent_application_fraction": 0.5,
+    "minimum_new_goal": 160,
+    "named_subjects": 25,
+    "new_fine_scope_subjects": 140,
+    "new_identities": 180
+  },
+  "proposal_limit": 300,
+  "schema_version": 1,
+  "selection_inputs": "Public references and canonical baseline; private recommendation ratings are outside selection inputs.",
+  "status": "selection_preparation",
+  "stopping_rule": "One bounded batch; report source, numerical, audit and coverage shortfalls. No new production run or operational import."
+}

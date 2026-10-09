@@ -1,0 +1,325 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-009",
+  "reviewer": "production001_audit_science",
+  "input_sha256": {
+    "data/catalog-candidates/catalog-production-001/batch-009/audit/science/assignment.json": "97788c99be2c0e2eb6e8e74344b95fd18a92b34b34b83abdb1adf86408b9c3ce",
+    "data/catalog-candidates/catalog-production-001/batch-009/audit-sample.json": "71e56fbb2968f8b0b444647a395243a2bb591cc173b81bd1538fdff6cd9e7f28",
+    "data/catalog-candidates/catalog-production-001/batch-009/frozen-initial/manifest.json": "cce2ff4b93ffadc39baebf8e9cc92368e4e22a366054bb11890ebb4d605ecdb3",
+    "data/catalog-candidates/catalog-production-001/batch-009/frozen-initial/draft-candidate.json": "4612287612b3e2e15fa22a8e8d60bd4f8eb35c4528a5d5f3bf8e506988e35154",
+    "data/catalog-candidates/catalog-production-001/baseline-index.json": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1"
+  },
+  "fixed_sample_checked": {
+    "ids": [
+      "Q124407",
+      "Q100196",
+      "Q853859",
+      "local:authored:000344",
+      "Q101017",
+      "Q1310671",
+      "Q190026",
+      "Q111",
+      "Q1381652",
+      "Q954381",
+      "Q217541",
+      "Q101991"
+    ],
+    "strata": {
+      "random": 4,
+      "risk": 8
+    },
+    "frozen_digest_matches": true
+  },
+  "local_inspection": {
+    "tool_mode": "functions.exec exec_command; JSON parsed programmatically",
+    "target_count": 10,
+    "target_locator": "baseline-index.json concepts by exact attached target_id",
+    "source_reuse_locator": "frozen-initial/draft-candidate.json concepts and sources",
+    "tool_output_chunk_refs": [
+      "be5920",
+      "445524"
+    ],
+    "scope": "Only assigned cards assessed; all 200 inspected as metadata for source reuse."
+  },
+  "discovery_queries": [
+    {
+      "tool": "web.run search_query",
+      "queries": [
+        "site.amnh.org Archaeopteryx \"long\" \"tail\"",
+        "site.who.int diarrhoeal disease intravenous fluids severe dehydration shock"
+      ],
+      "tool_refs": [
+        "turn752search0",
+        "turn752search1",
+        "turn752search2"
+      ],
+      "usage": "Discovery only; judgments use opened passages."
+    }
+  ],
+  "inspections": [
+    {
+      "inspection_id": "inspect-Q124407",
+      "url": "https://www.niddk.nih.gov/health-information/diabetes/overview/what-is-diabetes/type-1-diabetes",
+      "locator": "What is type 1 diabetes?, lines 135-139",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn741view0"
+      ],
+      "card_ids": [
+        "Q124407"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-Q100196",
+      "url": "https://www.amnh.org/explore/news-blogs/archaeopteryx-lithographica-feathered-dinosaur",
+      "locator": "Introduction and In Transition, lines 200-212",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn741view1"
+      ],
+      "card_ids": [
+        "Q100196"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-Q853859",
+      "url": "https://www.sare.org/publications/crop-rotation-on-organic-farms/guidelines-for-intercropping/",
+      "locator": "Chapter text, lines 101-112",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn741view2"
+      ],
+      "card_ids": [
+        "Q853859"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-local:authored:000344",
+      "url": "https://www.vam.ac.uk/articles/an-introduction-to-quilting-and-patchwork",
+      "locator": "What is quilting? and Quilting stitches, lines 35-49",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn741view3"
+      ],
+      "card_ids": [
+        "local:authored:000344"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-Q101017",
+      "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry/Organic_Chemistry_Lab_Techniques_(Nichols)/05:_Distillation",
+      "locator": "Chapter introduction, lines 190-195",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn744view0"
+      ],
+      "card_ids": [
+        "Q101017"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-Q1310671",
+      "url": "https://nsidc.org/learn/parts-cryosphere/sea-ice/why-sea-ice-matters",
+      "locator": "Greater warming leads to greater melting, lines 218-222",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn744view1"
+      ],
+      "card_ids": [
+        "Q1310671"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-Q190026",
+      "url": "https://mathworld.wolfram.com/TotientFunction.html",
+      "locator": "Definition and example, lines 16-17",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn744view2"
+      ],
+      "card_ids": [
+        "Q190026"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-Q111",
+      "url": "https://science.nasa.gov/mars/facts/",
+      "locator": "Mars Facts introduction and Namesake, lines 237-239, 269-271",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn744view3"
+      ],
+      "card_ids": [
+        "Q111"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-Q1381652",
+      "url": "https://www.who.int/publications/i/item/WHO-FCH-CAH-06.1",
+      "locator": "Overview, lines 90-95",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn747view0"
+      ],
+      "card_ids": [
+        "Q1381652"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-Q954381",
+      "url": "https://www.rhs.org.uk/soil-composts-mulches/green-manures",
+      "locator": "Introduction, line 9; Why and when, lines 65-80; no-dig regimes, lines 109-117",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn747view1"
+      ],
+      "card_ids": [
+        "Q954381"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-Q217541",
+      "url": "https://www.fda.gov/consumers/consumer-updates/tips-stay-safe-sun-sunscreen-sunglasses",
+      "locator": "Protect Your Eyes With Sunglasses, lines 108-120",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn747view2"
+      ],
+      "card_ids": [
+        "Q217541"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-Q101991",
+      "url": "https://www.cancer.gov/about-cancer/causes-prevention/risk/chronic-inflammation",
+      "locator": "Chronic Inflammation, lines 12-13",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn747view3"
+      ],
+      "card_ids": [
+        "Q101991"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z",
+      "time_basis": "UTC checkpoint after inspection; individual request times unavailable"
+    },
+    {
+      "inspection_id": "inspect-inflammation-innate",
+      "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/21-2-barrier-defenses-and-the-innate-immune-response",
+      "locator": "Inflammatory Response, lines 107-120",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn747view4"
+      ],
+      "card_ids": [
+        "Q101991"
+      ],
+      "outcome": "substantive passage inspected",
+      "recorded_at": "2026-10-09T05:02:26Z"
+    },
+    {
+      "inspection_id": "inspect-who-pdf",
+      "url": "https://iris.who.int/server/api/core/bitstreams/e52f1746-cf33-4a63-9f97-4c0bfaaeb230/content",
+      "locator": "Download link 67 on the cited WHO publication landing page",
+      "inspection_mode": "web_click_pdf",
+      "tool_refs": [
+        "turn751view0"
+      ],
+      "error": "403 Forbidden",
+      "attempts": 1,
+      "card_ids": [
+        "Q1381652"
+      ],
+      "outcome": "Stopped retries; inspected official alternative. Original citation repair remains pending.",
+      "recorded_at": "2026-10-09T05:02:26Z"
+    },
+    {
+      "inspection_id": "inspect-amnh-linked-page",
+      "url": "https://www.amnh.org/explore/news-blogs/bird-or-bird-brain",
+      "locator": "Article text, lines 197-220",
+      "inspection_mode": "web_click_text",
+      "tool_refs": [
+        "turn751view1"
+      ],
+      "card_ids": [
+        "Q100196"
+      ],
+      "outcome": "Inspected; not used to close the citation gap.",
+      "recorded_at": "2026-10-09T05:02:26Z"
+    },
+    {
+      "inspection_id": "inspect-amnh-alternative",
+      "url": "https://www.amnh.org/learn-teach/curriculum-collections/dinosaurs-activities-and-lesson-plans/explore-the-family-tree-of-birds",
+      "locator": "Sample Essay - Week 4, lines 406-407 and 439-441",
+      "inspection_mode": "web_open_text_find",
+      "tool_refs": [
+        "turn755view1",
+        "turn756view0",
+        "turn756view1",
+        "turn756view2"
+      ],
+      "card_ids": [
+        "Q100196"
+      ],
+      "outcome": "substantive alternative inspected; proposed citation only",
+      "recorded_at": "2026-10-09T05:02:26Z"
+    },
+    {
+      "inspection_id": "inspect-who-alternative",
+      "url": "https://www.who.int/en/news-room/fact-sheets/detail/diarrhoeal-disease",
+      "locator": "Prevention and treatment, lines 143-148",
+      "inspection_mode": "web_open_text",
+      "tool_refs": [
+        "turn755view0"
+      ],
+      "card_ids": [
+        "Q1381652"
+      ],
+      "outcome": "substantive alternative inspected; proposed citation only",
+      "recorded_at": "2026-10-09T05:02:26Z"
+    }
+  ],
+  "retry_policy": {
+    "maximum_retries_per_failed_url": 0,
+    "failures": 1
+  },
+  "notes": [
+    "No external original passages were copied into audit files.",
+    "No preserved author support flags substituted for independent inspection.",
+    "Author and frozen inputs were read only."
+  ]
+}

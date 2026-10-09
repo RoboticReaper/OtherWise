@@ -1,0 +1,1345 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-003",
+  "status": "independent_recheck_complete_with_additional_targeted_gap",
+  "started_at": "2026-10-08T22:10:32.770933+00:00",
+  "reviewed_candidate_path": "research/workers/research-batch-003/candidate.revised.json",
+  "reviewed_candidate_sha256": "e9dafbba2dfeb6d382a48cc261ac675f3da0fbae505ba36f288afaa55fa972ab",
+  "initial_audit_path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-003/audit-review/audit.initial.json",
+  "initial_audit_sha256": "7d80ccf3a2ad8319cdd9605d413eb3d34b3b9c9ec4c56d99c4e5f2ce7d5e910a",
+  "changed_ids": [
+    "local:catalog:neutral-theory-of-molecular-evolution",
+    "local:catalog:e-coli-long-term-evolution-experiment",
+    "local:catalog:pulse-oximetry",
+    "local:catalog:systolic-blood-pressure-intervention-trial",
+    "local:catalog:marine-heatwave",
+    "local:catalog:temperature-inversion",
+    "local:catalog:argo",
+    "local:catalog:artesian-aquifer",
+    "local:catalog:rootstock-dwarfing",
+    "local:catalog:variable-rate-irrigation",
+    "local:catalog:wood-sorption-hysteresis"
+  ],
+  "original_random_ids": [
+    "local:catalog:foundation-species",
+    "local:catalog:variable-rate-irrigation",
+    "local:catalog:mauna-loa-observatory",
+    "local:catalog:convergent-evolution",
+    "local:catalog:mortise-and-tenon-joint",
+    "local:catalog:egg-protein-coagulation",
+    "local:catalog:mulching",
+    "local:catalog:understitching",
+    "local:catalog:scribing-to-fit",
+    "local:catalog:swarna-sub1",
+    "local:catalog:karner-blue-butterfly",
+    "local:catalog:endosymbiotic-theory",
+    "local:catalog:turbidity",
+    "local:catalog:healthy-volunteer-bias-in-screening-studies",
+    "local:catalog:renal-countercurrent-multiplication",
+    "local:catalog:elwha-river-restoration",
+    "local:catalog:coral-bleaching",
+    "local:catalog:lake-effect-snow",
+    "local:catalog:homology-biology",
+    "local:catalog:enzymatic-browning"
+  ],
+  "original_risk_ids": [
+    "local:catalog:cascadia-subduction-zone",
+    "local:catalog:crop-rotation",
+    "local:catalog:leather-temper",
+    "local:authored:000634",
+    "local:catalog:arterial-blood-gas-testing",
+    "Q2293576",
+    "local:authored:000631",
+    "local:catalog:starch-retrogradation",
+    "local:catalog:flat-felled-seam",
+    "local:catalog:randomized-controlled-trial",
+    "local:catalog:international-hapmap-project",
+    "local:catalog:e-coli-long-term-evolution-experiment",
+    "local:catalog:broadbalk-wheat-experiment",
+    "local:catalog:park-grass-experiment",
+    "local:catalog:encode",
+    "local:catalog:isle-royale",
+    "local:catalog:maydianne-andrade",
+    "local:catalog:framingham-heart-study",
+    "local:catalog:steam-bending",
+    "local:catalog:bias-facings"
+  ],
+  "records": [
+    {
+      "id": "local:catalog:neutral-theory-of-molecular-evolution",
+      "label": "Neutral theory of molecular evolution",
+      "sample_kind": "additional_targeted",
+      "original_card_version": 1,
+      "revised_card_version": 2,
+      "word_count": 44,
+      "changed_content_fields": [
+        "card",
+        "evidence.0.note",
+        "relations.0.note"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "The neutral theory of molecular evolution emphasizes mutations and genetic drift in explaining much genetic variation. If alternative versions have similar effects on reproductive success, chance can change their frequencies. This does not mean all variation is neutral or that natural selection is unimportant.",
+          "after": "The neutral theory of molecular evolution emphasizes mutation and genetic drift in explaining much genetic variation. When alternative gene versions do not differ in fitness, chance can change their frequencies. This does not mean all variation is neutral or that natural selection is unimportant.",
+          "status": "pass",
+          "assessment": "Pass: replacing similar reproductive effects with no fitness difference restores the source’s neutral condition. Mutation/drift emphasis and selection caveats remain supported."
+        },
+        {
+          "field": "evidence.0.note",
+          "before": "Berkeley states the theory’s emphasis on mutation/drift and explicitly rejects the three overgeneralizations about all variation and the importance of selection.",
+          "after": "Berkeley emphasizes mutation and drift and defines the illustrative neutral alternatives as having no difference in fitness. It explicitly rejects claims that all variation is neutral or selection is unimportant.",
+          "status": "pass",
+          "assessment": "Pass: revised evidence note accurately attributes the no-difference example and limits."
+        },
+        {
+          "field": "relations.0.note",
+          "before": "Neutral theory assigns a major explanatory role to genetic drift for variation with little fitness effect, rather than introducing a different drift mechanism.",
+          "after": "Neutral theory assigns a major explanatory role to genetic drift for variants with no fitness difference, rather than introducing a different drift mechanism.",
+          "status": "pass",
+          "assessment": "Pass: the changed relation rationale uses the same no-fitness-difference premise; genetic drift remains the same chance mechanism. Q486420 resolves to that baseline meaning."
+        }
+      ],
+      "card_claims_assessment": "Pass: replacing similar reproductive effects with no fitness difference restores the source’s neutral condition. Mutation/drift emphasis and selection caveats remain supported.",
+      "evidence_assessment": "Pass: revised evidence note accurately attributes the no-difference example and limits.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "Q486420",
+          "type": "related_to",
+          "assertion": "editorial",
+          "changed": true,
+          "judgment": "Pass: the changed relation rationale uses the same no-fitness-difference premise; genetic drift remains the same chance mechanism. Q486420 resolves to that baseline meaning.",
+          "source_ids": [
+            "bio-neutral",
+            "bio-drift"
+          ],
+          "target_resolution": {
+            "baseline_label": "Genetic drift",
+            "selection_label": "Genetic drift",
+            "selection_takeaway": "Distinguish chance differences in reproduction from selection favoring a useful trait."
+          },
+          "status": "pass"
+        }
+      ],
+      "source_check_ids": [
+        "bio-drift",
+        "bio-neutral"
+      ],
+      "recheck_status": "pass",
+      "resolves_initial_finding": null
+    },
+    {
+      "id": "local:catalog:e-coli-long-term-evolution-experiment",
+      "label": "E. coli Long-Term Evolution Experiment",
+      "sample_kind": "original_risk",
+      "original_card_version": 1,
+      "revised_card_version": 2,
+      "word_count": 46,
+      "changed_content_fields": [
+        "card",
+        "evidence.0.note"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "In the E. coli Long-Term Evolution Experiment, researchers replayed evolution using bacteria from different points in one population’s history. Later samples were more likely to evolve citrate use. The result showed how earlier genetic changes could enable a later innovation, making evolutionary history experimentally testable.",
+          "after": "In the E. coli Long-Term Evolution Experiment, researchers replayed evolution using bacteria from different points in one population’s history. Later samples were more likely to evolve aerobic citrate use. The result showed how earlier genetic changes could enable a later innovation, making evolutionary history experimentally testable.",
+          "status": "pass",
+          "assessment": "Pass: aerobic now qualifies citrate use. Replay sampling and prior potentiating mutations are supported by the primary abstract."
+        },
+        {
+          "field": "evidence.0.note",
+          "before": "The 2008 primary abstract reports replay experiments from different generations and a higher probability of citrate use in later clones, supporting historical contingency.",
+          "after": "The 2008 primary abstract reports replay experiments from different generations and a higher probability of aerobic citrate use in later clones, supporting historical contingency under the experiment’s oxic conditions.",
+          "status": "pass",
+          "assessment": "Pass: the note restores aerobic and oxic conditions wherever the innovation is named."
+        }
+      ],
+      "card_claims_assessment": "Pass: aerobic now qualifies citrate use. Replay sampling and prior potentiating mutations are supported by the primary abstract.",
+      "evidence_assessment": "Pass: the note restores aerobic and oxic conditions wherever the innovation is named.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "local:authored:000634",
+          "type": "related_to",
+          "assertion": "editorial",
+          "changed": false,
+          "judgment": "Pass: the unchanged Genetics relation concerns prior inherited changes enabling a later trait and remains supported. It does not omit or contradict the restored oxygen qualification.",
+          "source_ids": [
+            "bio-ltee",
+            "bio-genetics"
+          ],
+          "target_resolution": {
+            "baseline_label": "Genetics",
+            "selection_label": "Genetics",
+            "selection_takeaway": "Connect inherited DNA variation with environmental influences rather than treating genes as destiny."
+          },
+          "status": "pass"
+        }
+      ],
+      "source_check_ids": [
+        "bio-genetics",
+        "bio-ltee"
+      ],
+      "recheck_status": "pass",
+      "resolves_initial_finding": "003-risk-LTEE-qualification-01"
+    },
+    {
+      "id": "local:catalog:pulse-oximetry",
+      "label": "Pulse oximetry",
+      "sample_kind": "additional_targeted",
+      "original_card_version": 1,
+      "revised_card_version": 2,
+      "word_count": 43,
+      "changed_content_fields": [
+        "card",
+        "evidence.0.note"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "A pulse oximeter shines light through tissue to estimate blood oxygen saturation. A small sensor can provide this information without drawing arterial blood. The reading is an estimate, however, and factors including circulation, movement or skin pigmentation can affect its accuracy.",
+          "after": "A pulse oximeter shines light through tissue to estimate blood oxygen saturation. A small sensor can provide this information without drawing arterial blood. The reading is an estimate, however, and factors including poor circulation, cold skin or skin pigmentation can affect its accuracy.",
+          "status": "pass",
+          "assessment": "Pass: the revised examples match the cited limitations list; poor circulation, cold skin and pigmentation are supported."
+        },
+        {
+          "field": "evidence.0.note",
+          "before": "MedlinePlus describes the optical sensor and estimated oxygen saturation, and its limitations include circulation, movement and pigmentation.",
+          "after": "MedlinePlus describes the optical sensor and estimated oxygen saturation; its listed limitations include poor circulation, cold skin and darker skin pigmentation.",
+          "status": "pass",
+          "assessment": "Pass: the note no longer attributes movement to the cited list."
+        }
+      ],
+      "card_claims_assessment": "Pass: the revised examples match the cited limitations list; poor circulation, cold skin and pigmentation are supported.",
+      "evidence_assessment": "Pass: the note no longer attributes movement to the cited list.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:skin-pigmentation-and-pulse-oximetry",
+          "type": "related_to",
+          "assertion": "editorial",
+          "changed": false,
+          "judgment": "Pass: the unchanged related_to skin-pigmentation facet has an explicit premise in MedlinePlus and a matching pinned target.",
+          "source_ids": [
+            "health-pulse"
+          ],
+          "target_resolution": {
+            "baseline_label": "Skin pigmentation and pulse oximetry",
+            "selection_label": "Skin pigmentation and pulse oximetry",
+            "selection_takeaway": "Recognize skin pigmentation as one factor that can make an optical oxygen estimate inaccurate."
+          },
+          "status": "pass"
+        }
+      ],
+      "source_check_ids": [
+        "health-pulse"
+      ],
+      "recheck_status": "pass",
+      "resolves_initial_finding": null
+    },
+    {
+      "id": "local:catalog:systolic-blood-pressure-intervention-trial",
+      "label": "Systolic Blood Pressure Intervention Trial",
+      "sample_kind": "additional_targeted",
+      "original_card_version": 1,
+      "revised_card_version": 2,
+      "word_count": 44,
+      "changed_content_fields": [
+        "card",
+        "evidence.0.note"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "SPRINT compared systolic-pressure targets below 120 and 140 mmHg in higher-risk adults aged fifty or older without diabetes or prior stroke. Intensive treatment reduced cardiovascular events and deaths, but increased some adverse effects. Its results must be read together with those eligibility limits and tradeoffs.",
+          "after": "SPRINT compared systolic-pressure targets below 120 and 140 mmHg in higher-risk adults aged fifty or older with initial systolic pressure at least 130 mmHg, excluding diabetes and prior stroke. Intensive treatment reduced cardiovascular events and deaths but increased some adverse effects; eligibility limits matter.",
+          "status": "pass",
+          "assessment": "Pass: initial systolic pressure at least 130 mmHg is restored alongside age, higher cardiovascular risk and named exclusions. Both targets, benefits and adverse effects are supported."
+        },
+        {
+          "field": "evidence.0.note",
+          "before": "NHLBI states the two targets, age/risk criteria, exclusions, cardiovascular/death benefit and increased hypotension-related, electrolyte and kidney adverse effects.",
+          "after": "NHLBI states the two targets, age fifty or older, initial systolic pressure at least 130 mmHg, additional cardiovascular risk, diabetes/prior-stroke exclusions, cardiovascular/death benefit and increased hypotension-related, electrolyte and kidney adverse effects.",
+          "status": "pass",
+          "assessment": "Pass: the updated note faithfully covers the population and outcome boundaries shown on NHLBI."
+        }
+      ],
+      "card_claims_assessment": "Pass: initial systolic pressure at least 130 mmHg is restored alongside age, higher cardiovascular risk and named exclusions. Both targets, benefits and adverse effects are supported.",
+      "evidence_assessment": "Pass: the updated note faithfully covers the population and outcome boundaries shown on NHLBI.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:randomized-controlled-trial",
+          "type": "related_to",
+          "assertion": "editorial",
+          "changed": false,
+          "judgment": "Verification gap: the unchanged note says SPRINT was randomized. NHLBI describes two treatment protocols and links primary papers, but contains no explicit randomization statement; the generic RCT reference is insufficient for this named-trial premise. No evidence that the factual statement is false.",
+          "source_ids": [
+            "health-sprint",
+            "health-rct"
+          ],
+          "target_resolution": {
+            "baseline_label": null,
+            "selection_label": "Randomized controlled trial",
+            "selection_takeaway": "Use chance-based assignment and a comparison group to assess an intervention’s effects."
+          },
+          "status": "verification_gap"
+        }
+      ],
+      "source_check_ids": [
+        "health-rct",
+        "health-sprint"
+      ],
+      "recheck_status": "source_premise_gap",
+      "resolves_initial_finding": null
+    },
+    {
+      "id": "local:catalog:marine-heatwave",
+      "label": "Marine heatwave",
+      "sample_kind": "additional_targeted",
+      "original_card_version": 1,
+      "revised_card_version": 2,
+      "word_count": 47,
+      "changed_content_fields": [
+        "card"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "A marine heatwave is unusually warm ocean water measured against the normal conditions for that place and season. A common definition requires temperatures above the seasonal ninetieth percentile for at least five days. The comparison is local and time-specific, not one temperature threshold for every sea.",
+          "after": "A marine heatwave is unusually warm ocean water measured against the normal conditions for that place and season. A common definition requires temperatures above the seasonal ninetieth percentile for at least five consecutive days. The comparison is local and time-specific, not one temperature threshold for every sea.",
+          "status": "pass",
+          "assessment": "Pass: consecutive preserves the uninterrupted-duration requirement; the local seasonal threshold and common-definition qualification are supported."
+        }
+      ],
+      "card_claims_assessment": "Pass: consecutive preserves the uninterrupted-duration requirement; the local seasonal threshold and common-definition qualification are supported.",
+      "evidence_assessment": "Unchanged note remains accurate.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:coral-bleaching",
+          "type": "related_to",
+          "assertion": "editorial",
+          "changed": false,
+          "judgment": "Pass: unusual ocean warmth is a documented coral stressor. The definition and biological response remain distinct.",
+          "source_ids": [
+            "earth-heatwave",
+            "bio-coral"
+          ],
+          "target_resolution": {
+            "baseline_label": null,
+            "selection_label": "Coral bleaching",
+            "selection_takeaway": "Distinguish stress-driven loss of symbiotic algae from immediate coral death."
+          },
+          "status": "pass"
+        }
+      ],
+      "source_check_ids": [
+        "bio-coral",
+        "earth-heatwave"
+      ],
+      "recheck_status": "pass",
+      "resolves_initial_finding": null
+    },
+    {
+      "id": "local:catalog:temperature-inversion",
+      "label": "Temperature inversion",
+      "sample_kind": "additional_targeted",
+      "original_card_version": 1,
+      "revised_card_version": 2,
+      "word_count": 40,
+      "changed_content_fields": [
+        "card",
+        "evidence.0.note"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "During a temperature inversion, warmer air lies above cooler air near the ground. This stable arrangement can suppress mixing and trap pollutants in the lower atmosphere. Inversions may form through nighttime surface cooling or the arrival of warmer air above an existing cool layer.",
+          "after": "A temperature inversion occurs where air becomes warmer with height. Near the ground, warm air above cooler air can suppress mixing and trap pollution. Such inversions may form through nighttime surface cooling or warm-air advection above an existing cool layer.",
+          "status": "pass",
+          "assessment": "Pass: definition now covers any increasing-temperature-with-height layer; near-ground formation and pollution effects are correctly presented as examples."
+        },
+        {
+          "field": "evidence.0.note",
+          "before": "NWS defines reversed temperature increase with height, describes nighttime cooling/warm-air advection and explains the pollution-trapping lid effect.",
+          "after": "NWS defines an inversion as air temperature increasing with height. Its near-ground examples describe nighttime surface cooling or warm-air advection, with a stable lid that can trap pollution.",
+          "status": "pass",
+          "assessment": "Pass: updated note distinguishes general definition from near-ground examples."
+        }
+      ],
+      "card_claims_assessment": "Pass: definition now covers any increasing-temperature-with-height layer; near-ground formation and pollution effects are correctly presented as examples.",
+      "evidence_assessment": "Pass: updated note distinguishes general definition from near-ground examples.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:marine-stratus",
+          "type": "related_to",
+          "assertion": "editorial",
+          "changed": false,
+          "judgment": "Pass: stable marine inversions limit vertical mixing and cloud dissipation, supporting the unchanged specific comparison with marine stratus.",
+          "source_ids": [
+            "earth-inversion",
+            "earth-stratus"
+          ],
+          "target_resolution": {
+            "baseline_label": null,
+            "selection_label": "Marine stratus",
+            "selection_takeaway": "Explain coastal low-cloud sheets through ocean formation, inland advection and daytime evaporation."
+          },
+          "status": "pass"
+        }
+      ],
+      "source_check_ids": [
+        "earth-inversion",
+        "earth-stratus"
+      ],
+      "recheck_status": "pass",
+      "resolves_initial_finding": null
+    },
+    {
+      "id": "local:catalog:argo",
+      "label": "Argo",
+      "sample_kind": "additional_targeted",
+      "original_card_version": 1,
+      "revised_card_version": 2,
+      "word_count": 46,
+      "changed_content_fields": [
+        "card",
+        "evidence.0.note"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "Argo floats repeatedly move through the ocean to measure conditions such as temperature and salinity. Pumping oil into an external bladder changes volume without changing mass, allowing a float to rise or sink. After profiling, it surfaces to transmit data, then begins another cycle.",
+          "after": "Argo floats repeatedly move through the ocean to measure conditions such as temperature and salinity. Pumping oil into an external bladder changes volume without changing mass, allowing a float to rise or sink. On a typical profiling cycle, it surfaces to transmit data, then descends again.",
+          "status": "pass",
+          "assessment": "Pass: typical profiling cycle avoids treating every operating mission as identical; temperature/salinity observation, oil-bladder buoyancy and surface transmission are supported."
+        },
+        {
+          "field": "evidence.0.note",
+          "before": "The Argo program describes profiling missions, CTD measurements, buoyancy changes through an oil bladder and satellite communication at the surface.",
+          "after": "The Argo program describes its standard profiling mission, CTD measurements, buoyancy changes through an oil bladder and satellite communication at the surface. The card marks this as a typical cycle.",
+          "status": "pass",
+          "assessment": "Pass: note accurately marks the standard mission as typical."
+        }
+      ],
+      "card_claims_assessment": "Pass: typical profiling cycle avoids treating every operating mission as identical; temperature/salinity observation, oil-bladder buoyancy and surface transmission are supported.",
+      "evidence_assessment": "Pass: note accurately marks the standard mission as typical.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "local:authored:000631",
+          "type": "application_of",
+          "assertion": "editorial",
+          "changed": false,
+          "judgment": "Pass: application_of Oceanography is justified by a named system making repeated physical ocean observations; target broad-field meaning is verified.",
+          "source_ids": [
+            "earth-argo",
+            "earth-oceanography"
+          ],
+          "target_resolution": {
+            "baseline_label": "Oceanography",
+            "selection_label": "Oceanography",
+            "selection_takeaway": "Connect ocean chemistry, life, seafloor history and water movement as interacting research areas."
+          },
+          "status": "pass"
+        }
+      ],
+      "source_check_ids": [
+        "earth-argo",
+        "earth-oceanography"
+      ],
+      "recheck_status": "pass",
+      "resolves_initial_finding": null
+    },
+    {
+      "id": "local:catalog:artesian-aquifer",
+      "label": "Artesian aquifer",
+      "sample_kind": "additional_targeted",
+      "original_card_version": 2,
+      "revised_card_version": 3,
+      "word_count": 46,
+      "changed_content_fields": [
+        "card"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "An artesian aquifer holds groundwater under pressure beneath relatively impermeable layers. A well tapping it can rise above the aquifer’s top, but water flows out at the surface only if the pressure level is high enough. Depth alone does not make a well artesian.",
+          "after": "An artesian aquifer holds groundwater under pressure beneath relatively impermeable layers. Water in a well tapping it can rise above the aquifer’s top, but water flows out at the surface only if the pressure level is high enough. Depth alone does not make a well artesian.",
+          "status": "pass",
+          "assessment": "Pass: changing the grammatical subject to water removes the claim that the physical well rises. Pressure, aquifer-top rise, surface-flow condition and depth caveat are supported."
+        }
+      ],
+      "card_claims_assessment": "Pass: changing the grammatical subject to water removes the claim that the physical well rises. Pressure, aquifer-top rise, surface-flow condition and depth caveat are supported.",
+      "evidence_assessment": "Unchanged note remains accurate.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:managed-aquifer-recharge",
+          "type": "related_to",
+          "assertion": "editorial",
+          "changed": false,
+          "judgment": "Pass: the relation compares groundwater pressure with deliberate recharge; it explicitly avoids misclassifying the Sand Hollow example as artesian.",
+          "source_ids": [
+            "earth-artesian",
+            "earth-recharge"
+          ],
+          "target_resolution": {
+            "baseline_label": null,
+            "selection_label": "Managed aquifer recharge",
+            "selection_takeaway": "Distinguish deliberate underground replenishment from simply storing surface water."
+          },
+          "status": "pass"
+        }
+      ],
+      "source_check_ids": [
+        "earth-artesian",
+        "earth-recharge"
+      ],
+      "recheck_status": "pass",
+      "resolves_initial_finding": null
+    },
+    {
+      "id": "local:catalog:rootstock-dwarfing",
+      "label": "Rootstock dwarfing",
+      "sample_kind": "additional_targeted",
+      "original_card_version": 1,
+      "revised_card_version": 2,
+      "word_count": 44,
+      "changed_content_fields": [
+        "card"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "A dwarfing rootstock can keep an apple tree smaller even when its scion belongs to a familiar full-size fruit variety. The two parts have different jobs. If a buried scion forms its own roots, the intended dwarfing influence can be lost, changing the tree’s eventual growth.",
+          "after": "A dwarfing rootstock can limit an apple tree’s size while its scion determines the fruit variety. If a buried scion forms its own roots, the rootstock’s dwarfing influence can be lost. Tree size therefore depends partly on which root system supports the grafted shoot.",
+          "status": "pass",
+          "assessment": "Pass: scion fruit-variety role and rootstock size influence are correctly separated; scion rooting and loss of dwarfing are supported."
+        }
+      ],
+      "card_claims_assessment": "Pass: scion fruit-variety role and rootstock size influence are correctly separated; scion rooting and loss of dwarfing are supported.",
+      "evidence_assessment": "Unchanged note supports both source passages.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:horticultural-grafting",
+          "type": "facet_of",
+          "assertion": "editorial",
+          "changed": false,
+          "judgment": "Pass: facet_of Horticultural grafting expresses a specific consequence of choosing the root system, consistent with the pinned scion/rootstock combination.",
+          "source_ids": [
+            "food-apples"
+          ],
+          "target_resolution": {
+            "baseline_label": null,
+            "selection_label": "Horticultural grafting",
+            "selection_takeaway": "Join a selected shoot variety to a different root system so each contributes different traits."
+          },
+          "status": "pass"
+        }
+      ],
+      "source_check_ids": [
+        "food-apples"
+      ],
+      "recheck_status": "pass",
+      "resolves_initial_finding": null
+    },
+    {
+      "id": "local:catalog:variable-rate-irrigation",
+      "label": "Variable-rate irrigation",
+      "sample_kind": "original_random",
+      "original_card_version": 1,
+      "revised_card_version": 2,
+      "word_count": 45,
+      "changed_content_fields": [
+        "card",
+        "evidence.0.note"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "Variable-rate irrigation changes water delivery across different parts of a field. Control zones and prescription maps can account for meaningful differences in soil or crop demand. The technology answers where and how much to apply; its advantage is limited when a field has little relevant variation.",
+          "after": "Variable-rate irrigation changes water delivery across a field using control zones and prescription maps. Those maps specify irrigation amounts, but soil and crop information must guide the prescription. The technology applies the planned pattern; it does not independently determine how much water a crop needs.",
+          "status": "pass",
+          "assessment": "Pass: the revision correctly distinguishes spatial hardware/application from agronomic determination of water requirements. Zones and prescription maps are explicitly described."
+        },
+        {
+          "field": "evidence.0.note",
+          "before": "UMN describes zone control, prescription maps and reduced benefit in sufficiently uniform fields.",
+          "after": "UMN describes control zones and prescription maps, then explicitly distinguishes spatial application from determining crop water need. Agronomic information and irrigation-scheduling tools are required to assign appropriate amounts.",
+          "status": "pass",
+          "assessment": "Pass: the updated note attributes the technology/need distinction and scheduling requirements to actual passages."
+        }
+      ],
+      "card_claims_assessment": "Pass: the revision correctly distinguishes spatial hardware/application from agronomic determination of water requirements. Zones and prescription maps are explicitly described.",
+      "evidence_assessment": "Pass: the updated note attributes the technology/need distinction and scheduling requirements to actual passages.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "Q11453",
+          "type": "facet_of",
+          "assertion": "editorial",
+          "changed": false,
+          "judgment": "Pass: unchanged facet_of Irrigation remains a specific spatial control approach, with no independent agronomic-intelligence claim.",
+          "source_ids": [
+            "food-vri"
+          ],
+          "target_resolution": {
+            "baseline_label": "Irrigation",
+            "selection_label": null,
+            "selection_takeaway": null
+          },
+          "status": "pass"
+        }
+      ],
+      "source_check_ids": [
+        "food-vri"
+      ],
+      "recheck_status": "pass",
+      "resolves_initial_finding": null
+    },
+    {
+      "id": "local:catalog:wood-sorption-hysteresis",
+      "label": "Wood sorption hysteresis",
+      "sample_kind": "additional_targeted",
+      "original_card_version": 1,
+      "revised_card_version": 2,
+      "word_count": 45,
+      "changed_content_fields": [
+        "card",
+        "evidence.0.note"
+      ],
+      "changed_fields_review": [
+        {
+          "field": "card",
+          "before": "Wood’s moisture content can depend on whether it approached a humidity level by drying or by absorbing water. At the same relative humidity, the drying path can retain more moisture. This sorption hysteresis means that present air conditions alone do not always describe the material’s state completely.",
+          "after": "Wood’s equilibrium moisture content can depend on whether it reached a humidity level by drying or by absorbing water. At the same temperature and relative humidity, the drying path can retain more moisture. This sorption hysteresis makes moisture history relevant even after equilibrium is reached.",
+          "status": "pass",
+          "assessment": "Pass: equilibrium and equal temperature/RH now delimit the comparison; higher moisture on desorption and path dependence at equilibrium are explicitly supported."
+        },
+        {
+          "field": "evidence.0.note",
+          "before": "USDA’s sorption-hysteresis section states history dependence and higher EMC on desorption than absorption at given relative humidity.",
+          "after": "USDA describes sorption isotherms at constant temperature and history-dependent equilibrium moisture content, with higher EMC on desorption than absorption at the same relative humidity.",
+          "status": "pass",
+          "assessment": "Pass: the updated note correctly invokes isotherms and history-dependent EMC."
+        }
+      ],
+      "card_claims_assessment": "Pass: equilibrium and equal temperature/RH now delimit the comparison; higher moisture on desorption and path dependence at equilibrium are explicitly supported.",
+      "evidence_assessment": "Pass: the updated note correctly invokes isotherms and history-dependent EMC.",
+      "scope_and_identity_assessment": "Scope, identity, aliases and learning takeaway are unchanged and remain consistent with the clarified mechanism or named case.",
+      "relation_assessments": [
+        {
+          "relation_index": 0,
+          "target_id": "local:catalog:equilibrium-moisture-content-of-wood",
+          "type": "facet_of",
+          "assertion": "editorial",
+          "changed": false,
+          "judgment": "Pass: unchanged facet_of wood equilibrium moisture content is the specific path-dependent aspect of that relation, supported by adjacent definitions in the same handbook.",
+          "source_ids": [
+            "home-emc"
+          ],
+          "target_resolution": {
+            "baseline_label": null,
+            "selection_label": "Equilibrium moisture content of wood",
+            "selection_takeaway": "Relate a wood component’s stable moisture level to its surrounding air rather than one universally dry state."
+          },
+          "status": "pass"
+        }
+      ],
+      "source_check_ids": [
+        "home-emc"
+      ],
+      "recheck_status": "pass",
+      "resolves_initial_finding": null
+    }
+  ],
+  "source_checks": [
+    {
+      "source_id": "bio-neutral",
+      "url": "https://evolution.berkeley.edu/neutral-theory-the-relative-importance-of-drift-and-selection/",
+      "locator_read": "Main discussion, lines 61–71",
+      "assessment": "No-fitness-difference condition, mutation/drift emphasis and rejection of all-neutral or no-selection interpretations are explicit.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1491view0",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "bio-neutral",
+        "inspection_artifact": "source-responses/012-evolution-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Main explanation and explicit qualifications",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:02:49.299511+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "UC Berkeley Understanding Evolution: Neutral theory",
+        "url": "https://evolution.berkeley.edu/neutral-theory-the-relative-importance-of-drift-and-selection/"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "bio-drift",
+      "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/genetic-drift/",
+      "locator_read": "Main explanation, lines 63–66",
+      "assessment": "Chance differences in descendants alter gene frequencies independently of advantage, grounding the neutral-theory editorial bridge.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1491view1",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": "2020-06",
+        "id": "bio-drift",
+        "inspection_artifact": "source-responses/008-biology-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Main explanation",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:01:49.922399+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "UC Berkeley Understanding Evolution: Genetic drift",
+        "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/genetic-drift/"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "bio-ltee",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18524956/",
+      "locator_read": "Primary abstract lines 241–245 and Figure 1 caption line 261; PMID 18524956; DOI 10.1073/pnas.0803151105",
+      "assessment": "Oxic experimental conditions and greater Cit+ emergence in later archived clones support the corrected aerobic language and the unchanged genetics bridge.",
+      "read_mode": "cached_primary_snapshot_reread",
+      "web_response_ref": "research/workers/research-batch-003/source-responses/017-evolution-inspections.json",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "bio-ltee",
+        "inspection_artifact": "source-responses/017-evolution-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Abstract and Figure 1 caption",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:07:01.294458+00:00",
+        "revision": "doi:10.1073/pnas.0803151105",
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "Blount, Borland and Lenski (2008): Historical contingency and the evolution of a key innovation in an experimental population of Escherichia coli",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18524956/"
+      },
+      "observed_revision": null,
+      "access_limit": "No fresh attempt in this recheck: the two unsuccessful PubMed attempts in the initial audit already consumed the failing-URL bound. Actual captured abstract and figure caption were reread, not author notes.",
+      "capture_sha256": "b46d1498983bf819ef9fe57ab828cb7bdfd74c507e727835a5d29c4016eb782e"
+    },
+    {
+      "source_id": "bio-genetics",
+      "url": "https://www.genome.gov/genetics-glossary/Genetics",
+      "locator_read": "Definition and Narration, lines 16–19",
+      "assessment": "Inherited variation and its influences support the general Genetics target.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1499view0",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": "2026-10-08",
+        "id": "bio-genetics",
+        "inspection_artifact": "source-responses/005-genetics-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Definition and Narration",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:00:22.636744+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "NHGRI: Genetics",
+        "url": "https://www.genome.gov/genetics-glossary/Genetics"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "health-pulse",
+      "url": "https://medlineplus.gov/lab-tests/pulse-oximetry/",
+      "locator_read": "Optical sensor, lines 65–69; preparation limitations, lines 73–78",
+      "assessment": "Poor circulation, cold skin and darker pigmentation appear in the actual list. The corrected note no longer attributes movement to this list.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1491view2",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "health-pulse",
+        "inspection_artifact": "source-responses/026-diagnostics-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "What happens?; Preparation; Is there anything else?",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:11:31.983959+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "MedlinePlus: Pulse Oximetry",
+        "url": "https://medlineplus.gov/lab-tests/pulse-oximetry/"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "health-sprint",
+      "url": "https://www.nhlbi.nih.gov/science/systolic-blood-pressure-intervention-trial-sprint-study",
+      "locator_read": "Key findings, lines 101–141; study conduct, lines 163–170",
+      "assessment": "Population, initial pressure, targets, exclusions, event/death benefits and harms are supported. This page does not explicitly state random assignment; that detail in the unchanged relation remains passage-verification-limited.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1491view3; turn1501view2; turn1502view0",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "health-sprint",
+        "inspection_artifact": "source-responses/026-diagnostics-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Why was SPRINT important?; Key findings; Side effects",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:11:31.983959+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "NHLBI: Systolic Blood Pressure Intervention Trial",
+        "url": "https://www.nhlbi.nih.gov/science/systolic-blood-pressure-intervention-trial-sprint-study"
+      },
+      "observed_revision": null,
+      "access_limit": "Primary-report click failed; publisher returned 403; PMC returned a CAPTCHA. No bypass or further alternate request was attempted. Primary-paper search discovery was not admitted as passage evidence."
+    },
+    {
+      "source_id": "health-rct",
+      "url": "https://www.nccih.nih.gov/health/placebo-effect",
+      "locator_read": "Opening definition, line 16",
+      "assessment": "Explains random allocation and intervention/control comparison generically, but cannot by itself establish that SPRINT used random allocation.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1499view3",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "health-rct",
+        "inspection_artifact": "source-responses/031-health-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Opening explanation of randomized placebo-controlled trials",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:13:34.546776+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "NCCIH: Placebo Effect",
+        "url": "https://www.nccih.nih.gov/health/placebo-effect"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "earth-heatwave",
+      "url": "https://www.ncei.noaa.gov/news/data-behind-our-warming-oceans",
+      "locator_read": "What are marine heat waves?, lines 11–15; published 2023-08-22",
+      "assessment": "The source requires five or more days in a row above a seasonally defined ninetieth percentile, supporting consecutive in the revision.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1498view0",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "earth-heatwave",
+        "inspection_artifact": "source-responses/041-atmosphere-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "What are marine heat waves?",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:20:31.862576+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "NOAA NCEI: The Data Behind Our Warming Oceans",
+        "url": "https://www.ncei.noaa.gov/news/data-behind-our-warming-oceans"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "bio-coral",
+      "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html",
+      "locator_read": "Main explanation, lines 1–6",
+      "assessment": "Ocean warmth can stress corals and cause loss of algae; bleaching remains distinct from the temperature-event definition.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1499view1",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": "2026-09-23",
+        "id": "bio-coral",
+        "inspection_artifact": "source-responses/009-evolution-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Main explanation and infographic transcript",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:02:16.602897+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "NOAA: What is coral bleaching?",
+        "url": "https://oceanservice.noaa.gov/facts/coral_bleach.html"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "earth-inversion",
+      "url": "https://www.weather.gov/lmk/inversion",
+      "locator_read": "Definition, development and air quality, lines 155–165",
+      "assessment": "Temperature increases with height in an inversion generally; near-surface examples involve advected warmth or nighttime cooling and a pollution-trapping lid.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1498view1",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "earth-inversion",
+        "inspection_artifact": "source-responses/041-atmosphere-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Definition; How inversions develop; Air quality",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:20:31.862576+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "National Weather Service: What is a temperature inversion?",
+        "url": "https://www.weather.gov/lmk/inversion"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "earth-stratus",
+      "url": "https://www.weather.gov/source/zhu/ZHU_Training_Page/clouds/stratus_form_dissipate/Marine_Layer.html",
+      "locator_read": "The Inversion Layer, lines 37–41",
+      "assessment": "Stable inversions limit vertical mixing and influence marine cloud persistence. The bridge does not make every cloud an inversion.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1499view4",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "earth-stratus",
+        "inspection_artifact": "source-responses/046-environment-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "What are Marine Layer Clouds?; Advection; Dissipation",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:22:56.661156+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "National Weather Service: Marine Layer Information",
+        "url": "https://www.weather.gov/source/zhu/ZHU_Training_Page/clouds/stratus_form_dissipate/Marine_Layer.html"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "earth-argo",
+      "url": "https://argo.ucsd.edu/how-do-floats-work/",
+      "locator_read": "Standard mission and instrumentation, lines 48–65",
+      "assessment": "Standard cycle, CTD, surface satellite transmission and oil-bladder buoyancy support the revised typical-cycle qualification.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1494view2",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "earth-argo",
+        "inspection_artifact": "source-responses/041-atmosphere-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "What does an Argo float do?; External bladder",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:20:31.862576+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "Argo Program/Scripps: How do floats work?",
+        "url": "https://argo.ucsd.edu/how-do-floats-work/"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "earth-oceanography",
+      "url": "https://oceanservice.noaa.gov/facts/oceanographer.html",
+      "locator_read": "Disciplines and research methods, lines 10–14",
+      "assessment": "Ocean physical/chemical observations and field methods establish the observational application target.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1499view2",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "earth-oceanography",
+        "inspection_artifact": "source-responses/039-ocean-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Descriptions of four oceanographic disciplines",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:19:40.321649+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "NOAA: What does an oceanographer do?",
+        "url": "https://oceanservice.noaa.gov/facts/oceanographer.html"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "earth-artesian",
+      "url": "https://www.usgs.gov/water-science-school/science/artesian-water-and-artesian-wells",
+      "locator_read": "Artesian definition and aquifer example, lines 47–61",
+      "assessment": "It is the confined water that rises; flowing wells require piezometric level above the outlet. Depth alone is insufficient.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1494view3",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "earth-artesian",
+        "inspection_artifact": "source-responses/043-environment-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Artesian Water; Example of an aquifer system",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:21:15.291358+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "USGS: Artesian Water and Artesian Wells",
+        "url": "https://www.usgs.gov/water-science-school/science/artesian-water-and-artesian-wells"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "earth-recharge",
+      "url": "https://www.usgs.gov/centers/utah-water-science-center/science/managed-aquifer-recharge",
+      "locator_read": "Overview, lines 188–190",
+      "assessment": "Sand Hollow deliberately recharges sandstone by infiltration from a surface reservoir. The source is not used to assert that Sand Hollow is artesian.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1501view1",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": "2018-06-20",
+        "id": "earth-recharge",
+        "inspection_artifact": "source-responses/046-environment-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Sand Hollow case, infiltration rates and monitoring",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:22:56.661156+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "USGS: Managed Aquifer Recharge",
+        "url": "https://www.usgs.gov/centers/utah-water-science-center/science/managed-aquifer-recharge"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "food-apples",
+      "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-apples",
+      "locator_read": "Grafted tree/rootstock, lines 277–296; planting, lines 416–417",
+      "assessment": "Scion determines fruit type, rootstock strongly affects size, and scion rooting can defeat the dwarfing influence.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1498view3; turn1495view0",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "food-apples",
+        "inspection_artifact": "source-responses/051-cultivation-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Rootstocks; Planting, graft-union height",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:28:55.891344+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "University of Minnesota Extension: Growing apples",
+        "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/growing-apples"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "food-vri",
+      "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/irrigation/variable-rate-irrigation",
+      "locator_read": "Zone-control and field prescriptions, lines 281–311",
+      "assessment": "Maps specify application amounts; soil/crop information and irrigation scheduling must determine those prescriptions. The hardware does not independently establish crop demand.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1495view1; turn1502view2",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "food-vri",
+        "inspection_artifact": "source-responses/066-agtech-inspections.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Benefits; Zone control; Prescription maps",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:39:29.206849+00:00",
+        "revision": null,
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "University of Minnesota Extension: Variable rate irrigation",
+        "url": "https://extension.umn.edu/natural-resources/conservation/agricultural-soil-and-water/irrigation/variable-rate-irrigation"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    },
+    {
+      "source_id": "home-emc",
+      "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf",
+      "locator_read": "Equilibrium Moisture Content, printed p.4–3 lines 259–266; Sorption Hysteresis, printed pp.4–4 to 4–5 lines 457–505",
+      "assessment": "Equilibrium and constant temperature are explicit; desorption gives higher EMC than absorption at the same RH, with magnitude dependent on species and conditions.",
+      "read_mode": "fresh_public_web_retrieval",
+      "web_response_ref": "turn1501view0; turn1502view1",
+      "observed_at": "2026-10-08T22:15:55.565888+00:00",
+      "time_basis": "Auditor record time, not exact origin-server acquisition time.",
+      "frozen_source_record": {
+        "displayed_update_date": null,
+        "id": "home-emc",
+        "inspection_artifact": "source-responses/076-materials-passages.json",
+        "inspection_status": "passage_inspected",
+        "locator": "Equilibrium Moisture Content, p. 4–3; Sorption Hysteresis, pp. 4–4 to 4–5",
+        "retrieval_date": "2026-10-08",
+        "retrieved_at": "2026-10-08T19:50:28.334178+00:00",
+        "revision": "FPL-GTR-282, 2021, Chapter 4",
+        "timestamp_basis": "Evidence capture-file timestamp immediately after completed web-tool response; exact server acquisition time unavailable",
+        "title": "USDA Wood Handbook, Chapter 4: Moisture Relations and Physical Properties of Wood",
+        "url": "https://research.fs.usda.gov/download/treesearch/62243.pdf"
+      },
+      "observed_revision": null,
+      "access_limit": null
+    }
+  ],
+  "new_failures": [
+    {
+      "finding_id": "003-recheck-SPRINT-randomization-evidence-01",
+      "id": "local:catalog:systolic-blood-pressure-intervention-trial",
+      "sample_kind": "additional_targeted",
+      "field": "relations[0].note; relations[0].source_ids",
+      "severity": "moderate_evidence_verification_gap",
+      "factual_error_established": false,
+      "finding": "The randomized premise is credible but not explicitly stated in the inspected attached NHLBI or generic RCT passages. The directly linked primary report could not be retrieved within bounded attempts.",
+      "suggested_correction": "Supply an actual captured or successfully inspected primary methods/abstract passage documenting SPRINT random allocation, record it in the evidence/relationship bundle, or revise the relationship rationale to the fully supported target-comparison aspect.",
+      "source_ids": [
+        "health-sprint",
+        "health-rct"
+      ],
+      "source_passages": "NHLBI How was the SPRINT study conducted?, lines 163–170; NCCIH randomized placebo-controlled definition, line 16.",
+      "disposition": "Open in this frozen recheck; coordinator will obtain a separately versioned relation removal."
+    }
+  ],
+  "last_updated_at": "2026-10-08T22:15:55.565888+00:00",
+  "independent": true,
+  "reviewer_did_not_author_cards": true,
+  "baseline_sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9",
+  "selection_manifest_sha256": "d6f16948056fb6552b7eba52409ef879e40a6477c58008e1b01025a7a450acab",
+  "canonical_identical": true,
+  "initial_audit_preserved": true,
+  "frozen_sample_preserved": true,
+  "source_records_identical_to_frozen_candidate": true,
+  "identity_sets_unchanged": true,
+  "access_limits": {
+    "failing_url_bound": 2,
+    "alternate_reference_bound": 3,
+    "new_failed_routes": [
+      {
+        "route": "NHLBI source click link 59 to its primary results report",
+        "web_response_ref": "turn1503view0",
+        "attempts": 1,
+        "result": "Internal Error; failed click did not expose destination URL in its response."
+      },
+      {
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1511939",
+        "web_response_ref": "turn1508view0",
+        "attempts": 1,
+        "result": "403 Forbidden; no retry or bypass."
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4689591/",
+        "web_response_ref": "turn1510view0",
+        "attempts": 1,
+        "result": "reCAPTCHA; not completed or bypassed."
+      }
+    ],
+    "reused_prior_failure_limit": {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18524956/",
+      "initial_audit_failed_attempts": 2,
+      "new_attempts": 0
+    },
+    "search_discovery_only": [
+      {
+        "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa1511939",
+        "note": "Search returned a methods passage asserting random assignment, but this has not been admitted as independent opened-source evidence."
+      }
+    ],
+    "no_permission_denial_or_captcha_bypass": true
+  },
+  "original_sample_summary": {
+    "random_new": {
+      "original_denominator": 20,
+      "initial_failures": 0,
+      "changed_sample_cards_rechecked": 1,
+      "remaining_known_failures": 0
+    },
+    "risk_selected": {
+      "original_denominator": 20,
+      "initial_failures": 1,
+      "changed_sample_cards_rechecked": 1,
+      "resolved_initial_failures": 1,
+      "remaining_known_failures": 0
+    },
+    "additional_targeted": {
+      "cards_rechecked": 9,
+      "passed": 8,
+      "source_premise_verification_gaps": 1
+    },
+    "pooling_permitted": false
+  },
+  "change_summary": {
+    "changed_ids": 11,
+    "changed_card_fields": 11,
+    "changed_evidence_notes": 8,
+    "changed_relation_rationales": 1,
+    "all_changed_content_fields_supported": true,
+    "all_attached_relations_checked": 11,
+    "unchanged_relation_source_gaps": 1,
+    "added_ids": [],
+    "removed_ids": [],
+    "source_record_changes": 0,
+    "identity_changes": 0
+  },
+  "limitations": [
+    "The original 20 random and 20 risk denominators and initial findings are preserved, not redefined by this correction check.",
+    "Nine additional targeted cards are independently assessed but are not an extension of the random sample.",
+    "Fresh public-web retrieval can reflect a crawler snapshot and does not establish origin-server revision or historical author browsing.",
+    "The LTEE primary abstract was reread from the actual preserved capture because initial-audit failed-URL attempts were already exhausted.",
+    "The SPRINT randomized premise remains passage-verification-limited after three bounded primary-report routes; the revised card and its evidence note are supported.",
+    "No candidate, original audit, frozen sample or author artifact was modified by this checker."
+  ],
+  "completed_at": "2026-10-08T22:16:44.721424+00:00",
+  "frozen_at": "2026-10-08T22:16:44.721424+00:00",
+  "required_next_action": "Remove the unsupported SPRINT relation as separately versioned author correction, explicitly record the missing defensible link, and independently recheck the removal. The supported card and identity can remain.",
+  "effort": {
+    "elapsed_seconds": 371.950491,
+    "platform_reported_tokens": null,
+    "platform_reported_cost": null,
+    "usage_availability": "Not exposed to this checker."
+  },
+  "validation": {
+    "passed": 23,
+    "failed": 0,
+    "checks": [
+      {
+        "check": "Exact revised candidate hash",
+        "status": "pass"
+      },
+      {
+        "check": "Canonical bytes identical",
+        "status": "pass"
+      },
+      {
+        "check": "Initial audit preserved",
+        "status": "pass"
+      },
+      {
+        "check": "Original candidate and author candidate preserved",
+        "status": "pass"
+      },
+      {
+        "check": "Original random frame reproduced",
+        "status": "pass"
+      },
+      {
+        "check": "Nine additional cards remain outside original sample",
+        "status": "pass"
+      },
+      {
+        "check": "Exactly 11 changed identities and unchanged source records",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:neutral-theory-of-molecular-evolution",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:e-coli-long-term-evolution-experiment",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:pulse-oximetry",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:systolic-blood-pressure-intervention-trial",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:marine-heatwave",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:temperature-inversion",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:argo",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:artesian-aquifer",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:rootstock-dwarfing",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:variable-rate-irrigation",
+        "status": "pass"
+      },
+      {
+        "check": "Version and complete content coverage local:catalog:wood-sorption-hysteresis",
+        "status": "pass"
+      },
+      {
+        "check": "All 20 content changes have explicit pass judgments",
+        "status": "pass"
+      },
+      {
+        "check": "18 attached references assessed",
+        "status": "pass"
+      },
+      {
+        "check": "SPRINT gap preserved and correctly separated",
+        "status": "pass"
+      },
+      {
+        "check": "Original risk finding resolved without erasing initial result",
+        "status": "pass"
+      },
+      {
+        "check": "Frozen target inputs remain pinned",
+        "status": "pass"
+      }
+    ]
+  },
+  "source_summary": {
+    "attached_source_count": 18,
+    "fresh_public_web_sources": 17,
+    "cached_primary_sources": 1,
+    "additional_primary_source_attempts": 3,
+    "additional_primary_passages_admitted": 0
+  }
+}

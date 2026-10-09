@@ -1,0 +1,98 @@
+{
+  "status": "passed",
+  "independent_source_audit": "pending",
+  "candidate_sha256": "22a1080ca727c718605ac21aa8305b0d4614820b52e1d1d44481e4ea0c89b403",
+  "local_checked_at": "2026-10-09T02:53:46.167870+00:00",
+  "global_selection_manifest_sha256": "5e15d76acee1c29775a9b7b003f7d01447e494974da200c9c15afa3a25f5df9d",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "checks": {
+    "stock_schema": "passed",
+    "approved_identities_scopes_versions": "passed",
+    "word_counts": "passed",
+    "coverage": "passed",
+    "source_and_target_resolution": "passed",
+    "baseline_and_global_aliases": "passed",
+    "punctuation_and_diacritic_aliases": "passed",
+    "control_original_text_and_raw_rows": "passed",
+    "full_prior_records_and_bundle_hashes": "passed",
+    "shared_source_summary_allocations": "passed",
+    "special_identity_and_relation_requirements": "passed",
+    "all_70_author_reviews": "passed"
+  },
+  "counts": {
+    "cards": 70,
+    "new": 64,
+    "controls": 6,
+    "fine": 57,
+    "new_fine": 55,
+    "named": 11,
+    "fine_with_parent": 55,
+    "fine_with_source_asserted_parent": 49
+  },
+  "domains": {
+    "Geography & travel": 9,
+    "Literature & storytelling": 9,
+    "Philosophy": 9,
+    "Politics & law": 9,
+    "Music & performance": 9,
+    "History & culture": 9,
+    "Visual arts & design": 8,
+    "Religion & spirituality": 8
+  },
+  "scopes": {
+    "broad_field": 1,
+    "idea": 23,
+    "topic": 12,
+    "facet_or_application": 34
+  },
+  "sources": 54,
+  "missing_parent_links": [
+    {
+      "id": "Q1071",
+      "scope": "broad_field",
+      "reason": "Broad-field control; no higher field asserted."
+    },
+    {
+      "id": "Q603959",
+      "scope": "idea",
+      "reason": "The inspected European rights example does not establish a universal parent for the general legal principle."
+    },
+    {
+      "id": "local:catalog:khipu",
+      "scope": "topic",
+      "reason": "The source establishes Inca use of khipus; this setting is retained as related_to rather than made a universal category parent."
+    },
+    {
+      "id": "local:catalog:lukasa-met-1977-467-3",
+      "scope": "facet_or_application",
+      "reason": "Individual artifact retained; a generic Lukasa parent is absent from approved and baseline targets."
+    }
+  ],
+  "largest_source_allocations": [
+    {
+      "source_id": "culture-fricker-introduction",
+      "derived_words": 190
+    },
+    {
+      "source_id": "un-vienna-treaties",
+      "derived_words": 185
+    },
+    {
+      "source_id": "met-estampe-originale",
+      "derived_words": 182
+    },
+    {
+      "source_id": "culture-sep-fitting-attitudes",
+      "derived_words": 133
+    },
+    {
+      "source_id": "nist-khipu",
+      "derived_words": 131
+    }
+  ],
+  "exact_alias_collisions": [],
+  "strong_alias_collisions": [],
+  "limitations": [
+    "Structural and author checks do not substitute for the coordinator’s independent source audit. No sample or freeze was performed by the author."
+  ]
+}

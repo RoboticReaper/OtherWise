@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "production_guard_tests": {
+    "command": "python3 -m unittest discover -s data/catalog-candidates/catalog-production-001/tools -p test_*.py -v",
+    "passed": 16,
+    "failed": 0
+  },
+  "workspace_tests": {
+    "command": ".venv/bin/python -m pytest tests -q",
+    "passed": 533,
+    "failed": 8,
+    "skipped": 4,
+    "failure_reason": "Sandbox denies /bin/ps execution and temporary socket binding. All eight failures are in test_demo_runtime.py.",
+    "restricted_failures": [
+      "test_stop_owned_verifies_command_start_time_and_user_before_signaling",
+      "test_failure_to_bind_does_not_reuse_an_unowned_backend[127.0.0.1-0]",
+      "test_failure_to_bind_does_not_reuse_an_unowned_backend[127.0.0.1-1]",
+      "test_failure_to_bind_does_not_reuse_an_unowned_backend[0.0.0.0-0]",
+      "test_failure_to_bind_does_not_reuse_an_unowned_backend[0.0.0.0-1]",
+      "test_closed_server_connections_do_not_prevent_an_immediate_restart",
+      "test_tunnel_does_not_inherit_backend_or_named_tunnel_credentials",
+      "test_foreign_healthy_server_cannot_satisfy_owned_backend_readiness"
+    ]
+  },
+  "runtime_rerun": {
+    "command": ".venv/bin/python -m pytest tests/test_demo_runtime.py -q",
+    "environment": "outside sandbox",
+    "passed": 17,
+    "failed": 0
+  },
+  "bare_pytest": {
+    "command": ".venv/bin/python -m pytest -q",
+    "status": "collection_errors",
+    "count": 6,
+    "reason": "Archived audit bundles and current tools contain duplicate test module basenames; no test execution. Explicit tests directory avoids archive collection.",
+    "files": [
+      "data/catalog-candidates/research-batch-008-build/tools/test_assemble.py",
+      "data/catalog-candidates/scale-pilot-001/merge-validation/test_actual_regressions.py",
+      "data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py",
+      "data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/test_actual_regressions.py",
+      "data/catalog-candidates/scale-pilot-001/revision-002/data/catalog-candidates/scale-pilot-001/merge-validation/test_combiner.py",
+      "tests/test_recommendation_inventory.py"
+    ]
+  },
+  "git_diff_check": "passed",
+  "limit": "No browser/UI tests were needed for candidate data and production-local audit tools."
+}

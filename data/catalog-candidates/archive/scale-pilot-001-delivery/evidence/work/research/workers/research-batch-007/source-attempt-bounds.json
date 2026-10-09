@@ -1,0 +1,175 @@
+{
+  "batch_id": "research-batch-007",
+  "checked_at": "2026-10-08T21:48:57.221606Z",
+  "proposal_count": 204,
+  "accepted_count": 200,
+  "max_proposals": 300,
+  "max_accepted": 200,
+  "max_failed_attempts_per_url": 2,
+  "actual_max_failed_attempts_per_url": 1,
+  "failed_url_counts": {
+    "https://www.britishmuseum.org/blog/top-10-historical-board-games": 1,
+    "https://www.britishmuseum.org/collection/object/W_1928-1009-378": 1,
+    "https://www.usgo.org/aga-rules-of-go": 1,
+    "https://worldathletics.org/news/news/dick-fosbury-flop": 1,
+    "https://www.shogi.or.jp/knowledge/rules/": 1,
+    "https://www.shogi.or.jp/event/english-pamphlet.pdf": 1,
+    "https://www.wikidata.org/wiki/Q7565103": 1,
+    "https://www.law.cornell.edu/wex/exhaustion_of_remedies": 1,
+    "https://www.law.cornell.edu/wex/mootness": 1,
+    "https://www.law.cornell.edu/wex/ripeness": 1,
+    "https://musictheory.pugetsound.edu/mt21c/NeapolitanSixthChords.html": 1,
+    "https://musictheory.pugetsound.edu/mt21c/IntroductionToNonChordTones.html": 1,
+    "https://musictheory.pugetsound.edu/mt21c/TheNeapolitanChord.html": 1,
+    "https://openstax.org/books/introduction-philosophy/pages/7-1-what-is-knowledge": 1,
+    "https://plato.stanford.edu/entries/epistemic-injustice/": 1,
+    "https://www.justice.gov.za/trc/legal/justice.htm": 1,
+    "https://pubmed.ncbi.nlm.nih.gov/1500880/": 1,
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC2649674/": 1,
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6007845/": 1,
+    "https://www.legislation.gov.uk/ukpga/Geo5/1-2/13/section/1/data.htm": 1,
+    "https://www.legislation.gov.uk/ukpga/Geo5/1-2/13/section/1": 1
+  },
+  "max_alternate_references_per_unresolved_candidate": 3,
+  "bounded_resolution_cases": [
+    {
+      "candidate": "Shogi",
+      "original": "Japan Shogi Association knowledge/rules page",
+      "alternatives": [
+        {
+          "reference": "Official English pamphlet",
+          "result": "unusable PDF retrieval"
+        },
+        {
+          "reference": "Official Japanese rules FAQ",
+          "result": "supports specific rule cards but lacks separately selected broad piece-reuse overview"
+        },
+        {
+          "reference": "Arkoden English Player’s Guide hosted by Tabletopia",
+          "result": "overview and capture/reserve/drop passages inspected; unrelated overbroad placement/promotion claims excluded"
+        }
+      ],
+      "alternate_reference_count": 3
+    },
+    {
+      "candidate": "Henry Molaison",
+      "original": "OpenStax Psychology 2e 8.3",
+      "alternatives": [
+        {
+          "reference": "OpenStax Psychology 2e 8.2",
+          "result": "supports surgery/declarative-memory facts but not full name"
+        },
+        {
+          "reference": "PMC2649674 reference",
+          "result": "browser-verification response; no substantive passage used"
+        },
+        {
+          "reference": "Augustinack et al. 2014, DOI 10.1002/hipo.22354",
+          "locations": [
+            "https://pmc.ncbi.nlm.nih.gov/articles/PMC6007845/",
+            "https://pubmed.ncbi.nlm.nih.gov/25154857/"
+          ],
+          "result": "PMC location unusable; same work’s PubMed abstract directly names Henry Molaison"
+        }
+      ],
+      "alternate_reference_count": 3,
+      "same_work_rule": "Two locations of the same verified paper are one reference, not two alternative works."
+    },
+    {
+      "candidate": "Signal detection theory",
+      "original": "OpenStax Psychology 2e 5.1",
+      "alternatives": [
+        {
+          "reference": "David Heeger, Signal Detection Theory teaching handout, NYU",
+          "result": "actual theory, information/criterion distinction and criterion-shift passage inspected"
+        }
+      ],
+      "alternate_reference_count": 1
+    },
+    {
+      "candidate": "Money bills under the Parliament Acts",
+      "original": "UK Parliament introductory Parliament Acts page",
+      "alternatives": [
+        {
+          "reference": "Parliament Act 1911 section 1",
+          "locations": [
+            "https://www.legislation.gov.uk/ukpga/Geo5/1-2/13/section/1",
+            "https://www.legislation.gov.uk/ukpga/Geo5/1-2/13/section/1/data.htm"
+          ],
+          "result": "both rendering locations unusable"
+        },
+        {
+          "reference": "Office of the Parliamentary Counsel, Money Bills guidance",
+          "result": "actual official text reproduces section 1 and corrects timing/amendment simplifications"
+        }
+      ],
+      "alternate_reference_count": 2
+    },
+    {
+      "candidate": "Inattentional blindness relationship",
+      "original": "OpenStax Psychology 2e 5.1",
+      "alternatives": [
+        {
+          "reference": "PubMed PMID 1500880 comparison premise",
+          "result": "one-line footer; no factual support used"
+        }
+      ],
+      "alternate_reference_count": 1,
+      "decision": "Retained directly supported perception parent instead of the unverified fresh attentional-blink comparison."
+    },
+    {
+      "candidate": "Neapolitan chord",
+      "original": "Guessed textbook subsection URL",
+      "alternatives": [
+        {
+          "reference": "Second guessed Neapolitan subsection URL",
+          "result": "unusable"
+        },
+        {
+          "reference": "Actual NeapolitanIntroduction.html subsection",
+          "result": "passages inspected"
+        }
+      ],
+      "alternate_reference_count": 2
+    },
+    {
+      "candidate": "Ancient board-game discovery",
+      "original": "British Museum historical board-games article",
+      "alternatives": [
+        {
+          "reference": "British Museum Royal Game of Ur object record",
+          "result": "unusable"
+        },
+        {
+          "reference": "Metropolitan Museum game-box object record",
+          "result": "accessible discovery record"
+        },
+        {
+          "reference": "Metropolitan Museum Senet and Twenty Squares article",
+          "result": "actual historical and marking passages support the selected named games"
+        }
+      ],
+      "alternate_reference_count": 3
+    },
+    {
+      "candidate": "Dick Fosbury",
+      "original": "World Athletics historical article",
+      "alternatives": [
+        {
+          "reference": "Olympedia biography",
+          "result": "actual biographical and event-history passages inspected"
+        }
+      ],
+      "alternate_reference_count": 1
+    }
+  ],
+  "search_result_policy": "Search discoveries are separately labeled discovery_only and are not counted as inspected explanatory sources.",
+  "boundary_pass": "The 200-card boundary pass reused actual captured passages; it introduced no new sources, identities or URL attempts.",
+  "accepted_sources": 90,
+  "accepted_source_support": "Every accepted source has a successful captured public passage, including verified redirects. None relies solely on a failed response or search preview.",
+  "failed_response_policy": "Browser-verification/CAPTCHA and footer-only responses are unusable. No challenge was solved or bypassed.",
+  "logs": {
+    "stage_a": "stage-a-access-log.json",
+    "complete": "access-log.json"
+  }
+}

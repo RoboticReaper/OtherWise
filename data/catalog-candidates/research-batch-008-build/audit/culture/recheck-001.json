@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "assignment": "culture",
+  "auditor_task_identity": "/root/batch008_audit_culture",
+  "review_stage": "independent_recheck",
+  "recheck_round": 1,
+  "independence_statement": "This auditor did not author the initial card or repair. Both repaired source passages and the retained relationship were independently re-opened and inspected; coordinator assertions were not substituted for inspection.",
+  "sample_manifest_sha256": "5b22b4cd61f691075015997f6c240b3365786131ebe2252f10de6a8e23b15f69",
+  "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "initial_review_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/audit/culture/initial-review.json",
+  "initial_review_sha256": "a69f47c31c2e2bcaf961f67dfa859f45e6c172d74bfab20d68ab876fdfddef44",
+  "repaired_candidate_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/research/culture/candidate.json",
+  "repaired_candidate_sha256": "996e6b5631aacbe2aa3a63815d90da546e9dd1fcf8ce9021c3dd9ac813a9c111",
+  "repair_lineage_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/repairs/round-001/repair-lineage.json",
+  "repair_lineage_sha256": "f026e6c362bb01904ed8bcf1a4a5350677258ff30989d45581877576400ca0bd",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "review_completed_at": "2026-10-09T03:13:09.514515+00:00",
+  "records": {
+    "local:catalog:chod": {
+      "id": "local:catalog:chod",
+      "owner": "culture",
+      "stratum": "targeted",
+      "recheck_round": 1,
+      "initial_card_version": 1,
+      "initial_card_sha256": "683afb9941c572ed9368ef28a8afab0c3deea32521d0b66f1792ef5b320aa474",
+      "initial_source_bundle_sha256": "efab1814fba5c0d14a8df86c857c505212caffb55b0eb968d06aded5517ba264",
+      "repaired_card_version": 2,
+      "current_card_version": 2,
+      "repaired_card_sha256": "a3194fada58294a9770d1cc423c38a69b4bf3ded8afd636fa1c06a20c58b8bce",
+      "current_card_sha256": "a3194fada58294a9770d1cc423c38a69b4bf3ded8afd636fa1c06a20c58b8bce",
+      "repaired_source_bundle_sha256": "9c47ec391f8fdf69e8b765321ea0a0da157285ab581f26f86315d9b2e248cfd8",
+      "current_source_bundle_sha256": "9c47ec391f8fdf69e8b765321ea0a0da157285ab581f26f86315d9b2e248cfd8",
+      "repaired_namespaced_card_sha256": "023ee8056cb303f5fd1158634099c54323f55bc59373cc10331cc09064727f45",
+      "hash_scope": "Card and source-bundle hashes are canonical JSON digests of the repaired culture shard concept and its sorted attached sources, before assembler source namespacing/origin metadata. repaired_namespaced_card_sha256 applies the assembler namespace to concept evidence and relation references only.",
+      "word_count": 41,
+      "candidate_snapshot": {
+        "concept": {
+          "aliases": [
+            "Chod"
+          ],
+          "card": "Chöd is a Buddhist offering practice directed at cutting self clinging. In Lama Zopa’s teaching, visualized offerings of the body to spirits are connected with examining the apparently inherent self. Fear becomes an occasion to investigate that self’s supposed independent existence.",
+          "card_version": 2,
+          "domains": [
+            "Religion & spirituality"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Lama Zopa Rinpoche’s teaching, lines 43–52, 101–104",
+              "note": "Definition and card claims inspected.",
+              "source_id": "lywa-chod"
+            },
+            {
+              "locator": "Notes, footnote 3; web-extracted line 178",
+              "note": "The body feast offering in Chöd is visualized.",
+              "source_id": "lywa-chod-visualization-clarification"
+            }
+          ],
+          "id": "local:catalog:chod",
+          "identity_urls": [
+            "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego"
+          ],
+          "imported_records": [],
+          "label": "Chöd",
+          "learning_takeaway": "Connect offering practice with investigation of self clinging.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "The teaching situates chöd within Buddhist charity and wisdom.",
+              "source_ids": [
+                "lywa-chod"
+              ],
+              "target_id": "local:authored:000460",
+              "type": "application_of"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T02:00:13.925690+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp recorded after reading the cited passage; exact remote retrieval timestamp unavailable."
+            },
+            "id": "lywa-chod",
+            "inspected_at": "2026-10-09T02:00:13.925690+00:00",
+            "inspection_mode": "web.open_text",
+            "inspection_record_pointer": "draft-sources-inspected.json#/39",
+            "locator": "Lama Zopa Rinpoche’s teaching, lines 43–52, 101–104",
+            "retrieved_at": "2026-10-09T02:00:13.925690+00:00",
+            "revision": "Maitripa College teaching, June 2009; unedited transcript",
+            "summary_word_limit": 200,
+            "title": "Chöd: Slaying the Ego",
+            "url": "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego"
+          },
+          {
+            "acquisition": {
+              "local_inspection_completed_at": "2026-10-09T03:10:21.418186+00:00",
+              "remote_retrieval_timestamp": null,
+              "time_basis": "Local timestamp after coordinator passage inspection; exact remote retrieval timestamp unavailable."
+            },
+            "id": "lywa-chod-visualization-clarification",
+            "inspection_mode": "web.open_text",
+            "locator": "Notes, footnote 3; web-extracted line 178",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T03:10:21.418186+00:00",
+            "revision": null,
+            "summary_word_limit": 200,
+            "title": "Bodhisattva Attitude: The Commentary",
+            "url": "https://www.lamayeshe.com/article/chapter/bodhisattva-attitude-commentary"
+          }
+        ]
+      },
+      "source_inspections": [
+        {
+          "source_id": "lywa-chod",
+          "title": "Chöd: Slaying the Ego",
+          "url": "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego",
+          "original_url": "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego",
+          "inspected_url": "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego",
+          "author_cited_locator": "Lama Zopa Rinpoche’s teaching, lines 43–52, 101–104",
+          "inspected_locator": "Author/June 2009 unedited teaching, lines 9–19; Buddha Dharma and practice, lines 23–29; charity and inherent selfhood, lines 43–59; dependent existence, lines 88–95; fear and analysis, lines 99–104",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "local_inspection_completed_at": "2026-10-09T03:12:05+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent re-opening and reading the source passages; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "summary_word_limit": 200
+        },
+        {
+          "source_id": "lywa-chod-visualization-clarification",
+          "title": "Bodhisattva Attitude: The Commentary",
+          "url": "https://www.lamayeshe.com/article/chapter/bodhisattva-attitude-commentary",
+          "original_url": "https://www.lamayeshe.com/article/chapter/bodhisattva-attitude-commentary",
+          "inspected_url": "https://www.lamayeshe.com/article/chapter/bodhisattva-attitude-commentary",
+          "author_cited_locator": "Notes, footnote 3; web-extracted line 178",
+          "inspected_locator": "Notes, footnote 3, web-extracted line 178",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "local_inspection_completed_at": "2026-10-09T03:12:05+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent re-opening and reading the source passages; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Buddhist offering practice directed at self clinging.",
+          "outcome": "verified",
+          "source_ids": [
+            "lywa-chod"
+          ],
+          "locator": "Lines 43–55",
+          "support": "Charity, self-cherishing and ignorance are stated."
+        },
+        {
+          "claim": "Lama Zopa’s visualized bodily offering to spirits connects with examining inherent selfhood.",
+          "outcome": "verified",
+          "source_ids": [
+            "lywa-chod",
+            "lywa-chod-visualization-clarification"
+          ],
+          "locator": "Teaching lines 48–59; Commentary Notes 3, line 178",
+          "support": "The teaching supplies the doctrinal connection; Notes 3 supplies the explicit visualization qualifier."
+        },
+        {
+          "claim": "Fear occasions investigation of supposedly independent existence.",
+          "outcome": "verified",
+          "source_ids": [
+            "lywa-chod"
+          ],
+          "locator": "Lines 88–95 and 99–104",
+          "support": "Fear highlights the object of refutation; dependent existence is retained."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "support": "The revised qualifier removes the literal bodily-sacrifice ambiguity. Attribution to Lama Zopa remains; no supernatural efficacy or general account of every Buddhist tradition is asserted."
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "application_of",
+          "assertion": "source_asserted",
+          "target_id": "local:authored:000460",
+          "target_label": "Buddhism",
+          "target_meaning": "Exploring Buddhist traditions, communities, teachings and practices.",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/local:authored:000460"
+          },
+          "source_ids": [
+            "lywa-chod"
+          ],
+          "inspected_locator": "Teaching lines 23–29 and 43–52",
+          "support": "The source situates the named practice within Buddha Dharma, charity and wisdom. That supports practice-to-Buddhism direction.",
+          "direction_check": "verified",
+          "target_meaning_check": "verified",
+          "assertion_class_check": "verified",
+          "outcome": "verified"
+        }
+      ],
+      "finding_resolutions": [
+        {
+          "finding_id": "culture-initial-chod-01",
+          "initial_outcome": "needs_repair",
+          "resolution": "resolved",
+          "affected_field": "card",
+          "actual_change": "ritual offerings replaced by visualized offerings; Commentary Notes 3 added to evidence and source bundle.",
+          "independent_support": {
+            "source_id": "lywa-chod-visualization-clarification",
+            "url": "https://www.lamayeshe.com/article/chapter/bodhisattva-attitude-commentary",
+            "locator": "Notes, footnote 3, line 178",
+            "inspection_mode": "web.open_text",
+            "local_inspection_completed_at": "2026-10-09T03:12:05+00:00"
+          },
+          "new_unsupported_claims": [],
+          "initial_finding_preserved": true
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "alternatives_used": 0
+      }
+    }
+  },
+  "summary": {
+    "assigned_rechecks": 1,
+    "verified": 1,
+    "resolved_initial_findings": 1,
+    "new_findings": 0,
+    "attached_relations_checked": 1
+  },
+  "limits": [
+    "Only the coordinator-assigned fixed sampled Chöd identity was rechecked.",
+    "Initial findings and sample remain preserved; this recheck does not erase the initial failure.",
+    "Actual token usage, cost and exact remote retrieval timestamps were not exposed.",
+    "Source paraphrases are concise; no primary-source passage is reproduced wholesale."
+  ]
+}

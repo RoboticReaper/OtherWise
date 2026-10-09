@@ -1,0 +1,26 @@
+{
+  "errors": [
+    {
+      "code": "missing_field",
+      "path": "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/final-audited-001/malformed-input/inputs/research-batch-003.json",
+      "reason": "concepts[0].card is required."
+    },
+    {
+      "code": "invalid_concept",
+      "path": "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/final-audited-001/malformed-input/inputs/research-batch-003.json",
+      "reason": "concepts[0].card must be nonempty text."
+    }
+  ],
+  "failed": [
+    "invalid_concept",
+    "missing_field"
+  ],
+  "last_valid_output_retained": true,
+  "last_valid_output_sha256": "82751cd8c6b301dd3fd178d3f00d772fea2e885836bcf29d6e6f02d131fea4b0",
+  "passed": [],
+  "quarantine_path": "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/actual-regressions/final-audited-001/malformed-input/quarantine/32293e816ea9252753623aeb45f9aaaf1fd4b4be6c0bc9d91d6726702784d0a3.json",
+  "status": "quarantined",
+  "unrun": [
+    "output_publication"
+  ]
+}

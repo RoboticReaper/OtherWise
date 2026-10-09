@@ -1,0 +1,2459 @@
+{
+  "schema_version": 1,
+  "id": "repair-001",
+  "assignment": "systems",
+  "status": "repair_ready_for_independent_recheck",
+  "recorded_at": "2026-10-09T03:27:31.628952+00:00",
+  "initial_candidate_sha256": "757c6d40b709c025da3721534c9d782998517d04f9aff838ff0d457cf10c8524",
+  "current_candidate_sha256": "d3c72ea4635321e29d609d68c245a88764627ebb1f4c4aae1255ff468eac3d4a",
+  "initial_assembled_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "frozen_initial_shard_path": "data/catalog-candidates/research-batch-008-build/frozen-initial/research/systems/candidate.json",
+  "initial_review_path": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json",
+  "initial_review_sha256": "547059b0dd89a0848b474ee9049692f66839de6213b7d68b2a1c742f4e55daad",
+  "initial_review_completed_at": "2026-10-09T03:13:19.361725+00:00",
+  "sample_manifest_sha256": "5b22b4cd61f691075015997f6c240b3365786131ebe2252f10de6a8e23b15f69",
+  "global_selection_manifest_sha256": "5e15d76acee1c29775a9b7b003f7d01447e494974da200c9c15afa3a25f5df9d",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "approved_selection_sha256": "028de27e9344fa090be92dc1ce2f8422074e591ce7084c0569fda08f91c3e883",
+  "affected_versions": {
+    "Q11413": {
+      "before": 3,
+      "after": 4
+    },
+    "Q65123731": {
+      "before": 1,
+      "after": 2
+    },
+    "local:catalog:boston-immediate-acceptance-mechanism": {
+      "before": 1,
+      "after": 2
+    },
+    "local:catalog:moral-hazard-in-teams": {
+      "before": 1,
+      "after": 2
+    },
+    "local:catalog:relative-performance-evaluation": {
+      "before": 1,
+      "after": 2
+    },
+    "local:catalog:rural-hospitals-theorem": {
+      "before": 1,
+      "after": 2
+    },
+    "local:catalog:tennis-service-let": {
+      "before": 1,
+      "after": 2
+    },
+    "local:catalog:top-trading-cycles": {
+      "before": 1,
+      "after": 2
+    },
+    "local:catalog:wheelchair-tennis-two-bounce-rule": {
+      "before": 1,
+      "after": 2
+    }
+  },
+  "body_changed_ids": [
+    "Q11413",
+    "Q65123731",
+    "local:catalog:top-trading-cycles"
+  ],
+  "changed_bundle_count": 9,
+  "source_changes": {
+    "systems-source-009": {
+      "before": {
+        "id": "systems-source-009",
+        "title": "Dan Quint, Econ 690 Lecture 14: Matching",
+        "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+        "locator": "2.2, PDF page 3, lines 47-66; Section 4, PDF page 7, lines 142-166; Introduction, PDF page 1, lines 6-17, internship hiring moving earlier",
+        "revision": null,
+        "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+        "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+        "inspection_mode": "web.run actual extracted PDF passage",
+        "retrieved_at": "2026-10-09T01:47:28.433561+00:00",
+        "retrieval_date": "2026-10-09",
+        "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+        "summary_word_limit": 200
+      },
+      "after": {
+        "id": "systems-source-009",
+        "title": "Dan Quint, Centralized Matching Markets (part 2), Econ 690 Lecture 14",
+        "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+        "locator": "2.1 model, PDF p.3, lines 32-46; 2.2 deferred acceptance, PDF p.4, lines 48-66; section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159; Introduction, PDF p.1, lines 6-17",
+        "revision": null,
+        "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+        "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+        "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+        "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+        "retrieval_date": "2026-10-09",
+        "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+        "summary_word_limit": 200,
+        "repair_reinspection": {
+          "repair_id": "repair-001",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+          "initial_local_inspection_at": "2026-10-09T01:47:28.433561+00:00",
+          "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+        }
+      }
+    },
+    "systems-source-016": {
+      "before": {
+        "id": "systems-source-016",
+        "title": "Abdulkadiroglu and Sonmez (2003), School Choice: A Mechanism Design Approach",
+        "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+        "locator": "II.B, printed pp. 736-737 / PDF pp. 8-9, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp. 732-733 / PDF pp. 4-5, rounds 1-k and strategy-proofness discussion",
+        "revision": "AER 93(3), June 2003, pp. 729-747",
+        "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+        "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+        "inspection_mode": "web.run actual extracted PDF passage",
+        "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+        "retrieval_date": "2026-10-09",
+        "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+        "summary_word_limit": 200
+      },
+      "after": {
+        "id": "systems-source-016",
+        "title": "Abdulkadiroglu and Sonmez (2003), School Choice: A Mechanism Design Approach",
+        "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+        "locator": "II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp.732-733 / PDF pp.5-6, rounds 1-k and strategy-proofness discussion; I School Choice assumptions, printed p.732 / PDF p.5, lines 309-313",
+        "revision": "AER 93(3), June 2003, pp. 729-747",
+        "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+        "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+        "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+        "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+        "retrieval_date": "2026-10-09",
+        "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+        "summary_word_limit": 200,
+        "repair_reinspection": {
+          "repair_id": "repair-001",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+          "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+          "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+        }
+      }
+    },
+    "systems-source-018": {
+      "before": {
+        "id": "systems-source-018",
+        "title": "Holmstrom (1982), Moral Hazard in Teams",
+        "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+        "locator": "Abstract and Introduction, printed p. 324 / PDF p. 1; Abstract, printed p. 324 / PDF p. 1",
+        "revision": "Bell Journal of Economics 13(2), 1982, pp. 324-340",
+        "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+        "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+        "inspection_mode": "Local rendered scanned PDF visually inspected (teams-page1.png)",
+        "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+        "retrieval_date": "2026-10-09",
+        "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+        "summary_word_limit": 200
+      },
+      "after": {
+        "id": "systems-source-018",
+        "title": "Holmstrom (1982), Moral Hazard in Teams",
+        "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+        "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; relative-performance evaluation in the Introduction, printed p.325 / PDF p.3",
+        "revision": "Bell Journal of Economics 13(2), 1982, pp. 324-340",
+        "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+        "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+        "inspection_mode": "Local visual reading of cached primary PDF, printed pp.324-325 / PDF pp.2-3 (repair-teams-PDF-page-2.png and repair-teams-PDF-page-3.png)",
+        "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+        "retrieval_date": "2026-10-09",
+        "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+        "summary_word_limit": 200,
+        "repair_reinspection": {
+          "repair_id": "repair-001",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+          "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+          "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+        }
+      }
+    },
+    "systems-source-026": {
+      "before": {
+        "id": "systems-source-026",
+        "title": "ITF Rules of Tennis 2026",
+        "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+        "locator": "Rule 22 The Let During a Service, printed p. 9 / PDF p. 11, lines 342-350; Rules of Wheelchair Tennis, a. The Two Bounce Rule, printed p. 16 / PDF p. 18, lines 568-571",
+        "revision": "2026 edition",
+        "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+        "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+        "inspection_mode": "web.run actual extracted PDF passage",
+        "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+        "retrieval_date": "2026-10-09",
+        "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+        "summary_word_limit": 200
+      },
+      "after": {
+        "id": "systems-source-026",
+        "title": "ITF Rules of Tennis 2026",
+        "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+        "locator": "Rule 22 The Let During a Service, printed p.9 / PDF p.12, lines 342-350; Rules of Wheelchair Tennis a. The Two Bounce Rule, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, printed pp.10-11 / PDF pp.13-14",
+        "revision": "2026 edition",
+        "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+        "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+        "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+        "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+        "retrieval_date": "2026-10-09",
+        "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+        "summary_word_limit": 200,
+        "repair_reinspection": {
+          "repair_id": "repair-001",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+          "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+          "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+        }
+      }
+    },
+    "systems-source-029": {
+      "before": {
+        "id": "systems-source-029",
+        "title": "British Go Association: How to Play",
+        "url": "https://britgo.org/intro/intro2.html",
+        "locator": "The rules; Capturing stones and counting liberties; Strings, lines 11-25 and 38-40",
+        "revision": null,
+        "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+        "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+        "inspection_mode": "web.run actual extracted HTML passage",
+        "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+        "retrieval_date": "2026-10-09",
+        "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+        "summary_word_limit": 200
+      },
+      "after": {
+        "id": "systems-source-029",
+        "title": "British Go Association: How to Play",
+        "url": "https://britgo.org/intro/intro2.html",
+        "locator": "The rules, lines 11-17; Capturing stones and counting liberties, line 25; Strings, lines 40-41; Capturing strings, lines 49-54",
+        "revision": null,
+        "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+        "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+        "inspection_mode": "web.run actual extracted authoritative HTML passage",
+        "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+        "retrieval_date": "2026-10-09",
+        "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+        "summary_word_limit": 200,
+        "repair_reinspection": {
+          "repair_id": "repair-001",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+          "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+          "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+        }
+      }
+    }
+  },
+  "records": {
+    "Q11413": {
+      "before_version": 3,
+      "after_version": 4,
+      "changed_concept_fields": [
+        "card",
+        "evidence",
+        "card_version"
+      ],
+      "source_bundle_changed": true,
+      "initial_raw_card_sha256": "3bb2f39d1b562c37ef0b748e6e526d98368336148e72e5ed9ef3db0afeb2d0fd",
+      "current_raw_card_sha256": "65eed190e027528d026b160b939799d1d19a64e7e312806276687d347a98a43c",
+      "initial_raw_source_bundle_sha256": "4e843fd404d133042b1d02caf538dae95dd8050fe88281231f1dfcd104328bff",
+      "current_raw_source_bundle_sha256": "0a115c93e163c04d0d2272dc53c364585bfa595367f879cc236e09199623b33e",
+      "auditor_initial_assembled_card_sha256": "3562713e07f3ceb5930db755bdf71f06816d295fe4de1d70d310b50e7cd7bd6d",
+      "auditor_initial_assembled_source_bundle_sha256": "d6c5b44ff9a8d7783a583fdc8c36fb859d5377409afc922be0c0b41cdbb766b8",
+      "initial_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/Q11413",
+      "initial_findings": [
+        {
+          "field": "card, sentence 1",
+          "significance": "moderate_meaning",
+          "issue": "Unqualified adjacency can include diagonals, which do not join strings or supply shared liberties in the cited rules.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-029",
+              "url": "https://britgo.org/intro/intro2.html",
+              "locator": "Capturing stones line 25; Strings line 40"
+            }
+          ],
+          "proposed_repair": "Replace the first sentence with: Go is a two-player board game in which stones of one color connected horizontally or vertically share liberties: empty neighboring intersections along grid lines. Keep the qualified scoring sentence.",
+          "proposed_body": "Go is a two-player board game in which stones of one color connected horizontally or vertically share liberties: empty neighboring intersections along grid lines. Filling all liberties captures the string. Under this guide’s territory-scoring rules, enclosed empty points and prisoners contribute to the score.",
+          "proposed_body_word_count": 44
+        }
+      ],
+      "before": {
+        "concept": {
+          "id": "Q11413",
+          "label": "Go (board game)",
+          "aliases": [
+            "Go",
+            "Go (game)",
+            "Go (board game)"
+          ],
+          "entity_kind": "named_subject",
+          "scope": "topic",
+          "domains": [
+            "Games & sports"
+          ],
+          "learning_takeaway": "Stones share orthogonal liberties, tying local capture to the larger contest for territory.",
+          "card": "Go is a two-player board game in which adjacent stones of one color share empty neighboring intersections called liberties. Losing every liberty captures the connected group. Under the territory-scoring rules in this guide, enclosed territory and prisoners contribute to the score.",
+          "original_description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+          "identity_urls": [
+            "https://www.wikidata.org/wiki/Q11413",
+            "https://britgo.org/intro/intro2.html"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-029",
+              "locator": "The rules; Capturing stones and counting liberties; Strings, lines 11-25 and 38-40",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [],
+          "card_version": 3,
+          "imported_records": [
+            {
+              "description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+              "equivalence_evidence": "https://www.wikidata.org/wiki/Q11413",
+              "index": 255,
+              "kind": "broad",
+              "source": "ProductSpace",
+              "source_id": "Q11413",
+              "source_revision": null,
+              "source_url": "data/topics.json#record-255",
+              "topic": "Go"
+            },
+            {
+              "description": "board game for two players that originated in China more than 2,500 years ago",
+              "index": 1632,
+              "kind": "broad",
+              "source": "Wikidata",
+              "source_id": "Q11413",
+              "source_revision": 2547428744,
+              "source_url": "https://www.wikidata.org/wiki/Q11413",
+              "topic": "Go (game)"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "id": "systems-source-029",
+            "title": "British Go Association: How to Play",
+            "url": "https://britgo.org/intro/intro2.html",
+            "locator": "The rules; Capturing stones and counting liberties; Strings, lines 11-25 and 38-40",
+            "revision": null,
+            "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted HTML passage",
+            "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200
+          }
+        ]
+      },
+      "after": {
+        "concept": {
+          "id": "Q11413",
+          "label": "Go (board game)",
+          "aliases": [
+            "Go",
+            "Go (game)",
+            "Go (board game)"
+          ],
+          "entity_kind": "named_subject",
+          "scope": "topic",
+          "domains": [
+            "Games & sports"
+          ],
+          "learning_takeaway": "Stones share orthogonal liberties, tying local capture to the larger contest for territory.",
+          "card": "Go is a two-player board game. Adjacent same-color stones connect horizontally or vertically; liberties are empty intersections beside them in those directions. Diagonals supply neither connection nor liberty. Strings without liberties are captured. Under this guide’s territory scoring, empty territory and prisoners contribute to the score.",
+          "original_description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+          "identity_urls": [
+            "https://www.wikidata.org/wiki/Q11413",
+            "https://britgo.org/intro/intro2.html"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-029",
+              "locator": "The rules, lines 11-17; Capturing stones and counting liberties, line 25; Strings, lines 40-41; Capturing strings, lines 49-54",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [],
+          "card_version": 4,
+          "imported_records": [
+            {
+              "description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+              "equivalence_evidence": "https://www.wikidata.org/wiki/Q11413",
+              "index": 255,
+              "kind": "broad",
+              "source": "ProductSpace",
+              "source_id": "Q11413",
+              "source_revision": null,
+              "source_url": "data/topics.json#record-255",
+              "topic": "Go"
+            },
+            {
+              "description": "board game for two players that originated in China more than 2,500 years ago",
+              "index": 1632,
+              "kind": "broad",
+              "source": "Wikidata",
+              "source_id": "Q11413",
+              "source_revision": 2547428744,
+              "source_url": "https://www.wikidata.org/wiki/Q11413",
+              "topic": "Go (game)"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "id": "systems-source-029",
+            "title": "British Go Association: How to Play",
+            "url": "https://britgo.org/intro/intro2.html",
+            "locator": "The rules, lines 11-17; Capturing stones and counting liberties, line 25; Strings, lines 40-41; Capturing strings, lines 49-54",
+            "revision": null,
+            "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted authoritative HTML passage",
+            "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200,
+            "repair_reinspection": {
+              "repair_id": "repair-001",
+              "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+              "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+              "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+            }
+          }
+        ]
+      },
+      "author_review_before": {
+        "outcome": "author_checked",
+        "word_count": 41,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-029",
+            "locator": "The rules; Capturing stones and counting liberties; Strings, lines 11-25 and 38-40",
+            "inspection_mode": "web.run actual extracted HTML passage"
+          }
+        ],
+        "relationship_checks": [],
+        "card_version": 3,
+        "prior_maximum_version": 2,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "This guide uses territory plus prisoners scoring; do not imply all Go rule sets use identical scoring."
+        ],
+        "independent_audit_status": "pending"
+      },
+      "author_review_after": {
+        "outcome": "author_rechecked_after_initial_audit",
+        "word_count": 46,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-029",
+            "locator": "The rules, lines 11-17; Capturing stones and counting liberties, line 25; Strings, lines 40-41; Capturing strings, lines 49-54",
+            "inspection_mode": "web.run actual extracted authoritative HTML passage"
+          }
+        ],
+        "relationship_checks": [],
+        "card_version": 4,
+        "prior_maximum_version": 2,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "This guide uses territory plus prisoners scoring; do not imply all Go rule sets use identical scoring."
+        ],
+        "independent_audit_status": "repair_awaiting_independent_recheck",
+        "repair_id": "repair-001",
+        "previous_selected_version": 3,
+        "repair_reviewed_at": "2026-10-09T03:27:31.628952+00:00",
+        "initial_independent_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/Q11413",
+        "initial_independent_outcome": "needs_repair"
+      },
+      "source_support": [
+        {
+          "source_id": "systems-source-029",
+          "url": "https://britgo.org/intro/intro2.html",
+          "locator": "The rules, lines 11-17; Capturing stones and counting liberties, line 25; Strings, lines 40-41; Capturing strings, lines 49-54",
+          "inspection_mode": "web.run actual extracted authoritative HTML passage",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00"
+        }
+      ]
+    },
+    "Q65123731": {
+      "before_version": 1,
+      "after_version": 2,
+      "changed_concept_fields": [
+        "card",
+        "evidence",
+        "card_version"
+      ],
+      "source_bundle_changed": true,
+      "initial_raw_card_sha256": "a2269f1a6b177785b8f796c255cf6c06a9c696b8d9109f4024757208a66dffcd",
+      "current_raw_card_sha256": "6f1dbe759110b604060eb77aa45a41e5cddb51274abe17b226a518cfd5641389",
+      "initial_raw_source_bundle_sha256": "8acd70a1a41f36870fcadf03952fe5d9655d25483810aa43b3b95890b6bff726",
+      "current_raw_source_bundle_sha256": "5dce4ea5a89e48cc67ee285b5a7d6239fa53a4d4f53dac9a4a7e69c55197dcf7",
+      "auditor_initial_assembled_card_sha256": "8dd45469c297c1bbbcf011dffb304d5f60c824b990bd4c9bc5b85f84b3d39bf4",
+      "auditor_initial_assembled_source_bundle_sha256": "f2720b46c609cb37260efb0800e0417ed417d35b8cbc7476ef40d4aae4b87a6e",
+      "initial_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/Q65123731",
+      "initial_findings": [
+        {
+          "field": "card, sentences 1-2",
+          "significance": "moderate_mechanism",
+          "issue": "Without unmatched/rejected and already-held qualifiers, the rounds can be read as letting held proposers continue or recipients compare only fresh offers.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "section 2.2, PDF p.4, lines 50-57"
+            }
+          ],
+          "proposed_repair": "Change each proposer to each unmatched proposer; say recipients retain their best acceptable offer received so far, including an offer held from a previous round.",
+          "proposed_body": "Gale–Shapley deferred acceptance starts with each unmatched proposer approaching their best remaining acceptable choice. Recipients hold the best acceptable offer received so far and reject others. With fixed strict rankings in the standard one-to-one model, these rounds produce a stable matching.",
+          "proposed_body_word_count": 41
+        },
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says section 2.2 / PDF p.3; the inspected document requires section 2.2 / PDF p.4, lines 48-66; model section 2.1 / PDF p.3, lines 32-46.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "P3 (zero-based) = PDF p.4"
+            }
+          ],
+          "proposed_repair": "Use section 2.2 / PDF p.4, lines 48-66; model section 2.1 / PDF p.3, lines 32-46 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "before": {
+        "concept": {
+          "id": "Q65123731",
+          "label": "Gale–Shapley deferred acceptance algorithm",
+          "aliases": [
+            "Deferred acceptance algorithm",
+            "Gale-Shapley algorithm",
+            "DAA"
+          ],
+          "entity_kind": "idea",
+          "scope": "idea",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Proposals and provisionally held best offers produce a stable allocation under the specified preference model.",
+          "card": "In Gale–Shapley deferred acceptance, each proposer approaches their best remaining choice. Each recipient provisionally retains the preferred proposal and rejects others. With strict rankings in the standard one-to-one model, these repeated rounds yield a stable matching.",
+          "original_description": "algorithm for solving the stable matching problem",
+          "identity_urls": [
+            "https://www.wikidata.org/wiki/Q65123731",
+            "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-009",
+              "locator": "2.2, PDF page 3, lines 47-66",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "Q620702",
+              "type": "broader_topic",
+              "source_ids": [
+                "systems-source-009"
+              ],
+              "assertion": "source_asserted",
+              "note": "Deferred acceptance solves the stable matching problem."
+            }
+          ],
+          "card_version": 1,
+          "imported_records": [
+            {
+              "description": "algorithm for solving the stable matching problem",
+              "index": 20448,
+              "kind": "broad",
+              "source": "Wikidata",
+              "source_id": "Q65123731",
+              "source_revision": 2393810395,
+              "source_url": "https://www.wikidata.org/wiki/Q65123731",
+              "topic": "Gale–Shapley algorithm"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "id": "systems-source-009",
+            "title": "Dan Quint, Econ 690 Lecture 14: Matching",
+            "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+            "locator": "2.2, PDF page 3, lines 47-66; Section 4, PDF page 7, lines 142-166; Introduction, PDF page 1, lines 6-17, internship hiring moving earlier",
+            "revision": null,
+            "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted PDF passage",
+            "retrieved_at": "2026-10-09T01:47:28.433561+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200
+          }
+        ]
+      },
+      "after": {
+        "concept": {
+          "id": "Q65123731",
+          "label": "Gale–Shapley deferred acceptance algorithm",
+          "aliases": [
+            "Deferred acceptance algorithm",
+            "Gale-Shapley algorithm",
+            "DAA"
+          ],
+          "entity_kind": "idea",
+          "scope": "idea",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Proposals and provisionally held best offers produce a stable allocation under the specified preference model.",
+          "card": "In Gale–Shapley deferred acceptance, each unmatched proposer approaches their best remaining acceptable choice. Recipients hold their best acceptable offer so far, including earlier offers, and reject others. Under fixed strict rankings in the standard one-to-one model, repeating these rounds produces a stable matching.",
+          "original_description": "algorithm for solving the stable matching problem",
+          "identity_urls": [
+            "https://www.wikidata.org/wiki/Q65123731",
+            "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-009",
+              "locator": "2.1 model, PDF p.3, lines 32-46; 2.2 deferred acceptance, PDF p.4, lines 48-66",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "Q620702",
+              "type": "broader_topic",
+              "source_ids": [
+                "systems-source-009"
+              ],
+              "assertion": "source_asserted",
+              "note": "Deferred acceptance solves the stable matching problem."
+            }
+          ],
+          "card_version": 2,
+          "imported_records": [
+            {
+              "description": "algorithm for solving the stable matching problem",
+              "index": 20448,
+              "kind": "broad",
+              "source": "Wikidata",
+              "source_id": "Q65123731",
+              "source_revision": 2393810395,
+              "source_url": "https://www.wikidata.org/wiki/Q65123731",
+              "topic": "Gale–Shapley algorithm"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "id": "systems-source-009",
+            "title": "Dan Quint, Centralized Matching Markets (part 2), Econ 690 Lecture 14",
+            "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+            "locator": "2.1 model, PDF p.3, lines 32-46; 2.2 deferred acceptance, PDF p.4, lines 48-66; section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159; Introduction, PDF p.1, lines 6-17",
+            "revision": null,
+            "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+            "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200,
+            "repair_reinspection": {
+              "repair_id": "repair-001",
+              "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+              "initial_local_inspection_at": "2026-10-09T01:47:28.433561+00:00",
+              "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+            }
+          }
+        ]
+      },
+      "author_review_before": {
+        "outcome": "author_checked",
+        "word_count": 36,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-009",
+            "locator": "2.2, PDF page 3, lines 47-66",
+            "inspection_mode": "web.run actual extracted PDF passage"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "Q620702",
+            "type": "broader_topic",
+            "assertion": "source_asserted",
+            "source_ids": [
+              "systems-source-009"
+            ],
+            "inspected_locators": [
+              "2.2, PDF page 3, lines 47-66; Section 4, PDF page 7, lines 142-166; Introduction, PDF page 1, lines 6-17, internship hiring moving earlier"
+            ],
+            "outcome": "supported_by_inspected_premises"
+          }
+        ],
+        "card_version": 1,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "Stability is under the lecture’s strict preference and matching model; proposers’ optimality is not universal welfare optimality."
+        ],
+        "independent_audit_status": "pending"
+      },
+      "author_review_after": {
+        "outcome": "author_rechecked_after_initial_audit",
+        "word_count": 43,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-009",
+            "locator": "2.1 model, PDF p.3, lines 32-46; 2.2 deferred acceptance, PDF p.4, lines 48-66",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "Q620702",
+            "type": "broader_topic",
+            "source_ids": [
+              "systems-source-009"
+            ],
+            "assertion": "source_asserted",
+            "note": "Deferred acceptance solves the stable matching problem.",
+            "inspected_locators": [
+              "2.1 model, PDF p.3, lines 32-46; 2.2 deferred acceptance, PDF p.4, lines 48-66; section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159; Introduction, PDF p.1, lines 6-17"
+            ],
+            "outcome": "supported_by_reinspected_premises"
+          }
+        ],
+        "card_version": 2,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "Stability is under the lecture’s strict preference and matching model; proposers’ optimality is not universal welfare optimality."
+        ],
+        "independent_audit_status": "repair_awaiting_independent_recheck",
+        "repair_id": "repair-001",
+        "previous_selected_version": 1,
+        "repair_reviewed_at": "2026-10-09T03:27:31.628952+00:00",
+        "initial_independent_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/Q65123731",
+        "initial_independent_outcome": "needs_repair"
+      },
+      "source_support": [
+        {
+          "source_id": "systems-source-009",
+          "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+          "locator": "2.1 model, PDF p.3, lines 32-46; 2.2 deferred acceptance, PDF p.4, lines 48-66",
+          "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00"
+        }
+      ]
+    },
+    "local:catalog:boston-immediate-acceptance-mechanism": {
+      "before_version": 1,
+      "after_version": 2,
+      "changed_concept_fields": [
+        "evidence",
+        "card_version"
+      ],
+      "source_bundle_changed": true,
+      "initial_raw_card_sha256": "1e8e98944bf7a6edfffca9dafcd8ab62bdcaa095871eaa7f82ac683400ae9960",
+      "current_raw_card_sha256": "9fd83695a3a8fd738aef78b7f32e445e85902ff8f35e0093511e68bf3f51f160",
+      "initial_raw_source_bundle_sha256": "48492e4d0087e415bc64e60af82de9a788b72f135fd71cc9e77e4160101e677f",
+      "current_raw_source_bundle_sha256": "124fb4b917247ce611747f0af873ce4bdf65809b0e38e52a29a72302456d38c7",
+      "auditor_initial_assembled_card_sha256": "e0aab67e26626ea69cf97e3f01507f38101895e7519eebd8952158420feb37ec",
+      "auditor_initial_assembled_source_bundle_sha256": "56a0cf951bb260dbccbcd38816d2c383955aabb10e86f0183bfd204be0b8fefb",
+      "initial_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/local:catalog:boston-immediate-acceptance-mechanism",
+      "initial_findings": [
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says printed pp.732-733 / PDF pp.4-5; the inspected document requires I.A, printed pp.732-733 / PDF pp.5-6, lines 362-432.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "PDF pp.5-6"
+            }
+          ],
+          "proposed_repair": "Use I.A, printed pp.732-733 / PDF pp.5-6, lines 362-432 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "before": {
+        "concept": {
+          "id": "local:catalog:boston-immediate-acceptance-mechanism",
+          "label": "Boston immediate acceptance mechanism",
+          "aliases": [
+            "Boston mechanism",
+            "Boston student assignment mechanism",
+            "Immediate acceptance mechanism"
+          ],
+          "entity_kind": "idea",
+          "scope": "facet_or_application",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Finalizing first-choice admissions before later rounds makes preference reporting strategically consequential.",
+          "card": "In the Boston school-choice mechanism described in 2003, schools fill seats permanently in rounds of first choices, then second choices and so on. Later applicants cannot displace earlier admissions through higher priority. Consequently, reporting true preferences is not generally a dominant strategy.",
+          "original_description": null,
+          "identity_urls": [
+            "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-016",
+              "locator": "I.A Boston Student Assignment Mechanism, printed pp. 732-733 / PDF pp. 4-5, rounds 1-k and strategy-proofness discussion",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "local:authored:000608",
+              "type": "broader_topic",
+              "source_ids": [
+                "systems-source-016"
+              ],
+              "assertion": "editorial",
+              "note": "The source analyzes the strategy incentives of this allocation mechanism; game theory is an editorial navigation parent."
+            }
+          ],
+          "card_version": 1,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-016",
+            "title": "Abdulkadiroglu and Sonmez (2003), School Choice: A Mechanism Design Approach",
+            "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+            "locator": "II.B, printed pp. 736-737 / PDF pp. 8-9, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp. 732-733 / PDF pp. 4-5, rounds 1-k and strategy-proofness discussion",
+            "revision": "AER 93(3), June 2003, pp. 729-747",
+            "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted PDF passage",
+            "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200
+          }
+        ]
+      },
+      "after": {
+        "concept": {
+          "id": "local:catalog:boston-immediate-acceptance-mechanism",
+          "label": "Boston immediate acceptance mechanism",
+          "aliases": [
+            "Boston mechanism",
+            "Boston student assignment mechanism",
+            "Immediate acceptance mechanism"
+          ],
+          "entity_kind": "idea",
+          "scope": "facet_or_application",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Finalizing first-choice admissions before later rounds makes preference reporting strategically consequential.",
+          "card": "In the Boston school-choice mechanism described in 2003, schools fill seats permanently in rounds of first choices, then second choices and so on. Later applicants cannot displace earlier admissions through higher priority. Consequently, reporting true preferences is not generally a dominant strategy.",
+          "original_description": null,
+          "identity_urls": [
+            "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-016",
+              "locator": "I.A Boston Student Assignment Mechanism, printed pp.732-733 / PDF pp.5-6, lines 362-432",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "local:authored:000608",
+              "type": "broader_topic",
+              "source_ids": [
+                "systems-source-016"
+              ],
+              "assertion": "editorial",
+              "note": "The source analyzes the strategy incentives of this allocation mechanism; game theory is an editorial navigation parent."
+            }
+          ],
+          "card_version": 2,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-016",
+            "title": "Abdulkadiroglu and Sonmez (2003), School Choice: A Mechanism Design Approach",
+            "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+            "locator": "II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp.732-733 / PDF pp.5-6, rounds 1-k and strategy-proofness discussion; I School Choice assumptions, printed p.732 / PDF p.5, lines 309-313",
+            "revision": "AER 93(3), June 2003, pp. 729-747",
+            "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+            "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200,
+            "repair_reinspection": {
+              "repair_id": "repair-001",
+              "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+              "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+              "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+            }
+          }
+        ]
+      },
+      "author_review_before": {
+        "outcome": "author_checked",
+        "word_count": 42,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-016",
+            "locator": "I.A Boston Student Assignment Mechanism, printed pp. 732-733 / PDF pp. 4-5, rounds 1-k and strategy-proofness discussion",
+            "inspection_mode": "web.run actual extracted PDF passage"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "local:authored:000608",
+            "type": "broader_topic",
+            "assertion": "editorial",
+            "source_ids": [
+              "systems-source-016"
+            ],
+            "inspected_locators": [
+              "II.B, printed pp. 736-737 / PDF pp. 8-9, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp. 732-733 / PDF pp. 4-5, rounds 1-k and strategy-proofness discussion"
+            ],
+            "outcome": "supported_by_inspected_premises"
+          }
+        ],
+        "card_version": 1,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "The Boston implementation is historical, as described in 2003; the card must not claim it is Boston’s current policy."
+        ],
+        "independent_audit_status": "pending"
+      },
+      "author_review_after": {
+        "outcome": "author_rechecked_after_initial_audit",
+        "word_count": 42,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-016",
+            "locator": "I.A Boston Student Assignment Mechanism, printed pp.732-733 / PDF pp.5-6, lines 362-432",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "local:authored:000608",
+            "type": "broader_topic",
+            "source_ids": [
+              "systems-source-016"
+            ],
+            "assertion": "editorial",
+            "note": "The source analyzes the strategy incentives of this allocation mechanism; game theory is an editorial navigation parent.",
+            "inspected_locators": [
+              "II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp.732-733 / PDF pp.5-6, rounds 1-k and strategy-proofness discussion; I School Choice assumptions, printed p.732 / PDF p.5, lines 309-313"
+            ],
+            "outcome": "supported_by_reinspected_premises"
+          }
+        ],
+        "card_version": 2,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "The Boston implementation is historical, as described in 2003; the card must not claim it is Boston’s current policy."
+        ],
+        "independent_audit_status": "repair_awaiting_independent_recheck",
+        "repair_id": "repair-001",
+        "previous_selected_version": 1,
+        "repair_reviewed_at": "2026-10-09T03:27:31.628952+00:00",
+        "initial_independent_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/local:catalog:boston-immediate-acceptance-mechanism",
+        "initial_independent_outcome": "needs_repair"
+      },
+      "source_support": [
+        {
+          "source_id": "systems-source-016",
+          "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+          "locator": "I.A Boston Student Assignment Mechanism, printed pp.732-733 / PDF pp.5-6, lines 362-432",
+          "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00"
+        }
+      ]
+    },
+    "local:catalog:moral-hazard-in-teams": {
+      "before_version": 1,
+      "after_version": 2,
+      "changed_concept_fields": [
+        "evidence",
+        "card_version"
+      ],
+      "source_bundle_changed": true,
+      "initial_raw_card_sha256": "7dadf7aa247c940176ff21293e706ea94ad5025d7e813c341c63e46bfa818508",
+      "current_raw_card_sha256": "3a4018ad9848c7c0b5aa983e7d22e56d621818c7c56a32e748e4c666539e5d2d",
+      "initial_raw_source_bundle_sha256": "3434a8e04722ada22c716a11ade4ca7fef5483576e089d567f5d5d3f29db4148",
+      "current_raw_source_bundle_sha256": "7302bbb35e9a0545c6f4543658dfcba13780b9249128076b2495a00ca0f69a52",
+      "auditor_initial_assembled_card_sha256": "89a34e4ee6a2f3146bf0c541ade1511638b042e129c6a402fd5df7fcf518509e",
+      "auditor_initial_assembled_source_bundle_sha256": "a27de094327ed88f478ecfe22793fe247f208e5ebe1daadf64d3b617267dddc1",
+      "initial_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/local:catalog:moral-hazard-in-teams",
+      "initial_findings": [
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says printed p.324 / PDF p.1; the inspected document requires Abstract and Introduction, printed pp.324-325 / PDF pp.2-3.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "Cached PDF pp.1-3: cover, printed 324, printed 325"
+            }
+          ],
+          "proposed_repair": "Use Abstract and Introduction, printed pp.324-325 / PDF pp.2-3 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "before": {
+        "concept": {
+          "id": "local:catalog:moral-hazard-in-teams",
+          "label": "Moral hazard in teams",
+          "aliases": [
+            "Team moral hazard"
+          ],
+          "entity_kind": "idea",
+          "scope": "facet_or_application",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Shared observable output with hidden individual actions creates a team-specific free-riding problem.",
+          "card": "Moral hazard in teams arises when individual actions are hidden but joint output is observable. In Holmström’s model, sharing that output under a balanced budget can leave members with incentives to free ride. The team setting changes the contract-design problem.",
+          "original_description": null,
+          "identity_urls": [
+            "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-018",
+              "locator": "Abstract and Introduction, printed p. 324 / PDF p. 1",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "local:catalog:moral-hazard",
+              "type": "facet_of",
+              "source_ids": [
+                "systems-source-018"
+              ],
+              "assertion": "source_asserted",
+              "note": "The introduction explicitly defines the paper’s setting as a multiagent extension of the moral-hazard problem."
+            }
+          ],
+          "card_version": 1,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-018",
+            "title": "Holmstrom (1982), Moral Hazard in Teams",
+            "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+            "locator": "Abstract and Introduction, printed p. 324 / PDF p. 1; Abstract, printed p. 324 / PDF p. 1",
+            "revision": "Bell Journal of Economics 13(2), 1982, pp. 324-340",
+            "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "Local rendered scanned PDF visually inspected (teams-page1.png)",
+            "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200
+          }
+        ]
+      },
+      "after": {
+        "concept": {
+          "id": "local:catalog:moral-hazard-in-teams",
+          "label": "Moral hazard in teams",
+          "aliases": [
+            "Team moral hazard"
+          ],
+          "entity_kind": "idea",
+          "scope": "facet_or_application",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Shared observable output with hidden individual actions creates a team-specific free-riding problem.",
+          "card": "Moral hazard in teams arises when individual actions are hidden but joint output is observable. In Holmström’s model, sharing that output under a balanced budget can leave members with incentives to free ride. The team setting changes the contract-design problem.",
+          "original_description": null,
+          "identity_urls": [
+            "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-018",
+              "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; free-rider discussion, printed p.325 / PDF p.3",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "local:catalog:moral-hazard",
+              "type": "facet_of",
+              "source_ids": [
+                "systems-source-018"
+              ],
+              "assertion": "source_asserted",
+              "note": "The introduction explicitly defines the paper’s setting as a multiagent extension of the moral-hazard problem."
+            }
+          ],
+          "card_version": 2,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-018",
+            "title": "Holmstrom (1982), Moral Hazard in Teams",
+            "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+            "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; relative-performance evaluation in the Introduction, printed p.325 / PDF p.3",
+            "revision": "Bell Journal of Economics 13(2), 1982, pp. 324-340",
+            "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "Local visual reading of cached primary PDF, printed pp.324-325 / PDF pp.2-3 (repair-teams-PDF-page-2.png and repair-teams-PDF-page-3.png)",
+            "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200,
+            "repair_reinspection": {
+              "repair_id": "repair-001",
+              "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+              "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+              "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+            }
+          }
+        ]
+      },
+      "author_review_before": {
+        "outcome": "author_checked",
+        "word_count": 40,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-018",
+            "locator": "Abstract and Introduction, printed p. 324 / PDF p. 1",
+            "inspection_mode": "Local rendered scanned PDF visually inspected (teams-page1.png)"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "local:catalog:moral-hazard",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "source_ids": [
+              "systems-source-018"
+            ],
+            "inspected_locators": [
+              "Abstract and Introduction, printed p. 324 / PDF p. 1; Abstract, printed p. 324 / PDF p. 1"
+            ],
+            "outcome": "supported_by_inspected_premises"
+          }
+        ],
+        "card_version": 1,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "Model conclusion about non-budget-balanced incentives is conditional; no claim that all real teams require an outside principal."
+        ],
+        "independent_audit_status": "pending"
+      },
+      "author_review_after": {
+        "outcome": "author_rechecked_after_initial_audit",
+        "word_count": 40,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-018",
+            "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; free-rider discussion, printed p.325 / PDF p.3",
+            "inspection_mode": "Local visual reading of cached primary PDF, printed pp.324-325 / PDF pp.2-3 (repair-teams-PDF-page-2.png and repair-teams-PDF-page-3.png)"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "local:catalog:moral-hazard",
+            "type": "facet_of",
+            "source_ids": [
+              "systems-source-018"
+            ],
+            "assertion": "source_asserted",
+            "note": "The introduction explicitly defines the paper’s setting as a multiagent extension of the moral-hazard problem.",
+            "inspected_locators": [
+              "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; relative-performance evaluation in the Introduction, printed p.325 / PDF p.3"
+            ],
+            "outcome": "supported_by_reinspected_premises"
+          }
+        ],
+        "card_version": 2,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "Model conclusion about non-budget-balanced incentives is conditional; no claim that all real teams require an outside principal."
+        ],
+        "independent_audit_status": "repair_awaiting_independent_recheck",
+        "repair_id": "repair-001",
+        "previous_selected_version": 1,
+        "repair_reviewed_at": "2026-10-09T03:27:31.628952+00:00",
+        "initial_independent_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/local:catalog:moral-hazard-in-teams",
+        "initial_independent_outcome": "needs_repair"
+      },
+      "source_support": [
+        {
+          "source_id": "systems-source-018",
+          "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+          "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; free-rider discussion, printed p.325 / PDF p.3",
+          "inspection_mode": "Local visual reading of cached primary PDF, printed pp.324-325 / PDF pp.2-3 (repair-teams-PDF-page-2.png and repair-teams-PDF-page-3.png)",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00"
+        }
+      ]
+    },
+    "local:catalog:relative-performance-evaluation": {
+      "before_version": 1,
+      "after_version": 2,
+      "changed_concept_fields": [
+        "evidence",
+        "relations",
+        "card_version"
+      ],
+      "source_bundle_changed": true,
+      "initial_raw_card_sha256": "23dfb6df4815baf2c97b029516156f7a9a74580ef8a0468921488f298b2f3805",
+      "current_raw_card_sha256": "4710a0e7d557101d3c5d63726953b25c1503c25a8eeede9a967a34f4abd24723",
+      "initial_raw_source_bundle_sha256": "7d7d09a201f999f5d1feefaa8cf8889025ee08ac4e1476d84e8f4d452697b9f4",
+      "current_raw_source_bundle_sha256": "0e704bcc2997c6a6e15227585a9d5f5dff34fcf35618b99ca86c8a45d0ab0ffd",
+      "auditor_initial_assembled_card_sha256": "2527b72e57c671e88d349a2a1037bd1ee48d129edef3c13fc3a63b0e9037787f",
+      "auditor_initial_assembled_source_bundle_sha256": "4ce51e6d14bb1766ce825fc5fa1527a94c7a902f5994dca668c234a28fd14882",
+      "initial_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/supplementary_records/local:catalog:relative-performance-evaluation",
+      "initial_findings": [
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says Abstract, printed p.324 / PDF p.1; the inspected document requires Abstract and Introduction, printed pp.324-325 / PDF pp.2-3.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-018",
+              "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+              "locator": "Cached PDF pp.1-3"
+            }
+          ],
+          "proposed_repair": "Use Abstract and Introduction, printed pp.324-325 / PDF pp.2-3 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "before": {
+        "concept": {
+          "id": "local:catalog:relative-performance-evaluation",
+          "label": "Relative performance evaluation",
+          "aliases": [
+            "RPE"
+          ],
+          "entity_kind": "idea",
+          "scope": "idea",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Peers’ outcomes can supply information useful for designing an individual’s incentive contract.",
+          "card": "Relative performance evaluation lets a contract use peers’ outcomes alongside an agent’s own performance. In Holmström’s model, comparing agents can provide information useful for incentives. The value of competition therefore depends on its informational role in the contracting problem.",
+          "original_description": null,
+          "identity_urls": [
+            "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-018",
+              "locator": "Abstract, printed p. 324 / PDF p. 1",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "Q1414816",
+              "type": "broader_topic",
+              "source_ids": [
+                "systems-source-018"
+              ],
+              "assertion": "source_asserted",
+              "note": "The abstract explicitly investigates relative performance evaluation as a scheme to improve incentives using information about peer agents."
+            }
+          ],
+          "card_version": 1,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-018",
+            "title": "Holmstrom (1982), Moral Hazard in Teams",
+            "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+            "locator": "Abstract and Introduction, printed p. 324 / PDF p. 1; Abstract, printed p. 324 / PDF p. 1",
+            "revision": "Bell Journal of Economics 13(2), 1982, pp. 324-340",
+            "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "Local rendered scanned PDF visually inspected (teams-page1.png)",
+            "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200
+          }
+        ]
+      },
+      "after": {
+        "concept": {
+          "id": "local:catalog:relative-performance-evaluation",
+          "label": "Relative performance evaluation",
+          "aliases": [
+            "RPE"
+          ],
+          "entity_kind": "idea",
+          "scope": "idea",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Peers’ outcomes can supply information useful for designing an individual’s incentive contract.",
+          "card": "Relative performance evaluation lets a contract use peers’ outcomes alongside an agent’s own performance. In Holmström’s model, comparing agents can provide information useful for incentives. The value of competition therefore depends on its informational role in the contracting problem.",
+          "original_description": null,
+          "identity_urls": [
+            "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-018",
+              "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; relative-performance evaluation paragraph, printed p.325 / PDF p.3",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "Q1414816",
+              "type": "broader_topic",
+              "source_ids": [
+                "systems-source-018"
+              ],
+              "assertion": "source_asserted",
+              "note": "The abstract and introduction explain how peers’ outcomes inform incentive contracts in the model."
+            }
+          ],
+          "card_version": 2,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-018",
+            "title": "Holmstrom (1982), Moral Hazard in Teams",
+            "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+            "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; relative-performance evaluation in the Introduction, printed p.325 / PDF p.3",
+            "revision": "Bell Journal of Economics 13(2), 1982, pp. 324-340",
+            "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "Local visual reading of cached primary PDF, printed pp.324-325 / PDF pp.2-3 (repair-teams-PDF-page-2.png and repair-teams-PDF-page-3.png)",
+            "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200,
+            "repair_reinspection": {
+              "repair_id": "repair-001",
+              "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+              "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+              "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+            }
+          }
+        ]
+      },
+      "author_review_before": {
+        "outcome": "author_checked",
+        "word_count": 39,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-018",
+            "locator": "Abstract, printed p. 324 / PDF p. 1",
+            "inspection_mode": "Local rendered scanned PDF visually inspected (teams-page1.png)"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "Q1414816",
+            "type": "broader_topic",
+            "assertion": "source_asserted",
+            "source_ids": [
+              "systems-source-018"
+            ],
+            "inspected_locators": [
+              "Abstract and Introduction, printed p. 324 / PDF p. 1; Abstract, printed p. 324 / PDF p. 1"
+            ],
+            "outcome": "supported_by_inspected_premises"
+          }
+        ],
+        "card_version": 1,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "Selection is supported by the primary abstract; detailed assumptions about signal correlation should be inspected before drafting a mechanism claim."
+        ],
+        "independent_audit_status": "pending"
+      },
+      "author_review_after": {
+        "outcome": "author_rechecked_after_initial_audit",
+        "word_count": 39,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-018",
+            "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; relative-performance evaluation paragraph, printed p.325 / PDF p.3",
+            "inspection_mode": "Local visual reading of cached primary PDF, printed pp.324-325 / PDF pp.2-3 (repair-teams-PDF-page-2.png and repair-teams-PDF-page-3.png)"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "Q1414816",
+            "type": "broader_topic",
+            "source_ids": [
+              "systems-source-018"
+            ],
+            "assertion": "source_asserted",
+            "note": "The abstract and introduction explain how peers’ outcomes inform incentive contracts in the model.",
+            "inspected_locators": [
+              "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; relative-performance evaluation in the Introduction, printed p.325 / PDF p.3"
+            ],
+            "outcome": "supported_by_reinspected_premises"
+          }
+        ],
+        "card_version": 2,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "Bounded to Holmström’s informational model; no universal benefit of competition is claimed."
+        ],
+        "independent_audit_status": "repair_awaiting_independent_recheck",
+        "repair_id": "repair-001",
+        "previous_selected_version": 1,
+        "repair_reviewed_at": "2026-10-09T03:27:31.628952+00:00",
+        "initial_independent_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/supplementary_records/local:catalog:relative-performance-evaluation",
+        "initial_independent_outcome": "needs_repair"
+      },
+      "source_support": [
+        {
+          "source_id": "systems-source-018",
+          "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+          "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; relative-performance evaluation paragraph, printed p.325 / PDF p.3",
+          "inspection_mode": "Local visual reading of cached primary PDF, printed pp.324-325 / PDF pp.2-3 (repair-teams-PDF-page-2.png and repair-teams-PDF-page-3.png)",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00"
+        }
+      ]
+    },
+    "local:catalog:rural-hospitals-theorem": {
+      "before_version": 1,
+      "after_version": 2,
+      "changed_concept_fields": [
+        "evidence",
+        "relations",
+        "card_version"
+      ],
+      "source_bundle_changed": true,
+      "initial_raw_card_sha256": "78e3e6cee515350c59d8484af4825be4ea53e396737c572b495e2933e35569fe",
+      "current_raw_card_sha256": "9875b36c4658e2344dd23280c06f7a30df0b8bb814268b71b3706c16d375a7af",
+      "initial_raw_source_bundle_sha256": "e3c5fbc1049007ee779a4c2142c86cb03196c1f86144be1b2baf3bbeed13824f",
+      "current_raw_source_bundle_sha256": "c7792682494acda2a956dce33589f4d83f7664d230937c3a9da8015ac864f2ad",
+      "auditor_initial_assembled_card_sha256": "efa14d7fc3aeade636a25b387065101cc86aeebd62afca01d79590d6a77be7ec",
+      "auditor_initial_assembled_source_bundle_sha256": "04cfe4d7d8d8ff1fca946736f9b422ba8bd8565c6d77b1323895ecec826a7ae4",
+      "initial_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/local:catalog:rural-hospitals-theorem",
+      "initial_findings": [
+        {
+          "field": "relations[0]",
+          "significance": "moderate_relationship",
+          "issue": "The baseline target is the narrower one-to-one problem; the cited theorem belongs to a many-to-one extension, leaving a parent-coverage gap.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "section 3, PDF p.7; section 4, PDF p.8"
+            }
+          ],
+          "proposed_repair": "Retain Q620702 only as related_to with assertion editorial and a note identifying the many-to-one extension. Do not broaden the pinned baseline target."
+        },
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says section 4 / PDF p.7, lines 142-166; the inspected document requires section 3 assumptions / PDF p.7, lines 117-141; section 4 theorem / PDF p.8, lines 143-159.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-009",
+              "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+              "locator": "P6-P7 (zero-based) = PDF pp.7-8"
+            }
+          ],
+          "proposed_repair": "Use section 3 assumptions / PDF p.7, lines 117-141; section 4 theorem / PDF p.8, lines 143-159 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "before": {
+        "concept": {
+          "id": "local:catalog:rural-hospitals-theorem",
+          "label": "Rural hospitals theorem",
+          "aliases": [
+            "Rural hospital theorem"
+          ],
+          "entity_kind": "idea",
+          "scope": "idea",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Stable matchings cannot change which doctors an undersubscribed hospital hires under strict responsive preferences.",
+          "card": "With fixed quotas, strict preferences and responsive hospital rankings, stable hospital–doctor matchings fill the same number of places at each hospital. The rural hospitals theorem also fixes which doctors an undersubscribed hospital receives, even when other assignments change.",
+          "original_description": null,
+          "identity_urls": [
+            "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-009",
+              "locator": "Section 4, PDF page 7, lines 142-166",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "Q620702",
+              "type": "facet_of",
+              "source_ids": [
+                "systems-source-009"
+              ],
+              "assertion": "source_asserted",
+              "note": "Invariance theorem about stable hospital-doctor matchings."
+            }
+          ],
+          "card_version": 1,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-009",
+            "title": "Dan Quint, Econ 690 Lecture 14: Matching",
+            "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+            "locator": "2.2, PDF page 3, lines 47-66; Section 4, PDF page 7, lines 142-166; Introduction, PDF page 1, lines 6-17, internship hiring moving earlier",
+            "revision": null,
+            "acquired_at": "2026-10-09T01:47:28.433561+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted PDF passage",
+            "retrieved_at": "2026-10-09T01:47:28.433561+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200
+          }
+        ]
+      },
+      "after": {
+        "concept": {
+          "id": "local:catalog:rural-hospitals-theorem",
+          "label": "Rural hospitals theorem",
+          "aliases": [
+            "Rural hospital theorem"
+          ],
+          "entity_kind": "idea",
+          "scope": "idea",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Stable matchings cannot change which doctors an undersubscribed hospital hires under strict responsive preferences.",
+          "card": "With fixed quotas, strict preferences and responsive hospital rankings, stable hospital–doctor matchings fill the same number of places at each hospital. The rural hospitals theorem also fixes which doctors an undersubscribed hospital receives, even when other assignments change.",
+          "original_description": null,
+          "identity_urls": [
+            "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-009",
+              "locator": "Section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "Q620702",
+              "type": "related_to",
+              "source_ids": [
+                "systems-source-009"
+              ],
+              "assertion": "editorial",
+              "note": "Editorial comparison: this theorem concerns a many-to-one extension of the pinned one-to-one stable matching problem; Q620702 is not a taxonomy parent."
+            }
+          ],
+          "card_version": 2,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-009",
+            "title": "Dan Quint, Centralized Matching Markets (part 2), Econ 690 Lecture 14",
+            "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+            "locator": "2.1 model, PDF p.3, lines 32-46; 2.2 deferred acceptance, PDF p.4, lines 48-66; section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159; Introduction, PDF p.1, lines 6-17",
+            "revision": null,
+            "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+            "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200,
+            "repair_reinspection": {
+              "repair_id": "repair-001",
+              "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+              "initial_local_inspection_at": "2026-10-09T01:47:28.433561+00:00",
+              "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+            }
+          }
+        ]
+      },
+      "author_review_before": {
+        "outcome": "author_checked",
+        "word_count": 38,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-009",
+            "locator": "Section 4, PDF page 7, lines 142-166",
+            "inspection_mode": "web.run actual extracted PDF passage"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "Q620702",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "source_ids": [
+              "systems-source-009"
+            ],
+            "inspected_locators": [
+              "2.2, PDF page 3, lines 47-66; Section 4, PDF page 7, lines 142-166; Introduction, PDF page 1, lines 6-17, internship hiring moving earlier"
+            ],
+            "outcome": "supported_by_inspected_premises"
+          }
+        ],
+        "card_version": 1,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "Fixed hospital quotas, strict preferences and responsive hospital rankings are required in the inspected formulation; do not transfer the result to arbitrary matching preferences."
+        ],
+        "independent_audit_status": "pending"
+      },
+      "author_review_after": {
+        "outcome": "author_rechecked_after_initial_audit",
+        "word_count": 38,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-009",
+            "locator": "Section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "Q620702",
+            "type": "related_to",
+            "source_ids": [
+              "systems-source-009"
+            ],
+            "assertion": "editorial",
+            "note": "Editorial comparison: this theorem concerns a many-to-one extension of the pinned one-to-one stable matching problem; Q620702 is not a taxonomy parent.",
+            "inspected_locators": [
+              "2.1 model, PDF p.3, lines 32-46; 2.2 deferred acceptance, PDF p.4, lines 48-66; section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159; Introduction, PDF p.1, lines 6-17"
+            ],
+            "outcome": "supported_by_reinspected_premises"
+          }
+        ],
+        "card_version": 2,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "Fixed hospital quotas, strict preferences and responsive hospital rankings are required in the inspected formulation; do not transfer the result to arbitrary matching preferences."
+        ],
+        "independent_audit_status": "repair_awaiting_independent_recheck",
+        "repair_id": "repair-001",
+        "previous_selected_version": 1,
+        "repair_reviewed_at": "2026-10-09T03:27:31.628952+00:00",
+        "initial_independent_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/local:catalog:rural-hospitals-theorem",
+        "initial_independent_outcome": "needs_repair"
+      },
+      "source_support": [
+        {
+          "source_id": "systems-source-009",
+          "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+          "locator": "Section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159",
+          "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00"
+        }
+      ]
+    },
+    "local:catalog:tennis-service-let": {
+      "before_version": 1,
+      "after_version": 2,
+      "changed_concept_fields": [
+        "evidence",
+        "card_version"
+      ],
+      "source_bundle_changed": true,
+      "initial_raw_card_sha256": "f008cceb60aa907b16d30be6fc4f957adacc0caf798a184045d8c3ce26408042",
+      "current_raw_card_sha256": "9cacfca0ed5f83439b647d84879b6ec2b1016a30021187b7f60f6ba546ced451",
+      "initial_raw_source_bundle_sha256": "f7f5a3b2ad2397d32c2c28151304aec74ec7226ee3261b69d7769bae8608b908",
+      "current_raw_source_bundle_sha256": "28bb385a1a063f111b6971fdb34b53e473024040a9d4068892676c8bd7f8eb3e",
+      "auditor_initial_assembled_card_sha256": "02a9dd767d44d67c90ac56821df154df8238d5dbc1288886ea94201c36772d04",
+      "auditor_initial_assembled_source_bundle_sha256": "568ff39753a79a8dde58f0cb0ba27d832f143f05954f1319d0685399745b04e8",
+      "initial_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/local:catalog:tennis-service-let",
+      "initial_findings": [
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says printed p.9 / PDF p.11; the inspected document requires Rule 22, printed p.9 / PDF p.12, lines 342-350.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "Rule 22 on P11 (zero-based) = PDF p.12"
+            }
+          ],
+          "proposed_repair": "Use Rule 22, printed p.9 / PDF p.12, lines 342-350 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "before": {
+        "concept": {
+          "id": "local:catalog:tennis-service-let",
+          "label": "Tennis service let",
+          "aliases": [
+            "Service let",
+            "Let on service"
+          ],
+          "entity_kind": "idea",
+          "scope": "idea",
+          "domains": [
+            "Games & sports"
+          ],
+          "learning_takeaway": "A qualifying service let repeats that serve while preserving an earlier service fault.",
+          "card": "Under standard ITF rules, a serve that touches the net and is otherwise valid is a service let. That particular serve is repeated. If it was a second serve, an earlier first-service fault remains; the let does not restart the whole service sequence.",
+          "original_description": null,
+          "identity_urls": [
+            "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-026",
+              "locator": "Rule 22 The Let During a Service, printed p. 9 / PDF p. 11, lines 342-350",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "Q847",
+              "type": "facet_of",
+              "source_ids": [
+                "systems-source-026"
+              ],
+              "assertion": "source_asserted",
+              "note": "Rule 22 defines the service let as part of the tennis rules."
+            }
+          ],
+          "card_version": 1,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-026",
+            "title": "ITF Rules of Tennis 2026",
+            "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+            "locator": "Rule 22 The Let During a Service, printed p. 9 / PDF p. 11, lines 342-350; Rules of Wheelchair Tennis, a. The Two Bounce Rule, printed p. 16 / PDF p. 18, lines 568-571",
+            "revision": "2026 edition",
+            "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted PDF passage",
+            "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200
+          }
+        ]
+      },
+      "after": {
+        "concept": {
+          "id": "local:catalog:tennis-service-let",
+          "label": "Tennis service let",
+          "aliases": [
+            "Service let",
+            "Let on service"
+          ],
+          "entity_kind": "idea",
+          "scope": "idea",
+          "domains": [
+            "Games & sports"
+          ],
+          "learning_takeaway": "A qualifying service let repeats that serve while preserving an earlier service fault.",
+          "card": "Under standard ITF rules, a serve that touches the net and is otherwise valid is a service let. That particular serve is repeated. If it was a second serve, an earlier first-service fault remains; the let does not restart the whole service sequence.",
+          "original_description": null,
+          "identity_urls": [
+            "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-026",
+              "locator": "Rule 22 The Let During a Service, printed p.9 / PDF p.12, lines 342-350",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "Q847",
+              "type": "facet_of",
+              "source_ids": [
+                "systems-source-026"
+              ],
+              "assertion": "source_asserted",
+              "note": "Rule 22 defines the service let as part of the tennis rules."
+            }
+          ],
+          "card_version": 2,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-026",
+            "title": "ITF Rules of Tennis 2026",
+            "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+            "locator": "Rule 22 The Let During a Service, printed p.9 / PDF p.12, lines 342-350; Rules of Wheelchair Tennis a. The Two Bounce Rule, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, printed pp.10-11 / PDF pp.13-14",
+            "revision": "2026 edition",
+            "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+            "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200,
+            "repair_reinspection": {
+              "repair_id": "repair-001",
+              "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+              "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+              "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+            }
+          }
+        ]
+      },
+      "author_review_before": {
+        "outcome": "author_checked",
+        "word_count": 43,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-026",
+            "locator": "Rule 22 The Let During a Service, printed p. 9 / PDF p. 11, lines 342-350",
+            "inspection_mode": "web.run actual extracted PDF passage"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "Q847",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "source_ids": [
+              "systems-source-026"
+            ],
+            "inspected_locators": [
+              "Rule 22 The Let During a Service, printed p. 9 / PDF p. 11, lines 342-350; Rules of Wheelchair Tennis, a. The Two Bounce Rule, printed p. 16 / PDF p. 18, lines 568-571"
+            ],
+            "outcome": "supported_by_inspected_premises"
+          }
+        ],
+        "card_version": 1,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "The standard ITF rule is inspected; Appendix VI permits alternative no-let procedures."
+        ],
+        "independent_audit_status": "pending"
+      },
+      "author_review_after": {
+        "outcome": "author_rechecked_after_initial_audit",
+        "word_count": 43,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-026",
+            "locator": "Rule 22 The Let During a Service, printed p.9 / PDF p.12, lines 342-350",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "Q847",
+            "type": "facet_of",
+            "source_ids": [
+              "systems-source-026"
+            ],
+            "assertion": "source_asserted",
+            "note": "Rule 22 defines the service let as part of the tennis rules.",
+            "inspected_locators": [
+              "Rule 22 The Let During a Service, printed p.9 / PDF p.12, lines 342-350; Rules of Wheelchair Tennis a. The Two Bounce Rule, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, printed pp.10-11 / PDF pp.13-14"
+            ],
+            "outcome": "supported_by_reinspected_premises"
+          }
+        ],
+        "card_version": 2,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "The standard ITF rule is inspected; Appendix VI permits alternative no-let procedures."
+        ],
+        "independent_audit_status": "repair_awaiting_independent_recheck",
+        "repair_id": "repair-001",
+        "previous_selected_version": 1,
+        "repair_reviewed_at": "2026-10-09T03:27:31.628952+00:00",
+        "initial_independent_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/records/local:catalog:tennis-service-let",
+        "initial_independent_outcome": "needs_repair"
+      },
+      "source_support": [
+        {
+          "source_id": "systems-source-026",
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "locator": "Rule 22 The Let During a Service, printed p.9 / PDF p.12, lines 342-350",
+          "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00"
+        }
+      ]
+    },
+    "local:catalog:top-trading-cycles": {
+      "before_version": 1,
+      "after_version": 2,
+      "changed_concept_fields": [
+        "card",
+        "evidence",
+        "card_version"
+      ],
+      "source_bundle_changed": true,
+      "initial_raw_card_sha256": "ac806bd125353e2b14bd4473f693461a5361daf2f3887747373f2702c4915df2",
+      "current_raw_card_sha256": "e2306a0305a49505b85a515080ac7e9938759f53e8c1e1e0a0e7fc9143b56b7a",
+      "initial_raw_source_bundle_sha256": "d7d7d5dcc6e02be6a0ffbd1d2d8c053145f0477830d3a131d7bc8ff6b8a62fa2",
+      "current_raw_source_bundle_sha256": "9eedf38f4caf52b23d15c50993d872f4b64bbdb4f42f6461559c96bd78953164",
+      "auditor_initial_assembled_card_sha256": "02abda6f7e7539270709d90c7f70b6f8fbb6a84bf7f32c9d7ba08f5bced9b7cb",
+      "auditor_initial_assembled_source_bundle_sha256": "b469518343f1b2cc1ae6ca2f04eb1d37d12f6adb8e8e1580ba9662ba01be031c",
+      "initial_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/supplementary_records/local:catalog:top-trading-cycles",
+      "initial_findings": [
+        {
+          "field": "card, sentence 1",
+          "significance": "moderate_mechanism",
+          "issue": "Preferred schools does not specify the mechanism’s highest-ranked remaining choice.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "II.B, PDF p.9, lines 628-650"
+            }
+          ],
+          "proposed_repair": "Say each remaining student points to their highest-ranked remaining school with an available seat; preserve the school-priority rule.",
+          "proposed_body": "In school-choice top trading cycles, each remaining student points to their highest-ranked school with available seats, and each school points to its highest-priority remaining student. Cycles assign seats; assigned students leave, capacities decrease, and full schools leave. Repeating these steps allocates the seats.",
+          "proposed_body_word_count": 43
+        },
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says II.B, printed pp.736-737 / PDF pp.8-9; the inspected document requires II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-016",
+              "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+              "locator": "P8-P9 (zero-based) = PDF pp.9-10"
+            }
+          ],
+          "proposed_repair": "Use II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "before": {
+        "concept": {
+          "id": "local:catalog:top-trading-cycles",
+          "label": "Top trading cycles",
+          "aliases": [
+            "TTC",
+            "Top trading cycles mechanism"
+          ],
+          "entity_kind": "idea",
+          "scope": "idea",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Directed preference-and-priority cycles assign seats simultaneously and remove completed trades.",
+          "card": "In school-choice top trading cycles, students point to preferred schools and schools point to remaining students with highest priority. Directed cycles assign seats; assigned students leave and capacities adjust. With strict rankings, repeating this process turns cycles into allocations.",
+          "original_description": null,
+          "identity_urls": [
+            "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-016",
+              "locator": "II.B, printed pp. 736-737 / PDF pp. 8-9, steps 1-k and propositions 3-4",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "local:authored:000608",
+              "type": "broader_topic",
+              "source_ids": [
+                "systems-source-016"
+              ],
+              "assertion": "editorial",
+              "note": "Editorial parent in game theory: the source analyzes strategic reports and allocations in a mechanism-design model."
+            }
+          ],
+          "card_version": 1,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-016",
+            "title": "Abdulkadiroglu and Sonmez (2003), School Choice: A Mechanism Design Approach",
+            "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+            "locator": "II.B, printed pp. 736-737 / PDF pp. 8-9, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp. 732-733 / PDF pp. 4-5, rounds 1-k and strategy-proofness discussion",
+            "revision": "AER 93(3), June 2003, pp. 729-747",
+            "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted PDF passage",
+            "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200
+          }
+        ]
+      },
+      "after": {
+        "concept": {
+          "id": "local:catalog:top-trading-cycles",
+          "label": "Top trading cycles",
+          "aliases": [
+            "TTC",
+            "Top trading cycles mechanism"
+          ],
+          "entity_kind": "idea",
+          "scope": "idea",
+          "domains": [
+            "Economics & organizations"
+          ],
+          "learning_takeaway": "Directed preference-and-priority cycles assign seats simultaneously and remove completed trades.",
+          "card": "In school-choice top trading cycles with strict preference and priority rankings, each remaining student points to their highest-ranked school with seats; each school points to its highest-priority remaining student. Cycles assign seats, remove assigned students, reduce capacities and remove full schools. Repetition completes the allocation.",
+          "original_description": null,
+          "identity_urls": [
+            "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-016",
+              "locator": "I School Choice assumptions, printed p.732 / PDF p.5, lines 309-313; II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4, lines 628-710",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "local:authored:000608",
+              "type": "broader_topic",
+              "source_ids": [
+                "systems-source-016"
+              ],
+              "assertion": "editorial",
+              "note": "Editorial parent in game theory: the source analyzes strategic reports and allocations in a mechanism-design model."
+            }
+          ],
+          "card_version": 2,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-016",
+            "title": "Abdulkadiroglu and Sonmez (2003), School Choice: A Mechanism Design Approach",
+            "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+            "locator": "II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp.732-733 / PDF pp.5-6, rounds 1-k and strategy-proofness discussion; I School Choice assumptions, printed p.732 / PDF p.5, lines 309-313",
+            "revision": "AER 93(3), June 2003, pp. 729-747",
+            "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+            "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200,
+            "repair_reinspection": {
+              "repair_id": "repair-001",
+              "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+              "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+              "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+            }
+          }
+        ]
+      },
+      "author_review_before": {
+        "outcome": "author_checked",
+        "word_count": 39,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-016",
+            "locator": "II.B, printed pp. 736-737 / PDF pp. 8-9, steps 1-k and propositions 3-4",
+            "inspection_mode": "web.run actual extracted PDF passage"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "local:authored:000608",
+            "type": "broader_topic",
+            "assertion": "editorial",
+            "source_ids": [
+              "systems-source-016"
+            ],
+            "inspected_locators": [
+              "II.B, printed pp. 736-737 / PDF pp. 8-9, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp. 732-733 / PDF pp. 4-5, rounds 1-k and strategy-proofness discussion"
+            ],
+            "outcome": "supported_by_inspected_premises"
+          }
+        ],
+        "card_version": 1,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "Strict reported school rankings and exogenous priorities in the inspected school-choice formulation; do not transfer every property to all TTC variants."
+        ],
+        "independent_audit_status": "pending"
+      },
+      "author_review_after": {
+        "outcome": "author_rechecked_after_initial_audit",
+        "word_count": 45,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-016",
+            "locator": "I School Choice assumptions, printed p.732 / PDF p.5, lines 309-313; II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4, lines 628-710",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "local:authored:000608",
+            "type": "broader_topic",
+            "source_ids": [
+              "systems-source-016"
+            ],
+            "assertion": "editorial",
+            "note": "Editorial parent in game theory: the source analyzes strategic reports and allocations in a mechanism-design model.",
+            "inspected_locators": [
+              "II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp.732-733 / PDF pp.5-6, rounds 1-k and strategy-proofness discussion; I School Choice assumptions, printed p.732 / PDF p.5, lines 309-313"
+            ],
+            "outcome": "supported_by_reinspected_premises"
+          }
+        ],
+        "card_version": 2,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "Strict reported school rankings and exogenous priorities in the inspected school-choice formulation; do not transfer every property to all TTC variants."
+        ],
+        "independent_audit_status": "repair_awaiting_independent_recheck",
+        "repair_id": "repair-001",
+        "previous_selected_version": 1,
+        "repair_reviewed_at": "2026-10-09T03:27:31.628952+00:00",
+        "initial_independent_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/supplementary_records/local:catalog:top-trading-cycles",
+        "initial_independent_outcome": "needs_repair"
+      },
+      "source_support": [
+        {
+          "source_id": "systems-source-016",
+          "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+          "locator": "I School Choice assumptions, printed p.732 / PDF p.5, lines 309-313; II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4, lines 628-710",
+          "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00"
+        }
+      ]
+    },
+    "local:catalog:wheelchair-tennis-two-bounce-rule": {
+      "before_version": 1,
+      "after_version": 2,
+      "changed_concept_fields": [
+        "evidence",
+        "card_version"
+      ],
+      "source_bundle_changed": true,
+      "initial_raw_card_sha256": "2722b46cf692e38f07e41172cc8b108923e14c49232b25353ee08fdded5629a6",
+      "current_raw_card_sha256": "fd3e4672aed8fc9d15b20e0963ee12be7584f61f8a822cd3a817a415e62a1d99",
+      "initial_raw_source_bundle_sha256": "e5d0902d2bc4980e1b5e50e31d822cb1aaa44c3c333851f977ddb3a1529a2ce7",
+      "current_raw_source_bundle_sha256": "5b0118f178c817f31f3a8987f91b82bd9ddc9bc3136d3792efefc3ba0fb8ea95",
+      "auditor_initial_assembled_card_sha256": "c9357cfdd2f354e2501a494206ad380f7dc883a19cd5cd9125004890e60cf8aa",
+      "auditor_initial_assembled_source_bundle_sha256": "bf8bcd33ea8eaf8798d85729f8dffaa65f32093ccc5db87a8020b13b575b7dd7",
+      "initial_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/supplementary_records/local:catalog:wheelchair-tennis-two-bounce-rule",
+      "initial_findings": [
+        {
+          "field": "evidence[0].locator and cited source.locator",
+          "significance": "minor_provenance",
+          "issue": "The relevant locator says printed p.16 / PDF p.18; the inspected document requires Rules of Wheelchair Tennis a, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, PDF pp.13-14.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-systems::systems-source-026",
+              "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+              "locator": "P18 (zero-based) = PDF p.19"
+            }
+          ],
+          "proposed_repair": "Use Rules of Wheelchair Tennis a, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, PDF pp.13-14 in the card evidence and corresponding source-record segment; preserve the initial snapshot."
+        }
+      ],
+      "before": {
+        "concept": {
+          "id": "local:catalog:wheelchair-tennis-two-bounce-rule",
+          "label": "Wheelchair tennis two-bounce rule",
+          "aliases": [
+            "Two-bounce rule in wheelchair tennis"
+          ],
+          "entity_kind": "idea",
+          "scope": "facet_or_application",
+          "domains": [
+            "Games & sports"
+          ],
+          "learning_takeaway": "A wheelchair player may return after two bounces, and the second bounce may fall outside the court.",
+          "card": "Wheelchair tennis permits a player to return the ball after a second bounce. The first bounce must still satisfy the ordinary court-boundary rule; the second may land outside the court. The adaptation changes return timing while preserving the first-bounce requirement.",
+          "original_description": null,
+          "identity_urls": [
+            "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-026",
+              "locator": "Rules of Wheelchair Tennis, a. The Two Bounce Rule, printed p. 16 / PDF p. 18, lines 568-571",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "Q847",
+              "type": "facet_of",
+              "source_ids": [
+                "systems-source-026"
+              ],
+              "assertion": "source_asserted",
+              "note": "The Rules of Wheelchair Tennis explicitly introduce exceptions to the ITF Rules of Tennis."
+            }
+          ],
+          "card_version": 1,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-026",
+            "title": "ITF Rules of Tennis 2026",
+            "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+            "locator": "Rule 22 The Let During a Service, printed p. 9 / PDF p. 11, lines 342-350; Rules of Wheelchair Tennis, a. The Two Bounce Rule, printed p. 16 / PDF p. 18, lines 568-571",
+            "revision": "2026 edition",
+            "acquired_at": "2026-10-09T01:58:59.226414+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted PDF passage",
+            "retrieved_at": "2026-10-09T01:58:59.226414+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200
+          }
+        ]
+      },
+      "after": {
+        "concept": {
+          "id": "local:catalog:wheelchair-tennis-two-bounce-rule",
+          "label": "Wheelchair tennis two-bounce rule",
+          "aliases": [
+            "Two-bounce rule in wheelchair tennis"
+          ],
+          "entity_kind": "idea",
+          "scope": "facet_or_application",
+          "domains": [
+            "Games & sports"
+          ],
+          "learning_takeaway": "A wheelchair player may return after two bounces, and the second bounce may fall outside the court.",
+          "card": "Wheelchair tennis permits a player to return the ball after a second bounce. The first bounce must still satisfy the ordinary court-boundary rule; the second may land outside the court. The adaptation changes return timing while preserving the first-bounce requirement.",
+          "original_description": null,
+          "identity_urls": [
+            "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf"
+          ],
+          "evidence": [
+            {
+              "source_id": "systems-source-026",
+              "locator": "Rules of Wheelchair Tennis a. The Two Bounce Rule, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, printed pp.10-11 / PDF pp.13-14, lines 363-364 and 414-430",
+              "note": "Supports the qualified card meaning."
+            }
+          ],
+          "relations": [
+            {
+              "target_id": "Q847",
+              "type": "facet_of",
+              "source_ids": [
+                "systems-source-026"
+              ],
+              "assertion": "source_asserted",
+              "note": "The Rules of Wheelchair Tennis explicitly introduce exceptions to the ITF Rules of Tennis."
+            }
+          ],
+          "card_version": 2,
+          "imported_records": []
+        },
+        "sources": [
+          {
+            "id": "systems-source-026",
+            "title": "ITF Rules of Tennis 2026",
+            "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+            "locator": "Rule 22 The Let During a Service, printed p.9 / PDF p.12, lines 342-350; Rules of Wheelchair Tennis a. The Two Bounce Rule, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, printed pp.10-11 / PDF pp.13-14",
+            "revision": "2026 edition",
+            "acquired_at": "2026-10-09T03:27:31.628952+00:00",
+            "acquisition_mode": "Local timestamp after reading; exact remote retrieval time unavailable",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+            "retrieved_at": "2026-10-09T03:27:31.628952+00:00",
+            "retrieval_date": "2026-10-09",
+            "acquisition_note": "These ISO fields record local inspection completion, not an exact remote response or server retrieval time.",
+            "summary_word_limit": 200,
+            "repair_reinspection": {
+              "repair_id": "repair-001",
+              "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+              "initial_local_inspection_at": "2026-10-09T01:58:59.226414+00:00",
+              "time_semantics": "Local timestamp after inspection; exact remote retrieval time unavailable."
+            }
+          }
+        ]
+      },
+      "author_review_before": {
+        "outcome": "author_checked",
+        "word_count": 40,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-026",
+            "locator": "Rules of Wheelchair Tennis, a. The Two Bounce Rule, printed p. 16 / PDF p. 18, lines 568-571",
+            "inspection_mode": "web.run actual extracted PDF passage"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "Q847",
+            "type": "facet_of",
+            "assertion": "source_asserted",
+            "source_ids": [
+              "systems-source-026"
+            ],
+            "inspected_locators": [
+              "Rule 22 The Let During a Service, printed p. 9 / PDF p. 11, lines 342-350; Rules of Wheelchair Tennis, a. The Two Bounce Rule, printed p. 16 / PDF p. 18, lines 568-571"
+            ],
+            "outcome": "supported_by_inspected_premises"
+          }
+        ],
+        "card_version": 1,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "The first bounce still follows the ordinary court-boundary rule."
+        ],
+        "independent_audit_status": "pending"
+      },
+      "author_review_after": {
+        "outcome": "author_rechecked_after_initial_audit",
+        "word_count": 40,
+        "meaning_boundary_checked": true,
+        "substantive_claims_checked": true,
+        "inspected_locators": [
+          {
+            "source_id": "systems-source-026",
+            "locator": "Rules of Wheelchair Tennis a. The Two Bounce Rule, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, printed pp.10-11 / PDF pp.13-14, lines 363-364 and 414-430",
+            "inspection_mode": "web.run actual extracted primary/official/educational PDF passages"
+          }
+        ],
+        "relationship_checks": [
+          {
+            "target_id": "Q847",
+            "type": "facet_of",
+            "source_ids": [
+              "systems-source-026"
+            ],
+            "assertion": "source_asserted",
+            "note": "The Rules of Wheelchair Tennis explicitly introduce exceptions to the ITF Rules of Tennis.",
+            "inspected_locators": [
+              "Rule 22 The Let During a Service, printed p.9 / PDF p.12, lines 342-350; Rules of Wheelchair Tennis a. The Two Bounce Rule, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, printed pp.10-11 / PDF pp.13-14"
+            ],
+            "outcome": "supported_by_reinspected_premises"
+          }
+        ],
+        "card_version": 2,
+        "prior_maximum_version": 0,
+        "original_wording_and_imports_preserved": true,
+        "limits": [
+          "The first bounce still follows the ordinary court-boundary rule."
+        ],
+        "independent_audit_status": "repair_awaiting_independent_recheck",
+        "repair_id": "repair-001",
+        "previous_selected_version": 1,
+        "repair_reviewed_at": "2026-10-09T03:27:31.628952+00:00",
+        "initial_independent_review_pointer": "data/catalog-candidates/research-batch-008-build/audit/systems/initial-review.json#/supplementary_records/local:catalog:wheelchair-tennis-two-bounce-rule",
+        "initial_independent_outcome": "needs_repair"
+      },
+      "source_support": [
+        {
+          "source_id": "systems-source-026",
+          "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+          "locator": "Rules of Wheelchair Tennis a. The Two Bounce Rule, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, printed pp.10-11 / PDF pp.13-14, lines 363-364 and 414-430",
+          "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+          "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00"
+        }
+      ]
+    }
+  },
+  "parent_gaps": [
+    {
+      "id": "local:catalog:rural-hospitals-theorem",
+      "missing_parent": true,
+      "reason_code": "baseline_one_to_one_target_for_many_to_one_extension",
+      "rejected_target_id": "Q620702",
+      "rejected_parent_type": "facet_of",
+      "explanation_pointer": "concepts/local:catalog:rural-hospitals-theorem/relations/0/note",
+      "premise_source_ids": [
+        "systems-source-009"
+      ],
+      "premise_locator": "Section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159"
+    }
+  ],
+  "hash_semantics": "Raw card/bundle hashes use stock.digest; assembled initial hashes retain the auditor’s scoped-source-ID snapshots. File hashes use the exact saved bytes.",
+  "preservation_checks": {
+    "all_61_approved_ids_scopes_domains": true,
+    "both_pinned_hashes": true,
+    "canonical_control_ids": true,
+    "control_originals_raw_rows_full_prior_records": true,
+    "unaffected_52_bundles_unchanged": true,
+    "frozen_initial_and_audit_files_unchanged": true
+  },
+  "source_reinspection": {
+    "teams_cached_file_sha256": "f46c4b7821e5016f1dca5c24263d52bdaac0f0b7621264c316d69239535a242b",
+    "teams_pdf_pages_1based": [
+      2,
+      3
+    ],
+    "time_semantics": "Local completion after passage inspection, not a precise remote retrieval time."
+  },
+  "independent_recheck": "pending",
+  "usage": {
+    "model_tokens": null,
+    "cost": null
+  }
+}

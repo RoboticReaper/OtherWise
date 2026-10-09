@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-08T23:32:05.813089+00:00",
+  "status": "passed_against_pinned_baseline",
+  "integration_readiness": "current_baseline_reconciliation_required",
+  "combined_sha256": "82751cd8c6b301dd3fd178d3f00d772fea2e885836bcf29d6e6f02d131fea4b0",
+  "summary": {
+    "accepted": 1000,
+    "new": 819,
+    "controls": 181,
+    "new_fine_scope": 703,
+    "new_fine_ideas": 650,
+    "named": 158,
+    "scope_counts": {
+      "topic": 172,
+      "idea": 596,
+      "broad_field": 37,
+      "facet_or_application": 195
+    },
+    "primary_domains": 23,
+    "starting_subfields": 69,
+    "minimum_starting_subfield_count": 8,
+    "source_records": 580,
+    "source_urls": 579,
+    "source_hostnames": 176,
+    "relationships": 1021,
+    "relation_types": {
+      "related_to": 778,
+      "facet_of": 136,
+      "broader_topic": 67,
+      "application_of": 40
+    },
+    "relation_assertions": {
+      "editorial": 458,
+      "source_asserted": 563
+    },
+    "card_word_min": 35,
+    "card_word_max": 50,
+    "fine_without_asserted_parent_or_application": 654,
+    "fine_without_any_parent_or_application": 575,
+    "without_relationship": 10,
+    "ambiguous_alias_groups": {
+      "homology": [
+        "Q1144780",
+        "local:catalog:homology-biology"
+      ],
+      "bond": [
+        "Q44424",
+        "local:catalog:bond-finance"
+      ],
+      "constitution": [
+        "Q7755",
+        "local:catalog:material-constitution"
+      ],
+      "graft": [
+        "local:catalog:horticultural-grafting",
+        "local:catalog:skin-grafting"
+      ],
+      "pitch": [
+        "local:catalog:pitch-material",
+        "local:catalog:pitch-music"
+      ]
+    }
+  },
+  "batches": [
+    {
+      "batch": "research-batch-003",
+      "accepted": 200,
+      "new": 164,
+      "controls": 36,
+      "new_fine_scope": 138,
+      "new_fine_ideas": 137,
+      "named": 23,
+      "sha256": "2102d8197bc73451a7171b7a3ccba4d786f99335061238c50582507bd856c5ba"
+    },
+    {
+      "batch": "research-batch-004",
+      "accepted": 200,
+      "new": 161,
+      "controls": 39,
+      "new_fine_scope": 144,
+      "new_fine_ideas": 144,
+      "named": 22,
+      "sha256": "76d3e3f085b79decdb267b1abf0b63128bf04f23a94d444bbc981f85e82bbd9d"
+    },
+    {
+      "batch": "research-batch-005",
+      "accepted": 200,
+      "new": 160,
+      "controls": 40,
+      "new_fine_scope": 128,
+      "new_fine_ideas": 128,
+      "named": 27,
+      "sha256": "a1152ed18e63bed7b8e4455e05380e09e3bdf52b5ebafaec515e9140a92d67ee"
+    },
+    {
+      "batch": "research-batch-006",
+      "accepted": 200,
+      "new": 169,
+      "controls": 31,
+      "new_fine_scope": 163,
+      "new_fine_ideas": 112,
+      "named": 56,
+      "sha256": "64da2bbfc021f61b10a3162b55ba5be8ad6ea162f1fcb7f2e33a8b930565ba73"
+    },
+    {
+      "batch": "research-batch-007",
+      "accepted": 200,
+      "new": 165,
+      "controls": 35,
+      "new_fine_scope": 130,
+      "new_fine_ideas": 129,
+      "named": 30,
+      "sha256": "cdbdcb2f98a7e0a549db59132e79b662e7296c9d1ccee501522f6cfb60c235a5"
+    }
+  ],
+  "baseline_inputs": [
+    {
+      "path": "data/topics.json",
+      "pinned_sha256": "1378e2cb37b2c3b648c2319c6303dbbf6380f20d2f0ff10fe8db8a2f62bd2f44",
+      "pinned_matches": true,
+      "current_sha256": "210e2d4a080a90cd0acbb7116dd547e1573971102c60651f728527c0df3a995f",
+      "current_matches": false
+    },
+    {
+      "path": "data/discovery_graph.json",
+      "pinned_sha256": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309",
+      "pinned_matches": true,
+      "current_sha256": "5c083ec491393373e74cffcfb75e1a959393bf5095b786da1ba9a5898150a309",
+      "current_matches": true
+    },
+    {
+      "path": "data/recommendation-identities.json",
+      "pinned_sha256": "e9968d8e3d1f317b3bcd42c42efd9a1e44305d210464be7427416576a64bf67b",
+      "pinned_matches": true,
+      "current_sha256": "e9968d8e3d1f317b3bcd42c42efd9a1e44305d210464be7427416576a64bf67b",
+      "current_matches": true
+    },
+    {
+      "path": "data/catalog-candidates/research-batch-001.json",
+      "pinned_sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+      "pinned_matches": true,
+      "current_sha256": "a66426fabbb8d9691e1a63353841102c87bbfb43bac4a659dceb9ffbdf227131",
+      "current_matches": true
+    },
+    {
+      "path": "data/catalog-candidates/research-batch-002.json",
+      "pinned_sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+      "pinned_matches": true,
+      "current_sha256": "b25fe17c9906863928d0a27e0d25c7d6c344756f88758fbdb4924ef846cafa4e",
+      "current_matches": true
+    }
+  ],
+  "frozen_audits": [
+    {
+      "batch": "research-batch-003",
+      "checks": {
+        "hash": true,
+        "seed": true,
+        "frame": true,
+        "random": true,
+        "risk": true,
+        "sample": true,
+        "disjoint_40": true,
+        "baseline": true,
+        "packet_hash": true,
+        "packet_sources": true,
+        "packet_cards": true
+      },
+      "random": 20,
+      "risk": 20
+    },
+    {
+      "batch": "research-batch-004",
+      "checks": {
+        "hash": true,
+        "seed": true,
+        "frame": true,
+        "random": true,
+        "risk": true,
+        "sample": true,
+        "disjoint_40": true,
+        "baseline": true,
+        "packet_hash": true,
+        "packet_sources": true,
+        "packet_cards": true
+      },
+      "random": 20,
+      "risk": 20
+    },
+    {
+      "batch": "research-batch-005",
+      "checks": {
+        "hash": true,
+        "seed": true,
+        "frame": true,
+        "random": true,
+        "risk": true,
+        "sample": true,
+        "disjoint_40": true,
+        "baseline": true,
+        "packet_hash": true,
+        "packet_sources": true,
+        "packet_cards": true
+      },
+      "random": 20,
+      "risk": 20
+    },
+    {
+      "batch": "research-batch-006",
+      "checks": {
+        "hash": true,
+        "seed": true,
+        "frame": true,
+        "random": true,
+        "risk": true,
+        "sample": true,
+        "disjoint_40": true,
+        "baseline": true,
+        "packet_hash": true,
+        "packet_sources": true,
+        "packet_cards": true
+      },
+      "random": 20,
+      "risk": 20
+    },
+    {
+      "batch": "research-batch-007",
+      "checks": {
+        "hash": true,
+        "seed": true,
+        "frame": true,
+        "random": true,
+        "risk": true,
+        "sample": true,
+        "disjoint_40": true,
+        "baseline": true,
+        "packet_hash": true,
+        "packet_sources": true,
+        "packet_cards": true
+      },
+      "random": 20,
+      "risk": 20
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Checks establish structural consistency and reproducible sampling; they do not certify semantic novelty, factual claims, original browsing or auditor independence."
+  ]
+}

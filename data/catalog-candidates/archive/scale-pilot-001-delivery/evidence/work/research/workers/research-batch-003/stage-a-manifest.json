@@ -1,0 +1,81 @@
+{
+  "batch_id": "research-batch-003",
+  "stage": "A",
+  "created_at": "2026-10-08T20:01:40.475992+00:00",
+  "checks": {
+    "required_fields": "passed",
+    "source_artifacts": "passed",
+    "unique_proposals": 200,
+    "all_sources_have_retrieval_date_and_timestamp": true,
+    "drafted_cards": 0
+  },
+  "counts": {
+    "proposals": 200,
+    "unique_provisional_ids": 200,
+    "new": 164,
+    "existing_controls": 36,
+    "new_fine": 138,
+    "named_subjects": 23,
+    "source_records": 150,
+    "source_records_with_proposals": 149,
+    "primary_domains": {
+      "Biology & nature": 45,
+      "Health & medicine": 45,
+      "Earth & environment": 45,
+      "Food & agriculture": 40,
+      "Home & crafts": 25
+    },
+    "primary_subfields": {
+      "Genetics and development": 15,
+      "Ecology and species interactions": 15,
+      "Evolution and biological mechanisms": 15,
+      "Physiological regulation": 15,
+      "Measurement and diagnostic methods": 14,
+      "Medical history and evidence": 15,
+      "Tissue repair and reconstructive techniques": 1,
+      "Geological processes": 15,
+      "Atmospheric and ocean processes": 15,
+      "Environmental measurement and restoration": 15,
+      "Cultivation and crop systems": 15,
+      "Food chemistry and preparation": 14,
+      "Agricultural technologies and history": 11,
+      "Material behavior in making": 8,
+      "Construction and repair methods": 8,
+      "Textile and domestic craft techniques": 9
+    },
+    "scopes": {
+      "broad_field": 7,
+      "idea": 82,
+      "facet_or_application": 76,
+      "topic": 35
+    }
+  },
+  "errors": [],
+  "semantic_admission": "pending_central_corrections_and_reconciliation",
+  "artifacts": {
+    "selection.proposed.json": {
+      "sha256": "32e303ce4a0664c86c0e3fc8b034ae7c5faa7fc9aacf121989755d75e253a6f3",
+      "bytes": 459696
+    },
+    "source-inspections.json": {
+      "sha256": "a115894e5a943006d26931e424e6f47dc343282b3c232dfc4d654320b29d06ec",
+      "bytes": 216708
+    },
+    "access-log.json": {
+      "sha256": "22ede7e5281da6079fa3e93b749e9b0741baecb92b182a8b273ea30384b4f80e",
+      "bytes": 701065
+    },
+    "author-selection-corrections.json": {
+      "sha256": "5d822ba7d3f77dd2cda72dece032904f0da623ae03901d6723b391722f49d76e",
+      "bytes": 1981
+    },
+    "baseline-diagnostics.json": {
+      "sha256": "7834f14719b2ab793b4401fbae1a750b986651f14633b6cbf2d3b28ff66c7bf6",
+      "bytes": 1090690
+    },
+    "baseline-exact-matches.log": {
+      "sha256": "19528b8e032bcea27e3703d4814488617d5664cd1fb6d911bca7d815318ba966",
+      "bytes": 11188
+    }
+  }
+}

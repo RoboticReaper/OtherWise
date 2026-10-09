@@ -1,0 +1,71 @@
+{
+  "cases": [
+    {
+      "case": "unknown_relationship_target",
+      "errors": [
+        {
+          "code": "unresolved_target",
+          "reason": "Q100196 points to invalid:missing-target, absent from the combined catalog and pinned baseline."
+        }
+      ],
+      "input_sha256": "39932745878b2e1d8862c98cbdd848af27a61596bfcedbad7571a52689d2cab6",
+      "last_valid_output_retained": true,
+      "rejected": true
+    },
+    {
+      "case": "unknown_evidence_source",
+      "errors": [
+        {
+          "code": "unresolved_source",
+          "path": "data/catalog-candidates/catalog-production-001/batch-009/regression/unknown_evidence_source.json",
+          "reason": "concepts[0] evidence refers to absent local source invalid-missing-source."
+        }
+      ],
+      "input_sha256": "2a8081297ce3d5ac8cf73d7fbb21959be11ea9b8a176722485a5419eac13c577",
+      "last_valid_output_retained": true,
+      "rejected": true
+    },
+    {
+      "case": "twenty_six_words",
+      "errors": [
+        {
+          "code": "word_budget",
+          "path": "data/catalog-candidates/catalog-production-001/batch-009/regression/twenty_six_words.json",
+          "reason": "concepts[0].card has 26 whitespace-separated words; expected 1–25."
+        }
+      ],
+      "input_sha256": "44becd6b3cddcacf5f7347272755bcca7df65774069efacf250d379a8d6f0527",
+      "last_valid_output_retained": true,
+      "rejected": true
+    },
+    {
+      "case": "original_import_changed",
+      "errors": [
+        {
+          "code": "original_wording_changed",
+          "reason": "Q100196"
+        }
+      ],
+      "input_sha256": "c4d53daf233b98f3e2a813f7de325d94373bd1bf3d77319dcc57da56dd0a0f67",
+      "last_valid_output_retained": true,
+      "rejected": true
+    },
+    {
+      "case": "stale_selection_hash",
+      "errors": [
+        {
+          "code": "stale_selection",
+          "reason": "Shard must use the approved selection hash."
+        }
+      ],
+      "input_sha256": "64d46f24f3569a9403819f0525612a7ef3fdeaf75aa4ba4a5b14085df5143a8e",
+      "last_valid_output_retained": true,
+      "rejected": true
+    }
+  ],
+  "last_valid_output_sha256": "4612287612b3e2e15fa22a8e8d60bd4f8eb35c4528a5d5f3bf8e506988e35154",
+  "operational_inputs_mutated": false,
+  "schema_version": 1,
+  "status": "passed",
+  "valid_input_candidate_sha256": "4612287612b3e2e15fa22a8e8d60bd4f8eb35c4528a5d5f3bf8e506988e35154"
+}

@@ -1,0 +1,55 @@
+{
+  "id": "local:catalog:komi",
+  "label": "Komi",
+  "sample_kind": "risk_selected",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T21:59:09.674181+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "idea",
+    "entity_kind": "idea",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q11413",
+        "label": "Go",
+        "original_description": "Exploring territorial strategy and pattern recognition in the game of Go.",
+        "prior_card_takeaways": [
+          "Understand how liberties connect local capture rules with surrounding territory."
+        ]
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "Q11413",
+        "label": "Go"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "White score compensation for Black moving first is explicit; 7½ is correctly tied to BGA default, with historical alternatives. Stone handicap is distinct.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s002",
+        "b007-s010"
+      ],
+      "locator": "How to Play: Komi, lines 115–119; Default Rules: Komi, lines 13–15; web-07 and web-02"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "Q11413",
+      "type": "facet_of",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

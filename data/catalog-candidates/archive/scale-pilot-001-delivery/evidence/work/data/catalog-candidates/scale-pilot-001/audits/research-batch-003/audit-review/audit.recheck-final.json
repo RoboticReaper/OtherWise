@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-003",
+  "status": "independent_final_recheck_pass",
+  "completed_at": "2026-10-08T22:21:39.468611+00:00",
+  "independent": true,
+  "reviewer_did_not_author_cards": true,
+  "scope": "Narrow removal recheck of the already examined SPRINT card; zero added sampled or unique cards. Prior passage judgments are carried forward only after exact unchanged-field/source verification.",
+  "current_candidate_path": "research/workers/research-batch-003/candidate.post-recheck.json",
+  "current_candidate_sha256": "e2062d3bf8244df18bb9c2cfec27c170c6e9413038b20af3a60431cc8da6a242",
+  "canonical_candidate_sha256": "e2062d3bf8244df18bb9c2cfec27c170c6e9413038b20af3a60431cc8da6a242",
+  "prior_candidate_sha256": "e9dafbba2dfeb6d382a48cc261ac675f3da0fbae505ba36f288afaa55fa972ab",
+  "initial_audit_sha256": "7d80ccf3a2ad8319cdd9605d413eb3d34b3b9c9ec4c56d99c4e5f2ce7d5e910a",
+  "first_recheck_sha256": "a6bf2d5f49125f0bc95a2dbd846999d128f031519226702e041a7d768ccfac3b",
+  "new_source_attempts": 0,
+  "new_unique_cards_audited": 0,
+  "new_sample_ids": [],
+  "sole_changed_id": "local:catalog:systolic-blood-pressure-intervention-trial",
+  "changed_fields": [
+    "relations",
+    "card_version"
+  ],
+  "version_change": {
+    "from": 2,
+    "to": 3
+  },
+  "removed_relation": {
+    "target_id": "local:catalog:randomized-controlled-trial",
+    "type": "related_to",
+    "note": "SPRINT is a named randomized target-comparison trial with eligibility criteria and benefit–harm outcomes.",
+    "source_ids": [
+      "health-sprint",
+      "health-rct"
+    ],
+    "assertion": "editorial"
+  },
+  "current_relations": [],
+  "missing_defensible_link": {
+    "id": "003-post-recheck-missing-SPRINT-RCT-link",
+    "concept_id": "local:catalog:systolic-blood-pressure-intervention-trial",
+    "status": "documented_missing_defensible_relationship",
+    "target_id": "local:catalog:randomized-controlled-trial",
+    "reason": "The attached NHLBI passage establishes the target comparison but not random allocation; the generic RCT definition does not establish SPRINT’s particular design. After the auditor exhausted three primary-report alternatives, the unsupported editorial edge is removed. This is an evidence-verification gap, not a finding that SPRINT was nonrandomized.",
+    "source_ids": [
+      "health-sprint",
+      "health-rct"
+    ],
+    "source_locators": [
+      {
+        "source_id": "health-sprint",
+        "locator": "How was the SPRINT study conducted?, lines 163–170"
+      },
+      {
+        "source_id": "health-rct",
+        "locator": "Randomized placebo-controlled trial definition, line 16"
+      }
+    ],
+    "audit_finding_id": "003-recheck-SPRINT-randomization-evidence-01",
+    "audit_path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-003/audit-review/audit.recheck.json",
+    "audit_sha256": "a6bf2d5f49125f0bc95a2dbd846999d128f031519226702e041a7d768ccfac3b",
+    "alternate_source_attempt_bound_exhausted": true,
+    "new_source_attempts": 0,
+    "replacement_relationship": null
+  },
+  "resolution": {
+    "003-risk-LTEE-qualification-01": {
+      "status": "resolved_by_correction_and_independent_recheck",
+      "remains_resolved": true,
+      "basis": "The aerobic/oxic wording, evidence and previously checked Genetics relation remain exactly unchanged from the successful first recheck."
+    },
+    "003-recheck-SPRINT-randomization-evidence-01": {
+      "status": "resolved_by_relation_removal",
+      "retained_card_supported": true,
+      "basis": "The sole relationship containing the unverified randomized-design premise is absent; the supported card, takeaway and evidence are unchanged. The missing link and prior access bounds remain documented.",
+      "does_not_establish": "This removal is not evidence that SPRINT was nonrandomized, and it does not newly verify its randomization."
+    }
+  },
+  "carry_forward": {
+    "all_11_correction_cards_covered": true,
+    "all_20_changed_content_fields_remain_exact": true,
+    "other_199_cards_unchanged": true,
+    "all_151_source_records_unchanged": true,
+    "original_audit_and_first_recheck_byte_preserved": true,
+    "preserved_artifact_hashes_verified": 127
+  },
+  "separate_sample_results": {
+    "random_new": {
+      "original_denominator": 20,
+      "initial_substantive_failures": 0,
+      "remaining_known_substantive_findings": 0
+    },
+    "risk_selected": {
+      "original_denominator": 20,
+      "initial_substantive_failures": 1,
+      "resolved": 1,
+      "remaining_known_substantive_findings": 0
+    },
+    "additional_targeted": {
+      "unique_cards": 9,
+      "source_premise_gaps_in_first_recheck": 1,
+      "resolved_by_removal": 1,
+      "remaining_known_substantive_findings": 0
+    }
+  },
+  "pooled_defect_rate": null,
+  "pooling_prohibited": true,
+  "residual_substantive_findings": [],
+  "documented_missing_relationships": [
+    "003-post-recheck-missing-SPRINT-RCT-link"
+  ],
+  "limitations": [
+    "Pass applies to the original frozen 40-card audit plus nine additional targeted cards and the changes actually examined; it does not certify every unsampled fact in all 200 cards.",
+    "Original source-access and cached-snapshot limitations remain as recorded in the preserved initial audit and first recheck.",
+    "No new public retrieval was attempted; the final change only removed a previously identified unsupported edge.",
+    "Current-page evidence does not certify historical author acquisition."
+  ],
+  "validation": {
+    "passed": 45,
+    "failed": 0,
+    "checks": [
+      {
+        "check": "Exact current hash",
+        "status": "pass"
+      },
+      {
+        "check": "Canonical current bytes identical",
+        "status": "pass"
+      },
+      {
+        "check": "Previous candidate intact",
+        "status": "pass"
+      },
+      {
+        "check": "Original authored and frozen candidate intact",
+        "status": "pass"
+      },
+      {
+        "check": "Initial audit byte-preserved",
+        "status": "pass"
+      },
+      {
+        "check": "First recheck byte-preserved",
+        "status": "pass"
+      },
+      {
+        "check": "Original frozen sample artifacts intact",
+        "status": "pass"
+      },
+      {
+        "check": "All 200 identities unchanged",
+        "status": "pass"
+      },
+      {
+        "check": "Only SPRINT record changed",
+        "status": "pass"
+      },
+      {
+        "check": "Only relation list and version changed",
+        "status": "pass"
+      },
+      {
+        "check": "SPRINT sole edge removed",
+        "status": "pass"
+      },
+      {
+        "check": "SPRINT version incremented exactly 2 to 3",
+        "status": "pass"
+      },
+      {
+        "check": "SPRINT supported card takeaway evidence and identity unchanged",
+        "status": "pass"
+      },
+      {
+        "check": "Other 199 records unchanged",
+        "status": "pass"
+      },
+      {
+        "check": "All 151 source records unchanged",
+        "status": "pass"
+      },
+      {
+        "check": "Missing defensible link explicitly recorded",
+        "status": "pass"
+      },
+      {
+        "check": "Missing-link record preserves first recheck provenance",
+        "status": "pass"
+      },
+      {
+        "check": "Correction manifest agrees exactly with diff",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:neutral-theory-of-molecular-evolution card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:neutral-theory-of-molecular-evolution evidence.0.note",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:neutral-theory-of-molecular-evolution relations.0.note",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:e-coli-long-term-evolution-experiment card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:e-coli-long-term-evolution-experiment evidence.0.note",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:pulse-oximetry card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:pulse-oximetry evidence.0.note",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:systolic-blood-pressure-intervention-trial card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:systolic-blood-pressure-intervention-trial evidence.0.note",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:marine-heatwave card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:temperature-inversion card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:temperature-inversion evidence.0.note",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:argo card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:argo evidence.0.note",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:artesian-aquifer card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:rootstock-dwarfing card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:variable-rate-irrigation card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:variable-rate-irrigation evidence.0.note",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:wood-sorption-hysteresis card",
+        "status": "pass"
+      },
+      {
+        "check": "Prior correction still present local:catalog:wood-sorption-hysteresis evidence.0.note",
+        "status": "pass"
+      },
+      {
+        "check": "All 11 previously corrected IDs covered",
+        "status": "pass"
+      },
+      {
+        "check": "LTEE oxygen qualification remains repaired",
+        "status": "pass"
+      },
+      {
+        "check": "LTEE supported relation unchanged",
+        "status": "pass"
+      },
+      {
+        "check": "Original samples remain disjoint with unchanged denominators",
+        "status": "pass"
+      },
+      {
+        "check": "All preserved artifacts listed by author hash correctly",
+        "status": "pass"
+      },
+      {
+        "check": "Pinned baseline and selection intact",
+        "status": "pass"
+      },
+      {
+        "check": "All current card word counts unchanged and valid",
+        "status": "pass"
+      }
+    ]
+  }
+}

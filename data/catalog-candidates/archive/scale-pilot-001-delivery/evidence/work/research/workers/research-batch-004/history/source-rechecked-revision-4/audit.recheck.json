@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-004",
+  "reviewed_revision": 4,
+  "status": "independent_targeted_recheck_complete_no_residual_substantive_findings_in_reviewed_scope",
+  "started_at": "2026-10-08T22:28:47+00:00",
+  "completed_at": "2026-10-08T22:30:54.631137+00:00",
+  "candidate_path": "research/workers/research-batch-004/candidate.revised.json",
+  "candidate_sha256": "43544752f00b38264a23f6eaf25823bfb95e5a480217fc833df89790dc276619",
+  "canonical_candidate_path": "data/catalog-candidates/research-batch-004.json",
+  "canonical_sha256": "43544752f00b38264a23f6eaf25823bfb95e5a480217fc833df89790dc276619",
+  "initial_audit_path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-004/audit-review/audit.initial.json",
+  "initial_audit_sha256": "ef88d9b261d0db5adb176166e766cf836c85100ac4a082a799a5c7aa0aff4d0b",
+  "initial_findings_preserved": true,
+  "recheck_scope": "Only the single Graph theory takeaway correction and its unchanged m18/m21 evidence, plus the already-reported local historical-byte recovery. No expanded card audit or new card changes.",
+  "independent_diff": {
+    "changed_ids": [
+      "local:authored:000604"
+    ],
+    "changed_fields": {
+      "local:authored:000604": [
+        "card_version",
+        "learning_takeaway"
+      ]
+    },
+    "added_ids": [],
+    "removed_ids": [],
+    "sources_unchanged": true,
+    "all_card_prose_unchanged": true,
+    "all_relationships_unchanged": true,
+    "other_199_records_unchanged": true,
+    "identity_fields_unchanged": true
+  },
+  "records": [
+    {
+      "id": "local:authored:000604",
+      "finding_id": "b004-f01",
+      "initial_sample_kind": "risk_selected",
+      "initial_severity": "medium",
+      "result": "resolved",
+      "before_learning_takeaway": "Represent connections by vertices and edges, then use structural constraints such as bipartite colorability.",
+      "after_learning_takeaway": "Represent a simple graph’s connections with an adjacency matrix, and explain why relabeling vertices can change the matrix without changing the underlying graph.",
+      "previous_card_version": 3,
+      "current_card_version": 4,
+      "independent_assessment": "The revised takeaway now describes a simple graph’s adjacency representation and explains that vertex relabeling can change the matrix while preserving the underlying graph. Both assertions match m21 paragraphs 1 and 3. The modal can correctly allows label permutations that leave the same matrix. The unsourced bipartite-colorability teaching point is removed, and the takeaway agrees with the unchanged card and source-asserted adjacency-matrix relationship.",
+      "inspected_public_passages": [
+        {
+          "source_id": "m18",
+          "url": "https://mathworld.wolfram.com/GraphTheory.html",
+          "locator": "Definition, paragraph 1; web lines 13; frozen snapshot paragraph-2",
+          "result_ref": "turn1532view0",
+          "supports": "Graph theory concerns the properties of mathematical graphs."
+        },
+        {
+          "source_id": "m21",
+          "url": "https://mathworld.wolfram.com/AdjacencyMatrix.html",
+          "locator": "Definition and label-permutation discussion, paragraphs 1 and 3; web lines 14 and 20-23; frozen snapshot paragraph-2 and paragraph-4",
+          "result_ref": "turn1532view1",
+          "supports": "Rows/columns encode graph adjacency; different vertex labelings can represent one unchanged underlying graph."
+        }
+      ],
+      "source_access": "Both public originals accessible; no failed URL or alternative source.",
+      "remaining_required_fix": null
+    }
+  ],
+  "coverage_carried_forward": {
+    "original_random_new": 20,
+    "original_risk_selected": 20,
+    "original_additional_targeted": 57,
+    "original_unique_ids": 97,
+    "original_boundary_change_bundles": 76,
+    "boundary_overlap_fixed40": 19,
+    "original_boundary_card_text_changes": 63,
+    "original_boundary_relationship_bundles": 6,
+    "original_boundary_source_changes": 8,
+    "attached_relationships_checked_original": 94,
+    "original_public_sources_inspected": 99,
+    "additional_full_factual_reviews_in_this_recheck": 0,
+    "targeted_post_audit_correction_bundles": 1,
+    "do_not_pool_denominators": true,
+    "initial_findings_by_group": {
+      "random_new": 0,
+      "risk_selected": 1,
+      "additional_targeted": 0
+    },
+    "residual_substantive_findings_by_group": {
+      "random_new": 0,
+      "risk_selected": 0,
+      "additional_targeted": 0
+    },
+    "reference_only_scope_preserved": "Three additional targeted IDs are shared-reference metadata checks, not full factual audits; the original distinction is unchanged."
+  },
+  "historical_provenance_update": {
+    "initial_missing_raw_count": 31,
+    "exact_existing_byte_matches_verified": 2,
+    "recovered": [
+      {
+        "source_id": "c04",
+        "existing_file": "research/workers/research-batch-004/test.html",
+        "sha256": "4f90a133fa79e03803dac10b3b78e57bc7bd0174292b10711e9badff5a26414b",
+        "matches_unchanged_candidate_acquisition_hash": true,
+        "all_matching_existing_files": [
+          "work/research/workers/research-batch-004/test.html"
+        ]
+      },
+      {
+        "source_id": "p19",
+        "existing_file": "research/workers/research-batch-004/source-cache/b04.html",
+        "sha256": "d3c92f64178283d5699f94b19e3578bcc7f1e5b39b94b39b9a66d7f93377ca83",
+        "matches_unchanged_candidate_acquisition_hash": true,
+        "all_matching_existing_files": [
+          "work/research/workers/research-batch-004/source-cache/b04.html"
+        ]
+      }
+    ],
+    "remaining_missing_raw_count": 29,
+    "remaining_missing_source_ids": [
+      "c01",
+      "c02",
+      "c05",
+      "c06",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "c14",
+      "c15",
+      "c16",
+      "c17",
+      "p02",
+      "p03",
+      "p04",
+      "p05",
+      "p06",
+      "p07",
+      "p08",
+      "p09",
+      "p11",
+      "p13",
+      "p15",
+      "p17",
+      "p18",
+      "p21",
+      "p23"
+    ],
+    "original_required_sources_with_raw_hash_recomputed": 70,
+    "independent_verification": "verification.recheck-provenance.json",
+    "no_historical_byte_refetch_or_reconstruction": true,
+    "source_records_unchanged": true
+  },
+  "remaining_limitations": [
+    "29 of the original 99 required source references still lack located original raw acquisition bytes. Their recorded historical acquisition hashes cannot be independently recomputed. Independent public-passage support and retained extracted-snapshot hashes remain as documented in the initial audit.",
+    "Public-original retrieval may use cached crawl content and does not establish the author’s historical browsing activity.",
+    "Coverage carries forward the fixed 40 and 57 targeted checks; it does not certify every unsampled factual claim or exhaustive identity uniqueness.",
+    "The original medium finding remains visible in the unchanged initial report. This recheck records its resolution separately."
+  ],
+  "residual_substantive_findings": [],
+  "final_acceptance_decision": null,
+  "acceptance_owner": "pilot coordinator",
+  "preservation_checks": {
+    "audit.initial.json": true,
+    "audit.initial.md": true,
+    "source-inspections.json": true,
+    "access-log.json": true,
+    "shared-source-correction-checks.json": true,
+    "verification.freeze.json": true,
+    "verification.sources.json": true,
+    "verification.boundary-diff.json": true,
+    "verification.identity-targets.json": true,
+    "candidate.before-audit.json": true,
+    "sample.frozen.json": true,
+    "sample-cards.frozen.json": true
+  },
+  "input_artifact_hashes": {
+    "research/workers/research-batch-004/post-audit-corrections.json": "29a15246b15df7556c28f621270e773d9eb91ca1adf3191828f736deda7c419e",
+    "research/workers/research-batch-004/post-audit-handoff.json": "ff089606dabfe7a957d46a083470e2ed310dd86ecb2a7d11911e87d86ec4add4",
+    "data/catalog-candidates/scale-pilot-001/checkpoint-post-audit-004-validation.json": "aa0b5fc70e40647df62b69cc804548e8961c3b7aec6f8649b5e97b8687f60082",
+    "research/workers/research-batch-004/historical-raw-provenance-check.json": "c25af9afea3c5baf5a1827a9d85bc422b279cf785c9415255534f2704212bf39"
+  },
+  "recheck_source_capture": {
+    "path": "recheck-web.json",
+    "sha256": "b3ab52074ca43eda204bc6024a2508082cd00d041b68ddf0e2dc0fa5124bba7f"
+  }
+}

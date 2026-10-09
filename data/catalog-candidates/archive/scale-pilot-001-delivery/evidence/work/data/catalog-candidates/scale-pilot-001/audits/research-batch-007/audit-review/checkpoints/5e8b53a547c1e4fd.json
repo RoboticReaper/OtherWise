@@ -1,0 +1,54 @@
+{
+  "id": "local:catalog:threefold-repetition",
+  "label": "Threefold repetition",
+  "sample_kind": "extra_boundary_targeted",
+  "boundary_changed": true,
+  "card_version": 2,
+  "reviewed_at": "2026-10-08T21:59:09.674025+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "idea",
+    "entity_kind": "idea",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "local:catalog:fivefold-repetition-chess",
+        "label": "Fivefold repetition in chess",
+        "original_description": null,
+        "prior_card_takeaways": [
+          "Distinguish an automatic repetition draw from a player’s threefold-repetition claim."
+        ]
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:fivefold-repetition-chess",
+        "label": "Fivefold repetition in chess"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Claim and intended-move timing now match 9.2; fivefold edge is explicit in 9.6.1. Position means the rules-defined state, not merely identical piece placement.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s001"
+      ],
+      "locator": "FIDE 9.2, 9.2.1–3, 9.6.1; web-03 lines 452–476"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:fivefold-repetition-chess",
+      "type": "related_to",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

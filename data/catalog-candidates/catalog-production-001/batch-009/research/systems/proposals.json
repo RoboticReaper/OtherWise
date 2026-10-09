@@ -1,0 +1,2103 @@
+{
+  "schema_version": 1,
+  "assignment": "systems",
+  "status": "selection_ready_awaiting_reservations",
+  "baseline_index_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+  "proposals": [
+    {
+      "id": "Q179310",
+      "label": "Computing",
+      "aliases": [
+        "Computing"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Computing disciplines",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Computing includes designing software, constructing hardware, and organizing information systems for practical problems.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "acm-computing",
+          "url": "https://ccecc.acm.org/guidance",
+          "locator": "The Sub-Disciplines of Computing; lines 27–42",
+          "support_note": "Covers several computing disciplines and their different kinds of work.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Do not present ACM's older five-part list as an exhaustive current taxonomy.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q339338",
+      "label": "Endianness",
+      "aliases": [
+        "Endianness"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Data representation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "The same multi-byte number is stored in different byte orders under big-endian and little-endian conventions.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "mdn-endianness",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Endianness",
+          "locator": "Definition and 0x12345678 example; lines 174–181",
+          "support_note": "The example shows reversed significance ordering across memory addresses.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Byte order differs from the order of bits within one byte.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q189401",
+      "label": "Virtual memory",
+      "aliases": [
+        "Virtual memory"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Memory management",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Virtual addresses translate to physical memory, allowing separate processes to use identical addresses without sharing the same physical pages.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "ms-virtual-memory",
+          "url": "https://learn.microsoft.com/en-us/windows-hardware/drivers/gettingstarted/virtual-address-spaces",
+          "locator": "Benefits and private address spaces; lines 31–50",
+          "support_note": "Explains translation and isolated process mappings.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Windows is the inspected example; avoid claiming identical memory limits across systems.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q165596",
+      "label": "Cache (computing)",
+      "aliases": [
+        "Cache (computing)"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Memory hierarchy",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Caches exploit repeated or nearby memory accesses by keeping recently accessed data in faster storage.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "mit-cache",
+          "url": "https://computationstructures.org/lectures/caches/caches.html",
+          "locator": "Locality and cache hits/misses; lines 115–140; relationship: Memory hierarchy definition; line 131",
+          "support_note": "Connects locality to fast SRAM and slower main memory.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q5830907",
+        "type": "broader_topic",
+        "source_ids": [
+          "mit-cache"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source identifies a hardware cache as SRAM computer memory."
+      },
+      "limits": [
+        "Cache benefits depend on access patterns; misses still require slower storage."
+      ]
+    },
+    {
+      "id": "Q201339",
+      "label": "Public-key cryptography",
+      "aliases": [
+        "Public-key cryptography"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Cryptography",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Public-key cryptography separates public and private keys, enabling encryption or verifiable signatures with different key roles.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "nist-public-key",
+          "url": "https://csrc.nist.gov/glossary/term/public_key_cryptography",
+          "locator": "Definitions; lines 133–152; relationship: Definitions, SP 800-56B Rev.2; line 146",
+          "support_note": "Defines paired keys and separate encryption/signature operations.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000527",
+        "type": "broader_topic",
+        "source_ids": [
+          "nist-public-key"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source explicitly classifies the method as a form of cryptography."
+      },
+      "limits": [
+        "Do not imply every public-key algorithm supports both encryption and signing."
+      ]
+    },
+    {
+      "id": "Q623447",
+      "label": "Diffie–Hellman key exchange",
+      "aliases": [
+        "Diffie–Hellman key exchange"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Cryptographic key establishment",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Diffie–Hellman combines each party's private key with the other's public key to calculate a shared secret.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "rfc-dh",
+          "url": "https://www.rfc-editor.org/rfc/rfc2631.html",
+          "locator": "§2.1–2.1.1; lines 90–138; relationship: Abstract; lines 23–24",
+          "support_note": "The equations show both parties compute the same secret from different private/public inputs.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8366",
+        "type": "broader_topic",
+        "source_ids": [
+          "rfc-dh"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source calls Diffie–Hellman an algorithm; no key-agreement-specific target exists in the baseline."
+      },
+      "limits": [
+        "Key agreement alone is not a claim that peers are authenticated; historical RFC is not modern deployment advice."
+      ]
+    },
+    {
+      "id": "Q264164",
+      "label": "Recursion (computer science)",
+      "aliases": [
+        "Recursion (computer science)"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Programming techniques",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A recursive function solves smaller instances by calling itself and stops when a base case is reached.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "mdn-recursion",
+          "url": "https://developer.mozilla.org/en-US/docs/Glossary/Recursion",
+          "locator": "Definition and countdown example; lines 172–193",
+          "support_note": "Self-calls continue until the stopping condition.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q80006",
+        "type": "broader_topic",
+        "source_ids": [
+          "mdn-recursion"
+        ],
+        "assertion": "editorial",
+        "note": "The passage describes recursive functions in programming."
+      },
+      "limits": [
+        "A base case must be reachable; recursion does not always terminate."
+      ]
+    },
+    {
+      "id": "Q2078",
+      "label": "SVG",
+      "aliases": [
+        "SVG"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Graphics formats",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "SVG describes vector images in editable XML text, allowing clean scaling and scripted behavior.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "mdn-svg",
+          "url": "https://developer.mozilla.org/en-US/docs/Web/SVG",
+          "locator": "Opening description; lines 174–180",
+          "support_note": "Describes vector scaling and text-based XML representation.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        },
+        {
+          "source_id": "w3c-svg-rel",
+          "url": "https://www.w3.org/TR/SVG/intro.html",
+          "locator": "§1.2 Compatibility with other standards efforts; line 22",
+          "support_note": "W3C explicitly calls SVG an XML application; HTML embedding has a syntax caveat.",
+          "inspection_mode": "web.run open and targeted relationship passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q2115",
+        "type": "application_of",
+        "source_ids": [
+          "w3c-svg-rel"
+        ],
+        "assertion": "source_asserted",
+        "note": "W3C explicitly calls SVG an XML application; HTML embedding has a syntax caveat."
+      },
+      "limits": [
+        "The scaling claim concerns vector content; embedded raster images retain their raster limits."
+      ]
+    },
+    {
+      "id": "Q245",
+      "label": "Raspberry Pi",
+      "aliases": [
+        "Raspberry Pi"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Educational computing",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Raspberry Pi exposes configurable GPIO pins so software can read digital inputs and control outputs.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "rpi-hardware",
+          "url": "https://www.raspberrypi.com/documentation/computers/raspberry-pi.html",
+          "locator": "GPIO and the 40-pin header; lines 2093–2117",
+          "support_note": "Input/output modes connect the computer to external components.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Family entry; pin counts and electrical capabilities vary by model. Avoid direct motor-drive instructions.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q187899",
+      "label": "Deep Blue (chess computer)",
+      "aliases": [
+        "Deep Blue (chess computer)"
+      ],
+      "primary_domain": "Computing & information",
+      "primary_subfield": "Computer chess",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Deep Blue combined parallel chess search, position evaluation, and grandmaster game data rather than relying on one technique.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "ibm-deep-blue",
+          "url": "https://research.ibm.com/publications/deep-blue",
+          "locator": "Abstract; lines 9–11",
+          "support_note": "Authors list search hardware, parallelism, evaluation and game databases.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "This explains the historical system; avoid claims of human-like thought.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "local:authored:000574",
+      "label": "Microeconomics",
+      "aliases": [
+        "Microeconomics"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Economic analysis",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Microeconomics studies households, workers, and firms, including how they choose spending, work, prices, and production.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-micro",
+          "url": "https://openstax.org/books/principles-microeconomics-3e/pages/1-2-microeconomics-and-macroeconomics",
+          "locator": "§1.2 opening comparison and Microeconomics subsection; lines 32–43",
+          "support_note": "Distinguishes individual decision-makers from economy-wide measures.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "A broad field entry, distinct from the separate Macroeconomics identity.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q215551",
+      "label": "Comparative advantage",
+      "aliases": [
+        "Comparative advantage"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Trade theory",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Comparative advantage depends on what production gives up, rather than who produces more with the same resources.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-comparative",
+          "url": "https://openstax.org/books/principles-microeconomics-3e/pages/19-1-absolute-and-comparative-advantage",
+          "locator": "§19.1; line 35",
+          "support_note": "Defines lower cost in terms of other goods.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Avoid unconditional promises that every person benefits from actual trade policies.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q272458",
+      "label": "Public good",
+      "aliases": [
+        "Public good"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Public economics",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Public goods are hard to exclude people from using, and one person's use does not diminish another's use.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-public-good",
+          "url": "https://openstax.org/books/principles-microeconomics-3e/pages/13-3-public-goods",
+          "locator": "Definition; lines 32–37; relationship: Public-good category and service examples; lines 30, 38",
+          "support_note": "Both nonexcludability and non-rivalry are required.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q2897903",
+        "type": "broader_topic",
+        "source_ids": [
+          "os-public-good"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source explicitly classifies public goods as goods and includes services as examples."
+      },
+      "limits": [
+        "Government funding alone does not make a good a public good."
+      ]
+    },
+    {
+      "id": "Q5970087",
+      "label": "Economies of scale",
+      "aliases": [
+        "Economies of scale"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Production economics",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Economies of scale reduce average cost as production expands while all inputs can vary in the long run.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-scale",
+          "url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-5-costs-in-the-long-run",
+          "locator": "Economies of Scale and long-run distinction; lines 65–99",
+          "support_note": "Distinguishes long-run scale from changing one short-run input.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Larger production need not always lower cost; diseconomies can follow.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q223639",
+      "label": "Elasticity (economics)",
+      "aliases": [
+        "Elasticity (economics)"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Market responsiveness",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Economic elasticity compares percentage changes; price elasticity measures how quantity responds to price changes.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-elasticity",
+          "url": "https://openstax.org/books/principles-microeconomics-3e/pages/5-1-price-elasticity-of-demand-and-price-elasticity-of-supply",
+          "locator": "Percentage definitions and slope comparison; lines 29–30 and 82–89",
+          "support_note": "Demand and supply examples use percentage ratios.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "The selected identity is general economic elasticity; price response is an example, not its only form.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q382444",
+      "label": "Marginal cost",
+      "aliases": [
+        "Marginal cost"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Production costs",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Marginal cost measures the additional cost of extra output, unlike average cost spread across all units.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-costs",
+          "url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-3-costs-in-the-short-run",
+          "locator": "Marginal versus average costs; lines 139–147; relationship: Marginal cost definition; line 82",
+          "support_note": "Defines marginal cost using changes in cost and quantity.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q240673",
+        "type": "broader_topic",
+        "source_ids": [
+          "os-costs"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source defines marginal cost as an economic cost measure."
+      },
+      "limits": [
+        "Discrete batches use cost change divided by output change."
+      ]
+    },
+    {
+      "id": "Q466764",
+      "label": "Fixed cost",
+      "aliases": [
+        "Fixed cost"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Production costs",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Fixed costs, such as a signed factory lease, stay unchanged as output changes over the relevant short run.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-costs",
+          "url": "https://openstax.org/books/principles-microeconomics-3e/pages/7-3-costs-in-the-short-run",
+          "locator": "Fixed costs; lines 93–95; relationship: Fixed and Variable Costs; line 93",
+          "support_note": "Lease example preserves the time horizon.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q240673",
+        "type": "broader_topic",
+        "source_ids": [
+          "os-costs"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source explicitly divides costs into fixed and variable categories."
+      },
+      "limits": [
+        "Costs can change after the lease or planning period; not permanently fixed."
+      ]
+    },
+    {
+      "id": "Q806663",
+      "label": "Bank run",
+      "aliases": [
+        "Bank run"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Banking stability",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Simultaneous deposit withdrawals can overwhelm a bank's ability to turn long-term assets into cash, even when assets exceed liabilities.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "fed-bank-run",
+          "url": "https://www.stlouisfed.org/publications/regional-economist/2023/may/interest-rate-risk-bank-runs",
+          "locator": "Runs and illiquidity; lines 45–53",
+          "support_note": "Explains why solvency does not guarantee immediate liquidity.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Mechanism only; no prediction about a particular bank or current depositor action.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q320863",
+      "label": "World Bank Group",
+      "aliases": [
+        "World Bank Group"
+      ],
+      "primary_domain": "Economics & organizations",
+      "primary_subfield": "Development institutions",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "The World Bank Group divides development work among five institutions, including government lending and private-sector investment.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "world-bank-group",
+          "url": "https://www.worldbank.org/ext/en/who-we-are",
+          "locator": "Five Organizations One World Bank Group; lines 68–130",
+          "support_note": "Lists five distinct organizations and functions.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "World Bank Group is broader than the World Bank (IBRD and IDA); do not conflate those IDs.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "local:authored:000545",
+      "label": "Civil engineering",
+      "aliases": [
+        "Civil engineering"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Infrastructure engineering",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Civil engineering designs and maintains shared infrastructure, including bridges, drinking-water networks, and transport systems.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "asce-civil",
+          "url": "https://www.asce.org/about-civil-engineering/",
+          "locator": "Opening definition; lines 342–358",
+          "support_note": "Names infrastructure examples spanning structures, transport and water.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "The field includes both construction and ongoing maintenance.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q654051",
+      "label": "Turbofan",
+      "aliases": [
+        "Turbofan"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Aircraft propulsion",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A turbofan splits incoming air between an engine core and a bypass stream; both streams contribute thrust.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "nasa-turbofan",
+          "url": "https://www.grc.nasa.gov/www/k-12/BGP/turbfan.html",
+          "locator": "Core/bypass paths and thrust; lines 6–11; relationship: Opening definition; line 6",
+          "support_note": "Distinguishes bypass fan flow from air entering combustion.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q193470",
+        "type": "broader_topic",
+        "source_ids": [
+          "nasa-turbofan"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source identifies turbofan engines as gas-turbine engine variations."
+      },
+      "limits": [
+        "Avoid a universal efficiency or bypass-ratio claim."
+      ]
+    },
+    {
+      "id": "Q626658",
+      "label": "Fly-by-wire",
+      "aliases": [
+        "Fly-by-wire"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Aircraft flight controls",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Fly-by-wire sends pilot commands electrically to actuators; digital versions use computers instead of direct mechanical control linkages.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "nasa-flybywire",
+          "url": "https://www.nasa.gov/centers-and-facilities/armstrong/flying-with-nasa-digital-fly-by-wire/",
+          "locator": "Digital signals replacing rods and cables; lines 255–263; relationship: Opening technology description; lines 258–259",
+          "support_note": "Shows a digital example replacing mechanical cockpit connections.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11481471",
+        "type": "broader_topic",
+        "source_ids": [
+          "nasa-flybywire"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source describes fly-by-wire as aircraft flight controls acting on control surfaces."
+      },
+      "limits": [
+        "The general identity also includes analog systems; do not define all fly-by-wire as digital."
+      ]
+    },
+    {
+      "id": "Q12570",
+      "label": "Suspension bridge",
+      "aliases": [
+        "Suspension bridge"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Bridge structures",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A suspension bridge transfers deck loads through hangers to main cables, towers, and anchored foundations.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "golden-suspension",
+          "url": "https://www.goldengate.org/exhibits/how-the-bridge-spans-the-golden-gate/",
+          "locator": "Anatomy of a Suspension Bridge; lines 32–47; relationship: Suspension structure and bridge anatomy; lines 31–32, 49",
+          "support_note": "The described load path links deck to ground.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q12280",
+        "type": "broader_topic",
+        "source_ids": [
+          "golden-suspension"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source identifies suspension as a bridge type and explains its structure."
+      },
+      "limits": [
+        "The Golden Gate Bridge is the inspected example; avoid claiming all designs use identical anchorages."
+      ]
+    },
+    {
+      "id": "Q1429218",
+      "label": "Cantilever bridge",
+      "aliases": [
+        "Cantilever bridge"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Bridge structures",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Cantilever bridge arms project from supporting towers or piers; at the Forth Bridge they connect through suspended spans.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "forth-cantilever",
+          "url": "https://www.theforthbridges.org/media/xkjlcac0/forth-bridge-world-heritage-site-draft-management-plan-2025.pdf",
+          "locator": "§3.3; PDF p.24, lines 567–576; relationship: §3.3, printed pp.24–25, PDF indices 23–24; lines 559–576",
+          "support_note": "The heritage statement describes projecting arms and connecting suspended spans.",
+          "inspection_mode": "web.run PDF text extraction and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q12280",
+        "type": "broader_topic",
+        "source_ids": [
+          "forth-cantilever"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source identifies cantilever as the bridge's structural type."
+      },
+      "limits": [
+        "Specific dimensions and steel details belong to the Forth example, not every cantilever bridge."
+      ]
+    },
+    {
+      "id": "Q190100",
+      "label": "Bearing (mechanical)",
+      "aliases": [
+        "Bearing (mechanical)"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Machine elements",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Bearings support relative motion and transmit forces; rolling bearings separate moving rings with balls or rollers rather than a sliding surface.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "nsk-bearing",
+          "url": "https://www.nsk.com/eu-en/tools-resources/training/whats-a-bearing/",
+          "locator": "Functions and rolling/sleeve comparison; lines 444–451",
+          "support_note": "Separates the support/load function from different friction mechanisms.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Not all bearings use rolling elements; plain and other types remain part of the identity.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q1934967",
+      "label": "Bicycle gearing",
+      "aliases": [
+        "Bicycle gearing"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Bicycle drivetrains",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "On a derailleur bicycle, a smaller front chainring or larger rear cog makes pedaling easier by changing gearing.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "rei-bike-gears",
+          "url": "https://www.rei.com/learn/expert-advice/bike-gears-and-shifting.html",
+          "locator": "Drivetrain and shifting; lines 37–45 and 53–62; relationship: Gearing system and drivetrain components; lines 30–40",
+          "support_note": "Shows the opposing effects of front and rear sprocket sizes.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q11442",
+        "type": "facet_of",
+        "source_ids": [
+          "rei-bike-gears"
+        ],
+        "assertion": "source_asserted",
+        "note": "The passage identifies gearing as a system of a bicycle."
+      },
+      "limits": [
+        "This example concerns a conventional chain-and-derailleur drivetrain; hub gearing differs."
+      ]
+    },
+    {
+      "id": "Q82412",
+      "label": "Epicyclic gearing",
+      "aliases": [
+        "Epicyclic gearing"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Gear trains",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Epicyclic or planetary gearing shares transmitted loads among several planet gears, supporting high torque capacity.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "khk-planetary",
+          "url": "https://khkgears.net/pdf/2025/internal-gears.pdf",
+          "locator": "Planetary systems and load sharing; PDF p.3, lines 456–471",
+          "support_note": "Manufacturer explains why several planet gears can carry a larger load.",
+          "inspection_mode": "web.run PDF text extraction and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Do not treat the illustrated product ratios as universal epicyclic ratios.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q2878855",
+      "label": "Bus rapid transit",
+      "aliases": [
+        "Bus rapid transit"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Public transport design",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Bus rapid transit combines protected bus lanes with rapid-transit features such as off-board fares and platform-level boarding.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "itdp-brt",
+          "url": "https://itdp.org/2025/04/17/what-is-brt-and-why-do-cities-need-it/",
+          "locator": "BRT definition and essentials; lines 57–65; relationship: The Role of Rapid Transit; line 57",
+          "support_note": "Identifies corridor design and boarding/payment elements.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q178512",
+        "type": "broader_topic",
+        "source_ids": [
+          "itdp-brt"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source identifies BRT as rapid transit and explicitly a public-transport solution."
+      },
+      "limits": [
+        "Features vary by system; the ITDP Standard is an explicit evaluation framework."
+      ]
+    },
+    {
+      "id": "Q40176",
+      "label": "Mass Rapid Transit (Singapore)",
+      "aliases": [
+        "Mass Rapid Transit (Singapore)"
+      ],
+      "primary_domain": "Engineering & transport",
+      "primary_subfield": "Urban rail systems",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Singapore's MRT includes the North East Line, an early fully automated underground heavy-rail line designed as part of integrated public transport.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "lta-mrt",
+          "url": "https://www.lta.gov.sg/content/ltagov/en/getting_around/public_transport/rail_network/north_east_line.html",
+          "locator": "Ahead of its time and train features; lines 7–38",
+          "support_note": "Explains automation and integration within the MRT system.",
+          "inspection_mode": "web.run open and targeted passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q178512",
+        "type": "broader_topic",
+        "source_ids": [
+          "lta-mrt"
+        ],
+        "assertion": "editorial",
+        "note": "The official page describes a public passenger rail service."
+      },
+      "limits": [
+        "Automation claim is about the North East Line example; do not imply every MRT line is driverless."
+      ]
+    },
+    {
+      "id": "Q274897",
+      "label": "Portal (video game)",
+      "aliases": [
+        "Portal (video game)"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Spatial puzzle games",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Portal makes linked openings into a puzzle tool for moving both the player and objects through space.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "valve-portal",
+          "url": "https://store.steampowered.com/app/400/Portal/",
+          "locator": "About This Game, lines 175–178",
+          "support_note": "Valve explicitly describes physical puzzles solved by opening portals for objects and the player.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "The source describes Portal, not its sequel or arbitrary real-world teleportation.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q49740",
+      "label": "Minecraft",
+      "aliases": [
+        "Minecraft"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Sandbox building games",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Minecraft changes building constraints by mode: Survival requires gathered materials, while Creative supplies blocks immediately.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "minecraft-modes",
+          "url": "https://www.minecraft.net/en-us/article/creative-vs-survival-mode",
+          "locator": "Building in Creative vs. Survival mode, lines 557–567",
+          "support_note": "The developer contrasts mined building resources with immediate block availability.",
+          "inspection_mode": "web_open_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "The comparison is between standard Survival and Creative, not every custom game mode.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q71910",
+      "label": "Tetris",
+      "aliases": [
+        "Tetris"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Falling-block puzzle games",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Tetris turns falling-piece placement into line clearing: a completely filled horizontal row disappears.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "tetris-about",
+          "url": "https://play.tetris.com/about",
+          "locator": "How do you play?, lines 47–49",
+          "support_note": "Official instructions require rotation and placement of Tetriminos to complete rows without gaps.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Do not generalize variant scoring or speed rules beyond this core mechanic.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q138",
+      "label": "King (chess)",
+      "aliases": [
+        "King (chess)"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Chess piece movement",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Outside castling, a chess king moves to an adjacent square that an opponent does not attack.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "uschess-pieces",
+          "url": "https://new.uschess.org/sites/default/files/media/documents/us-chess-rule-book-online-only-edition-chapters-1-2-9-10-11.pdf",
+          "locator": "§8A1, printed p.24, lines 872–879; relationship: §§3A–3B, printed p.15, PDF index 14; lines 573–578",
+          "support_note": "The official rule gives adjacent movement and excludes attacked destinations; the next section establishes castling as an exception.",
+          "inspection_mode": "web_pdf_text_open_and_find"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000254",
+        "type": "facet_of",
+        "source_ids": [
+          "uschess-pieces"
+        ],
+        "assertion": "source_asserted",
+        "note": "The chess rules explicitly list the king among each player's pieces."
+      },
+      "limits": [
+        "Keep the castling exception; ordinary movement is not the king's only legal move."
+      ]
+    },
+    {
+      "id": "Q139",
+      "label": "Queen (chess)",
+      "aliases": [
+        "Queen (chess)"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Chess piece movement",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A chess queen travels along ranks, files, or diagonals, but cannot jump over intervening pieces.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "uschess-pieces",
+          "url": "https://new.uschess.org/sites/default/files/media/documents/us-chess-rule-book-online-only-edition-chapters-1-2-9-10-11.pdf",
+          "locator": "§§7A–7B and 8B, printed p.24, lines 859–865 and 891–892; relationship: §§3A–3B, printed p.15, PDF index 14; lines 573–579",
+          "support_note": "The queen movement rule incorporates the rule against crossing occupied squares.",
+          "inspection_mode": "web_pdf_text_open_and_find"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000254",
+        "type": "facet_of",
+        "source_ids": [
+          "uschess-pieces"
+        ],
+        "assertion": "source_asserted",
+        "note": "The chess rules explicitly list the queen among each player's pieces."
+      },
+      "limits": [
+        "Destinations still obey general legality and occupancy rules; this is a movement pattern, not a complete move validator."
+      ]
+    },
+    {
+      "id": "Q165704",
+      "label": "High jump",
+      "aliases": [
+        "High jump"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Athletics jumps",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "High jump uses a one-foot takeoff to clear an elevated horizontal bar without dislodging it.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "wa-high-jump",
+          "url": "https://worldathletics.org/disciplines/high-jumping-event/high-jump",
+          "locator": "What is the high jump?, lines 196–198",
+          "support_note": "World Athletics describes the takeoff, clearance objective, and landing mat.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000281",
+        "type": "facet_of",
+        "source_ids": [
+          "wa-high-jump"
+        ],
+        "assertion": "editorial",
+        "note": "The official athletics page describes a jumping event."
+      },
+      "limits": [
+        "Do not imply that a particular clearance technique is compulsory."
+      ]
+    },
+    {
+      "id": "Q327742",
+      "label": "Relay race",
+      "aliases": [
+        "Relay race"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Athletics relays",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "In stadium relays, baton exchange is judged by the baton's position within the takeover zone, not simply the runners' bodies.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "wa-technical",
+          "url": "https://worldathletics.org/download/download?filename=3c94ced8-df32-41d0-82a6-b0bef85ef787.pdf&urlslug=C1.1+%26+C2.1+-+Competition+Rules+%26+Technical+Rules",
+          "locator": "Technical Rule 24.7, printed p.47, lines 3309–3321",
+          "support_note": "The rule defines the exchange from first receiving contact to sole possession and locates the entire baton.",
+          "inspection_mode": "web_pdf_text_open_and_find"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000281",
+        "type": "facet_of",
+        "source_ids": [
+          "wa-technical"
+        ],
+        "assertion": "editorial",
+        "note": "This relation concerns the inspected stadium athletics relay example."
+      },
+      "limits": [
+        "Qualify the stadium baton example; relay race is broader than this athletics rule and zone lengths differ."
+      ]
+    },
+    {
+      "id": "Q187204",
+      "label": "Triple jump",
+      "aliases": [
+        "Triple jump"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Athletics jumps",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Triple jump follows hop, step, and jump: the hop lands on the takeoff foot, then the step lands on the other.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "wa-technical",
+          "url": "https://worldathletics.org/download/download?filename=3c94ced8-df32-41d0-82a6-b0bef85ef787.pdf&urlslug=C1.1+%26+C2.1+-+Competition+Rules+%26+Technical+Rules",
+          "locator": "Triple Jump, printed pp.75–76, lines 4240–4247",
+          "support_note": "The rules state the sequence and distinguish same-foot from other-foot landings.",
+          "inspection_mode": "web_pdf_text_open_and_find"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000281",
+        "type": "facet_of",
+        "source_ids": [
+          "wa-technical"
+        ],
+        "assertion": "editorial",
+        "note": "The athletics rules prescribe a jumping event sequence."
+      },
+      "limits": [
+        "This explains the prescribed sequence, not a training technique or performance guarantee."
+      ]
+    },
+    {
+      "id": "Q136851",
+      "label": "Curling",
+      "aliases": [
+        "Curling"
+      ],
+      "primary_domain": "Games & sports",
+      "primary_subfield": "Ice target sports",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Curling stones curve as they slide; players apply rotation at release to control the direction of that curve.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "curling-teaching",
+          "url": "https://www.curling.ca/wp-content/uploads/2026/02/Getting-Started-in-Curling-Teacher-Gudie.pdf",
+          "locator": "Turns, Release and Line of Delivery, printed p.34, lines 984–987",
+          "support_note": "The national federation's guide connects stone rotation at release with direction of curl.",
+          "inspection_mode": "web_pdf_text_open_and_find"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Avoid claiming a settled microscopic explanation of curling or that every form allows sweeping.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q35395",
+      "label": "Phonetics",
+      "aliases": [
+        "Phonetics"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Speech science",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Phonetics studies speech as physical sound: how bodies produce it and which acoustic properties listeners receive.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "ling-phonetics",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/2-2-how-humans-produce-speech/",
+          "locator": "Video Script, lines 276–284",
+          "support_note": "The lesson distinguishes articulatory study of bodily production from acoustic study of sound waves.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "local:authored:000132",
+        "type": "broader_topic",
+        "source_ids": [
+          "ling-phonetics"
+        ],
+        "assertion": "editorial",
+        "note": "The linguistics chapter introduces the physical study of speech."
+      },
+      "limits": [
+        "Use speech as the concrete focus here; do not claim that modern phonetics excludes signed-language modality."
+      ]
+    },
+    {
+      "id": "Q43249",
+      "label": "Morpheme",
+      "aliases": [
+        "Morpheme"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Word structure",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A morpheme is a smallest meaningful unit; dogs contains dog and a plural ending despite having only one syllable.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "sil-morpheme",
+          "url": "https://glossary.sil.org/term/morpheme",
+          "locator": "Definition and Examples: Dogs, lines 20–45; relationship: Definition; line 22",
+          "support_note": "SIL explicitly contrasts two meaningful units with one syllable in dogs.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q8091",
+        "type": "facet_of",
+        "source_ids": [
+          "sil-morpheme"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source explicitly identifies morphemes as meaningful units within grammar."
+      },
+      "limits": [
+        "Morphemes need not correspond to syllables or stand alone as words."
+      ]
+    },
+    {
+      "id": "Q148877",
+      "label": "Assimilation (phonology)",
+      "aliases": [
+        "Assimilation (phonology)"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Sound patterns",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Assimilation makes a speech sound more like a nearby sound, with influence possible from either a preceding or following segment.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "ling-assimilation",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/3-6-articulatory-processes-assimilation/",
+          "locator": "Introduction and Video Script, lines 267–287",
+          "support_note": "The lesson defines similarity to neighboring sounds and distinguishes anticipatory from perseveratory influence.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q40998",
+        "type": "broader_topic",
+        "source_ids": [
+          "ling-assimilation"
+        ],
+        "assertion": "editorial",
+        "note": "The chapter describes an articulatory process within sound patterns."
+      },
+      "limits": [
+        "This is phonological assimilation, not cultural assimilation."
+      ]
+    },
+    {
+      "id": "Q208084",
+      "label": "Grammatical aspect",
+      "aliases": [
+        "Grammatical aspect"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Verb meaning",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Grammatical aspect presents an event as ongoing or complete, whereas tense locates it relative to time.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "ling-aspect",
+          "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics2/chapter/5-6/",
+          "locator": "Tense and Aspect, lines 476–486",
+          "support_note": "The lesson separates temporal location from the perspective taken on an event, including English progressive forms.",
+          "inspection_mode": "web_open_and_find_text"
+        },
+        {
+          "source_id": "sil-aspect-rel",
+          "url": "https://glossary.sil.org/term/aspect",
+          "locator": "Definition and glossary hierarchy; lines 22, 89–92",
+          "support_note": "Source explicitly identifies aspect as a grammatical category.",
+          "inspection_mode": "web.run open and targeted relationship passage inspection"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q980357",
+        "type": "broader_topic",
+        "source_ids": [
+          "sil-aspect-rel"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source explicitly identifies aspect as a grammatical category."
+      },
+      "limits": [
+        "Aspect distinctions and their grammatical marking vary across languages; English perfect and perfective are not interchangeable labels."
+      ]
+    },
+    {
+      "id": "Q255615",
+      "label": "Code-switching",
+      "aliases": [
+        "Code-switching"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Multilingual conversation",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Code-switching alternates languages within a conversation or utterance, so language-processing systems must handle more than one language together.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "cs-survey",
+          "url": "https://arxiv.org/abs/1904.00784",
+          "locator": "Abstract, lines 16–17",
+          "support_note": "The authors define alternation within conversation or utterance and motivate processing code-switched speech and text.",
+          "inspection_mode": "web_open_abstract_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Use the multilingual sense inspected here; broader social uses of the phrase are outside this source.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q286576",
+      "label": "Register (sociolinguistics)",
+      "aliases": [
+        "Register (sociolinguistics)"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Language in context",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "A register groups language by situation of use, such as conversation or research methods, rather than simply by speaker community.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "cambridge-register",
+          "url": "https://www.cambridge.org/core/books/abs/corpus-linguistics/register-variation-and-english-for-specific-purposes/72D3387EE08CFCD5D66B437F712DC07B",
+          "locator": "Public chapter Summary, lines 477–484; relationship: Public chapter summary; line 480",
+          "support_note": "The authors define situational varieties and distinguish them from dialects associated with speaker groups.",
+          "inspection_mode": "web_open_and_find_public_summary"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q3329375",
+        "type": "broader_topic",
+        "source_ids": [
+          "cambridge-register"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source explicitly classifies registers as situational language varieties."
+      },
+      "limits": [
+        "This is the authors' functional register framework; not every sociolinguistic theory draws the same boundary."
+      ]
+    },
+    {
+      "id": "Q5378197",
+      "label": "English Braille",
+      "aliases": [
+        "English Braille"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Tactile writing systems",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "English Braille can spell letters individually or use contractions that represent frequent words and letter groups.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "bana-english",
+          "url": "https://www.brailleauthority.org/signage/index.html",
+          "locator": "What Is Braille? and Contracted and Uncontracted Braille, lines 9–16 and 49–59; relationship: Braille codes and English Braille; lines 15–16, 49–57",
+          "support_note": "BANA describes six-dot cells, character meanings, and contracted versus uncontracted English text.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q79894",
+        "type": "broader_topic",
+        "source_ids": [
+          "bana-english"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source identifies an English Braille code within Braille; UEB remains one contemporary example."
+      },
+      "limits": [
+        "English Braille is the broad identity; UEB is the inspected contemporary example, not a synonym for all historical English codes."
+      ]
+    },
+    {
+      "id": "Q14759",
+      "label": "American Sign Language",
+      "aliases": [
+        "American Sign Language"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Signed languages",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "American Sign Language uses hands and facial movement with its own grammar, rather than reproducing English word for word.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "nidcd-asl",
+          "url": "https://www.nidcd.nih.gov/health/american-sign-language",
+          "locator": "What is American Sign Language?, lines 22–24",
+          "support_note": "The NIH institute identifies ASL as a natural language expressed with hands and face and with grammar different from English.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q34228",
+        "type": "broader_topic",
+        "source_ids": [
+          "nidcd-asl"
+        ],
+        "assertion": "editorial",
+        "note": "The passage identifies ASL as a distinct signed language."
+      },
+      "limits": [
+        "ASL is not a universal sign language; other regions have different signed languages."
+      ]
+    },
+    {
+      "id": "local:authored:000685",
+      "label": "Montessori education",
+      "aliases": [
+        "Montessori education"
+      ],
+      "primary_domain": "Learning & language",
+      "primary_subfield": "Educational methods",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Montessori practice arranges accessible materials so children choose an activity, work with it, and restore it before choosing again.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "ams-montessori",
+          "url": "https://amshq.org/about-us/inside-the-montessori-classroom/infant-and-toddler/",
+          "locator": "Classroom environment, lines 365–377",
+          "support_note": "The society describes accessible learning materials and the child's choose-use-clean-up cycle.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "The inspected example concerns infant and toddler classrooms; it does not establish comparative educational outcomes.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q212737",
+      "label": "Classical conditioning",
+      "aliases": [
+        "Classical conditioning"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Associative learning",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Classical conditioning lets a previously neutral cue elicit a learned response after it is paired with another stimulus.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-classical",
+          "url": "https://openstax.org/books/psychology-2e/pages/6-2-classical-conditioning",
+          "locator": "Pavlov's experiments, lines 31–47; relationship: Opening definition; line 31",
+          "support_note": "The text traces tone-food pairing and later salivation to the tone alone.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q133500",
+        "type": "broader_topic",
+        "source_ids": [
+          "os-classical"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source identifies classical conditioning as a learning process."
+      },
+      "limits": [
+        "The example concerns stimulus association; do not equate it with reinforcement of voluntary actions."
+      ]
+    },
+    {
+      "id": "Q847079",
+      "label": "Operant conditioning",
+      "aliases": [
+        "Operant conditioning"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Associative learning",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Operant conditioning changes future behavior through its consequences: reinforcement increases a behavior's likelihood, while punishment decreases it.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-operant",
+          "url": "https://openstax.org/books/psychology-2e/pages/6-3-operant-conditioning",
+          "locator": "Introduction and terms, lines 30–54; relationship: Opening classification; line 30",
+          "support_note": "The text defines behavior-consequence association and the direction of reinforcement and punishment.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q133500",
+        "type": "broader_topic",
+        "source_ids": [
+          "os-operant"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source explicitly classifies operant conditioning as associative learning."
+      },
+      "limits": [
+        "Negative reinforcement removes a stimulus to increase behavior; it is not another name for punishment."
+      ]
+    },
+    {
+      "id": "Q272021",
+      "label": "Gestalt psychology",
+      "aliases": [
+        "Gestalt psychology"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Perceptual organization",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Gestalt psychology studies organized perception; nearby dots, for example, tend to appear as groups rather than isolated inputs.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-gestalt",
+          "url": "https://openstax.org/books/psychology-2e/pages/5-6-gestalt-principles-of-perception",
+          "locator": "Introduction and proximity, lines 30–39",
+          "support_note": "OpenStax connects Gestalt's organized-whole account to the proximity grouping principle.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Proximity is one example, not an exhaustive account of the historical school.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q783092",
+      "label": "Executive functions",
+      "aliases": [
+        "Executive functions"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Cognitive control",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Executive functions help people plan, focus attention, switch between demands, and coordinate tasks.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "harvard-executive",
+          "url": "https://developingchild.harvard.edu/resource-guides/guide-executive-function/",
+          "locator": "Introduction, lines 54–62",
+          "support_note": "Harvard describes planning, attention, shifting, juggling tasks, and information management.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "This is a group of cognitive skills, not a single brain switch or a measure of personal virtue.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q221284",
+      "label": "Conformity",
+      "aliases": [
+        "Conformity"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Social influence",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Conformity can mean following a group's behavior without privately agreeing; people may seek acceptance or trust the group's information.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-conformity",
+          "url": "https://openstax.org/books/psychology-2e/pages/12-4-conformity-compliance-and-obedience",
+          "locator": "Conformity, lines 34–50; relationship: Social influence introduction and classification; lines 31, 63, 117–120",
+          "support_note": "The text distinguishes going along, normative acceptance, and informational reliance.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q161272",
+        "type": "broader_topic",
+        "source_ids": [
+          "os-conformity"
+        ],
+        "assertion": "editorial",
+        "note": "Editorially places conformity within social psychology; the source's explicit narrower category lacks a baseline ID."
+      },
+      "limits": [
+        "These are mechanisms and possibilities; do not imply that everyone conforms in every group."
+      ]
+    },
+    {
+      "id": "Q191062",
+      "label": "Mnemonic",
+      "aliases": [
+        "Mnemonic"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Memory strategies",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "A mnemonic organizes recall cues; the acronym HOMES uses initials to cue the five Great Lakes.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-mnemonic",
+          "url": "https://openstax.org/books/psychology-2e/pages/8-4-ways-to-enhance-memory",
+          "locator": "Mnemonic devices, lines 39–46 and 69–70; relationship: Mnemonic devices; line 39",
+          "support_note": "The text defines memory aids and explicitly gives HOMES as an acronym example.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q492",
+        "type": "broader_topic",
+        "source_ids": [
+          "os-mnemonic"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source classifies mnemonics as memory aids for encoding information."
+      },
+      "limits": [
+        "A mnemonic provides cues; it does not guarantee accurate recall or understanding."
+      ]
+    },
+    {
+      "id": "Q1377840",
+      "label": "Forgetting",
+      "aliases": [
+        "Forgetting"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Memory retrieval",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Forgetting can reflect interference: older information blocks new recall, or newer information competes with an older memory.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-forgetting",
+          "url": "https://openstax.org/books/psychology-2e/pages/8-3-problems-with-memory",
+          "locator": "Interference, lines 154–160; relationship: Forgetting and memory-error taxonomy; lines 105, 113–120",
+          "support_note": "The passage distinguishes proactive and retroactive interference and notes inaccessible stored information.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q492",
+        "type": "facet_of",
+        "source_ids": [
+          "os-forgetting"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source treats forgetting as a memory failure, including temporary retrieval blocking."
+      },
+      "limits": [
+        "Interference is one cause of forgetting; failure to recall does not by itself prove permanent erasure."
+      ]
+    },
+    {
+      "id": "Q1860557",
+      "label": "Self-concept",
+      "aliases": [
+        "Self-concept"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Self and identity",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Self-concept is how someone thinks and feels about themselves; Rogers distinguished the perceived real self from an ideal self.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-self-concept",
+          "url": "https://openstax.org/books/psychology-2e/pages/11-5-humanistic-approaches",
+          "locator": "Carl Rogers and self-concept, lines 33–35",
+          "support_note": "The text defines self-concept and gives Rogers's real-versus-ideal distinction.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Attribute the distinction to Rogers; avoid presenting his claims about health or parenting as established universal effects.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q161272",
+      "label": "social psychology",
+      "aliases": [
+        "social psychology"
+      ],
+      "primary_domain": "Mind & behavior",
+      "primary_subfield": "Social cognition and interaction",
+      "entity_kind": "idea",
+      "scope": "broad_field",
+      "learning_takeaway": "Social psychology examines how other people and social situations shape thoughts, feelings, and actions alongside individual characteristics.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-social-psych",
+          "url": "https://openstax.org/books/psychology-2e/pages/12-1-what-is-social-psychology",
+          "locator": "Definition and scope, lines 33–41",
+          "support_note": "The section covers interpersonal influence, situational interpretation, and modern attention to both person and situation.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Do not imply that situations determine all behavior or that personality is irrelevant.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q841628",
+      "label": "Social stratification",
+      "aliases": [
+        "Social stratification"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Social inequality",
+      "entity_kind": "idea",
+      "scope": "topic",
+      "learning_takeaway": "Social stratification ranks groups through unequal resources and status, rather than merely describing individual differences.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-stratification",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/9-1-what-is-social-stratification",
+          "locator": "Definition and society-level rankings; lines 31–45",
+          "support_note": "The passage connects social rankings with wealth, income, education, background and power.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Ranking systems and relevant resources vary across societies.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q194417",
+      "label": "Social mobility",
+      "aliases": [
+        "Social mobility"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Social inequality",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Social mobility can move people up or down; intergenerational comparisons track parents and children, while intragenerational comparisons track one lifetime.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-mobility",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/9-2-social-stratification-and-mobility-in-the-united-states",
+          "locator": "Social Mobility; lines 75–86; relationship: Social Mobility definition; line 80",
+          "support_note": "Defines mobility and distinguishes upward, downward, intergenerational and intragenerational changes.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q841628",
+        "type": "facet_of",
+        "source_ids": [
+          "os-mobility"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source defines mobility through movement within a social stratification system."
+      },
+      "limits": [
+        "Mobility is possible without being equally accessible or common in every system."
+      ]
+    },
+    {
+      "id": "Q741550",
+      "label": "Cultural relativism",
+      "aliases": [
+        "Cultural relativism"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Understanding cultures",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Cultural relativism interprets a culture using its own standards; understanding a practice does not require endorsing it.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-cultural-relativism",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/3-1-what-is-culture",
+          "locator": "Cultural relativism and critical evaluation; lines 80–85",
+          "support_note": "Contrasts cultural relativism with judging another culture through one's own standards.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "Do not imply that interpretation prevents criticism or requires accepting every practice.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q5446591",
+      "label": "Fictive kinship",
+      "aliases": [
+        "Fictive kinship"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Family and kinship",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Fictive kinship recognizes family ties through social commitment without requiring biological ancestry; godparenthood provides one example.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-fictive-kinship",
+          "url": "https://openstax.org/books/introduction-anthropology/pages/11-2-defining-family-and-household",
+          "locator": "Fictive Kinship; lines 69–81; relationship: Fictive Kinship definition; line 71",
+          "support_note": "The section describes intentional family relationships and godparenthood.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q171318",
+        "type": "broader_topic",
+        "source_ids": [
+          "os-fictive-kinship"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source explicitly identifies fictive kinship as a type of kinship tie."
+      },
+      "limits": [
+        "Fictive does not mean fake; a godparent may also be a biological relative."
+      ]
+    },
+    {
+      "id": "Q1163216",
+      "label": "Symbolic interactionism",
+      "aliases": [
+        "Symbolic interactionism"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Social theory",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Symbolic interactionism examines how people create and interpret shared meanings through everyday interactions.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-symbolic",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/1-3-theoretical-perspectives-in-sociology",
+          "locator": "Symbolic Interactionist Theory; lines 85–91; relationship: Sociological theories table and Symbolic Interactionist Theory; lines 36–42, 87",
+          "support_note": "The theory emphasizes communication, symbols and meanings formed and interpreted through interaction.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q1377163",
+        "type": "broader_topic",
+        "source_ids": [
+          "os-symbolic"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source lists symbolic interactionism among sociological theories and identifies its micro-level scope."
+      },
+      "limits": [
+        "Present this as a theoretical perspective, not a claim that one mechanism explains all society."
+      ]
+    },
+    {
+      "id": "Q185467",
+      "label": "Socialization",
+      "aliases": [
+        "Socialization"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Norms and social learning",
+      "entity_kind": "idea",
+      "scope": "idea",
+      "learning_takeaway": "Socialization is lifelong learning of a group's norms, beliefs and values; changing workplaces can require learning new expectations.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "os-socialization",
+          "url": "https://openstax.org/books/introduction-sociology-3e/pages/5-introduction",
+          "locator": "Socialization definition and workplace example; lines 48–55; relationship: Ongoing learning process; line 51",
+          "support_note": "The workplace example and definition show social learning beyond childhood.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q133500",
+        "type": "broader_topic",
+        "source_ids": [
+          "os-socialization"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source explicitly describes socialization as an ongoing learning process."
+      },
+      "limits": [
+        "Socialization is broader than casual socializing and does not end in childhood."
+      ]
+    },
+    {
+      "id": "local:authored:000032",
+      "label": "Universal design",
+      "aliases": [
+        "Universal design"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Accessibility and inclusion",
+      "entity_kind": "idea",
+      "scope": "facet_or_application",
+      "learning_takeaway": "Universal design accommodates diverse users through choices such as perceptible information, flexible use and reduced physical effort.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "ncsu-universal",
+          "url": "https://design.ncsu.edu/research/center-for-universal-design/",
+          "locator": "Principles 1, 2, 4, 6 and 7; lines 132–202; relationship: Universal Design definition; lines 127–129",
+          "support_note": "The principles describe equivalent access, user options, understandable information and comfortable use.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": {
+        "target_id": "Q82604",
+        "type": "broader_topic",
+        "source_ids": [
+          "ncsu-universal"
+        ],
+        "assertion": "source_asserted",
+        "note": "Source explicitly defines universal design as design of products and environments."
+      },
+      "limits": [
+        "The principles guide design; no single design necessarily meets every user's needs."
+      ]
+    },
+    {
+      "id": "Q461",
+      "label": "Internet Archive",
+      "aliases": [
+        "Internet Archive"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "Public knowledge institutions",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "Internet Archive's Wayback Machine lets people inspect captured webpages by URL and date, though an archived site can contain gaps.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "ia-wayback",
+          "url": "https://help.archive.org/help/using-the-wayback-machine/",
+          "locator": "URL/date search and incomplete captures; lines 12–16, 57–69",
+          "support_note": "The help page explains URL/date searches and warns that missing captures may lead to another date or the live web.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "One service illustrates the institution; avoid claiming comprehensive or complete archival coverage.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    },
+    {
+      "id": "Q740308",
+      "label": "UNICEF",
+      "aliases": [
+        "UNICEF"
+      ],
+      "primary_domain": "Society & relationships",
+      "primary_subfield": "International organizations",
+      "entity_kind": "named_subject",
+      "scope": "topic",
+      "learning_takeaway": "UNICEF supports childhood immunization by procuring cold-chain equipment that protects vaccines during storage and transport.",
+      "identity_reason": "Eligible canonical identity; inspected subject matches the frozen label and original description.",
+      "discovery_evidence": [
+        {
+          "source_id": "unicef-cold",
+          "url": "https://www.unicef.org/supply/what-cold-chain",
+          "locator": "Temperature protection and UNICEF procurement; lines 64–80",
+          "support_note": "The passage describes equipment and services UNICEF procures with governments and partners.",
+          "inspection_mode": "web_open_and_find_text"
+        }
+      ],
+      "proposed_parent": null,
+      "limits": [
+        "This is one documented activity, not UNICEF's full mandate; storage requirements vary by vaccine.",
+        "No supported parent relation selected from the inspected passage; preserve this gap unless further evidence resolves it."
+      ]
+    }
+  ],
+  "issues": [],
+  "sources_inspected": [
+    "acm-computing",
+    "mdn-endianness",
+    "ms-virtual-memory",
+    "mit-cache",
+    "nist-public-key",
+    "rfc-dh",
+    "mdn-recursion",
+    "mdn-svg",
+    "rpi-hardware",
+    "ibm-deep-blue",
+    "os-micro",
+    "os-comparative",
+    "os-scale",
+    "os-elasticity",
+    "os-costs",
+    "os-public-good",
+    "fed-bank-run",
+    "world-bank-group",
+    "asce-civil",
+    "nasa-turbofan",
+    "nasa-flybywire",
+    "golden-suspension",
+    "forth-cantilever",
+    "nsk-bearing",
+    "rei-bike-gears",
+    "khk-planetary",
+    "itdp-brt",
+    "lta-mrt",
+    "valve-portal",
+    "minecraft-modes",
+    "tetris-about",
+    "uschess-pieces",
+    "wa-high-jump",
+    "wa-technical",
+    "curling-teaching",
+    "ling-phonetics",
+    "sil-morpheme",
+    "ling-assimilation",
+    "ling-aspect",
+    "cs-survey",
+    "cambridge-register",
+    "bana-english",
+    "nidcd-asl",
+    "ams-montessori",
+    "os-classical",
+    "os-operant",
+    "os-gestalt",
+    "harvard-executive",
+    "os-conformity",
+    "os-mnemonic",
+    "os-forgetting",
+    "os-self-concept",
+    "os-social-psych",
+    "os-stratification",
+    "os-mobility",
+    "os-cultural-relativism",
+    "os-fictive-kinship",
+    "os-symbolic",
+    "os-socialization",
+    "ncsu-universal",
+    "ia-wayback",
+    "unicef-cold",
+    "w3c-svg-rel",
+    "sil-aspect-rel"
+  ]
+}

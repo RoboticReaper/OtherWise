@@ -1,0 +1,23 @@
+{
+  "stage": "B_authoring_and_full_boundary_recheck",
+  "completed_at": "2026-10-08T22:04:52.664716+00:00",
+  "first_stage_b_source_acquisition_at": "2026-10-08T20:42:49.504351+00:00",
+  "elapsed_wall_seconds": null,
+  "elapsed_reason": "A distinct Stage B turn-start timestamp was not retained; source acquisition timestamps and complete-draft preservation timestamps are recorded separately. No inferred duration is presented as a measurement.",
+  "author_reviewed": 200,
+  "boundary_rechecked": 200,
+  "platform_tokens": null,
+  "platform_cost": null,
+  "usage_reason": "Platform token/cost telemetry is not exposed to this worker.",
+  "execution": "Native cloud tools; requested GPT-6 Astra/max. Local code assembles and validates human-readable model-authored rows; no per-concept AI API.",
+  "corrected_card_bundles": 76,
+  "changed_source_reference_records": 8,
+  "boundary_recheck_new_network_requests": 0,
+  "boundary_method": "Full cached-passage reinspection with per-ID notes; original acquisitions and retry history remain in access-log.json.",
+  "batch_revision": 3,
+  "modified_existing_source_reference_records": 7,
+  "added_source_reference_records": 1,
+  "metadata_only_version_repairs": 7,
+  "manual_source_review_repeated": false,
+  "metadata_repair_reason": "Coordinator comparison counts all attached shared source-record changes as reference-bundle changes. Seven missing increments repaired; no new prose or source content changes."
+}

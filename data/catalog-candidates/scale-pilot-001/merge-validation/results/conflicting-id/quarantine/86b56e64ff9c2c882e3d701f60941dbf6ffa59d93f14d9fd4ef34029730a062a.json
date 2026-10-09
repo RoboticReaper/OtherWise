@@ -1,0 +1,21 @@
+{
+  "errors": [
+    {
+      "code": "concept_conflict",
+      "reason": "Conflicting records require a reviewed, reasoned, hash-bound version choice."
+    }
+  ],
+  "input_artifacts": [
+    {
+      "input_text": "{\n  \"batch\": {\n    \"completion_status\": \"synthetic_fixture\",\n    \"fixture\": true,\n    \"id\": \"research-batch-003\",\n    \"revision\": 1,\n    \"selection_manifest\": []\n  },\n  \"concepts\": [\n    {\n      \"aliases\": [\n        \"Capillarity\"\n      ],\n      \"card\": \"This synthetic fixture describes a simple mechanism in which a change in one quantity produces a corresponding change in another quantity. Its deliberately explicit explanation supplies enough words to exercise validation without representing a researched catalog card.\",\n      \"card_version\": 1,\n      \"domains\": [\n        \"Mathematics\"\n      ],\n      \"entity_kind\": \"idea\",\n      \"evidence\": [\n        {\n          \"locator\": \"Fixture section 1\",\n          \"note\": \"Supports the synthetic explanatory claim.\",\n          \"source_id\": \"r1\"\n        }\n      ],\n      \"id\": \"fixture:a\",\n      \"identity_urls\": [\n        \"https://example.org/fixture/a\"\n      ],\n      \"imported_records\": [],\n      \"label\": \"Capillarity\",\n      \"learning_takeaway\": \"Understand this synthetic mechanism for the labeled fixture only.\",\n      \"original_description\": null,\n      \"relations\": [],\n      \"scope\": \"idea\"\n    }\n  ],\n  \"issues\": [],\n  \"schema_version\": 1,\n  \"sources\": [\n    {\n      \"id\": \"r1\",\n      \"locator\": \"Fixture section 1\",\n      \"retrieved_at\": \"2024-04-03T12:34:56+00:00\",\n      \"revision\": null,\n      \"title\": \"Synthetic fixture reference\",\n      \"url\": \"https://example.org/fixture/a\"\n    }\n  ],\n  \"validation\": {}\n}\n",
+      "path": "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/fixtures/a.json",
+      "sha256": "12af23ca76ac901326cbd0852517fe6060974c085e23716da45f3fdad8874346"
+    },
+    {
+      "input_text": "{\n  \"batch\": {\n    \"completion_status\": \"synthetic_fixture\",\n    \"fixture\": true,\n    \"id\": \"research-batch-004\",\n    \"revision\": 1,\n    \"selection_manifest\": []\n  },\n  \"concepts\": [\n    {\n      \"aliases\": [\n        \"Capillarity\"\n      ],\n      \"card\": \"This revised synthetic fixture describes a different mechanism in which a change in one quantity does not produce a corresponding change in another quantity. The incompatible account is retained to require an explicit reviewed version selection before assembly.\",\n      \"card_version\": 2,\n      \"domains\": [\n        \"Mathematics\"\n      ],\n      \"entity_kind\": \"idea\",\n      \"evidence\": [\n        {\n          \"locator\": \"Fixture section 1\",\n          \"note\": \"Supports the synthetic explanatory claim.\",\n          \"source_id\": \"r1\"\n        }\n      ],\n      \"id\": \"fixture:a\",\n      \"identity_urls\": [\n        \"https://example.org/fixture/a\"\n      ],\n      \"imported_records\": [],\n      \"label\": \"Capillarity\",\n      \"learning_takeaway\": \"Understand this synthetic mechanism for the labeled fixture only.\",\n      \"original_description\": null,\n      \"relations\": [],\n      \"scope\": \"idea\"\n    }\n  ],\n  \"issues\": [],\n  \"schema_version\": 1,\n  \"sources\": [\n    {\n      \"id\": \"r1\",\n      \"locator\": \"Fixture section 1\",\n      \"retrieved_at\": \"2024-04-03T12:34:56+00:00\",\n      \"revision\": null,\n      \"title\": \"Synthetic fixture reference\",\n      \"url\": \"https://example.org/fixture/a\"\n    }\n  ],\n  \"validation\": {}\n}\n",
+      "path": "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/data/catalog-candidates/scale-pilot-001/merge-validation/fixtures/conflict.json",
+      "sha256": "422c932d5c2ee1a954effb7592dd25e16a4ca3fc6b72aea9fe02201a4d79ebdf"
+    }
+  ],
+  "status": "quarantined"
+}

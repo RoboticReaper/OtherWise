@@ -1,0 +1,1447 @@
+{
+  "schema_version": 1,
+  "assignment": "culture",
+  "auditor_task_identity": "/root/batch008_audit_culture",
+  "independence_statement": "This auditor did not author the sampled cards. Initial frozen snapshots were audited independently against actual cited passages and pinned baseline meanings; no private recommendation-pilot ratings were used.",
+  "review_stage": "initial",
+  "sample_manifest_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/audit-sample.json",
+  "sample_manifest_sha256": "5b22b4cd61f691075015997f6c240b3365786131ebe2252f10de6a8e23b15f69",
+  "initial_candidate_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/frozen-initial/catalog.json",
+  "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "initial_assembled_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "baseline_index_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "initial_freeze_manifest_sha256": "d69d7a89c2ef52f17e454375c95c2b39b31d2a5fdbc37d29c5a602afc60f3ebb",
+  "review_completed_at": "2026-10-09T03:06:17.865549+00:00",
+  "records": {
+    "local:catalog:echr-pilot-judgment-procedure": {
+      "id": "local:catalog:echr-pilot-judgment-procedure",
+      "owner": "culture",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "f0eb5f8f71950370936aa4706d2c9a18c8bde7d3359cb1fac02853075d25ab0a",
+      "initial_source_bundle_sha256": "f1384b84b3eba7f897b6e58d4bedef1a1fe186411a08dc3ba123e13d392cfcc7",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::echr-pilot-judgments",
+          "title": "Factsheet – Pilot judgments",
+          "url": "https://www.echr.coe.int/documents/d/echr/FS_Pilot_judgments_ENG",
+          "original_url": "https://www.echr.coe.int/documents/d/echr/FS_Pilot_judgments_ENG",
+          "inspected_url": "https://www.echr.coe.int/documents/d/echr/FS_Pilot_judgments_ENG",
+          "author_cited_locator": "What is the pilot judgment procedure?, printed page 1, lines 4–18",
+          "inspected_locator": "What is the pilot judgment procedure?, PDF page 1 (zero-based page 0), extracted lines 4–18; Rule 61, lines 31–41",
+          "inspection_mode": "web.pdf_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": "November 2023",
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Structural problems behind repetitive applications.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::echr-pilot-judgments"
+          ],
+          "locator": "PDF page 1, lines 5–9",
+          "support": "Common national dysfunction motivates the procedure."
+        },
+        {
+          "claim": "Selection of representative cases.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::echr-pilot-judgments"
+          ],
+          "locator": "PDF page 1, lines 10–11",
+          "support": "Priority cases share the common root cause."
+        },
+        {
+          "claim": "Remedial measures indicated to governments.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::echr-pilot-judgments"
+          ],
+          "locator": "PDF page 1, lines 12–14",
+          "support": "Judgment identifies systemic problems and needed remedies."
+        },
+        {
+          "claim": "Related cases may pause and resume for justice.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::echr-pilot-judgments"
+          ],
+          "locator": "PDF page 1, lines 15–18",
+          "support": "Adjournment is conditional on prompt national measures; justice permits resumption."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Pilot judgment procedure (European Court of Human Rights)",
+        "entity_kind": "idea",
+        "scope": "idea",
+        "support": "The label names the European Court procedure under Convention rights; the short card preserves conditional adjournment, rather than an automatic stay.",
+        "locators": [
+          "What is the pilot judgment procedure?, PDF page 1 (zero-based page 0), extracted lines 4–18; Rule 61, lines 31–41"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "application_of",
+          "assertion": "source_asserted",
+          "target_id": "Q183191",
+          "target_label": "European Convention on Human Rights",
+          "target_meaning": "international treaty to protect human rights and fundamental freedoms in Europe",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/Q183191"
+          },
+          "source_ids": [
+            "research-batch-008-culture::echr-pilot-judgments"
+          ],
+          "locator": "PDF page 1, lines 11–14, 31–41",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "The Court tests Convention violations and mandates remedies; this is a procedure applying the treaty, not a relation to the Court’s identity.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:tashlich": {
+      "id": "local:catalog:tashlich",
+      "owner": "culture",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "dd0c5530d45e80057281285672069327c150b72bcb708f58c4b9e66142c6a6a0",
+      "initial_source_bundle_sha256": "b866ef180c05286f7209903e0bb118e2ad6d66bd92260d5f134156384226b5ee",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::chabad-tashlich",
+          "title": "Why Can’t I Feed Fish at Tashlich?",
+          "url": "https://www.chabad.org/library/article_cdo/aid/4501100/jewish/Why-Cant-I-Feed-Fish-at-Tashlich.htm",
+          "original_url": "https://www.chabad.org/library/article_cdo/aid/4501100/jewish/Why-Cant-I-Feed-Fish-at-Tashlich.htm",
+          "inspected_url": "https://www.chabad.org/library/article_cdo/aid/4501100/jewish/Why-Cant-I-Feed-Fish-at-Tashlich.htm",
+          "author_cited_locator": "Yehuda Shurpin’s main explanation, lines 258–265",
+          "inspected_locator": "Yehuda Shurpin, main explanation, extracted lines 258–265; feeding qualifications, lines 267–278",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": null,
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Rosh Hashanah prayers beside water and symbolic casting of sins.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::chabad-tashlich"
+          ],
+          "locator": "Lines 258 and 261–264",
+          "support": "Holiday, water, prayers and symbolism are explicit."
+        },
+        {
+          "claim": "Chabad describes shaking garment corners.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::chabad-tashlich"
+          ],
+          "locator": "Lines 258 and 264",
+          "support": "The gesture is part of its described symbolism."
+        },
+        {
+          "claim": "Feeding fish differs from the ritual act.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::chabad-tashlich"
+          ],
+          "locator": "Lines 258, 265 and 278",
+          "support": "The account excludes feeding from the ritual; the card makes no universal legal prohibition."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Tashlich",
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "support": "The Jewish Rosh Hashanah custom is distinct from feeding fish; garment practice is attributed to Chabad.",
+        "locators": [
+          "Yehuda Shurpin, main explanation, extracted lines 258–265; feeding qualifications, lines 267–278"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "target_id": "Q131028",
+          "target_label": "Rosh Hashanah",
+          "target_meaning": "Jewish day of judgement preceding Yom Kippur (day of atonement), one of several Jewish New Years",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/Q131028"
+          },
+          "source_ids": [
+            "research-batch-008-culture::chabad-tashlich"
+          ],
+          "locator": "Lines 258–264",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "The named ritual is explicitly a custom of the Rosh Hashanah holiday.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:gyotaku": {
+      "id": "local:catalog:gyotaku",
+      "owner": "culture",
+      "stratum": "random_new",
+      "initial_card_version": 1,
+      "initial_card_sha256": "4e99068d01572291c131d551ff923c607ccea31f8f3b0e98735a575df98139ed",
+      "initial_source_bundle_sha256": "a0b124c3494bf99652e436b55c7f6466f44027794bf53e7dccefb0e9b0fc04ee",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::smithsonian-gyotaku",
+          "title": "Educational Uses of Gyotaku or Fish Printing",
+          "url": "https://ocean.si.edu/conservation/get-involved/educational-uses-gyotaku-or-fish-printing",
+          "original_url": "https://ocean.si.edu/conservation/get-involved/educational-uses-gyotaku-or-fish-printing",
+          "inspected_url": "https://ocean.si.edu/conservation/get-involved/educational-uses-gyotaku-or-fish-printing",
+          "author_cited_locator": "Catherine Sutera’s museum account, lines 65–69",
+          "inspected_locator": "Catherine Sutera, extracted lines 65–69; July 2011 date at line 81",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": "July 2011",
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Paper rubbed over an inked fish transfers its surface.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::smithsonian-gyotaku"
+          ],
+          "locator": "Line 65",
+          "support": "Ink application and rice-paper rubbing produce the image."
+        },
+        {
+          "claim": "Prints record shape and texture.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::smithsonian-gyotaku"
+          ],
+          "locator": "Lines 65–66",
+          "support": "Species, size, patterns and texture are retained."
+        },
+        {
+          "claim": "Smithsonian replicas and excessive paint affect transfer.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::smithsonian-gyotaku"
+          ],
+          "locator": "Lines 68–69",
+          "support": "Museum activity uses rubber fish; too much paint smears detail."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Gyotaku",
+        "entity_kind": "idea",
+        "scope": "idea",
+        "support": "The Japanese fish-printing technique is distinguished from the Smithsonian replica-based educational adaptation.",
+        "locators": [
+          "Catherine Sutera, extracted lines 65–69; July 2011 date at line 81"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "application_of",
+          "assertion": "editorial",
+          "target_id": "local:authored:000351",
+          "target_label": "Printmaking",
+          "target_meaning": "Producing images through prepared surfaces and transferred impressions.",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/local:authored:000351"
+          },
+          "source_ids": [
+            "research-batch-008-culture::smithsonian-gyotaku"
+          ],
+          "locator": "Lines 65–69",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "Prepared fish surfaces transfer impressions to paper; these support the editorial application of the baseline Printmaking meaning.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:euclidean-buffering": {
+      "id": "local:catalog:euclidean-buffering",
+      "owner": "culture",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "ea0d56728d83d0da27a8d8d2dc4c507cdc027eeae850739f8373ff234a651ea7",
+      "initial_source_bundle_sha256": "3d6a39fb682e62a81cac6116c3d0f787279bc3ab5efd1402381cc5cecb4b1e17",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::culture-esri-buffer",
+          "title": "How Buffer (Analysis) works",
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+          "original_url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+          "inspected_url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+          "author_cited_locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+          "inspected_locator": "Euclidean and geodesic buffering, extracted lines 72–88; method definitions at 74–78 and Planar dispatch at 83–87",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": null,
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Straight-line distance zones on a flat plane.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-esri-buffer"
+          ],
+          "locator": "Lines 74–75",
+          "support": "Definition uses a two-dimensional Cartesian surface."
+        },
+        {
+          "claim": "Best for a suitably projected small region.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-esri-buffer"
+          ],
+          "locator": "Line 75",
+          "support": "Relatively small projected areas are recommended."
+        },
+        {
+          "claim": "Projection distortion changes represented Earth distances.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-esri-buffer"
+          ],
+          "locator": "Lines 76–77 and 92",
+          "support": "Buffer offsets lose accuracy in high-distortion areas."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Euclidean buffering",
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "support": "The mathematical Cartesian distance method is correctly identified; ArcGIS Planar is a software option that can also create geodesic buffers (lines 83–86).",
+        "locators": [
+          "Euclidean and geodesic buffering, extracted lines 72–88; method definitions at 74–78 and Planar dispatch at 83–87"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "target_id": "local:catalog:geographic-buffer",
+          "target_label": "Geographic buffer",
+          "target_meaning": "A geographic buffer marks a zone within a chosen distance of a feature. It is useful for proximity questions, but distance alone does not say how someone can travel there. A circular zone around a facility can therefore differ from its reachable area along roads.",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/local:catalog:geographic-buffer"
+          },
+          "source_ids": [
+            "research-batch-008-culture::culture-esri-buffer"
+          ],
+          "locator": "Lines 6, 74–75",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "The page explicitly makes Euclidean construction a method of geographic buffering.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:geodesic-buffering": {
+      "id": "local:catalog:geodesic-buffering",
+      "owner": "culture",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "8c804994118f4a6497fca6335d28c0cae7798c601a9859b2c63dfebfaf79133d",
+      "initial_source_bundle_sha256": "e44c90590fa6c26e59a76f352053a56b330a94c9cb08c3ece948783d30c4f07e",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::culture-esri-buffer",
+          "title": "How Buffer (Analysis) works",
+          "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+          "original_url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+          "inspected_url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/how-buffer-analysis-works.html",
+          "author_cited_locator": "“Euclidean and geodesic buffering”, method bullets and shape-preserving Geodesic option",
+          "inspected_locator": "Euclidean and geodesic buffering, extracted lines 72–88; method definitions at 74–78 and Planar dispatch at 83–87",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": null,
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Distance zones account for spheroidal curvature.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-esri-buffer"
+          ],
+          "locator": "Line 78",
+          "support": "Curvature is part of the definition."
+        },
+        {
+          "claim": "Useful at large extents, poles and date line.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-esri-buffer"
+          ],
+          "locator": "Lines 78–79",
+          "support": "These conditions are explicitly addressed."
+        },
+        {
+          "claim": "Flat-map distortion can coexist with correct globe appearance.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-esri-buffer"
+          ],
+          "locator": "Line 78",
+          "support": "The page contrasts flat and globe displays."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Geodesic buffering",
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "support": "The spheroidal distance method is correctly identified, without implying it is available only through ArcGIS’s Geodesic option.",
+        "locators": [
+          "Euclidean and geodesic buffering, extracted lines 72–88; method definitions at 74–78 and Planar dispatch at 83–87"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "target_id": "local:catalog:geographic-buffer",
+          "target_label": "Geographic buffer",
+          "target_meaning": "A geographic buffer marks a zone within a chosen distance of a feature. It is useful for proximity questions, but distance alone does not say how someone can travel there. A circular zone around a facility can therefore differ from its reachable area along roads.",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/local:catalog:geographic-buffer"
+          },
+          "source_ids": [
+            "research-batch-008-culture::culture-esri-buffer"
+          ],
+          "locator": "Lines 6, 74 and 78",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "The page explicitly makes geodesic construction a method of geographic buffering.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:port-chicago-mutiny-trial": {
+      "id": "local:catalog:port-chicago-mutiny-trial",
+      "owner": "culture",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "68a20667fd51366a98014d39bbb1e8a0b83f5650dd881ee5ebc251b7c856cd1f",
+      "initial_source_bundle_sha256": "254a63d7eab163c74d386d06bf3731a97b83f9faf330737d779588a41d30bf90",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::nps-port-chicago-trial",
+          "title": "The Mutiny Trial",
+          "url": "https://www.nps.gov/poch/learn/historyculture/the-mutiny-trial.htm",
+          "original_url": "https://www.nps.gov/poch/learn/historyculture/the-mutiny-trial.htm",
+          "inspected_url": "https://www.nps.gov/poch/learn/historyculture/the-mutiny-trial.htm",
+          "author_cited_locator": "Aftermath and Trial Proceedings (lines 39–47); exoneration update (55, 77)",
+          "inspected_locator": "The Aftermath and Mutiny, Trial Proceedings, lines 39–47; exoneration at 55 and 77; last updated at 82",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": "Updated August 9, 2024",
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "1944 explosion preceded refusal by 258 Black sailors.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::nps-port-chicago-trial"
+          ],
+          "locator": "Lines 37 and 40",
+          "support": "The source dates the explosion and reports the refusal."
+        },
+        {
+          "claim": "Fifty sailors convicted of mutiny.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::nps-port-chicago-trial"
+          ],
+          "locator": "Lines 44, 64 and 73",
+          "support": "The convicted group is distinguished from all 258."
+        },
+        {
+          "claim": "Dangerous work and Navy racial discrimination intersected.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::nps-port-chicago-trial"
+          ],
+          "locator": "Lines 40–43 and 47",
+          "support": "Safety, training and segregation are documented."
+        },
+        {
+          "claim": "Secretary of the Navy exonerated sailors July 17, 2024.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::nps-port-chicago-trial"
+          ],
+          "locator": "Lines 55 and 77",
+          "support": "Update covers the fifty and other 208; this is exoneration rather than the earlier pardon."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Port Chicago mutiny trial",
+        "entity_kind": "named_subject",
+        "scope": "facet_or_application",
+        "support": "This names the 1944 trial, distinguishes fifty mutiny convictions from the 258 refusals, and includes the dated 2024 exoneration.",
+        "locators": [
+          "The Aftermath and Mutiny, Trial Proceedings, lines 39–47; exoneration at 55 and 77; last updated at 82"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "broader_topic",
+          "assertion": "editorial",
+          "target_id": "Q2652357",
+          "target_label": "Racial segregation in the United States",
+          "target_meaning": "race based restrictions in American society",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/Q2652357"
+          },
+          "source_ids": [
+            "research-batch-008-culture::nps-port-chicago-trial"
+          ],
+          "locator": "Lines 43 and 47",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "Documented Navy segregation supports the editorial placement under racial segregation in the United States.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:tritina": {
+      "id": "local:catalog:tritina",
+      "owner": "culture",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "f5a6372aeb9287953d5762502f2f823650ad3cd0f9fff19bf779358c78233cf3",
+      "initial_source_bundle_sha256": "9be2aba57452df7939660565e426fe59bfa4336c7fcdc592b0391f041f4193b4",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::culture-aap-sestina",
+          "title": "Sestina",
+          "url": "https://poets.org/glossary/sestina",
+          "original_url": "https://poets.org/glossary/sestina",
+          "inspected_url": "https://poets.org/glossary/sestina",
+          "author_cited_locator": "“Rules of the Sestina Form”; final history paragraphs describing double sestina and tritina",
+          "inspected_locator": "Rules of the Sestina Form, lines 28–40; variations and tritina, lines 66–67",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": null,
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Tritina contracts the sestina’s recurring end-word pattern.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-aap-sestina"
+          ],
+          "locator": "Lines 66–67",
+          "support": "The source explicitly calls it a contraction."
+        },
+        {
+          "claim": "Three end-words, three three-line stanzas, one-line envoi.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-aap-sestina"
+          ],
+          "locator": "Line 67",
+          "support": "Counts and collection in the final line are explicit."
+        },
+        {
+          "claim": "Marie Ponsot invented it.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-aap-sestina"
+          ],
+          "locator": "Line 67",
+          "support": "The Academy attributes invention to Ponsot."
+        },
+        {
+          "claim": "Repetition is concentrated while retaining the end-word constraint.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-aap-sestina"
+          ],
+          "locator": "Lines 31, 66–67",
+          "support": "This is a supported explanatory compression of the stated form."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Tritina",
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "support": "The contracted end-word form is distinguished from its six-word sestina parent; the required counts and inventor are retained.",
+        "locators": [
+          "Rules of the Sestina Form, lines 28–40; variations and tritina, lines 66–67"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "facet_of",
+          "assertion": "source_asserted",
+          "target_id": "Q1334127",
+          "target_label": "Sestina",
+          "target_meaning": "A sestina repeats six end-words through six stanzas in a prescribed changing order, then gathers them in a short envoi. Its formal pressure comes from recurring words rather than a conventional rhyme scheme. New contexts can make the same words carry different associations.",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/Q1334127"
+          },
+          "source_ids": [
+            "research-batch-008-culture::culture-aap-sestina"
+          ],
+          "locator": "Lines 66–67",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "The Academy places the contracted tritina among variations of the sestina form.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:pinpeat": {
+      "id": "local:catalog:pinpeat",
+      "owner": "culture",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "2ddf441012a4fa87f944a3cffc713ff544a27dca9f7aff043950fdb377d4d216",
+      "initial_source_bundle_sha256": "7bf5bade42d9ba35f573967dff6843bace4e3c67c7be365295ea62d0bbc1fd1e",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::folkways-diaspora-lesson",
+          "title": "Cultural Preservation and Adaptation: Kulintang, Kundiman, and Pinpeat in the US",
+          "url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US",
+          "original_url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US",
+          "inspected_url": "https://folkways.si.edu/lesson/cultural-preservation-and-adaptation/kundiman-pinpeat-in-US",
+          "author_cited_locator": "Lesson introduction and learning objectives, lines 440–455",
+          "inspected_locator": "Lesson introduction, lines 440–442; Pinpeat learning objectives, lines 450–455",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": null,
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Pinpeat is Cambodian court music.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::folkways-diaspora-lesson"
+          ],
+          "locator": "Line 441",
+          "support": "Origin and court setting are explicit."
+        },
+        {
+          "claim": "The lesson considers Cambodian American preservation and transformation.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::folkways-diaspora-lesson"
+          ],
+          "locator": "Lines 450–452",
+          "support": "The learning objective addresses the United States."
+        },
+        {
+          "claim": "Preservation can include adaptation in new social settings.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::folkways-diaspora-lesson"
+          ],
+          "locator": "Lines 441–442 and 452",
+          "support": "This is the lesson’s stated analytical premise, rather than a specific uninspected performance claim."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Pinpeat",
+        "entity_kind": "idea",
+        "scope": "topic",
+        "support": "The Cambodian court-music tradition is distinguished from the lesson’s diaspora case study; no detailed uninspected slide claims are made.",
+        "locators": [
+          "Lesson introduction, lines 440–442; Pinpeat learning objectives, lines 450–455"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "target_id": "Q638",
+          "target_label": "Music",
+          "target_meaning": "art using sound",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/Q638"
+          },
+          "source_ids": [
+            "research-batch-008-culture::folkways-diaspora-lesson"
+          ],
+          "locator": "Lines 441 and 451–452",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "Pinpeat is explicitly court music; music is its broader field.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:metaphysical-grounding": {
+      "id": "local:catalog:metaphysical-grounding",
+      "owner": "culture",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "bb3f93723c093fec3801ee8e39c4a5060db3e3ae36967bb79cbd9faade95406d",
+      "initial_source_bundle_sha256": "1c41527309cb9df2f8e2be2ca7b0cdf68caf83518ed7c96a79386228c6760b00",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::culture-sep-grounding",
+          "title": "Metaphysical Grounding",
+          "url": "https://plato.stanford.edu/entries/grounding/",
+          "original_url": "https://plato.stanford.edu/entries/grounding/",
+          "inspected_url": "https://plato.stanford.edu/entries/grounding/",
+          "author_cited_locator": "Introduction, strike/picketing example; §1.1",
+          "inspected_locator": "Introduction, lines 12–19; §1.1 Determination and explanation, lines 46–53",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": "Substantive revision December 6, 2021",
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Grounding concerns facts holding in virtue of others, rather than earlier causes.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-sep-grounding"
+          ],
+          "locator": "Lines 13–16 and 47–50",
+          "support": "Constitutive explanation or determination differs from causation."
+        },
+        {
+          "claim": "Picketing can illustrate constituting a strike.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-sep-grounding"
+          ],
+          "locator": "Lines 13–16",
+          "support": "It is an illustrative grounding claim, not an identity or unrestricted equivalence."
+        },
+        {
+          "claim": "The disputed notion is not merely necessary connection.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::culture-sep-grounding"
+          ],
+          "locator": "Lines 14–19 and 47–53",
+          "support": "Modal insufficiency and competing conceptions are explicit."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Metaphysical grounding",
+        "entity_kind": "idea",
+        "scope": "idea",
+        "support": "This is constitutive metaphysical grounding, not electrical grounding, temporal causation or bare necessitation; explanatory disagreement is retained.",
+        "locators": [
+          "Introduction, lines 12–19; §1.1 Determination and explanation, lines 46–53"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "target_id": "local:authored:000431",
+          "target_label": "Metaphysics",
+          "target_meaning": "Examining fundamental questions about reality and existence.",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/local:authored:000431"
+          },
+          "source_ids": [
+            "research-batch-008-culture::culture-sep-grounding"
+          ],
+          "locator": "Lines 17–19 and §1.1",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "The article explicitly treats grounding as a question within metaphysics.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:nembutsu": {
+      "id": "local:catalog:nembutsu",
+      "owner": "culture",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "cb9debb8f0b86403271d3ddedadaf596a2622855568597b1b0238c8763a4ccc8",
+      "initial_source_bundle_sha256": "ffc4302a12e3c2b332835bbcc2f0031e8d3d14bcf1fb53f0d5b7be5f8d880007",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::bca-nembutsu",
+          "title": "Visit Our Temple (Marin | BCA)",
+          "url": "https://www.buddhistchurchesofamerica.org/temple/visit/buddhist-temple-of-marin",
+          "original_url": "https://www.buddhistchurchesofamerica.org/temple/visit/buddhist-temple-of-marin",
+          "inspected_url": "https://www.buddhistchurchesofamerica.org/temple/visit/buddhist-temple-of-marin",
+          "author_cited_locator": "Tradition statement and practices, lines 118, 145–165",
+          "inspected_locator": "Temple’s Jōdo Shinshū affiliation, line 118; Practices & Traditions, lines 145–165",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": null,
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Nembutsu is a Buddhist chanting practice.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::bca-nembutsu"
+          ],
+          "locator": "Lines 118 and 164",
+          "support": "A Shin Buddhist temple explicitly identifies its chant."
+        },
+        {
+          "claim": "Marin is Jōdo Shinshū and Namo Amida Butsu expresses gratitude there.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::bca-nembutsu"
+          ],
+          "locator": "Lines 118, 147 and 164",
+          "support": "Affiliation, chant and local devotional function are explicit."
+        },
+        {
+          "claim": "The chant sits alongside listening and compassionate living.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::bca-nembutsu"
+          ],
+          "locator": "Lines 118 and 147–165",
+          "support": "The card retains this community-specific account rather than generalizing efficacy across Buddhism."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Nembutsu",
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "support": "The gratitude account is explicitly limited to Marin’s Jōdo Shinshū community, without claiming one purpose or efficacy for every Buddhist tradition.",
+        "locators": [
+          "Temple’s Jōdo Shinshū affiliation, line 118; Practices & Traditions, lines 145–165"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "application_of",
+          "assertion": "source_asserted",
+          "target_id": "local:authored:000460",
+          "target_label": "Buddhism",
+          "target_meaning": "Buddhist traditions look to Buddha, Dharma and Sangha: the awakened teacher, the teaching and the community. Those shared points of reference coexist with varied practices and interpretations. Beginning with the community’s relationship to teaching helps make that diversity visible without reducing Buddhism to one uniform routine.",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/local:authored:000460"
+          },
+          "source_ids": [
+            "research-batch-008-culture::bca-nembutsu"
+          ],
+          "locator": "Lines 118, 145–164",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "The Buddhist community places Nembutsu among its religious practices; source-to-Buddhism direction matches the target.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:non-refoulement": {
+      "id": "local:catalog:non-refoulement",
+      "owner": "culture",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "61c07b87f020ad44e509154c868267fb522193e909ae3ab4a70adca36f0bdc3f",
+      "initial_source_bundle_sha256": "32edee58d0f0609c212ccb8ceb0b46d025fd914cbcf3fbda3fde42f71322d14d",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::unhcr-refoulement-note",
+          "title": "UNHCR Note on the Principle of Non-Refoulement",
+          "url": "https://www.refworld.org/policy/legalguidance/unhcr/1997/en/36258",
+          "original_url": "https://www.refworld.org/policy/legalguidance/unhcr/1997/en/36258",
+          "inspected_url": "https://www.refworld.org/policy/legalguidance/unhcr/1997/en/36258",
+          "author_cited_locator": "Legal basis, Beneficiaries and Exceptions, lines 44–79, 107–120",
+          "inspected_locator": "November 1997 date, line 11; Legal basis, lines 44–72; Beneficiaries, lines 73–77; Exceptions, lines 107–119",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": "November 1997",
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Non-refoulement protects against return to prohibited danger.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::unhcr-refoulement-note"
+          ],
+          "locator": "Lines 24–26 and 46–72",
+          "support": "Different instruments identify relevant protected dangers."
+        },
+        {
+          "claim": "Refugee protection can precede formal recognition.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::unhcr-refoulement-note"
+          ],
+          "locator": "Lines 75–77",
+          "support": "Recognition is declaratory; applicants require protection pending determination."
+        },
+        {
+          "claim": "Premature return can defeat that protection.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::unhcr-refoulement-note"
+          ],
+          "locator": "Lines 27–28, 41 and 77",
+          "support": "Procedures must prevent erroneous return of refugees."
+        },
+        {
+          "claim": "Dangers and exceptions depend on the governing instrument.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::unhcr-refoulement-note"
+          ],
+          "locator": "Lines 70–72 and 109–119",
+          "support": "Refugee Convention exceptions are contrasted with absolute human-rights prohibitions."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Non-refoulement",
+        "entity_kind": "idea",
+        "scope": "idea",
+        "support": "The general legal principle is appropriately qualified by governing instruments and attributed UNHCR analysis; the cited note is dated November 1997.",
+        "locators": [
+          "November 1997 date, line 11; Legal basis, lines 44–72; Beneficiaries, lines 73–77; Exceptions, lines 107–119"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "broader_topic",
+          "assertion": "source_asserted",
+          "target_id": "Q4394526",
+          "target_label": "International law",
+          "target_meaning": "regulations governing international relations",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/Q4394526"
+          },
+          "source_ids": [
+            "research-batch-008-culture::unhcr-refoulement-note"
+          ],
+          "locator": "Lines 24, 46–50 and 68–72",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "International refugee treaties and human-rights law place the principle within international law.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:lukasa-met-1977-467-3": {
+      "id": "local:catalog:lukasa-met-1977-467-3",
+      "owner": "culture",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "f1727d1323719e49e025921e4683cc053d4bff45c0f1299ce5af976550f52a06",
+      "initial_source_bundle_sha256": "3e57961e96cc038175193a75c34e1531ba0b1c01ec35321e73c691a0b0b73d2b",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::met-lukasa-1977-467-3",
+          "title": "Lukasa (memory board), Luba artist",
+          "url": "https://www.metmuseum.org/art/collection/search/690570",
+          "original_url": "https://www.metmuseum.org/art/collection/search/690570",
+          "inspected_url": "https://www.metmuseum.org/art/collection/search/690570",
+          "author_cited_locator": "Curatorial description (lines 10–16), Artwork Details",
+          "inspected_locator": "Curatorial description, lines 10–16; Artwork Details, lines 37–46, Object Number 1977.467.3",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": null,
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "This board uses incisions/relief unlike many bead-and-shell boards.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::met-lukasa-1977-467-3"
+          ],
+          "locator": "Line 11",
+          "support": "The source contrasts this example with other lukasa."
+        },
+        {
+          "claim": "The Met interprets motifs through political history and territory.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::met-lukasa-1977-467-3"
+          ],
+          "locator": "Lines 10 and 14–16",
+          "support": "The body correctly attributes the curatorial account."
+        },
+        {
+          "claim": "Senior Mbudye members learned to decipher boards in a specialist tradition.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::met-lukasa-1977-467-3"
+          ],
+          "locator": "Lines 12–13",
+          "support": "Successive knowledge stages lead to interpretation at the association’s apex."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "verified",
+        "label": "Lukasa memory board (Met 1977.467.3)",
+        "entity_kind": "named_subject",
+        "scope": "facet_or_application",
+        "support": "The named subject is the individual Met object 1977.467.3, confirmed at line 46, rather than the whole category of lukasa.",
+        "locators": [
+          "Curatorial description, lines 10–16; Artwork Details, lines 37–46, Object Number 1977.467.3"
+        ]
+      },
+      "relation_checks": [
+        {
+          "outcome": "not_applicable",
+          "reason": "Frozen card has no attached relationships."
+        }
+      ],
+      "findings": [],
+      "outcome": "verified",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    },
+    "local:catalog:chod": {
+      "id": "local:catalog:chod",
+      "owner": "culture",
+      "stratum": "targeted",
+      "initial_card_version": 1,
+      "initial_card_sha256": "683afb9941c572ed9368ef28a8afab0c3deea32521d0b66f1792ef5b320aa474",
+      "initial_source_bundle_sha256": "efab1814fba5c0d14a8df86c857c505212caffb55b0eb968d06aded5517ba264",
+      "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+      "source_inspections": [
+        {
+          "source_id": "research-batch-008-culture::lywa-chod",
+          "title": "Chöd: Slaying the Ego",
+          "url": "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego",
+          "original_url": "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego",
+          "inspected_url": "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego",
+          "author_cited_locator": "Lama Zopa Rinpoche’s teaching, lines 43–52, 101–104",
+          "inspected_locator": "Author/June 2009 teaching and unedited transcript, lines 9–19; teaching, lines 43–59, 87–95 and 99–104",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": "June 2009 Maitripa College teaching; unedited transcript",
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independent passage inspection; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 0,
+          "summary_word_limit": 200
+        },
+        {
+          "source_id": "audit:culture:lywa-chod-visualization",
+          "title": "Bodhisattva Attitude: The Commentary",
+          "url": "https://www.lamayeshe.com/article/chapter/bodhisattva-attitude-commentary",
+          "original_url": "https://www.lamayeshe.com/article/chapter/bodhisattva-attitude-commentary",
+          "inspected_url": "https://www.lamayeshe.com/article/chapter/bodhisattva-attitude-commentary",
+          "inspected_locator": "Notes, footnote 3, extracted line 178; page identifies Lama Zopa as author, lines 11–13",
+          "inspection_mode": "web.open_text",
+          "outcome": "inspected",
+          "passage_accessible": true,
+          "page_revision_or_date": "Booklet accompanying the 2011 visit; longer version published March 2012 (page introduction)",
+          "local_inspection_completed_at": "2026-10-09T03:02:39+00:00",
+          "remote_retrieval_timestamp": null,
+          "time_basis": "Local timestamp recorded after independently opening and reading Notes 3; exact remote retrieval timestamp unavailable.",
+          "failed_url_attempts": 0,
+          "alternative_sources_used": 1,
+          "summary_word_limit": 200,
+          "use": "Supplementary first-party evidence for proposed clarification, not part of the frozen initial bundle."
+        }
+      ],
+      "substantive_claim_checks": [
+        {
+          "claim": "Chöd is a Buddhist practice directed at self clinging.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::lywa-chod"
+          ],
+          "locator": "Lines 43–44, 51–55 and 103–104",
+          "support": "The teaching describes charity, self-cherishing and ignorance."
+        },
+        {
+          "claim": "Bodily offerings to spirits connect with examining inherent selfhood.",
+          "outcome": "needs_repair",
+          "source_ids": [
+            "research-batch-008-culture::lywa-chod",
+            "audit:culture:lywa-chod-visualization"
+          ],
+          "locator": "Lines 48–59; supplemental Commentary Notes 3, line 178",
+          "support": "The doctrinal connection is supported, but the bodily offering requires a visualization qualifier."
+        },
+        {
+          "claim": "Fear occasions investigation of supposedly independent existence.",
+          "outcome": "verified",
+          "source_ids": [
+            "research-batch-008-culture::lywa-chod"
+          ],
+          "locator": "Lines 58–59, 87–95 and 99–104",
+          "support": "This is Lama Zopa’s attributed account; dependent existence is distinguished from nihilism."
+        }
+      ],
+      "meaning_check": {
+        "outcome": "needs_repair",
+        "label": "Chöd",
+        "entity_kind": "idea",
+        "scope": "facet_or_application",
+        "support": "Teacher attribution and inherent-versus-dependent selfhood are preserved. The body needs one qualifier to identify the bodily offering as visualization.",
+        "locators": [
+          "Author/June 2009 teaching and unedited transcript, lines 9–19; teaching, lines 43–59, 87–95 and 99–104",
+          "Notes, footnote 3, extracted line 178; page identifies Lama Zopa as author, lines 11–13"
+        ]
+      },
+      "relation_checks": [
+        {
+          "relation_index": 0,
+          "type": "application_of",
+          "assertion": "source_asserted",
+          "target_id": "local:authored:000460",
+          "target_label": "Buddhism",
+          "target_meaning": "Buddhist traditions look to Buddha, Dharma and Sangha: the awakened teacher, the teaching and the community. Those shared points of reference coexist with varied practices and interpretations. Beginning with the community’s relationship to teaching helps make that diversity visible without reducing Buddhism to one uniform routine.",
+          "target_resolution": {
+            "path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+            "sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "pointer": "#/concepts/local:authored:000460"
+          },
+          "source_ids": [
+            "research-batch-008-culture::lywa-chod"
+          ],
+          "locator": "Lines 23–29 and 43–52",
+          "direction_check": "verified",
+          "assertion_class_check": "verified",
+          "meaning_check": "verified",
+          "support": "The teaching places chöd within Buddha Dharma, charity and wisdom; source-to-Buddhism direction is supported.",
+          "outcome": "verified"
+        }
+      ],
+      "findings": [
+        {
+          "finding_id": "culture-initial-chod-01",
+          "affected_field": "card",
+          "significance": "moderate: substantive meaning qualification",
+          "precise_issue": "The phrase ritual offerings of the body leaves the offering’s imagined nature unstated and permits a literal bodily-sacrifice reading. The frozen transcript supports the doctrine but does not make that qualifier explicit at the cited locator.",
+          "inspected_support": [
+            {
+              "source_id": "research-batch-008-culture::lywa-chod",
+              "url": "https://www.lamayeshe.com/article/chapter/ch%C3%B6d-slaying-ego",
+              "locator": "Teaching, lines 48–59 and 99–104",
+              "support": "Connects bodily charity and fear with self-cherishing and analysis of inherent existence."
+            },
+            {
+              "source_id": "audit:culture:lywa-chod-visualization",
+              "url": "https://www.lamayeshe.com/article/chapter/bodhisattva-attitude-commentary",
+              "locator": "Notes, footnote 3, line 178",
+              "support": "Explicitly defines the bodily feast offering as visualization."
+            }
+          ],
+          "proposed_repair": {
+            "field": "card",
+            "replace": "ritual offerings",
+            "with": "visualized offerings",
+            "proposed_card": "Chöd is a Buddhist offering practice directed at cutting self clinging. In Lama Zopa’s teaching, visualized offerings of the body to spirits are connected with examining the apparently inherent self. Fear becomes an occasion to investigate that self’s supposed independent existence.",
+            "proposed_word_count": 41,
+            "source_bundle_action": "Add the independently inspected Commentary source with Notes 3 as evidence for visualization; retain original teaching evidence and teacher attribution.",
+            "card_version_action": "Coordinator should bump the affected card/bundle version and preserve the original fixed sample."
+          }
+        }
+      ],
+      "outcome": "needs_repair",
+      "access_limits": {
+        "max_failed_attempts_per_url": 2,
+        "max_alternative_sources": 3,
+        "failed_attempts": [],
+        "inaccessible_evidence": [],
+        "source_use": "No source passages copied wholesale. All conclusions derive from independently opened passages; author source assertions were not treated as verification."
+      }
+    }
+  },
+  "summary": {
+    "assigned_cards": 13,
+    "attached_relations_checked": 12,
+    "not_applicable_relation_checks": 1,
+    "unique_original_sources_inspected": 12,
+    "supplemental_sources_inspected": 1,
+    "by_stratum": {
+      "random_new": {
+        "verified": 3
+      },
+      "targeted": {
+        "verified": 9,
+        "needs_repair": 1
+      }
+    },
+    "findings": 1
+  },
+  "access_and_usage_limits": {
+    "max_failed_attempts_per_url": 2,
+    "max_alternatives_per_inaccessible_url": 3,
+    "failed_url_attempts": 0,
+    "inaccessible_evidence": [],
+    "bounded_supplementary_sources": 1,
+    "all_original_cited_passages_accessible": true,
+    "quoted_words_per_source": 0,
+    "source_summary_word_limit": 200,
+    "source_derived_summaries": "Kept concise, below the 200-word allowance for each original source; the two Esri cards share one allowance.",
+    "remote_retrieval_timestamp": "Unavailable; tool crawl labels were not substituted for retrieval timestamps.",
+    "actual_token_usage": null,
+    "actual_cost": null,
+    "token_cost_availability": "Actual token usage and cost were not exposed to this auditor.",
+    "audit_scope": "Assigned 13-card sample only, not all 200 cards; structural tests and human interestingness are separate evidence.",
+    "memory_use": "A lightweight catalog-provenance memory lookup guided context only; all audit conclusions were verified against current frozen files and independently inspected sources."
+  }
+}

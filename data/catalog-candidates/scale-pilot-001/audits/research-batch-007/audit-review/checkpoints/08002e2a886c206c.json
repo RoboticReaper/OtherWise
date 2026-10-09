@@ -1,0 +1,52 @@
+{
+  "id": "local:catalog:milgram-s-obedience-experiments",
+  "label": "Milgram's obedience experiments",
+  "sample_kind": "random_new",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T22:03:34.467223+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "topic",
+    "entity_kind": "named_subject",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q161272",
+        "label": "social psychology",
+        "original_description": "a branch of psychology that combines concepts from psychology and sociology and that focuses on social influence on human behavior",
+        "prior_card_takeaways": []
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:asch-s-conformity-experiments",
+        "label": "Asch's conformity experiments"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Believed shocks, no actual learner shock, many continuing and lower rates under off-campus/proximity variants all appear in the passage. Statement is bounded to these experiments; Asch comparison matches peer-judgment versus authority-demand setups.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s042"
+      ],
+      "locator": "12.4 Asch and Stanley Milgram’s Experiment; web-15 lines 34–36 and web-16 lines 61–73"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:asch-s-conformity-experiments",
+      "type": "related_to",
+      "assertion": "editorial",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

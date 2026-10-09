@@ -1,0 +1,57 @@
+test_changed_text_requires_one_version_increment (test_revision_compare.RevisionCompareTests.test_changed_text_requires_one_version_increment) ... FAIL
+test_extra_version_without_record_or_source_change_is_flagged (test_revision_compare.RevisionCompareTests.test_extra_version_without_record_or_source_change_is_flagged) ... ok
+test_source_change_versions_every_affected_card (test_revision_compare.RevisionCompareTests.test_source_change_versions_every_affected_card) ... FAIL
+test_unchanged_card_keeps_version (test_revision_compare.RevisionCompareTests.test_unchanged_card_keeps_version) ... FAIL
+
+======================================================================
+FAIL: test_changed_text_requires_one_version_increment (test_revision_compare.RevisionCompareTests.test_changed_text_requires_one_version_increment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_revision_compare.py", line 10, in test_changed_text_requires_one_version_increment
+    self.assertEqual(compare(a,b)['failures'],[]);self.assertEqual(compare(a,b)['changed_card_ids'],['c'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['not implemented'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'not implemented'
+
+- ['not implemented']
++ []
+
+======================================================================
+FAIL: test_source_change_versions_every_affected_card (test_revision_compare.RevisionCompareTests.test_source_change_versions_every_affected_card)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_revision_compare.py", line 14, in test_source_change_versions_every_affected_card
+    r=compare(a,b);self.assertEqual(r['failures'],[]);self.assertEqual(r['source_changed_card_ids'],['c'])
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['not implemented'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'not implemented'
+
+- ['not implemented']
++ []
+
+======================================================================
+FAIL: test_unchanged_card_keeps_version (test_revision_compare.RevisionCompareTests.test_unchanged_card_keeps_version)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_revision_compare.py", line 6, in test_unchanged_card_keeps_version
+    d=self.data();r=compare(d,copy.deepcopy(d));self.assertEqual(r['failures'],[]);self.assertEqual(r['changed_card_ids'],[])
+                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['not implemented'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'not implemented'
+
+- ['not implemented']
++ []
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (failures=3)

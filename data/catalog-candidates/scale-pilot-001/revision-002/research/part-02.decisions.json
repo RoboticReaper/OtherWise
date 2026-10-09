@@ -1,0 +1,1193 @@
+{
+  "schema_version": 1,
+  "assignment": "part-02",
+  "decisions": [
+    {
+      "id": "local:catalog:activation-energy",
+      "label": "Activation energy",
+      "action": "reuse_existing",
+      "target_id": "Q190474",
+      "reason": "The card explains the activation barrier for a chemical reaction through the collision model. That is the reaction/process energy concept registered as Q190474; the molecular-collision formulation is an explanation of that concept.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/chemistry-2e/pages/12-5-collision-theory",
+          "locator": "Activation Energy and the Arrhenius Equation; lines 53, 57–63",
+          "note": "Defines the minimum reaction energy and the energy gap from reactants to transition state.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q190474",
+          "locator": "part-02.input.json rows[0].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q190474",
+          "locator": "English description, activation-barrier aliases and chemical-reaction context; lines 89–113",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 3 weeks ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:angular-momentum",
+      "label": "Angular momentum",
+      "action": "reuse_existing",
+      "target_id": "Q161254",
+      "reason": "The single-particle cross-product and origin dependence are formulations of the same physical quantity registered as Q161254. A particle example expands angular momentum rather than creating a separate rotational-momentum topic.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/university-physics-volume-1/pages/11-2-angular-momentum",
+          "locator": "Angular Momentum of a Single Particle; lines 33–54",
+          "note": "Defines angular momentum from position and linear momentum and explicitly notes dependence on the chosen origin.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q161254",
+          "locator": "part-02.input.json rows[1].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q161254",
+          "locator": "English description and physical/vector-quantity statements; lines 89–135",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: last month), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:astronomical-seeing",
+      "label": "Astronomical seeing",
+      "action": "reuse_existing",
+      "target_id": "Q1057006",
+      "reason": "Both records concern atmospheric turbulence distorting astronomical images. The card explains the mechanism of the apparent blurring registered as Q1057006.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/astronomy-2e/pages/6-2-telescopes-today",
+          "locator": "Observatory location and atmospheric limitations; lines 87–92, especially 91",
+          "note": "Names distorted and blurred star images caused by turbulent air as bad seeing.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1057006",
+          "locator": "part-02.input.json rows[2].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1057006",
+          "locator": "English description and optical-aberration identity; lines 89–109",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 2 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:bipartite-graph",
+      "label": "Bipartite graph",
+      "action": "reuse_existing",
+      "target_id": "Q174733",
+      "reason": "Two independent vertex classes, two-colorability and the even-cycle condition characterize the same graph class registered as Q174733. The equivalences are fuller explanation rather than a separate graph type.",
+      "evidence": [
+        {
+          "url": "https://mathworld.wolfram.com/BipartiteGraph.html",
+          "locator": "Definition and characterization; lines 16–17",
+          "note": "Defines the two disjoint independent vertex sets and the equivalent two-colorable/even-cycle characterization.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q174733",
+          "locator": "part-02.input.json rows[3].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q174733",
+          "locator": "English description and odd-cycle-free/bicolorable aliases; lines 89–107",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 2 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:brouwer-fixed-point-theorem",
+      "label": "Brouwer fixed-point theorem",
+      "action": "reuse_existing",
+      "target_id": "Q1144897",
+      "reason": "The card gives the closed finite-dimensional ball self-map form of the theorem registered as Q1144897. The imported description is overbroad because it omits essential hypotheses; that defect does not identify a different theorem.",
+      "evidence": [
+        {
+          "url": "https://mathworld.wolfram.com/BrouwerFixedPointTheorem.html",
+          "locator": "Theorem statement; lines 13–17",
+          "note": "States the continuous self-map of the unit n-ball fixed-point theorem.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1144897",
+          "locator": "part-02.input.json rows[4].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1144897",
+          "locator": "English description and fixed-point-theorem identity; lines 90–123",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 7 months ago), not a live EntityData revision check.",
+        "The imported Wikidata description omits required self-map/geometry hypotheses and must not replace the card's accurate closed-ball statement."
+      ]
+    },
+    {
+      "id": "local:catalog:carnot-cycle",
+      "label": "Carnot cycle",
+      "action": "reuse_existing",
+      "target_id": "Q188910",
+      "reason": "The hypothetical reversible cycle between two reservoirs and its efficiency bound are the same Carnot cycle registered as Q188910. The card's engine example does not introduce a separate cycle.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/university-physics-volume-2/pages/4-5-the-carnot-cycle",
+          "locator": "Opening definition; lines 28–31; Carnot's Principle, lines 105–109",
+          "note": "Identifies Carnot's hypothetical cycle and the reversible-engine upper efficiency bound.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q188910",
+          "locator": "part-02.input.json rows[5].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q188910",
+          "locator": "English description and thermodynamic-cycle statement; lines 90–110",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 7 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:choropleth-mapping",
+      "label": "Choropleth mapping",
+      "action": "reuse_existing",
+      "target_id": "Q261468",
+      "reason": "Despite the mapping/map wording, the card defines and explains the geographic-area shading visualization itself. It describes the same choropleth map type registered as Q261468, rather than a separately specified production workflow.",
+      "evidence": [
+        {
+          "url": "https://doc.arcgis.com/en/insights/latest/create/choropleth-maps.htm",
+          "locator": "Opening and creation/normalization explanation; lines 23, 29–34, 65–68",
+          "note": "Explains shaded normalized geographic data, the regional comparison and normalization when creating a choropleth map.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q261468",
+          "locator": "part-02.input.json rows[6].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q261468",
+          "locator": "English description and map-type identity; lines 89–115",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: last month), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:combustion-analysis",
+      "label": "Combustion analysis",
+      "action": "reuse_existing",
+      "target_id": "Q591867",
+      "reason": "The hydrocarbon carbon/hydrogen example illustrates the combustion-based elemental analysis method registered as Q591867. It remains the same analytical process, with combustion products used to infer composition.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/chemistry-2e/pages/4-5-quantitative-chemical-analysis",
+          "locator": "Combustion analysis definition and example; lines 110–119",
+          "note": "Defines combustion analysis as a gravimetric elemental-composition method and gives hydrocarbon combustion products as an example.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q591867",
+          "locator": "part-02.input.json rows[7].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q591867",
+          "locator": "English description and elemental-analyzer context; lines 95–117",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 11 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:crop-rotation",
+      "label": "Crop rotation",
+      "action": "reuse_existing",
+      "target_id": "Q191258",
+      "reason": "The planned crop sequence is the same cultivation practice registered as Q191258. Pest prevention is an application explaining its benefit rather than a distinct rotation technique.",
+      "evidence": [
+        {
+          "url": "https://www.epa.gov/safepestcontrol/integrated-pest-management-ipm-principles",
+          "locator": "Prevention; lines 35–36",
+          "note": "Identifies rotating between different agricultural crops as a preventive cultural management method.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q191258",
+          "locator": "part-02.input.json rows[8].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q191258",
+          "locator": "English description and farming-technique identity; lines 89–125",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        },
+        {
+          "url": "https://www.nrcs.usda.gov/conservation-basics/climate/climate-smart-mitigation-activities",
+          "locator": "Conservation Crop Rotation; lines 57–59",
+          "note": "Defines crop rotation as planned crop sequences on the same field and notes pest-pressure reduction.",
+          "inspection_mode": "web_returned_official_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 2 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:einstein-on-the-beach",
+      "label": "Einstein on the Beach",
+      "action": "reuse_existing",
+      "target_id": "Q2291287",
+      "reason": "The subject is the same 1976 Glass/Wilson opera registered as Q2291287. The Train-scene additive-process example explains the named whole work; it does not make Train a separately cataloged subject.",
+      "evidence": [
+        {
+          "url": "https://musictheory.pugetsound.edu/mt21c/AdditiveMinimalism.html",
+          "locator": "Section 35.1, Act 1 Scene 1 Train; lines 759–766",
+          "note": "Identifies an Einstein on the Beach excerpt and explains lengthening a recurring five-chord progression.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q2291287",
+          "locator": "part-02.input.json rows[9].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q2291287",
+          "locator": "English description and dramatico-musical-work identity; lines 89–109",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        },
+        {
+          "url": "https://philipglass.com/compositions/einstein_on_the_beach/",
+          "locator": "Title, Info and Premiere; lines 12–31",
+          "note": "The composer's official page identifies the opera created with Robert Wilson, with music by Philip Glass and a 1976 premiere.",
+          "inspection_mode": "web_returned_first_party_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 6 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:electroplating",
+      "label": "Electroplating",
+      "action": "reuse_existing",
+      "target_id": "Q3503392",
+      "reason": "Both records identify the electrical process of depositing a metallic coating on a conducting surface. The silver-plating example illustrates Q3503392 rather than naming a distinct coating material.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/chemistry-2e/pages/17-7-electrolysis",
+          "locator": "Electroplating; lines 64–67",
+          "note": "Defines the electrolytic coating process and identifies silver-plated utensils as an illustration.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q3503392",
+          "locator": "part-02.input.json rows[10].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q3503392",
+          "locator": "English description and process/plating/electrolysis identity; lines 93–133",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 3 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:founder-effect",
+      "label": "Founder effect",
+      "action": "reuse_existing",
+      "target_id": "Q504568",
+      "reason": "The small founding group changes the descendant population's genetic frequencies and variation. That is the founder effect registered as Q504568; the card explains its sampling mechanism.",
+      "evidence": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Founder-Effect",
+          "locator": "Definition and Narration; lines 14–18",
+          "note": "Explains reduced genomic variability when a small group separates from a larger population and how descendant traits can differ.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q504568",
+          "locator": "part-02.input.json rows[11].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q504568",
+          "locator": "English description and genetic-drift identity; lines 89–115",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 4 months ago), not a live EntityData revision check.",
+        "The supplied Berkeley URL timed out during this review; identity was independently checked against the inspected NHGRI definition."
+      ]
+    },
+    {
+      "id": "local:catalog:genetic-linkage",
+      "label": "Genetic linkage",
+      "action": "reuse_existing",
+      "target_id": "Q843863",
+      "reason": "Both records identify the tendency of nearby DNA loci on the same chromosome to be inherited together. Recombination explains that tendency rather than a separate linkage-analysis topic.",
+      "evidence": [
+        {
+          "url": "https://www.genome.gov/genetics-glossary/Linkage",
+          "locator": "Definition; lines 14–16",
+          "note": "Connects proximity on a chromosome with increased probability of joint inheritance.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q843863",
+          "locator": "part-02.input.json rows[12].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q843863",
+          "locator": "English description and heredity identity; lines 89–109",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 6 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:golden-gate-bridge",
+      "label": "Golden Gate Bridge",
+      "action": "reuse_existing",
+      "target_id": "Q44440",
+      "reason": "The card's span and difficult channel conditions describe the specific San Francisco Golden Gate Bridge registered as Q44440. Historical design details do not identify a different bridge.",
+      "evidence": [
+        {
+          "url": "https://www.asce.org/about-civil-engineering/history-and-heritage/historic-landmarks/golden-gate-bridge",
+          "locator": "Landmark identity and construction account; lines 342–366",
+          "note": "Identifies the 1937 bridge, its 4,200-foot span and the channel/tide/wind obstacles.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q44440",
+          "locator": "part-02.input.json rows[13].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q44440",
+          "locator": "English description and suspension-bridge identity; lines 89–122",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: today), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:habeas-corpus",
+      "label": "Habeas corpus",
+      "action": "reuse_existing",
+      "target_id": "Q220596",
+      "reason": "Challenging the lawfulness of detention is the habeas-corpus court action registered as Q220596. The US federal procedural framing is a narrower explanation of the same legal concept.",
+      "evidence": [
+        {
+          "url": "https://www.law.cornell.edu/wex/habeas_corpus",
+          "locator": "Opening overview; line 6",
+          "note": "Defines the writ as bringing a detainee before a court to examine the lawfulness of detention, with a civil petition.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q220596",
+          "locator": "part-02.input.json rows[14].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q220596",
+          "locator": "English description and legal identity; lines 89–119",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        },
+        {
+          "url": "https://www.law.cornell.edu/uscode/text/28/2241",
+          "locator": "28 USC 2241(c)(3); lines 24–36",
+          "note": "The statutory text authorizes the writ in qualifying custody, including detention violating federal law.",
+          "inspection_mode": "web_returned_primary_law_text"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 2 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:homeomorphism",
+      "label": "Homeomorphism",
+      "action": "reuse_existing",
+      "target_id": "Q202906",
+      "reason": "The card's bijection continuous in both directions is the topological-space equivalence registered as Q202906. The additional graph-subdivision reference does not change the subject of this card to graph homeomorphism.",
+      "evidence": [
+        {
+          "url": "https://mathworld.wolfram.com/Homeomorphism.html",
+          "locator": "Opening definition; lines 13–14",
+          "note": "Defines the one-to-one correspondence continuous in both directions and distinguishes distance-preserving isometry.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q202906",
+          "locator": "part-02.input.json rows[15].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q202906",
+          "locator": "English description and continuous-function/bijection identity; lines 89–126",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 4 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:horizontal-gene-transfer",
+      "label": "Horizontal gene transfer",
+      "action": "reuse_existing",
+      "target_id": "Q83185",
+      "reason": "The card describes the same non-parental transfer of genetic material registered as Q83185. The three prokaryotic mechanisms are explanatory routes within that broad biological process.",
+      "evidence": [
+        {
+          "url": "https://openstax.org/books/microbiology/pages/11-6-how-asexual-prokaryotes-achieve-genetic-diversity",
+          "locator": "Horizontal transfer opening and mechanisms; lines 30–42",
+          "note": "Distinguishes horizontal from vertical transfer and lists transformation, transduction and conjugation.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q83185",
+          "locator": "part-02.input.json rows[16].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q83185",
+          "locator": "English description and biological-process identity; lines 95–126",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 1.4 years ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:hydroponics",
+      "label": "Hydroponics",
+      "action": "reuse_existing",
+      "target_id": "Q191667",
+      "reason": "The water-based, soilless plant-growing practice is the hydroponics concept registered as Q191667. Root oxygen and system variations expand the explanation of that same growing method.",
+      "evidence": [
+        {
+          "url": "https://extension.umn.edu/garden-and-home/yard-and-garden/gardening-in-minnesota/small-scale-hydroponics",
+          "locator": "A quick guide to hydroponics, lines 242–249; root oxygen, lines 554–556",
+          "note": "Defines growing without soil and discusses root oxygen in the hydroponic system.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q191667",
+          "locator": "part-02.input.json rows[17].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q191667",
+          "locator": "English description and agricultural-process identity; lines 93–121",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: last month), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:kepler-space-telescope",
+      "label": "Kepler Space Telescope",
+      "action": "reuse_existing",
+      "target_id": "Q47272",
+      "reason": "NASA's repeatedly observing space telescope is the named spacecraft registered as Q47272. Its original field survey is an explanatory episode of that same telescope.",
+      "evidence": [
+        {
+          "url": "https://science.nasa.gov/mission/kepler/",
+          "locator": "In Depth; lines 269–272",
+          "note": "Identifies the 2009 Kepler space telescope, fixed-field observations and brightness-dip transit detection.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q47272",
+          "locator": "part-02.input.json rows[18].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q47272",
+          "locator": "English description and space-telescope identity; lines 89–111",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 3 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:lectio-divina",
+      "label": "Lectio divina",
+      "action": "reuse_existing",
+      "target_id": "Q1424654",
+      "reason": "Prayerful scriptural reading, meditation, prayer and contemplation are the monastic practice registered as Q1424654. The cited Catholic action stage is a tradition-specific elaboration of the same practice.",
+      "evidence": [
+        {
+          "url": "https://press.vatican.va/roman_curia/congregations/ccdds/documents/rc_con_ccdds_doc_20140629_direttorio-omiletico_en.html",
+          "locator": "Homiletic Directory paragraph 27; lines 177–183",
+          "note": "Describes the fourfold prayerful scriptural practice and its action stage.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1424654",
+          "locator": "part-02.input.json rows[19].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1424654",
+          "locator": "English description and prayer/meditation identity; lines 89–113",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 5 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:midrash",
+      "label": "Midrash",
+      "action": "reuse_existing",
+      "target_id": "Q202344",
+      "reason": "Sefaria presents midrash as biblical interpretations and stories and demonstrates them through Bereshit Rabbah. The card explains the interpretive character of that same rabbinic subject; Q202344 explicitly includes exegesis as well as classical rabbinic literature.",
+      "evidence": [
+        {
+          "url": "https://voices.sefaria.org/sheets/179504",
+          "locator": "Peshat/midrash explanation and Bereshit Rabbah example; lines 65–93",
+          "note": "Defines the midrashic reading and illustrates a theological interpretation from the rabbinic text.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q202344",
+          "locator": "part-02.input.json rows[20].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q202344",
+          "locator": "English description and exegesis/classical-rabbinic-literature statements; lines 89–115",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 4 months ago), not a live EntityData revision check.",
+        "The item's genre-focused description and unreferenced exegesis type annotation span corpus and interpretive tradition. Reuse is for this broad subject illustrated in Bereshit Rabbah, not permission to conflate separately cataloged methods or named texts."
+      ]
+    },
+    {
+      "id": "local:catalog:mobius-strip",
+      "label": "Möbius strip",
+      "action": "reuse_existing",
+      "target_id": "Q226843",
+      "reason": "The half-twisted, one-sided nonorientable surface is the Möbius strip registered as Q226843. Its construction and boundary explanation describe the same surface.",
+      "evidence": [
+        {
+          "url": "https://mathworld.wolfram.com/MoebiusStrip.html",
+          "locator": "Opening definition; lines 16–17",
+          "note": "Defines the one-sided nonorientable band produced by a half-twist and identifies its boundary.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q226843",
+          "locator": "part-02.input.json rows[21].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q226843",
+          "locator": "English description and Möbius-band aliases; lines 89–116",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 2 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:ocean-acidification",
+      "label": "Ocean acidification",
+      "action": "reuse_existing",
+      "target_id": "Q855711",
+      "reason": "Carbon-dioxide uptake changing seawater hydrogen/carbonate balance is the ocean-pH decline registered as Q855711. Shell-building effects explain the same chemistry change rather than a distinct hazard topic.",
+      "evidence": [
+        {
+          "url": "https://oceanservice.noaa.gov/facts/acidification.html",
+          "locator": "Definition and chemistry; lines 5–10",
+          "note": "Defines the ocean pH reduction and explains increased hydrogen ions and lower carbonate availability.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q855711",
+          "locator": "part-02.input.json rows[22].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q855711",
+          "locator": "English description and acidification identity; lines 95–125",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 1.4 years ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:pitch-music",
+      "label": "Pitch (music)",
+      "action": "reuse_existing",
+      "target_id": "Q118819",
+      "reason": "The perceived ordering of musical sounds from lower to higher is the pitch concept registered as Q118819. Piano and frequency-ratio illustrations explain that perceptual property while keeping it distinct from frequency itself.",
+      "evidence": [
+        {
+          "url": "https://musictheory.pugetsound.edu/mt21c/Pitch.html",
+          "locator": "Section 1.1 Pitch; lines 733–735",
+          "note": "Uses the direction of movement along piano notes to explain hearing higher and lower pitches.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q118819",
+          "locator": "part-02.input.json rows[23].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q118819",
+          "locator": "English description and musical-pitch aliases; lines 89–111",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        },
+        {
+          "url": "https://phys.unsw.edu.au/jw/musFAQ.html",
+          "locator": "Pitch/frequency/harmonics discussion; lines 250–255",
+          "note": "Explains perceived pitch, octave frequency ratios and the missing fundamental.",
+          "inspection_mode": "web_returned_first_party_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: last month), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:principal-agent-problem",
+      "label": "Principal–agent problem",
+      "action": "reuse_existing",
+      "target_id": "Q1053211",
+      "reason": "The conflict between a party wanting an outcome and another controlling unverifiable action is Q1053211's principal–agent problem. Employment and incomplete contracts provide an example of this same economic concept.",
+      "evidence": [
+        {
+          "url": "https://books.core-econ.org/the-economy-v1/book/text/06.html",
+          "locator": "Section 6.10, Principal–agent models; lines 1020–1029",
+          "note": "Defines the relationship/problem and explains conflicting interests when action cannot be guaranteed by contract.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1053211",
+          "locator": "part-02.input.json rows[24].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1053211",
+          "locator": "English description and economic-concept identity; lines 89–126",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 3 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:random-walk",
+      "label": "Random walk",
+      "action": "reuse_existing",
+      "target_id": "Q856741",
+      "reason": "The sequence of randomly chosen steps under rules for directions, lengths and space is the mathematical path model registered as Q856741. Different domains explain its general formulation.",
+      "evidence": [
+        {
+          "url": "https://mathworld.wolfram.com/RandomWalk.html",
+          "locator": "Opening definition; lines 13–14",
+          "note": "Defines random steps with restrictions and notes dependence on dimension and lattice.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q856741",
+          "locator": "part-02.input.json rows[25].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q856741",
+          "locator": "English description and mathematical-model identity; lines 97–117",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 3 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:rule-of-saint-benedict",
+      "label": "Rule of Saint Benedict",
+      "action": "reuse_existing",
+      "target_id": "Q852724",
+      "reason": "The named Rule's prescriptions for monastic reading, labor and prayer explain the same book of precepts registered as Q852724. The card concerns this text and its adoption, rather than monastic routines in general.",
+      "evidence": [
+        {
+          "url": "https://www.metmuseum.org/essays/monasticism-in-western-medieval-europe",
+          "locator": "Benedictine Rule discussion; lines 194–197",
+          "note": "Identifies Benedict's widely adopted rule and its obligations of labor, reading and communal prayer.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q852724",
+          "locator": "part-02.input.json rows[26].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q852724",
+          "locator": "English description and monastic-rule identity; lines 89–119",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        },
+        {
+          "url": "https://archive.osb.org/rb/text/rbemjo3.html",
+          "locator": "Rule chapters 47–48; lines 84–122",
+          "note": "The Order's English text prescribes signals for communal worship and scheduled manual work and reading.",
+          "inspection_mode": "web_returned_primary_text"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 3 months ago), not a live EntityData revision check.",
+        "The legacy www.osb.org/rb/text/rbejms3.html URL returned 404. The official archive.osb.org chapter text was successfully inspected."
+      ]
+    },
+    {
+      "id": "local:catalog:sexual-selection",
+      "label": "Sexual selection",
+      "action": "reuse_existing",
+      "target_id": "Q206913",
+      "reason": "Mate-acquisition success with possible survival costs describes the mechanism registered as Q206913. The card's examples explain the same form of selection.",
+      "evidence": [
+        {
+          "url": "https://evolution.berkeley.edu/evolution-101/mechanisms-the-processes-of-evolution/sexual-selection/",
+          "locator": "Opening definition and survival trade-off; lines 65–72",
+          "note": "Defines selection on obtaining mates and discusses traits that can harm survival.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q206913",
+          "locator": "part-02.input.json rows[27].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q206913",
+          "locator": "English description and natural-selection identity; lines 95–115",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 1.1 years ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:soil-liquefaction",
+      "label": "Soil liquefaction",
+      "action": "reuse_existing",
+      "target_id": "Q827291",
+      "reason": "Loss of support strength in loosely packed, waterlogged sediment during strong shaking is the soil-liquefaction phenomenon registered as Q827291. The seismic example and material conditions explain the same phenomenon.",
+      "evidence": [
+        {
+          "url": "https://www.usgs.gov/faqs/what-liquefaction?items_per_page=6&page=1",
+          "locator": "FAQ opening explanation; lines 3–5",
+          "note": "Identifies liquefaction as loose waterlogged sediment losing strength under strong ground shaking, including structural damage.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q827291",
+          "locator": "part-02.input.json rows[28].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q827291",
+          "locator": "English description and geological-phenomenon identity; lines 89–119",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 5 months ago), not a live EntityData revision check.",
+        "The bare supplied USGS FAQ URL timed out. Its query-parameter URL returned the FAQ's opening passage; USGS EarthWord–Liquefaction was also inspected."
+      ]
+    },
+    {
+      "id": "local:catalog:standing-to-sue",
+      "label": "Standing to sue",
+      "action": "reuse_existing",
+      "target_id": "Q683979",
+      "reason": "Standing to sue is the same legal doctrine of a party's stake/connection to the challenged action registered as Q683979. The federal injury, causation and redressability test is its jurisdiction-specific explanation.",
+      "evidence": [
+        {
+          "url": "https://www.law.cornell.edu/wex/standing",
+          "locator": "Federal standing; lines 10–17",
+          "note": "Explains the US federal standing test and expressly uses the phrase standing to sue.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q683979",
+          "locator": "part-02.input.json rows[29].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.law.cornell.edu/supct/html/90-1424.ZO.html",
+          "locator": "Lujan v Defenders of Wildlife, Part II; lines 39–44",
+          "note": "The opinion identifies standing and states injury, traceability and redressability requirements.",
+          "inspection_mode": "web_returned_primary_case_text"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata Q683979 HTML returned Internal Error; Special:EntityData/Q683979.json was reported inaccessible via the web tool. No remote QID payload or current revision was verified; target identity is from the supplied registered inventory description."
+      ]
+    },
+    {
+      "id": "local:catalog:stereographic-projection",
+      "label": "Stereographic projection",
+      "action": "reuse_existing",
+      "target_id": "Q866099",
+      "reason": "The pole-to-plane map of sphere points is the stereographic projection registered as Q866099. The geometric construction is an explanation of that same mapping.",
+      "evidence": [
+        {
+          "url": "https://mathworld.wolfram.com/StereographicProjection.html",
+          "locator": "Opening construction and algebraic explanation; lines 17–20",
+          "note": "Defines projection from a sphere pole onto a plane and relates its formulas to similar triangles.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q866099",
+          "locator": "part-02.input.json rows[30].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q866099",
+          "locator": "English description and conformal-map identity; lines 90–116",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 10 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:summary-judgment",
+      "label": "Summary judgment",
+      "action": "reuse_existing",
+      "target_id": "Q281126",
+      "reason": "The card's federal civil Rule 56 procedure resolves a claim through the summary judgment registered as Q281126. Its specific evidentiary conditions explain the same court disposition rather than a different type of judgment.",
+      "evidence": [
+        {
+          "url": "https://www.law.cornell.edu/wex/summary_judgment",
+          "locator": "Definition, federal Rule 56 and evidence; lines 6–17, 21–23",
+          "note": "Defines judgment without full trial and gives the federal conditions and view favorable to the nonmovant.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q281126",
+          "locator": "part-02.input.json rows[31].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.law.cornell.edu/rules/frcp/rule_56",
+          "locator": "Federal Rule of Civil Procedure 56(a); line 5",
+          "note": "The rule authorizes judgment on the movant's showing of no material-fact dispute and entitlement as a matter of law.",
+          "inspection_mode": "web_returned_primary_rule_text"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata Q281126 HTML returned Internal Error; Special:EntityData/Q281126.json was reported inaccessible via the web tool. No remote QID payload or current revision was verified; target identity is from the supplied registered inventory description."
+      ]
+    },
+    {
+      "id": "local:catalog:thrust-vectoring",
+      "label": "Thrust vectoring",
+      "action": "reuse_existing",
+      "target_id": "Q743135",
+      "reason": "Redirecting exhaust to alter the propulsive force is the thrust-vectoring capability registered as Q743135. A rectangular nozzle is an example enabling it, rather than a distinct nozzle-shape subject.",
+      "evidence": [
+        {
+          "url": "https://www.grc.nasa.gov/www/k-12/airplane/nozzle.html",
+          "locator": "Rectangular nozzle exits and vectored exhaust; line 13",
+          "note": "Explicitly describes deflecting exhaust and changing thrust direction to improve maneuverability.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q743135",
+          "locator": "part-02.input.json rows[32].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q743135",
+          "locator": "English description, thrust-vector-control alias and steering-system identity; lines 89–109",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 2 months ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:torus",
+      "label": "Torus",
+      "action": "reuse_existing",
+      "target_id": "Q12510",
+      "reason": "The card expressly describes the ordinary genus-one torus, whose rectangular edge-gluing construction and doughnut embedding are linked in the source. Those are presentations of the surface registered as Q12510.",
+      "evidence": [
+        {
+          "url": "https://mathworld.wolfram.com/Torus.html",
+          "locator": "Ordinary torus definition/construction; lines 16–19; default ring-torus sense, line 31",
+          "note": "Connects the one-hole surface, no-twist rectangle gluing and the familiar doughnut shape.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q12510",
+          "locator": "part-02.input.json rows[33].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q12510",
+          "locator": "English description and surface/closed-manifold identity; lines 89–124",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: last month), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:utf-8",
+      "label": "UTF-8",
+      "action": "reuse_existing",
+      "target_id": "Q193537",
+      "reason": "The variable-length Unicode encoding with ASCII-preserving byte values is the UTF-8 format registered as Q193537. The scalar-value versus encoded-byte distinction explains that same format.",
+      "evidence": [
+        {
+          "url": "https://www.rfc-editor.org/rfc/rfc3629.txt",
+          "locator": "RFC 3629, introductory ASCII property and section 3; lines 83–85, 148–171",
+          "note": "Specifies the ASCII-compatible encoding and one-to-four-octet format.",
+          "inspection_mode": "web_returned_primary_standard_text"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q193537",
+          "locator": "part-02.input.json rows[34].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q193537",
+          "locator": "English description and variable-width-character-encoding identity; lines 89–127",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: 3 weeks ago), not a live EntityData revision check."
+      ]
+    },
+    {
+      "id": "local:catalog:xmm-newton",
+      "label": "XMM-Newton",
+      "action": "reuse_existing",
+      "target_id": "Q693861",
+      "reason": "ESA's named X-ray observatory is the spacecraft registered as Q693861. The mirror/instrument explanation describes the same observatory rather than a separately named optical device.",
+      "evidence": [
+        {
+          "url": "https://www.esa.int/Science_Exploration/Space_Science/XMM-Newton/XMM-Newton_factsheet",
+          "locator": "Mission identity and mirror design; lines 9–10, 56–58",
+          "note": "Identifies the ESA observatory and its three nested grazing-incidence mirror modules.",
+          "inspection_mode": "web_returned_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q693861",
+          "locator": "part-02.input.json rows[35].new_live_alias_matches[0].records[0] (registered inventory ID and imported description)",
+          "note": "Compared the supplied registered subject description with the inspected explanatory passage; the decision is based on meaning and source subject.",
+          "inspection_mode": "supplied_imported_inventory_description"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q693861",
+          "locator": "English description, XMM aliases and space-telescope identity; lines 89–109",
+          "note": "Inspected the item's English subject description and the specified aliases/type statements for identity; these annotations are not used to assert new catalog relationships.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata identity access was web-returned indexed HTML (reported crawl: last month), not a live EntityData revision check."
+      ]
+    }
+  ]
+}

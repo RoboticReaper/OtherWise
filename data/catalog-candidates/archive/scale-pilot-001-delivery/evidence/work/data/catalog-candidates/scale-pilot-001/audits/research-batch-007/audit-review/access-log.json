@@ -1,0 +1,1632 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-007",
+  "audit_session_started_at": "2026-10-08T21:54:27Z",
+  "recorded_at": "2026-10-08T22:05:02.080101+00:00",
+  "timestamp_policy": "No reconstructed exact acquisition timestamps. Entries refer to preserved ordered web-tool responses.",
+  "attempts": [
+    {
+      "artifact": "web-01.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://handbook.fide.com/chapter/E012023",
+        "lineno": null
+      },
+      "resolved_url": "https://handbook.fide.com/chapter/E012023",
+      "status": "retrieved",
+      "result_ref": "turn1450view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-01.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://usbgf.org/backgammon-basics-how-to-play/",
+        "lineno": null
+      },
+      "resolved_url": "https://usbgf.org/backgammon-basics-how-to-play/",
+      "status": "retrieved",
+      "result_ref": "turn1450view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-01.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://britgo.org/intro/intro2.html",
+        "lineno": null
+      },
+      "resolved_url": "https://britgo.org/intro/intro2.html",
+      "status": "retrieved",
+      "result_ref": "turn1450view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-01.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.britgo.org/rules/approved",
+        "lineno": null
+      },
+      "resolved_url": "https://www.britgo.org/rules/approved",
+      "status": "retrieved",
+      "result_ref": "turn1450view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-01.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.shogi.or.jp/faq/rules/",
+        "lineno": null
+      },
+      "resolved_url": "https://www.shogi.or.jp/faq/rules/",
+      "status": "retrieved",
+      "result_ref": "turn1450view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-02.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1450view0",
+        "pattern": "9.2.1"
+      },
+      "resolved_url": "https://handbook.fide.com/chapter/E012023",
+      "status": "retrieved",
+      "result_ref": "turn1451view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-02.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1450view1",
+        "pattern": "Bearing Off"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1451view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-02.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1450view1",
+        "pattern": "Jacoby"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1451view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-02.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1450view2",
+        "pattern": "Seki"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1451view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-02.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1450view3",
+        "pattern": "Komi"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1451view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-02.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1450view4",
+        "pattern": "連続王手"
+      },
+      "resolved_url": null,
+      "status": "text_search_no_match",
+      "result_ref": "turn1451view5",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-03.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1450view4",
+        "lineno": 60
+      },
+      "resolved_url": "https://www.shogi.or.jp/faq/rules/",
+      "status": "retrieved",
+      "result_ref": "turn1452view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-03.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1450view1",
+        "lineno": 175
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1452view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-03.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1450view0",
+        "lineno": 434
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1452view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-03.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english",
+        "lineno": null
+      },
+      "resolved_url": "https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english",
+      "status": "fetch_failed",
+      "result_ref": "turn1452view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-03.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+        "lineno": null
+      },
+      "resolved_url": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+      "status": "retrieved",
+      "result_ref": "turn1452view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-04.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.theifab.com/laws/latest/offside/",
+        "lineno": null
+      },
+      "resolved_url": "https://www.theifab.com/laws/latest/offside/",
+      "status": "retrieved",
+      "result_ref": "turn1453view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-04.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/curveball-trajectory/",
+        "lineno": null
+      },
+      "resolved_url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/curveball-trajectory/",
+      "status": "retrieved",
+      "result_ref": "turn1453view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-04.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/forces-on-a-baseball/",
+        "lineno": null
+      },
+      "resolved_url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/forces-on-a-baseball/",
+      "status": "retrieved",
+      "result_ref": "turn1453view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-04.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://physics.usyd.edu.au/~cross/tennis.html",
+        "lineno": null
+      },
+      "resolved_url": "https://physics.usyd.edu.au/~cross/tennis.html",
+      "status": "retrieved",
+      "result_ref": "turn1453view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-04.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://worldcurling.org/2024/01/last-one-sweeping-the-latest-techniques-and-approaches-to-sweeping/",
+        "lineno": null
+      },
+      "resolved_url": "https://worldcurling.org/2024/01/last-one-sweeping-the-latest-techniques-and-approaches-to-sweeping/",
+      "status": "retrieved",
+      "result_ref": "turn1453view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-05.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1453view1",
+        "pattern": "Aerodynamic Force"
+      },
+      "resolved_url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/curveball-trajectory/",
+      "status": "retrieved",
+      "result_ref": "turn1454view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-05.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1453view2",
+        "pattern": "knuckle"
+      },
+      "resolved_url": null,
+      "status": "text_search_no_match",
+      "result_ref": "turn1454view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-05.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1453view3",
+        "pattern": "Sweet"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1454view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-05.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1453view4",
+        "pattern": "Single"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1454view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-06.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1452view4",
+        "lineno": 20
+      },
+      "resolved_url": "https://c.tabletopia.com/games/japanese-chess/rules/shogi-an-english-players-guide/en",
+      "status": "retrieved",
+      "result_ref": "turn1455view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-06.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english",
+        "lineno": null
+      },
+      "resolved_url": "https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english",
+      "status": "fetch_failed",
+      "result_ref": "turn1455view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-07.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1453view2",
+        "lineno": 0
+      },
+      "resolved_url": "https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/forces-on-a-baseball/",
+      "status": "retrieved",
+      "result_ref": "turn1456view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-07.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1450view2",
+        "lineno": 114
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1456view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-08.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://musictheory.pugetsound.edu/mt21c/FugueAnalysis.html",
+        "lineno": null
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/FugueAnalysis.html",
+      "status": "retrieved",
+      "result_ref": "turn1457view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-08.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://musictheory.pugetsound.edu/mt21c/MelodicAlteration.html",
+        "lineno": null
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/MelodicAlteration.html",
+      "status": "retrieved",
+      "result_ref": "turn1457view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-08.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://musictheory.pugetsound.edu/mt21c/AdditiveMinimalism.html",
+        "lineno": null
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/AdditiveMinimalism.html",
+      "status": "retrieved",
+      "result_ref": "turn1457view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-08.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://musictheory.pugetsound.edu/mt21c/Appoggiatura.html",
+        "lineno": null
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/Appoggiatura.html",
+      "status": "retrieved",
+      "result_ref": "turn1457view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-08.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://musictheory.pugetsound.edu/mt21c/Suspension.html",
+        "lineno": null
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/Suspension.html",
+      "status": "retrieved",
+      "result_ref": "turn1457view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-08.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://musictheory.pugetsound.edu/mt21c/PedalPoint.html",
+        "lineno": null
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/PedalPoint.html",
+      "status": "retrieved",
+      "result_ref": "turn1457view5",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-09.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1457view0",
+        "lineno": 736
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/FugueAnalysis.html",
+      "status": "retrieved",
+      "result_ref": "turn1459view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-09.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1457view1",
+        "lineno": 736
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1459view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-09.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1457view2",
+        "lineno": 736
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1459view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-09.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1457view3",
+        "lineno": 736
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1459view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-09.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1457view4",
+        "lineno": 736
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1459view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-09.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1457view5",
+        "lineno": 736
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1459view5",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-10.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1457view0",
+        "lineno": 788
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/FugueAnalysis.html",
+      "status": "retrieved",
+      "result_ref": "turn1460view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-10.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1457view2",
+        "lineno": 731
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1460view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-10.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html",
+        "lineno": 731
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/SpeciesCounterpoint.html",
+      "status": "retrieved",
+      "result_ref": "turn1460view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-10.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://musictheory.pugetsound.edu/mt21c/NeapolitanIntroduction.html",
+        "lineno": 731
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/NeapolitanIntroduction.html",
+      "status": "retrieved",
+      "result_ref": "turn1460view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-10.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://musictheory.pugetsound.edu/mt21c/TheCadentialSixFourChord.html",
+        "lineno": 731
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/TheCadentialSixFourChord.html",
+      "status": "retrieved",
+      "result_ref": "turn1460view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-10.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://musictheory.pugetsound.edu/mt21c/Pitch.html",
+        "lineno": 731
+      },
+      "resolved_url": "https://musictheory.pugetsound.edu/mt21c/Pitch.html",
+      "status": "retrieved",
+      "result_ref": "turn1460view5",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-11.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://phys.unsw.edu.au/jw/musFAQ.html",
+        "lineno": null
+      },
+      "resolved_url": "https://phys.unsw.edu.au/jw/musFAQ.html",
+      "status": "retrieved",
+      "result_ref": "turn1461view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-11.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://newt.phys.unsw.edu.au/jw/harmonics.html",
+        "lineno": null
+      },
+      "resolved_url": "https://newt.phys.unsw.edu.au/jw/harmonics.html",
+      "status": "retrieved",
+      "result_ref": "turn1461view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-12.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1461view1",
+        "lineno": 0
+      },
+      "resolved_url": "https://newt.phys.unsw.edu.au/jw/harmonics.html",
+      "status": "retrieved",
+      "result_ref": "turn1462view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-12.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1461view0",
+        "pattern": "compromise"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1462view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-12.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1461view0",
+        "pattern": "stretched"
+      },
+      "resolved_url": null,
+      "status": "text_search_no_match",
+      "result_ref": "turn1462view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-12.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1461view0",
+        "pattern": "perception"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1462view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-13.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1461view0",
+        "lineno": 247
+      },
+      "resolved_url": "https://phys.unsw.edu.au/jw/musFAQ.html",
+      "status": "retrieved",
+      "result_ref": "turn1463view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-13.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1461view1",
+        "lineno": 30
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1463view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-13.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
+        "lineno": null
+      },
+      "resolved_url": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
+      "status": "retrieved",
+      "result_ref": "turn1463view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-13.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://openstax.org/books/psychology-2e/pages/5-6-gestalt-principles-of-perception",
+        "lineno": null
+      },
+      "resolved_url": "https://openstax.org/books/psychology-2e/pages/5-6-gestalt-principles-of-perception",
+      "status": "retrieved",
+      "result_ref": "turn1463view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-13.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://openstax.org/books/psychology-2e/pages/8-3-problems-with-memory",
+        "lineno": null
+      },
+      "resolved_url": "https://openstax.org/books/psychology-2e/pages/8-3-problems-with-memory",
+      "status": "retrieved",
+      "result_ref": "turn1463view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-13.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://openstax.org/books/psychology-2e/pages/12-4-conformity-compliance-and-obedience",
+        "lineno": null
+      },
+      "resolved_url": "https://openstax.org/books/psychology-2e/pages/12-4-conformity-compliance-and-obedience",
+      "status": "retrieved",
+      "result_ref": "turn1463view5",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-14.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1463view2",
+        "lineno": 40
+      },
+      "resolved_url": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
+      "status": "retrieved",
+      "result_ref": "turn1464view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-14.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1463view3",
+        "lineno": 40
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1464view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-14.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1463view4",
+        "lineno": 45
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1464view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-14.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1463view5",
+        "lineno": 120
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1464view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-14.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html",
+        "lineno": null
+      },
+      "resolved_url": "https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html",
+      "status": "retrieved",
+      "result_ref": "turn1464view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-14.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://openstax.org/books/psychology-2e/pages/2-4-ethics",
+        "lineno": null
+      },
+      "resolved_url": "https://openstax.org/books/psychology-2e/pages/2-4-ethics",
+      "status": "retrieved",
+      "result_ref": "turn1464view5",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-14.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://openstax.org/books/psychology-2e/pages/8-2-parts-of-the-brain-involved-with-memory",
+        "lineno": null
+      },
+      "resolved_url": "https://openstax.org/books/psychology-2e/pages/8-2-parts-of-the-brain-involved-with-memory",
+      "status": "retrieved",
+      "result_ref": "turn1464view6",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-14.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://pubmed.ncbi.nlm.nih.gov/25154857/",
+        "lineno": null
+      },
+      "resolved_url": "https://pubmed.ncbi.nlm.nih.gov/25154857/",
+      "status": "retrieved",
+      "result_ref": "turn1464view7",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-15.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1464view4",
+        "lineno": 0
+      },
+      "resolved_url": "https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html",
+      "status": "retrieved",
+      "result_ref": "turn1465view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-15.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1463view2",
+        "lineno": 59
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1465view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-15.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1463view4",
+        "pattern": "The Misinformation Effect"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1465view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-15.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1463view4",
+        "pattern": "Misattribution"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1465view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-15.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1463view5",
+        "pattern": "Stanley"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1465view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-15.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1464view5",
+        "pattern": "debriefing"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1465view5",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-15.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1464view6",
+        "pattern": "Hippocampus"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1465view6",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-15.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1464view7",
+        "pattern": "Molaison"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1465view7",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-16.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1464view4",
+        "lineno": 19
+      },
+      "resolved_url": "https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html",
+      "status": "retrieved",
+      "result_ref": "turn1466view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-16.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1463view5",
+        "lineno": 69
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1466view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-16.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1463view2",
+        "lineno": 64
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1466view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-17.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://plato.stanford.edu/entries/knowledge-analysis/",
+        "lineno": null
+      },
+      "resolved_url": "https://plato.stanford.edu/entries/knowledge-analysis/",
+      "status": "retrieved",
+      "result_ref": "turn1467view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-17.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://plato.stanford.edu/entries/moral-luck/",
+        "lineno": null
+      },
+      "resolved_url": "https://plato.stanford.edu/entries/moral-luck/",
+      "status": "retrieved",
+      "result_ref": "turn1467view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-17.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://plato.stanford.edu/entries/twotruths-india/",
+        "lineno": null
+      },
+      "resolved_url": "https://plato.stanford.edu/entries/twotruths-india/",
+      "status": "retrieved",
+      "result_ref": "turn1467view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-17.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://plato.stanford.edu/entries/epistemology/",
+        "lineno": null
+      },
+      "resolved_url": "https://plato.stanford.edu/entries/epistemology/",
+      "status": "retrieved",
+      "result_ref": "turn1467view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-18.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1467view0",
+        "pattern": "Barn County"
+      },
+      "resolved_url": "https://plato.stanford.edu/entries/knowledge-analysis/",
+      "status": "retrieved",
+      "result_ref": "turn1468view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-18.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1467view0",
+        "pattern": "false lemmas"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1468view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-18.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1467view1",
+        "pattern": "Circumstantial"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1468view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-18.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1467view2",
+        "pattern": "radically"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1468view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-18.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1467view3",
+        "pattern": "cognitive success"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1468view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-19.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.law.cornell.edu/wex/collateral_estoppel",
+        "lineno": null
+      },
+      "resolved_url": "https://www.law.cornell.edu/wex/collateral_estoppel",
+      "status": "retrieved",
+      "result_ref": "turn1469view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-19.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.law.cornell.edu/wex/res_judicata",
+        "lineno": null
+      },
+      "resolved_url": "https://www.law.cornell.edu/wex/res_judicata",
+      "status": "retrieved",
+      "result_ref": "turn1469view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-19.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.law.cornell.edu/wex/amicus_curiae",
+        "lineno": null
+      },
+      "resolved_url": "https://www.law.cornell.edu/wex/amicus_curiae",
+      "status": "retrieved",
+      "result_ref": "turn1469view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-19.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.law.cornell.edu/wex/standing",
+        "lineno": null
+      },
+      "resolved_url": "https://www.law.cornell.edu/wex/standing",
+      "status": "retrieved",
+      "result_ref": "turn1469view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-19.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.law.cornell.edu/wex/stare_decisis",
+        "lineno": null
+      },
+      "resolved_url": "https://www.law.cornell.edu/wex/stare_decisis",
+      "status": "retrieved",
+      "result_ref": "turn1469view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-19.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.law.cornell.edu/uscode/text/5/552",
+        "lineno": null
+      },
+      "resolved_url": "https://www.law.cornell.edu/uscode/text/5/552",
+      "status": "retrieved",
+      "result_ref": "turn1469view5",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-20.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1467view2",
+        "lineno": 20
+      },
+      "resolved_url": "https://plato.stanford.edu/entries/twotruths-india/",
+      "status": "retrieved",
+      "result_ref": "turn1470view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-20.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1467view3",
+        "lineno": 10
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1470view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-20.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://citizensassembly.ie/about/faq/",
+        "lineno": null
+      },
+      "resolved_url": "https://citizensassembly.ie/about/faq/",
+      "status": "retrieved",
+      "result_ref": "turn1470view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-20.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://elections.nz/democracy-in-nz/what-is-new-zealands-system-of-government/what-is-mmp",
+        "lineno": null
+      },
+      "resolved_url": "https://elections.nz/democracy-in-nz/what-is-new-zealands-system-of-government/what-is-mmp",
+      "status": "retrieved",
+      "result_ref": "turn1470view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-20.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.parliament.uk/about/how/laws/parliamentacts/",
+        "lineno": null
+      },
+      "resolved_url": "https://www.parliament.uk/about/how/laws/parliamentacts/",
+      "status": "retrieved",
+      "result_ref": "turn1470view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-20.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://www.gov.uk/government/publications/money-bills/money-bills",
+        "lineno": null
+      },
+      "resolved_url": "https://www.gov.uk/government/publications/money-bills/money-bills",
+      "status": "retrieved",
+      "result_ref": "turn1470view5",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-20.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "https://openstax.org/books/introduction-political-science/pages/1-1-defining-politics-who-gets-what-when-where-how-and-why",
+        "lineno": null
+      },
+      "resolved_url": "https://openstax.org/books/introduction-political-science/pages/1-1-defining-politics-who-gets-what-when-where-how-and-why",
+      "status": "retrieved",
+      "result_ref": "turn1470view6",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-21.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1469view5",
+        "pattern": "segregable"
+      },
+      "resolved_url": "https://www.law.cornell.edu/uscode/text/5/552",
+      "status": "retrieved",
+      "result_ref": "turn1471view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-21.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1470view2",
+        "pattern": "stratified"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1471view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-21.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1470view3",
+        "pattern": "two votes"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1471view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-21.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1470view4",
+        "pattern": "five years"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1471view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-21.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1470view5",
+        "pattern": "1.5"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1471view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-21.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1470view6",
+        "pattern": "rules"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1471view5",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-22.txt",
+      "method": "click",
+      "request": {
+        "ref_id": "turn1469view0",
+        "id": 1
+      },
+      "resolved_url": "https://www.law.cornell.edu/wex/issue_preclusion",
+      "status": "retrieved",
+      "result_ref": "turn1472view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-23.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1470view6",
+        "lineno": 26
+      },
+      "resolved_url": "https://openstax.org/books/introduction-political-science/pages/1-1-defining-politics-who-gets-what-when-where-how-and-why",
+      "status": "retrieved",
+      "result_ref": "turn1473view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-23.txt",
+      "method": "open",
+      "request": {
+        "ref_id": "turn1470view5",
+        "lineno": 75
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1473view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-23.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1469view5",
+        "pattern": "partial disclosure"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1473view2",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-23.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1470view5",
+        "pattern": "2.2"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1473view3",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-23.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1470view4",
+        "pattern": "agreement"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1473view4",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-24.txt",
+      "method": "click",
+      "request": {
+        "ref_id": "turn1472view0",
+        "id": 20
+      },
+      "resolved_url": "https://supreme.justia.com/cases/federal/us/553/880/",
+      "status": "retrieved",
+      "result_ref": "turn1474view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-25.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1474view0",
+        "pattern": "actually litigated"
+      },
+      "resolved_url": "https://supreme.justia.com/cases/federal/us/553/880/",
+      "status": "retrieved",
+      "result_ref": "turn1475view0",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    },
+    {
+      "artifact": "web-25.txt",
+      "method": "find",
+      "request": {
+        "ref_id": "turn1474view0",
+        "pattern": "full and fair"
+      },
+      "resolved_url": null,
+      "status": "retrieved",
+      "result_ref": "turn1475view1",
+      "precise_tool_completed_at": null,
+      "date": "2026-10-08",
+      "timestamp_limitation": "Web response has no tool-completion timestamp; audit-session interval and original artifact preserve ordering."
+    }
+  ],
+  "failing_url_attempts": {
+    "https://www.worldothello.org/about/about-othello/othello-rules/official-rules/english": 2
+  },
+  "bounds": {
+    "maximum_attempts_per_failing_url": 2,
+    "maximum_alternative_references_per_candidate": 3
+  },
+  "additional_references_by_candidate": {
+    "local:catalog:issue-preclusion": [
+      "https://www.law.cornell.edu/wex/issue_preclusion",
+      "https://supreme.justia.com/cases/federal/us/553/880/"
+    ]
+  }
+}

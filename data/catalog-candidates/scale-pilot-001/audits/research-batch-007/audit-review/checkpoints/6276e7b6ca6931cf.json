@@ -1,0 +1,52 @@
+{
+  "id": "local:catalog:adagio-for-strings",
+  "label": "Adagio for Strings",
+  "sample_kind": "extra_boundary_targeted",
+  "boundary_changed": true,
+  "card_version": 2,
+  "reviewed_at": "2026-10-08T21:59:09.675773+00:00",
+  "result": "supported",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "topic",
+    "entity_kind": "named_subject",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q170439",
+        "label": "Chord",
+        "original_description": "harmonic set of three or more notes",
+        "prior_card_takeaways": []
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:suspension-in-tonal-music",
+        "label": "Suspension in tonal music"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Barber example is labeled 4–3. Prepared same-note dissonance/downward step and reduction of compound intervals are explicit, preserving revised interval-class qualification.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s021"
+      ],
+      "locator": "10.9 definition, classification and Figure 10.9.3; web-09 lines 735–765"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:suspension-in-tonal-music",
+      "type": "application_of",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Inspected the stated connection and all factual premises in the source passages recorded for this card; relationship type and assertion label fit the cited support."
+    }
+  ],
+  "limitations": [],
+  "findings": [],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

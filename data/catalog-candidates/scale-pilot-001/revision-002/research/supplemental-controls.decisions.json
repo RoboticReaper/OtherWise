@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "assignment": "supplemental-controls",
+  "decisions": [
+    {
+      "id": "local:authored:000096",
+      "label": "Worker cooperatives",
+      "action": "reuse_existing",
+      "target_id": "Q1939471",
+      "reason": "Both records identify an enterprise owned and democratically controlled by its workers. CORE explicitly calls worker ownership with worker-selected managers a worker-owned cooperative and allows a continuing operational hierarchy. The card's governance explanation is the same organization type, not a different management process.",
+      "evidence": [
+        {
+          "url": "https://books.core-econ.org/the-economy-v1/book/text/06.html",
+          "locator": "Section 6.9, cooperative firm definition and discussion; lines 968–975",
+          "note": "Defines the worker-owned firm, selection of day-to-day managers and continuing hierarchy.",
+          "inspection_mode": "web_returned_primary_or_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1939471",
+          "locator": "data/topics.json: record wikidata_id=Q1939471, source_revision=2550929433",
+          "note": "Compared the actual Inventory record's registered description and source identity with the pilot's original card and inspected primary passage.",
+          "inspection_mode": "actual_inventory_record"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q1939471",
+          "locator": "English description, worker-owned aliases and business-entity identity; lines 90–141",
+          "note": "Inspected the indexed item description and stated scope for identity; no new relation is inferred from unreferenced Wikidata type annotations.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata HTML reported crawl 8 months ago. The actual inventory carries source_revision 2550929433, but this review did not retrieve that exact revision's EntityData payload."
+      ]
+    },
+    {
+      "id": "local:catalog:lahar",
+      "label": "Lahar",
+      "action": "reuse_existing",
+      "target_id": "Q47212",
+      "reason": "The USGS source defines lahar as water, mud and volcanic rock moving down a volcano's drainage channel. The candidate's moving mixture is therefore the same volcanic mud/debris-flow phenomenon registered as Q47212. Neither record identifies a stationary deposit, raw debris material or lava stream.",
+      "evidence": [
+        {
+          "url": "https://www.usgs.gov/publications/lahar-river-volcanic-mud-and-debris",
+          "locator": "Report Summary; lines 8–10",
+          "note": "Defines the moving water-and-volcanic-debris flow and its occurrence during eruptions or inactivity.",
+          "inspection_mode": "web_returned_primary_or_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q47212",
+          "locator": "data/topics.json: record wikidata_id=Q47212, source_revision=2516824865",
+          "note": "Compared the actual Inventory record's registered description and source identity with the pilot's original card and inspected primary passage.",
+          "inspection_mode": "actual_inventory_record"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q47212",
+          "locator": "English description and mudflow/volcanic-phenomenon identity; lines 89–106",
+          "note": "Inspected the indexed item description and stated scope for identity; no new relation is inferred from unreferenced Wikidata type annotations.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata HTML reported crawl last month. The actual inventory carries source_revision 2516824865, but this review did not retrieve that exact revision's EntityData payload."
+      ]
+    },
+    {
+      "id": "local:catalog:rain-shadow",
+      "label": "Rain shadow",
+      "action": "reuse_existing",
+      "target_id": "Q747173",
+      "reason": "NOAA explicitly names the windward/leeward contrast and its ascent/cooling/descent/drying explanation as the rain shadow effect. Q747173 covers both the leeward region and the natural phenomenon, so the card explains the formation of the same rain-shadow subject rather than a separately delimited rainfall process.",
+      "evidence": [
+        {
+          "url": "https://prod-01-asg-www-climate.woc.noaa.gov/news-features/featured-images/rain-shadows-summits-hawaii",
+          "locator": "Rain-shadow contrast and mechanism; lines 86–90",
+          "note": "Names the rain shadow effect and explains windward precipitation with leeward descent, warming and drying.",
+          "inspection_mode": "web_returned_primary_or_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q747173",
+          "locator": "data/topics.json: record wikidata_id=Q747173, source_revision=2550295541",
+          "note": "Compared the actual Inventory record's registered description and source identity with the pilot's original card and inspected primary passage.",
+          "inspection_mode": "actual_inventory_record"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q747173",
+          "locator": "English description and region/natural-phenomenon identity; lines 89–113",
+          "note": "Inspected the indexed item description and stated scope for identity; no new relation is inferred from unreferenced Wikidata type annotations.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata HTML reported crawl 4 months ago. The actual inventory carries source_revision 2550295541, but this review did not retrieve that exact revision's EntityData payload.",
+        "The inventory description foregrounds the leeward region; the inspected item also covers the natural phenomenon. This card teaches that region's defining rain-shadow mechanism."
+      ]
+    },
+    {
+      "id": "local:catalog:unreliable-narration",
+      "label": "Unreliable narration",
+      "action": "reuse_existing",
+      "target_id": "Q650118",
+      "reason": "The handbook defines narratorial unreliability through reporting, interpretation and evaluation and explains mixed reliability across those axes. Those are the card's exact learning dimensions. Q650118 identifies both a narrative mode and narrator role, supporting reuse of the same generic narratological device while retaining the distinction between questionable discourse and the narrator's personality.",
+      "evidence": [
+        {
+          "url": "https://www-archiv.fdm.uni-hamburg.de/lhn/node/66.html",
+          "locator": "Definition and Explication, lines 46–55; Basic Understanding, line 61",
+          "note": "Defines unreliability as a feature of discourse, gives the three narrator functions and explains partial reliability; line 61 separates discourse from personality.",
+          "inspection_mode": "web_returned_primary_or_official_html"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q650118",
+          "locator": "data/topics.json: record wikidata_id=Q650118, source_revision=2522663305",
+          "note": "Compared the actual Inventory record's registered description and source identity with the pilot's original card and inspected primary passage.",
+          "inspection_mode": "actual_inventory_record"
+        },
+        {
+          "url": "https://www.wikidata.org/wiki/Q650118",
+          "locator": "English description, narrative-mode/narrative-role identity and narrator subclass; lines 89–119",
+          "note": "Inspected the indexed item description and stated scope for identity; no new relation is inferred from unreferenced Wikidata type annotations.",
+          "inspection_mode": "web_returned_indexed_wikidata_html"
+        }
+      ],
+      "rejected_matches": [],
+      "proposed_relation": null,
+      "limitations": [
+        "Wikidata HTML reported crawl 3 months ago. The actual inventory carries source_revision 2522663305, but this review did not retrieve that exact revision's EntityData payload.",
+        "The inventory description foregrounds the narrator role, while the inspected item also names narrative mode. Reuse covers the generic discourse device taught by the card; it does not equate a particular narrator/person with a narration process."
+      ]
+    }
+  ]
+}

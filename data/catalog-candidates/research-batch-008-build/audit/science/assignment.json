@@ -1,0 +1,1011 @@
+{
+  "assignment": "science",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "baseline_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/baseline-index.json",
+  "entries": [
+    {
+      "id": "local:catalog:length-time-bias",
+      "initial_card_sha256": "3d9a2b8579ead6a2fda385b668504a82d5cfc09431295c25066dcb923027bcbb",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "d5934d2ffcb4f483aa452822ac7af49c28f5458f72d8190aae3bccd07315757d",
+      "owner": "science",
+      "primary_domain": "Health & medicine",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Length bias in cancer screening"
+          ],
+          "card": "Cancer screening disproportionately detects slower-growing cancers because they remain detectable before symptoms for longer. This length-time bias changes the mix of cancers found. More early-stage diagnoses can therefore occur without establishing that screening reduces deaths; detection patterns alone do not show the benefit.",
+          "card_version": 1,
+          "domains": [
+            "Health & medicine"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Length bias and overdiagnosis; lines 34-38",
+              "note": "Longer preclinical windows enrich slower cancers and distort benefit measures.",
+              "source_id": "research-batch-008-science::science-health-length"
+            }
+          ],
+          "id": "local:catalog:length-time-bias",
+          "identity_urls": [
+            "https://www.cancer.gov/about-cancer/screening/research/what-screening-statistics-mean"
+          ],
+          "imported_records": [],
+          "label": "Length-time bias in cancer screening",
+          "learning_takeaway": "Screening preferentially detects slower-growing cancers with longer preclinical windows.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "Source explicitly explains the bias in cancer screening.",
+              "source_ids": [
+                "research-batch-008-science::science-health-length"
+              ],
+              "target_id": "Q1163564",
+              "type": "facet_of"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:57:51Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-health-length",
+            "inspection_mode": "web.run opened source and inspected substantive named passage",
+            "locator": "Length bias and overdiagnosis; lines 34-38",
+            "original_id": "science-health-length",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:57:51Z",
+            "revision": null,
+            "title": "Crunching Numbers: What Cancer Screening Statistics Really Tell Us",
+            "url": "https://www.cancer.gov/about-cancer/screening/research/what-screening-statistics-mean",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:apoplast",
+      "initial_card_sha256": "de4da17261b77ded8c23e12a9afc1090d2dedae70b17e6f367dbec25eb374a4a",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "eff2d382c3b76d8c3bf0d8fd17197abba0e37aae6a88caf304f94ac8ed788a81",
+      "owner": "science",
+      "primary_domain": "Biology & nature",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Apoplastic pathway"
+          ],
+          "card": "The apoplast is the connected space of plant cell walls and extracellular regions. Water can move through this route outside the cytoplasm. In roots, the Casparian strip interrupts it, requiring water to cross a cell membrane.",
+          "card_version": 1,
+          "domains": [
+            "Biology & nature"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "The significance of the casparian strip; lines 234-242",
+              "note": "Wall route interrupted by the Casparian barrier.",
+              "source_id": "research-batch-008-science::science-bio-briggs-roots"
+            }
+          ],
+          "id": "local:catalog:apoplast",
+          "identity_urls": [
+            "https://bio.libretexts.org/Bookshelves/Botany/Inanimate_Life_(Briggs)/01:_Chapters/1.08:_Vascular_plant_anatomy-_primary_growth"
+          ],
+          "imported_records": [],
+          "label": "Apoplast",
+          "learning_takeaway": "Water can travel through connected cell-wall and extracellular spaces.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "editorial",
+              "note": "Transport premises support editorial plant-physiology placement.",
+              "source_ids": [
+                "research-batch-008-science::science-bio-briggs-roots"
+              ],
+              "target_id": "Q185973",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:47:01Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-bio-briggs-roots",
+            "inspection_mode": "web.run opened article and inspected named passage",
+            "locator": "The significance of the casparian strip; lines 234-242",
+            "original_id": "science-bio-briggs-roots",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:47:01Z",
+            "revision": null,
+            "title": "Vascular plant anatomy—primary growth",
+            "url": "https://bio.libretexts.org/Bookshelves/Botany/Inanimate_Life_(Briggs)/01:_Chapters/1.08:_Vascular_plant_anatomy-_primary_growth",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:cryosuction",
+      "initial_card_sha256": "fe63028ca772e1bb7457f88e62102187910a2454b49e37f49ef26fa9025ddf7d",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "f0779001b24947cfda8cb14b562c794106035f95e29e2ffab081638abb8c84bf",
+      "owner": "science",
+      "primary_domain": "Earth & environment",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "Cryosuction draws liquid water toward growing ice in freezing ground. As the incoming water freezes, it enlarges a segregated ice layer, which can attract still more water. This supplies ice growth beyond the water initially present at that location.",
+          "card_version": 1,
+          "domains": [
+            "Earth & environment"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Density of frozen water and cryosuction; lines 89-94",
+              "note": "Growing ice attracts and freezes further water.",
+              "source_id": "research-batch-008-science::science-earth-frozen"
+            }
+          ],
+          "id": "local:catalog:cryosuction",
+          "identity_urls": [
+            "https://nsidc.org/learn/parts-cryosphere/frozen-ground-permafrost/science-frozen-ground"
+          ],
+          "imported_records": [],
+          "label": "Cryosuction",
+          "learning_takeaway": "Growing ice draws in liquid water that freezes, allowing a segregated layer to enlarge.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "editorial",
+              "note": "Soil-water and ice-growth premises support editorial soil-physics placement.",
+              "source_ids": [
+                "research-batch-008-science::science-earth-frozen"
+              ],
+              "target_id": "Q1707766",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:59:37Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-earth-frozen",
+            "inspection_mode": "web.run opened source and inspected substantive named passage",
+            "locator": "Density of frozen water and cryosuction; lines 89-94",
+            "original_id": "science-earth-frozen",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:59:37Z",
+            "revision": null,
+            "title": "Science of Frozen Ground",
+            "url": "https://nsidc.org/learn/parts-cryosphere/frozen-ground-permafrost/science-frozen-ground",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:nafion",
+      "initial_card_sha256": "ee564743f2012f1f7b92e1e8b93f497b545d1b30be0725a98991fd4ba6026cef",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "f39d4111ba3cb9f2d23439d2371337d61561decbe1569b2a8d88780cd4f09c9c",
+      "owner": "science",
+      "primary_domain": "Chemistry & materials",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Nafion membranes"
+          ],
+          "card": "Nafion is a named family of fluorinated polymer membranes used in electrochemical applications. Its sulfonic membranes are based on a perfluorosulfonic-acid and PTFE copolymer and conduct positively charged ions. The membrane's polymer composition is tied to its role inside electrochemical cells.",
+          "card_version": 1,
+          "domains": [
+            "Chemistry & materials"
+          ],
+          "entity_kind": "named_subject",
+          "evidence": [
+            {
+              "locator": "Membranes for a Wide Variety of Electrochemical Applications; lines 151-153; grades tables",
+              "note": "Manufacturer identifies copolymer basis and cation conduction.",
+              "source_id": "research-batch-008-science::science-chem-nafion"
+            }
+          ],
+          "id": "local:catalog:nafion",
+          "identity_urls": [
+            "https://www.nafion.com/en/products/sulfonic-membranes"
+          ],
+          "imported_records": [],
+          "label": "Nafion",
+          "learning_takeaway": "A named fluorinated polymer membrane family conducts cations in electrochemical cells.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "Manufacturer explicitly identifies a polymer membrane family.",
+              "source_ids": [
+                "research-batch-008-science::science-chem-nafion"
+              ],
+              "target_id": "Q81163",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "topic"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:47:01Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-chem-nafion",
+            "inspection_mode": "web.run opened article and inspected named passage",
+            "locator": "Membranes for a Wide Variety of Electrochemical Applications; lines 151-153; grades tables",
+            "original_id": "science-chem-nafion",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:47:01Z",
+            "revision": null,
+            "title": "Nafion Sulfonic Membranes",
+            "url": "https://www.nafion.com/en/products/sulfonic-membranes",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:surface-plasmon-resonance-microscopy",
+      "initial_card_sha256": "df0fd94e9ae268c6f4faaada09d36eb029e480312a4899dc71590e00cc19730a",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "b75839f2e534a80ca4ecade6221751539104e593834299cb069fdf4fdd887a7e",
+      "owner": "science",
+      "primary_domain": "Chemistry & materials",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "Surface plasmon resonance microscopy produces label-free images from refractive-index changes at an interface. Reflected light is collected through a microscope objective. Quantitative interpretation requires calibration and corrections for the optics, connecting an image's response to refractive-index values rather than appearance alone.",
+          "card_version": 1,
+          "domains": [
+            "Chemistry & materials"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Abstract; lines 125-128",
+              "note": "Abstract describes imaging, optical corrections and calibration.",
+              "source_id": "research-batch-008-science::science-chem-spr"
+            }
+          ],
+          "id": "local:catalog:surface-plasmon-resonance-microscopy",
+          "identity_urls": [
+            "https://www.nist.gov/publications/surface-plasmon-resonance-microscopy-achieving-quantitative-optical-response"
+          ],
+          "imported_records": [],
+          "label": "Surface plasmon resonance microscopy",
+          "learning_takeaway": "Interfacial refractive-index changes support label-free optical measurements.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "Authors explicitly implement SPR imaging on a microscope.",
+              "source_ids": [
+                "research-batch-008-science::science-chem-spr"
+              ],
+              "target_id": "Q1074953",
+              "type": "application_of"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:47:01Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-chem-spr",
+            "inspection_mode": "web.run opened article and inspected named passage",
+            "locator": "Abstract; lines 125-128",
+            "original_id": "science-chem-spr",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:47:01Z",
+            "revision": "Published 2016-09-07; DOI 10.1063/1.4962034",
+            "title": "Surface plasmon resonance microscopy: achieving a quantitative optical response",
+            "url": "https://www.nist.gov/publications/surface-plasmon-resonance-microscopy-achieving-quantitative-optical-response",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:van-der-waerdens-theorem",
+      "initial_card_sha256": "595d6b40974e7e59307186240ed412802e046ee7bfea5f8a7cdf7cc2e864da43",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "9644056563e26636d0b95db51315d0941f214fb93fda2e312215aa575250cf22",
+      "owner": "science",
+      "primary_domain": "Mathematics",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Van der Waerden theorem"
+          ],
+          "card": "Color every positive integer using finitely many colors. Van der Waerden's theorem says that, for any chosen finite length, some arithmetic progression has that many terms all in one color. Regular spacing must emerge somewhere despite the coloring's freedom.",
+          "card_version": 1,
+          "domains": [
+            "Mathematics"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Four equivalent formulations; lines 13-19",
+              "note": "Finite colorings force monochromatic arithmetic progressions.",
+              "source_id": "research-batch-008-science::science-math-waerden"
+            }
+          ],
+          "id": "local:catalog:van-der-waerdens-theorem",
+          "identity_urls": [
+            "https://mathworld.wolfram.com/vanderWaerdensTheorem.html"
+          ],
+          "imported_records": [],
+          "label": "van der Waerden's theorem",
+          "learning_takeaway": "Finite colorings of the positive integers force arbitrarily long monochromatic arithmetic progressions.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "editorial",
+              "note": "Finite-color combinatorial existence supports editorial combinatorics placement.",
+              "source_ids": [
+                "research-batch-008-science::science-math-waerden"
+              ],
+              "target_id": "local:authored:000603",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:47:01Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-math-waerden",
+            "inspection_mode": "web.run opened article and inspected named passage",
+            "locator": "Four equivalent formulations; lines 13-19",
+            "original_id": "science-math-waerden",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:47:01Z",
+            "revision": null,
+            "title": "van der Waerden's Theorem",
+            "url": "https://mathworld.wolfram.com/vanderWaerdensTheorem.html",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:stokes-drift",
+      "initial_card_sha256": "e00247241477092aca90028f64c21cb5c493c7d19afd9c724a50e0e73cb26730",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "d1480b39bd82cd4935b0a3c17ac2361ea31124f99368b7817af99fcdddbe8881",
+      "owner": "science",
+      "primary_domain": "Earth & environment",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Wave-induced Stokes drift"
+          ],
+          "card": "Beneath a progressive surface gravity wave, a water parcel can follow a nearly looping path that does not close, leaving net motion in the wave's direction. This Stokes drift differs from averaging velocity at a fixed point: following the parcel reveals transport.",
+          "card_version": 1,
+          "domains": [
+            "Earth & environment"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Overview and gravity-wave parcel trajectories; PDF pages 2 and 18-19; lines 26-31, 756-812",
+              "note": "Open parcel trajectories distinguish Lagrangian drift from fixed-position averages.",
+              "source_id": "research-batch-008-science::science-earth-stokes"
+            }
+          ],
+          "id": "local:catalog:stokes-drift",
+          "identity_urls": [
+            "https://ocw.mit.edu/courses/res-12-001-topics-in-fluid-dynamics-fall-2024/mitres_12_001_f24_essay1_pt2.pdf"
+          ],
+          "imported_records": [],
+          "label": "Stokes drift",
+          "learning_takeaway": "Water parcels under a surface wave can drift even when their paths look nearly circular.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "editorial",
+              "note": "Surface-wave transport premises support editorial oceanography placement.",
+              "source_ids": [
+                "research-batch-008-science::science-earth-stokes"
+              ],
+              "target_id": "local:authored:000631",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:59:37Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-earth-stokes",
+            "inspection_mode": "web.run opened source and inspected substantive named passage",
+            "locator": "Overview and gravity-wave parcel trajectories; PDF pages 2 and 18-19; lines 26-31, 756-812",
+            "original_id": "science-earth-stokes",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:59:37Z",
+            "revision": "MIT OpenCourseWare Fall 2024; author James F. Price",
+            "title": "Lagrangian and Eulerian representations of fluid flow — Part 2: Advection of parcels and fields",
+            "url": "https://ocw.mit.edu/courses/res-12-001-topics-in-fluid-dynamics-fall-2024/mitres_12_001_f24_essay1_pt2.pdf",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:elysia-chlorotica",
+      "initial_card_sha256": "b14b8b9c3b85cc48bca768bdce64e46c07f0d19e522afece3f0c479e0214533b",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "86aa79457ba4dc20190222770403addeb8de71c58ffda5b88218156d00cfd352",
+      "owner": "science",
+      "primary_domain": "Biology & nature",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "Elysia chlorotica is a sea slug that retains chloroplasts from Vaucheria litorea. In a laboratory study, juveniles fed for seven days kept plastids after food removal, whereas earlier removal led to plastid breakdown. Stable retention develops during early feeding.",
+          "card_version": 1,
+          "domains": [
+            "Biology & nature"
+          ],
+          "entity_kind": "named_subject",
+          "evidence": [
+            {
+              "locator": "Abstract; Introduction; Figure 1; lines 143-173",
+              "note": "Laboratory feeding duration affected plastid stability.",
+              "source_id": "research-batch-008-science::science-bio-kleptoplasty"
+            }
+          ],
+          "id": "local:catalog:elysia-chlorotica",
+          "identity_urls": [
+            "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477"
+          ],
+          "imported_records": [],
+          "label": "Elysia chlorotica",
+          "learning_takeaway": "This sea slug stabilizes ingested plastids during an early developmental feeding period.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "Source explicitly identifies a sea slug.",
+              "source_ids": [
+                "research-batch-008-science::science-bio-kleptoplasty"
+              ],
+              "target_id": "Q7440127",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "topic"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:47:01Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-bio-kleptoplasty",
+            "inspection_mode": "web.run opened article and inspected named passage",
+            "locator": "Abstract; Introduction; Figure 1; lines 143-173",
+            "original_id": "science-bio-kleptoplasty",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:47:01Z",
+            "revision": "Published 2014-05-14; DOI 10.1371/journal.pone.0097477",
+            "title": "Lipid Accumulation during the Establishment of Kleptoplasty in Elysia chlorotica",
+            "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097477",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:immortal-time-bias",
+      "initial_card_sha256": "f58402feb46d0dc4e40c137b1134194c51fc0e9ed8f11fc5f50c6e7e9d284c21",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "f52814b942dd23642163ac170dbee0c38c8204a6e0dff7e5f2428069085ac490",
+      "owner": "science",
+      "primary_domain": "Health & medicine",
+      "reason": "Deterministic random sample of approved new identities.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "In an observational treatment study, people classified as treated may need to survive from cohort entry until treatment begins. Misassigning that pre-treatment period to the treated group can create an apparent survival advantage unrelated to the treatment's effect.",
+          "card_version": 1,
+          "domains": [
+            "Health & medicine"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Immortal time bias; lines 204-206",
+              "note": "Survival required before exposure assignment can produce spurious benefit.",
+              "source_id": "research-batch-008-science::science-health-immortal"
+            }
+          ],
+          "id": "local:catalog:immortal-time-bias",
+          "identity_urls": [
+            "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000721"
+          ],
+          "imported_records": [],
+          "label": "Immortal time bias",
+          "learning_takeaway": "Survival needed to receive an exposure can create a misleading apparent treatment advantage.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "Source explicitly defines bias through cohort-entry and intervention timing.",
+              "source_ids": [
+                "research-batch-008-science::science-health-immortal"
+              ],
+              "target_id": "Q1778788",
+              "type": "facet_of"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:57:51Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-health-immortal",
+            "inspection_mode": "web.run opened source and inspected substantive named passage",
+            "locator": "Immortal time bias; lines 204-206",
+            "original_id": "science-health-immortal",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:57:51Z",
+            "revision": "Published 2025-02-27; DOI 10.1371/journal.pdig.0000721",
+            "title": "Step-by-step causal analysis of EHRs to ground decision-making",
+            "url": "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000721",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "random_new"
+    },
+    {
+      "id": "local:catalog:basting-sewing",
+      "initial_card_sha256": "b1c213142214d4b1f0ee4f821636bbebfc9334fe7d305485b57edf408acf2695",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "70533b659682e27bd52d2a5a52dd4a42a6bdf3e3c01d2a664bd8bef2afbd2def",
+      "owner": "science",
+      "primary_domain": "Home & crafts",
+      "reason": "Sewing sense versus registered cooking basting; temporary-stitch mechanism.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Basting stitch"
+          ],
+          "card": "Basting in sewing uses long temporary stitches to hold fabric in position during construction. In a pillow project, basting secures a prepared piece before later stitching. Its purpose is temporary placement, so a basting line serves a different role from the final seam.",
+          "card_version": 1,
+          "domains": [
+            "Home & crafts"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Pillow construction; basting; lines 114-130, 165-167",
+              "note": "Long temporary stitches hold prepared pillow fabric.",
+              "source_id": "research-batch-008-science::science-home-pillow"
+            }
+          ],
+          "id": "local:catalog:basting-sewing",
+          "identity_urls": [
+            "https://extension.usu.edu/sewing/research/four-square-pillow"
+          ],
+          "imported_records": [],
+          "label": "Basting in sewing",
+          "learning_takeaway": "Long temporary stitches hold fabric together before permanent construction.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "Source explicitly uses the stitch in sewing.",
+              "source_ids": [
+                "research-batch-008-science::science-home-pillow"
+              ],
+              "target_id": "local:authored:000345",
+              "type": "facet_of"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:55:14Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-home-pillow",
+            "inspection_mode": "web.run opened source and inspected substantive named passage",
+            "locator": "Pillow construction; basting; lines 114-130, 165-167",
+            "original_id": "science-home-pillow",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:55:14Z",
+            "revision": null,
+            "title": "Four Square Pillow",
+            "url": "https://extension.usu.edu/sewing/research/four-square-pillow",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:nixtamalization",
+      "initial_card_sha256": "961800650ebc680f1a7a2094e6043cba451e5117b431e6ec5ccce91eddc4547d",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "bd343750b461989c8fbb177084ff9407d1994ecd11360ff377796c6f3deb3892",
+      "owner": "science",
+      "primary_domain": "Food & agriculture",
+      "reason": "Alkaline processing mechanism, nutrition qualification and material-versus-parent relation.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "Nixtamalization cooks and steeps maize in an alkaline solution, commonly made with lime. After washing, the kernels can be milled into dough for foods such as tortillas. Processing also increases calcium and makes niacin more available, connecting food preparation with chemical changes.",
+          "card_version": 1,
+          "domains": [
+            "Food & agriculture"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "What is nixtamalization? and nutritional changes; lines 27-41",
+              "note": "Alkaline maize processing makes dough and changes nutrient availability.",
+              "source_id": "research-batch-008-science::science-food-nixt"
+            }
+          ],
+          "id": "local:catalog:nixtamalization",
+          "identity_urls": [
+            "https://www.cimmyt.org/news/what-is-nixtamalization/"
+          ],
+          "imported_records": [],
+          "label": "Nixtamalization",
+          "learning_takeaway": "Alkaline maize processing changes dough preparation and nutrient availability.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "editorial",
+              "note": "Cooking, soaking and milling support editorial food-processing placement.",
+              "source_ids": [
+                "research-batch-008-science::science-food-nixt"
+              ],
+              "target_id": "Q627371",
+              "type": "broader_topic"
+            },
+            {
+              "assertion": "source_asserted",
+              "note": "Source explicitly names maize as the processed material.",
+              "source_ids": [
+                "research-batch-008-science::science-food-nixt"
+              ],
+              "target_id": "Q11575",
+              "type": "related_to"
+            }
+          ],
+          "scope": "facet_or_application"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:55:14Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-food-nixt",
+            "inspection_mode": "web.run opened source and inspected substantive named passage",
+            "locator": "What is nixtamalization? and nutritional changes; lines 27-41",
+            "original_id": "science-food-nixt",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:55:14Z",
+            "revision": "Published 2021-03-23",
+            "title": "What is nixtamalization?",
+            "url": "https://www.cimmyt.org/news/what-is-nixtamalization/",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:gn-z11",
+      "initial_card_sha256": "3425d8a42268d1a6c2b0bec3d1481002cfc7dc58df052332da94a7edab35842e",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "9d1f6ed35f21c8c48099a868de16988dae3cd6c5a97d23533f2c60e652f3871c",
+      "owner": "science",
+      "primary_domain": "Physics & astronomy",
+      "reason": "Named early galaxy; distinguish observations from interpretations and time-sensitive record claims.",
+      "snapshot": {
+        "concept": {
+          "aliases": [],
+          "card": "GN-z11 is a distant galaxy seen about 430 million years after the Big Bang. NASA's 2024 Webb report describes extended host-galaxy light and a compact central source. Its colors and gas signatures support a black-hole interpretation, illustrating how indirect observations investigate early galaxies.",
+          "card_version": 1,
+          "domains": [
+            "Physics & astronomy"
+          ],
+          "entity_kind": "named_subject",
+          "evidence": [
+            {
+              "locator": "Host galaxy and compact source; lines 322-336",
+              "note": "Dated report resolves host and compact source with black-hole evidence.",
+              "source_id": "research-batch-008-science::science-physics-gnz11"
+            }
+          ],
+          "id": "local:catalog:gn-z11",
+          "identity_urls": [
+            "https://science.nasa.gov/missions/webb/webb-unlocks-secrets-of-one-of-the-most-distant-galaxies-ever-seen/"
+          ],
+          "imported_records": [],
+          "label": "GN-z11",
+          "learning_takeaway": "Resolve host-galaxy light from a compact source to investigate an early galaxy's unusual brightness.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "source_asserted",
+              "note": "NASA explicitly identifies GN-z11 and its host component as a galaxy.",
+              "source_ids": [
+                "research-batch-008-science::science-physics-gnz11"
+              ],
+              "target_id": "Q318",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "topic"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:57:51Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-physics-gnz11",
+            "inspection_mode": "web.run opened source and inspected substantive named passage",
+            "locator": "Host galaxy and compact source; lines 322-336",
+            "original_id": "science-physics-gnz11",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:57:51Z",
+            "revision": "Published 2024-03-04",
+            "title": "Webb Unlocks Secrets of One of the Most Distant Galaxies Ever Seen",
+            "url": "https://science.nasa.gov/missions/webb/webb-unlocks-secrets-of-one-of-the-most-distant-galaxies-ever-seen/",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:hayabusa2",
+      "initial_card_sha256": "a40090aac27b108c8e773048fed8c226adc256532b2842a012c5d697278defc5",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "a81fb7256bf69ba1f01a4863304123bd4f67e56173e79ebbc5d391d7d83c68c6",
+      "owner": "science",
+      "primary_domain": "Physics & astronomy",
+      "reason": "Named mission with study target; related_to versus application_of direction.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Hayabusa 2"
+          ],
+          "card": "The Japanese Hayabusa2 mission collected samples from asteroid Ryugu and returned them to Earth in 2020. Its instruments and small rovers explored the surface. Returning material lets laboratory analysis complement spacecraft observations, giving researchers physical asteroid samples to examine directly.",
+          "card_version": 1,
+          "domains": [
+            "Physics & astronomy"
+          ],
+          "entity_kind": "named_subject",
+          "evidence": [
+            {
+              "locator": "Mission overview, sample return and craft design; lines 241, 264, 304-312",
+              "note": "Ryugu exploration and completed 2020 sample return.",
+              "source_id": "research-batch-008-science::science-physics-hayabusa"
+            }
+          ],
+          "id": "local:catalog:hayabusa2",
+          "identity_urls": [
+            "https://science.nasa.gov/mission/hayabusa-2/"
+          ],
+          "imported_records": [],
+          "label": "Hayabusa2",
+          "learning_takeaway": "Returning physical asteroid samples lets laboratory analysis complement spacecraft observations.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "editorial",
+              "note": "Sampling and return support editorial space-exploration placement.",
+              "source_ids": [
+                "research-batch-008-science::science-physics-hayabusa"
+              ],
+              "target_id": "Q180046",
+              "type": "broader_topic"
+            },
+            {
+              "assertion": "source_asserted",
+              "note": "NASA explicitly names an asteroid as the mission's study target.",
+              "source_ids": [
+                "research-batch-008-science::science-physics-hayabusa"
+              ],
+              "target_id": "Q3863",
+              "type": "related_to"
+            }
+          ],
+          "scope": "topic"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:57:51Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-physics-hayabusa",
+            "inspection_mode": "web.run opened source and inspected substantive named passage",
+            "locator": "Mission overview, sample return and craft design; lines 241, 264, 304-312",
+            "original_id": "science-physics-hayabusa",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:57:51Z",
+            "revision": null,
+            "title": "Hayabusa2",
+            "url": "https://science.nasa.gov/mission/hayabusa-2/",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "targeted"
+    },
+    {
+      "id": "local:catalog:sperners-lemma",
+      "initial_card_sha256": "dd1d89e3974d49e2f822aafef61037fb1f10023464351c0958955d663548f545",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "826b58625fa5d8979cf6e71584e6cebcc8cfff58b5e5345a11f683d9e7ba92ae",
+      "owner": "science",
+      "primary_domain": "Mathematics",
+      "reason": "Triangulation lemma versus separate antichain theorem; bounded two-dimensional formulation.",
+      "snapshot": {
+        "concept": {
+          "aliases": [
+            "Sperner’s lemma"
+          ],
+          "card": "Give a triangle's corners three different labels, and label every vertex of a triangulation with one of those three. Restrict boundary labels to each side's endpoint labels. Sperner's lemma guarantees a small triangle with all three labels.",
+          "card_version": 1,
+          "domains": [
+            "Mathematics"
+          ],
+          "entity_kind": "idea",
+          "evidence": [
+            {
+              "locator": "Opening statement and distinction; lines 13-18",
+              "note": "Boundary labeling forces a fully labeled triangle.",
+              "source_id": "research-batch-008-science::science-math-sperner-lemma"
+            }
+          ],
+          "id": "local:catalog:sperners-lemma",
+          "identity_urls": [
+            "https://mathworld.wolfram.com/SpernersLemma.html"
+          ],
+          "imported_records": [],
+          "label": "Sperner's lemma",
+          "learning_takeaway": "Boundary-constrained vertex colors guarantee a fully labeled small triangle.",
+          "original_description": null,
+          "relations": [
+            {
+              "assertion": "editorial",
+              "note": "Triangulation and fixed-point premises support editorial topology placement.",
+              "source_ids": [
+                "research-batch-008-science::science-math-sperner-lemma"
+              ],
+              "target_id": "local:authored:000605",
+              "type": "broader_topic"
+            }
+          ],
+          "scope": "idea"
+        },
+        "sources": [
+          {
+            "acquisition": {
+              "local_inspected_at": "2026-10-09T01:47:01Z",
+              "timestamp_basis": "local timestamp after passage inspection; remote retrieval timestamp unavailable"
+            },
+            "acquisition_qualification": "Local post-inspection timestamp/date; exact remote acquisition time unavailable.",
+            "id": "research-batch-008-science::science-math-sperner-lemma",
+            "inspection_mode": "web.run opened article and inspected named passage",
+            "locator": "Opening statement and distinction; lines 13-18",
+            "original_id": "science-math-sperner-lemma",
+            "originating_batch_id": "research-batch-008-science",
+            "originating_input_sha256": "bb3212f0ecdb247d980e7e0b2a0ca553ee5166fadf41887e955b8e8628fe56da",
+            "retrieval_date": "2026-10-09",
+            "retrieved_at": "2026-10-09T01:47:01Z",
+            "revision": null,
+            "title": "Sperner's Lemma",
+            "url": "https://mathworld.wolfram.com/SpernersLemma.html",
+            "word_limit": 200
+          }
+        ]
+      },
+      "stratum": "targeted"
+    }
+  ],
+  "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "sample_manifest_sha256": "5b22b4cd61f691075015997f6c240b3365786131ebe2252f10de6a8e23b15f69",
+  "sample_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/audit-sample.json",
+  "schema_version": 1
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "batch_id": "research-batch-004",
+  "batch_revision": 4,
+  "created_at": "2026-10-08T22:26:58.710684+00:00",
+  "status": "author_correction_complete_pending_independent_recheck",
+  "initial_audit": {
+    "path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-004/audit-review/audit.initial.json",
+    "sha256": "ef88d9b261d0db5adb176166e766cf836c85100ac4a082a799a5c7aa0aff4d0b"
+  },
+  "previous_artifact": {
+    "path": "research/workers/research-batch-004/history/frozen-audited-revision-3/candidate.authored.json",
+    "sha256": "1d02d5e1e05532db9b7dc65c2aefd68c715e738e21539e9f8da306a7069fc2a5",
+    "batch_revision": 3,
+    "status": "frozen_initial_independent_audit_completed"
+  },
+  "revised_artifact": {
+    "path": "research/workers/research-batch-004/candidate.revised.json",
+    "sha256": "43544752f00b38264a23f6eaf25823bfb95e5a480217fc833df89790dc276619"
+  },
+  "records": [
+    {
+      "finding_id": "b004-f01",
+      "id": "local:authored:000604",
+      "label": "Graph theory",
+      "severity": "medium",
+      "field": "learning_takeaway",
+      "before_learning_takeaway": "Represent connections by vertices and edges, then use structural constraints such as bipartite colorability.",
+      "after_learning_takeaway": "Represent a simple graph’s connections with an adjacency matrix, and explain why relabeling vertices can change the matrix without changing the underlying graph.",
+      "previous_card_version": 3,
+      "selected_card_version": 4,
+      "changed_concept_fields": [
+        "learning_takeaway",
+        "card_version"
+      ],
+      "before": {
+        "id": "local:authored:000604",
+        "label": "Graph theory",
+        "aliases": [
+          "Graph theory"
+        ],
+        "entity_kind": "idea",
+        "scope": "broad_field",
+        "domains": [
+          "Mathematics"
+        ],
+        "learning_takeaway": "Represent connections by vertices and edges, then use structural constraints such as bipartite colorability.",
+        "card": "Graph theory studies structures made of vertices and connecting edges. A graph’s drawing or numbering can change without altering its connections. An adjacency matrix provides one numerical representation, making it possible to analyze the same underlying network through different arrangements of symbols.",
+        "original_description": "Studying networks of vertices and connecting edges.",
+        "identity_urls": [],
+        "evidence": [
+          {
+            "source_id": "m18",
+            "locator": "Graph Theory -- from Wolfram MathWorld; inspected passage indices 1 (zero-based in saved snapshot); HTML anchors: paragraph-2",
+            "note": "Defines graph theory as the study of mathematical graphs."
+          },
+          {
+            "source_id": "m21",
+            "locator": "Adjacency Matrix -- from Wolfram MathWorld; inspected passage indices 1, 3 (zero-based in saved snapshot); HTML anchors: paragraph-2; paragraph-4",
+            "note": "Defines adjacency representation and explains why relabeling gives different matrices for the same graph."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q727035",
+            "type": "related_to",
+            "source_ids": [
+              "m18",
+              "m21"
+            ],
+            "assertion": "source_asserted",
+            "note": "The adjacency-matrix reference explicitly represents graph connections while allowing different vertex labelings."
+          }
+        ],
+        "card_version": 3,
+        "imported_records": [
+          {
+            "description": "Studying networks of vertices and connecting edges.",
+            "domain": "Mathematics",
+            "index": 604,
+            "inventory_kind": "broad",
+            "source": "ProductSpace",
+            "subsection": "Mathematics & reasoning",
+            "topic": "Graph theory"
+          }
+        ]
+      },
+      "after": {
+        "id": "local:authored:000604",
+        "label": "Graph theory",
+        "aliases": [
+          "Graph theory"
+        ],
+        "entity_kind": "idea",
+        "scope": "broad_field",
+        "domains": [
+          "Mathematics"
+        ],
+        "learning_takeaway": "Represent a simple graph’s connections with an adjacency matrix, and explain why relabeling vertices can change the matrix without changing the underlying graph.",
+        "card": "Graph theory studies structures made of vertices and connecting edges. A graph’s drawing or numbering can change without altering its connections. An adjacency matrix provides one numerical representation, making it possible to analyze the same underlying network through different arrangements of symbols.",
+        "original_description": "Studying networks of vertices and connecting edges.",
+        "identity_urls": [],
+        "evidence": [
+          {
+            "source_id": "m18",
+            "locator": "Graph Theory -- from Wolfram MathWorld; inspected passage indices 1 (zero-based in saved snapshot); HTML anchors: paragraph-2",
+            "note": "Defines graph theory as the study of mathematical graphs."
+          },
+          {
+            "source_id": "m21",
+            "locator": "Adjacency Matrix -- from Wolfram MathWorld; inspected passage indices 1, 3 (zero-based in saved snapshot); HTML anchors: paragraph-2; paragraph-4",
+            "note": "Defines adjacency representation and explains why relabeling gives different matrices for the same graph."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "Q727035",
+            "type": "related_to",
+            "source_ids": [
+              "m18",
+              "m21"
+            ],
+            "assertion": "source_asserted",
+            "note": "The adjacency-matrix reference explicitly represents graph connections while allowing different vertex labelings."
+          }
+        ],
+        "card_version": 4,
+        "imported_records": [
+          {
+            "description": "Studying networks of vertices and connecting edges.",
+            "domain": "Mathematics",
+            "index": 604,
+            "inventory_kind": "broad",
+            "source": "ProductSpace",
+            "subsection": "Mathematics & reasoning",
+            "topic": "Graph theory"
+          }
+        ]
+      },
+      "support_check": {
+        "source_ids": [
+          "m18",
+          "m21"
+        ],
+        "inspected_passages": {
+          "m18": [
+            1
+          ],
+          "m21": [
+            1,
+            3
+          ]
+        },
+        "note": "m18 identifies graph theory as the study of graphs. m21 defines the adjacency representation and states that permuting vertex labels does not change the underlying graph. The revised takeaway teaches those cited claims; can change allows label permutations that preserve the same numerical matrix.",
+        "new_sources": false,
+        "card_prose_unchanged": true,
+        "relationships_unchanged": true
+      },
+      "author_targeted_reviewed_at": "2026-10-08T22:26:58.710684+00:00",
+      "result": "supported_takeaway_aligned_to_unchanged_card_and_evidence"
+    }
+  ],
+  "manual_review_scope": "Only the reported Graph theory takeaway and its existing m18/m21 support were reread. The original 200-card author/boundary pass was not repeated.",
+  "historical_raw_provenance_check": {
+    "path": "research/workers/research-batch-004/historical-raw-provenance-check.json",
+    "sha256": "c25af9afea3c5baf5a1827a9d85bc422b279cf785c9415255534f2704212bf39",
+    "found": {
+      "c04": "research/workers/research-batch-004/test.html",
+      "p19": "research/workers/research-batch-004/source-cache/b04.html"
+    },
+    "remaining_missing_audited_sources": 29,
+    "note": "Exact SHA-256 matches in existing saved files; no refetch, byte reconstruction or source-record edit."
+  },
+  "independent_recheck": "pending"
+}

@@ -65,6 +65,32 @@ The inventory combines broad topics and graph concepts for resolution. The reque
 
 Version the inventory, alias/equivalence mappings, descriptions, source snapshots, and embedding texts. Public embedding caches include those identities, the exact model revision, and encoding configuration. Different models or source revisions cannot share a cache merely because their model names match.
 
+### Catalog scope and discovery cards
+
+Stage 2 requirements clarified by the user on 2026-10-08: catalog coverage spans broad fields, topics, particular ideas, and distinct facets or applications. All scopes are eligible for inclusion and card generation, including multiword concepts and separate meanings of ambiguous names. These are scope classes, not a mandatory four-level tree or a fixed quota of children for every topic. Comprehensive coverage remains an expansion objective rather than a claim that a finite import contains every possible idea.
+
+Include both ideas and named subjects such as people, places, companies, products, books, games, and historical events when references support a distinct learning takeaway. Entity type alone does not make a subject ineligible. Existing importer exclusions and per-domain caps are baseline sampling policies, not requirements for the expanded catalog. Record selection rules, observed coverage, truncation, and unresolved candidates explicitly; do not invent entries to satisfy a coverage quota.
+
+Import existing concept identities, aliases, relationships, original descriptions, and source material. Reuse suitable source-backed explanations or generate cards from retrieved references. Additional extracted concepts require a distinct, identifiable, source-supported learning takeaway; differently worded questions or descriptions of the same idea share its identity. Preserve stable local identities when no verified external identity exists.
+
+For future generation, each concept's user-facing explanation is one discovery card of **at most 25 words**, counted by whitespace-separated tokens. This replaces the earlier 30–50-word requirement for newly written or revised descriptions. Keep all existing catalog descriptions unchanged; longer legacy cards remain valid under their original generation rules. Titles and source links are outside the word budget.
+
+Identify the intended meaning and one concrete point to explore. Preserve any qualifications needed to keep that claim accurate; choose fewer claims when necessary to fit the limit. Include visible links to the references actually used for the explanation, retaining the supporting passage or section and source revision where available. Preserve imported descriptions separately from generated card text. The linked sources provide the next learning step.
+
+Match wording to concept scope: broad subjects use lay language, while finer ideas or applications may use the domain terminology needed to describe them accurately. Greater specificity permits terminology rather than requiring jargon. Scope guides presentation without establishing prerequisite knowledge or learning difficulty, and category-path depth alone cannot determine it.
+
+Version card text, source references, and generation settings. Changes to retrieval text require an explicitly versioned embedding rebuild; presentation-only changes can retain the existing retrieval representation. Model comparisons use the same card text and sources unless explanation wording is the declared experimental treatment.
+
+### First catalog-build milestone
+
+On 2026-10-08 the user chose a 200-card validation batch before bulk expansion, then clarified the execution method: a workspace-enabled AI agent researches concepts, writes their cards, and returns a structured catalog file. The deliverable is an agent-led research batch rather than a Python service making an AI API request for each concept. Local tools may assist with file management and validation. The [catalog research prompt](../../catalog-research-agent-prompt.md) defines the first task.
+
+Sample across fields and all concept scopes, including multiword names, ambiguous meanings, named subjects, shared cross-field identities, and candidate paraphrase duplicates. Store the sample manifest and source evidence so validation can be repeated without selecting a more favorable sample.
+
+Validate identities and meanings, distinct learning takeaways, supporting references for card claims, visible source links, the applicable word limit, wording appropriate to scope, and duplicates before accepting cards. Future generation and validation use the discovery-card limit above; historical batches retain their recorded limits. Keep rejected or unresolved candidates and reasons visible in the build report. Bound retries and source fetching, and report a shortfall rather than fabricate cards or run indefinitely to fill the batch. Shared identities and equivalence decisions are reconciled centrally when work is divided among agents.
+
+At this checkpoint report accepted and rejected counts, coverage by field and scope, ambiguity/equivalence cases, failures, research and writing usage, and elapsed time. Use actual platform-provided token accounting and cost when available; otherwise label estimates and unavailable measurements. Calibrate usage for this agent workflow rather than treating earlier per-record API assumptions as measured costs. Set the bulk-expansion budget and milestone from this evidence. A 200-card batch validates the research workflow and catalog contract without claiming catalog completeness or creating a new human-participant experiment. Keep the candidate catalog file separate from the current operational default.
+
 ### Interest interpretation
 
 Resolve each interest independently using its phrase, explicit selected concept ID when present, and the other explicitly saved interests in the same request. Keep separate anchors rather than averaging unrelated interests or competing meanings.

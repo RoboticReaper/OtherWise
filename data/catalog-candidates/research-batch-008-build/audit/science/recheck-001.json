@@ -1,0 +1,215 @@
+{
+  "assignment": "science",
+  "auditor_task_identity": "/root/batch008_audit_science",
+  "baseline_index_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+  "independence_statement": "This auditor did not author the repair; the cited passage and both relations were independently rechecked.",
+  "initial_candidate_sha256": "75682f9be9a732e2526e916413f6c29efd1c21d86cde5855049b264c98382e0d",
+  "initial_review_sha256": "f9a225c8fec0c19ec2ae0d9b74643ab50194e149c65d4920a8d01e8deee6a262",
+  "integrity_checks": {
+    "fixed_sample_unchanged": true,
+    "initial_review_unchanged": true,
+    "repair_lineage_matches_reviewed_card": true,
+    "repaired_candidate_hash_matches_request": true,
+    "version_incremented_to_2": true
+  },
+  "limits": [
+    "Recheck covers only the fixed sampled nixtamalization identity; initial records and findings remain preserved.",
+    "Actual platform token and cost data were not exposed."
+  ],
+  "phase": "recheck",
+  "recheck_round": 1,
+  "rechecked_at": "2026-10-09T03:13:00.303882+00:00",
+  "records": {
+    "local:catalog:nixtamalization": {
+      "access_and_usage_limits": {
+        "alternative_urls_used": 0,
+        "failed_attempts_for_cited_url": 0,
+        "max_alternative_urls": 3,
+        "max_failed_attempts_per_url": 2,
+        "source_summarization_word_limit": 200,
+        "verbatim_passage_words_used": 0
+      },
+      "card_version": 2,
+      "finding_resolutions": [
+        {
+          "assessment": "Lime-specific calcium qualification now explicit; chemical identity supported.",
+          "finding_id": "science-N1",
+          "initial_outcome": "needs_repair",
+          "resolution": "resolved",
+          "support": {
+            "locator": "27, 37, 42",
+            "source_id": "science-food-nixt",
+            "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+          }
+        }
+      ],
+      "id": "local:catalog:nixtamalization",
+      "initial_card_sha256": "961800650ebc680f1a7a2094e6043cba451e5117b431e6ec5ccce91eddc4547d",
+      "initial_card_version": 1,
+      "initial_source_bundle_sha256": "bd343750b461989c8fbb177084ff9407d1994ecd11360ff377796c6f3deb3892",
+      "learning_takeaway_check": {
+        "basis": "Same supported processing and nutrient lesson.",
+        "outcome": "verified"
+      },
+      "meaning_check": {
+        "assessment": "Same alkaline maize-processing identity.",
+        "outcome": "verified"
+      },
+      "new_findings": [],
+      "outcome": "verified",
+      "qualification_check": {
+        "assessment": "Calcium increase now tied to lime cooking.",
+        "outcome": "verified"
+      },
+      "relation_checks": [
+        {
+          "actual_relation_check": "Alkaline cooking and milling support editorial Food processing placement.",
+          "assertion_label_check": "Editorial inference from inspected processing premises.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "editorial",
+            "note": "Cooking, soaking and milling support editorial food-processing placement.",
+            "source_ids": [
+              "science-food-nixt"
+            ],
+            "target_id": "Q627371",
+            "type": "broader_topic"
+          },
+          "relation_index": 0,
+          "support": {
+            "locator": "26-29",
+            "source_ids": [
+              "science-food-nixt"
+            ],
+            "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "transformation of raw ingredients into food, or of food into other forms",
+            "id": "Q627371",
+            "label": "Food processing"
+          }
+        },
+        {
+          "actual_relation_check": "Maize is the processed material; related_to is supported explicitly.",
+          "assertion_label_check": "Explicitly source-asserted material association.",
+          "outcome": "verified",
+          "relation": {
+            "assertion": "source_asserted",
+            "note": "Source explicitly names maize as the processed material.",
+            "source_ids": [
+              "science-food-nixt"
+            ],
+            "target_id": "Q11575",
+            "type": "related_to"
+          },
+          "relation_index": 1,
+          "support": {
+            "locator": "26-29",
+            "source_ids": [
+              "science-food-nixt"
+            ],
+            "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+          },
+          "target_meaning": {
+            "baseline_sha256": "e3cd8ebac67579be75742df0bf2f5b2e7781293282345d2286aff205416e0fe2",
+            "basis": "Pinned baseline index",
+            "definition": "species of grass cultivated as a food crop",
+            "id": "Q11575",
+            "label": "Maize"
+          }
+        }
+      ],
+      "repaired_card_sha256": "c91642c58d61697d2c774f1fa366a010e08a7dcf71fd25899f8d1af6c241272b",
+      "repaired_hash_scope": "Exact raw science-shard concept and referenced source bundle; source IDs are unnamespaced. Initial hashes refer to the frozen assembled namespace.",
+      "repaired_input_sha256": "2c6253b01d499c31c6e1b106854af1b0307e4afdfbd346f0b1bc1379be89d18b",
+      "repaired_source_bundle_sha256": "2ab70cc058b34b79192a159ff5255ed9c1b051285ed3c4a1dbab1e24f943a258",
+      "source_inspections": [
+        {
+          "access_failures": [],
+          "actual_inspection_mode": "Fresh web.run open of the official CIMMYT explainer; complete preparation and nutrient passages independently read.",
+          "inspection_result": "substantive_passage_inspected",
+          "local_inspected_at": "2026-10-09T03:13:00.303882+00:00",
+          "locator": "What is nixtamalization?, lines 26-29; chemical changes and nutrition, lines 34-42",
+          "remote_retrieved_at": null,
+          "source_id": "science-food-nixt",
+          "timestamp_basis": "Local clock after recheck passage inspection; exact remote acquisition time unavailable.",
+          "title": "What is nixtamalization?",
+          "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+        }
+      ],
+      "stratum": "targeted",
+      "substantive_claim_checks": [
+        {
+          "check_id": "C1",
+          "claim": "Cooked and steeped maize in alkaline solution.",
+          "outcome": "verified",
+          "support": {
+            "locator": "27",
+            "source_id": "science-food-nixt",
+            "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+          }
+        },
+        {
+          "check_id": "C2",
+          "claim": "Food-grade lime is calcium hydroxide.",
+          "outcome": "verified",
+          "support": {
+            "locator": "27",
+            "source_id": "science-food-nixt",
+            "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+          }
+        },
+        {
+          "check_id": "C3",
+          "claim": "Washing and milling yield dough, including tortilla dough.",
+          "outcome": "verified",
+          "support": {
+            "locator": "29",
+            "source_id": "science-food-nixt",
+            "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+          }
+        },
+        {
+          "check_id": "C4",
+          "claim": "Lime cooking increases calcium content.",
+          "outcome": "verified",
+          "support": {
+            "locator": "37, 42",
+            "source_id": "science-food-nixt",
+            "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+          }
+        },
+        {
+          "check_id": "C5",
+          "claim": "Processing improves niacin availability.",
+          "outcome": "verified",
+          "support": {
+            "locator": "41",
+            "source_id": "science-food-nixt",
+            "url": "https://www.cimmyt.org/news/what-is-nixtamalization/"
+          }
+        }
+      ],
+      "word_count": 39
+    }
+  },
+  "repair_lineage_path": "/Users/baorenliu/Documents/Programming/Python/ProductSpace/data/catalog-candidates/research-batch-008-build/repairs/round-001/repair-lineage.json",
+  "repair_lineage_sha256": "f026e6c362bb01904ed8bcf1a4a5350677258ff30989d45581877576400ca0bd",
+  "repaired_science_candidate_sha256": "2c6253b01d499c31c6e1b106854af1b0307e4afdfbd346f0b1bc1379be89d18b",
+  "sample_manifest_sha256": "5b22b4cd61f691075015997f6c240b3365786131ebe2252f10de6a8e23b15f69",
+  "schema_version": 1,
+  "summary": {
+    "claim_checks": 5,
+    "needs_repair": 0,
+    "new_findings": 0,
+    "rechecked_cards": 1,
+    "relation_checks": 2,
+    "resolved_findings": [
+      "science-N1"
+    ],
+    "unverifiable": 0,
+    "verified": 1
+  }
+}

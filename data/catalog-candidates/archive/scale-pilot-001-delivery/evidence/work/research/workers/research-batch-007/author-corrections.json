@@ -1,0 +1,175 @@
+{
+  "batch_id": "research-batch-007",
+  "review_type": "author_review_not_independent",
+  "recorded_at": "2026-10-08T21:23:44.285673+00:00",
+  "corrections": [
+    {
+      "label": "Vulnerability in bridge",
+      "stage": "pre_freeze_author_review",
+      "before": {
+        "relation_target": "Duplicate bridge",
+        "relation_note": "ACBL specifically explains how duplicate boards assign vulnerability independently of rubber-bridge game wins."
+      },
+      "after": {
+        "relation_target": "Contract bridge",
+        "relation_note": "ACBL describes vulnerability as a scoring status affecting bridge bonuses and penalties, then distinguishes its assignment in duplicate and rubber formats."
+      },
+      "reason": "The general vulnerability subject spans both formats, so duplicate bridge was too narrow a parent.",
+      "recheck": "Author compared revised wording and relation against the inspected locators retained in author-review.json. Independent audit still pending."
+    },
+    {
+      "label": "Pitch (music)",
+      "stage": "pre_freeze_author_review",
+      "before": {
+        "relation_target": "Q1103750",
+        "relation_assertion": "editorial",
+        "relation_note": "Perceived pitch is the dimension being compared; concert pitch is a reference used to coordinate performers' tuning, not a synonym for that dimension.",
+        "relation_locator": "Puget Sound 1.1; UNSW FAQ, Pitch, frequency, harmonics and missing fundamental"
+      },
+      "after": {
+        "relation_target": "Missing fundamental",
+        "relation_assertion": "source_asserted",
+        "relation_note": "The UNSW pitch discussion explicitly uses a missing fundamental to show that perceived pitch can persist when the lowest-frequency component is absent.",
+        "relation_locator": "UNSW Acoustics FAQ, Pitch, frequency, harmonics and missing fundamental"
+      },
+      "reason": "Replace the concert-pitch comparison, whose target premise had not been passage-checked, with a directly inspected pitch phenomenon.",
+      "recheck": "Author compared revised wording and relation against the inspected locators retained in author-review.json. Independent audit still pending."
+    },
+    {
+      "label": "String harmonic",
+      "stage": "pre_freeze_author_review",
+      "before": {
+        "relation_type": "application_of",
+        "relation_note": "The cited violin touch-fourth example makes string-harmonic production a concrete performance technique for a bowed string instrument."
+      },
+      "after": {
+        "relation_type": "related_to",
+        "relation_note": "The source gives a violin touch-fourth example, linking string-harmonic production with an actual performance technique on that instrument."
+      },
+      "reason": "A generic string-harmonic phenomenon is not an application of the instrument identity itself; retain a specifically evidenced performance connection.",
+      "recheck": "Author compared revised wording and relation against the inspected locators retained in author-review.json. Independent audit still pending."
+    },
+    {
+      "label": "Augmented sixth chord",
+      "stage": "pre_freeze_author_review",
+      "before": {
+        "card": "An augmented sixth chord places two voices a semitone on either side of the dominant scale degree. The raised fourth moves upward while the lowered sixth moves downward toward that goal. This converging chromatic motion explains the chord family's predominant role in the cited tonal framework.",
+        "claim_review": "Puget Sound 21.1 gives raised fourth, lowered sixth and simultaneous approach to five; the paragraph describes scale-degree tendencies, not an unrestricted claim about every voicing or historical style.",
+        "relation_note": "Both are chromatic predominant devices, but their pitch construction differs: converging semitones versus a lowered-supertonic major triad."
+      },
+      "after": {
+        "card": "An augmented sixth chord contains notes a semitone below and above the dominant scale degree. The raised fourth moves upward while the lowered sixth moves downward toward dominant pitches. This characteristic voice-leading explains the chord family's predominant role in the cited tonal framework.",
+        "claim_review": "Puget Sound 21.1 states simultaneous semitone approaches to scale degree five and predominant function. Revised wording avoids describing the voices as converging in register; it only states the supported pitch-class movements.",
+        "relation_note": "Both are chromatic predominant devices, but their construction differs: semitone approaches to dominant pitches versus a lowered-supertonic major triad."
+      },
+      "reason": "Remove potentially misleading convergence language, which could suggest that the augmented-sixth voices move toward the same register.",
+      "recheck": "Author compared revised wording and relation against the inspected locators retained in author-review.json. Independent audit still pending."
+    },
+    {
+      "label": "Inattentional blindness",
+      "stage": "pre_freeze_author_review",
+      "before": {
+        "relation_target": "local:catalog:attentional-blink",
+        "relation_type": "related_to",
+        "relation_assertion": "editorial",
+        "relation_note": "Both concern limits of attention, but this card concerns an unexpected visible event during another task, rather than two targets arriving close together in time.",
+        "relation_locator": "5.1 selective-attention study; pinned attentional-blink identity distinction"
+      },
+      "after": {
+        "relation_target": "Q160402",
+        "relation_type": "broader_topic",
+        "relation_assertion": "source_asserted",
+        "relation_note": "OpenStax explicitly presents the unexpected-figure demonstration as evidence that attention affects perception of the environment; inattentional blindness is the named perceptual failure in that discussion.",
+        "relation_locator": "Psychology 2e 5.1, Perception, attention and Simons–Chabris demonstration"
+      },
+      "reason": "The attempted fresh attentional-blink abstract yielded no usable passage. Use the directly supported perception parent after verifying its exact pinned sense; do not rely on an uninspected comparison premise.",
+      "recheck": "Author compared revised wording and relation against the inspected locators retained in author-review.json. Independent audit still pending."
+    },
+    {
+      "label": "Eternalism",
+      "stage": "pre_freeze_author_review",
+      "before": {
+        "card": "Eternalism holds that past and future objects exist as well as present ones. Existing need not mean being located at the present time, just as occupying another place need not mean being nowhere. The view separates an object's temporal location from whether it belongs to reality.",
+        "claim_review": "SEP Time section 6 separates ontological existence from present temporal location and includes past/future objects; the spatial comparison restates the distinction, not a claim that all eternalists endorse one spacetime theory."
+      },
+      "after": {
+        "card": "Eternalism holds that past and future objects exist as well as present ones. An object can belong to reality without occupying the present moment. The disagreement with presentism concerns what exists, rather than whether past events are now occurring or can presently be observed.",
+        "claim_review": "SEP Time section 6 separates ontological existence from temporal location and includes past and future objects. The card avoids an extra spatial analogy and does not claim past events are happening at the present time."
+      },
+      "reason": "Keep the explanatory distinction directly within the source’s temporal-location discussion.",
+      "recheck": "Author compared revised wording and relation against the inspected locators retained in author-review.json. Independent audit still pending."
+    },
+    {
+      "label": "Rule of lenity",
+      "stage": "pre_freeze_author_review",
+      "before": {
+        "card": "The rule of lenity favors the defendant when a criminal statute remains ambiguous. It concerns interpreting the reach of a penal law, rather than deciding whether evidence proves the alleged conduct. Its rationale includes reserving the definition of crimes and punishments to lawmakers instead of judicial expansion."
+      },
+      "after": {
+        "card": "In US criminal law, lenity favors the defendant when a statute remains ambiguous. It concerns interpreting a penal law's reach, rather than deciding whether evidence proves the conduct. Its rationale includes reserving the definition of crimes and punishments to lawmakers instead of judicial expansion."
+      },
+      "reason": "Make the cited US legal setting explicit rather than imply every jurisdiction applies an identical doctrine.",
+      "recheck": "Author compared revised wording and relation against the inspected locators retained in author-review.json. Independent audit still pending."
+    },
+    {
+      "label": "Claim preclusion",
+      "stage": "pre_freeze_author_review",
+      "before": {
+        "card": "Claim preclusion generally prevents a party from relitigating a cause of action after a final judgment on its merits. A losing plaintiff cannot simply sue the same defendant again on that claim; a winning plaintiff likewise cannot start another suit just to obtain additional recovery."
+      },
+      "after": {
+        "card": "In US litigation, claim preclusion generally prevents repeating a cause of action after a final judgment on its merits. A losing plaintiff cannot simply sue the same defendant again on that claim; a winning plaintiff likewise cannot start another suit just to obtain additional recovery."
+      },
+      "reason": "Make jurisdiction explicit while retaining the general statement and both bar/merger examples.",
+      "recheck": "Author compared revised wording and relation against the inspected locators retained in author-review.json. Independent audit still pending."
+    },
+    {
+      "label": "Issue preclusion",
+      "stage": "pre_freeze_author_review",
+      "before": {
+        "card": "Issue preclusion prevents relitigation of a factual or legal issue already validly, finally and necessarily decided in an earlier proceeding. It can matter even when the later lawsuit is a different claim. The focus is the resolved issue, rather than a wholesale repetition of the original action."
+      },
+      "after": {
+        "card": "In US litigation, issue preclusion bars repeating a factual or legal issue already validly, finally and necessarily decided in an earlier proceeding. It can matter even when a later lawsuit is a different claim. The focus is the resolved issue, rather than repetition of the original action."
+      },
+      "reason": "Make the cited US litigation setting explicit without treating the concise definition as an exhaustive universal test.",
+      "recheck": "Author compared revised wording and relation against the inspected locators retained in author-review.json. Independent audit still pending."
+    },
+    {
+      "label": "Shogi",
+      "stage": "before_drafting",
+      "reason": "Reinspected a separate public guide for broad game/piece-reuse support. Left continuous-check adjudication to its distinct card and excluded overbroad guide statements about dropping and promotion.",
+      "recheck": "PDF pages 1, 3 and 12 inspected; b007-s086"
+    },
+    {
+      "label": "Signal detection theory",
+      "stage": "before_drafting",
+      "reason": "Expanded beyond the introductory textbook description to actual theory: evidence/sensitivity versus decision criterion and hit/false-alarm tradeoff.",
+      "recheck": "David Heeger handout inspected; b007-s087"
+    },
+    {
+      "label": "Henry Molaison",
+      "stage": "author_identity_review",
+      "reason": "An initial review note incorrectly credited OpenStax 8.2 with the full name. That page only supplies H.M. and surgery. Corrected the note and corroborated Henry Molaison in the original autopsy paper’s public PubMed abstract after two unusable PMC locations.",
+      "recheck": "Same paper at PubMed PMID 25154857 directly names Henry Molaison; b007-s089. Within three alternate references."
+    },
+    {
+      "label": "Money bills under the Parliament Acts",
+      "stage": "before_drafting",
+      "reason": "Introductory Parliament page overstates automatic assent within a month and inability to amend. Preferred official Parliamentary Counsel guidance and reproduced statutory text.",
+      "recheck": "b007-s090 paragraphs 1.2, 1.5, 1.8, 2.2, 2.7 and 2.19. Card preserves Commons/session/timing/direction conditions and Royal Assent."
+    },
+    {
+      "label": "Concurrent legislative powers in Germany",
+      "stage": "before_drafting",
+      "reason": "Read the rest of Article 72 so federal displacement was not presented as absolute.",
+      "recheck": "Article 72(3)–(4) permits specified Land departures. Qualified card and evidence locator retained."
+    },
+    {
+      "label": "Global selection provenance",
+      "stage": "coordinator_amendment",
+      "reason": "Version 3 normalizes three batch-003 secondary-domain tags only. Batch-007 selection hash and records are unchanged.",
+      "recheck": "Final provenance uses d6f16948056fb6552b7eba52409ef879e40a6477c58008e1b01025a7a450acab; prior 25–150 checkpoints retain version-2 hash."
+    }
+  ]
+}

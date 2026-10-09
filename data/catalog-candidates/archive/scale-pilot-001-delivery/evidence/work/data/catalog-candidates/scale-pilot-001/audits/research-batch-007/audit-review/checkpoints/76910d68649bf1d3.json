@@ -1,0 +1,82 @@
+{
+  "id": "local:catalog:issue-preclusion",
+  "label": "Issue preclusion",
+  "sample_kind": "risk_selected",
+  "boundary_changed": false,
+  "card_version": 1,
+  "reviewed_at": "2026-10-08T22:03:34.469200+00:00",
+  "result": "finding",
+  "identity_and_scope": {
+    "result": "supported",
+    "scope": "idea",
+    "entity_kind": "idea",
+    "baseline_existing": false,
+    "meaning_review": "Read intended card meaning against inspected source passages, actual target labels/descriptions and pinned nearest-comparison records. Specific rules, methods and named works are not equated with their broad domains. Scope is breadth, not difficulty.",
+    "nearest_comparisons": [
+      {
+        "id": "Q7748",
+        "label": "Law",
+        "original_description": "system of rules and guidelines, generally backed by governmental authority",
+        "prior_card_takeaways": []
+      }
+    ],
+    "target_resolution": [
+      {
+        "id": "local:catalog:claim-preclusion",
+        "label": "Claim preclusion"
+      }
+    ],
+    "import_preservation": null
+  },
+  "card_and_takeaway_review": "Issue-versus-claim distinction and valid/final/necessary determination are supported. Actual-litigation and fair-opportunity/nonparty boundaries are missing from the unconditional opening; see007-R1.",
+  "support": [
+    {
+      "source_ids": [
+        "b007-s075",
+        "b007-s074"
+      ],
+      "locator": "Wex collateral estoppel opening and civil-procedure paragraph; res judicata opening/Bar and Merger; web-19 lines5–13"
+    },
+    {
+      "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+      "locator": "web-22 lines5–16"
+    },
+    {
+      "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+      "locator": "§II.A–B; web-25 lines198–205"
+    }
+  ],
+  "relations": [
+    {
+      "target_id": "local:catalog:claim-preclusion",
+      "type": "related_to",
+      "assertion": "source_asserted",
+      "result": "supported",
+      "review": "Both Wex entries explicitly distinguish issue from claim preclusion; comparison type and source_asserted label are supported. R1 concerns card applicability, not this edge."
+    }
+  ],
+  "limitations": [],
+  "findings": [
+    {
+      "finding_id": "007-R1",
+      "severity": "medium",
+      "category": "missing_applicability_qualification",
+      "field": "card",
+      "claim": "issue preclusion bars repeating a factual or legal issue already validly, finally and necessarily decided in an earlier proceeding",
+      "issue": "The unconditional opening omits actual litigation and limits on who may be bound. The later can matter qualifies different claims, not applicability of the bar; an unrelated litigant does not generally lose a fresh hearing solely because the issue was decided elsewhere.",
+      "required_fix": "State that issue preclusion can bar a party who had a full and fair opportunity to litigate an issue actually litigated and necessarily resolved in a valid final judgment. Avoid an absolute same-parties-only rule because recognized nonparty exceptions and nonmutual uses exist. Add the more explicit support to the source bundle and preserve a versioned correction.",
+      "support": [
+        {
+          "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+          "locator": "Opening; elements3–4; nonparty discussion, web-22 lines5–16"
+        },
+        {
+          "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+          "locator": "Taylor v. Sturgell, opinion §II.A–B, 553 U.S.880,891–895; web-25 lines198–205"
+        }
+      ],
+      "relationship_impact": "The related_to claim-preclusion comparison is supported and needs no conceptual change; a new source bundle must be versioned."
+    }
+  ],
+  "source_reference_metadata_result": "No broken source references or acquisition/capture integrity errors; exact source and locator review recorded in source-inspections.json."
+}

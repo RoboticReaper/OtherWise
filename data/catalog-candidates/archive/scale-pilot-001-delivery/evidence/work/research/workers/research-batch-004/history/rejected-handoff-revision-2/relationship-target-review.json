@@ -1,0 +1,846 @@
+{
+  "batch_id": "research-batch-004",
+  "external_pinned_targets": [
+    {
+      "target_id": "Q189520",
+      "target_label": "Chemical equilibrium",
+      "pinned_meaning": "state in which both reactants and products are present in concentrations which have no further tendency to change with time.There are no net changes in the concentrations of the reactant(s) and product(s). Such a state is known as dynamic equilibrium",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:reaction-quotient",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source explicitly uses comparison of Q and K to predict the direction toward chemical equilibrium."
+        },
+        {
+          "origin_id": "local:catalog:heterogeneous-equilibrium",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "The equilibrium section explicitly defines heterogeneous equilibria as equilibria involving two or more phases."
+        },
+        {
+          "origin_id": "local:catalog:combining-equilibrium-constants",
+          "assertion": "source_asserted",
+          "type": "facet_of",
+          "note": "The cited section applies these transformations to coupled equilibrium reactions."
+        },
+        {
+          "origin_id": "local:catalog:le-chateliers-principle",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "The passage explicitly presents the principle as a description of equilibrium shifts following imposed changes."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q82264",
+      "target_label": "Catalysis",
+      "pinned_meaning": "Catalysis speeds a chemical reaction by providing a route with a lower activation barrier. The catalyst is not consumed overall. Beyond speed, catalysts can favor particular products, making selectivity an important idea to explore in both industrial chemistry and natural enzymes.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:homogeneous-catalysis",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "The source defines homogeneous catalysts as same-phase catalysts and describes their catalytic cycle."
+        },
+        {
+          "origin_id": "local:catalog:mario-j-molina",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source explicitly presents Molina and Rowland’s chlorine mechanism as catalytic ozone destruction."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:authored:000624",
+      "target_label": "Chemistry",
+      "pinned_meaning": "Chemistry studies substances and their changes at several connected scales. Water boiling is directly observable; attractions between water molecules help explain it; the formula H2O represents the substance symbolically. Moving between observations, molecular models, and symbols is central to interpreting chemical experiments.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:percy-lavon-julian",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "Julian’s change of starting material is a documented example of chemistry altering the practical production of useful substances."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q895901",
+      "target_label": "Crystal structure",
+      "pinned_meaning": "Crystal structure describes how atoms, ions, or molecules are arranged within a crystalline material. For ordinary periodic crystals, a repeating unit cell captures that arrangement. Exploring how particles pack, and how much space they occupy, connects microscopic geometry with measurable properties such as density.",
+      "origin_edges": [
+        {
+          "origin_id": "Q11469",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The source contrasts crystalline and amorphous silica, making glass a useful structural comparison with a crystal."
+        },
+        {
+          "origin_id": "local:catalog:unit-cell",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The crystallography references describe crystal repetition through unit cells."
+        },
+        {
+          "origin_id": "local:catalog:body-centered-cubic-structure",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "The source classifies BCC as one of the crystalline arrangements of metals."
+        },
+        {
+          "origin_id": "local:catalog:crystal-vacancy",
+          "assertion": "source_asserted",
+          "type": "facet_of",
+          "note": "The solid-state section explicitly describes vacancies as defects in a crystalline solid’s repeating pattern."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q44424",
+      "target_label": "Chemical bond",
+      "pinned_meaning": "lasting attraction between atoms that enables the formation of chemical compounds",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:ionic-bonding",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "The bonding chapter identifies ionic bonds as electrostatic attractions between cations and anions."
+        },
+        {
+          "origin_id": "Q191390",
+          "assertion": "editorial",
+          "type": "broader_topic",
+          "note": "The source names metallic bonding as the interaction holding metallic solids together, making it a bonding example."
+        },
+        {
+          "origin_id": "local:catalog:covalent-network-solid",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The passage explicitly attributes network-solid properties to the connected covalent bonds between its atoms."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q11344",
+      "target_label": "Chemical element",
+      "pinned_meaning": "species of atoms having the same number of protons in the atomic nucleus and the same chemical properties, but not necessarily the same mass, or the same stability (or half-lifetime if they are unstable)",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:inert-pair-effect",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The effect connects periodic-table position with departures from the simplest expected ion charges."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:catalog:supercritical-fluid",
+      "target_label": "Supercritical fluid",
+      "pinned_meaning": "Beyond its critical temperature and pressure, a substance forms a supercritical fluid without a separate liquid–gas boundary. Such fluids can penetrate small pores while dissolving materials. Supercritical carbon dioxide, for example, can extract caffeine from coffee and then be removed by lowering pressure.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:critical-point-of-a-fluid",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source explains the disappearance of the liquid–vapor boundary as the transition to supercritical fluid behavior."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q2346",
+      "target_label": "Analytical chemistry",
+      "pinned_meaning": "study of the separation, identification, and quantification of the chemical components of materials",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:gravimetric-analysis",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "The quantitative-analysis section identifies gravimetric analysis as a method for determining analyte concentration."
+        },
+        {
+          "origin_id": "local:catalog:acid-base-titration",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "The source explicitly presents acid–base titrimetry as a quantitative analytical technique."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q11456",
+      "target_label": "Semiconductor",
+      "pinned_meaning": "material that has electrical conductivity intermediate to that of a conductor and an insulator",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:zone-refining",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The source states that highly purified silicon is needed for semiconductor devices; zone refining is a material-preparation bridge."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:authored:000605",
+      "target_label": "Topology",
+      "pinned_meaning": "Studying properties of spaces preserved under continuous deformation.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:geodesic",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "Geodesics add metric information to the study of spaces; topology alone does not fix lengths or shortest paths."
+        },
+        {
+          "origin_id": "local:catalog:hairy-ball-theorem",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "This is a topological obstruction to a globally nonvanishing field, illustrating a property that local drawings do not reveal."
+        },
+        {
+          "origin_id": "local:catalog:brouwer-fixed-point-theorem",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The theorem gives a global consequence of continuity and domain shape, linking an explicit mapping problem with topology."
+        },
+        {
+          "origin_id": "local:catalog:jordan-curve-theorem",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The result turns the connectivity of a planar complement into a rigorous topological statement."
+        },
+        {
+          "origin_id": "local:catalog:homeomorphism",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The topology source identifies topological equivalence in terms of homeomorphism."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q852973",
+      "target_label": "Euler characteristic",
+      "pinned_meaning": "topological invariant in mathematics",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:gaussbonnet-theorem",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source explicitly equates total Gaussian curvature with two pi times the Euler characteristic."
+        },
+        {
+          "origin_id": "local:catalog:surface-triangulation",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "Counting vertices, edges, and faces in a triangulation supplies a concrete route to a surface’s Euler characteristic."
+        },
+        {
+          "origin_id": "local:catalog:genus-of-a-surface",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source directly gives the relation between surface genus and Euler characteristic."
+        },
+        {
+          "origin_id": "local:catalog:eulers-polyhedron-formula",
+          "assertion": "source_asserted",
+          "type": "facet_of",
+          "note": "The Euler-characteristic reference explicitly identifies the polyhedral formula as its genus-zero special case."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q746083",
+      "target_label": "Homotopy",
+      "pinned_meaning": "continuous deformation between two continuous maps",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:deformation-retract",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The definition constructs a deformation retract using a homotopy."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q159943",
+      "target_label": "Abstract algebra",
+      "pinned_meaning": "branch of mathematics studying algebraic structures and their relations",
+      "origin_edges": [
+        {
+          "origin_id": "Q1144780",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The inspected source explicitly turns loops and boundaries into algebraic information, providing a bridge between topology and algebra."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q727035",
+      "target_label": "Adjacency matrix",
+      "pinned_meaning": "square matrix used to represent a graph or network",
+      "origin_edges": [
+        {
+          "origin_id": "local:authored:000604",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The adjacency-matrix reference explicitly represents graph connections while allowing different vertex labelings."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:authored:000604",
+      "target_label": "Graph theory",
+      "pinned_meaning": "Graph theory models objects as vertices and connections as edges. In the Königsberg bridges problem, land areas become vertices and bridges become edges. The model keeps the crossing relationships while discarding the map’s detailed shapes, turning a walking puzzle into a question about traversing edges.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:bipartite-graph",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "Bipartite structure supplies a concrete graph-theoretic constraint that can be tested independently of a drawing."
+        },
+        {
+          "origin_id": "Q727035",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source explicitly defines the matrix as a representation of a graph."
+        },
+        {
+          "origin_id": "local:catalog:ramsey-number",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "Ramsey numbers express an unavoidable-pattern question using graph vertices and edges."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:catalog:spanning-tree",
+      "target_label": "Spanning tree",
+      "pinned_meaning": "A spanning tree keeps every vertex of a finite connected graph while discarding enough edges to eliminate cycles. Removing an edge from a cycle leaves an alternate connection. Repeating that step produces a connected, cycle-free backbone, though different choices can produce different spanning trees.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:matrix-tree-theorem",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The theorem’s explicit conclusion is the number of spanning trees."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q2294516",
+      "target_label": "Dual graph",
+      "pinned_meaning": "graph representing faces of another graph",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:planar-graph",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The dual-graph source starts from a planar graph together with a particular planar embedding."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:authored:000602",
+      "target_label": "Number theory",
+      "pinned_meaning": "Studying properties and relationships of integers.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:mobius-inversion-formula",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The operation is a concrete number-theoretic technique for undoing divisor sums."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:authored:000603",
+      "target_label": "Combinatorics",
+      "pinned_meaning": "Studying counting, arrangements and discrete structures.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:burnsides-lemma",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The lemma turns symmetry operations into a concrete counting method; equivalence classes are generated by the specified group action."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:authored:000600",
+      "target_label": "Probability",
+      "pinned_meaning": "Probability describes the chance that an event occurs. Comparing the chance of two events happening together with the chance of one happening given the other reveals an important distinction: conditional probabilities use a restricted set of possibilities as their reference.",
+      "origin_edges": [
+        {
+          "origin_id": "Q190391",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The theorem connects a sum of random observations with an approximate limiting probability distribution."
+        },
+        {
+          "origin_id": "local:catalog:jensens-inequality",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "Interpreting the weights as probabilities turns the finite weighted-average inequality into a comparison of average outcomes."
+        },
+        {
+          "origin_id": "local:catalog:borelcantelli-lemma",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The lemma turns bounds on individual event probabilities into a statement about an entire infinite sequence."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q200125",
+      "target_label": "Expected value",
+      "pinned_meaning": "long-run average value of a random variable",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:conditional-expectation",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "This refines unconditional expected value by retaining specified information instead of averaging over it all."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q176645",
+      "target_label": "Markov chain",
+      "pinned_meaning": "stochastic model describing a sequence of possible events in which the probability of each event depends only on the state attained in the previous event",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:random-walk",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The Markov-chain reference explicitly names a simple random walk as an example."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q104225",
+      "target_label": "Precession",
+      "pinned_meaning": "periodic change in the direction of a rotation axis",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:torque-induced-gyroscopic-precession",
+          "assertion": "source_asserted",
+          "type": "facet_of",
+          "note": "The passage explicitly models the torque-induced gyroscope case of precession and states the fast-spin approximation."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q3744733",
+      "target_label": "Mechanical resonance",
+      "pinned_meaning": "tendency of a mechanical system to respond at greater amplitude when the frequency of its oscillations matches the system's natural frequency of vibration (its resonance frequency or resonant frequency) than it does at other frequencies",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:oscillator-quality-factor",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source introduces quality factor through the width and damping of resonant oscillator responses."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q6497624",
+      "target_label": "Buoyancy",
+      "pinned_meaning": "upward force that opposes the weight of an object immersed in fluid",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:terminal-velocity",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "Buoyant force can contribute to the fluid-force balance, although the cited skydiver approximation neglects its small contribution."
+        },
+        {
+          "origin_id": "local:catalog:canal-lock",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The vessel remains afloat as the chamber level changes, connecting the lock mechanism with buoyant support."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:authored:000620",
+      "target_label": "Optics",
+      "pinned_meaning": "Studying light and its interactions with matter.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:total-internal-reflection",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source derives total internal reflection as a limiting consequence of refraction and Snell’s law."
+        },
+        {
+          "origin_id": "local:catalog:diffraction-grating",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The grating is an optical instrument exploiting interference to reveal wavelength composition."
+        },
+        {
+          "origin_id": "local:catalog:thin-film-interference",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The film example connects optical wave interference with a visible everyday color pattern."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q740898",
+      "target_label": "Angular resolution",
+      "pinned_meaning": "ability of any image-forming device to distinguish small details of an object",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:rayleigh-criterion",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source explicitly formulates the criterion as a diffraction limit on angular resolution."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q83213",
+      "target_label": "Photoelectric effect",
+      "pinned_meaning": "emission of electrons when light hits a material",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:de-broglie-wavelength",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The two subjects approach wave-particle behavior from complementary directions: light transfers energy discretely, and matter exhibits wavelength-dependent behavior."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:catalog:lagrange-points",
+      "target_label": "Lagrange points",
+      "pinned_meaning": "In the circular-orbit approximation, five Lagrange points let a small object keep pace with two massive orbiting bodies. The three collinear points are unstable. Triangular L4 and L5 can be stable when the larger bodies’ mass ratio is sufficiently unequal.",
+      "origin_edges": [
+        {
+          "origin_id": "Q186447",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The mission page explicitly places Webb near the Sun–Earth second Lagrange point."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q209630",
+      "target_label": "Herschel Space Observatory",
+      "pinned_meaning": "former ESA space observatory",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:spitzer-space-telescope",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "Herschel provides another documented infrared observatory with cryogenically cooled instruments, enabling comparison of thermal observing strategies."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q11448",
+      "target_label": "Radioactive decay",
+      "pinned_meaning": "process by which an unstable atom emits radiation",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:compton-gamma-ray-observatory",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "Mapping radioactive aluminum connects gamma-ray observations with radiation from unstable nuclei."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:catalog:exoplanet-transit-photometry",
+      "target_label": "Exoplanet transit photometry",
+      "pinned_meaning": "Transit photometry looks for repeated dips in starlight when a planet crosses its star from our viewpoint. The interval between dips gives the orbital period. Combined with the star’s mass, that timing constrains orbit size, but only suitably aligned systems produce transits.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:transiting-exoplanet-survey-satellite",
+          "assertion": "source_asserted",
+          "type": "application_of",
+          "note": "NASA explicitly states that TESS finds candidates through transit photometry."
+        },
+        {
+          "origin_id": "local:catalog:kepler-space-telescope",
+          "assertion": "source_asserted",
+          "type": "application_of",
+          "note": "The mission description explicitly says Kepler detected planets through stellar-brightness transit dips."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q589",
+      "target_label": "Black hole",
+      "pinned_meaning": "astronomical object so massive, that anything falling into it, including light, cannot escape its gravity",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:nustar",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The mission description explicitly identifies black-hole dynamics and spin measurements as results of NuSTAR observations."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q725364",
+      "target_label": "Atacama Large Millimeter Array",
+      "pinned_meaning": "66 radio telescopes in the Atacama Desert of northern Chile",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:astronomical-interferometry",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "ESO explicitly identifies ALMA’s cooperating antennas as an interferometer."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q507234",
+      "target_label": "Fatigue (material)",
+      "pinned_meaning": "weakening of a material caused by repeatedly applied loads",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:creep-materials",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "Creep emphasizes sustained load and time, while fatigue emphasizes repeated loading; the sources treat these as different failure concerns."
+        },
+        {
+          "origin_id": "local:catalog:sn-curve",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The reference explicitly presents S–N diagrams as measured descriptions of the fatigue process."
+        },
+        {
+          "origin_id": "local:catalog:paris-law-for-fatigue-crack-growth",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The cited section explicitly presents Paris law as a model of fatigue-crack growth."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q835065",
+      "target_label": "Second moment of area",
+      "pinned_meaning": "mathematical construct in engineering",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:neutral-axis-in-beam-bending",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The moment-of-area reference explicitly measures distance from the neutral axis to evaluate bending resistance."
+        },
+        {
+          "origin_id": "local:catalog:euler-column-buckling",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source’s Euler critical-load formula explicitly depends on the cross-section’s second moment of area."
+        },
+        {
+          "origin_id": "local:catalog:three-point-bending-test",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The inspected deflection formula explicitly contains the cross-section’s second moment of area and material elastic modulus."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q4917288",
+      "target_label": "Control engineering",
+      "pinned_meaning": "engineering discipline that applies automatic control theory to design systems with desired behaviors in control environments",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:cascade-control",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The source provides a specific multi-loop feedback architecture within control engineering."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q178185",
+      "target_label": "Heat engine",
+      "pinned_meaning": "system that performs the conversion of heat or thermal energy to mechanical work",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:carnot-cycle",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source explicitly identifies Carnot efficiency as the upper limit for heat engines between the same reservoirs."
+        },
+        {
+          "origin_id": "local:catalog:otto-cycle",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The NASA reference presents the thermodynamic cycle as an explanation of an engine producing work from heat."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q178777",
+      "target_label": "Jet engine",
+      "pinned_meaning": "reaction engine which generates thrust by jet propulsion",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:thrust-vectoring",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The nozzle reference explicitly connects redirected exhaust with greater aircraft maneuverability."
+        },
+        {
+          "origin_id": "local:catalog:coannular-exhaust-nozzle",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "NASA explicitly describes coannular nozzles as an arrangement used in turbofan engines."
+        },
+        {
+          "origin_id": "local:catalog:pressure-thrust",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The thrust equation separates exhaust momentum flow from pressure force, clarifying what contributes to a jet engine’s propulsive force."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "local:catalog:convergent-divergent-nozzle",
+      "target_label": "Convergent–divergent nozzle",
+      "pinned_meaning": "A convergent–divergent nozzle narrows to a throat, then widens. Under suitable pressure conditions, gas reaches sound speed at the throat and accelerates supersonically in the widening section. In ideal steady flow, the same widening slows subsonic gas, making flow regime essential to understanding the shape.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:variable-area-exhaust-nozzle",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "NASA’s afterburning-engine example uses a variable-geometry converging-diverging nozzle; this is a supported design connection, not a claim that every variable-area nozzle has that form."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q22657",
+      "target_label": "Concrete",
+      "pinned_meaning": "composite construction material",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:hoover-dam",
+          "assertion": "source_asserted",
+          "type": "related_to",
+          "note": "The source explicitly describes the cooling system used in the dam’s curing concrete."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q12280",
+      "target_label": "Bridge",
+      "pinned_meaning": "Bridges support a crossing over a gap while carrying their own weight and added loads. Structural form matters: suspension designs rely strongly on tension, while arches rely strongly on compression. Comparing the two reveals how geometry changes the way a bridge carries forces.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:brooklyn-bridge",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "ASCE identifies the project as a bridge and describes its suspension and stiffening systems."
+        },
+        {
+          "origin_id": "local:catalog:golden-gate-bridge",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "ASCE identifies the project as a bridge and records the span and site constraints."
+        },
+        {
+          "origin_id": "local:catalog:eads-bridge",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "ASCE explicitly describes the Eads Bridge as a major railroad crossing and explains its foundations."
+        },
+        {
+          "origin_id": "local:catalog:forth-bridge",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "ASCE identifies the structure as a railway bridge and explicitly describes its double-cantilever design."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q12284",
+      "target_label": "Canal",
+      "pinned_meaning": "man-made channel for water",
+      "origin_edges": [
+        {
+          "origin_id": "Q459578",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "ASCE identifies the Erie Canal as the waterway project whose construction developed these engineering practices."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q12518",
+      "target_label": "Tower",
+      "pinned_meaning": "structure with height greater than width",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:eiffel-tower",
+          "assertion": "source_asserted",
+          "type": "broader_topic",
+          "note": "The official monument reference identifies the structure as a tower and documents its later communications use."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    },
+    {
+      "target_id": "Q775325",
+      "target_label": "Transport engineering",
+      "pinned_meaning": "Transport engineering shapes travel systems through planning, design, and operation. Streets interact with other travel modes and surrounding land use. Comparing alternative improvements shows why better mobility involves coordinating a network, its users, and safety goals rather than examining one road alone.",
+      "origin_edges": [
+        {
+          "origin_id": "local:catalog:modern-roundabout",
+          "assertion": "editorial",
+          "type": "related_to",
+          "note": "The source connects junction geometry and right-of-way rules with traffic movement and collision severity, a specific transport-design problem."
+        }
+      ],
+      "review_note": "Reviewed the pinned target’s actual meaning; each edge uses the sense described here, not an automatic nearest-baseline parent."
+    }
+  ],
+  "internal_target_review": "Each internal target resolves to an exact approved ID whose card, scope and attached relationship were covered in the 200-entry author and boundary reviews."
+}

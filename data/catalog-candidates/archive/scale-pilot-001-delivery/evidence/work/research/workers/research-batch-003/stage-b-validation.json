@@ -1,0 +1,159 @@
+{
+  "status": "passed_structural_and_provenance",
+  "checked_at": "2026-10-08T21:17:29.926002+00:00",
+  "checks": [
+    {
+      "check": "candidate_schema_and_word_budget",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "all_200_reserved_ids_exactly_once",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "approved_selection_hash_current",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "global_manifest_v3_hash_current",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "baseline_index_still_pinned",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "imported_source_rows_still_pinned",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "source_acquisition_metadata_present",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "each_source_has_actual_passage_capture",
+      "status": "passed",
+      "details": []
+    },
+    {
+      "check": "at_most_two_documented_failed_attempts_per_url",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "every_card_and_relationship_has_author_review",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "all_relations_resolve_to_selected_or_pinned_ids",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "all_relation_premises_have_sources",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "fine_subject_missing_hierarchy_documented",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "memberships_match_approved_and_primary_first",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "all_domain_values_in_coverage_plan",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "new_identity_urls_actual_and_present",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "all_original_descriptions_rows_aliases_and_versions_preserved",
+      "status": "passed",
+      "details": []
+    },
+    {
+      "check": "prior_candidate_artifact_hashes_verified",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "approved_scopes_kinds_and_labels_preserved",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "numerical_coverage_goals",
+      "status": "passed",
+      "details": null
+    },
+    {
+      "check": "starting_subfield_minimums",
+      "status": "passed",
+      "details": []
+    }
+  ],
+  "counts": {
+    "cards": 200,
+    "new": 164,
+    "existing_controls": 36,
+    "new_fine": 138,
+    "named_subjects": 23,
+    "sources": 151,
+    "relations": 200,
+    "editorial_relations": 200,
+    "source_asserted_relations": 0,
+    "author_reviewed_cards": 200,
+    "primary_domains": {
+      "Biology & nature": 45,
+      "Health & medicine": 45,
+      "Earth & environment": 45,
+      "Food & agriculture": 40,
+      "Home & crafts": 25
+    },
+    "primary_subfields": {
+      "Genetics and development": 15,
+      "Ecology and species interactions": 15,
+      "Evolution and biological mechanisms": 15,
+      "Physiological regulation": 15,
+      "Measurement and diagnostic methods": 14,
+      "Medical history and evidence": 15,
+      "Tissue repair and reconstructive techniques": 1,
+      "Geological processes": 15,
+      "Atmospheric and ocean processes": 15,
+      "Environmental measurement and restoration": 15,
+      "Cultivation and crop systems": 15,
+      "Food chemistry and preparation": 14,
+      "Agricultural technologies and history": 11,
+      "Material behavior in making": 8,
+      "Construction and repair methods": 8,
+      "Textile and domestic craft techniques": 9
+    },
+    "scopes": {
+      "broad_field": 7,
+      "idea": 82,
+      "facet_or_application": 76,
+      "topic": 35
+    },
+    "minimum_card_words": 39,
+    "maximum_card_words": 49,
+    "missing_parent_or_application_records": 150
+  },
+  "candidate_sha256": "63400464c552d39a9f087f1f7090eecabb96e7417fb6323bc1478fcd8781ba37",
+  "independent_audit": "pending"
+}

@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "stage": "selection_ready_awaiting_reservations",
+  "proposal_count": 70,
+  "domain_counts": {
+    "Biology & nature": 9,
+    "Chemistry & materials": 9,
+    "Earth & environment": 9,
+    "Food & agriculture": 9,
+    "Health & medicine": 9,
+    "Home & crafts": 9,
+    "Mathematics": 8,
+    "Physics & astronomy": 8
+  },
+  "scope_counts": {
+    "topic": 18,
+    "idea": 32,
+    "facet_or_application": 18,
+    "broad_field": 2
+  },
+  "strict_named_subjects": [
+    {
+      "id": "Q111",
+      "label": "Mars"
+    },
+    {
+      "id": "Q12124",
+      "label": "Betelgeuse"
+    },
+    {
+      "id": "Q2469",
+      "label": "Andromeda Galaxy"
+    }
+  ],
+  "proposed_relations": 57,
+  "without_proposed_relation": [
+    "Q171446",
+    "Q179924",
+    "Q33602",
+    "Q5194",
+    "local:authored:000630",
+    "Q124407",
+    "Q185034",
+    "Q213600",
+    "Q3025883",
+    "Q179904",
+    "Q217541",
+    "local:authored:000357",
+    "local:authored:000388"
+  ],
+  "fine_scope_count": 50,
+  "fine_scope_with_parent_or_application": 44,
+  "fine_scope_source_asserted_parent_or_application": 26,
+  "fine_scope_parent_coverage": 0.88,
+  "fine_scope_parent_assertion_share": 0.5909090909090909,
+  "fine_scope_parent_gaps": [
+    "Q179924",
+    "Q272467",
+    "Q954381",
+    "Q179904",
+    "Q217541",
+    "local:authored:000391"
+  ],
+  "eligible_id_check": "passed",
+  "existing_card_and_normalized_alias_check": "passed_with_semantic_exclusions",
+  "semantic_excluded_ids": [
+    "Q3001783",
+    "Q624580",
+    "Q175751"
+  ],
+  "broader_identity_boundary_review_ids": [
+    "Q215915",
+    "Q172858"
+  ],
+  "within_selection_alias_check": "passed",
+  "relation_target_check": "passed",
+  "sources_count": 82,
+  "source_passage_locator_check": "passed",
+  "source_budget_check": "passed",
+  "max_source_derived_words": 95,
+  "baseline_index_sha256": "1d1e18e85f9d5cb0ec46c48668a80dc8b9826c78a01a5285540367ffc55474d1",
+  "proposals_sha256": "456278abe2b9908110d0edaa4de2a6d5bbf805d4c20b68c84fadbd00ff328fe8",
+  "card_bodies_written": 0,
+  "limitations": [
+    "Normalized name matching is not exhaustive semantic deduplication; coordinator reservation review remains required.",
+    "Three same-subject QIDs were excluded without merging identities or editing prior cards.",
+    "Relations are proposals only and require later author checks against actual short cards.",
+    "Source budgets conservatively cover selection takeaways, support notes, relation notes and limits; add actual bodies before final checking.",
+    "Inspection times are local UTC checkpoints after actual reads, not server acquisition timestamps.",
+    "No independent acceptance review has occurred."
+  ]
+}

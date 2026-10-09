@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "review_type": "independent_cross_batch_identity_admission_advisory",
+  "status": "complete_bounded_identity_pass",
+  "reviewed_at": "2026-10-08T20:29:09.618069+00:00",
+  "inputs": [
+    {
+      "batch_id": "research-batch-003",
+      "path": "research/workers/research-batch-003/selection.proposed.json",
+      "sha256": "32e303ce4a0664c86c0e3fc8b034ae7c5faa7fc9aacf121989755d75e253a6f3",
+      "completed_at": "2026-10-08T20:01:40.475992+00:00",
+      "proposals": 200
+    },
+    {
+      "batch_id": "research-batch-004",
+      "path": "research/workers/research-batch-004/selection.proposed.json",
+      "sha256": "e9be6b4ae858d95c1a0d81666f1dc0ea270484f95b7d44d87934f7cc2e554ba3",
+      "completed_at": "2026-10-08T19:36:35.282200+00:00",
+      "proposals": 211
+    },
+    {
+      "batch_id": "research-batch-005",
+      "path": "research/workers/research-batch-005/selection.proposed.json",
+      "sha256": "e21a304a3b2dd81314af01f7128eca6fa0cbaf60ba1ca8175930e05e1130b7fd",
+      "completed_at": "2026-10-08T19:33:51.417018Z",
+      "proposals": 200
+    },
+    {
+      "batch_id": "research-batch-006",
+      "path": "research/workers/research-batch-006/selection.proposed.json",
+      "sha256": "9e2f06336f9ca84a3a46b44244a28186ee98a33253b7901be5715f33e9a5997b",
+      "completed_at": "2026-10-08T19:50:29.285430+00:00",
+      "proposals": 202
+    },
+    {
+      "batch_id": "research-batch-007",
+      "path": "research/workers/research-batch-007/selection.proposed.json",
+      "sha256": "bad8da39b70c8421b410c2c26e7c3a5d2d3e0f2716a4bfd60cb925d94be68df1",
+      "completed_at": "2026-10-08T19:39:57.542918Z",
+      "proposals": 204
+    }
+  ],
+  "corrections_sha256": "f42a3ce33e286e73f8ad83b5a477adf5253f100bfb1371906b21d93d3ab1ceb9",
+  "baseline_sha256": "a3d27ed57b10c0f99906659413184d13ae71f551266743ca2fe3bd96d81230f9",
+  "selected_counts_after_recorded_corrections": {
+    "research-batch-003": 200,
+    "research-batch-004": 200,
+    "research-batch-005": 200,
+    "research-batch-006": 200,
+    "research-batch-007": 200
+  },
+  "same_id_cross_batch": {},
+  "exact_shared_names_between_batches": {
+    "homology": [
+      {
+        "batch": "research-batch-003",
+        "id": "local:catalog:homology-biology",
+        "label": "Homology (biology)",
+        "matched_phrase": "Homology"
+      },
+      {
+        "batch": "research-batch-004",
+        "id": "Q1144780",
+        "label": "Homology",
+        "matched_phrase": "Homology"
+      }
+    ],
+    "bond": [
+      {
+        "batch": "research-batch-004",
+        "id": "Q44424",
+        "label": "Chemical bond",
+        "matched_phrase": "bond"
+      },
+      {
+        "batch": "research-batch-005",
+        "id": "local:catalog:bond-finance",
+        "label": "Bond (finance)",
+        "matched_phrase": "Bond"
+      }
+    ],
+    "pitch": [
+      {
+        "batch": "research-batch-004",
+        "id": "local:catalog:pitch-material",
+        "label": "Pitch (material)",
+        "matched_phrase": "Pitch"
+      },
+      {
+        "batch": "research-batch-007",
+        "id": "local:catalog:pitch-music",
+        "label": "Pitch (music)",
+        "matched_phrase": "Pitch"
+      }
+    ]
+  },
+  "diagnostic_pair_count_screened": 227,
+  "screening_method": "Read all selected labels and distinct takeaways, inspect exact shared IDs/aliases and ranked word/character-neighbor pairs, then compare actual meaning on likely cross-domain mechanisms. Lexical scores are diagnostics, not merge or novelty evidence. Deep per-batch baseline reviews are separately recorded.",
+  "meaning_comparisons": [
+    {
+      "left_ids": [
+        "local:catalog:fail-safe-track-circuit-signalling"
+      ],
+      "right_ids": [
+        "local:catalog:fail-safe-defaults"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "A railway circuit treats specified faults like track occupancy to protect train separation; computer fail-safe defaults deny access unless permission is explicitly granted. The shared fail-safe design principle does not make this concrete railway detection application identical to default authorization.",
+      "boundary": "004 owns the railway application; 005 owns computer authorization defaults."
+    },
+    {
+      "left_ids": [
+        "local:catalog:stereographic-projection"
+      ],
+      "right_ids": [
+        "Q186386"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Stereographic projection is one specific geometric pole-to-plane construction. Map projection is the wider class of mappings used to flatten Earth and negotiate cartographic distortions.",
+      "boundary": "004 owns the specific geometric construction; 006 owns the existing general cartographic control."
+    },
+    {
+      "left_ids": [
+        "Q3744733"
+      ],
+      "right_ids": [
+        "Q7661371"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Mechanical resonance is strong response to forcing near a natural frequency. The 007 Sympathetic resonance proposal concerns vibration transfer between systems with matching harmonics. Both are existing controls and the source-specific coupling discussion is not a second new generic-resonance count.",
+      "boundary": "The exact 007 registered ID is resolved from its final selection below; no new resonance identity is created."
+    },
+    {
+      "left_ids": [
+        "local:catalog:allocation-concealment"
+      ],
+      "right_ids": [
+        "local:catalog:double-blind-study"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Allocation concealment prevents recruiters foreseeing the next assignment before enrollment. Blinding withholds treatment knowledge during the study to limit participant and researcher expectations. Timing, actors and the bias pathways differ.",
+      "boundary": "003 owns allocation concealment; 007 owns generic double-blind study."
+    },
+    {
+      "left_ids": [
+        "local:catalog:diagnostic-sensitivity",
+        "local:catalog:diagnostic-specificity",
+        "local:catalog:positive-predictive-value"
+      ],
+      "right_ids": [
+        "local:catalog:signal-detection-theory",
+        "local:catalog:absolute-sensory-threshold"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Diagnostic metrics condition results on disease status or vice versa. Signal detection models decisions amid noise; an absolute sensory threshold concerns detection probability for stimulus strength. These quantities/frameworks are not interchangeable.",
+      "boundary": "Clinical-test quantities remain in 003; general perceptual measurement in 007."
+    },
+    {
+      "left_ids": [
+        "local:catalog:pure-tone-audiometry"
+      ],
+      "right_ids": [
+        "local:catalog:absolute-sensory-threshold",
+        "local:catalog:pitch-music"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Pure-tone audiometry is a clinical procedure mapping detection thresholds by sound frequency. Absolute threshold is a general psychophysical property; musical pitch is the perceived high/low ordering of notes.",
+      "boundary": "003 owns the clinical test; 007 owns the general perception and music senses."
+    },
+    {
+      "left_ids": [
+        "local:catalog:observer-s-paradox-in-sociolinguistics"
+      ],
+      "right_ids": [
+        "local:catalog:experimenter-expectancy-bias",
+        "local:catalog:social-desirability-bias"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Observing/recording ordinary speech can change the speech researchers seek. Experimenter expectancy concerns researcher-side expectations affecting observation, while social desirability is participant response shaped to appear acceptable. The mechanisms can coexist without being synonyms.",
+      "boundary": "Keep the sociolinguistic observation target explicit; do not rename generic research reactivity as another subject."
+    },
+    {
+      "left_ids": [
+        "local:catalog:impression-management"
+      ],
+      "right_ids": [
+        "local:catalog:social-desirability-bias"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Impression management is shaping others’ impressions in ordinary social performances. Social-desirability bias is a measurement distortion in responses given to appear acceptable.",
+      "boundary": "005 owns the general social-presentation mechanism; 007 owns the specific research-response bias."
+    },
+    {
+      "left_ids": [
+        "local:catalog:social-norms"
+      ],
+      "right_ids": [
+        "local:catalog:normative-social-influence",
+        "local:catalog:informational-social-influence"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "A norm is a shared behavioral expectation. Normative influence is conforming for acceptance; informational influence is treating others as evidence. The expectation and the two compliance/information mechanisms are distinct.",
+      "boundary": "Do not treat the same generic conformity definition as all three cards."
+    },
+    {
+      "left_ids": [
+        "Q7705913",
+        "Q1095859",
+        "local:catalog:interleaved-practice",
+        "local:catalog:worked-example",
+        "local:catalog:peer-instruction"
+      ],
+      "right_ids": [
+        "local:catalog:working-memory-model",
+        "local:catalog:proactive-interference",
+        "local:catalog:retroactive-interference",
+        "local:catalog:intrinsic-motivation"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "005 contains instructional procedures and already registered testing/spacing effects. 007 addresses general memory architecture, interference and motivation. No duplicate retrieval-practice/spacing mechanism remains under a new instructional label.",
+      "boundary": "Keep 005 instructional ownership and preserve existing Testing effect/Spacing effect IDs."
+    },
+    {
+      "left_ids": [
+        "local:catalog:betweenness-centrality",
+        "local:catalog:triadic-closure",
+        "local:catalog:strong-triadic-closure-property"
+      ],
+      "right_ids": [
+        "local:authored:000604",
+        "local:catalog:bipartite-graph",
+        "local:catalog:matrix-tree-theorem"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Shortest-path mediation and social tie-formation models differ from graph theory generally, two-class graph structure and a theorem counting spanning trees. These mathematical overlaps do not give another batch ownership of the identical network measure.",
+      "boundary": "005 remains sole owner of its network measures/models; 004 may link them without duplicating them."
+    },
+    {
+      "left_ids": [
+        "local:catalog:elastic-rebound-theory"
+      ],
+      "right_ids": [
+        "local:catalog:elastic-limit"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "The earthquake model concerns elastic strain accumulated around a fault and released during slip. Elastic limit is the material boundary beyond which deformation is not wholly recoverable.",
+      "boundary": "003 owns the geological mechanism; 004 the material-property boundary."
+    },
+    {
+      "left_ids": [
+        "local:catalog:ekman-spiral"
+      ],
+      "right_ids": [
+        "local:catalog:coriolis-force"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "The depth-dependent ocean current spiral arises from rotation and momentum transfer; Coriolis force is the rotating-frame inertial term more generally.",
+      "boundary": "003 owns the oceanographic application; 004 the force concept."
+    },
+    {
+      "left_ids": [
+        "local:catalog:drip-irrigation",
+        "local:catalog:variable-rate-irrigation"
+      ],
+      "right_ids": [
+        "local:catalog:aflaj-water-sharing-settlements",
+        "local:catalog:aflaj-irrigation-landscapes-of-oman"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Metered outlets and spatially adjusted application are irrigation techniques. Aflaj entries concern gravity-fed systems, shared access/maintenance and a particular protected cultural landscape.",
+      "boundary": "Technique, social-spatial institution and named landscape are separately identifiable subjects; the two 006 Aflaj entries still need their own per-batch review."
+    },
+    {
+      "left_ids": [
+        "local:catalog:riparian-forest-buffer"
+      ],
+      "right_ids": [
+        "local:catalog:geographic-buffer"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "The riparian buffer is a physical vegetated strip with ecological functions. A GIS buffer is a computed distance zone; it need not contain plants or change runoff.",
+      "boundary": "Separate material/ecological and analytical-geospatial meanings."
+    },
+    {
+      "left_ids": [
+        "local:catalog:sociolinguistic-interview"
+      ],
+      "right_ids": [
+        "local:catalog:oral-history-interview-lead-in"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "The sociolinguistic interview elicits speech with different self-monitoring contexts. The oral-history lead-in records participant/date/location/topic metadata to preserve evidentiary context.",
+      "boundary": "Different interview stages and research functions; no split based only on audience labels."
+    },
+    {
+      "left_ids": [
+        "local:catalog:common-ground-in-communication",
+        "local:catalog:grounding-in-communication"
+      ],
+      "right_ids": [
+        "local:catalog:implied-reader",
+        "local:catalog:focalization"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Mutually accepted conversational knowledge and the process of establishing it differ from the reader presupposed by a text or limits on narrative information.",
+      "boundary": "Conversation pragmatics stays in 005; narrative constructs stay in 006."
+    },
+    {
+      "left_ids": [
+        "local:catalog:negative-space",
+        "local:catalog:simultaneous-contrast",
+        "local:catalog:successive-contrast"
+      ],
+      "right_ids": [
+        "Q1412040",
+        "local:catalog:perceptual-closure",
+        "local:catalog:sensory-adaptation"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Using empty pictorial areas, neighboring-color effects and sequential afterimage effects are specific visual/art subjects. Figure-ground segregation, completion of missing contours and sensory adaptation are general perceptual processes.",
+      "boundary": "007 alone owns the general figure-ground control; 006’s excluded duplicate remains excluded. Source/card wording must retain the specific art/color mechanisms."
+    },
+    {
+      "left_ids": [
+        "local:authored:000460"
+      ],
+      "right_ids": [
+        "local:catalog:two-truths-in-indian-buddhist-philosophy"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Buddhism is the wider collection of traditions; conventional versus ultimate truth is a particular philosophical distinction with school-specific interpretations.",
+      "boundary": "006 owns the broad religion control; 007 owns the philosophical distinction."
+    },
+    {
+      "left_ids": [
+        "Q11469"
+      ],
+      "right_ids": [
+        "local:catalog:glass-armonica"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Glass is a material; Franklin’s rotating-bowl friction instrument is a particular named design using that material.",
+      "boundary": "Do not infer identity from material naming."
+    },
+    {
+      "left_ids": [
+        "local:catalog:genetic-mapping"
+      ],
+      "right_ids": [
+        "local:catalog:choropleth-mapping",
+        "local:catalog:dasymetric-mapping"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Mapping chromosome-marker order from inheritance is distinct from visualizing geographical quantities or reallocating spatial population estimates.",
+      "boundary": "Separate genetic versus geographical meanings."
+    },
+    {
+      "left_ids": [
+        "local:catalog:equilibrium-moisture-content-of-wood"
+      ],
+      "right_ids": [
+        "Q189520",
+        "local:catalog:heterogeneous-equilibrium",
+        "local:catalog:combining-equilibrium-constants"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Wood EMC is a material’s moisture balance with surrounding air under given environmental conditions. Chemical equilibrium concerns reversible reactions; combining equilibrium constants is an algebraic transformation of reaction equations. The wood-specific sorption application is not a new name for reaction equilibrium.",
+      "boundary": "003 owns the material/application subject; 004 owns chemical reaction concepts."
+    },
+    {
+      "left_ids": [
+        "local:catalog:steam-bending",
+        "local:catalog:kerf-bending"
+      ],
+      "right_ids": [
+        "local:catalog:neutral-axis-in-beam-bending",
+        "local:catalog:three-point-bending-test"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Steam bending alters wood pliability with heat and moisture; kerf bending removes material in relief slots. A neutral axis is a stress-distribution feature, and a three-point test measures response in a controlled loading configuration. Manufacturing methods, mechanical property and test remain distinct.",
+      "boundary": "Do not describe the forming methods as merely another elastic stiffness test."
+    },
+    {
+      "left_ids": [
+        "local:catalog:leather-temper"
+      ],
+      "right_ids": [
+        "Q175166"
+      ],
+      "decision": "distinct_subjects_or_supported_facet",
+      "meaning_comparison": "Leather temper describes pliability versus firmness of hide. Tempera is a paint-binding technique; the similar label component has no shared learning identity.",
+      "boundary": "Separate material property from painting medium."
+    }
+  ],
+  "ambiguity_groups": [
+    {
+      "alias": "Homology",
+      "ids": [
+        "local:catalog:homology-biology",
+        "Q1144780"
+      ],
+      "decision": "distinct_senses",
+      "reason": "Inherited similarity through common ancestry versus algebraic objects detecting topological cycles/boundaries.",
+      "source_inspections": [
+        "003 source-responses/012-evolution-inspections.json, Berkeley lines 62–65",
+        "004 source-cache/m51.json, passages 3–6"
+      ],
+      "scope": "both senses selected in pilot"
+    },
+    {
+      "alias": "Bond",
+      "ids": [
+        "Q44424",
+        "local:catalog:bond-finance"
+      ],
+      "decision": "distinct_senses",
+      "reason": "Interatomic attraction versus a debt security with issuer repayment terms.",
+      "source_inspections": [
+        "004 source-cache/c02.json passages 6 and 12; c20.json passage 8",
+        "005 source-texts/web-077.json lines 151–154 and 198–200"
+      ],
+      "scope": "both senses selected in pilot"
+    },
+    {
+      "alias": "Pitch",
+      "ids": [
+        "local:catalog:pitch-material",
+        "local:catalog:pitch-music"
+      ],
+      "decision": "distinct_senses",
+      "reason": "Tar-derived, slowly flowing material versus high/low musical-note perception. Baseline Concert pitch Q1103750 is a tuning reference, not the material.",
+      "source_inspections": [
+        "004 source-cache/c19.json passages 4, 6, 8, 9 and 11",
+        "007 source-raw/music-structure-passages.json, Pitch line 735"
+      ],
+      "scope": "both senses selected in pilot",
+      "condition": "Constrain material pitch to the documented tar-derived sense and compare petroleum Asphalt Q167510."
+    },
+    {
+      "alias": "Graft",
+      "ids": [
+        "local:catalog:horticultural-grafting",
+        "local:catalog:skin-grafting"
+      ],
+      "decision": "distinct_senses",
+      "reason": "Joining a shoot variety to a root system versus transferring detached skin to a wound bed requiring new blood supply.",
+      "source_inspections": [
+        "003 source-responses/051-cultivation-inspections.json, UMN lines 277–279 and 416–417",
+        "003 source-responses/031-health-inspections.json, Sussex lines 310–313"
+      ],
+      "scope": "two selected senses within batch 003"
+    },
+    {
+      "alias": "Canon",
+      "ids": [
+        "local:catalog:canon-scriptural-collection",
+        "Q53831"
+      ],
+      "decision": "distinct_senses",
+      "reason": "A community’s bounded authoritative scriptural collection versus the pinned musical form with offset thematic imitation.",
+      "source_inspections": [
+        "006 source-acquisition/open-019.json, Vatican §120 lines 22–24",
+        "baseline-index concepts/Q53831 original_description"
+      ],
+      "scope": "one pilot sense plus preserved baseline sense; no musical-canon proposal is selected in batch 007"
+    },
+    {
+      "alias": "Apple",
+      "ids": [
+        "local:catalog:apple-inc",
+        "Q89"
+      ],
+      "decision": "distinct_senses",
+      "reason": "The historical corporate supply-chain case identifies a company; Q89 is the edible fruit.",
+      "source_inspections": [
+        "005 selection.proposed.json proposal 146, CORE Economy Unit 6 discovery reference",
+        "baseline-index concepts/Q89 original_description"
+      ],
+      "scope": "one pilot sense plus preserved baseline sense; corporate source passage was author-inspected, not independently reread in this cross pass"
+    }
+  ],
+  "ambiguity_goal_assessment": "Homology, Bond, Pitch and Graft have two independently source-inspected senses, providing four supported additional groups if all retained at central freeze. Canon and Apple also extend preserved baseline senses, with their narrower inspection scope disclosed.",
+  "unresolved_cross_duplicate_findings": [],
+  "report_reference_validation_issues": [],
+  "historical_equivalence_policy": "Urban heat island local:authored:000028/Q215712, Silk Road local:authored:000654/Q36288 and confirmation bias local:authored:000049/Q431498 remain historical proposals. This pass neither collapses them nor changes registered identities.",
+  "additional_sense_notes": [
+    {
+      "case": "Material constitution / political constitution",
+      "note": "The 007 independent reviewer records a real sense distinction against Q7755; see its batch-007-review.json. Both literal Constitution aliases are present."
+    },
+    {
+      "case": "Presentism",
+      "note": "The 007 temporal ontology is distinct from historical-analysis presentism Q1842346. The frozen baseline alias is qualified; no unqualified shared-alias test should be claimed unless a pilot-only alias mapping is explicitly recorded."
+    },
+    {
+      "case": "Meantone temperament",
+      "note": "Musical tuning is distinct from personality temperament Q80157; the latter must not be treated as a musical parent. This is a sense warning, not automatically an exact shared-alias group."
+    }
+  ],
+  "source_inspection_ledger": "research/identity-review/source-inspection-ledger.json",
+  "limitations": [
+    "No full independent source audit of all selections; actual passage inspections are itemized.",
+    "No claim of exhaustive semantic deduplication follows from a bounded pass.",
+    "Final acceptance, alias mappings and reservations belong to the coordinator.",
+    "No cards or operational files were changed.",
+    "Model token/cost accounting is not exposed to this reviewer."
+  ],
+  "finalization": {
+    "completed_at": "2026-10-08T20:29:09.657780+00:00",
+    "previous_checkpoint": "research/identity-review/cross-batch-overlap-review.checkpoint.json",
+    "previous_diagnostic_snapshot": "research/identity-review/cross-batch-diagnostics.pre-final-003.json",
+    "changed_input_batches": [
+      "research-batch-003"
+    ],
+    "batch_003_final_sha256": "32e303ce4a0664c86c0e3fc8b034ae7c5faa7fc9aacf121989755d75e253a6f3",
+    "all_final_completed_at_present": true,
+    "delta_checks": {
+      "all_1000_effective_ids_unique": true,
+      "selected_counts_unchanged": true,
+      "shared_name_groups_unchanged": true,
+      "all_227_ranked_pair_records_identical": true,
+      "batch_003_prior_neighbor_rows_label_takeaway_compared": 50,
+      "batch_003_prior_neighbor_rows_label_takeaway_changes": 0
+    },
+    "note": "Completed the remaining 25 Home-row semantic comparisons at the 20:00 checkpoint. Finalization reran ID/alias and cross-neighbor checks on all five frozen author files; no repeated completed research or author-file changes."
+  },
+  "source_inspection_ledger_sha256": "c861cb7d21f2531df45e25df551a87e06d38d51b07d0ba1dbf49cab06a2cb2bb",
+  "in_pilot_ambiguity_groups_count": 4,
+  "in_pilot_ambiguity_group_aliases": [
+    "Homology",
+    "Bond",
+    "Pitch",
+    "Graft"
+  ],
+  "baseline_extension_groups_separate_from_in_pilot_count": [
+    "Canon",
+    "Apple"
+  ],
+  "per_batch_review_scope": {
+    "this_reviewer": [
+      "research/identity-review/batch-004-review.json",
+      "research/identity-review/batch-005-review.json"
+    ],
+    "separate_reviewer_directory": "research/identity-review-culture-life",
+    "note": "This cross pass does not replace the separate 003/006/007 detailed baseline reviews or the later frozen-card source audits."
+  }
+}

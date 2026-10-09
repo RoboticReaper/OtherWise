@@ -1,0 +1,606 @@
+{
+  "batch_id": "research-batch-007",
+  "from_revision": 2,
+  "to_revision": 3,
+  "created_at": "2026-10-08T22:12:38.599438Z",
+  "before_candidate_path": "candidate.authored.json",
+  "before_candidate_sha256": "1989b1a2ea351e4f277012d1860f37c5f02662a1d7d857a3e278a5ea68ea9952",
+  "after_candidate_path": "candidate.revised.json",
+  "after_candidate_sha256": "a49d21157db18807479187fa76422fb119b40bc84febdf68d39c04b64114979e",
+  "initial_audit_path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-007/audit-review/audit.initial.json",
+  "initial_audit_sha256": "560d4e1d81fa7b1f3199440f1bf46ba5da08f09eb5e0075f1c45cc01995171dd",
+  "changed_ids": [
+    "local:catalog:issue-preclusion"
+  ],
+  "changes": [
+    {
+      "finding_id": "007-R1",
+      "id": "local:catalog:issue-preclusion",
+      "label": "Issue preclusion",
+      "previous_card_version": 1,
+      "selected_card_version": 2,
+      "before": {
+        "id": "local:catalog:issue-preclusion",
+        "label": "Issue preclusion",
+        "aliases": [
+          "Collateral estoppel"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Politics & law"
+        ],
+        "learning_takeaway": "Distinguish relitigating a decided issue from repeating an entire claim.",
+        "card": "In US litigation, issue preclusion bars repeating a factual or legal issue already validly, finally and necessarily decided in an earlier proceeding. It can matter even when a later lawsuit is a different claim. The focus is the resolved issue, rather than repetition of the original action.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.law.cornell.edu/wex/collateral_estoppel"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s075",
+            "locator": "Opening definition",
+            "note": "Cornell's collateral-estoppel definition and civil-procedure discussion support final and necessary determination; can matter avoids promising automatic preclusion without the jurisdiction's additional requirements."
+          },
+          {
+            "source_id": "b007-s074",
+            "locator": "Opening and Bar and Merger",
+            "note": "The claim-level definition supports the stated contrast with a previously decided issue."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:claim-preclusion",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The linked accounts distinguish preventing a repeated claim from preventing a repeated decision on an essential issue, while acknowledging varied uses of the term res judicata.",
+            "source_ids": [
+              "b007-s075",
+              "b007-s074"
+            ]
+          }
+        ],
+        "card_version": 1,
+        "imported_records": []
+      },
+      "after": {
+        "id": "local:catalog:issue-preclusion",
+        "label": "Issue preclusion",
+        "aliases": [
+          "Collateral estoppel"
+        ],
+        "entity_kind": "idea",
+        "scope": "idea",
+        "domains": [
+          "Politics & law"
+        ],
+        "learning_takeaway": "Distinguish relitigating a decided issue from repeating an entire claim.",
+        "card": "In US litigation, issue preclusion can bar relitigation of an issue actually litigated and necessarily decided in a valid final judgment. It generally binds a party who had a full and fair opportunity to litigate, with recognized nonparty exceptions. The issue may recur within a different claim.",
+        "original_description": null,
+        "identity_urls": [
+          "https://www.law.cornell.edu/wex/collateral_estoppel"
+        ],
+        "evidence": [
+          {
+            "source_id": "b007-s075",
+            "locator": "Opening definition",
+            "note": "The original collateral-estoppel entry supports the factual/legal issue and final-necessary-determination core. Its concise definition does not alone supply the full applicability boundary; the explicit Cornell issue-preclusion entry and Taylor opinion supply those conditions."
+          },
+          {
+            "source_id": "b007-s074",
+            "locator": "Opening and Bar and Merger",
+            "note": "The claim-level definition supports the stated contrast with a previously decided issue."
+          },
+          {
+            "source_id": "b007-s091",
+            "locator": "Opening; elements 1–4; contrast with claim preclusion; nonparty paragraph (lines 5–16)",
+            "note": "Requires the identical issue to have been actually litigated and determined, essential to a valid final judgment. A different later cause of action can still involve that issue. The nonparty discussion is read alongside the primary opinion, not as an absolute same-parties rule."
+          },
+          {
+            "source_id": "b007-s092",
+            "locator": "Opinion II.A–B, 553 U.S. 891–895; lines 198–216",
+            "note": "The Court describes actual litigation and necessary resolution, full and fair opportunity, the general rule against binding nonparties, and limited recognized exceptions. Supports can bar and generally binds without requiring identical parties in every later suit."
+          }
+        ],
+        "relations": [
+          {
+            "target_id": "local:catalog:claim-preclusion",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "note": "The linked accounts distinguish preventing a repeated claim from preventing a repeated decision on an essential issue, while acknowledging varied uses of the term res judicata.",
+            "source_ids": [
+              "b007-s075",
+              "b007-s074"
+            ]
+          }
+        ],
+        "card_version": 2,
+        "imported_records": []
+      },
+      "before_sources": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/res_judicata",
+              "requested_ref": "https://www.law.cornell.edu/wex/res_judicata",
+              "method": "open",
+              "title": "res judicata | Wex | US Law | LII / Legal Information Institute",
+              "retrieved_at": "2026-10-08T19:23:08.162Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed in February of 2026 by the cite44†Wex Definitions Team†about.law.cornell.edu ]",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/law-res.json",
+              "raw_sha256": "35b6a833bc6bb0e0aef5e0015a2f10c56e2dae21a6bc348c7a31321d3a235432"
+            }
+          ],
+          "displayed_update": "Last reviewed in February of 2026 by the cite44†Wex Definitions Team†about.law.cornell.edu ]",
+          "id": "b007-s074",
+          "inspection_artifacts": [
+            "source-raw/law-res.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Overview; Bar and Merger; Opening and Bar and Merger",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:23:08.162Z",
+          "revision": null,
+          "title": "res judicata | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/res_judicata"
+        },
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/collateral_estoppel",
+              "requested_ref": "https://www.law.cornell.edu/wex/collateral_estoppel",
+              "method": "open",
+              "title": "collateral estoppel | Wex | US Law | LII / Legal Information Institute",
+              "retrieved_at": "2026-10-08T19:23:46.688Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed in August of 2025 by the cite23†Wex Definitions Team†about.law.cornell.edu ]",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/law-issue.json",
+              "raw_sha256": "bf9c292f80b9775829d92067df32153b34e2b89b8d0cff42f6b59ac228127a00"
+            }
+          ],
+          "displayed_update": "Last reviewed in August of 2025 by the cite23†Wex Definitions Team†about.law.cornell.edu ]",
+          "id": "b007-s075",
+          "inspection_artifacts": [
+            "source-raw/law-issue.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Opening definition; Opening and civil-procedure distinction",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:23:46.688Z",
+          "revision": null,
+          "title": "collateral estoppel | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/collateral_estoppel"
+        }
+      ],
+      "after_sources": [
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/res_judicata",
+              "requested_ref": "https://www.law.cornell.edu/wex/res_judicata",
+              "method": "open",
+              "title": "res judicata | Wex | US Law | LII / Legal Information Institute",
+              "retrieved_at": "2026-10-08T19:23:08.162Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed in February of 2026 by the cite44†Wex Definitions Team†about.law.cornell.edu ]",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/law-res.json",
+              "raw_sha256": "35b6a833bc6bb0e0aef5e0015a2f10c56e2dae21a6bc348c7a31321d3a235432"
+            }
+          ],
+          "displayed_update": "Last reviewed in February of 2026 by the cite44†Wex Definitions Team†about.law.cornell.edu ]",
+          "id": "b007-s074",
+          "inspection_artifacts": [
+            "source-raw/law-res.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Overview; Bar and Merger; Opening and Bar and Merger",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:23:08.162Z",
+          "revision": null,
+          "title": "res judicata | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/res_judicata"
+        },
+        {
+          "access": "public",
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/collateral_estoppel",
+              "requested_ref": "https://www.law.cornell.edu/wex/collateral_estoppel",
+              "method": "open",
+              "title": "collateral estoppel | Wex | US Law | LII / Legal Information Institute",
+              "retrieved_at": "2026-10-08T19:23:46.688Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed in August of 2025 by the cite23†Wex Definitions Team†about.law.cornell.edu ]",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "source-raw/law-issue.json",
+              "raw_sha256": "bf9c292f80b9775829d92067df32153b34e2b89b8d0cff42f6b59ac228127a00"
+            }
+          ],
+          "displayed_update": "Last reviewed in August of 2025 by the cite23†Wex Definitions Team†about.law.cornell.edu ]",
+          "id": "b007-s075",
+          "inspection_artifacts": [
+            "source-raw/law-issue.json"
+          ],
+          "inspection_status": "supporting_passages_inspected",
+          "locator": "Opening definition; Opening and civil-procedure distinction",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T19:23:46.688Z",
+          "revision": null,
+          "title": "collateral estoppel | Wex | US Law | LII / Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/collateral_estoppel"
+        },
+        {
+          "id": "b007-s091",
+          "title": "Issue preclusion — Wex, Cornell Legal Information Institute",
+          "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+          "locator": "Opening and required elements; comparison with claim preclusion; nonparty discussion (lines 5–16)",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T22:09:39.730Z",
+          "revision": null,
+          "displayed_update": "Last reviewed August 2025",
+          "access": "public",
+          "inspection_status": "supporting_passages_inspected",
+          "inspection_artifacts": [
+            "post-audit-source-captures/issue-preclusion-explicit.json"
+          ],
+          "acquisition_history": [
+            {
+              "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+              "requested_ref": "https://www.law.cornell.edu/wex/issue_preclusion",
+              "method": "open",
+              "title": "Issue preclusion — Wex, Cornell Legal Information Institute",
+              "retrieved_at": "2026-10-08T22:09:39.730Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": "Last reviewed August 2025",
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "post-audit-source-captures/issue-preclusion-explicit.json",
+              "raw_sha256": "2a80f5ad765d85a71d563101a7ca6639df4e6678ec7c767ea09698440f2056bc"
+            }
+          ]
+        },
+        {
+          "id": "b007-s092",
+          "title": "Taylor v. Sturgell, 553 U.S. 880 (2008) — Supreme Court opinion, reproduced by Justia",
+          "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+          "locator": "Opinion II.A–B, 553 U.S. 891–895; actual litigation, full and fair opportunity, general nonparty rule and recognized exceptions (lines 198–216)",
+          "retrieval_date": "2026-10-08",
+          "retrieved_at": "2026-10-08T22:09:21.300Z",
+          "revision": null,
+          "displayed_update": null,
+          "access": "public",
+          "inspection_status": "supporting_passages_inspected",
+          "inspection_artifacts": [
+            "post-audit-source-captures/issue-preclusion-taylor.json"
+          ],
+          "acquisition_history": [
+            {
+              "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+              "requested_ref": "https://supreme.justia.com/cases/federal/us/553/880/",
+              "method": "open",
+              "title": "Taylor v. Sturgell, 553 U.S. 880 (2008) — Supreme Court opinion, reproduced by Justia",
+              "retrieved_at": "2026-10-08T22:09:21.300Z",
+              "retrieval_date": "2026-10-08",
+              "timestamp_basis": "tool-call completion timestamp",
+              "revision": null,
+              "displayed_update": null,
+              "redirect_url": null,
+              "status": "retrieved",
+              "raw_file": "post-audit-source-captures/issue-preclusion-taylor.json",
+              "raw_sha256": "6e62cf38e8d45c2c4dce4ad390e320b0af06185beb3c44b8e31a82960668e6b3"
+            }
+          ],
+          "publication_date": "2008-06-12",
+          "source_quality_note": "Primary judicial opinion as reproduced by Justia; the inspected passage distinguishes ordinary party preclusion from recognized nonparty exceptions. The date of the decision is separate from the retrieval timestamp."
+        }
+      ],
+      "before_author_review": {
+        "id": "local:catalog:issue-preclusion",
+        "label": "Issue preclusion",
+        "review_type": "author_review_not_independent",
+        "card_version": 1,
+        "word_count": 47,
+        "claim_check": {
+          "result": "supported_with_stated_qualifications",
+          "note": "Cornell's collateral-estoppel definition and civil-procedure discussion support final and necessary determination; can matter avoids promising automatic preclusion without the jurisdiction's additional requirements.",
+          "evidence_locators": [
+            {
+              "source_id": "b007-s075",
+              "locator": "Opening definition"
+            },
+            {
+              "source_id": "b007-s074",
+              "locator": "Opening and Bar and Merger"
+            }
+          ]
+        },
+        "identity_scope_check": {
+          "result": "retains_frozen_selection",
+          "note": "Preclusion of an already decided issue differs from preclusion of an entire cause of action.",
+          "constraints": []
+        },
+        "relationship_checks": [
+          {
+            "target_id": "local:catalog:claim-preclusion",
+            "target_label": "Claim preclusion",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "result": "supported_as_labeled",
+            "note": "The linked accounts distinguish preventing a repeated claim from preventing a repeated decision on an essential issue, while acknowledging varied uses of the term res judicata.",
+            "actual_relationship_locator": "Collateral estoppel, opening and civil procedure; Res judicata, distinction paragraph",
+            "source_ids": [
+              "b007-s075",
+              "b007-s074"
+            ],
+            "target_sense_verified": true
+          }
+        ],
+        "decision": "retain",
+        "reviewed_at": "2026-10-08T21:45:31.847277Z",
+        "boundary_recheck_note": "The US issue must have been validly, finally and necessarily decided. Can matter preserves further requirements; the card does not promise automatic preclusion against every nonparty or all later claims."
+      },
+      "after_author_review": {
+        "id": "local:catalog:issue-preclusion",
+        "label": "Issue preclusion",
+        "review_type": "author_review_not_independent",
+        "card_version": 2,
+        "word_count": 47,
+        "claim_check": {
+          "result": "author_repair_supported_pending_independent_recheck",
+          "note": "007-R1 accepted: the prior can matter sentence did not qualify the opening bar. The revision explicitly requires actual litigation and necessary determination in a valid final judgment, generally binds a party with full and fair opportunity, and preserves recognized nonparty exceptions. Cornell elements and Taylor II.A–B directly support the limits.",
+          "evidence_locators": [
+            {
+              "source_id": "b007-s075",
+              "locator": "Opening definition"
+            },
+            {
+              "source_id": "b007-s074",
+              "locator": "Opening and Bar and Merger"
+            },
+            {
+              "source_id": "b007-s091",
+              "locator": "Opening; elements 1–4; contrast with claim preclusion; nonparty paragraph (lines 5–16)"
+            },
+            {
+              "source_id": "b007-s092",
+              "locator": "Opinion II.A–B, 553 U.S. 891–895; lines 198–216"
+            }
+          ]
+        },
+        "identity_scope_check": {
+          "result": "retains_frozen_selection",
+          "note": "Preclusion of an already decided issue differs from preclusion of an entire cause of action.",
+          "constraints": []
+        },
+        "relationship_checks": [
+          {
+            "target_id": "local:catalog:claim-preclusion",
+            "target_label": "Claim preclusion",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "result": "supported_as_labeled",
+            "note": "The linked accounts distinguish preventing a repeated claim from preventing a repeated decision on an essential issue, while acknowledging varied uses of the term res judicata.",
+            "actual_relationship_locator": "Collateral estoppel, opening and civil procedure; Res judicata, distinction paragraph",
+            "source_ids": [
+              "b007-s075",
+              "b007-s074"
+            ],
+            "target_sense_verified": true
+          }
+        ],
+        "decision": "retain_revised_pending_independent_recheck",
+        "reviewed_at": "2026-10-08T22:12:38.599438Z",
+        "boundary_recheck_note": "Supersedes the earlier author boundary assessment for this ID. US scope alone did not supply actual-litigation or party/opportunity limits. The revised can bar/general rule plus limited nonparty exceptions states those conditions without absolute mutuality.",
+        "post_audit_finding_id": "007-R1"
+      },
+      "before_source_inspection": {
+        "id": "local:catalog:issue-preclusion",
+        "label": "Issue preclusion",
+        "stage": "B_card_and_relationship_author_review",
+        "claim_support_note": "Cornell's collateral-estoppel definition and civil-procedure discussion support final and necessary determination; can matter avoids promising automatic preclusion without the jurisdiction's additional requirements.",
+        "passages": [
+          {
+            "url": "https://www.law.cornell.edu/wex/collateral_estoppel",
+            "source_id": "b007-s075",
+            "locator": "Opening definition",
+            "note": "Cornell's collateral-estoppel definition and civil-procedure discussion support final and necessary determination; can matter avoids promising automatic preclusion without the jurisdiction's additional requirements."
+          },
+          {
+            "url": "https://www.law.cornell.edu/wex/res_judicata",
+            "source_id": "b007-s074",
+            "locator": "Opening and Bar and Merger",
+            "note": "The claim-level definition supports the stated contrast with a previously decided issue."
+          }
+        ],
+        "relationship_review": [
+          {
+            "target_id": "local:catalog:claim-preclusion",
+            "target_label": "Claim preclusion",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "result": "supported_as_labeled",
+            "note": "The linked accounts distinguish preventing a repeated claim from preventing a repeated decision on an essential issue, while acknowledging varied uses of the term res judicata.",
+            "actual_relationship_locator": "Collateral estoppel, opening and civil procedure; Res judicata, distinction paragraph",
+            "source_ids": [
+              "b007-s075",
+              "b007-s074"
+            ],
+            "target_sense_verified": true
+          }
+        ],
+        "reviewed_at": "2026-10-08T21:45:31.847277Z",
+        "boundary_recheck_note": "The US issue must have been validly, finally and necessarily decided. Can matter preserves further requirements; the card does not promise automatic preclusion against every nonparty or all later claims."
+      },
+      "after_source_inspection": {
+        "id": "local:catalog:issue-preclusion",
+        "label": "Issue preclusion",
+        "stage": "B_card_and_relationship_author_review",
+        "claim_support_note": "007-R1 accepted: the prior can matter sentence did not qualify the opening bar. The revision explicitly requires actual litigation and necessary determination in a valid final judgment, generally binds a party with full and fair opportunity, and preserves recognized nonparty exceptions. Cornell elements and Taylor II.A–B directly support the limits.",
+        "passages": [
+          {
+            "url": "https://www.law.cornell.edu/wex/collateral_estoppel",
+            "source_id": "b007-s075",
+            "locator": "Opening definition",
+            "note": "The original collateral-estoppel entry supports the factual/legal issue and final-necessary-determination core. Its concise definition does not alone supply the full applicability boundary; the explicit Cornell issue-preclusion entry and Taylor opinion supply those conditions."
+          },
+          {
+            "url": "https://www.law.cornell.edu/wex/res_judicata",
+            "source_id": "b007-s074",
+            "locator": "Opening and Bar and Merger",
+            "note": "The claim-level definition supports the stated contrast with a previously decided issue."
+          },
+          {
+            "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+            "source_id": "b007-s091",
+            "locator": "Opening; elements 1–4; contrast with claim preclusion; nonparty paragraph (lines 5–16)",
+            "note": "Requires the identical issue to have been actually litigated and determined, essential to a valid final judgment. A different later cause of action can still involve that issue. The nonparty discussion is read alongside the primary opinion, not as an absolute same-parties rule."
+          },
+          {
+            "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+            "source_id": "b007-s092",
+            "locator": "Opinion II.A–B, 553 U.S. 891–895; lines 198–216",
+            "note": "The Court describes actual litigation and necessary resolution, full and fair opportunity, the general rule against binding nonparties, and limited recognized exceptions. Supports can bar and generally binds without requiring identical parties in every later suit."
+          }
+        ],
+        "relationship_review": [
+          {
+            "target_id": "local:catalog:claim-preclusion",
+            "target_label": "Claim preclusion",
+            "type": "related_to",
+            "assertion": "source_asserted",
+            "result": "supported_as_labeled",
+            "note": "The linked accounts distinguish preventing a repeated claim from preventing a repeated decision on an essential issue, while acknowledging varied uses of the term res judicata.",
+            "actual_relationship_locator": "Collateral estoppel, opening and civil procedure; Res judicata, distinction paragraph",
+            "source_ids": [
+              "b007-s075",
+              "b007-s074"
+            ],
+            "target_sense_verified": true
+          }
+        ],
+        "reviewed_at": "2026-10-08T22:12:38.599438Z",
+        "boundary_recheck_note": "Supersedes the earlier author boundary assessment for this ID. US scope alone did not supply actual-litigation or party/opportunity limits. The revised can bar/general rule plus limited nonparty exceptions states those conditions without absolute mutuality.",
+        "post_audit_finding_id": "007-R1"
+      },
+      "reason": "The initial independent audit correctly identified that the old unconditional opening lacked actual-litigation and party/opportunity limits. A later can matter statement did not repair that omission.",
+      "author_recheck": "Read both independent captures and fresh actual public passages. Cornell supplies the elements and claim/issue contrast; Taylor II.A–B supplies the full-and-fair opportunity and nonparty-rule exceptions. No absolute same-parties-only requirement is asserted.",
+      "relationship_decision": "The existing source-asserted related_to comparison with claim preclusion remains supported and is unchanged.",
+      "status": "author_repaired_pending_independent_recheck"
+    }
+  ],
+  "new_source_metadata": [
+    {
+      "id": "b007-s091",
+      "title": "Issue preclusion — Wex, Cornell Legal Information Institute",
+      "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+      "locator": "Opening and required elements; comparison with claim preclusion; nonparty discussion (lines 5–16)",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T22:09:39.730Z",
+      "revision": null,
+      "displayed_update": "Last reviewed August 2025",
+      "access": "public",
+      "inspection_status": "supporting_passages_inspected",
+      "inspection_artifacts": [
+        "post-audit-source-captures/issue-preclusion-explicit.json"
+      ],
+      "acquisition_history": [
+        {
+          "url": "https://www.law.cornell.edu/wex/issue_preclusion",
+          "requested_ref": "https://www.law.cornell.edu/wex/issue_preclusion",
+          "method": "open",
+          "title": "Issue preclusion — Wex, Cornell Legal Information Institute",
+          "retrieved_at": "2026-10-08T22:09:39.730Z",
+          "retrieval_date": "2026-10-08",
+          "timestamp_basis": "tool-call completion timestamp",
+          "revision": null,
+          "displayed_update": "Last reviewed August 2025",
+          "redirect_url": null,
+          "status": "retrieved",
+          "raw_file": "post-audit-source-captures/issue-preclusion-explicit.json",
+          "raw_sha256": "2a80f5ad765d85a71d563101a7ca6639df4e6678ec7c767ea09698440f2056bc"
+        }
+      ]
+    },
+    {
+      "id": "b007-s092",
+      "title": "Taylor v. Sturgell, 553 U.S. 880 (2008) — Supreme Court opinion, reproduced by Justia",
+      "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+      "locator": "Opinion II.A–B, 553 U.S. 891–895; actual litigation, full and fair opportunity, general nonparty rule and recognized exceptions (lines 198–216)",
+      "retrieval_date": "2026-10-08",
+      "retrieved_at": "2026-10-08T22:09:21.300Z",
+      "revision": null,
+      "displayed_update": null,
+      "access": "public",
+      "inspection_status": "supporting_passages_inspected",
+      "inspection_artifacts": [
+        "post-audit-source-captures/issue-preclusion-taylor.json"
+      ],
+      "acquisition_history": [
+        {
+          "url": "https://supreme.justia.com/cases/federal/us/553/880/",
+          "requested_ref": "https://supreme.justia.com/cases/federal/us/553/880/",
+          "method": "open",
+          "title": "Taylor v. Sturgell, 553 U.S. 880 (2008) — Supreme Court opinion, reproduced by Justia",
+          "retrieved_at": "2026-10-08T22:09:21.300Z",
+          "retrieval_date": "2026-10-08",
+          "timestamp_basis": "tool-call completion timestamp",
+          "revision": null,
+          "displayed_update": null,
+          "redirect_url": null,
+          "status": "retrieved",
+          "raw_file": "post-audit-source-captures/issue-preclusion-taylor.json",
+          "raw_sha256": "6e62cf38e8d45c2c4dce4ad390e320b0af06185beb3c44b8e31a82960668e6b3"
+        }
+      ],
+      "publication_date": "2008-06-12",
+      "source_quality_note": "Primary judicial opinion as reproduced by Justia; the inspected passage distinguishes ordinary party preclusion from recognized nonparty exceptions. The date of the decision is separate from the retrieval timestamp."
+    }
+  ],
+  "shared_source_changes": [],
+  "all_other_complete_cards_unchanged": true,
+  "independent_recheck_completed": false,
+  "source_bounds": {
+    "new_explanatory_references": 2,
+    "total_distinct_references_attached_to_affected_card": 4,
+    "conservative_alternative_count": 3,
+    "interpretation": "Counting the earlier claim-preclusion comparison reference as an alternative as well still yields no more than three beyond the original collateral-estoppel reference.",
+    "failed_new_url_attempts": 0
+  },
+  "auditor_capture_provenance": [
+    {
+      "path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-007/audit-review/web-22.txt",
+      "sha256": "151d8d3f9be438e27c7ea4687afab3dfcc20bfb2773718afb4785478327743cf",
+      "original_retrieval_date": "2026-10-08",
+      "original_precise_retrieved_at": null,
+      "limitation": "The auditor records only an audit-session interval, not a precise tool-completion timestamp. Fresh author retrievals have their own exact captured timestamps."
+    },
+    {
+      "path": "data/catalog-candidates/scale-pilot-001/audits/research-batch-007/audit-review/web-25.txt",
+      "sha256": "dbc37aca0f4eb5b8521379c7606b3b20e054f72d10eb1e50de18dd767437e05a",
+      "original_retrieval_date": "2026-10-08",
+      "original_precise_retrieved_at": null,
+      "limitation": "The auditor records only an audit-session interval, not a precise tool-completion timestamp. Fresh author retrievals have their own exact captured timestamps."
+    }
+  ]
+}

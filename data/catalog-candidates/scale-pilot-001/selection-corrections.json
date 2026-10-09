@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "status": "central_reconciliation_in_progress",
+  "corrections": [
+    {
+      "batch_id": "research-batch-005",
+      "input_sha256": "e21a304a3b2dd81314af01f7128eca6fa0cbaf60ba1ca8175930e05e1130b7fd",
+      "provisional_id": "local:catalog:organizational-design",
+      "action": "reuse_existing_identity",
+      "reserved_id": "Q3318170",
+      "inventory_status": "existing",
+      "reviewed": true,
+      "reason": "The proposal's general allocation of responsibilities and coordination structures matches the frozen Organizational architecture identity, whose preserved meaning is management of roles, processes and formal reporting relationships. Comparing it only with generic Organization missed the more specific existing subject.",
+      "preserve_aliases": [
+        "Organizational architecture",
+        "Organizational design"
+      ],
+      "evidence": [
+        {
+          "source": "baseline-index.json",
+          "locator": "concepts/Q3318170",
+          "note": "Preserved original identity and description."
+        },
+        {
+          "url": "https://openstax.org/books/principles-management/pages/10-1-organizational-structures-and-design",
+          "locator": "Section 10.1 opening definitions",
+          "note": "Inspected by the independent selection reviewer; organizational design sets up structures to meet organizational needs."
+        }
+      ],
+      "reviewed_at": "2026-10-08T19:41:10Z",
+      "effect": "One provisional new identity becomes an existing control; no operational registry changes."
+    },
+    {
+      "batch_id": "research-batch-004",
+      "input_sha256": "e9be6b4ae858d95c1a0d81666f1dc0ea270484f95b7d44d87934f7cc2e554ba3",
+      "provisional_id": "local:catalog:mechanical-stress",
+      "action": "quarantine_and_promote_reserve",
+      "replacement_id": "local:catalog:three-point-bending-test",
+      "reviewed": true,
+      "reason": "The force-per-area introductory takeaway does not sufficiently establish a separate learning identity from the pinned Cauchy stress tensor Q13409892. The candidate remains unresolved rather than being automatically equated. Promote the independently supported three-point bending test from the same engineering subfield.",
+      "replacement_distinction": "A simply supported beam under central point load provides an elastic deflection test for stiffness; it is distinct from plastic bending Q7202074 and springback after sheet-metal forming.",
+      "authoring_constraints": [
+        "State the ideal elastic, small-deflection assumptions.",
+        "Do not rely on the quarantined Mechanical stress ID as a relationship target."
+      ],
+      "evidence": [
+        {
+          "source_id": "e42",
+          "url": "https://eng.libretexts.org/Courses/California_State_Polytechnic_University_Humboldt/Mechanical_Behavior_of_Material/Chapter_8%3A_Beam_Bending%2C_Buckling%2C_and_Torsion",
+          "title": "Chapter 8: Beam Bending, Buckling, and Torsion - Engineering LibreTexts",
+          "locator": "paragraph-216; paragraph-217; paragraph-218",
+          "passage_indices": [
+            215,
+            216,
+            217
+          ],
+          "inspected_support_note": "Load a simply supported beam at its center to relate deflection to material and cross-section stiffness.",
+          "retrieved_at": "2026-10-08T19:12:22.165926+00:00",
+          "revision": "LibreTexts pageRevision 6"
+        }
+      ],
+      "reviewed_at": "2026-10-08T19:46:46Z",
+      "effect": "Preserves 200 recommended subjects and primary-domain/subfield totals, while excluding an uncertain new-identity claim."
+    }
+  ]
+}

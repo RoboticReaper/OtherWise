@@ -1,0 +1,65 @@
+test_control_imports_and_original_description_preserved (test_candidate_admission.CandidateAdmissionTests.test_control_imports_and_original_description_preserved) ... FAIL
+test_final_requires_exact_reserved_set (test_candidate_admission.CandidateAdmissionTests.test_final_requires_exact_reserved_set) ... FAIL
+test_new_identity_needs_inspected_subject_url (test_candidate_admission.CandidateAdmissionTests.test_new_identity_needs_inspected_subject_url) ... FAIL
+test_unknown_relation_target_rejected (test_candidate_admission.CandidateAdmissionTests.test_unknown_relation_target_rejected) ... FAIL
+test_valid_subject_provenance_and_historical_timestamp_pass (test_candidate_admission.CandidateAdmissionTests.test_valid_subject_provenance_and_historical_timestamp_pass) ... FAIL
+
+======================================================================
+FAIL: test_control_imports_and_original_description_preserved (test_candidate_admission.CandidateAdmissionTests.test_control_imports_and_original_description_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_candidate_admission.py", line 21, in test_control_imports_and_original_description_preserved
+    self.assertEqual(a.check(d,p,base,snap,{'Q1'},{'A'},True),[])
+AssertionError: Lists differ: ['not_implemented'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'not_implemented'
+
+- ['not_implemented']
++ []
+
+======================================================================
+FAIL: test_final_requires_exact_reserved_set (test_candidate_admission.CandidateAdmissionTests.test_final_requires_exact_reserved_set)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_candidate_admission.py", line 25, in test_final_requires_exact_reserved_set
+    self.assertIn('reserved_set_mismatch',str(a.check(d,p,{}, {},set(p),{'A'},True)))
+AssertionError: 'reserved_set_mismatch' not found in "['not_implemented']"
+
+======================================================================
+FAIL: test_new_identity_needs_inspected_subject_url (test_candidate_admission.CandidateAdmissionTests.test_new_identity_needs_inspected_subject_url)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_candidate_admission.py", line 14, in test_new_identity_needs_inspected_subject_url
+    self.assertIn('new_identity_url',str(a.check(d,p,{}, {},{'local:new'},{'A'},True)))
+AssertionError: 'new_identity_url' not found in "['not_implemented']"
+
+======================================================================
+FAIL: test_unknown_relation_target_rejected (test_candidate_admission.CandidateAdmissionTests.test_unknown_relation_target_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_candidate_admission.py", line 17, in test_unknown_relation_target_rejected
+    self.assertIn('unresolved_target',str(a.check(d,p,{}, {},{'local:new'},{'A'},True)))
+AssertionError: 'unresolved_target' not found in "['not_implemented']"
+
+======================================================================
+FAIL: test_valid_subject_provenance_and_historical_timestamp_pass (test_candidate_admission.CandidateAdmissionTests.test_valid_subject_provenance_and_historical_timestamp_pass)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f87f9b561514/otherwise-scale-pilot-001/work/research/test_candidate_admission.py", line 11, in test_valid_subject_provenance_and_historical_timestamp_pass
+    d,p=self.fixtures();self.assertEqual(a.check(d,p,{}, {},{'local:new'},{'A'},True),[])
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: ['not_implemented'] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+'not_implemented'
+
+- ['not_implemented']
++ []
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=5)

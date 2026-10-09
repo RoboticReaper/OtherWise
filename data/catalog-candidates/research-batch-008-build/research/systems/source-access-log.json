@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "assignment": "systems",
+  "note": "This records observed access limitations and successful replacements. No failed page or search snippet is cited as explanatory support. Exact remote retrieval timestamps are unavailable.",
+  "selection_phase": [
+    {
+      "source_family": "NACTO queue-jump guidance",
+      "observed_outcome": "access error",
+      "used_replacement": "Inspected Federal Transit Administration Signal Priority page"
+    },
+    {
+      "source_family": "Pressbooks language-learning pages",
+      "observed_outcome": "access error",
+      "used_replacement": "Inspected Haskins and author-hosted Woodward-Markman material"
+    },
+    {
+      "source_family": "eLife/PMC stop-signal consensus pages",
+      "observed_outcome": "client challenge or failed access",
+      "used_replacement": "Inspected primary PLOS stop-signal paper; saved challenge HTML excluded"
+    },
+    {
+      "source_family": "Roth-Xing PDF and Nobel biography/lecture",
+      "observed_outcome": "failed access",
+      "used_replacement": "Inspected Roth-Xing author-hosted HTML copy"
+    }
+  ],
+  "draft_phase": [
+    {
+      "url": "https://snap.stanford.edu/class/cs224w-readings/kossinets06evolving.pdf",
+      "observed_outcome": "web extraction failed with timeout; no actual explanatory passage used",
+      "resolution": "Retained inspected Cornell book support and kept its collective generated prose within 200 words"
+    },
+    {
+      "url": "https://iqua.ece.toronto.edu/baochun/ece1771f/papers/Gale-Shapley-1962.pdf",
+      "observed_outcome": "PDF opened but returned zero extracted lines; no actual explanatory passage used",
+      "resolution": "Retained inspected matching lecture support and canonical Q65123731"
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc9421.html",
+      "observed_outcome": "later term-finding call did not return the MAC passage",
+      "resolution": "Inspected official RFC 9421 text companion, sections 1.1 and 7.3.3; same-work summary budget preserved"
+    }
+  ],
+  "scope_limits": [
+    "The friendship-paradox card uses bounded primary-abstract claims. Relative-performance evidence includes the visually inspected primary introduction, printed p.325 / PDF p.3.",
+    "Earlier body/reference records remain available in the pinned baseline; current researched bodies retain approved identity/version semantics.",
+    "The source-access log reports access outcomes, not an independent factual audit."
+  ],
+  "usage": {
+    "model_tokens": null,
+    "monetary_cost": null,
+    "reason": "Per-agent usage telemetry is not available through the exposed tools."
+  },
+  "repair_001_reinspection": [
+    {
+      "url": "https://www.tayfunsonmez.net/wp-content/uploads/2013/10/AbdulkadirogluSonmez-AER20031.pdf",
+      "locator": "II.B, printed pp.736-737 / PDF pp.9-10, steps 1-k and propositions 3-4; I.A Boston Student Assignment Mechanism, printed pp.732-733 / PDF pp.5-6, rounds 1-k and strategy-proofness discussion; I School Choice assumptions, printed p.732 / PDF p.5, lines 309-313",
+      "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+      "outcome": "actual_passages_inspected",
+      "failed_attempts": 0,
+      "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+      "time_semantics": "Local inspection completion; not an exact remote retrieval timestamp."
+    },
+    {
+      "url": "https://people.duke.edu/~qc2/BA532/1982%20Rand%20Holmstrom%20team.pdf",
+      "locator": "Abstract and Introduction, printed pp.324-325 / PDF pp.2-3; relative-performance evaluation in the Introduction, printed p.325 / PDF p.3",
+      "inspection_mode": "Local visual reading of cached primary PDF, printed pp.324-325 / PDF pp.2-3 (repair-teams-PDF-page-2.png and repair-teams-PDF-page-3.png)",
+      "outcome": "actual_passages_inspected",
+      "failed_attempts": 0,
+      "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+      "time_semantics": "Local inspection completion; not an exact remote retrieval timestamp."
+    },
+    {
+      "url": "https://www.itftennis.com/media/7221/2026-rules-of-tennis-english.pdf",
+      "locator": "Rule 22 The Let During a Service, printed p.9 / PDF p.12, lines 342-350; Rules of Wheelchair Tennis a. The Two Bounce Rule, printed p.16 / PDF p.19, lines 565-571; ordinary boundary Rules 24(c)-25, printed pp.10-11 / PDF pp.13-14",
+      "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+      "outcome": "actual_passages_inspected",
+      "failed_attempts": 0,
+      "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+      "time_semantics": "Local inspection completion; not an exact remote retrieval timestamp."
+    },
+    {
+      "url": "https://users.ssc.wisc.edu/~dquint/econ690/lecture%2014.pdf",
+      "locator": "2.1 model, PDF p.3, lines 32-46; 2.2 deferred acceptance, PDF p.4, lines 48-66; section 3 fixed responsive hospital quotas, PDF p.7, lines 117-141; section 4 rural hospitals theorem, PDF p.8, lines 143-159; Introduction, PDF p.1, lines 6-17",
+      "inspection_mode": "web.run actual extracted primary/official/educational PDF passages",
+      "outcome": "actual_passages_inspected",
+      "failed_attempts": 0,
+      "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+      "time_semantics": "Local inspection completion; not an exact remote retrieval timestamp."
+    },
+    {
+      "url": "https://britgo.org/intro/intro2.html",
+      "locator": "The rules, lines 11-17; Capturing stones and counting liberties, line 25; Strings, lines 40-41; Capturing strings, lines 49-54",
+      "inspection_mode": "web.run actual extracted authoritative HTML passage",
+      "outcome": "actual_passages_inspected",
+      "failed_attempts": 0,
+      "post_inspection_recorded_at": "2026-10-09T03:27:31.628952+00:00",
+      "time_semantics": "Local inspection completion; not an exact remote retrieval timestamp."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "checks_passed": 658,
+  "checks_failed": 0,
+  "candidate_sha256": "53c28378537fb1bd8d07c4f7ca83e7c45be3889e34c7d5110e24c3bc53a74e4d",
+  "initial_audit_sha256": "16eb446c46a18b266101596c6143a4ead8bd7a5e5e1c70dfa557c436c844af3a",
+  "recheck_report_sha256": "a4ef52583e8fa507a9ebccdb1e0a93f53a54ae731d0b8684c0ffa39de8dc72c2",
+  "counts": {
+    "affected_bundles_reviewed": 54,
+    "field_changed_bundles_reviewed": 39,
+    "reference_only_bundles_reviewed": 15,
+    "changed_fields_reviewed": 64,
+    "changed_relationships_reviewed": 1,
+    "changed_sources_reviewed": 10,
+    "actual_public_passage_sources_inspected": 40,
+    "new_substantive_findings": 0,
+    "minor_residual_findings": 1,
+    "by_original_sample_membership": {
+      "additional_targeted": 45,
+      "risk_selected": 4,
+      "random_new": 5
+    }
+  },
+  "residual_findings": [
+    {
+      "id": "local:catalog:fresco-a-secco",
+      "severity": "low",
+      "category": "evidence_locator",
+      "field": "evidence[0].locator",
+      "finding": "The secco distinction is at line 126, not the stated 127–128, in both the original captured and fresh page. The revised factual claim is supported.",
+      "suggested_correction": "Fresco definition and methods, lines 125–126",
+      "source_id": "a03",
+      "status": "reported_to_coordinator_pending_separately_versioned_repair"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "batch_id": "research-batch-004",
+  "batch_revision": 5,
+  "created_at": "2026-10-08T22:33:32.690082+00:00",
+  "status": "stable_semantic_repair_pending_narrow_recheck",
+  "candidate_sha256": "dd8af872210586f6e46b6f0fecdfcf1c4b6078061146f094b47a2a76a8edaf02",
+  "previous_artifact": {
+    "path": "research/workers/research-batch-004/history/source-rechecked-revision-4/candidate.revised.json",
+    "sha256": "43544752f00b38264a23f6eaf25823bfb95e5a480217fc833df89790dc276619",
+    "batch_revision": 4,
+    "independent_source_recheck": {
+      "path": "research/workers/research-batch-004/history/source-rechecked-revision-4/audit.recheck.json",
+      "sha256": "39940b4419395804551c5fce0011c072f50bc1c6d3b7bc0d8d6e257996694bdc"
+    }
+  },
+  "changed_concept_ids": [
+    "local:authored:000604"
+  ],
+  "card_version_change": {
+    "from": 4,
+    "to": 5
+  },
+  "learning_takeaway": "Separate a network’s underlying connections from the way its vertices and edges are drawn or labeled.",
+  "scope": "One learning takeaway and card version; all prose, evidence, relationships, source records and other cards unchanged.",
+  "coordinator_helpers": "admission and revision_compare passed",
+  "artifacts": [
+    {
+      "path": "research/workers/research-batch-004/candidate.post-recheck.json",
+      "sha256": "dd8af872210586f6e46b6f0fecdfcf1c4b6078061146f094b47a2a76a8edaf02",
+      "bytes": 1484314
+    },
+    {
+      "path": "research/workers/research-batch-004/semantic-corrections.json",
+      "sha256": "4c0825786ff29d3147dae8461fe10ef0adbc7dfa05e95a97709812b415af7be5",
+      "bytes": 6974
+    },
+    {
+      "path": "research/workers/research-batch-004/semantic-validation.json",
+      "sha256": "ad4cf5af151b8a81bb1aea5724f2fd1eeab91c7eb2d5da4be7263a60f9361afb",
+      "bytes": 1811
+    },
+    {
+      "path": "research/workers/research-batch-004/semantic-revision-compare.json",
+      "sha256": "e6adfc35ea29f055a832e5b8f6830b8e12031eafaf3bb2a145eb04ba2adc6b80",
+      "bytes": 41862
+    },
+    {
+      "path": "research/workers/research-batch-004/semantic-admission.json",
+      "sha256": "0af82111fcf0e9102b32c04af7e15e24f9c31a9e57d4d4c3cf9caa67f364205f",
+      "bytes": 133
+    }
+  ]
+}

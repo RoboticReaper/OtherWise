@@ -1,0 +1,68 @@
+{
+  "batch_id": "research-batch-005",
+  "stage": "full_author_boundary_recheck",
+  "requests": [
+    {
+      "receipt": "boundary-source-texts/web-001.json",
+      "sha256": "cb4ced96be36068dd323dd230a6b2d0f34ff7a837d6189fb49b8a4eba02ad455",
+      "requested_at": "2026-10-08T21:40:05.145Z",
+      "exact_tool_request": {
+        "open": [
+          {
+            "ref_id": "https://raft.github.io/raft.pdf",
+            "lineno": 65
+          },
+          {
+            "ref_id": "https://ica.coop/en/cooperatives/cooperative-identity"
+          },
+          {
+            "ref_id": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer"
+          }
+        ],
+        "response_length": "long"
+      },
+      "explicit_failed_fetch_urls": [],
+      "network_fetch_not_guaranteed": true,
+      "note": "This is a public-web tool request. Returned/cache links are not counted as new attempts. In web-001 only Raft had displayed passage text; ICA and Baby returned source headers and were inspected from their preserved snapshots, then displayed in web-002."
+    },
+    {
+      "receipt": "boundary-source-texts/web-002.json",
+      "sha256": "6c06a8680a51b1073d1e318ee2ec7f4be99bae080fa861a503b4afb7f01b6003",
+      "requested_at": "2026-10-08T21:57:14.116Z",
+      "exact_tool_request": {
+        "find": [
+          {
+            "ref_id": "https://raft.github.io/raft.pdf",
+            "pattern": "randomized election timeouts"
+          }
+        ],
+        "open": [
+          {
+            "ref_id": "https://ica.coop/en/cooperatives/cooperative-identity",
+            "lineno": 110
+          },
+          {
+            "ref_id": "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+            "lineno": 195
+          }
+        ],
+        "response_length": "long"
+      },
+      "explicit_failed_fetch_urls": [],
+      "network_fetch_not_guaranteed": true,
+      "note": "This is a public-web tool request. Returned/cache links are not counted as new attempts. In web-001 only Raft had displayed passage text; ICA and Baby returned source headers and were inspected from their preserved snapshots, then displayed in web-002."
+    }
+  ],
+  "new_failed_fetches": 0,
+  "additional_source_urls": 0,
+  "source_urls_revisited": [
+    "https://collection.sciencemuseumgroup.org.uk/objects/co8418186/replica-of-the-baby-or-ssem-computer",
+    "https://ica.coop/en/cooperatives/cooperative-identity",
+    "https://raft.github.io/raft.pdf"
+  ],
+  "prior_access_log_preserved_sha256": "d794c4cf4955b74e2382ac07fce85a562705a4b5a18735a5645a7357861572fa",
+  "prior_audit_access_limits_respected": true,
+  "exhausted_cornell_chapter4_retried": false,
+  "audit_postgresql_url_retried": false,
+  "coverage_note": "Local rereading of saved public passages is not an external fetch attempt. Older request-history limitations remain in the preserved access log."
+}

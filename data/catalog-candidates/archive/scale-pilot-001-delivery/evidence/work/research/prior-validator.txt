@@ -1,0 +1,149 @@
+"""Reproducible structural checks for the isolated batch-002 candidate.
+
+This script does not certify source support, scope, or semantic distinctness.
+Those judgments are reported separately in the author reviews and source audit.
+"""
+from pathlib import Path
+from collections import Counter, defaultdict
+import json
+import hashlib
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+
+def strict_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError(f"Duplicate JSON key: {key}")
+        result[key] = value
+    return result
+
+def read(path):
+    return json.loads(Path(path).read_text(), object_pairs_hook=strict_object,
+                      parse_constant=lambda x: (_ for _ in ()).throw(ValueError(x)))
+
+def run(path):
+    data = read(path)
+    base = read(ROOT / 'research/reference/baseline.json')
+    baseline = {c['id']: c for c in base['entries']}
+    previous = {c['id']: c for c in read(ROOT / 'data/catalog-candidates/research-batch-001.json')['concepts']}
+    failures = []
+    checks = Counter()
+    def check(ok, label, detail):
+        checks[label] += 1
+        if not ok:
+            failures.append({'check': label, 'detail': detail})
+
+    check(data.get('schema_version') == 1, 'schema_version', data.get('schema_version'))
+    check(set(['schema_version','batch','sources','concepts','issues','validation']) <= set(data), 'top_level_contract', list(data))
+    concepts = data['concepts']; sources = data['sources']
+    ids = [c['id'] for c in concepts]; source_ids = [s['id'] for s in sources]
+    check(len(ids) == len(set(ids)), 'unique_concept_ids', len(ids))
+    check(len(source_ids) == len(set(source_ids)), 'unique_source_ids', len(source_ids))
+    source_set = set(source_ids); targets = set(ids) | set(baseline)
+    expected = {'id','label','aliases','entity_kind','scope','domains','learning_takeaway','card','original_description','identity_urls','evidence','relations','card_version','imported_records'}
+    scopes = {'broad_field','topic','idea','facet_or_application'}
+    relation_types = {'broader_topic','facet_of','application_of','related_to'}
+    structural_types = relation_types - {'related_to'}
+    manifest = data['batch']['selection_manifest']['accepted']
+    mid = [m['id'] for m in manifest]
+    check(len(mid) == len(set(mid)) and set(mid) == set(ids), 'manifest_bijection', len(mid))
+    mmap = {m['id']: m for m in manifest}
+    relations = []
+    word_counts = {}
+    aliases = defaultdict(set)
+    new = []; existing = []; missing_parent = []; unused = set(source_ids)
+    for c in concepts:
+        cid = c['id']; m = mmap[cid]
+        check(expected <= set(c), 'required_concept_fields', cid)
+        check(c['entity_kind'] in {'idea','named_subject'}, 'entity_enum', cid)
+        check(c['scope'] in scopes, 'scope_enum', cid)
+        check(bool(c['domains']) and set(c['domains']) <= set(base['domains']), 'domain_values', cid)
+        check(m['primary_domain'] in c['domains'], 'primary_domain_membership', cid)
+        check(m['inventory_status'] == ('existing' if cid in baseline else 'new'), 'inventory_status', cid)
+        check(bool(m.get('duplicate_review_decision')), 'duplicate_review_present', cid)
+        check(bool(m.get('discovery_source_ids')) and bool(m.get('discovery_locators')), 'discovery_provenance', cid)
+        for sid in m.get('discovery_source_ids', []):
+            check(sid in source_set, 'discovery_source_resolution', f'{cid}: {sid}')
+        word_counts[cid] = len(c['card'].split())
+        check(30 <= word_counts[cid] <= 50, 'word_count', f'{cid}: {word_counts[cid]}')
+        check(bool(c['learning_takeaway'].strip()), 'learning_takeaway', cid)
+        check(bool(c['evidence']), 'evidence_present', cid)
+        check(isinstance(c['identity_urls'], list) and all(isinstance(u,str) and u.startswith(('https://','http://')) for u in c['identity_urls']), 'identity_urls_format', cid)
+        # A registered authored identity can have repository provenance without
+        # an external identity URL. The task requires the field, not a QID.
+        check(bool(c['identity_urls']) or (cid in baseline and cid.startswith('local:')), 'identity_provenance_available', cid)
+        check(type(c['card_version']) is int and c['card_version'] > 0, 'card_version_type', cid)
+        if cid in baseline:
+            existing.append(cid)
+            check(c['imported_records'] == baseline[cid]['imported_records'], 'imported_records_preserved', cid)
+            check(c['original_description'] == baseline[cid]['description'], 'original_description_preserved', cid)
+        else:
+            new.append(cid)
+            check(c['original_description'] is None and c['imported_records'] == [], 'new_identity_provenance', cid)
+        if cid in previous:
+            check(c['card_version'] == previous[cid]['card_version'] + 1, 'previous_version_increment', cid)
+            check(c.get('previous_card_version') == previous[cid]['card_version'], 'previous_version_recorded', cid)
+        else:
+            check(c['card_version'] == 1, 'first_card_version', cid)
+        for alias in [c['label'], *c['aliases']]:
+            aliases[alias.strip().casefold()].add(cid)
+        for e in c['evidence']:
+            check(e.get('source_id') in source_set, 'evidence_source_resolution', f'{cid}: {e.get("source_id")}')
+            check(bool(e.get('locator')) and bool(e.get('note')), 'evidence_locator_note', cid)
+            unused.discard(e.get('source_id'))
+        for r in c['relations']:
+            relations.append((cid,r))
+            check(r.get('target_id') in targets, 'relation_target_resolution', f'{cid}: {r.get("target_id")}')
+            check(r.get('target_id') != cid, 'no_self_relation', cid)
+            check(r.get('type') in relation_types, 'relation_type', cid)
+            check(r.get('assertion') in {'editorial','source_asserted'}, 'relation_assertion', cid)
+            check(bool(r.get('note')), 'relation_note', cid)
+            check(r.get('assertion') != 'source_asserted' or bool(r.get('source_ids')), 'asserted_relation_sources', cid)
+            for sid in r.get('source_ids', []):
+                check(sid in source_set, 'relation_source_resolution', f'{cid}: {sid}')
+                unused.discard(sid)
+        if cid not in baseline and c['scope'] in {'idea','facet_or_application'}:
+            if not any(r['type'] in structural_types for r in c['relations']):
+                missing_parent.append(cid)
+    for s in sources:
+        check(all(k in s for k in ['id','title','url','locator','revision']), 'source_fields', s.get('id'))
+        check(bool(s.get('retrieval_date') or s.get('retrieved_at')), 'source_retrieval_date', s.get('id'))
+        check(s['url'].startswith(('https://','http://')), 'public_source_url', s.get('id'))
+    input_results = []
+    for entry in read(ROOT / 'TRANSFER-MANIFEST.json')['files']:
+        f = ROOT / entry['path']
+        actual = hashlib.sha256(f.read_bytes()).hexdigest()
+        good = actual == entry['sha256'] and f.stat().st_size == entry['size_bytes']
+        check(good, 'input_unchanged', entry['path'])
+        input_results.append({'path':entry['path'],'unchanged':good,'sha256':actual})
+    by_primary = Counter(m['primary_domain'] for m in manifest)
+    new_primary = Counter(m['primary_domain'] for m in manifest if m['inventory_status']=='new')
+    new_fine = [c['id'] for c in concepts if c['id'] in set(new) and c['scope'] in {'idea','facet_or_application'}]
+    generic_phrases = ['editorial connection for exploration', 'shared domain for exploration', 'a useful connection for exploration']
+    suspected_generic = [{'id':cid,'target_id':r['target_id'],'note':r['note']} for cid,r in relations if any(p in r['note'].casefold() for p in generic_phrases)]
+    return {'strict_json':True,'structural_passed':not failures,'failures':failures,'checks':dict(checks),
+            'accepted_count':len(concepts),'unique_ids':len(set(ids)),'source_count':len(sources),
+            'new_identity_count':len(new),'existing_identity_count':len(existing),'new_fine_subject_count':len(new_fine),
+            'named_subject_count':sum(c['entity_kind']=='named_subject' for c in concepts),
+            'coverage_by_scope':dict(sorted(Counter(c['scope'] for c in concepts).items())),
+            'coverage_by_primary_domain':dict(sorted(by_primary.items())),
+            'new_coverage_by_primary_domain':dict(sorted(new_primary.items())),
+            'coverage_by_tagged_domain':dict(sorted(Counter(d for c in concepts for d in c['domains']).items())),
+            'ambiguous_alias_groups':{a:sorted(x) for a,x in aliases.items() if len(x)>1},
+            'relation_count':len(relations),'relations_by_assertion':dict(Counter(r['assertion'] for _,r in relations)),
+            'relations_by_type':dict(Counter(r['type'] for _,r in relations)),
+            'fine_subjects_missing_parent_application':missing_parent,
+            'generic_rationale_string_flags':suspected_generic,
+            'word_count_range':[min(word_counts.values()),max(word_counts.values())],
+            'word_counts':word_counts,'unused_source_ids':sorted(unused),'input_preservation':input_results,
+            'limitation':'Numerical checks do not certify factual accuracy, semantic distinctness, source assertion type, or scope judgments.'}
+
+if __name__ == '__main__':
+    path = Path(sys.argv[1]) if len(sys.argv)>1 else ROOT/'data/catalog-candidates/research-batch-002.json'
+    result = run(path)
+    dest = ROOT/'research/structural-validation.json'
+    dest.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+    print(json.dumps({k:v for k,v in result.items() if k not in {'word_counts','input_preservation'}},ensure_ascii=False,indent=2))
+    sys.exit(0 if result['structural_passed'] else 1)
