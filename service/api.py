@@ -18,12 +18,16 @@ from fastapi import FastAPI, Request
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-from pydantic import BaseModel, ConfigDict, Field, StringConstraints, field_validator, model_validator
+from pydantic import AliasChoices, BaseModel, ConfigDict, Field, StringConstraints, field_validator, model_validator
 from starlette.concurrency import run_in_threadpool
 
 from .engine import FocusIdentityConflict, RecommendationEngine, UnknownFocusTopic
 from .discovery import DiscoveryEngine
 from .galaxy_layout import GalaxyLayoutService, LayoutBusy, LayoutUnavailable
+from .models import ModelEngine
+from recommendation_lab.history import date_seconds
+from recommendation_lab.inventory import InventoryConflict
+from recommendation_lab.models import get_model
 
 MAX_BODY_BYTES = 16_384
 REQUESTS_PER_MINUTE = 30
@@ -88,6 +92,97 @@ class DiscoveryRequest(RecommendationRequest):
     exposures: Annotated[dict[GraphId, Annotated[int, Field(ge=0, le=1_000_000_000)]], Field(max_length=100)] = Field(default_factory=dict)
     seed: Annotated[int, Field(ge=0, le=2**31-1)] = 42
     exploration_fraction: UnitControl = .3
+
+
+class ModelInterest(BaseModel):
+    model_config = ConfigDict(extra='forbid', strict=True)
+    phrase: Phrase
+    concept_id: GraphId | None = None
+    date: Annotated[str, StringConstraints(strict=True, min_length=10, max_length=35)] | None = None
+
+    @field_validator('phrase')
+    @classmethod
+    def clean_phrase(cls, value):
+        return RecommendationRequest.clean_phrase(value)
+
+    @field_validator('date')
+    @classmethod
+    def valid_date(cls, value):
+        date_seconds(value)
+        return value
+
+
+class ModelFeedback(BaseModel):
+    model_config = ConfigDict(extra='forbid', strict=True)
+    curious: bool = False
+    known: bool = False
+    difficulty: Literal['none', 'too_basic', 'too_hard'] = 'none'
+
+
+class HistoryControls(BaseModel):
+    model_config = ConfigDict(extra='forbid', strict=True)
+    half_life_days: Annotated[float, Field(ge=1, le=3650, allow_inf_nan=False)] = 60.
+    forecast_days: Annotated[float, Field(ge=0, le=365, allow_inf_nan=False)] = 14.
+    max_step: Annotated[float, Field(ge=0, le=.2, allow_inf_nan=False)] = .12
+    strand_distance: Annotated[float, Field(ge=.05, le=.35, allow_inf_nan=False)] = .25
+
+
+class ModelRecommendationRequest(BaseModel):
+    model_config = ConfigDict(extra='forbid', strict=True)
+    model: Phrase
+    interests: Annotated[list[Phrase | ModelInterest], Field(min_length=1, max_length=40,
+        validation_alias=AliasChoices('interests', 'keywords'))]
+    inventory_version: Annotated[str, StringConstraints(strict=True, pattern=r'^[0-9a-f]{64}$')] | None = None
+    result_kind: Literal['broad', 'specific'] = 'specific'
+    mode: Literal['path', 'global'] = 'global'
+    focus_index: Annotated[int, Field(ge=0, le=39)] | None = None
+    focus: Phrase | None = None
+    goal: Literal['connection', 'discovery', 'depth', 'variety'] = 'discovery'
+    limit: Annotated[int, Field(ge=1, le=100)] = 10
+    radius: UnitControl = .28
+    expansion: UnitControl = .07
+    overlap: UnitControl = .015
+    diversity: UnitControl = .20
+    max_overlap_fraction: Annotated[float, Field(ge=0, le=.95, allow_inf_nan=False)] = .20
+    randomness: UnitControl = 0.
+    exploration_fraction: UnitControl = .30
+    expansion_level: Annotated[int, Field(ge=0, le=8)] = 0
+    seed: Annotated[int, Field(ge=0, le=2**32-1)] = 42
+    feedback: Annotated[dict[GraphId, ModelFeedback], Field(max_length=4000)] = Field(default_factory=dict)
+    exposures: Annotated[dict[GraphId, Annotated[int, Field(ge=0, le=1_000_000_000)]], Field(max_length=100)] = Field(default_factory=dict)
+    history_config: HistoryControls = Field(default_factory=HistoryControls)
+
+    @field_validator('model')
+    @classmethod
+    def known_model(cls, value):
+        get_model(value)
+        return value
+
+    @field_validator('interests')
+    @classmethod
+    def clean_interests(cls, values):
+        return [RecommendationRequest.clean_phrase(value) if isinstance(value, str) else value for value in values]
+
+    @field_validator('focus')
+    @classmethod
+    def clean_focus(cls, value):
+        return RecommendationRequest.clean_phrase(value) if value is not None else None
+
+    @model_validator(mode='after')
+    def approved_focus(self):
+        phrases = [value if isinstance(value, str) else value.phrase for value in self.interests]
+        if self.focus is not None and self.focus not in phrases:
+            raise ValueError('Focus must be an approved interest.')
+        if self.focus_index is not None and self.focus_index >= len(phrases):
+            raise ValueError('Invalid focus index.')
+        if self.mode == 'global' and self.focus_index is not None:
+            raise ValueError('Global mode has no focus index.')
+        if self.mode == 'path':
+            if self.focus_index is None:
+                self.focus_index = phrases.index(self.focus) if self.focus is not None else len(phrases)-1
+            elif self.focus is not None and phrases[self.focus_index] != self.focus:
+                raise ValueError('Focus index and phrase disagree.')
+        return self
 
 
 Digest = Annotated[str, StringConstraints(strict=True, pattern=r"^[0-9a-f]{64}$")]
@@ -245,11 +340,13 @@ class RequestBoundary:
         await self.app(scope, bounded_receive, send)
 
 
-def create_app(engine=None, token=None, discovery_engine=None, layout_service=None):
+def create_app(engine=None, token=None, discovery_engine=None, layout_service=None, model_engine=None):
     default_engine = engine is None
     engine = engine if engine is not None else RecommendationEngine(device=os.getenv("OTHERWISE_MODEL_DEVICE") or None)
     if discovery_engine is None and default_engine:
         discovery_engine = DiscoveryEngine(engine)
+    if model_engine is None and default_engine:
+        model_engine = ModelEngine(engine, discovery_engine)
     access_token = token if token is not None else os.getenv("OTHERWISE_API_TOKEN", "")
     compute = threading.BoundedSemaphore(1)
     layout_service = layout_service if layout_service is not None else GalaxyLayoutService(engine)
@@ -258,6 +355,7 @@ def create_app(engine=None, token=None, discovery_engine=None, layout_service=No
     async def lifespan(app):
         app.state.ready = False
         app.state.discovery_ready = False
+        app.state.models_ready = False
         try:
             await run_in_threadpool(engine.initialize)
             app.state.ready = bool(engine.ready)
@@ -267,6 +365,12 @@ def create_app(engine=None, token=None, discovery_engine=None, layout_service=No
                     app.state.discovery_ready = bool(discovery_engine.ready)
                 except Exception:
                     LOGGER.warning('Graph recommendation initialization failed.')
+            if model_engine is not None:
+                try:
+                    await run_in_threadpool(model_engine.initialize)
+                    app.state.models_ready = bool(model_engine.ready)
+                except Exception:
+                    LOGGER.warning('Recommendation model initialization failed.')
         except Exception:
             # Exception details can include input/model credentials; never log them.
             LOGGER.warning("Recommendation engine initialization failed.")
@@ -275,6 +379,9 @@ def create_app(engine=None, token=None, discovery_engine=None, layout_service=No
         finally:
             app.state.ready = False
             await run_in_threadpool(layout_service.close)
+            if model_engine is not None:
+                await run_in_threadpool(model_engine.close)
+            app.state.models_ready = False
 
     app = FastAPI(title="OtherWise", lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None)
     app.state.ready = False
@@ -314,13 +421,22 @@ def create_app(engine=None, token=None, discovery_engine=None, layout_service=No
         except KeyError:
             return error("Galaxy layout job was not found. Generate a new preview.", 404)
 
+    @app.get('/api/recommend/models')
+    def recommendation_models():
+        return model_engine.describe() if model_engine is not None else {'schema_version': 1, 'ready': False, 'models': []}
+
     @app.post("/api/recommend")
-    def recommendations(payload: RecommendationRequest):
+    def recommendations(payload: RecommendationRequest | ModelRecommendationRequest):
         if not app.state.ready:
             return error("Recommendation service is unavailable.", 503)
+        if isinstance(payload, ModelRecommendationRequest) and not app.state.models_ready:
+            return error('Recommendation models are unavailable.', 503)
         if not compute.acquire(blocking=False):
             return error("Recommendation service is busy. Try again shortly.", 429, **{"Retry-After": "2"})
         try:
+            if isinstance(payload, ModelRecommendationRequest):
+                return model_engine.recommend(payload.model,
+                    **payload.model_dump(exclude={'model', 'focus'}, exclude_none=True))
             result = engine.recommend(payload.keywords, mode=payload.mode, focus=payload.focus,
                                       expansion_level=payload.expansion_level, limit=payload.limit,
                                       radius=payload.radius, expansion=payload.expansion,
@@ -328,6 +444,10 @@ def create_app(engine=None, token=None, discovery_engine=None, layout_service=No
                                       max_overlap_fraction=payload.max_overlap_fraction,
                                       randomness=payload.randomness)
             return {"recommendations": result, "mode": payload.mode, "expansion_level": payload.expansion_level}
+        except InventoryConflict:
+            return error('Inventory source version conflict.', 409)
+        except ValueError:
+            return error('Invalid recommendation request.', 422)
         except Exception:
             LOGGER.warning("Recommendation computation failed.")
             return error("Recommendation service is unavailable. Try again shortly.", 503)

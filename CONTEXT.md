@@ -1,6 +1,6 @@
 # OtherWise discovery
 
-OtherWise helps people find topics connected to their interests. Its discovery goal is user-tunable; the default favors unfamiliar topics that make the person curious.
+OtherWise aims to broaden the topics people come to care about. Its discovery goal is user-tunable; the default uses unfamiliar but connected suggestions to spark curiosity and support new interests. Immediate appeal helps start exploration, while sustained interest expansion is the intended outcome.
 
 ## Language
 
@@ -33,5 +33,16 @@ How much the person already knows about a suggested concept. Distance from an in
 **Curiosity**:
 The person's desire to explore a suggestion. Curiosity can coexist with familiarity or difficulty.
 
+**Interest expansion**:
+Growth in the distinct topics a person chooses to keep exploring beyond their previous interests. Record newly adopted interests and their retention, and distinguish added depth within a field from breadth across subject areas. Exposure, clicks, knowledge gains and embedding distance alone do not establish that someone has come to care about a topic. A previously familiar topic can become a new interest.
+
 **Proxy interestingness**:
 A recommendation's score under a declared automated rubric. It supports comparisons for specific objectives without claiming to measure the person's actual curiosity.
+
+## Future human research
+
+On 2026-10-08, the user agreed to blind comparisons plus controlled variants for formal human-participant research. Formalizing the experimental design is deferred to a new chat; the present discussion concerns feasible options and candidate systems, rather than building an experiment.
+
+The saved [study research and candidate notes](docs/recommendation-human-study-research.md) record the accepted direction, proposed systems/baselines, sources and unresolved design choices. Candidate selection remains a proposal. Automated score leaders and the private single-participant preference check do not establish a general human-study winner, an exploration rate or an interest-expansion effect.
+
+On 2026-10-08, the user clarified that broadening the topics people care about is the primary mission. Future evaluation should measure retained new-interest acquisition and breadth, with curiosity and preference as intermediate outcomes. The user subsequently authorized implementing all discussed candidates/baselines, including trajectory-guided expansion, and specified optional `date` on each interest. The [selectable backend models](docs/recommendation-model-api.md) include static K/V candidates, simple baselines and a matched `history-recency`/`trajectory` pair. Direction estimates use dated semantic strands and an explicit fallback; execution tests do not establish an expansion effect. Raw lab V0 is preserved; its API wrapper has versioned meaning/known-output guards. Formalizing the metrics and study remains deferred.

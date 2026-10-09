@@ -7,7 +7,7 @@ import sqlite3
 import time
 import queue
 import threading
-from dataclasses import asdict, dataclass, field
+from dataclasses import asdict, dataclass, field, replace
 
 import numpy as np
 
@@ -16,8 +16,11 @@ from feedback import new_profile, set_feedback, area_preferences
 from graph_explorer import graph_candidates, graph_concepts, recommend_specific, select_areas
 from .inventory import digest
 from .known_policy import rank_known
+from .history import HistoryConfig, build_history, rank_history, split_dates
 
-VARIANTS = ('V0', 'V1', 'V2', 'V3', 'V3-no-lexical', 'V3-no-graph', 'V3-no-ranking', 'V3-adaptive', 'V4b', 'V5-known')
+SIMPLE_BASELINES = ('semantic-nearest', 'BM25', 'random')
+HISTORY_VARIANTS = ('history-recency', 'trajectory')
+VARIANTS = ('V0', 'V1', 'V2', 'V3', 'V3-no-lexical', 'V3-no-graph', 'V3-no-ranking', 'V3-adaptive', 'V4b', 'V5-known') + SIMPLE_BASELINES + HISTORY_VARIANTS
 GOALS = ('connection', 'discovery', 'depth', 'variety')
 
 
@@ -41,8 +44,17 @@ class Request:
     feedback: dict = field(default_factory=dict)
     exposures: dict = field(default_factory=dict)
     seed: int = 42
+    history_config: HistoryConfig = field(default_factory=HistoryConfig)
 
     def validate(self):
+        if isinstance(self.history_config, dict):
+            try:
+                self.history_config = HistoryConfig(**self.history_config)
+            except TypeError as exc:
+                raise ValueError('Invalid history controls.') from exc
+        if not isinstance(self.history_config, HistoryConfig):
+            raise ValueError('Invalid history controls.')
+        self.history_config.validate()
         if not isinstance(self.interests,list) or not 1 <= len(self.interests) <= 40:
             raise ValueError('Provide 1–40 interests.')
         if self.result_kind not in ('broad', 'specific') or self.goal not in GOALS or self.mode not in ('global', 'path'):
@@ -90,7 +102,8 @@ class RankConfig:
 
 class LexicalIndex:
     def __init__(self, inventory, broad, concepts):
-        self.connection = sqlite3.connect(':memory:')
+        self.lock = threading.Lock()
+        self.connection = sqlite3.connect(':memory:', check_same_thread=False)
         self.connection.execute('CREATE VIRTUAL TABLE candidates USING fts5(kind UNINDEXED, idx UNINDEXED, label, aliases, description)')
         for kind, rows in [('broad', broad), ('specific', concepts)]:
             for i, row in enumerate(rows):
@@ -105,13 +118,18 @@ class LexicalIndex:
         if not tokens:
             return []
         query = ' OR '.join('"' + token + '"' for token in tokens)
-        return [int(r[0]) for r in self.connection.execute(
-            'SELECT idx FROM candidates WHERE candidates MATCH ? AND kind = ? ORDER BY bm25(candidates,0,0,3,2,1), CAST(idx AS INTEGER)',
-            (query, kind))]
+        with self.lock:
+            return [int(r[0]) for r in self.connection.execute(
+                'SELECT idx FROM candidates WHERE candidates MATCH ? AND kind = ? ORDER BY bm25(candidates,0,0,3,2,1), CAST(idx AS INTEGER)',
+                (query, kind))]
+
+    def close(self):
+        with self.lock:
+            self.connection.close()
 
 
 class RecommendationLab:
-    def __init__(self, inventory, broad, graph, model, broad_vectors, concept_vectors, area_vectors, *, model_identity):
+    def __init__(self, inventory, broad, graph, model, broad_vectors, concept_vectors, area_vectors, *, model_identity, cache_interests=True):
         self.inventory, self.broad, self.graph, self.model = inventory, broad, graph, model
         self.concepts = graph_concepts(graph)
         self.broad_vectors = _unit_vectors(broad_vectors, 'Broad vectors')
@@ -121,24 +139,44 @@ class RecommendationLab:
         if self.broad_vectors.shape != (len(broad), dimensions) or self.concept_vectors.shape != (len(self.concepts), dimensions) or self.area_vectors.shape != (len(graph['areas']), dimensions):
             raise ValueError('Vectors must match the frozen source records.')
         self.model_identity = model_identity
+        self.cache_interests = cache_interests
         self.reached = {r['id']: r for r in graph_candidates(graph)}
         self.areas = {r['id']: r for r in graph['areas']}
         self._encoded = {}  # Ephemeral request texts; never persisted by serving.
         self._rerank_slot = threading.BoundedSemaphore(1)
+        self._closed = False
         try:
             self.lexical = LexicalIndex(inventory, broad, self.concepts)
         except sqlite3.OperationalError:
             self.lexical = None
 
     def _encode(self, texts):
-        missing = list(dict.fromkeys(t for t in texts if t not in self._encoded))
+        cache = self._encoded if self.cache_interests else {}
+        missing = list(dict.fromkeys(t for t in texts if t not in cache))
         if missing:
             values = _unit_vectors(self.model.encode(missing, batch_size=32, show_progress_bar=False,
                                     convert_to_numpy=True, normalize_embeddings=True), 'Interest vectors')
             if len(values) != len(missing) or values.shape[1] != self.broad_vectors.shape[1]:
                 raise ValueError('Interest vector shape differs from the model identity.')
-            self._encoded.update(zip(missing, values))
-        return np.asarray([self._encoded[t] for t in texts])
+            cache.update(zip(missing, values))
+        return np.asarray([cache[t] for t in texts])
+
+    def clear_interest_cache(self):
+        self._encoded.clear()
+
+    def close(self):
+        self.clear_interest_cache()
+        if not self._closed and self.lexical is not None:
+            self.lexical.close()
+        self._closed = True
+
+    def reopen(self):
+        if self._closed:
+            try:
+                self.lexical = LexicalIndex(self.inventory, self.broad, self.concepts)
+            except sqlite3.OperationalError:
+                self.lexical = None
+            self._closed = False
 
     def _profile(self, request):
         if not isinstance(request.feedback, dict) or not isinstance(request.exposures, dict):
@@ -184,7 +222,7 @@ class RecommendationLab:
             area_ids=self._routing(phrases, seeds, request) if variant == 'V0' else None,
             profile=profile, exploration_fraction=request.exploration_fraction, **opts)
 
-    def recommend(self, request, variant='V3', config=None, *, reranker=None, rerank_timeout=20.):
+    def recommend(self, request, variant='V3', config=None, *, reranker=None, rerank_timeout=20., serving_guards=False):
         start = time.perf_counter()
         request.validate()
         if variant not in VARIANTS:
@@ -193,13 +231,20 @@ class RecommendationLab:
         config.validate()
         profile = self._profile(request)
         legacy = variant in ('V0', 'V1')
-        validated = self.inventory.resolve(request.interests,inventory_version=request.inventory_version)
+        guarded = legacy and serving_guards
+        interest_records, dates = split_dates(request.interests)
+        dated_history = any(date is not None for date in dates)
+        validated = self.inventory.resolve(interest_records, inventory_version=request.inventory_version,
+                                          allow_repeated=dated_history)
         if legacy:
             # Preserve old lookup, including its known meaning collisions, for a fair control.
             phrases = [r['phrase'] for r in validated]
             rows = self.broad if request.result_kind == 'broad' else self.broad + self.concepts
             resolutions = [dict(phrase=p, status='legacy_lookup', concept_id=None, text=t, choices=[])
                            for p, t in zip(phrases, interest_texts(phrases, rows))]
+            if guarded:
+                resolutions = [r if r['status'] != 'unresolved_phrase'
+                               else resolutions[i] for i, r in enumerate(validated)]
         else:
             resolutions = validated
             phrases = [r['phrase'] for r in resolutions]
@@ -208,15 +253,49 @@ class RecommendationLab:
                      inventory_version=self.inventory.version, model_identity=self.model_identity,
                      resolutions=resolutions, recommendations=[], execution=dict(external_status='not_requested', serving_cost_usd=0.,
                      eligibility_policy='adaptive-experiment-v1' if variant == 'V3-adaptive' else 'requested-hard-band'), diagnostics={})
+        if guarded:
+            guard_version = 'meaning-and-known-exclusions-v1'
+            batch['execution']['serving_guards'] = guard_version
+            batch['algorithm_id'] = digest(dict(variant=variant, config=asdict(config),
+                goal=request.goal, version=1, serving_guards=guard_version))
         if variant == 'V5-known':
             batch['execution'].update(eligibility_policy='known-concept-experiment-v1',
                 overlap_policy='geometric-diagnostic-only',distance_cap=config.distance_cap,
                 content_feature='description-shape-v1')
+        elif variant in SIMPLE_BASELINES + HISTORY_VARIANTS:
+            batch['execution'].update(eligibility_policy='shared-known-exclusions-v1',
+                overlap_policy='geometric-diagnostic-only', distance_cap=config.distance_cap)
         if any(r['status'] == 'clarification_needed' for r in resolutions):
             batch['status'] = 'clarification_needed'
             batch['execution']['seconds'] = time.perf_counter()-start
             return batch
         seeds = self._encode([r['text'] for r in resolutions])
+        if variant in HISTORY_VARIANTS:
+            profiles, strands = build_history(seeds, dates, request.history_config, focus_index=request.focus_index)
+            usable = variant == 'trajectory' and any(p['usable'] and p['weight'] > 1e-12 for p in profiles)
+            batch['execution']['history'] = dict(config=asdict(request.history_config),
+                dated_observations=sum(date is not None for date in dates), strand_count=len(strands),
+                direction_available=usable, velocity_used=False, fallback='recency_only', strands=strands,
+                confidence_kind='weighted-fit heuristic, not calibrated probability', velocity_unit='angular distance per day')
+            batch['algorithm_id'] = digest(dict(variant=variant, config=asdict(config),
+                history_config=asdict(request.history_config), goal=request.goal, version=1))
+        if dated_history:
+            # Keep the full observation sequence for history estimation, but do
+            # not duplicate static retrieval channels or known identity anchors.
+            identities = {}
+            for index, resolution in enumerate(validated):
+                identity = resolution['concept_id'] or 'phrase:' + _key(resolution['phrase'])
+                identities.setdefault(identity, []).append(index)
+            ordered = sorted(identities)
+            unique = [min(identities[identity], key=lambda i: (_key(validated[i]['phrase']), validated[i]['phrase']))
+                      for identity in ordered]
+            positions = {identity: index for index, identity in enumerate(ordered)}
+            index_map = [positions[r['concept_id'] or 'phrase:' + _key(r['phrase'])] for r in validated]
+            request = replace(request, interests=[interest_records[i] for i in unique],
+                focus_index=index_map[request.focus_index] if request.focus_index is not None else None)
+            seeds = seeds[unique]
+            resolutions = [resolutions[i] for i in unique]
+            phrases = [r['phrase'] for r in resolutions]
         rows = self.broad if request.result_kind == 'broad' else self.concepts
         units = self.broad_vectors if request.result_kind == 'broad' else self.concept_vectors
         distances = np.arccos(np.clip(units @ seeds.T, -1, 1))/np.pi
@@ -228,14 +307,14 @@ class RecommendationLab:
             # Explicit experiment: broad anchors often have no specific neighbors inside
             # the old annulus. These bounds are declared, not fitted to held-out results.
             lower, upper = .08, .55
-        elif variant == 'V5-known':
+        elif variant == 'V5-known' or variant in SIMPLE_BASELINES + HISTORY_VARIANTS:
             lower, upper = .035, config.distance_cap
-        resolved_ids = {r['concept_id'] for r in resolutions if r['concept_id']}
+        resolved_ids = {r['concept_id'] for r in (validated if guarded else resolutions) if r['concept_id']}
         explicit_known = {cid for cid, r in request.feedback.items() if r.get('known')}
         candidates, seen = [], set()
         for i, row in enumerate(rows):
             cid = self.inventory.source_ids[request.result_kind][i]
-            known = cid in explicit_known or (cid in resolved_ids if not legacy else _key(row['topic']) in {_key(p) for p in phrases})
+            known = cid in explicit_known or (cid in resolved_ids if not legacy or guarded else _key(row['topic']) in {_key(p) for p in phrases})
             eligible = not known and nearest[i] > .035 and lower-EPSILON <= anchored[i] <= upper+EPSILON
             if not legacy:
                 eligible = eligible and nearest[i] >= lower-EPSILON and cid not in seen
@@ -251,19 +330,38 @@ class RecommendationLab:
         eligible_ids = {r['concept_id'] for r in candidates}
         if legacy:
             selected = self._legacy(request, variant, seeds, phrases, profile)
+            if guarded:
+                filtered, served_ids = [], set()
+                for row in selected:
+                    index = row['catalog_index']
+                    cid = self.inventory.source_ids[request.result_kind][index]
+                    if cid not in resolved_ids | explicit_known | served_ids and nearest[index] > .035:
+                        filtered.append(row)
+                        served_ids.add(cid)
+                selected = filtered
             if variant == 'V0' and request.result_kind == 'specific':
                 routed = {r['id'] for r in graph_candidates(self.graph, self._routing(phrases, seeds, request))}
                 reached_ids = {self.inventory.source_ids['specific'][i] for i, row in enumerate(rows) if row['id'] in routed} & eligible_ids
             else:
                 reached_ids = eligible_ids
         else:
-            if variant == 'V5-known':
+            if variant in SIMPLE_BASELINES:
+                candidates = self._baseline(candidates, request, variant, resolutions)
+            elif variant == 'V5-known' or variant in HISTORY_VARIANTS:
                 candidates = self._known_retrieve(candidates,request,config,distances,resolutions)
             elif variant != 'V2':
                 candidates = self._fuse(candidates, request, variant, config, seeds, distances, phrases,
                                         [r['text'] for r in resolutions])
             reached_ids = {r['concept_id'] for r in candidates}
-            if variant in ('V2', 'V3-no-ranking'):
+            if variant in SIMPLE_BASELINES:
+                selected = candidates[:request.limit]
+            elif variant in HISTORY_VARIANTS:
+                selected = rank_history(candidates, units, request, config, profile, profiles,
+                                        use_velocity=variant == 'trajectory')
+                history = batch['execution']['history']
+                history['velocity_used'] = any(abs(row['score_parts']['trajectory']) > 1e-12 for row in selected)
+                history['fallback'] = None if history['velocity_used'] else 'recency_only'
+            elif variant in ('V2', 'V3-no-ranking'):
                 if request.result_kind == 'specific':
                     allowed = {r['id'] for r in candidates}
                     for row in rows:
@@ -324,6 +422,19 @@ class RecommendationLab:
             exploration_achieved=sum(r['exploration_pick'] for r in output))
         batch['execution']['seconds'] = time.perf_counter()-start
         return batch
+
+    def _baseline(self, candidates, request, variant, resolutions):
+        if variant == 'semantic-nearest':
+            return sorted(candidates, key=lambda row: (row['anchor_distance'], row['catalog_index']))
+        if variant == 'random':
+            order = np.random.default_rng(request.seed).permutation(len(candidates))
+            return [candidates[int(index)] for index in order]
+        if self.lexical is None:
+            raise RuntimeError('Lexical index unavailable for this variant.')
+        indices = [request.focus_index] if request.mode == 'path' else range(len(resolutions))
+        query = ' '.join(resolutions[index]['text'] for index in indices)
+        eligible = {row['catalog_index']: row for row in candidates}
+        return [eligible[index] for index in self.lexical.search(request.result_kind, query) if index in eligible]
 
     def _known_retrieve(self,candidates,request,config,distances,resolutions):
         if self.lexical is None:
