@@ -13,8 +13,13 @@ const connectionKey=value=>JSON.stringify([value.endpoint,value.accessToken,valu
 /** Public geometry only. Each request is bounded; the page owns job polling. */
 export function createGalaxyLayoutTransport({catalog,loadIdentity,getConnection,hasEndpointPermission,fetchImpl=fetch}) {
   const topicIds=new Set(catalog.map(row=>row.topic)),domainIds=new Set(catalog.map(row=>row.domain));
-  const active=new Set(),jobs=new Map();let revision=0;
-  function invalidate(){revision++;jobs.clear();for(const controller of active)controller.abort(new LayoutError('Galaxy layout request cancelled because the connection changed.'));}
+  const active=new Set(),jobs=new Map(),listeners=new Set();let revision=0;
+  function invalidate(){
+    revision++;jobs.clear();
+    for(const controller of active)controller.abort(new LayoutError('Galaxy layout request cancelled because the connection changed.'));
+    for(const listener of listeners){try{listener();}catch{/* One window cannot block others. */}}
+  }
+  function subscribeInvalidation(listener){listeners.add(listener);return ()=>listeners.delete(listener);}
   function geometry(rows,ids){
     if(!Array.isArray(rows) || rows.length!==ids.size)invalid();
     const seen=new Set();
@@ -54,7 +59,7 @@ export function createGalaxyLayoutTransport({catalog,loadIdentity,getConnection,
         const identity=focusIdentity(await loadIdentity());assertCurrent();
         if(identity.embedding.shape[0]!==topicIds.size)invalid();
         const known=jobId?jobs.get(jobId):null;
-        if(known && known.connection!==key)throw new LayoutError('Galaxy layout job invalidated because the connection changed.');
+        if(jobId && (!known || known.connection!==key))throw new LayoutError('Galaxy layout preview is no longer active. Generate a new preview.');
         await checkPermission();assertCurrent();
         const response=await fetchImpl(`${connection.endpoint}/api/galaxy-layout${jobId?`/${encodeURIComponent(jobId)}`:''}`,{
           method,headers:connectionHeaders(connection),
@@ -84,5 +89,5 @@ export function createGalaxyLayoutTransport({catalog,loadIdentity,getConnection,
     return request('POST',parameters);
   }
   function status(jobId){if(!validJobId(jobId))return Promise.reject(new LayoutError('Invalid Galaxy layout job.'));return request('GET',null,jobId);}
-  return {start,status,invalidate};
+  return {start,status,invalidate,subscribeInvalidation};
 }

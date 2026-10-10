@@ -265,6 +265,7 @@ export function createController({catalog,readState,writeState,historySearch,has
   const startGalaxyLayout=parameters=>serial(()=>({promise:galaxyTransport.start(parameters)})).then(started=>started.promise);
   const getGalaxyLayoutJob=jobId=>serial(()=>({promise:galaxyTransport.status(jobId)})).then(started=>started.promise);
   const subscribeFocusInvalidation=listener=>focusTransport.subscribeInvalidation(listener);
+  const subscribeGalaxyLayoutInvalidation=listener=>galaxyTransport.subscribeInvalidation(listener);
   return {getState,dispatch,importBackup,importHistory,observe,reconcile,removeHistory,revokeHistory,revokeEndpoint,recommend,search,
-    focusRecommendations,cancelFocus,subscribeFocusInvalidation,startGalaxyLayout,getGalaxyLayoutJob};
+    focusRecommendations,cancelFocus,subscribeFocusInvalidation,subscribeGalaxyLayoutInvalidation,startGalaxyLayout,getGalaxyLayoutJob};
 }

@@ -1,6 +1,6 @@
 import {backupText, backupSettingsView, downloadBackup, readBackupFile, backupError, reviewBackup} from './backup.js';
 import {GALAXY_LAYOUT_DEFAULTS, GALAXY_LAYOUT_BOUNDS, normalizeGalaxyLayoutOptions} from '../core/galaxy-layout-options.js';
-import { getState, dispatch, importBackup, importHistory, recommend, search, subscribe, openDashboard, requestFocus, cancelFocus, subscribeFocusInvalidation, requestGalaxyLayout, pollGalaxyLayout } from '../bridge.js';
+import { getState, dispatch, importBackup, importHistory, recommend, search, subscribe, openDashboard, requestFocus, cancelFocus, subscribeFocusInvalidation, subscribeGalaxyLayoutInvalidation, requestGalaxyLayout, pollGalaxyLayout } from '../bridge.js';
 import { normalizeLanguage, translate, translateError } from './i18n.js';
 import { paginate, PAGE_SIZE, recommendationCursor } from './pagination.js';
 import { icon } from './icons.js';
@@ -38,6 +38,7 @@ const ui = {
 let state = null;
 let mapWorkspace;
 let unsubscribeFocus;
+let unsubscribeGalaxyLayout;
 let galaxyAssets;
 let galaxyLoading = false;
 let galaxyError = false;
@@ -800,12 +801,13 @@ try {
   applyState(await getState());
   unsubscribe = subscribe(applyState);
   unsubscribeFocus = subscribeFocusInvalidation(() => mapWorkspace?.invalidateFocus());
+  unsubscribeGalaxyLayout = subscribeGalaxyLayoutInvalidation(() => mapWorkspace?.invalidateGalaxyLayout());
 } catch (error) {
   ui.error = error?.message || 'Could not open your saved interests. Please try again.';
   render();
 }
 window.addEventListener('resize', fitReviewPanel);
-window.addEventListener('pagehide', () => { soundEffects.stop(); unsubscribe?.(); unsubscribeFocus?.(); mapWorkspace?.destroy(); });
+window.addEventListener('pagehide', () => { soundEffects.stop(); unsubscribe?.(); unsubscribeFocus?.(); unsubscribeGalaxyLayout?.(); mapWorkspace?.destroy(); });
 window.addEventListener('blur', () => soundEffects.stop());
 document.addEventListener('visibilitychange', () => {if (document.visibilityState !== 'visible') soundEffects.stop();});
 document.addEventListener('click', event => {

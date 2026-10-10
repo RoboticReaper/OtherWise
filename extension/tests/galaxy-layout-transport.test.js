@@ -30,6 +30,14 @@ test('invalid controls and unsafe job IDs reject before network',async()=>{
  await assert.rejects(r.transport.status('../secrets'));
  assert.equal(r.requests.length,0);
 });
+test('invalidated jobs cannot resume polling with unchanged connection settings; a new preview can reuse the job ID',async()=>{
+ const r=rig();await r.transport.start(parameters);r.transport.invalidate();
+ await assert.rejects(r.transport.status('job-1'),/invalidat|no longer active/i);
+ assert.equal(r.requests.length,1);
+ const restarted=await r.transport.start(parameters);
+ assert.equal((await r.transport.status(restarted.job_id)).status,'ready');
+ assert.equal(r.requests.length,3);
+});
 test('Galaxy rejects complete result for missing/duplicate IDs, nonfinite geometry, controls and identity mismatch',async()=>{
  for(const mutate of [x=>x.topics.pop(),x=>x.topics[1].id=x.topics[0].id,x=>x.topics[0].x='1',x=>x.domains[0].id='Other',x=>x.catalog_sha256='d'.repeat(64),x=>x.parameters.min_dist=.5]){
   const r=rig({fetchImpl:async(_url,options)=>{const x=result();mutate(x);return new Response(JSON.stringify(options.method==='POST'?{job_id:'job-1',status:'queued',stage:'queued'}:{job_id:'job-1',status:'ready',stage:'ready',result:x}));}});

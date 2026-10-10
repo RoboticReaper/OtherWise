@@ -66,6 +66,7 @@ export function subscribe(callback){
 
 let focusPort=null;
 const pendingFocus=new Map(),focusInvalidationListeners=new Set();
+const galaxyLayoutInvalidationListeners=new Set();
 const validFocusId=value=>typeof value==='string' && value.length>0 && value.length<=120;
 function rejectFocus(requestId,message){
   const pending=pendingFocus.get(requestId);
@@ -76,6 +77,9 @@ function invalidateFocusBridge(message){
   for(const requestId of pendingFocus.keys())rejectFocus(requestId,message);
   for(const listener of focusInvalidationListeners){try{listener();}catch{/* Keep other subscribers responsive. */}}
 }
+function invalidateGalaxyLayoutBridge(){
+  for(const listener of galaxyLayoutInvalidationListeners){try{listener();}catch{/* Keep other subscribers responsive. */}}
+}
 function connectFocus(){
   if(focusPort)return focusPort;
   if(!globalThis.chrome?.runtime?.id)throw new Error('Open OtherWise from your Chrome extensions.');
@@ -83,6 +87,7 @@ function connectFocus(){
   port.onMessage.addListener(message=>{
     if(focusPort!==port)return;
     if(message?.type==='invalidated'){invalidateFocusBridge('Focus request invalidated.');return;}
+    if(message?.type==='galaxy-layout-invalidated'){invalidateGalaxyLayoutBridge();return;}
     const pending=pendingFocus.get(message?.requestId);
     if(!pending)return;
     if(typeof message.error==='string'){rejectFocus(message.requestId,message.error);return;}
@@ -91,7 +96,7 @@ function connectFocus(){
   });
   port.onDisconnect.addListener(()=>{
     if(focusPort!==port)return;
-    focusPort=null;invalidateFocusBridge('Focus disconnected. Reconnect and try again.');
+    focusPort=null;invalidateFocusBridge('Focus disconnected. Reconnect and try again.');invalidateGalaxyLayoutBridge();
   });
   return port;
 }
@@ -124,10 +129,18 @@ export function subscribeFocusInvalidation(listener){
   try{connectFocus();}catch{/* Request-time errors give the user a recoverable message. */}
   return ()=>focusInvalidationListeners.delete(listener);
 }
+export function subscribeGalaxyLayoutInvalidation(listener){
+  if(preview)return ()=>{};
+  galaxyLayoutInvalidationListeners.add(listener);
+  try{connectFocus();}catch{/* Request-time errors give the user a recoverable message. */}
+  return ()=>galaxyLayoutInvalidationListeners.delete(listener);
+}
 
 async function sendGalaxyLayout(message){
   if(preview)throw new Error('Connect the extension to its service to generate a Galaxy preview. The packaged Galaxy is available offline.');
   if(!globalThis.chrome?.runtime?.id)throw new Error('Open OtherWise from your Chrome extensions.');
+  // Reconnect the window notification channel after a worker restart.
+  if(galaxyLayoutInvalidationListeners.size)connectFocus();
   const response=await chrome.runtime.sendMessage(message);
   if(response?.error)throw new Error(response.error);
   if(!response?.result)throw new Error('Galaxy layout is reconnecting. Reopen the panel and try again.');

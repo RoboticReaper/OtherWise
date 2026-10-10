@@ -81,6 +81,7 @@ export function createMapWorkspace({catalog,layout,state,language='en',presentat
   getViewState(){return {view:subview,centerId:center,galaxy:galaxy.getViewState(),focus:focusView?.getViewState()||null};},
   openGalaxyLayoutEditor(){if(destroyed)return;switchView('galaxy');galaxy.openLayoutEditor();},
   invalidateFocus(){if(destroyed)return;epoch++;session.invalidate();selectSession();},
+  invalidateGalaxyLayout(){if(!destroyed)galaxy.invalidateLayout();},
   destroy(){if(destroyed)return;destroyed=true;clearTimeout(entryExpiry);session.destroy();galaxy.destroy();focusView?.destroy();element.removeEventListener('click',captureEntry,true);element.removeEventListener('dblclick',captureEntry,true);element.removeEventListener('click',click);element.remove();},
  };
 }

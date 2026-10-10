@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {createBackup} from '../core/backup.js';
 
 function event(){
   const listeners=new Set();
@@ -105,7 +106,7 @@ test('trusted Focus ports isolate same request IDs, cancel on disconnect, broadc
 test('trusted Galaxy runtime messages return result envelopes and reject private extras and foreign callers',async()=>{
   let stored;const requests=[];
   const id='c'.repeat(32),base=`chrome-extension://${id}/`;
-  const runtime={id,getURL:path=>base+path,onMessage:event(),onInstalled:event(),onStartup:event()};
+  const runtime={id,getURL:path=>base+path,onMessage:event(),onConnect:event(),onInstalled:event(),onStartup:event()};
   const identity={catalog_sha256:'a'.repeat(64),model:'MPNet',embedding:{sha256:'b'.repeat(64),dtype:'float64',shape:[1,768]}};
   const parameters={n_neighbors:12,min_dist:.4,spread:1.5,repulsion_strength:2.5};
   globalThis.chrome={runtime,permissions:{onAdded:event(),onRemoved:event(),contains:async()=>true},storage:{local:{setAccessLevel:async()=>{},get:async()=>({state:stored}),set:async x=>{stored=x.state;}}},tabs:{create:async()=>{}},sidePanel:{setPanelBehavior:async()=>{}},alarms:{onAlarm:event(),create:async()=>{}}};
@@ -126,5 +127,12 @@ test('trusted Galaxy runtime messages return result envelopes and reject private
     const started=await send({type:'GALAXY_LAYOUT_START',parameters});assert.equal(started.result.job_id,'job-1');assert.equal(started.state,undefined);
     const polled=await send({type:'GALAXY_LAYOUT_STATUS',jobId:'job-1'});assert.equal(polled.result.status,'queued');assert.equal(polled.state,undefined);
     assert.equal(requests.length,2);assert.deepEqual(Object.keys(JSON.parse(requests[0].options.body)).sort(),['catalog_sha256','embedding','model','parameters']);assert.equal(requests[1].options.method,'GET');
+    const port={name:'otherwise-focus',sender:{id,url:base+'dashboard.html'},onMessage:event(),onDisconnect:event(),posted:[],postMessage(message){this.posted.push(message);},disconnect(){this.onDisconnect.emit();}};
+    runtime.onConnect.emit(port);await send({type:'GET_STATE'});
+    await send({type:'IMPORT_BACKUP',backup:createBackup(stored),mode:'merge'});
+    assert.equal(port.posted.filter(message=>message.type==='galaxy-layout-invalidated').length,1);
+    assert.ok((await send({type:'GALAXY_LAYOUT_STATUS',jobId:'job-1'})).error);assert.equal(requests.length,2);
+    port.disconnect();const replies=port.posted.length;
+    await send({type:'ACTION',action:{type:'CLEAR_DERIVED'}});assert.equal(port.posted.length,replies);
   }finally{globalThis.fetch=originalFetch;delete globalThis.chrome;}
 });

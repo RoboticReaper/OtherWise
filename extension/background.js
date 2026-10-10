@@ -61,7 +61,9 @@ chrome.runtime.onConnect?.addListener(port=>{
   });
   void controllerPromise.then(c=>{
     if(disconnected)return;
-    unsubscribe=c.subscribeFocusInvalidation(()=>post({type:'invalidated'}));
+    const offFocus=c.subscribeFocusInvalidation(()=>post({type:'invalidated'}));
+    const offGalaxy=c.subscribeGalaxyLayoutInvalidation(()=>post({type:'galaxy-layout-invalidated'}));
+    unsubscribe=()=>{offFocus();offGalaxy();};
   }).catch(()=>{});
   port.onMessage.addListener(message=>{
     if(disconnected)return;

@@ -544,6 +544,7 @@ export function createGalaxyMap({container, catalog, layout, state = {}, languag
       if (!active) { cancelInteraction(); stopAnimation(); } else resize();
     },
     openLayoutEditor,
+    invalidateLayout(){if(!destroyed)layoutSession.invalidate();},
     getViewState() { return {...view, fitted, camera: {...view.camera}}; },
     destroy() {
       if (destroyed) return;
